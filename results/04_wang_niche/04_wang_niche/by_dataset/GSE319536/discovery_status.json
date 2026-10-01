@@ -1,0 +1,18 @@
+{
+  "dataset": "GSE319536",
+  "status": "PASS",
+  "candidate": "k10_r0.1",
+  "input_signature": "81080a10a08b0e419a55c85588de669aa4a6c1f8237e00938cb1e69535dd8601",
+  "n_valid": 58041,
+  "n_niches": 6,
+  "n_evaluation": 5000,
+  "elapsed_seconds": 523.419,
+  "peak_RSS_GiB": 2.3262,
+  "max_candidate_worker_RSS_GiB": 2.8212,
+  "conservative_sum_peak_RSS_GiB": 13.6111,
+  "memory_measurement": "VmHWM per process; sum is conservative and double-counts fork-shared pages",
+  "candidate_workers": 4,
+  "dataset_jobs": 1,
+  "BLAS_OpenMP_threads": 1,
+  "evaluation_mode": "fixed_section_stratified_sample_approximation"
+}

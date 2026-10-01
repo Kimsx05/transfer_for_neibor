@@ -1,0 +1,86 @@
+new("MethodDefinition", .Data = function (x, ...) 
+{
+    .local <- function (x, ..., d = 50, transposed = FALSE, subset.row = NULL, 
+        BSPARAM = bsparam(), BPPARAM = SerialParam()) 
+    {
+        input <- .setup_knn_data(x = x, subset.row = subset.row, 
+            d = d, transposed = transposed, BSPARAM = BSPARAM, 
+            BPPARAM = BPPARAM)
+        makeSNNGraph(input, ..., BPPARAM = BPPARAM)
+    }
+    .local(x, ...)
+}, target = new("signature", .Data = "ANY", names = "x", package = "methods"), 
+    defined = new("signature", .Data = "ANY", names = "x", package = "methods"), 
+    generic = "buildSNNGraph")
+<bytecode: 0x55e5ec68d698>
+<environment: namespace:scran>
+attr(,"target")
+    x 
+"ANY" 
+attr(,"defined")
+    x 
+"ANY" 
+attr(,"generic")
+[1] "buildSNNGraph"
+attr(,"generic")attr(,"package")
+[1] "scran"
+attr(,"class")
+[1] "MethodDefinition"
+attr(,"class")attr(,"package")
+[1] "methods"
+function (x, subset.row, d, transposed, k, BNPARAM, BSPARAM, 
+    BPPARAM) 
+{
+    if (!transposed) {
+        if (!is.null(subset.row)) {
+            x <- x[subset.row, , drop = FALSE]
+        }
+        x <- t(x)
+    }
+    if (!is.na(d) && d < ncol(x)) {
+        svd.out <- .centered_SVD(x, max.rank = d, keep.right = FALSE, 
+            BSPARAM = BSPARAM, BPPARAM = BPPARAM)
+        x <- .svd_to_pca(svd.out, d, named = FALSE)
+    }
+    x
+}
+<bytecode: 0x55e5ee89ffe8>
+<environment: namespace:scran>
+function (x, k = 10, type = c("rank", "number", "jaccard"), BNPARAM = KmknnParam(), 
+    num.threads = 1, BPPARAM = SerialParam()) 
+{
+    x <- as.matrix(x)
+    nn.out <- findKNN(x, k = k, BNPARAM = BNPARAM, num.threads = num.threads, 
+        BPPARAM = BPPARAM, get.distance = FALSE)
+    neighborsToSNNGraph(nn.out$index, type = match.arg(type), 
+        num.threads = max(num.threads, BiocParallel::bpnworkers(BPPARAM)))
+}
+<bytecode: 0x55e5ee8abd18>
+<environment: namespace:bluster>
+function (graph, weights = NULL, resolution = 1) 
+{
+    ensure_igraph(graph)
+    if (is.null(weights) && "weight" %in% edge_attr_names(graph)) {
+        weights <- E(graph)$weight
+    }
+    if (!is.null(weights) && any(!is.na(weights))) {
+        weights <- as.numeric(weights)
+    }
+    else {
+        weights <- NULL
+    }
+    resolution <- as.numeric(resolution)
+    res <- community_multilevel_impl(graph = graph, weights = weights, 
+        resolution = resolution)
+    if (igraph_opt("add.vertex.names") && is_named(graph)) {
+        res$names <- V(graph)$name
+    }
+    res$vcount <- vcount(graph)
+    res$algorithm <- "multi level"
+    res$membership <- res$membership + 1
+    res$memberships <- res$memberships + 1
+    class(res) <- "communities"
+    res
+}
+<bytecode: 0x55e5ee8ad3d0>
+<environment: namespace:igraph>

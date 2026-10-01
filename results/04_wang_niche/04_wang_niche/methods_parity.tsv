@@ -1,0 +1,31 @@
+component	paper_or_author_source	project_implementation	evidence_status	note	source_url
+cellular input	cell2location cellular compositions	accepted c2l outputs; all 30 factors	PAPER_CORE	model itself is not retrained	https://link.springer.com/article/10.1186/s12943-025-02377-9
+posterior summary	NOT_REPORTED	original accepted posterior mean decimal export	PROJECT_ADAPTATION	not q05 or recovered major means	https://link.springer.com/article/10.1186/s12943-025-02377-9
+transformation	NOT_REPORTED	all-factor row proportions; invalid rows NA	PROJECT_ADAPTATION	no log/z/ILR/PCA/Harmony	https://link.springer.com/article/10.1186/s12943-025-02377-9
+feature space	cellular compositions	all frozen subtype factors including Epithelial	PROJECT_ADAPTATION	no TME-only subset, no neighborhood averages	https://link.springer.com/article/10.1186/s12943-025-02377-9
+pooling	similar-composition spots across tissue slices	pool sections within each frozen dataset	PROJECT_ADAPTATION	shared dictionary within dataset; separate labels across datasets	https://link.springer.com/article/10.1186/s12943-025-02377-9
+discovery universe	NOT_REPORTED as an epithelial/CNV filter	all frozen valid composition spots	PROJECT_ADAPTATION	no Epi gate, MP/CNV mask, histology, coordinate or patient feature	https://link.springer.com/article/10.1186/s12943-025-02377-9
+SNN graph	scran::buildSNNGraph	scran::buildSNNGraph	PAPER_CORE	composition neighbors, not physical lattice neighbors	https://link.springer.com/article/10.1186/s12943-025-02377-9
+k	10,20,30	10,20,30	PAPER_CORE	three composition-space graphs	https://link.springer.com/article/10.1186/s12943-025-02377-9
+SNN weights	NOT_REPORTED	type=rank (explicit installed default)	PROJECT_ADAPTATION	finite positive undirected graph checked	https://link.springer.com/article/10.1186/s12943-025-02377-9
+matrix orientation	NOT_REPORTED	spots x 30 factors; transposed=TRUE	PROJECT_ADAPTATION	d=NA explicitly disables PCA	https://link.springer.com/article/10.1186/s12943-025-02377-9
+nearest-neighbor backend	NOT_REPORTED	KmknnParam exact Euclidean; serial	PROJECT_ADAPTATION	fixed seed for graph construction	https://link.springer.com/article/10.1186/s12943-025-02377-9
+clustering algorithm	Louvain	igraph::cluster_louvain	PAPER_CORE	not Leiden; same graph reused for its 15 resolutions	https://link.springer.com/article/10.1186/s12943-025-02377-9
+resolution grid	NOT_REPORTED	0.1,0.2,...,1.5	PROJECT_ADAPTATION	45 total candidates per dataset	https://link.springer.com/article/10.1186/s12943-025-02377-9
+seed	NOT_REPORTED	20260930	PROJECT_ADAPTATION	same seed reset before every graph and candidate	https://link.springer.com/article/10.1186/s12943-025-02377-9
+compute scheduling	NOT_REPORTED	one dataset at a time; four candidate workers; graph/BLAS/OpenMP each 1 thread	PROJECT_ADAPTATION	CPU budget 8; serial-versus-parallel 45-candidate membership and silhouette parity verified on first two datasets	https://link.springer.com/article/10.1186/s12943-025-02377-9
+parameter selection	maximize mean silhouette; full aggregation not specified	evaluation-spot weighted mean silhouette	PROJECT_ADAPTATION	per-cluster means reported separately	https://link.springer.com/article/10.1186/s12943-025-02377-9
+silhouette distance	NOT_REPORTED	Euclidean in original 30 proportion features	PROJECT_ADAPTATION	no UMAP, PCA or physical-coordinate distances	https://link.springer.com/article/10.1186/s12943-025-02377-9
+evaluation set	NOT_REPORTED	all if <=5000, else fixed proportional section-stratified 5000	PROJECT_ADAPTATION	six datasets use sample-based approximation; no full dataset pair matrix	https://link.springer.com/article/10.1186/s12943-025-02377-9
+silhouette ties	NOT_REPORTED	tolerance 1e-8; lower resolution then lower k	PROJECT_ADAPTATION	declared before fitting	https://link.springer.com/article/10.1186/s12943-025-02377-9
+degenerate candidates	NOT_REPORTED	exclude one class / all singleton / invalid silhouette	PROJECT_ADAPTATION	excluded reasons retained	https://link.springer.com/article/10.1186/s12943-025-02377-9
+annotation	niche vs rest Wilcoxon, FDR<0.05	two-sided unpaired rank sum on proportions; BH<0.05	PAPER_CORE	defining annotation, not independent biological validation	https://link.springer.com/article/10.1186/s12943-025-02377-9
+Wilcoxon numerical options	NOT_REPORTED	asymptotic, tie-adjusted variance, continuity correction	PROJECT_ADAPTATION	optimized calculation independently checked against scipy	https://link.springer.com/article/10.1186/s12943-025-02377-9
+FDR family	NOT_REPORTED	all niche x factor tests within each dataset	PROJECT_ADAPTATION	more transparent than assuming author correction scope	https://link.springer.com/article/10.1186/s12943-025-02377-9
+naming and cross-dataset IDs	NOT_REPORTED	dataset-scoped IDs and numerical top-three factor descriptions	PROJECT_ADAPTATION	no rare-factor rich labels from small p-values; no cross-dataset label merging	https://link.springer.com/article/10.1186/s12943-025-02377-9
+low-identifiability factors	NOT_REPORTED for bladder reference	retain factors; attach accepted interpretation status	PROJECT_ADAPTATION	no automatic factor merging	https://link.springer.com/article/10.1186/s12943-025-02377-9
+scran version	1.32.0	1.38.1 installed	PROJECT_ADAPTATION	installed interface recorded; no base-environment changes	https://link.springer.com/article/10.1186/s12943-025-02377-9
+R version	4.3.0	4.5.3 installed	PROJECT_ADAPTATION	versions of all graph packages recorded	https://link.springer.com/article/10.1186/s12943-025-02377-9
+upstream SCT/Harmony	paper upstream expression preprocessing	existing accepted c2l inputs reused; no rerun	OUT_OF_SCOPE	do not apply expression integration to abundance	https://link.springer.com/article/10.1186/s12943-025-02377-9
+spatial NMF	separate paper analysis	not performed	OUT_OF_SCOPE	no NMF or alternative method competition	https://link.springer.com/article/10.1186/s12943-025-02377-9
+author analysis repository	NOT_RECOVERED	no public author implementation located	NOT_REPORTED	publisher article/data availability and DOI/author searches; supplement link retrieval failed	https://link.springer.com/article/10.1186/s12943-025-02377-9

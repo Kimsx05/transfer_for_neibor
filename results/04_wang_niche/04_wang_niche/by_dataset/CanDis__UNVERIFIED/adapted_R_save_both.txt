@@ -1,0 +1,8 @@
+function (p, dir, stem, width = 9, height = 6) 
+{
+    dir.create(dir, recursive = TRUE, showWarnings = FALSE)
+    ggplot2::ggsave(file.path(dir, paste0(stem, ".pdf")), p, 
+        width = width, height = height, limitsize = FALSE)
+    ggplot2::ggsave(file.path(dir, paste0(stem, ".png")), p, 
+        width = width, height = height, dpi = 600, limitsize = FALSE)
+}
