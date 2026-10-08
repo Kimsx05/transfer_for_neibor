@@ -1,0 +1,78 @@
+source('/home/data/t070721/codex_workspace/Bladder Metabolism/mp_ucell_state_v1/code/00_common.R')
+suppressPackageStartupMessages({library(ggplot2);library(patchwork);library(ggrastr);library(viridis)})
+M<-qread(out('02_ucell_scores/M_RAW.qs'));md<-qread(out('00_input_audit/cell_metadata.qs'));inst<-fread(out('instance_manifest.tsv'))
+lim<-data.table(MP=mp,lower=apply(M,2,min),upper=apply(M,2,max));write_tsv(lim,out('02_ucell_scores/plot_color_limits_FULL_raw.tsv'))
+# Same simple coordinate style as existing theme_epimp; background transparent.
+th<-theme_classic(base_size=10)+theme(axis.line=element_line(linewidth=.35),panel.grid=element_blank(),plot.background=element_rect(fill='transparent',colour=NA),panel.background=element_rect(fill='transparent',colour=NA),legend.background=element_rect(fill='transparent',colour=NA),legend.key=element_rect(fill='transparent',colour=NA),strip.background=element_blank(),plot.title=element_text(size=10),legend.text=element_text(size=8))
+savep<-function(p,base,w=7,h=5) {
+ if(file.exists(paste0(base,'.pdf')) && file.exists(paste0(base,'.png'))) return(invisible(NULL))
+ dir.create(dirname(base),recursive=TRUE,showWarnings=FALSE)
+ ggsave(paste0(base,'.pdf'),p,width=w,height=h,bg='transparent',useDingbats=FALSE,limitsize=FALSE)
+ ggsave(paste0(base,'.png'),p,width=w,height=h,dpi=300,bg='transparent',limitsize=FALSE)
+}
+point<-function(...) ggrastr::geom_point_rast(...,size=.22,raster.dpi=300)
+coords<-function(p,xy) p+coord_equal(xlim=range(xy$UMAP_1),ylim=range(xy$UMAP_2))+labs(x='UMAP 1',y='UMAP 2')+th
+continuous<-function(d,m,xy) {
+ d<-copy(d);d[,value:=M[cell_id,m]];rng<-lim[MP==m,c(lower,upper)]
+ # Exact zero rendered as separate black layer; continuous legend retains common FULL limits.
+ p<-ggplot(d,aes(UMAP_1,UMAP_2))+point(data=d[value==0],aes(shape='exact 0'),colour='black')+point(data=d[value>0],aes(colour=value))+scale_colour_gradientn(colours=viridis::plasma(256),limits=rng,name=paste(m,'raw UCell'))+scale_shape_manual(values=c('exact 0'=16),name=NULL)
+ coords(p,xy)
+}
+catplot<-function(d,v,pal,xy,hide=FALSE) {p<-ggplot(d,aes(UMAP_1,UMAP_2,colour=.data[[v]]))+point()+scale_colour_manual(values=pal,drop=TRUE,name=v);if(hide)p<-p+guides(colour='none');coords(p,xy)}
+heat<-function(prof,value) {p<-ggplot(prof,aes(MP,cluster,fill=.data[[value]]))+geom_tile()+th+theme(axis.text.x=element_text(angle=90,hjust=1,vjust=.5))+labs(x=NULL,y=NULL);if(value=='global_z_mean') p+scale_fill_gradient2(low='#2166AC',mid='white',high='#B2182B',midpoint=0,name='FULL z mean') else p+geom_tile(data=prof[raw_mean==0],fill='black')+scale_fill_gradientn(colours=viridis::plasma(256),limits=range(M),name='raw UCell mean')}
+for(i in seq_len(nrow(inst))) {
+ nm<-inst$instance[i];dir<-out(inst$directory[i]);logmsg('Figures',nm)
+ emb<-qread(file.path(dir,'umap.qs'));cl<-fread(file.path(dir,'clusters_res0.4.tsv.gz'))
+ d<-merge(as.data.table(emb,keep.rownames='cell_id'),cl,by='cell_id',sort=FALSE);d<-merge(d,md[,.(cell_id,dataset,sample,source,annotation,original_cluster,nFeature_counts,nCount_counts,percent.mt)],by='cell_id',sort=FALSE)
+ stopifnot(nrow(d)==nrow(emb));xy<-d
+ levels_cl<-paste0('C',sort(as.integer(sub('C','',unique(cl$cluster)))))
+ # Independent palette offset across branches avoids treating same numbered clusters as equivalent.
+ pal<-setNames(grDevices::hcl(h=(seq(0,360,length.out=length(levels_cl)+1)[seq_along(levels_cl)]+37*i)%%360,c=60,l=65),levels_cl)
+ write_tsv(data.table(cluster=names(pal),color=pal),file.path(dir,'cluster_colors.tsv'))
+ mdpal<-lapply(c('dataset','sample','source','annotation','original_cluster'),function(v) setNames(hcl.colors(length(unique(md[[v]])),'Dark 3'),sort(unique(as.character(md[[v]])))));names(mdpal)<-c('dataset','sample','source','annotation','original_cluster')
+ prof<-fread(file.path(dir,'cluster_MP_profiles_res0.4.tsv'));prof[,cluster:=factor(cluster,levels=rev(levels_cl))]
+ extensive<-nm %in% c('FULL_Z','FULL_RAW','BAL_Z_seed42','BAL_RAW_seed42')
+ scopes<-if(extensive) c('ALL',sort(unique(d$dataset))) else 'ALL'
+ for(ds in scopes) {
+  dd<-if(ds=='ALL') d else d[dataset==ds];base<-if(ds=='ALL') file.path(dir,'figures') else out('08_figures_by_dataset',ds,nm)
+  prefix<-file.path(base,paste0(nm,'__',ds,'__res0.4__'))
+  savep(catplot(dd,'cluster',pal,xy),paste0(prefix,'cluster'))
+  savep(continuous(dd,'EpiMP10',xy),paste0(prefix,'MP10'),8,6)
+  if(extensive) {
+   pp<-lapply(mp,function(m) continuous(dd,m,xy));savep(wrap_plots(pp,ncol=4),paste0(prefix,'all14_raw_UCell'),20,16)
+   for(v in names(mdpal)) {
+    np<-length(unique(dd[[v]]));p<-catplot(dd,v,mdpal[[v]],xy,hide=(np>20));savep(p,paste0(prefix,v),if(np>12&&np<=20) 10 else 8,6)
+    if(np>20) {
+     lg<-data.table(label=names(mdpal[[v]]),colour=unname(mdpal[[v]]));lg[,row:=seq_len(.N)]
+     p<-ggplot(lg,aes(x=1,y=reorder(label,-row),colour=label))+geom_point(size=3)+geom_text(aes(label=label),hjust=0,nudge_x=.08,size=2.8)+scale_colour_manual(values=mdpal[[v]])+xlim(.95,2.8)+theme_void()+theme(legend.position='none',plot.background=element_rect(fill='transparent',colour=NA))
+     savep(p,paste0(prefix,v,'_legend'),8,max(5,nrow(lg)*.2))
+    }
+   }
+   for(v in c('nFeature_counts','nCount_counts','percent.mt')) {
+    p<-ggplot(dd,aes(UMAP_1,UMAP_2,colour=.data[[v]]))+point()+scale_colour_gradientn(colours=viridis::plasma(256),limits=range(md[[v]],na.rm=TRUE),name=v);savep(coords(p,xy),paste0(prefix,v),8,6)
+   }
+   dd[,MP10:=M[cell_id,'EpiMP10']];dd[,cluster:=factor(cluster,levels=levels_cl)]
+   p<-ggplot(dd,aes(cluster,MP10,fill=cluster))+geom_violin(scale='width',linewidth=.15)+geom_boxplot(width=.12,outlier.shape=NA,fill='white',linewidth=.2)+scale_fill_manual(values=pal)+guides(fill='none')+labs(x=NULL,y='MP10 raw UCell')+th
+   savep(p,paste0(prefix,'MP10_distribution'),max(8,length(levels_cl)*.45),5)
+   ppds<-if(ds=='ALL') copy(prof) else {
+    r<-rbindlist(lapply(mp,function(m) dd[,.(raw_mean=mean(M[cell_id,m]),global_z_mean=mean((M[cell_id,m]-mean(M[,m]))/sd(M[,m]))),by=cluster][,MP:=m]));r[,cluster:=factor(cluster,levels=rev(levels_cl))];r
+   }
+   savep(heat(ppds,'raw_mean'),paste0(prefix,'cluster14MP_raw_heatmap'),8,max(5,length(levels_cl)*.28))
+   savep(heat(ppds,'global_z_mean'),paste0(prefix,'cluster14MP_GLOBALz_heatmap'),8,max(5,length(levels_cl)*.28))
+   ct<-dd[,.(n=.N),by=.(sample,cluster)];ct[,proportion:=n/sum(n),by=sample]
+   p<-ggplot(ct,aes(sample,proportion,fill=cluster))+geom_col()+scale_fill_manual(values=pal)+coord_flip()+th+labs(x=NULL,y='Proportion within sampled set / FULL branch')
+   savep(p,paste0(prefix,'sample_cluster_proportions'),10,max(5,uniqueN(ct$sample)*.20))
+   for(v in c('dataset','source')) {ct<-dd[,.(n=.N),by=c('cluster',v)];ct[,fraction:=n/sum(n),by=cluster];p<-ggplot(ct,aes(cluster,fraction,fill=.data[[v]]))+geom_col()+scale_fill_manual(values=mdpal[[v]])+th+labs(x=NULL,y='Fraction within cluster');savep(p,paste0(prefix,'cluster_composition_',v),9,5)}
+  }
+ }
+ if(nm=='FULL_Z') {
+  usage<-qread(out('02_ucell_scores/original_usage_raw.qs'));d[,usage_MP10:=usage[cell_id,'EpiMP10']]
+  p<-ggplot(d,aes(UMAP_1,UMAP_2,colour=usage_MP10))+point()+scale_colour_gradientn(colours=viridis::plasma(256),name='MP10 NMF usage_raw');savep(coords(p,xy),file.path(dir,'figures/FULL_Z__original_MP10_usage_raw'),8,6)
+  for(res in c(.2,.6)) {cc<-fread(file.path(dir,paste0('clusters_res',res,'.tsv.gz')));dt<-copy(d);dt[,cluster:=cc$cluster[match(cell_id,cc$cell_id)]];pc<-setNames(hcl.colors(uniqueN(dt$cluster),'Dynamic'),sort(unique(dt$cluster)));savep(catplot(dt,'cluster',pc,xy),file.path(dir,'figures',paste0('FULL_Z__ALL__res',res,'__cluster')))}
+ }
+}
+# Every comparison overlap heatmap, plus global metric overview.
+paths<-list.files(out('06_comparisons'),pattern='_overlap.tsv$',full.names=TRUE)
+for(f in paths) {ov<-fread(f);p<-ggplot(ov,aes(B,A,fill=fraction_A))+geom_tile()+scale_fill_gradientn(colours=viridis::plasma(256),limits=c(0,1),name='Fraction of A')+th+labs(x='B cluster',y='A cluster');savep(p,sub('.tsv$','',f),8,6)}
+met<-fread(out('06_comparisons/ARI_NMI.tsv'));met[,comparison:=paste(A,B,sep=' vs ')];mm<-melt(met,id.vars='comparison',measure.vars=c('ARI','NMI'));p<-ggplot(mm,aes(value,comparison,colour=variable))+geom_point(size=2)+th+labs(x='Agreement',y=NULL,colour=NULL);savep(p,out('06_comparisons/agreement_overview'),12,8)
+writeLines('complete',out('logs/FIGURES_COMPLETE'));capture.output(sessionInfo(),file=out('logs/sessionInfo_figures.txt'))

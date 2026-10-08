@@ -1,0 +1,8 @@
+[1] "C"
+2026-10-07 23:30:49 Audit starting 
+
+2026-10-07 23:30:59 Loading original Seurat object 
+Error in `[.data.table`(md, , .(n = .N, min = min(nFeature_counts), q05 = quantile(nFeature_counts,  : 
+  Column 4 of result for group 2 is type 'double' but expecting type 'integer'. Column types must be consistent for each group.
+Calls: rbindlist -> lapply -> FUN -> [ -> [.data.table
+Execution halted

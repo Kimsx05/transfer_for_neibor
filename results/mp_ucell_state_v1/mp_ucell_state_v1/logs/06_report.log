@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/mp_ucell_state_v1/code/06_report.py", line 22, in <module>
+    assert all(x['pass']=='TRUE' for x in read('00_input_audit/final_validation.tsv'))
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

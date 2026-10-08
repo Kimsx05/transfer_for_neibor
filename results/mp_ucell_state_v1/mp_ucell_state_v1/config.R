@@ -1,0 +1,17 @@
+list(version = "mp_ucell_state_v1", frozen = "/home/data/t070721/Metabolistic_scRNA/Multi2/4.3 NMF allgene/output_full_cc_seed5_v2", 
+    input = "/home/data/t070721/Metabolistic_scRNA/Multi2/3.4 malignant cell process/PCA_ALLGENE1/epi_cycling_allgene_harmony_clustered_final_after_small_removal.qs", 
+    basis = "sample_balanced_mean", mp = c("EpiMP01", "EpiMP02", 
+    "EpiMP03", "EpiMP04", "EpiMP05", "EpiMP06", "EpiMP07", "EpiMP08", 
+    "EpiMP09", "EpiMP10", "EpiMP11", "EpiMP12", "EpiMP13", "EpiMP14"
+    ), top_n = 50L, tie_order = "C locale gene name ascending", 
+    assay = "RNA", layer = "counts", background = "all RNA features", 
+    maxRank = 1500L, ties.method = "average", missing_genes = "impute", 
+    chunk.size = 500L, workers = 2L, smoothed = FALSE, standardization = "FULL column mean and sample SD, no clipping", 
+    sample_cap = 1000L, sampling_seeds = 42:44, analysis_seed = 42L, 
+    nn_method = "annoy", n_trees = 50L, k = 20L, metric = "euclidean", 
+    l2.norm = FALSE, prune.SNN = 0.0666666666666667, algorithm = 4L, 
+    leiden_method = "leidenbase", objective = "RBConfigurationVertexPartition", 
+    n.iter = 10L, group.singletons = TRUE, resolutions_full_z = c(0.4, 
+    0.2, 0.6), resolution_other = 0.4, umap = "uwot", umap_n_neighbors = 30L, 
+    umap_min_dist = 0.3, umap_n_components = 2L, umap_threads = 1L, 
+    pca = FALSE, harmony = FALSE)

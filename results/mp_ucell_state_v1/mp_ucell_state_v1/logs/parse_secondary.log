@@ -1,0 +1,280 @@
+expression(source("/home/data/t070721/codex_workspace/Bladder Metabolism/mp_ucell_state_v1/code/00_common.R"), 
+    M <- qread(out("02_ucell_scores/M_RAW.qs")), Z <- qread(out("02_ucell_scores/M_Z.qs")), 
+    md <- qread(out("00_input_audit/cell_metadata.qs")), inst <- fread(out("instance_manifest.tsv")), 
+    cor_safe <- function(x, y) {
+        k <- is.finite(x) & is.finite(y)
+        list(n = sum(k), rho = if (sum(k) > 2 && length(unique(x[k])) > 
+            1 && length(unique(y[k])) > 1) cor(x[k], y[k], method = "spearman") else NA_real_)
+    }, labels <- list(), profiles <- list(), candidates <- list(), 
+    for (i in seq_len(nrow(inst))) {
+        nm <- inst$instance[i]
+        dir <- out(inst$directory[i])
+        rr <- if (nm == "FULL_Z") 
+            c(0.4, 0.2, 0.6)
+        else 0.4
+        for (res in rr) {
+            key <- paste0(nm, "_res", res)
+            logmsg("Summarize", key)
+            cl <- fread(file.path(dir, paste0("clusters_res", 
+                res, ".tsv.gz")))
+            stopifnot(!anyDuplicated(cl$cell_id), all(cl$cell_id %in% 
+                rownames(M)))
+            labels[[key]] <- cl
+            di <- match(cl$cell_id, md$cell_id)
+            dt <- copy(md[di])
+            dt[, `:=`(cluster, cl$cluster)]
+            stopifnot(identical(dt$cell_id, cl$cell_id))
+            a <- M[cl$cell_id, mp, drop = FALSE]
+            z <- Z[cl$cell_id, mp, drop = FALSE]
+            dd <- cbind(dt[, .(cell_id, cluster, dataset, sample, 
+                source, annotation, original_cluster)], as.data.table(a))
+            pp <- rbindlist(lapply(mp, function(m) {
+                v <- dd[, .(n = .N, raw_mean = mean(get(m)), 
+                  raw_median = median(get(m)), raw_sd = sd(get(m)), 
+                  raw_q05 = as.numeric(quantile(get(m), 0.05)), 
+                  raw_q25 = as.numeric(quantile(get(m), 0.25)), 
+                  raw_q75 = as.numeric(quantile(get(m), 0.75)), 
+                  raw_q95 = as.numeric(quantile(get(m), 0.95)), 
+                  raw_zero_fraction = mean(get(m) == 0)), by = cluster]
+                v[, `:=`(MP, m)]
+                v
+            }))
+            zz <- cbind(dt[, .(cluster)], as.data.table(z))
+            zm <- melt(zz[, lapply(.SD, mean), by = cluster, 
+                .SDcols = mp], id.vars = "cluster", variable.name = "MP", 
+                value.name = "global_z_mean")
+            zm[, `:=`(MP, as.character(MP))]
+            pp <- merge(pp, zm, by = c("cluster", "MP"))
+            pp[, `:=`(instance, key)]
+            profiles[[key]] <- pp
+            write_tsv(pp, file.path(dir, paste0("cluster_MP_profiles_res", 
+                res, ".tsv")))
+            cc <- dt[, .(n_cells = .N, n_samples = uniqueN(sample), 
+                n_datasets = uniqueN(dataset), n_verified_patients = if (all(is.na(patient))) 
+                  NA_integer_
+                else uniqueN(na.omit(patient)), max_sample = names(sort(table(sample), 
+                  decreasing = TRUE))[1], max_sample_fraction = max(table(sample))/.N, 
+                patient_assessment = if (all(is.na(patient))) 
+                  "unavailable_unverified_mapping"
+                else "verified_subset"), by = cluster]
+            cc[, `:=`(fraction_of_this_branch, n_cells/sum(n_cells))]
+            cc[, `:=`(max_patient = NA_character_, max_patient_fraction = NA_real_)]
+            write_tsv(cc, file.path(dir, paste0("cluster_composition_res", 
+                res, ".tsv")))
+            for (g in c("sample", "dataset", "source", "annotation", 
+                "original_cluster")) {
+                ct <- dt[, .(n = .N), by = c("cluster", g)]
+                ct[, `:=`(fraction_within_unit, n/sum(n)), by = g]
+                ct[, `:=`(fraction_within_cluster, n/sum(n)), 
+                  by = cluster]
+                write_tsv(ct, file.path(dir, paste0("cluster_by_", 
+                  g, "_res", res, ".tsv")))
+            }
+            ct <- CJ(sample = unique(dt$sample), cluster = unique(dt$cluster))
+            ct <- merge(ct, dt[, .(n = .N), by = .(sample, cluster)], 
+                all.x = TRUE, by = c("sample", "cluster"))
+            ct[is.na(n), `:=`(n, 0L)]
+            ct[, `:=`(sample_total, sum(n)), by = sample]
+            ct[, `:=`(proportion, n/sample_total)]
+            write_tsv(ct, file.path(dir, paste0("sample_cluster_proportions_res", 
+                res, ".tsv")))
+            dp <- dd[, lapply(.SD, mean), by = .(dataset, cluster), 
+                .SDcols = mp]
+            write_tsv(dp, file.path(dir, paste0("dataset_cluster_raw_profiles_res", 
+                res, ".tsv")))
+            delt <- rbindlist(lapply(sort(unique(dt$cluster)), 
+                function(k) dd[, {
+                  v <- EpiMP10
+                  hit <- cluster == k
+                  ni <- sum(hit)
+                  no <- sum(!hit)
+                  list(n_in = ni, n_rest = no, mean_in = if (ni) mean(v[hit]) else NA_real_, 
+                    mean_rest = if (no) mean(v[!hit]) else NA_real_, 
+                    delta_mean = if (ni && no) mean(v[hit]) - 
+                      mean(v[!hit]) else NA_real_, delta_median = if (ni && 
+                      no) median(v[hit]) - median(v[!hit]) else NA_real_)
+                }, by = .(sample, dataset)][, `:=`(cluster, k)]))
+            delt[, `:=`(direction, fcase(is.na(delta_mean), "NA", 
+                delta_mean > 0, "positive", delta_mean < 0, "negative", 
+                default = "zero"))]
+            write_tsv(delt, file.path(dir, paste0("MP10_sample_within_contrasts_res", 
+                res, ".tsv")))
+            cand <- merge(pp[MP == "EpiMP10"], cc, by = "cluster")
+            setorder(cand, -raw_mean)
+            cand[, `:=`(MP10_mean_rank, seq_len(.N))]
+            cand[, `:=`(above_FULL_mean, global_z_mean > 0)]
+            rel <- pp[, .(MP10_rank_among_z = rank(-global_z_mean, 
+                ties.method = "min")[MP == "EpiMP10"], top3_z_MPs = paste(MP[order(-global_z_mean)][1:3], 
+                collapse = ";")), by = cluster]
+            cand <- merge(cand, rel, by = "cluster")
+            candidates[[key]] <- cand
+        }
+    }, write_tsv(rbindlist(profiles), out("07_mp10_review/all_cluster_14MP_profiles.tsv")), 
+    write_tsv(rbindlist(candidates), out("07_mp10_review/MP10_candidate_state_table.tsv")), 
+    qsave_atomic(labels, out("06_comparisons/labels_all10.qs")), 
+    usage <- qread(out("02_ucell_scores/original_usage_raw.qs")), 
+    stopifnot(setequal(rownames(usage), rownames(M))), usage <- usage[rownames(M), 
+        mp, drop = FALSE], co <- list(), qc <- list(), idxlist <- c(list(FULL = seq_len(nrow(M))), 
+        split(seq_len(nrow(M)), md$sample), split(seq_len(nrow(M)), 
+            md$dataset)), for (g in names(idxlist)) {
+        ii <- idxlist[[g]]
+        for (m in mp) {
+            v <- cor_safe(M[ii, m], usage[ii, m])
+            co[[length(co) + 1]] <- data.table(unit = g, MP = m, 
+                n = v$n, spearman = v$rho)
+        }
+        for (f in c("nFeature_counts", "nCount_counts", "percent.mt")) {
+            v <- cor_safe(M[ii, "EpiMP10"], md[[f]][ii])
+            qc[[length(qc) + 1]] <- data.table(unit = g, covariate = f, 
+                n = v$n, spearman = v$rho)
+        }
+    }, write_tsv(rbindlist(co), out("07_mp10_review/UCell_original_usage_spearman.tsv")), 
+    write_tsv(rbindlist(qc), out("07_mp10_review/MP10_QC_spearman.tsv")), 
+    review <- copy(md), review[, `:=`(MP10, M[cell_id, "EpiMP10"])], 
+    write_tsv(review[, .(n = .N, mean = mean(MP10), median = median(MP10), 
+        q25 = quantile(MP10, 0.25), q75 = quantile(MP10, 0.75)), 
+        by = .(dataset, source)], out("07_mp10_review/MP10_by_dataset_source.tsv")), 
+    det <- qread(out("02_ucell_scores/signature_detected_counts.qs")), 
+    write_tsv(rbindlist(lapply(mp, function(m) data.table(dataset = md$dataset, 
+        sample = md$sample, detected = as.numeric(det[md$cell_id, 
+            m]))[, .(n = .N, mean = mean(detected), median = median(detected), 
+        zero_fraction = mean(detected == 0)), by = .(dataset, 
+        sample)][, `:=`(MP, m)])), out("02_ucell_scores/signature_detection_by_sample.tsv")), 
+    metrics <- function(tab) {
+        n <- sum(tab)
+        a <- rowSums(tab)
+        b <- colSums(tab)
+        choose2 <- function(x) x * (x - 1)/2
+        v <- sum(choose2(tab))
+        expected <- sum(choose2(a)) * sum(choose2(b))/choose2(n)
+        den <- (sum(choose2(a)) + sum(choose2(b)))/2 - expected
+        p <- tab/n
+        pa <- a/n
+        pb <- b/n
+        expect <- outer(pa, pb)
+        pos <- p > 0
+        MI <- sum(p[pos] * log(p[pos]/expect[pos]))
+        HA <- -sum(pa[pa > 0] * log(pa[pa > 0]))
+        HB <- -sum(pb[pb > 0] * log(pb[pb > 0]))
+        c(ARI = if (den == 0) NA_real_ else (v - expected)/den, 
+            NMI = if (HA + HB == 0) NA_real_ else 2 * MI/(HA + 
+                HB))
+    }, pairs <- list(c("FULL_Z_res0.4", "FULL_RAW_res0.4")), 
+    for (s in 42:44) {
+        pairs <- c(pairs, list(c(paste0("BAL_Z_seed", s, "_res0.4"), 
+            paste0("BAL_RAW_seed", s, "_res0.4")), c("FULL_Z_res0.4", 
+            paste0("BAL_Z_seed", s, "_res0.4")), c("FULL_RAW_res0.4", 
+            paste0("BAL_RAW_seed", s, "_res0.4"))))
+    }, pairs <- c(pairs, list(c("FULL_Z_res0.4", "FULL_Z_res0.2"), 
+        c("FULL_Z_res0.4", "FULL_Z_res0.6"))), for (sc in c("Z", 
+        "RAW")) for (ss in combn(42:44, 2, simplify = FALSE)) pairs <- c(pairs, 
+        list(paste0("BAL_", sc, "_seed", ss, "_res0.4"))), met <- list(), 
+    best <- list(), matched <- list(), for (pair in pairs) {
+        a <- labels[[pair[1]]]
+        b <- labels[[pair[2]]]
+        common <- intersect(a$cell_id, b$cell_id)
+        stopifnot(length(common) > 0)
+        aa <- a$cluster[match(common, a$cell_id)]
+        bb <- b$cluster[match(common, b$cell_id)]
+        tab <- table(A = aa, B = bb)
+        ms <- metrics(tab)
+        nm <- paste(pair, collapse = "__vs__")
+        met[[nm]] <- data.table(A = pair[1], B = pair[2], n_common = length(common), 
+            n_A = nrow(a), n_B = nrow(b), ARI = ms["ARI"], NMI = ms["NMI"])
+        ov <- as.data.table(tab)
+        setnames(ov, "N", "overlap")
+        ov[, `:=`(A, as.character(A))]
+        ov[, `:=`(B, as.character(B))]
+        ov[, `:=`(size_A, sum(overlap)), by = A]
+        ov[, `:=`(size_B, sum(overlap)), by = B]
+        ov[, `:=`(fraction_A = overlap/size_A, fraction_B = overlap/size_B, 
+            Jaccard = overlap/(size_A + size_B - overlap))]
+        write_tsv(ov, out("06_comparisons", paste0(nm, "_overlap.tsv")))
+        for (direction in c("A", "B")) {
+            tmp <- copy(ov)
+            setorderv(tmp, c(direction, "Jaccard"), c(1, -1))
+            bm <- tmp[, .SD[1], by = direction]
+            bm[, `:=`(branch_A = pair[1], branch_B = pair[2], 
+                direction = direction, n_common = length(common))]
+            best[[paste0(nm, direction)]] <- bm
+        }
+        ca <- copy(profiles[[pair[1]]])
+        cb <- copy(profiles[[pair[2]]])
+        ca[, `:=`(comparison, nm)]
+        cb[, `:=`(comparison, nm)]
+        matched[[nm]] <- rbind(ca, cb)
+    }, write_tsv(rbindlist(met), out("06_comparisons/ARI_NMI.tsv")), 
+    write_tsv(rbindlist(best, use.names = TRUE), out("06_comparisons/best_cluster_Jaccard.tsv")), 
+    write_tsv(rbindlist(matched), out("06_comparisons/matched_branch_14MP_profiles.tsv")), 
+    writeLines(c("Patient-level results unavailable: existing mappings are derived or provisional, not independently confirmed.", 
+        "No patient IDs invented. All specimen and dataset analyses completed.", 
+        "Candidate table ranks ALL clusters descriptively. above_FULL_mean is a descriptive flag, not a validated-state threshold.", 
+        "MP10 is used in clustering; MP10 enrichment is definitional and not independent biological evidence."), 
+        out("07_mp10_review/interpretation_limits.txt")), writeLines("complete", 
+        out("logs/SUMMARIES_COMPLETE")))
+expression(source("/home/data/t070721/codex_workspace/Bladder Metabolism/mp_ucell_state_v1/code/00_common.R"), 
+    checks <- list(), check <- function(name, value, detail = "") {
+        checks[[length(checks) + 1]] <<- data.table(check = name, 
+            pass = isTRUE(value), detail = as.character(detail))
+        if (!isTRUE(value)) 
+            warning(name)
+    }, M <- qread(out("02_ucell_scores/M_RAW.qs")), Z <- qread(out("02_ucell_scores/M_Z.qs")), 
+    md <- qread(out("00_input_audit/cell_metadata.qs")), st <- qread(file.path(frozen, 
+        "01_input_state.qs")), check("FULL_exact_frozen_ID_order", 
+        identical(rownames(M), st$cells)), check("14_columns_in_fixed_order", 
+        identical(colnames(M), mp)), check("finite_RAW_Z", all(is.finite(M)) && 
+        all(is.finite(Z))), check("exact_metadata_ID_order", 
+        identical(md$cell_id, rownames(M))), check("Z_FULL_means_zero", 
+        max(abs(colMeans(Z))) < 1e-12), check("Z_FULL_sample_SD_one", 
+        max(abs(apply(Z, 2, sd) - 1)) < 1e-12), sc <- fread(out("02_ucell_scores/global_scaling.tsv")), 
+    expected <- M, for (j in 1:14) expected[, j] <- (M[, j] - 
+        sc$mean_FULL[j])/sc$sd_FULL[j], check("Z_reconstructs_from_saved_scaling", 
+        max(abs(expected - Z)) < 1e-12), inst <- fread(out("instance_manifest.tsv")), 
+    nlabels <- 0L, runstats <- list(), for (i in seq_len(nrow(inst))) {
+        nm <- inst$instance[i]
+        dir <- out(inst$directory[i])
+        ids <- if (startsWith(nm, "FULL")) 
+            rownames(M)
+        else qread(out("05_balanced", paste0("seed", sub(".*seed", 
+            "", nm), "_cell_ids.qs")))
+        u <- qread(file.path(dir, "umap.qs"))
+        check(paste(nm, "UMAP IDs"), identical(rownames(u), ids))
+        check(paste(nm, "UMAP finite 2D"), ncol(u) == 2 && all(is.finite(u)))
+        identity <- qread(file.path(dir, "instance_identity.qs"))
+        X <- if (grepl("_RAW", nm)) 
+            M[ids, mp, drop = FALSE]
+        else Z[ids, mp, drop = FALSE]
+        check(paste(nm, "direct unchanged 14D matrix"), identical(identity$matrix_hash, 
+            digest(X, "sha256")))
+        rr <- if (nm == "FULL_Z") 
+            c(0.4, 0.2, 0.6)
+        else 0.4
+        for (res in rr) {
+            cl <- fread(file.path(dir, paste0("clusters_res", 
+                res, ".tsv.gz")))
+            check(paste(nm, res, "labels IDs"), identical(cl$cell_id, 
+                ids) && !anyDuplicated(cl$cell_id))
+            nlabels <- nlabels + 1L
+            runstats[[length(runstats) + 1]] <- data.table(instance = nm, 
+                resolution = res, n_cells = nrow(cl), n_clusters = uniqueN(cl$cluster), 
+                smallest_cluster = min(table(cl$cluster)), largest_cluster = max(table(cl$cluster)))
+        }
+        if (startsWith(nm, "BAL")) {
+            ct <- table(md$sample[match(ids, md$cell_id)])
+            full <- table(md$sample)
+            check(paste(nm, "specimen cap"), all(ct[names(full)] == 
+                pmin(full, 1000)))
+            check(paste(nm, "FULL original order"), identical(ids, 
+                rownames(M)[rownames(M) %in% ids]))
+        }
+    }, check("8_UMAP_instances_10_labels", nrow(inst) == 8 && 
+        nlabels == 10), f <- fread(out("00_input_audit/input_manifest.tsv")), 
+    stat <- file.info(f$path), check("original_inputs_size_mtime_unchanged", 
+        all(f$bytes == stat$size) & all(f$mtime == as.character(stat$mtime))), 
+    check("figures_finished", file.exists(out("logs/FIGURES_COMPLETE"))), 
+    write_tsv(rbindlist(checks), out("00_input_audit/final_validation.tsv")), 
+    write_tsv(rbindlist(runstats), out("06_comparisons/run_summary.tsv")), 
+    stopifnot(all(rbindlist(checks)$pass)), files <- list.files(out("code"), 
+        full.names = TRUE), write_tsv(data.table(path = files, 
+        md5 = unname(tools::md5sum(files))), out("00_input_audit/code_checksums.tsv")), 
+    writeLines("complete", out("logs/VALIDATION_COMPLETE")))

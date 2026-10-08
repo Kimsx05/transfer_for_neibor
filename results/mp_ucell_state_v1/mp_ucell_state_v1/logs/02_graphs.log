@@ -1,0 +1,214 @@
+2026-10-07 23:45:45 FULL_Z FindNeighbors cells 123699 features 14 
+Computing nearest neighbor graph
+Computing SNN
+2026-10-07 23:46:25 FULL_Z Leiden resolution 0.4 
+2026-10-07 23:47:06 FULL_Z Leiden resolution 0.2 
+2026-10-07 23:47:47 FULL_Z Leiden resolution 0.6 
+2026-10-07 23:48:27 FULL_Z UMAP direct 14D 
+Warning: The default method for RunUMAP has changed from calling Python UMAP via reticulate to the R-native UWOT using the cosine metric
+To use Python UMAP via reticulate, set umap.method to 'umap-learn' and metric to 'correlation'
+This message will be shown once per session
+23:48:27 UMAP embedding parameters a = 0.9922 b = 1.112
+23:48:27 Read 123699 rows and found 14 numeric columns
+23:48:27 Using Annoy for neighbor search, n_neighbors = 30
+23:48:27 Building Annoy index with metric = euclidean, n_trees = 50
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+23:48:36 Writing NN index file to temp file /home/data/t070721/tmpdir/Rtmp06oARA/file98dd949652eeb
+23:48:36 Searching Annoy index using 1 thread, search_k = 3000
+23:49:23 Annoy recall = 100%
+23:49:24 Commencing smooth kNN distance calibration using 1 thread with target n_neighbors = 30
+23:49:28 Initializing from normalized Laplacian + noise (using RSpectra)
+23:49:33 Commencing optimization for 200 epochs, with 5212128 positive edges
+23:49:33 Using rng type: pcg
+Using method 'umap'
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+23:50:22 Optimization finished
+2026-10-07 23:50:23 FULL_Z complete 
+2026-10-07 23:50:24 FULL_RAW FindNeighbors cells 123699 features 14 
+Computing nearest neighbor graph
+Computing SNN
+2026-10-07 23:51:02 FULL_RAW Leiden resolution 0.4 
+2026-10-07 23:51:44 FULL_RAW UMAP direct 14D 
+23:51:44 UMAP embedding parameters a = 0.9922 b = 1.112
+23:51:44 Read 123699 rows and found 14 numeric columns
+23:51:44 Using Annoy for neighbor search, n_neighbors = 30
+23:51:44 Building Annoy index with metric = euclidean, n_trees = 50
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+23:51:53 Writing NN index file to temp file /home/data/t070721/tmpdir/Rtmp06oARA/file98dd91dab206
+23:51:53 Searching Annoy index using 1 thread, search_k = 3000
+23:52:40 Annoy recall = 100%
+23:52:40 Commencing smooth kNN distance calibration using 1 thread with target n_neighbors = 30
+23:52:44 Initializing from normalized Laplacian + noise (using RSpectra)
+23:52:50 Commencing optimization for 200 epochs, with 5187986 positive edges
+23:52:50 Using rng type: pcg
+Using method 'umap'
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+23:53:39 Optimization finished
+2026-10-07 23:53:40 FULL_RAW complete 
+2026-10-07 23:53:40 BAL_Z_seed42 FindNeighbors cells 34094 features 14 
+Computing nearest neighbor graph
+Computing SNN
+2026-10-07 23:53:50 BAL_Z_seed42 Leiden resolution 0.4 
+2026-10-07 23:53:59 BAL_Z_seed42 UMAP direct 14D 
+23:53:59 UMAP embedding parameters a = 0.9922 b = 1.112
+23:53:59 Read 34094 rows and found 14 numeric columns
+23:53:59 Using Annoy for neighbor search, n_neighbors = 30
+23:53:59 Building Annoy index with metric = euclidean, n_trees = 50
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+23:54:01 Writing NN index file to temp file /home/data/t070721/tmpdir/Rtmp06oARA/file98dd949eb0b82
+23:54:01 Searching Annoy index using 1 thread, search_k = 3000
+23:54:12 Annoy recall = 100%
+23:54:13 Commencing smooth kNN distance calibration using 1 thread with target n_neighbors = 30
+23:54:14 Initializing from normalized Laplacian + noise (using RSpectra)
+23:54:14 Commencing optimization for 200 epochs, with 1404422 positive edges
+23:54:14 Using rng type: pcg
+Using method 'umap'
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+23:54:28 Optimization finished
+2026-10-07 23:54:28 BAL_Z_seed42 complete 
+2026-10-07 23:54:29 BAL_RAW_seed42 FindNeighbors cells 34094 features 14 
+Computing nearest neighbor graph
+Computing SNN
+2026-10-07 23:54:39 BAL_RAW_seed42 Leiden resolution 0.4 
+2026-10-07 23:54:48 BAL_RAW_seed42 UMAP direct 14D 
+23:54:48 UMAP embedding parameters a = 0.9922 b = 1.112
+23:54:48 Read 34094 rows and found 14 numeric columns
+23:54:48 Using Annoy for neighbor search, n_neighbors = 30
+23:54:48 Building Annoy index with metric = euclidean, n_trees = 50
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+23:54:51 Writing NN index file to temp file /home/data/t070721/tmpdir/Rtmp06oARA/file98dd949879781
+23:54:51 Searching Annoy index using 1 thread, search_k = 3000
+23:55:01 Annoy recall = 100%
+23:55:02 Commencing smooth kNN distance calibration using 1 thread with target n_neighbors = 30
+23:55:03 Initializing from normalized Laplacian + noise (using RSpectra)
+23:55:03 Commencing optimization for 200 epochs, with 1392872 positive edges
+23:55:03 Using rng type: pcg
+Using method 'umap'
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+23:55:17 Optimization finished
+2026-10-07 23:55:17 BAL_RAW_seed42 complete 
+2026-10-07 23:55:17 BAL_Z_seed43 FindNeighbors cells 34094 features 14 
+Computing nearest neighbor graph
+Computing SNN
+2026-10-07 23:55:26 BAL_Z_seed43 Leiden resolution 0.4 
+2026-10-07 23:55:36 BAL_Z_seed43 UMAP direct 14D 
+23:55:36 UMAP embedding parameters a = 0.9922 b = 1.112
+23:55:36 Read 34094 rows and found 14 numeric columns
+23:55:36 Using Annoy for neighbor search, n_neighbors = 30
+23:55:36 Building Annoy index with metric = euclidean, n_trees = 50
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+23:55:38 Writing NN index file to temp file /home/data/t070721/tmpdir/Rtmp06oARA/file98dd9250735cc
+23:55:38 Searching Annoy index using 1 thread, search_k = 3000
+23:55:49 Annoy recall = 100%
+23:55:49 Commencing smooth kNN distance calibration using 1 thread with target n_neighbors = 30
+23:55:50 Initializing from normalized Laplacian + noise (using RSpectra)
+23:55:51 Commencing optimization for 200 epochs, with 1404598 positive edges
+23:55:51 Using rng type: pcg
+Using method 'umap'
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+23:56:04 Optimization finished
+2026-10-07 23:56:05 BAL_Z_seed43 complete 
+2026-10-07 23:56:05 BAL_RAW_seed43 FindNeighbors cells 34094 features 14 
+Computing nearest neighbor graph
+Computing SNN
+2026-10-07 23:56:14 BAL_RAW_seed43 Leiden resolution 0.4 
+2026-10-07 23:56:24 BAL_RAW_seed43 UMAP direct 14D 
+23:56:24 UMAP embedding parameters a = 0.9922 b = 1.112
+23:56:24 Read 34094 rows and found 14 numeric columns
+23:56:24 Using Annoy for neighbor search, n_neighbors = 30
+23:56:24 Building Annoy index with metric = euclidean, n_trees = 50
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+23:56:26 Writing NN index file to temp file /home/data/t070721/tmpdir/Rtmp06oARA/file98dd940d1f5c
+23:56:26 Searching Annoy index using 1 thread, search_k = 3000
+23:56:37 Annoy recall = 100%
+23:56:37 Commencing smooth kNN distance calibration using 1 thread with target n_neighbors = 30
+23:56:39 Initializing from normalized Laplacian + noise (using RSpectra)
+23:56:39 Commencing optimization for 200 epochs, with 1392710 positive edges
+23:56:39 Using rng type: pcg
+Using method 'umap'
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+23:56:53 Optimization finished
+2026-10-07 23:56:53 BAL_RAW_seed43 complete 
+2026-10-07 23:56:53 BAL_Z_seed44 FindNeighbors cells 34094 features 14 
+Computing nearest neighbor graph
+Computing SNN
+2026-10-07 23:57:02 BAL_Z_seed44 Leiden resolution 0.4 
+2026-10-07 23:57:11 BAL_Z_seed44 UMAP direct 14D 
+23:57:11 UMAP embedding parameters a = 0.9922 b = 1.112
+23:57:11 Read 34094 rows and found 14 numeric columns
+23:57:11 Using Annoy for neighbor search, n_neighbors = 30
+23:57:11 Building Annoy index with metric = euclidean, n_trees = 50
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+23:57:14 Writing NN index file to temp file /home/data/t070721/tmpdir/Rtmp06oARA/file98dd935e05046
+23:57:14 Searching Annoy index using 1 thread, search_k = 3000
+23:57:25 Annoy recall = 100%
+23:57:25 Commencing smooth kNN distance calibration using 1 thread with target n_neighbors = 30
+23:57:26 Initializing from normalized Laplacian + noise (using RSpectra)
+23:57:27 Commencing optimization for 200 epochs, with 1404122 positive edges
+23:57:27 Using rng type: pcg
+Using method 'umap'
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+23:57:40 Optimization finished
+2026-10-07 23:57:40 BAL_Z_seed44 complete 
+2026-10-07 23:57:41 BAL_RAW_seed44 FindNeighbors cells 34094 features 14 
+Computing nearest neighbor graph
+Computing SNN
+2026-10-07 23:57:50 BAL_RAW_seed44 Leiden resolution 0.4 
+2026-10-07 23:57:59 BAL_RAW_seed44 UMAP direct 14D 
+23:57:59 UMAP embedding parameters a = 0.9922 b = 1.112
+23:57:59 Read 34094 rows and found 14 numeric columns
+23:57:59 Using Annoy for neighbor search, n_neighbors = 30
+23:57:59 Building Annoy index with metric = euclidean, n_trees = 50
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+23:58:02 Writing NN index file to temp file /home/data/t070721/tmpdir/Rtmp06oARA/file98dd97ae791d7
+23:58:02 Searching Annoy index using 1 thread, search_k = 3000
+23:58:12 Annoy recall = 100%
+23:58:13 Commencing smooth kNN distance calibration using 1 thread with target n_neighbors = 30
+23:58:14 Initializing from normalized Laplacian + noise (using RSpectra)
+23:58:14 Commencing optimization for 200 epochs, with 1392210 positive edges
+23:58:14 Using rng type: pcg
+Using method 'umap'
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+23:58:28 Optimization finished
+2026-10-07 23:58:28 BAL_RAW_seed44 complete 
+Warning messages:
+1: No assay specified, setting assay as RNA by default. 
+2: No assay specified, setting assay as RNA by default. 
+3: No assay specified, setting assay as RNA by default. 
+4: No assay specified, setting assay as RNA by default. 
+5: No assay specified, setting assay as RNA by default. 
+6: No assay specified, setting assay as RNA by default. 
+7: No assay specified, setting assay as RNA by default. 
+8: No assay specified, setting assay as RNA by default. 
