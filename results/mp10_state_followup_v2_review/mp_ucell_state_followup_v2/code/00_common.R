@@ -1,0 +1,17 @@
+.libPaths(c('/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.5','/refdir/Rlib','/usr/local/lib/R/library'))
+suppressPackageStartupMessages({library(data.table);library(qs);library(Matrix)})
+setDTthreads(2); options(stringsAsFactors=FALSE); Sys.setlocale('LC_COLLATE','C')
+root <- '/home/data/t070721/codex_workspace/Bladder Metabolism/mp_ucell_state_followup_v2'
+old <- '/home/data/t070721/codex_workspace/Bladder Metabolism/mp_ucell_state_v1'
+frozen <- '/home/data/t070721/Metabolistic_scRNA/Multi2/4.3 NMF allgene/output_full_cc_seed5_v2'
+input <- '/home/data/t070721/Metabolistic_scRNA/Multi2/3.4 malignant cell process/PCA_ALLGENE1/epi_cycling_allgene_harmony_clustered_final_after_small_removal.qs'
+out <- function(x) file.path(root,x)
+wt <- function(x,p) fwrite(x,out(p),sep='\t',na='NA')
+qsafe <- function(x,p) {tmp<-paste0(out(p),'.tmp');qsave(x,tmp,nthreads=2);stopifnot(file.rename(tmp,out(p)))}
+logmsg <- function(...) {cat(format(Sys.time()),..., '\n');flush.console()}
+mp <- sprintf('EpiMP%02d',1:14)
+comparisons <- data.table(comparison=c('r04_C8_vs_rest','r06_C12_vs_C16','r06_C12_vs_rest','r06_C16_vs_rest','r04_C8_vs_C6','r04_C8_vs_C3'),resolution=c('r04','r06','r06','r06','r04','r04'),left=c('C8','C12','C12','C16','C8','C8'),right=c('rest','C16','rest','rest','C6','C3'))
+load_meta <- function() qread(out('00_audit/cell_metadata.qs'))
+get_groups <- function(md,cp) {cl<-md[[cp$resolution]];ifelse(cl==cp$left,'Left',ifelse(cp$right=='rest'|cl==cp$right,'Right',NA_character_))}
+config <- list(version='followup_v2.1',comparisons=comparisons,min_cells=30,min_pairs=3,seed=42,workers=2,design='~ sample + group; Right reference; groupLeft coefficient',filter='edgeR filterByExpr group=group defaults (10,15,10,0.7)',normalization='TMM',fit='edgeR QL robust=TRUE legacy=FALSE',shortlist='FDR<0.05; abs(log2FC)>=0.5; target sample-equal detection>=0.10; expression direction fraction>=0.70. Rank dataset direction fraction, sample direction fraction, detection delta, abs(log2FC); gene ID tie. Max20, B up to10 each direction; others left only.',display='At most3/state; review local controls and same-resolution alternative clusters; exploratory, no validation score',input=input,old=old,frozen=frozen)
+if(file.exists(out('config.rds'))) stopifnot(isTRUE(all.equal(config,readRDS(out('config.rds')),check.attributes=FALSE))) else {saveRDS(config,out('config.rds'));dput(config,out('config.R'))}

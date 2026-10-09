@@ -1,0 +1,117 @@
+_Q_u_a_s_i-_L_i_k_e_l_i_h_o_o_d _F-_T_e_s_t_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Conduct genewise quasi F-tests for a given coefficient or
+     coefficient contrast.
+
+_U_s_a_g_e:
+
+     glmQLFTest(glmfit, coef = ncol(glmfit$design), contrast = NULL,
+             poisson.bound = TRUE)
+     
+_A_r_g_u_m_e_n_t_s:
+
+  glmfit: a ‘DGEGLM’ object, usually output from ‘glmQLFit’.
+
+    coef: integer or character index vector indicating which
+          coefficients of the linear model are to be tested equal to
+          zero. Ignored if ‘contrast’ is not ‘NULL’.
+
+contrast: numeric vector or matrix specifying one or more contrasts of
+          the linear model coefficients to be tested equal to zero.
+
+poisson.bound: logical, if ‘TRUE’ then the p-value returned will never
+          be less than would be obtained for a likelihood ratio test
+          with NB-dispersion equal to 0 and quasi-dispersion equal to
+          1. Only uses when ‘legacy=TRUE’.
+
+_D_e_t_a_i_l_s:
+
+     ‘glmQLFTest’ is typically used after ‘glmQLFit’. The two functions
+     implement the quasi-likelihood (QL) methods of Lund et al (2012)
+     with some enhancements and with slightly different GLM, trend and
+     FDR methods. See Lun et al (2016) or Chen et al (2016) for
+     tutorials describing the use of ‘glmQLFit’ and ‘glmQLFit’ as part
+     of a complete analysis pipeline. Another case study using
+     ‘glmQLFit’ and ‘glmQLFTest’ is given in Section 4.7 of the edgeR
+     User's Guide.
+
+     ‘glmQLFTest’ is similar to ‘glmLRT’ except that it replaces
+     likelihood ratio tests with empirical Bayes quasi-likelihood
+     F-tests. The p-values from ‘glmQLFTest’ are always greater than or
+     equal to those that would be obtained from ‘glmLRT’ using the same
+     negative binomial dispersions.
+
+_V_a_l_u_e:
+
+     An object of class ‘DGELRT’ with the same components as produced
+     by ‘glmLRT’, except that the ‘table$LR’ column becomes ‘table$F’
+     and contains quasi-likelihood F-statistics. It also stores
+     ‘df.total’, a numeric vector containing the denominator degrees of
+     freedom for the F-test, equal to ‘df.prior + df.residual.zeros’.
+
+_A_u_t_h_o_r(_s):
+
+     Yunshun Chen, Aaron Lun, Davis McCarthy, Lizhong Chen and Gordon
+     Smyth
+
+_R_e_f_e_r_e_n_c_e_s:
+
+     Chen Y, Chen L, Lun ATL, Baldoni PL, Smyth GK (2025).  edgeR v4:
+     powerful differential analysis of sequencing data with expanded
+     functionality and improved support for small counts and larger
+     datasets.  _Nucleic Acids Research_ 53(2), gkaf018.
+     doi:10.1093/nar/gkaf018 <https://doi.org/10.1093/nar/gkaf018>
+
+     Chen Y, Lun ATL, Smyth GK (2016). From reads to genes to pathways:
+     differential expression analysis of RNA-Seq experiments using
+     Rsubread and the edgeR quasi-likelihood pipeline. _F1000Research_
+     5, 1438. doi:10.12688/f1000research.8987.2
+     <https://doi.org/10.12688/f1000research.8987.2>
+
+     Lun, ATL, Chen, Y, and Smyth, GK (2016). It's DE-licious: a recipe
+     for differential expression analyses of RNA-seq experiments using
+     quasi-likelihood methods in edgeR. _Methods in Molecular Biology_
+     1418, 391-416. doi:10.1007/978-1-4939-3578-9_19
+     <https://doi.org/10.1007/978-1-4939-3578-9_19>
+     <https://gksmyth.github.io/pubs/QLedgeRPreprint.pdf> (Preprint 8
+     April 2015)
+
+     Lund, SP, Nettleton, D, McCarthy, DJ, and Smyth, GK (2012).
+     Detecting differential expression in RNA-sequence data using
+     quasi-likelihood with shrunken dispersion estimates. _Statistical
+     Applications in Genetics and Molecular Biology_ Volume 11, Issue
+     5, Article 8. doi:10.1515/1544-6115.1826
+     <https://doi.org/10.1515/1544-6115.1826>
+     <https://gksmyth.github.io/pubs/QuasiSeqPreprint.pdf>
+
+     Lun, ATL, and Smyth, GK (2017). No counts, no variance: allowing
+     for loss of degrees of freedom when assessing biological
+     variability from RNA-seq data. _Statistical Applications in
+     Genetics and Molecular Biology_ 16(2), 83-93.
+     doi:10.1515/sagmb-2017-0010
+     <https://doi.org/10.1515/sagmb-2017-0010>
+
+     Phipson, B, Lee, S, Majewski, IJ, Alexander, WS, and Smyth, GK
+     (2016). Robust hyperparameter estimation protects against
+     hypervariable genes and improves power to detect differential
+     expression. _Annals of Applied Statistics_ 10, 946-963.
+     doi:10.1214/16-AOAS920 <https://doi.org/10.1214/16-AOAS920>
+
+_S_e_e _A_l_s_o:
+
+     ‘glmQLFit’ provides estimated GLMs to ‘glmQLFTest’.
+
+     ‘topTags’ displays results from ‘glmQLFTest’.
+
+     ‘plotQLDisp’ can be used to visualize the distribution of
+     quasi-dispersions after EB shrinkage from ‘glmQLFit’.
+
+     The ‘QuasiSeq’ package gives an alternative implementation of the
+     Lund et al (2012) methods.
+
+_E_x_a_m_p_l_e_s:
+
+     # See glmQLFit for an example using glmQLFTest
+     

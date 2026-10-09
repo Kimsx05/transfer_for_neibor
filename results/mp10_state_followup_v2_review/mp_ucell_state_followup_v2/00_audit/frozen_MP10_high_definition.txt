@@ -1,0 +1,6 @@
+Frozen cutoff file:
+/home/data/t070721/Metabolistic_scRNA/Multi2/4.3 NMF allgene/output_full_cc_seed5_v2/10_high_usage_global_cutoffs.csv
+Definition source (read only):
+/home/data/t070721/Metabolistic_scRNA/Multi2/4.3 NMF allgene/code/12_epimp_fulltranscriptome/10_plot_EpiMP_summary.R
+Lines 124-135 explicitly construct raw_long from t(scores$usage_raw), define per-EpiMP quantile(usage, .9, na.rm=TRUE), and high fraction with usage >= high_usage_cutoff.
+This follow-up reads the existing saved EpiMP10 cutoff; it does not recompute or tune a threshold.

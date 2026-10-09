@@ -1,0 +1,10 @@
+gene_id	state	resolution	role	target_expression	target_detection	highest_other_cluster	highest_other_expression	n_equal_or_higher	member_MPs	in_any_14MP_top50	in_MP10_top50	in_MP07_top50	shared_MP07_MP10
+"EGR1"	"C8"	"r04"	"Best of these C8 discrimination candidates; inducible transcription signal"	1.43890119096951	0.827368560932895	"C6"	1.05973977240564	0	"EpiMP03;EpiMP04"	TRUE	FALSE	FALSE	FALSE
+"ELOVL5"	"C12"	"r06"	"C12 lipid-support gene; not a C12/C16 discriminator"	1.01785926600998	0.646120870065004	"C14"	1.08566624575392	1	"EpiMP03;EpiMP07;EpiMP10"	TRUE	TRUE	TRUE	TRUE
+"ELOVL5"	"C8"	"r04"	"Lipid-support gene with local C6/C3 support; broader program, not C8-specific"	0.97811629094006	0.639862996476483	"C12"	0.700096291269743	0	"EpiMP03;EpiMP07;EpiMP10"	TRUE	TRUE	TRUE	TRUE
+"GADD45B"	"C8"	"r04"	"Supportive response gene; C13 expression higher"	1.31560279556851	0.805351660392515	"C13"	1.42938654048209	1	"EpiMP03;EpiMP04;EpiMP11"	TRUE	FALSE	FALSE	FALSE
+"GSE1"	"C12"	"r06"	"C12 versus C16 discriminator; modest detection; C14/C15 may be higher"	0.225865441329405	0.277955605097478	"C14"	0.325521388037096	2	""	FALSE	FALSE	FALSE	FALSE
+"HIPK3"	"C12"	"r06"	"C12 versus C16 expression discriminator; weaker versus rest"	0.41683540418954	0.429642939259746	"C14"	0.459713463706451	1	""	FALSE	FALSE	FALSE	FALSE
+"IDI1"	"C16"	"r06"	"C16 sterol-support gene; MP10 input gene; not C16-specific"	0.899296765975733	0.743345775289167	"C18"	0.976968917407941	1	"EpiMP10"	TRUE	TRUE	FALSE	FALSE
+"LDLR"	"C16"	"r06"	"C16 lipid-uptake support; MP10 input gene; not C16-specific"	0.632852453439399	0.600759163949064	"C14"	0.739838674515976	2	"EpiMP10"	TRUE	TRUE	FALSE	FALSE
+"NRARP"	"C16"	"r06"	"C16 versus rest candidate; C12 nearly equal; limited subtype specificity"	0.550010056963529	0.513367460568421	"C12"	0.542706115274963	0	""	FALSE	FALSE	FALSE	FALSE

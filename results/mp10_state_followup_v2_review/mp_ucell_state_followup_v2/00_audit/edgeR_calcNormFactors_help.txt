@@ -1,0 +1,184 @@
+_N_o_r_m_a_l_i_z_e _L_i_b_r_a_r_y _S_i_z_e_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Calculate scaling factors to convert the raw library sizes for a
+     set of sequenced samples into normalized effective library sizes.
+
+_U_s_a_g_e:
+
+     ## S3 method for class 'DGEList'
+     normLibSizes(object,
+                     method = c("TMM", "TMMwsp", "RLE", "upperquartile", "none"),
+                     refColumn = NULL, logratioTrim = .3, sumTrim = 0.05, doWeighting = TRUE,
+                     Acutoff = -1e10, p = 0.75, ...)
+     ## S3 method for class 'SummarizedExperiment'
+     normLibSizes(object,
+                     method = c("TMM","TMMwsp","RLE","upperquartile","none"),
+                     refColumn = NULL, logratioTrim = .3, sumTrim = 0.05, doWeighting = TRUE,
+                     Acutoff = -1e10, p = 0.75, ...)
+     ## Default S3 method:
+     normLibSizes(object, lib.size = NULL,
+                     method = c("TMM","TMMwsp","RLE","upperquartile","none"),
+                     refColumn = NULL, logratioTrim = .3, sumTrim = 0.05, doWeighting = TRUE,
+                     Acutoff = -1e10, p = 0.75, ...)
+     
+     ## S3 method for class 'DGEList'
+     calcNormFactors(object,
+                     method = c("TMM","TMMwsp","RLE","upperquartile","none"),
+                     refColumn = NULL, logratioTrim = .3, sumTrim = 0.05, doWeighting = TRUE,
+                     Acutoff = -1e10, p = 0.75, ...)
+     ## S3 method for class 'SummarizedExperiment'
+     calcNormFactors(object,
+                     method = c("TMM","TMMwsp","RLE","upperquartile","none"),
+                     refColumn = NULL, logratioTrim = .3, sumTrim = 0.05, doWeighting = TRUE,
+                     Acutoff = -1e10, p = 0.75, ...)
+     ## Default S3 method:
+     calcNormFactors(object, lib.size = NULL,
+                     method = c("TMM","TMMwsp","RLE","upperquartile","none"),
+                     refColumn = NULL, logratioTrim = .3, sumTrim = 0.05, doWeighting = TRUE,
+                     Acutoff = -1e10, p = 0.75, ...)
+     
+_A_r_g_u_m_e_n_t_s:
+
+  object: a matrix of raw read counts or a ‘DGEList’ object or a
+          ‘SummarizedExperiment’ object.
+
+lib.size: numeric vector of library sizes corresponding to the columns
+          of the matrix ‘object’.
+
+  method: normalization method to be used.
+
+refColumn: column to use as reference for ‘method="TMM"’. Can be a
+          column number or a numeric vector of length ‘nrow(object)’.
+
+logratioTrim: the fraction (0 to 0.5) of observations to be trimmed
+          from each tail of the distribution of log-ratios (M-values)
+          before computing the mean. Used by ‘method="TMM"’ for each
+          pair of samples.
+
+ sumTrim: the fraction (0 to 0.5) of observations to be trimmed from
+          each tail of the distribution of A-values before computing
+          the mean. Used by ‘method="TMM"’ for each pair of samples.
+
+doWeighting: logical, whether to use (asymptotic binomial precision)
+          weights when computing the mean M-values. Used by
+          ‘method="TMM"’ for each pair of samples.
+
+ Acutoff: minimum cutoff applied to A-values. Count pairs with lower
+          A-values are ignored. Used by ‘method="TMM"’ for each pair of
+          samples.
+
+       p: numeric value between 0 and 1 specifying which quantile of
+          the counts should be used by ‘method="upperquartile"’.
+
+     ...: other arguments are not currently used.
+
+_D_e_t_a_i_l_s:
+
+     This function computes scaling factors to convert observed library
+     sizes into normalized library sizes, also called "effective
+     library sizes". The effective library sizes for use in downstream
+     analysis are ‘lib.size * norm.factors’ where ‘lib.size’ contains
+     the original library sizes and ‘norm.factors’ is the vector of
+     scaling factors computed by this function.
+
+     The TMM method implements the trimmed mean of M-values method
+     proposed by Robinson and Oshlack (2010). By default, the M-values
+     are weighted according to inverse variances, as computed by the
+     delta method for logarithms of binomial random variables. If
+     ‘refColumn’ is unspecified, then the column whose
+     count-per-million upper quartile is closest to the mean upper
+     quartile is set as the reference library.
+
+     The TMMwsp method stands for "TMM with singleton pairing". This is
+     a variant of TMM that is intended to have more stable performance
+     when the counts have a high proportion of zeros. In the TMM
+     method, genes that have zero count in either library are ignored
+     when comparing pairs of libraries. In the TMMwsp method, the
+     positive counts from such genes are reused to increase the number
+     of features by which the libraries are compared. The singleton
+     positive counts are paired up between the libraries in decreasing
+     order of size and then a slightly modified TMM method is applied
+     to the re-ordered libraries. If ‘refColumn’ is unspecified, then
+     the column with largest sum of square-root counts is used as the
+     reference library.
+
+     RLE is the scaling factor method proposed by Anders and Huber
+     (2010). We call it "relative log expression", as median library is
+     calculated from the geometric mean of all columns and the median
+     ratio of each sample to the median library is taken as the scale
+     factor.
+
+     The upperquartile method is the upper-quartile normalization
+     method of Bullard et al (2010), in which the scale factors are
+     calculated from the 75% quantile of the counts for each library,
+     after removing genes that are zero in all libraries. The idea is
+     generalized here to allow normalization by any quantile of the
+     count distributions.
+
+     If ‘method="none"’, then the normalization factors are set to 1.
+
+     For symmetry, normalization factors are adjusted to multiply to 1.
+     Rows of ‘object’ that have zero counts for all columns are removed
+     before normalization factors are computed. The number of such rows
+     does not affect the estimated normalization factors.
+
+     If ‘object’ is a ‘SummarizedExperiment’ object, then it is
+     converted to a ‘DGEList’ using ‘SE2DGEList’ and the ‘DGEList’
+     method applied.
+
+_V_a_l_u_e:
+
+     If ‘object’ is a ‘matrix’, then the output is a vector with length
+     ‘ncol(object)’ giving the library scaling factors.
+
+     If ‘object’ is a ‘DGEList’ or ‘SummarizedExperiment’ object, then
+     the output is a ‘DGEList’ the same as input with the library
+     scaling factors stored as ‘object$samples$norm.factors’.
+
+_N_o_t_e:
+
+     ‘normLibSizes’ is the new name for ‘calcNormFactors’. The two
+     functions are equivalent but ‘calcNormFactors’ will eventually be
+     retired.
+
+_A_u_t_h_o_r(_s):
+
+     Mark Robinson, Gordon Smyth, Yunshun Chen.
+
+_R_e_f_e_r_e_n_c_e_s:
+
+     Anders, S, Huber, W (2010). Differential expression analysis for
+     sequence count data _Genome Biology_ 11, R106.
+
+     Bullard JH, Purdom E, Hansen KD, Dudoit S. (2010) Evaluation of
+     statistical methods for normalization and differential expression
+     in mRNA-Seq experiments. _BMC Bioinformatics_ 11, 94.
+
+     Robinson MD, Oshlack A (2010). A scaling normalization method for
+     differential expression analysis of RNA-seq data. _Genome Biology_
+     11, R25.
+
+_S_e_e _A_l_s_o:
+
+     ‘getNormLibSizes’, ‘SE2DGEList’.
+
+_E_x_a_m_p_l_e_s:
+
+     y <- matrix( rpois(1000, lambda=5), nrow=200 )
+     normLibSizes(y)
+     
+     # The TMM and TMMwsp methods give zero weight to the genes with the largest fold-changes:
+     y <- cbind(1,c(1,1,1,1,1,1,1,1,1,100))
+     normLibSizes(y, lib.size=c(1e6,1e6))
+     
+     # normLibSizes makes the fold-changes for the majority of genes as close to 1 as possible:
+     # In this example, computing CPMs with raw library sizes makes the two samples look quite different.
+     dge <- DGEList(counts=y)
+     cpm(dge)
+     # By contrast, normalizing the library sizes makes most of the CPMs equal in the two samples:
+     dge <- normLibSizes(dge)
+     cpm(dge)
+     getNormLibSizes(dge)
+     
