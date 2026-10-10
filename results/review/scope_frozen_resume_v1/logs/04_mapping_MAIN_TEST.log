@@ -1,0 +1,103 @@
+Seed set to 941979251
+2026-10-10T16:45:01.307652 MAP_START MAIN TEST (8400, 11230) 3000
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+2026-10-10T16:46:37.386547 MAPPING_EPOCH MAIN TEST 250
+2026-10-10T16:48:12.728747 MAPPING_EPOCH MAIN TEST 500
+2026-10-10T16:49:48.157181 MAPPING_EPOCH MAIN TEST 750
+2026-10-10T16:51:23.513290 MAPPING_EPOCH MAIN TEST 1000
+2026-10-10T16:52:58.781775 MAPPING_EPOCH MAIN TEST 1250
+2026-10-10T16:54:34.089640 MAPPING_EPOCH MAIN TEST 1500
+2026-10-10T16:56:09.234181 MAPPING_EPOCH MAIN TEST 1750
+2026-10-10T16:57:44.678012 MAPPING_EPOCH MAIN TEST 2000
+2026-10-10T16:59:20.010425 MAPPING_EPOCH MAIN TEST 2250
+2026-10-10T17:00:55.324770 MAPPING_EPOCH MAIN TEST 2500
+2026-10-10T17:02:30.672951 MAPPING_EPOCH MAIN TEST 2750
+2026-10-10T17:04:05.719129 MAPPING_EPOCH MAIN TEST 3000
+`Trainer.fit` stopped: `max_epochs=3000` reached.
+Seed set to 567101144
+Sampling local variables, batch:   0%|          | 0/9 [00:00<?, ?it/s]Sampling local variables, batch:  11%|█         | 1/9 [00:07<00:57,  7.15s/it]Sampling local variables, batch:  22%|██▏       | 2/9 [00:14<00:49,  7.09s/it]Sampling local variables, batch:  33%|███▎      | 3/9 [00:21<00:42,  7.06s/it]Sampling local variables, batch:  44%|████▍     | 4/9 [00:28<00:35,  7.05s/it]Sampling local variables, batch:  56%|█████▌    | 5/9 [00:35<00:28,  7.08s/it]Sampling local variables, batch:  67%|██████▋   | 6/9 [00:42<00:21,  7.07s/it]Sampling local variables, batch:  78%|███████▊  | 7/9 [00:49<00:14,  7.07s/it]Sampling local variables, batch:  89%|████████▉ | 8/9 [00:56<00:07,  7.07s/it]Sampling local variables, batch: 100%|██████████| 9/9 [01:02<00:00,  6.86s/it]Sampling local variables, batch: 100%|██████████| 9/9 [01:02<00:00,  7.00s/it]
+2026-10-10T17:05:09.833565 MAP_CONVERGENCE MAIN TEST 3000 0.0018040375174086 abundance_stable False
+2026-10-10T17:05:09.833644 MAP_START MAIN TEST (8400, 11230) 2000
+Seed set to 941979251
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:538: Found 6 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+2026-10-10T17:06:45.641027 MAPPING_EPOCH MAIN TEST 3250
+2026-10-10T17:08:21.058268 MAPPING_EPOCH MAIN TEST 3500
+2026-10-10T17:09:56.416161 MAPPING_EPOCH MAIN TEST 3750
+2026-10-10T17:11:31.621614 MAPPING_EPOCH MAIN TEST 4000
+2026-10-10T17:13:07.032987 MAPPING_EPOCH MAIN TEST 4250
+2026-10-10T17:14:42.432070 MAPPING_EPOCH MAIN TEST 4500
+2026-10-10T17:16:17.711234 MAPPING_EPOCH MAIN TEST 4750
+2026-10-10T17:17:52.710831 MAPPING_EPOCH MAIN TEST 5000
+`Trainer.fit` stopped: `max_epochs=2000` reached.
+Seed set to 567101144
+Sampling local variables, batch:   0%|          | 0/9 [00:00<?, ?it/s]Sampling local variables, batch:  11%|█         | 1/9 [00:07<00:56,  7.06s/it]Sampling local variables, batch:  22%|██▏       | 2/9 [00:14<00:49,  7.05s/it]Sampling local variables, batch:  33%|███▎      | 3/9 [00:21<00:42,  7.06s/it]Sampling local variables, batch:  44%|████▍     | 4/9 [00:28<00:35,  7.04s/it]Sampling local variables, batch:  56%|█████▌    | 5/9 [00:35<00:28,  7.04s/it]Sampling local variables, batch:  67%|██████▋   | 6/9 [00:42<00:21,  7.04s/it]Sampling local variables, batch:  78%|███████▊  | 7/9 [00:49<00:14,  7.04s/it]Sampling local variables, batch:  89%|████████▉ | 8/9 [00:56<00:07,  7.08s/it]Sampling local variables, batch: 100%|██████████| 9/9 [01:02<00:00,  6.83s/it]Sampling local variables, batch: 100%|██████████| 9/9 [01:02<00:00,  6.97s/it]
+2026-10-10T17:18:56.634131 MAP_CONVERGENCE MAIN TEST 5000 0.0004897705726805316 abundance_stable False
+2026-10-10T17:18:56.634211 MAP_START MAIN TEST (8400, 11230) 2000
+Seed set to 941979251
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:538: Found 6 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+2026-10-10T17:20:32.557411 MAPPING_EPOCH MAIN TEST 5250
+2026-10-10T17:22:08.007956 MAPPING_EPOCH MAIN TEST 5500
+2026-10-10T17:23:43.431769 MAPPING_EPOCH MAIN TEST 5750
+2026-10-10T17:25:18.837249 MAPPING_EPOCH MAIN TEST 6000
+2026-10-10T17:26:54.084893 MAPPING_EPOCH MAIN TEST 6250
+2026-10-10T17:28:29.511101 MAPPING_EPOCH MAIN TEST 6500
+2026-10-10T17:30:04.919880 MAPPING_EPOCH MAIN TEST 6750
+2026-10-10T17:31:39.899071 MAPPING_EPOCH MAIN TEST 7000
+`Trainer.fit` stopped: `max_epochs=2000` reached.
+Seed set to 567101144
+Sampling local variables, batch:   0%|          | 0/9 [00:00<?, ?it/s]Sampling local variables, batch:  11%|█         | 1/9 [00:07<00:56,  7.10s/it]Sampling local variables, batch:  22%|██▏       | 2/9 [00:14<00:49,  7.07s/it]Sampling local variables, batch:  33%|███▎      | 3/9 [00:21<00:42,  7.06s/it]Sampling local variables, batch:  44%|████▍     | 4/9 [00:28<00:35,  7.05s/it]Sampling local variables, batch:  56%|█████▌    | 5/9 [00:35<00:28,  7.04s/it]Sampling local variables, batch:  67%|██████▋   | 6/9 [00:42<00:21,  7.04s/it]Sampling local variables, batch:  78%|███████▊  | 7/9 [00:49<00:14,  7.04s/it]Sampling local variables, batch:  89%|████████▉ | 8/9 [00:56<00:07,  7.05s/it]Sampling local variables, batch: 100%|██████████| 9/9 [01:02<00:00,  6.82s/it]Sampling local variables, batch: 100%|██████████| 9/9 [01:02<00:00,  6.97s/it]
+2026-10-10T17:32:43.740749 MAP_CONVERGENCE MAIN TEST 7000 0.00021537779345943641 abundance_stable False
+2026-10-10T17:32:43.740833 MAP_START MAIN TEST (8400, 11230) 2000
+Seed set to 941979251
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:538: Found 6 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+2026-10-10T17:34:19.510133 MAPPING_EPOCH MAIN TEST 7250
+2026-10-10T17:35:54.913084 MAPPING_EPOCH MAIN TEST 7500
+2026-10-10T17:37:30.285484 MAPPING_EPOCH MAIN TEST 7750
+2026-10-10T17:39:05.580430 MAPPING_EPOCH MAIN TEST 8000
+2026-10-10T17:40:40.897399 MAPPING_EPOCH MAIN TEST 8250
+2026-10-10T17:42:16.218681 MAPPING_EPOCH MAIN TEST 8500
+2026-10-10T17:43:51.664513 MAPPING_EPOCH MAIN TEST 8750
+2026-10-10T17:45:26.713860 MAPPING_EPOCH MAIN TEST 9000
+`Trainer.fit` stopped: `max_epochs=2000` reached.
+Seed set to 567101144
+Sampling local variables, batch:   0%|          | 0/9 [00:00<?, ?it/s]Sampling local variables, batch:  11%|█         | 1/9 [00:07<00:56,  7.09s/it]Sampling local variables, batch:  22%|██▏       | 2/9 [00:14<00:49,  7.09s/it]Sampling local variables, batch:  33%|███▎      | 3/9 [00:21<00:42,  7.08s/it]Sampling local variables, batch:  44%|████▍     | 4/9 [00:28<00:35,  7.06s/it]Sampling local variables, batch:  56%|█████▌    | 5/9 [00:35<00:28,  7.06s/it]Sampling local variables, batch:  67%|██████▋   | 6/9 [00:42<00:21,  7.06s/it]Sampling local variables, batch:  78%|███████▊  | 7/9 [00:49<00:14,  7.05s/it]Sampling local variables, batch:  89%|████████▉ | 8/9 [00:56<00:07,  7.06s/it]Sampling local variables, batch: 100%|██████████| 9/9 [01:02<00:00,  6.83s/it]Sampling local variables, batch: 100%|██████████| 9/9 [01:02<00:00,  6.98s/it]
+2026-10-10T17:46:30.693253 MAP_CONVERGENCE MAIN TEST 9000 0.00010137804830706564 abundance_stable True
+Seed set to 567101144
+Sampling local variables, batch:   0%|          | 0/9 [00:00<?, ?it/s]Sampling local variables, batch:  11%|█         | 1/9 [00:28<03:46, 28.32s/it]Sampling local variables, batch:  22%|██▏       | 2/9 [00:56<03:18, 28.38s/it]Sampling local variables, batch:  33%|███▎      | 3/9 [01:25<02:50, 28.36s/it]Sampling local variables, batch:  44%|████▍     | 4/9 [01:53<02:21, 28.32s/it]Sampling local variables, batch:  56%|█████▌    | 5/9 [02:21<01:53, 28.44s/it]Sampling local variables, batch:  67%|██████▋   | 6/9 [02:50<01:25, 28.35s/it]Sampling local variables, batch:  78%|███████▊  | 7/9 [03:18<00:56, 28.41s/it]Sampling local variables, batch:  89%|████████▉ | 8/9 [03:46<00:28, 28.31s/it]Sampling local variables, batch: 100%|██████████| 9/9 [04:12<00:00, 27.37s/it]Sampling local variables, batch: 100%|██████████| 9/9 [04:12<00:00, 28.01s/it]/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_k32_reference_identifiability_v5/scope_frozen_resume_v1/code/04_mapping.py:60: RuntimeWarning: Mean of empty slice
+  for name,fun in [('mean',lambda z:np.nanmean(z,axis=0)),('median',lambda z:np.nanmedian(z,axis=0)),('q05',lambda z:np.nanquantile(z,.05,axis=0)),('q95',lambda z:np.nanquantile(z,.95,axis=0))]:ratio[label+'_'+name]=fun(x)
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/numpy/lib/_nanfunctions_impl.py:1215: RuntimeWarning: All-NaN slice encountered
+  return fnb._ureduce(a, func=_nanmedian, keepdims=keepdims,
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/numpy/lib/_nanfunctions_impl.py:1593: RuntimeWarning: All-NaN slice encountered
+  return fnb._ureduce(a,
+Seed set to 907507222
+
+Sampling local variables, batch:   0%|          | 0/9 [00:00<?, ?it/s]Sampling local variables, batch:  11%|█         | 1/9 [00:02<00:22,  2.79s/it]Sampling local variables, batch:  22%|██▏       | 2/9 [00:05<00:19,  2.77s/it]Sampling local variables, batch:  33%|███▎      | 3/9 [00:08<00:16,  2.76s/it]Sampling local variables, batch:  44%|████▍     | 4/9 [00:11<00:13,  2.75s/it]Sampling local variables, batch:  56%|█████▌    | 5/9 [00:13<00:11,  2.75s/it]Sampling local variables, batch:  67%|██████▋   | 6/9 [00:16<00:08,  2.75s/it]Sampling local variables, batch:  78%|███████▊  | 7/9 [00:19<00:05,  2.75s/it]Sampling local variables, batch:  89%|████████▉ | 8/9 [00:22<00:02,  2.75s/it]Sampling local variables, batch: 100%|██████████| 9/9 [00:24<00:00,  2.69s/it]Sampling local variables, batch: 100%|██████████| 9/9 [00:24<00:00,  2.73s/it]
+Sampling global variables, sample:   0%|          | 0/99 [00:00<?, ?it/s]Sampling global variables, sample:   4%|▍         | 4/99 [00:00<00:02, 38.98it/s]Sampling global variables, sample:   8%|▊         | 8/99 [00:00<00:02, 38.90it/s]Sampling global variables, sample:  13%|█▎        | 13/99 [00:00<00:01, 43.81it/s]Sampling global variables, sample:  22%|██▏       | 22/99 [00:00<00:01, 59.00it/s]Sampling global variables, sample:  31%|███▏      | 31/99 [00:00<00:01, 66.87it/s]Sampling global variables, sample:  39%|███▉      | 39/99 [00:00<00:00, 71.07it/s]Sampling global variables, sample:  47%|████▋     | 47/99 [00:00<00:00, 55.79it/s]Sampling global variables, sample:  55%|█████▍    | 54/99 [00:01<00:01, 29.95it/s]Sampling global variables, sample:  60%|█████▉    | 59/99 [00:01<00:01, 31.67it/s]Sampling global variables, sample:  66%|██████▌   | 65/99 [00:01<00:00, 36.35it/s]Sampling global variables, sample:  74%|███████▎  | 73/99 [00:01<00:00, 44.43it/s]Sampling global variables, sample:  82%|████████▏ | 81/99 [00:01<00:00, 51.50it/s]Sampling global variables, sample:  90%|████████▉ | 89/99 [00:01<00:00, 57.30it/s]Sampling global variables, sample:  98%|█████████▊| 97/99 [00:01<00:00, 61.97it/s]Sampling global variables, sample: 100%|██████████| 99/99 [00:02<00:00, 49.33it/s]
+2026-10-10T17:51:33.915473 MAPPING_EXPORTED MAIN TEST 9000

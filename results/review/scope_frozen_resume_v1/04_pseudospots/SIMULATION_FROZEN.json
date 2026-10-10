@@ -1,0 +1,21 @@
+{
+  "N0": 20,
+  "replicates": 10,
+  "depth_targets_full_RNA_UMI": {
+    "low": 3146,
+    "medium": 7005,
+    "high": 14967
+  },
+  "thinning": "independent binomial per retained UMI; p=min(1,target/full_pre_UMI); no upscaling",
+  "within_source_only": true,
+  "K32_truth": "frozen K32 membership, not MP10-high",
+  "TME": "uniform cell draws, requiring >=2 observed TME subtypes",
+  "scenario_counts": "S1 E5/10/16,K distinct 0/1/2/round(E/2)/E; S2 five strata same E; S3 E20 K0/1/2/10/20; S4 E10 K5 low/high median, identical other/background cells",
+  "source_split_hash": "be5fce947600cbbb674d002acc1f4dc878f37178474fc7da598dc14e8b10b9b2",
+  "member_label_hash": "37484961a070ea07d16a44f532d812f7675ebda1983249d1e0fff8b6894b87fd",
+  "gene_order_hash": "14316088d684099c8695b1427f6691e7e8945a96986d17d3a034f76ad3260954",
+  "seeds": {
+    "DEV": 425425965,
+    "TEST": 856356998
+  }
+}

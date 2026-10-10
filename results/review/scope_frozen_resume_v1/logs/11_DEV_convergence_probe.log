@@ -1,0 +1,34 @@
+Seed set to 1688030781
+INFO     File /home/data/t070721/codex_workspace/Bladder                        
+         Metabolism/mp10_k32_reference_identifiability_v5/scope_frozen_resume_v1
+         /05_deconvolution/MAIN_DEV/model/model.pt already downloaded           
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+Training:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<3:51:11,  2.16it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<3:51:11,  2.16it/s, v_num=1]`Trainer.fit` stopped: `max_steps=1` reached.
+Epoch 1/30000:   0%|          | 1/30000 [00:00<3:56:40,  2.11it/s, v_num=1]
+2026-10-10T15:41:07.808985 DEV_PROBE_START
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:538: Found 6 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+2026-10-10T15:42:09.596941 DEV_PROBE_EPOCH 3250
+2026-10-10T15:43:11.271808 DEV_PROBE_EPOCH 3500
+2026-10-10T15:44:12.625464 DEV_PROBE_EPOCH 3750
+2026-10-10T15:45:13.958523 DEV_PROBE_EPOCH 4000
+2026-10-10T15:46:15.746713 DEV_PROBE_EPOCH 4250
+2026-10-10T15:47:17.219511 DEV_PROBE_EPOCH 4500
+2026-10-10T15:48:18.677208 DEV_PROBE_EPOCH 4750
+2026-10-10T15:49:20.096782 DEV_PROBE_EPOCH 5000
+`Trainer.fit` stopped: `max_epochs=2000` reached.
+Seed set to 200093496
+Sampling local variables, batch:   0%|          | 0/10 [00:00<?, ?it/s]Sampling local variables, batch:  10%|█         | 1/10 [00:05<00:47,  5.29s/it]Sampling local variables, batch:  20%|██        | 2/10 [00:10<00:41,  5.20s/it]Sampling local variables, batch:  30%|███       | 3/10 [00:15<00:36,  5.20s/it]Sampling local variables, batch:  40%|████      | 4/10 [00:20<00:31,  5.20s/it]Sampling local variables, batch:  50%|█████     | 5/10 [00:26<00:26,  5.29s/it]Sampling local variables, batch:  60%|██████    | 6/10 [00:31<00:20,  5.24s/it]Sampling local variables, batch:  70%|███████   | 7/10 [00:36<00:15,  5.21s/it]Sampling local variables, batch:  80%|████████  | 8/10 [00:41<00:10,  5.21s/it]Sampling local variables, batch:  90%|█████████ | 9/10 [00:46<00:05,  5.21s/it]Sampling local variables, batch: 100%|██████████| 10/10 [00:51<00:00,  4.96s/it]Sampling local variables, batch: 100%|██████████| 10/10 [00:51<00:00,  5.14s/it]
+2026-10-10T15:50:12.744222 DEV_PROBE_DONE

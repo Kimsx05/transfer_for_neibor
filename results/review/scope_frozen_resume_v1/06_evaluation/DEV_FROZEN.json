@@ -1,0 +1,59 @@
+{
+  "threshold_on_posterior_mean": 8.367393,
+  "decision": "posterior_mean > threshold",
+  "FPR_target": 0.05,
+  "DEV_negative_composition": "seven scenario strata, equal source weights within each; max scenario-specific 95% weighted quantile",
+  "achieved_source_equal_FPR_by_scenario": {
+    "S1_regular": 0.009722222222222222,
+    "S2_C14": 0.0,
+    "S2_C17": 0.003333333333333333,
+    "S2_C7": 0.0,
+    "S2_NMF_high_non_K32": 0.011111111111111112,
+    "S2_UCell_high_non_K32": 0.020634920634920638,
+    "S3_pure_epithelial": 0.04583333333333333
+  },
+  "mapping_config": {
+    "N_cells_per_location": 20,
+    "detection_alpha": 20,
+    "lr": 0.002,
+    "batch_size": null,
+    "initial_epochs": 3000,
+    "extension_epochs": 2000,
+    "max_epochs": 30000,
+    "convergence_relative_window_change": 0.005,
+    "minimum_epochs": 5000,
+    "abundance_stability_samples": 256,
+    "abundance_median_relative_change_max": 0.05,
+    "abundance_q95_relative_change_max": 0.2
+  },
+  "stopping_rule": "same DEV-amended loss plus posterior mean-abundance stability rule applied to TEST without truth",
+  "DEV_model_states": {
+    "MAIN": {
+      "training_completed": true,
+      "converged": true,
+      "technical_smoke": false,
+      "epochs": 9000,
+      "posterior_samples": 1000,
+      "n_spots": 9120,
+      "n_genes": 11230,
+      "counts_hash": "4459eb6d5bb986c8e7e42473691e9f06c1c23d5b68dcfcbf3fbc16ddc76c4adb",
+      "w_sf_draws_sha256": "b9b2fd7d6f618fdcbf1c7cfac1bf7ee77c877b90f3b4442424489202c216c38c",
+      "biological_identifiability": "requires_truth_evaluation"
+    },
+    "NO_P07T": {
+      "training_completed": true,
+      "converged": true,
+      "technical_smoke": false,
+      "epochs": 9000,
+      "posterior_samples": 1000,
+      "n_spots": 9120,
+      "n_genes": 11230,
+      "counts_hash": "4459eb6d5bb986c8e7e42473691e9f06c1c23d5b68dcfcbf3fbc16ddc76c4adb",
+      "w_sf_draws_sha256": "c648e36619509313de824417021c3c5dd217176905e03ea21d2f20d8c44d34a1",
+      "biological_identifiability": "requires_truth_evaluation"
+    }
+  },
+  "MAIN_DEV_mean_sha256": "9783bf957183ad143a38bae8f2ed131e5897ca714d6bb5e5981f2949fb24e0d9",
+  "time": "2026-10-10T16:44:43.261918",
+  "TEST_predictions_seen": false
+}

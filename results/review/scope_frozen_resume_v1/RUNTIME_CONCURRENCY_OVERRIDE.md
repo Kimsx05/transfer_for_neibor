@@ -1,0 +1,5 @@
+# Explicit user-authorized GPU concurrency
+
+At 2026-10-10T15:14:05.084921 user requested resource-aware parallel execution, superseding the original same-GPU serialization preference. GPU inspection: Quadro RTX6000 23040MiB; NO_P07T 2068MiB, GPU utilization26%, no other compute process. MAIN DEV technical smoke and then formal mapping may overlap NO_P07T reference training. Model priors, seeds, cells, genes, pseudospots and loss stopping rules remain unchanged. Monitor memory/errors; queue later mapping jobs conservatively. This is an execution scheduling change, not TEST-driven model selection.
+
+Observed full DEV mapping GPU footprint was7220MiB; concurrent NB reference used2068MiB, combined9291MiB with88–91% GPU utilization. After BOTH DEV fits and threshold freeze, paired TEST mappings are authorized to overlap if free GPU memory is at least17000MiB; otherwise they run serially. Actual remaining-run scheduler is code/run_remaining_parallel.sh. No TEST predictions are consulted for this resource decision. Full runtime measurements are in logs/GPU_resource_history.csv.

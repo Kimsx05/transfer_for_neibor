@@ -1,0 +1,19 @@
+{
+  "training_completed": true,
+  "converged": true,
+  "epochs": 250,
+  "n_cells": 135860,
+  "n_genes": 11230,
+  "n_labels": 31,
+  "signature_sha256": "bd17f07f2526b8956672f8fe6c146f62610110baafa6649266c61ae9a086c968",
+  "QC": {
+    "cell_total_pearson": 0.613346606068531,
+    "log1p_gene_mean_pearson": 0.996533905748182,
+    "observed_total": 4512862.0,
+    "expected_total": 4404366.0,
+    "all_finite": true,
+    "n_QC_cells": 1000,
+    "signature_detection_scale": 0.9997898936271667
+  },
+  "biological_identifiability": "not_determined_by_reference_training"
+}

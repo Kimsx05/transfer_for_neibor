@@ -1,0 +1,19 @@
+Seed set to 1688030781
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/scvi/data/fields/_dataframe_field.py:187: UserWarning: Category 5 in adata.obs['_scvi_batch'] has fewer than 3 cells. Models may not train properly.
+  categorical_mapping = _make_column_categorical(
+2026-10-10T15:14:24.311939 MAP_START MAIN DEV (64, 11230) 50
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+`Trainer.fit` stopped: `max_epochs=50` reached.
+2026-10-10T15:14:30.268821 MAP_CONVERGENCE MAIN DEV 50 0.021840445842166944
+Seed set to 200093496
+Sampling local variables, batch:   0%|          | 0/1 [00:00<?, ?it/s]Sampling local variables, batch: 100%|██████████| 1/1 [00:00<00:00,  3.12it/s]Sampling local variables, batch: 100%|██████████| 1/1 [00:00<00:00,  3.12it/s]Seed set to 1983087929
+
+Sampling local variables, batch:   0%|          | 0/1 [00:00<?, ?it/s]Sampling local variables, batch: 100%|██████████| 1/1 [00:00<00:00,  3.74it/s]Sampling local variables, batch: 100%|██████████| 1/1 [00:00<00:00,  3.74it/s]
+Sampling global variables, sample:   0%|          | 0/15 [00:00<?, ?it/s]Sampling global variables, sample:  40%|████      | 6/15 [00:00<00:00, 42.99it/s]Sampling global variables, sample:  93%|█████████▎| 14/15 [00:00<00:00, 61.39it/s]Sampling global variables, sample: 100%|██████████| 15/15 [00:00<00:00, 59.30it/s]
+2026-10-10T15:14:31.573934 MAPPING_EXPORTED MAIN DEV 50

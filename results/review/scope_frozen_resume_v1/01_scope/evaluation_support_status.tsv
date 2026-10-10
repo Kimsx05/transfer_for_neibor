@@ -1,0 +1,11 @@
+split	dataset	n_pseudospots	n_source_groups	n_positive_pseudospots	n_positive_source_groups	n_eligible_K32_groups_ge30	status	patient_status
+DEV	CNP0000460	1860	1	810	1	1	POSITIVE_RECOVERY_EVALUABLE_WITH_LIMITED_UNVERIFIED_SOURCE_GROUPS	conservative source groups; not independently verified patients
+DEV	GSE326225	0	0	0	0	0	NO_PSEUDOSPOTS_IN_SPLIT	conservative source groups; not independently verified patients
+DEV	HRA003620	3780	4	1740	4	1	POSITIVE_RECOVERY_EVALUABLE_WITH_LIMITED_UNVERIFIED_SOURCE_GROUPS	conservative source groups; not independently verified patients
+DEV	InhouseData	1350	2	750	2	1	POSITIVE_RECOVERY_EVALUABLE_WITH_LIMITED_UNVERIFIED_SOURCE_GROUPS	conservative source groups; not independently verified patients
+DEV	PRJNA662018	2130	1	690	1	0	POSITIVE_RECOVERY_EVALUABLE_WITH_LIMITED_UNVERIFIED_SOURCE_GROUPS	conservative source groups; not independently verified patients
+TEST	CNP0000460	3720	3	1260	2	1	POSITIVE_RECOVERY_EVALUABLE_WITH_LIMITED_UNVERIFIED_SOURCE_GROUPS	conservative source groups; not independently verified patients
+TEST	GSE326225	510	2	0	0	0	NEGATIVE_ONLY_NO_POSITIVE_RECOVERY_EVALUATION	conservative source groups; not independently verified patients
+TEST	HRA003620	2100	1	1020	1	1	POSITIVE_RECOVERY_EVALUABLE_WITH_LIMITED_UNVERIFIED_SOURCE_GROUPS	conservative source groups; not independently verified patients
+TEST	InhouseData	2070	2	1050	2	1	POSITIVE_RECOVERY_EVALUABLE_WITH_LIMITED_UNVERIFIED_SOURCE_GROUPS	conservative source groups; not independently verified patients
+TEST	PRJNA662018	0	0	0	0	0	NO_PSEUDOSPOTS_IN_SPLIT	conservative source groups; not independently verified patients

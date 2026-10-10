@@ -1,0 +1,13 @@
+purpose	master_seed	derived_seed	algorithm	MAIN_NO_P07T_pairing
+reference_fit	123	654519674	first4bytes little-endian SHA256(123|purpose) mod(2^31-1)	same seed per purpose/split
+reference_posterior	123	1696684388	first4bytes little-endian SHA256(123|purpose) mod(2^31-1)	same seed per purpose/split
+reference_reconstruction_QC	123	1815996216	first4bytes little-endian SHA256(123|purpose) mod(2^31-1)	same seed per purpose/split
+pseudospots_DEV	123	425425965	first4bytes little-endian SHA256(123|purpose) mod(2^31-1)	same seed per purpose/split
+pseudospots_TEST	123	856356998	first4bytes little-endian SHA256(123|purpose) mod(2^31-1)	same seed per purpose/split
+smoke_DEV	123	1061430512	first4bytes little-endian SHA256(123|purpose) mod(2^31-1)	same seed per purpose/split
+mapping_DEV	123	1688030781	first4bytes little-endian SHA256(123|purpose) mod(2^31-1)	same seed per purpose/split
+mapping_TEST	123	941979251	first4bytes little-endian SHA256(123|purpose) mod(2^31-1)	same seed per purpose/split
+mapping_posterior_DEV	123	200093496	first4bytes little-endian SHA256(123|purpose) mod(2^31-1)	same seed per purpose/split
+mapping_posterior_TEST	123	567101144	first4bytes little-endian SHA256(123|purpose) mod(2^31-1)	same seed per purpose/split
+mapping_reconstruction_DEV	123	1983087929	first4bytes little-endian SHA256(123|purpose) mod(2^31-1)	same seed per purpose/split
+mapping_reconstruction_TEST	123	907507222	first4bytes little-endian SHA256(123|purpose) mod(2^31-1)	same seed per purpose/split

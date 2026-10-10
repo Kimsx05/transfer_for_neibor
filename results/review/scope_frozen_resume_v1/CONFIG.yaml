@@ -1,0 +1,45 @@
+{
+  "version": "scope_frozen_resume_v1",
+  "authorization": "User explicitly excludes 18182 outside-frozen old Epithelial; retains every other old subtype member",
+  "master_seed": 123,
+  "labels": [
+    "Epi_K32",
+    "Epi_other"
+  ],
+  "split_policy": "reuse original v5 unchanged; conservative sample groups, patients unverified",
+  "NB": {
+    "initial_epochs": 250,
+    "extension_epochs": 125,
+    "max_epochs": 1000,
+    "batch_size": 2500,
+    "lr": 0.002,
+    "train_size": 1.0,
+    "convergence_relative_window_change": 0.01
+  },
+  "mapping": {
+    "N_cells_per_location": 20,
+    "detection_alpha": 20,
+    "lr": 0.002,
+    "batch_size": null,
+    "initial_epochs": 3000,
+    "extension_epochs": 2000,
+    "max_epochs": 30000,
+    "convergence_relative_window_change": 0.005
+  },
+  "simulation": {
+    "N0": 20,
+    "repeats": 10,
+    "epi_counts": [
+      5,
+      10,
+      16
+    ],
+    "depth": "median across 63 sections of p25/median/p75 UMI",
+    "cross_sample": false
+  },
+  "posterior_samples": 1000,
+  "ratio_min_epithelial_count": 0.1,
+  "threshold_target_FPR": 0.05,
+  "threshold_weighting": "maximum per-negative-stratum 95th percentile with equal source weights within stratum; strict > threshold",
+  "real_spatial_fit": false
+}

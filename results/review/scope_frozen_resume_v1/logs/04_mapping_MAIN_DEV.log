@@ -1,0 +1,35 @@
+Seed set to 1688030781
+2026-10-10T15:14:51.804807 MAP_START MAIN DEV (9120, 11230) 3000
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+2026-10-10T15:15:55.413978 MAPPING_EPOCH MAIN DEV 250
+2026-10-10T15:16:57.012952 MAPPING_EPOCH MAIN DEV 500
+2026-10-10T15:17:59.125543 MAPPING_EPOCH MAIN DEV 750
+2026-10-10T15:19:00.730603 MAPPING_EPOCH MAIN DEV 1000
+2026-10-10T15:20:02.363095 MAPPING_EPOCH MAIN DEV 1250
+2026-10-10T15:21:03.897073 MAPPING_EPOCH MAIN DEV 1500
+2026-10-10T15:22:05.782748 MAPPING_EPOCH MAIN DEV 1750
+2026-10-10T15:23:07.798086 MAPPING_EPOCH MAIN DEV 2000
+2026-10-10T15:24:09.547465 MAPPING_EPOCH MAIN DEV 2250
+2026-10-10T15:25:11.179105 MAPPING_EPOCH MAIN DEV 2500
+2026-10-10T15:26:12.889443 MAPPING_EPOCH MAIN DEV 2750
+2026-10-10T15:27:14.537863 MAPPING_EPOCH MAIN DEV 3000
+`Trainer.fit` stopped: `max_epochs=3000` reached.
+2026-10-10T15:27:14.718782 MAP_CONVERGENCE MAIN DEV 3000 0.001984740714973287
+Seed set to 200093496
+Sampling local variables, batch:   0%|          | 0/10 [00:00<?, ?it/s]Sampling local variables, batch:  10%|█         | 1/10 [00:20<03:02, 20.24s/it]Sampling local variables, batch:  20%|██        | 2/10 [00:40<02:43, 20.45s/it]Sampling local variables, batch:  30%|███       | 3/10 [01:01<02:22, 20.37s/it]Sampling local variables, batch:  40%|████      | 4/10 [01:21<02:02, 20.36s/it]Sampling local variables, batch:  50%|█████     | 5/10 [01:42<01:42, 20.47s/it]Sampling local variables, batch:  60%|██████    | 6/10 [02:02<01:21, 20.37s/it]Sampling local variables, batch:  70%|███████   | 7/10 [02:22<01:00, 20.33s/it]Sampling local variables, batch:  80%|████████  | 8/10 [02:43<00:40, 20.43s/it]Sampling local variables, batch:  90%|█████████ | 9/10 [03:04<00:20, 20.63s/it]Sampling local variables, batch: 100%|██████████| 10/10 [03:21<00:00, 19.61s/it]Sampling local variables, batch: 100%|██████████| 10/10 [03:21<00:00, 20.16s/it]/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_k32_reference_identifiability_v5/scope_frozen_resume_v1/code/04_mapping.py:39: RuntimeWarning: Mean of empty slice
+  for name,fun in [('mean',lambda z:np.nanmean(z,axis=0)),('median',lambda z:np.nanmedian(z,axis=0)),('q05',lambda z:np.nanquantile(z,.05,axis=0)),('q95',lambda z:np.nanquantile(z,.95,axis=0))]:ratio[label+'_'+name]=fun(x)
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/numpy/lib/_nanfunctions_impl.py:1215: RuntimeWarning: All-NaN slice encountered
+  return fnb._ureduce(a, func=_nanmedian, keepdims=keepdims,
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/numpy/lib/_nanfunctions_impl.py:1593: RuntimeWarning: All-NaN slice encountered
+  return fnb._ureduce(a,
+Seed set to 1983087929
+
+Sampling local variables, batch:   0%|          | 0/10 [00:00<?, ?it/s]Sampling local variables, batch:  10%|█         | 1/10 [00:01<00:17,  1.99s/it]Sampling local variables, batch:  20%|██        | 2/10 [00:04<00:17,  2.14s/it]Sampling local variables, batch:  30%|███       | 3/10 [00:06<00:14,  2.05s/it]Sampling local variables, batch:  40%|████      | 4/10 [00:08<00:12,  2.02s/it]Sampling local variables, batch:  50%|█████     | 5/10 [00:10<00:10,  2.01s/it]Sampling local variables, batch:  60%|██████    | 6/10 [00:12<00:07,  2.00s/it]Sampling local variables, batch:  70%|███████   | 7/10 [00:14<00:05,  2.00s/it]Sampling local variables, batch:  80%|████████  | 8/10 [00:16<00:03,  1.98s/it]Sampling local variables, batch:  90%|█████████ | 9/10 [00:17<00:01,  1.96s/it]Sampling local variables, batch: 100%|██████████| 10/10 [00:19<00:00,  1.88s/it]Sampling local variables, batch: 100%|██████████| 10/10 [00:19<00:00,  1.97s/it]
+Sampling global variables, sample:   0%|          | 0/99 [00:00<?, ?it/s]Sampling global variables, sample:   5%|▌         | 5/99 [00:00<00:02, 45.04it/s]Sampling global variables, sample:  13%|█▎        | 13/99 [00:00<00:01, 54.94it/s]Sampling global variables, sample:  19%|█▉        | 19/99 [00:00<00:01, 56.46it/s]Sampling global variables, sample:  25%|██▌       | 25/99 [00:00<00:01, 57.19it/s]Sampling global variables, sample:  31%|███▏      | 31/99 [00:00<00:01, 56.82it/s]Sampling global variables, sample:  38%|███▊      | 38/99 [00:00<00:01, 56.89it/s]Sampling global variables, sample:  45%|████▌     | 45/99 [00:00<00:00, 59.11it/s]Sampling global variables, sample:  52%|█████▏    | 51/99 [00:00<00:00, 53.46it/s]Sampling global variables, sample:  61%|██████    | 60/99 [00:01<00:00, 61.58it/s]Sampling global variables, sample:  68%|██████▊   | 67/99 [00:01<00:00, 55.87it/s]Sampling global variables, sample:  75%|███████▍  | 74/99 [00:01<00:00, 55.46it/s]Sampling global variables, sample:  81%|████████  | 80/99 [00:01<00:00, 56.45it/s]Sampling global variables, sample:  87%|████████▋ | 86/99 [00:01<00:00, 51.87it/s]Sampling global variables, sample:  95%|█████████▍| 94/99 [00:01<00:00, 58.66it/s]Sampling global variables, sample: 100%|██████████| 99/99 [00:01<00:00, 55.42it/s]
+2026-10-10T15:31:26.654457 MAPPING_EXPORTED MAIN DEV 3000

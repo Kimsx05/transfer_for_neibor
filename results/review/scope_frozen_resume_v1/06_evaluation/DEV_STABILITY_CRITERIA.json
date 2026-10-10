@@ -1,0 +1,10 @@
+{
+  "scope": "DEV-only optimization stability, before any TEST fit",
+  "primary_abundances": ["Epi_K32", "Epi_other", "total_epithelial"],
+  "relative_change_definition": "abs(later posterior mean - earlier posterior mean)/(earlier posterior mean + 0.1)",
+  "median_relative_change_max": 0.05,
+  "q95_relative_change_max": 0.20,
+  "sampling_note": "256 draws for convergence diagnostic versus 1000 draws for formal evaluation; inspect absolute changes and source dependence too",
+  "reason": "ELBO is dominated by many genes and does not alone establish abundance stability",
+  "TEST_predictions_seen": false
+}

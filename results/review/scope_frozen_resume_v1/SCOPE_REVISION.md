@@ -1,0 +1,3 @@
+# Authorized scope revision
+
+The user's continuation explicitly replaces the incompatible old scope constraints. Keep all old non-Epithelial members and only the 123699 frozen epithelial-analysis members. Exclude 18182 outside-frozen old Epithelial cells from references and all main pseudospots, without assigning a negative state or QC-fail label. Epi_rest is renamed Epi_other, meaning other frozen epithelial clusters, not MP10-low. Preserve frozen Cycling-origin members by exact old-reference membership. The original BLOCKED audit remains unchanged and was not a biological failure. No additional scope confirmation is needed.

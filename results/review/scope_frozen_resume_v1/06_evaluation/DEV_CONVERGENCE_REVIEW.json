@@ -1,0 +1,19 @@
+{
+  "scope": "DEV-only technical convergence amendment before TEST",
+  "baseline_failure": "3000\u21925000 epochs: K32 median relative abundance change0.2473; Epi_other0.3266 despite ELBO plateau",
+  "decision": "Continue under unchanged priors/features with paired mean-abundance stability as well as ELBO convergence; no truth-based selection of best epoch",
+  "mapping_overrides": {
+    "minimum_epochs": 5000,
+    "abundance_stability_samples": 256,
+    "abundance_median_relative_change_max": 0.05,
+    "abundance_q95_relative_change_max": 0.2
+  },
+  "primary_abundances": [
+    "Epi_K32",
+    "Epi_other",
+    "total_epithelial"
+  ],
+  "maximum_epochs": 30000,
+  "training_rule_for_TEST": "Same loss plus abundance-stability rule, without accessing TEST truth; no TEST-based setting changes",
+  "TEST_predictions_seen": false
+}

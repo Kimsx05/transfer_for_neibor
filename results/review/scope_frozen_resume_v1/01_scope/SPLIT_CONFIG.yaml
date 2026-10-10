@@ -1,0 +1,14 @@
+{
+  "master_seed": 123,
+  "generator": "numpy.default_rng PCG64",
+  "algorithm": "first count-support-feasible allocation from seeded permutations; P07 forced TRAIN",
+  "trial_index": 0,
+  "group_rules": "patient_mapping_status.tsv",
+  "proportions": [
+    0.6,
+    0.2,
+    0.2
+  ],
+  "full_reference_label_gate": "BLOCKED; no cells deleted to resolve labels",
+  "manifest_sha256": "fca604c557d35812b5530b68cb793441e683e8eee63a06b76ca988e0761c1f9a"
+}
