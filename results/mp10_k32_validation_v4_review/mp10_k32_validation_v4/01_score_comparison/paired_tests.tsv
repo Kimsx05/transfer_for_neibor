@@ -1,0 +1,5 @@
+branch	score	control	n_pairs	n_datasets	n_K32_higher	mean_difference	median_difference	p	exact	zero_differences	absolute_ties	method	p_Holm
+"full"	"UCell"	"C14"	5	3	5	0.0485808650246022	0.0480836329717306	0.0625	TRUE	0	0	"Wilcoxon signed rank exact test"	0.0625
+"full"	"NMF"	"C7"	8	3	7	16.844060306021	16.4267694703222	0.015625	TRUE	0	0	"Wilcoxon signed rank exact test"	0.03125
+"exclude_P07T"	"UCell"	"C14"	4	3	4	0.0468693197036643	0.0451221974068277	0.125	TRUE	0	0	"Wilcoxon signed rank exact test"	0.125
+"exclude_P07T"	"NMF"	"C7"	7	3	6	15.7597398355897	10.6035370859415	0.03125	TRUE	0	0	"Wilcoxon signed rank exact test"	0.0625

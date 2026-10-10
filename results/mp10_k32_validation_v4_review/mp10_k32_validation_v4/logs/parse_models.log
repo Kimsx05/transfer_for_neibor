@@ -1,0 +1,286 @@
+expression(source("/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_k32_validation_v4/code/00_common.R"), 
+    suppressPackageStartupMessages({
+        library(edgeR)
+        library(fgsea)
+    }), stopifnot(file.exists(out("02_rna_DEG/C14_AGGREGATE_COMPLETE"))), 
+    md <- qread(out("00_audit/cell_metadata.qs")), tot <- qread(file.path(v3, 
+        "04_pseudobulk_markers/sample_totals.qs")), c14 <- qread(out("02_rna_DEG/C14_aggregate.qs")), 
+    genes <- rownames(tot$counts), sm <- tot$meta, samples <- sm$sample, 
+    ns <- length(samples), stopifnot(identical(samples, c14$meta$sample), 
+        identical(genes, rownames(c14$counts))), sets <- qread(file.path(v3, 
+        "05_function/frozen_GO_BP_Reactome.qs")), sig <- fread(file.path(old, 
+        "01_signatures/top50_signatures.tsv")), inputgenes <- unique(sig$gene), 
+    ann <- fread(file.path(v3, "00_audit/gene_annotation.tsv.gz")), 
+    ann <- ann[match(genes, gene_id)], stopifnot(identical(ann$gene_id, 
+        genes)), a <- qread(file.path(v3, "04_pseudobulk_markers/aggregate_FULL_Z_r1.00.qs")), 
+    obs <- md[cluster %in% c("C18", "C17", "C7"), .N, by = .(sample, 
+        cluster)], chk <- merge(a$meta, obs, by = c("sample", 
+        "cluster"), all = TRUE), stopifnot(nrow(chk) == nrow(a$meta), 
+        all(chk$n_cells == chk$N), all(a$counts@x >= 0), all(a$counts@x == 
+            floor(a$counts@x)), all(colSums(a$counts) == a$meta$library_size)), 
+    wt(chk, "00_audit/reused_aggregate_bin_check.tsv"), rm(a), 
+    oldidx <- fread(file.path(v3, "04_pseudobulk_markers/comparison_model_index.tsv"))[candidate_id == 
+        "K32"], oldcts <- fread(file.path(v3, "03_candidates/comparisons_preDE.tsv"))[candidate_id == 
+        "K32"], reused <- list(), for (i in seq_len(nrow(oldidx))) {
+        r <- oldidx[i]
+        control <- oldcts[comparison_id == r$comparison_id, control_cluster]
+        dest <- paste0("02_rna_DEG/full/", control)
+        dir.create(out(dest), recursive = TRUE, showWarnings = FALSE)
+        src <- file.path(v3, r$model_dir)
+        files <- list.files(src, full.names = TRUE)
+        files <- files[!grepl("sample_expression.qs$", files)]
+        for (f in files) stopifnot(file.copy(f, out(paste0(dest, 
+            "/", basename(f))), overwrite = TRUE))
+        dir.create(out(paste0(dest, "/function")), showWarnings = FALSE)
+        for (f in list.files(file.path(v3, "05_function", r$model_key), 
+            full.names = TRUE)) stopifnot(file.copy(f, out(paste0(dest, 
+            "/function/", basename(f))), overwrite = TRUE))
+        writeLines(file.path(src, "sample_expression.qs"), out(paste0(dest, 
+            "/sample_expression_source.txt")))
+        writeLines(c("Exactly reused v3 fit and fgsea; historical seed 42 retained.", 
+            paste("source", src)), out(paste0(dest, "/REUSE.txt")))
+        reused[[i]] <- data.table(comparison_id = paste0("full_", 
+            control), candidate_id = "K32", branch = "full", 
+            control_cluster = control, model_key = r$model_key, 
+            model_dir = dest, origin = "v3_exact_reuse", seed = 42L)
+    }, cts <- data.table(branch = c("full", "exclude_P07T", "exclude_P07T"), 
+        control_cluster = c("C14", "rest", "C14"), partition = "FULL_Z_r1.00", 
+        cluster = "C18", candidate_id = "K32"), cts[, `:=`(comparison_id, 
+        paste(branch, control_cluster, sep = "_"))], for (i in 1:nrow(cts)) {
+        c <- cts[i]
+        d <- if (c$branch == "full") 
+            md
+        else md[sample != excluded_sample]
+        left <- d[K32 == TRUE, cell_id]
+        right <- if (c$control_cluster == "rest") 
+            d[K32 == FALSE, cell_id]
+        else d[cluster == c$control_cluster, cell_id]
+        cts[i, `:=`(left_hash = memberhash(left), right_hash = memberhash(right), 
+            model_key = digest(list(sort(left), sort(right), 
+                config$DE), "sha256"))]
+    }, wt(cts, "00_audit/new_model_membership_config.tsv"), index <- list(), 
+    lastp <- NULL, for (ii in 1:nrow(cts)) {
+        c <- cts[ii]
+        key <- c$model_key
+        dir <- paste0("02_rna_DEG/", c$branch, "/", c$control_cluster)
+        dir.create(out(dir), recursive = TRUE, showWarnings = FALSE)
+        f <- function(s) paste0(dir, "/", s)
+        if (file.exists(out(f("COMPLETE")))) {
+            logmsg("Reuse exact model", c$comparison_id)
+            index[[ii]] <- c[, .(comparison_id, candidate_id, 
+                branch, control_cluster, model_key, model_dir = dir, 
+                origin = "new_fit", seed = 123L)]
+            next
+        }
+        if (!identical(lastp, c$partition)) {
+            agg <- qread(file.path(v3, paste0("04_pseudobulk_markers/aggregate_", 
+                c$partition, ".qs")))
+            lastp <- c$partition
+        }
+        logmsg("Model", ii, "/", nrow(cts), c$comparison_id, 
+            c$partition, c$cluster, "vs", c$control_cluster)
+        groupmat <- function(cl) {
+            if (cl == "C14") 
+                return(c14[c("counts", "expression_sum", "detected_sum", 
+                  "n_cells", "library_size")])
+            b <- agg$meta[cluster == cl]
+            ind <- sparseMatrix(i = b$bin, j = match(b$sample, 
+                samples), x = 1, dims = c(nrow(agg$meta), ns))
+            list(counts = agg$counts %*% ind, expression_sum = agg$expression_sum %*% 
+                ind, detected_sum = agg$detected_sum %*% ind, 
+                n_cells = as.numeric(crossprod(ind, agg$meta$n_cells)), 
+                library_size = as.numeric(crossprod(ind, agg$meta$library_size)))
+        }
+        L <- groupmat(c$cluster)
+        if (is.na(c$control_cluster)) {
+            R <- lapply(L, function(x) x * 0)
+        }
+        else if (c$control_cluster == "rest") {
+            R <- list(counts = tot$counts - L$counts, expression_sum = tot$expression_sum - 
+                L$expression_sum, detected_sum = tot$detected_sum - 
+                L$detected_sum, n_cells = sm$n_cells - L$n_cells, 
+                library_size = sm$library_size - L$library_size)
+            stopifnot(all(R$counts@x >= 0), all(R$detected_sum@x >= 
+                0), max(abs(L$counts + R$counts - tot$counts)) == 
+                0)
+        }
+        else R <- groupmat(c$control_cluster)
+        el <- copy(sm)
+        el[, `:=`(n_left = L$n_cells, n_right = R$n_cells, library_left = L$library_size, 
+            library_right = R$library_size, comparison_id = c$comparison_id)]
+        el[, `:=`(eligible, n_left >= 30 & n_right >= 30 & (c$branch == 
+            "full" | sample != excluded_sample))]
+        el[, `:=`(reason, ifelse(eligible, "eligible", ifelse(n_left < 
+            30 & n_right < 30, "both_lt30", ifelse(n_left < 30, 
+            "left_lt30", "right_lt30"))))]
+        el[c$branch == "exclude_P07T" & sample == excluded_sample, 
+            `:=`(reason, "excluded_P07T")]
+        wt(el, f("eligibility.tsv"))
+        exL <- sweep(as.matrix(L$expression_sum), 2, ifelse(L$n_cells > 
+            0, L$n_cells, NA_real_), "/")
+        exR <- sweep(as.matrix(R$expression_sum), 2, ifelse(R$n_cells > 
+            0, R$n_cells, NA_real_), "/")
+        deL <- sweep(as.matrix(L$detected_sum), 2, ifelse(L$n_cells > 
+            0, L$n_cells, NA_real_), "/")
+        deR <- sweep(as.matrix(R$detected_sum), 2, ifelse(R$n_cells > 
+            0, R$n_cells, NA_real_), "/")
+        saveq(list(samples = samples, genes = genes, expression_left = exL, 
+            expression_right = exR, detection_left = deL, detection_right = deR, 
+            eligible = el$eligible), f("sample_expression.qs"))
+        qual <- which(el$eligible)
+        status <- data.table(model_key = key, n_pairs = length(qual), 
+            n_datasets = uniqueN(sm$dataset[qual]), status = "NOT_TESTABLE", 
+            reason = "", n_tested = 0L, residual_df = NA_integer_)
+        if (length(qual) < 3) {
+            status[, `:=`(reason, if (sum(R$n_cells) == 0) 
+                "no_control_cells"
+            else "fewer_than_3_pairs")]
+            desc <- data.table(gene_id = genes, expression_left_nonempty_samples = rowMeans(exL, 
+                na.rm = TRUE), expression_right_nonempty_samples = rowMeans(exR, 
+                na.rm = TRUE), detection_left_nonempty_samples = rowMeans(deL, 
+                na.rm = TRUE), detection_right_nonempty_samples = rowMeans(deR, 
+                na.rm = TRUE))
+            wt(desc, f("descriptive_allgenes.tsv.gz"))
+            wt(status, f("status.tsv"))
+            writeLines("not testable; described", out(f("COMPLETE")))
+            index[[ii]] <- c[, .(comparison_id, candidate_id, 
+                branch, control_cluster, model_key, model_dir = dir, 
+                origin = "new_fit", seed = 123L)]
+            next
+        }
+        delta <- exL[, qual, drop = FALSE] - exR[, qual, drop = FALSE]
+        stats <- copy(ann)
+        stats[, `:=`(n_samples = length(qual), n_datasets = uniqueN(sm$dataset[qual]), 
+            expr_left = rowMeans(exL[, qual, drop = FALSE]), 
+            expr_right = rowMeans(exR[, qual, drop = FALSE]), 
+            pct_left = rowMeans(deL[, qual, drop = FALSE]), pct_right = rowMeans(deR[, 
+                qual, drop = FALSE]), positive_fraction = rowMeans(delta > 
+                0), negative_fraction = rowMeans(delta < 0), 
+            zero_fraction = rowMeans(delta == 0))]
+        stats[, `:=`(detection_delta, pct_left - pct_right)]
+        dscols <- character()
+        for (ds in sort(unique(sm$dataset[qual]))) {
+            ix <- which(sm$dataset[qual] == ds)
+            nm <- paste0("dataset_delta_", ds)
+            stats[, `:=`((nm), rowMeans(delta[, ix, drop = FALSE]))]
+            stats[, `:=`((paste0("dataset_positive_fraction_", 
+                ds)), rowMeans(delta[, ix, drop = FALSE] > 0))]
+            dscols <- c(dscols, nm)
+        }
+        mm <- data.table(sample = factor(rep(samples[qual], 2)), 
+            group = factor(rep(c("Left", "Right"), each = length(qual)), 
+                levels = c("Right", "Left")))
+        mm[, `:=`(sample, droplevels(sample))]
+        design <- model.matrix(~sample + group, data = mm)
+        coef <- match("groupLeft", colnames(design))
+        status[, `:=`(residual_df, nrow(design) - ncol(design))]
+        wt(as.data.table(design, keep.rownames = "model_row"), 
+            f("design.tsv"))
+        if (qr(design)$rank < ncol(design) || is.na(coef) || 
+            nrow(design) <= ncol(design)) {
+            status[, `:=`(reason, "rank_or_df_failure")]
+            wt(status, f("status.tsv"))
+            wt(stats, f("descriptive_allgenes.tsv.gz"))
+            writeLines("not testable", out(f("COMPLETE")))
+            index[[ii]] <- c[, .(comparison_id, candidate_id, 
+                branch, control_cluster, model_key, model_dir = dir, 
+                origin = "new_fit", seed = 123L)]
+            next
+        }
+        y <- DGEList(counts = as.matrix(cbind(L$counts[, qual, 
+            drop = FALSE], R$counts[, qual, drop = FALSE])))
+        stopifnot(all(y$samples$lib.size > 0))
+        keep <- filterByExpr(y, group = mm$group, min.count = 10, 
+            min.total.count = 15, large.n = 10, min.prop = 0.7)
+        wt(data.table(gene_id = genes, tested = keep), f("filter.tsv.gz"))
+        if (sum(keep) < 2) {
+            status[, `:=`(reason, "insufficient_filtered_genes")]
+            wt(status, f("status.tsv"))
+            writeLines("not testable", out(f("COMPLETE")))
+            index[[ii]] <- c[, .(comparison_id, candidate_id, 
+                branch, control_cluster, model_key, model_dir = dir, 
+                origin = "new_fit", seed = 123L)]
+            next
+        }
+        y <- y[keep, , keep.lib.sizes = FALSE]
+        y <- calcNormFactors(y, method = "TMM")
+        y <- estimateDisp(y, design, robust = TRUE)
+        fit <- glmQLFit(y, design, robust = TRUE, legacy = FALSE)
+        ql <- glmQLFTest(fit, coef = coef)
+        tab <- as.data.table(topTags(ql, n = Inf, sort.by = "none")$table, 
+            keep.rownames = "gene_id")
+        setnames(tab, "logFC", "log2FC")
+        res <- merge(tab, stats, by = "gene_id", sort = FALSE)
+        wt(res, f("DE_full.tsv.gz"))
+        mm[, `:=`(library_size = y$samples$lib.size, TMM_factor = y$samples$norm.factors)]
+        wt(mm, f("model_samples.tsv"))
+        status[, `:=`(status = "COMPLETE", reason = "paired QL fitted", 
+            n_tested = nrow(res))]
+        wt(status, f("status.tsv"))
+        res[, `:=`(dataset_direction_fraction, rowMeans(as.matrix(.SD) > 
+            0)), .SDcols = dscols]
+        res[, `:=`(qualified, FDR < 0.05 & log2FC >= 0.5 & pct_left >= 
+            0.1 & positive_fraction >= 0.7)]
+        setorderv(res, c("dataset_direction_fraction", "positive_fraction", 
+            "detection_delta", "log2FC", "gene_id"), c(-1, -1, 
+            -1, -1, 1))
+        sh <- head(res[qualified == TRUE], 20)
+        wt(sh, f("shortlist.tsv"))
+        res[, `:=`(selection_reason, ifelse(gene_id %in% sh$gene_id, 
+            "selected", ifelse(qualified, "qualified below top20 limit", 
+                "fails at least one fixed threshold")))]
+        wt(res[, .(gene_id, qualified, selection_reason, dataset_direction_fraction, 
+            positive_fraction, detection_delta, log2FC, FDR, 
+            pct_left)], f("selection_alltested.tsv.gz"))
+        rank <- copy(res)
+        rank[, `:=`(rank_stat, sign(log2FC) * sqrt(F))]
+        rank[, `:=`(mapping_reason, ifelse(is.na(gene_symbol), 
+            "unmapped_symbol", ifelse(!is.finite(rank_stat), 
+                "nonfinite_stat", "eligible")))]
+        setorderv(rank, c("logCPM", "gene_id"), c(-1, 1))
+        rank[mapping_reason == "eligible" & duplicated(gene_symbol), 
+            `:=`(mapping_reason, "duplicate_symbol_lower_logCPM")]
+        wt(rank[, .(gene_id, gene_symbol, rank_stat, logCPM, 
+            mapping_reason)], f("rank_mapping.tsv.gz"))
+        rnk <- rank[mapping_reason == "eligible"]
+        setorderv(rnk, c("rank_stat", "gene_symbol"), c(-1, 1))
+        ranks <- setNames(rnk$rank_stat, rnk$gene_symbol)
+        fgdir <- paste0(dir, "/function")
+        dir.create(out(fgdir), showWarnings = FALSE)
+        set.seed(123)
+        logmsg("fgsea", c$comparison_id, length(ranks), "mapped genes", 
+            length(sets), "sets")
+        fg <- as.data.table(fgseaMultilevel(pathways = sets, 
+            stats = ranks, sampleSize = 101, nPermSimple = 1000, 
+            minSize = 10, maxSize = 500, eps = 1e-04, nproc = 1, 
+            scoreType = "std"))
+        fg[, `:=`(collection = ifelse(grepl("^C5::", pathway), 
+            "GO_BP", "Reactome"), leading_edge_input_n = vapply(leadingEdge, 
+            function(x) sum(x %in% inputgenes), integer(1)), 
+            leading_edge_n = lengths(leadingEdge), leading_edge_input_genes = vapply(leadingEdge, 
+                function(x) paste(intersect(x, inputgenes), collapse = ";"), 
+                character(1)))]
+        fg[, `:=`(leadingEdge, vapply(leadingEdge, paste, collapse = ";", 
+            FUN.VALUE = character(1)))]
+        wt(fg, paste0(fgdir, "/enrichment_all.tsv.gz"))
+        wt(data.table(status = "COMPLETE", n_ranked = length(ranks), 
+            n_pathways = nrow(fg), n_NA = sum(is.na(fg$padj)), 
+            n_ties = sum(duplicated(ranks)), p_floor = 1e-04), 
+            paste0(fgdir, "/status.tsv"))
+        writeLines("complete", out(f("COMPLETE")))
+        index[[ii]] <- c[, .(comparison_id, candidate_id, branch, 
+            control_cluster, model_key, model_dir = dir, origin = "new_fit", 
+            seed = 123L)]
+        rm(y, fit, ql, res, stats, L, R, exL, exR, deL, deR, 
+            delta)
+        gc()
+        logmsg("Finished", c$comparison_id)
+    }, idx <- rbindlist(c(reused, index), fill = TRUE), wt(idx, 
+        "02_rna_DEG/model_index.tsv"), ss <- rbindlist(lapply(seq_len(nrow(idx)), 
+        function(i) {
+            r <- idx[i]
+            s <- fread(out(paste0(r$model_dir, "/status.tsv")))
+            cbind(r, s[, !c("model_key"), with = FALSE])
+        }), fill = TRUE), wt(ss, "02_rna_DEG/model_summary.tsv"), 
+    capture.output(sessionInfo(), file = out("logs/sessionInfo_models.txt")), 
+    writeLines("complete", out("02_rna_DEG/COMPLETE")), logmsg("Three reused and three new models finished"))

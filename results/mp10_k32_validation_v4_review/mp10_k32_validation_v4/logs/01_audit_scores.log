@@ -1,0 +1,20 @@
+[1] TRUE
+2026-10-10 11:38:25 Identity, score, composition, profile and embedding checks complete 
+         branch  score control n_pairs n_datasets n_K32_higher mean_difference
+         <char> <char>  <char>   <int>      <int>        <int>           <num>
+1:         full  UCell     C14       5          3            5      0.04858087
+2:         full    NMF      C7       8          3            7     16.84406031
+3: exclude_P07T  UCell     C14       4          3            4      0.04686932
+4: exclude_P07T    NMF      C7       7          3            6     15.75973984
+   median_difference        p  exact zero_differences absolute_ties
+               <num>    <num> <lgcl>            <int>         <int>
+1:        0.04808363 0.062500   TRUE                0             0
+2:       16.42676947 0.015625   TRUE                0             0
+3:        0.04512220 0.125000   TRUE                0             0
+4:       10.60353709 0.031250   TRUE                0             0
+                            method  p_Holm
+                            <char>   <num>
+1: Wilcoxon signed rank exact test 0.06250
+2: Wilcoxon signed rank exact test 0.03125
+3: Wilcoxon signed rank exact test 0.12500
+4: Wilcoxon signed rank exact test 0.06250

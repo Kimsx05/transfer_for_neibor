@@ -1,0 +1,122 @@
+Supplementary Figure S1 — full_UCell_27cluster_violin
+Equal-width violins retain every cell and exact zero. Black circles: median; red diamonds: raw-score mean, displayed at log1p(mean(raw usage)) for NMF. Cell counts are printed under each cluster. Stars require Holm-adjusted p<0.05 from the two prespecified sample-paired two-sided Wilcoxon tests, never cell-level tests. Branch: full ; see sample_pairs.tsv and paired_tests.tsv. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S2 — full_UCell_sample_pairs
+Only samples with >=30 cells on each side. Each line is a biological specimen; not a confirmed independent patient. Both plotted sample means and the test use untransformed scores. Exact two-sided Wilcoxon with no ties or zero differences; Holm across UCell and NMF tests within this branch. Branch: full K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S3 — full_NMF_27cluster_violin
+Equal-width violins retain every cell and exact zero. Black circles: median; red diamonds: raw-score mean, displayed at log1p(mean(raw usage)) for NMF. Cell counts are printed under each cluster. Stars require Holm-adjusted p<0.05 from the two prespecified sample-paired two-sided Wilcoxon tests, never cell-level tests. Branch: full ; see sample_pairs.tsv and paired_tests.tsv. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S4 — full_NMF_sample_pairs
+Only samples with >=30 cells on each side. Each line is a biological specimen; not a confirmed independent patient. Both plotted sample means and the test use untransformed scores. Exact two-sided Wilcoxon with no ties or zero differences; Holm across UCell and NMF tests within this branch. Branch: full K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S5 — exclude_P07T_UCell_27cluster_violin
+Equal-width violins retain every cell and exact zero. Black circles: median; red diamonds: raw-score mean, displayed at log1p(mean(raw usage)) for NMF. Cell counts are printed under each cluster. Stars require Holm-adjusted p<0.05 from the two prespecified sample-paired two-sided Wilcoxon tests, never cell-level tests. Branch: exclude_P07T ; see sample_pairs.tsv and paired_tests.tsv. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S6 — exclude_P07T_UCell_sample_pairs
+Only samples with >=30 cells on each side. Each line is a biological specimen; not a confirmed independent patient. Both plotted sample means and the test use untransformed scores. Exact two-sided Wilcoxon with no ties or zero differences; Holm across UCell and NMF tests within this branch. Branch: exclude_P07T K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S7 — exclude_P07T_NMF_27cluster_violin
+Equal-width violins retain every cell and exact zero. Black circles: median; red diamonds: raw-score mean, displayed at log1p(mean(raw usage)) for NMF. Cell counts are printed under each cluster. Stars require Holm-adjusted p<0.05 from the two prespecified sample-paired two-sided Wilcoxon tests, never cell-level tests. Branch: exclude_P07T ; see sample_pairs.tsv and paired_tests.tsv. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S8 — exclude_P07T_NMF_sample_pairs
+Only samples with >=30 cells on each side. Each line is a biological specimen; not a confirmed independent patient. Both plotted sample means and the test use untransformed scores. Exact two-sided Wilcoxon with no ties or zero differences; Holm across UCell and NMF tests within this branch. Branch: exclude_P07T K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S9 — full_raw_heatmap
+All 14 programs in fixed numerical order. Rows follow FULL MP10 UCell mean rank. Cell-level Z uses the original FULL mean/SD, then is averaged; cluster means are not re-standardized. Limits are shared with FULL. Z=0 is the overall reference, not absent expression. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S10 — exclude_P07T_raw_heatmap
+All 14 programs in fixed numerical order. Rows follow FULL MP10 UCell mean rank. Cell-level Z uses the original FULL mean/SD, then is averaged; cluster means are not re-standardized. Limits are shared with FULL. Z=0 is the overall reference, not absent expression. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S11 — full_frozen_Z_heatmap
+All 14 programs in fixed numerical order. Rows follow FULL MP10 UCell mean rank. Cell-level Z uses the original FULL mean/SD, then is averaged; cluster means are not re-standardized. Limits are shared with FULL. Z=0 is the overall reference, not absent expression. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S12 — exclude_P07T_frozen_Z_heatmap
+All 14 programs in fixed numerical order. Rows follow FULL MP10 UCell mean rank. Cell-level Z uses the original FULL mean/SD, then is averaged; cluster means are not re-standardized. Limits are shared with FULL. Z=0 is the overall reference, not absent expression. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S13 — K32_full_exclude_profile
+Full and exclude_P07T retain identical score definitions and global Z parameters. Program Z reflects relative deviation within each program, not absolute metabolic activity or mechanistic dominance. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S14 — full_rest_top20_DotPlot
+Complete top20 under fixed positive-effect FDR/PValue/gene-ID ranking; not a significant-only or lipid-selected list. Color is the equal-weight average of eligible sample mean LogNormalize RNA (scale factor10000); dot area encodes equal-weight detection fraction across those same samples. [input] means a member of a frozen 14MP top50 signature. Model: full rest ; eligible pairs: 12 ; see eligibility and model summary for dataset sources and reuse/new status. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation. Actual RNA model: v3_exact_reuse; 12 eligible specimen pairs; CNP0000460: 4 eligible pairs; HRA003620: 4 eligible pairs; InhouseData: 2 eligible pairs; PRJNA662018: 2 eligible pairs.
+
+Supplementary Figure S15 — full_C14_top20_DotPlot
+Complete top20 under fixed positive-effect FDR/PValue/gene-ID ranking; not a significant-only or lipid-selected list. Color is the equal-weight average of eligible sample mean LogNormalize RNA (scale factor10000); dot area encodes equal-weight detection fraction across those same samples. [input] means a member of a frozen 14MP top50 signature. Model: full C14 ; eligible pairs: 5 ; see eligibility and model summary for dataset sources and reuse/new status. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation. Actual RNA model: new_fit; 5 eligible specimen pairs; CNP0000460: 3 eligible pairs; HRA003620: 1 eligible pairs; PRJNA662018: 1 eligible pairs.
+
+Supplementary Figure S16 — exclude_P07T_rest_top20_DotPlot
+Complete top20 under fixed positive-effect FDR/PValue/gene-ID ranking; not a significant-only or lipid-selected list. Color is the equal-weight average of eligible sample mean LogNormalize RNA (scale factor10000); dot area encodes equal-weight detection fraction across those same samples. [input] means a member of a frozen 14MP top50 signature. Model: exclude_P07T rest ; eligible pairs: 11 ; see eligibility and model summary for dataset sources and reuse/new status. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation. Actual RNA model: new_fit; 11 eligible specimen pairs; CNP0000460: 3 eligible pairs; HRA003620: 4 eligible pairs; InhouseData: 2 eligible pairs; PRJNA662018: 2 eligible pairs.
+
+Supplementary Figure S17 — exclude_P07T_C14_top20_DotPlot
+Complete top20 under fixed positive-effect FDR/PValue/gene-ID ranking; not a significant-only or lipid-selected list. Color is the equal-weight average of eligible sample mean LogNormalize RNA (scale factor10000); dot area encodes equal-weight detection fraction across those same samples. [input] means a member of a frozen 14MP top50 signature. Model: exclude_P07T C14 ; eligible pairs: 4 ; see eligibility and model summary for dataset sources and reuse/new status. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation. Actual RNA model: new_fit; 4 eligible specimen pairs; CNP0000460: 2 eligible pairs; HRA003620: 1 eligible pairs; PRJNA662018: 1 eligible pairs.
+
+Supplementary Figure S18 — full_fixed_panel_effects
+Prespecified gene panel, independent of top20 rank. * denotes within-model BH-FDR<0.05; NT means not tested, never no difference. Every full effect/FDR/detection/direction/input-membership value is retained in fixed_panel_all_models.tsv. No multiplicity claim across candidate selection or models. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation. Model-specific sources: rest: CNP0000460: 4 eligible pairs; HRA003620: 4 eligible pairs; InhouseData: 2 eligible pairs; PRJNA662018: 2 eligible pairs | C17: CNP0000460: 4 eligible pairs; HRA003620: 2 eligible pairs; InhouseData: 1 eligible pairs; PRJNA662018: 1 eligible pairs | C7: CNP0000460: 3 eligible pairs; HRA003620: 3 eligible pairs; PRJNA662018: 2 eligible pairs | C14: CNP0000460: 3 eligible pairs; HRA003620: 1 eligible pairs; PRJNA662018: 1 eligible pairs.
+
+Supplementary Figure S19 — exclude_P07T_fixed_panel_effects
+Prespecified gene panel, independent of top20 rank. * denotes within-model BH-FDR<0.05; NT means not tested, never no difference. Every full effect/FDR/detection/direction/input-membership value is retained in fixed_panel_all_models.tsv. No multiplicity claim across candidate selection or models. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation. Model-specific sources: rest: CNP0000460: 3 eligible pairs; HRA003620: 4 eligible pairs; InhouseData: 2 eligible pairs; PRJNA662018: 2 eligible pairs | C14: CNP0000460: 2 eligible pairs; HRA003620: 1 eligible pairs; PRJNA662018: 1 eligible pairs.
+
+Supplementary Figure S20 — full_sample_contribution
+Contribution denominator is all K32 cells in the corresponding population; every retained specimen, including zero K32, is shown. P07T exclusion uses the exact manifest sample ID, retaining P07N. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S21 — full_sample_precision_recall
+Frozen high labels and thresholds; denominators use the retained population. Candidate=0 gives precision NA; high=0 gives recall NA; high>0 with no candidate gives recall0. No >=30-cell eligibility filter is applied to coverage. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S22 — exclude_P07T_sample_contribution
+Contribution denominator is all K32 cells in the corresponding population; every retained specimen, including zero K32, is shown. P07T exclusion uses the exact manifest sample ID, retaining P07N. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S23 — exclude_P07T_sample_precision_recall
+Frozen high labels and thresholds; denominators use the retained population. Candidate=0 gives precision NA; high=0 gives recall NA; high>0 with no candidate gives recall0. No >=30-cell eligibility filter is applied to coverage. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S24 — FULL_Z_ucell10
+Frozen coordinates. Exact zero is black; NA would be cyan crosses (none observed). Positive-score points are drawn in ascending score order; continuous scales retain the full global range. Original NMF usage is displayed log1p but all usage statistics/tests use raw values. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S25 — FULL_Z_usage_log1p
+Frozen coordinates. Exact zero is black; NA would be cyan crosses (none observed). Positive-score points are drawn in ascending score order; continuous scales retain the full global range. Original NMF usage is displayed log1p but all usage statistics/tests use raw values. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S26 — FULL_Z_K32_highlight
+Frozen coordinates; grey background drawn first and K32 last using exactly equal point size. No embedding fit or clustering was performed in v4. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S27 — FULL_Z_ALL_triptych
+Identical cell IDs and coordinates across three panels. Dataset: ALL ; n= 123699 ; K32 n= 3282 . Global coordinate and color limits are retained for every dataset. UCell and log1p raw NMF usage use plasma; exact0 black, missing cyan (none). Ascending-score layering; equal-size grey-first K32-last highlights. Dispersed RNA locations are preserved. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S28 — FULL_Z_CNP0000460_triptych
+Identical cell IDs and coordinates across three panels. Dataset: CNP0000460 ; n= 49327 ; K32 n= 1744 . Global coordinate and color limits are retained for every dataset. UCell and log1p raw NMF usage use plasma; exact0 black, missing cyan (none). Ascending-score layering; equal-size grey-first K32-last highlights. Dispersed RNA locations are preserved. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S29 — FULL_Z_GSE326225_triptych
+Identical cell IDs and coordinates across three panels. Dataset: GSE326225 ; n= 6288 ; K32 n= 4 . Global coordinate and color limits are retained for every dataset. UCell and log1p raw NMF usage use plasma; exact0 black, missing cyan (none). Ascending-score layering; equal-size grey-first K32-last highlights. Dispersed RNA locations are preserved. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S30 — FULL_Z_HRA003620_triptych
+Identical cell IDs and coordinates across three panels. Dataset: HRA003620 ; n= 19435 ; K32 n= 1093 . Global coordinate and color limits are retained for every dataset. UCell and log1p raw NMF usage use plasma; exact0 black, missing cyan (none). Ascending-score layering; equal-size grey-first K32-last highlights. Dispersed RNA locations are preserved. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S31 — FULL_Z_InhouseData_triptych
+Identical cell IDs and coordinates across three panels. Dataset: InhouseData ; n= 13460 ; K32 n= 194 . Global coordinate and color limits are retained for every dataset. UCell and log1p raw NMF usage use plasma; exact0 black, missing cyan (none). Ascending-score layering; equal-size grey-first K32-last highlights. Dispersed RNA locations are preserved. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S32 — FULL_Z_PRJNA662018_triptych
+Identical cell IDs and coordinates across three panels. Dataset: PRJNA662018 ; n= 35189 ; K32 n= 247 . Global coordinate and color limits are retained for every dataset. UCell and log1p raw NMF usage use plasma; exact0 black, missing cyan (none). Ascending-score layering; equal-size grey-first K32-last highlights. Dispersed RNA locations are preserved. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S33 — RNA_ucell10
+Frozen coordinates. Exact zero is black; NA would be cyan crosses (none observed). Positive-score points are drawn in ascending score order; continuous scales retain the full global range. Original NMF usage is displayed log1p but all usage statistics/tests use raw values. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S34 — RNA_usage_log1p
+Frozen coordinates. Exact zero is black; NA would be cyan crosses (none observed). Positive-score points are drawn in ascending score order; continuous scales retain the full global range. Original NMF usage is displayed log1p but all usage statistics/tests use raw values. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S35 — RNA_K32_highlight
+Frozen coordinates; grey background drawn first and K32 last using exactly equal point size. No embedding fit or clustering was performed in v4. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S36 — RNA_ALL_triptych
+Identical cell IDs and coordinates across three panels. Dataset: ALL ; n= 123699 ; K32 n= 3282 . Global coordinate and color limits are retained for every dataset. UCell and log1p raw NMF usage use plasma; exact0 black, missing cyan (none). Ascending-score layering; equal-size grey-first K32-last highlights. Dispersed RNA locations are preserved. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S37 — RNA_CNP0000460_triptych
+Identical cell IDs and coordinates across three panels. Dataset: CNP0000460 ; n= 49327 ; K32 n= 1744 . Global coordinate and color limits are retained for every dataset. UCell and log1p raw NMF usage use plasma; exact0 black, missing cyan (none). Ascending-score layering; equal-size grey-first K32-last highlights. Dispersed RNA locations are preserved. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S38 — RNA_GSE326225_triptych
+Identical cell IDs and coordinates across three panels. Dataset: GSE326225 ; n= 6288 ; K32 n= 4 . Global coordinate and color limits are retained for every dataset. UCell and log1p raw NMF usage use plasma; exact0 black, missing cyan (none). Ascending-score layering; equal-size grey-first K32-last highlights. Dispersed RNA locations are preserved. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S39 — RNA_HRA003620_triptych
+Identical cell IDs and coordinates across three panels. Dataset: HRA003620 ; n= 19435 ; K32 n= 1093 . Global coordinate and color limits are retained for every dataset. UCell and log1p raw NMF usage use plasma; exact0 black, missing cyan (none). Ascending-score layering; equal-size grey-first K32-last highlights. Dispersed RNA locations are preserved. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S40 — RNA_InhouseData_triptych
+Identical cell IDs and coordinates across three panels. Dataset: InhouseData ; n= 13460 ; K32 n= 194 . Global coordinate and color limits are retained for every dataset. UCell and log1p raw NMF usage use plasma; exact0 black, missing cyan (none). Ascending-score layering; equal-size grey-first K32-last highlights. Dispersed RNA locations are preserved. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.
+
+Supplementary Figure S41 — RNA_PRJNA662018_triptych
+Identical cell IDs and coordinates across three panels. Dataset: PRJNA662018 ; n= 35189 ; K32 n= 247 . Global coordinate and color limits are retained for every dataset. UCell and log1p raw NMF usage use plasma; exact0 black, missing cyan (none). Ascending-score layering; equal-size grey-first K32-last highlights. Dispersed RNA locations are preserved. K32 denotes C18 in the frozen FULL_Z_r1.00 partition, not an NMF rank. All results characterize a selected candidate within the same discovery data and are not independent validation.

@@ -1,0 +1,5 @@
+metric	value	meaning
+output_bytes_excluding_zip	236936395	Includes new C14 aggregates and new sample-expression caches, excluded from review package
+observed_R_allocated_heap_peak_MiB	19729.7	Aggregation gc maximum Ncells+Vcells, not OS RSS
+original_RNA_loads	1	Single sequential load to fill missing C14 sparse aggregates
+maximum_data_threads	2	Heavy models sequential, BLAS and fgsea one thread

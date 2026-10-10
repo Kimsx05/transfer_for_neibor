@@ -1,0 +1,46 @@
+version: mp10_k32_validation_v4.1
+candidate: K32
+partition: FULL_Z_r1.00
+cluster: C18
+n_full: 123699
+n_candidate: 3282
+n_clusters: 27
+seed_new: 123
+threads: 2
+excluded_sample: CNP0000460|CNP0000460_P07T
+score_controls:
+  UCell: C14
+  NMF: C7
+score_test: two-sided paired Wilcoxon sample means; exact if no ties or zero differences,
+  else normal approximation with continuity correction; Holm over two prespecified
+  tests separately in full and exclude_P07T
+DE:
+  min_cells: 30
+  min_pairs: 3
+  design: ~sample+group; reference Right; groupLeft
+  filter_min_count: 10.0
+  filter_min_total_count: 15.0
+  filter_large_n: 10.0
+  filter_min_prop: 0.69999999999999996
+  TMM: yes
+  robust: yes
+  legacy: no
+  shortlist: FDR<.05, log2FC>=.5, detection_left>=.1, positive_fraction>=.7; dataset
+    direction, sample direction, detection delta, logFC desc, gene ID asc; max20
+fgsea:
+  cache: /home/data/t070721/Metabolistic_scRNA/Multi2/4.3 NMF allgene/output_full_cc_seed5_v2/11A_msigdb_gene_sets_cache.qs
+  collections:
+  - GO:BP
+  - Reactome
+  rank: sign(log2FC)*sqrt(F)
+  duplicate_mapping: highest logCPM, then original gene_id; no merge
+  method: fgseaMultilevel
+  sampleSize: 101
+  nPermSimple: 1000
+  minSize: 10
+  maxSize: 500
+  eps: 0.0001
+  nproc: 1
+  seed: 123
+top_rank: log2FC>0; FDR, PValue, gene_id ascending; no FDR prefilter
+patient_analysis: not evaluable unless independently verified mapping exists
