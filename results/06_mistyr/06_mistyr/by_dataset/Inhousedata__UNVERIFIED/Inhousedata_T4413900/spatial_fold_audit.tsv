@@ -1,0 +1,11 @@
+fold	model	predictors	n_train	n_test	target_excluded	fold_overlap	calibration	status
+1	"baseline"	"epi_fraction_gate;log1p_nCount"	3079	763	TRUE	0	"lm trained on training-fold OOB only"	"PASS"
+1	"tme"	"epi_fraction_gate;log1p_nCount;F01;F02;F03;F04;F05;F06;F07;F08;F10;F11;F12;F13;F14;F15;F16;F17;F18;F19;F20;F21;F22;F23;F24;F25;F26;F27;F28;F29;F30"	3079	763	TRUE	0	"lm trained on training-fold OOB only"	"PASS"
+2	"baseline"	"epi_fraction_gate;log1p_nCount"	3089	753	TRUE	0	"lm trained on training-fold OOB only"	"PASS"
+2	"tme"	"epi_fraction_gate;log1p_nCount;F01;F02;F03;F04;F05;F06;F07;F08;F10;F11;F12;F13;F14;F15;F16;F17;F18;F19;F20;F21;F22;F23;F24;F25;F26;F27;F28;F29;F30"	3089	753	TRUE	0	"lm trained on training-fold OOB only"	"PASS"
+3	"baseline"	"epi_fraction_gate;log1p_nCount"	3083	759	TRUE	0	"lm trained on training-fold OOB only"	"PASS"
+3	"tme"	"epi_fraction_gate;log1p_nCount;F01;F02;F03;F04;F05;F06;F07;F08;F10;F11;F12;F13;F14;F15;F16;F17;F18;F19;F20;F21;F22;F23;F24;F25;F26;F27;F28;F29;F30"	3083	759	TRUE	0	"lm trained on training-fold OOB only"	"PASS"
+4	"baseline"	"epi_fraction_gate;log1p_nCount"	3095	747	TRUE	0	"lm trained on training-fold OOB only"	"PASS"
+4	"tme"	"epi_fraction_gate;log1p_nCount;F01;F02;F03;F04;F05;F06;F07;F08;F10;F11;F12;F13;F14;F15;F16;F17;F18;F19;F20;F21;F22;F23;F24;F25;F26;F27;F28;F29;F30"	3095	747	TRUE	0	"lm trained on training-fold OOB only"	"PASS"
+5	"baseline"	"epi_fraction_gate;log1p_nCount"	3022	820	TRUE	0	"lm trained on training-fold OOB only"	"PASS"
+5	"tme"	"epi_fraction_gate;log1p_nCount;F01;F02;F03;F04;F05;F06;F07;F08;F10;F11;F12;F13;F14;F15;F16;F17;F18;F19;F20;F21;F22;F23;F24;F25;F26;F27;F28;F29;F30"	3022	820	TRUE	0	"lm trained on training-fold OOB only"	"PASS"

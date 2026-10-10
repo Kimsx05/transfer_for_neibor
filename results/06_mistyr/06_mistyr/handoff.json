@@ -1,0 +1,64 @@
+{
+  "module": "06",
+  "status": "PASS_WITH_WARNING",
+  "completed_scope": {
+    "sections": 63,
+    "datasets": 7,
+    "branches": [
+      "wang_style_cellcell_intra",
+      "mp10_target_extension"
+    ],
+    "views": [
+      "intra"
+    ],
+    "spatial_cv_complete_sections": 59,
+    "positive_increment_sections": 58,
+    "mp10_reportable_sections": 53
+  },
+  "upstream_handoffs": [
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/00_inputs/handoff.json",
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/01_mp_display/handoff.json"
+  ],
+  "input_signature": "6fe891f7cd99585bd07c6b5a3c2811bbcb953d92f863eb3d8419adbd51107a40",
+  "code_signature": "da6f034a63c3a3cfc4e8686b2d5c918f1a9053bce56926cc2695c41c7b0e484e",
+  "parameter_signature": "cb9294b71af512a20e54f87177ecc1ace9a8638181f3a0847c81738e2dfe430a",
+  "source_registry": "/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/source_registry.json",
+  "field_units": {
+    "raw_importance": "ranger impurity importance; target scale dependent",
+    "standardized_importance": "per-target z of impurity importance times (1-p_intra); no effect sign",
+    "spatial_r2": "dimensionless fraction, not percent; may be negative",
+    "spatial_rmse": "raw AUCell",
+    "mean_abundance": "expected cells per spot",
+    "mp_score": "raw frozen AUCell",
+    "nCount": "raw UMI counts across all input features"
+  },
+  "spot_key_columns": [
+    "section_id",
+    "barcode"
+  ],
+  "warnings": [
+    "MISTyR 1.18.0 differs from paper 1.10.0.",
+    "Native coefficient serialization has an extra NA field: importance weighting corrected with OOB-verified slope P values; unmodified native values preserved.",
+    "A internal validation only; B held-out regions within section, no buffer or independent-patient validation.",
+    "Frozen patient_uid absent; section is not a patient. Frozen __UNVERIFIED dataset labels retained.",
+    "Shared counts and correlated abundances can drive predictive dependencies; no causal or communication claims.",
+    "Native negative R2 clipping is bypassed for reporting via retained unclipped metrics.",
+    "Negative standardized importance means below-average contribution, not inhibition.",
+    "Performance-qualified median is conditional; all-estimable medians also supplied."
+  ],
+  "stop_after_module": "06",
+  "next_module_started": false,
+  "outputs": {
+    "RUN_SUMMARY.md": "/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/RUN_SUMMARY.md",
+    "review.html": "/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/review.html",
+    "review_bundle.zip": "/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/review_bundle.zip",
+    "output_manifest.tsv": "/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/output_manifest.tsv",
+    "cellcell_importance.tsv": "/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/cellcell_importance.tsv",
+    "mp10_baseline_vs_tme.tsv": "/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/mp10_baseline_vs_tme.tsv",
+    "cellcell_dataset_median_standardized_importance.tsv": "/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/cellcell_dataset_median_standardized_importance.tsv",
+    "mp10_dataset_median_standardized_importance.tsv": "/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/mp10_dataset_median_standardized_importance.tsv",
+    "variable_dictionary.tsv": "/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/variable_dictionary.tsv",
+    "EVALUATION_METHODS.md": "/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/EVALUATION_METHODS.md",
+    "acceptance_validation.tsv": "/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/acceptance_validation.tsv"
+  }
+}

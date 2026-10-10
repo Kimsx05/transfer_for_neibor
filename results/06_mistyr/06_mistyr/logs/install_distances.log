@@ -1,0 +1,54 @@
+trying URL 'https://cloud.r-project.org/src/contrib/distances_0.1.13.tar.gz'
+Content type 'application/x-gzip' length 85533 bytes (83 KB)
+==================================================
+downloaded 83 KB
+
+* installing *source* package ‘distances’ ...
+** this is package ‘distances’ version ‘0.1.13’
+** package ‘distances’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0’
+using C++ compiler: ‘g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0’
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c distances-init.c -o distances-init.o
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c error.c -o error.o
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c get_dists.c -o get_dists.o
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c internal.c -o internal.o
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c max_dists.c -o max_dists.o
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c nn_search.c -o nn_search.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2   -c nn_search_ann.cpp -o nn_search_ann.o
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c utils.c -o utils.o
+(cd libann && R_AR="ar" R_CXX="g++ -std=gnu++17" R_CPPFLAGS="-DNDEBUG -I/usr/local/include" R_CXXFLAGS="-fpic -g -O2 " R_INCLUDE_DIR="/usr/local/lib/R/include" make) || exit 1;
+make[1]: Entering directory '/home/data/t070721/tmpdir/Rtmp3eFsyn/R.INSTALL14fc0b4c7f2c4f/distances/src/libann'
+g++ -std=gnu++17 -DNDEBUG -I/usr/local/include -fpic -g -O2  -Iinclude -I"/usr/local/lib/R/include" -c src/ANN.cpp -o src/ANN.o
+g++ -std=gnu++17 -DNDEBUG -I/usr/local/include -fpic -g -O2  -Iinclude -I"/usr/local/lib/R/include" -c src/brute.cpp -o src/brute.o
+g++ -std=gnu++17 -DNDEBUG -I/usr/local/include -fpic -g -O2  -Iinclude -I"/usr/local/lib/R/include" -c src/kd_tree.cpp -o src/kd_tree.o
+g++ -std=gnu++17 -DNDEBUG -I/usr/local/include -fpic -g -O2  -Iinclude -I"/usr/local/lib/R/include" -c src/kd_util.cpp -o src/kd_util.o
+g++ -std=gnu++17 -DNDEBUG -I/usr/local/include -fpic -g -O2  -Iinclude -I"/usr/local/lib/R/include" -c src/kd_split.cpp -o src/kd_split.o
+g++ -std=gnu++17 -DNDEBUG -I/usr/local/include -fpic -g -O2  -Iinclude -I"/usr/local/lib/R/include" -c src/kd_dump.cpp -o src/kd_dump.o
+g++ -std=gnu++17 -DNDEBUG -I/usr/local/include -fpic -g -O2  -Iinclude -I"/usr/local/lib/R/include" -c src/kd_search.cpp -o src/kd_search.o
+g++ -std=gnu++17 -DNDEBUG -I/usr/local/include -fpic -g -O2  -Iinclude -I"/usr/local/lib/R/include" -c src/kd_pr_search.cpp -o src/kd_pr_search.o
+g++ -std=gnu++17 -DNDEBUG -I/usr/local/include -fpic -g -O2  -Iinclude -I"/usr/local/lib/R/include" -c src/kd_fix_rad_search.cpp -o src/kd_fix_rad_search.o
+g++ -std=gnu++17 -DNDEBUG -I/usr/local/include -fpic -g -O2  -Iinclude -I"/usr/local/lib/R/include" -c src/bd_tree.cpp -o src/bd_tree.o
+g++ -std=gnu++17 -DNDEBUG -I/usr/local/include -fpic -g -O2  -Iinclude -I"/usr/local/lib/R/include" -c src/bd_search.cpp -o src/bd_search.o
+g++ -std=gnu++17 -DNDEBUG -I/usr/local/include -fpic -g -O2  -Iinclude -I"/usr/local/lib/R/include" -c src/bd_pr_search.cpp -o src/bd_pr_search.o
+g++ -std=gnu++17 -DNDEBUG -I/usr/local/include -fpic -g -O2  -Iinclude -I"/usr/local/lib/R/include" -c src/bd_fix_rad_search.cpp -o src/bd_fix_rad_search.o
+g++ -std=gnu++17 -DNDEBUG -I/usr/local/include -fpic -g -O2  -Iinclude -I"/usr/local/lib/R/include" -c src/perf.cpp -o src/perf.o
+ar -rcs libann.a src/ANN.o src/brute.o src/kd_tree.o src/kd_util.o src/kd_split.o src/kd_dump.o src/kd_search.o src/kd_pr_search.o src/kd_fix_rad_search.o src/bd_tree.o src/bd_search.o src/bd_pr_search.o src/bd_fix_rad_search.o src/perf.o
+make[1]: Leaving directory '/home/data/t070721/tmpdir/Rtmp3eFsyn/R.INSTALL14fc0b4c7f2c4f/distances/src/libann'
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o distances.so distances-init.o error.o get_dists.o internal.o max_dists.o nn_search.o nn_search_ann.o utils.o libann/libann.a -L/usr/local/lib/R/lib -lR
+installing to /home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/runtime/Rlib/00LOCK-distances/00new/distances/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (distances)
+
+The downloaded source packages are in
+	‘/home/data/t070721/tmpdir/RtmpfMko0y/downloaded_packages’

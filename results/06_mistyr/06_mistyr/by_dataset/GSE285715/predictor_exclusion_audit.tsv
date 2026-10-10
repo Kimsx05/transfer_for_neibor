@@ -1,0 +1,598 @@
+model	target	predictor	target_excluded	deterministic_copy_excluded	status	section_id	dataset	cohort	patient_uid	specimen	predictor_label	target_label
+wang_style_cellcell_intra	M01	M02	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Endothelial	B
+wang_style_cellcell_intra	M01	M03	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Epithelial	B
+wang_style_cellcell_intra	M01	M04	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Fibroblast	B
+wang_style_cellcell_intra	M01	M05	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Mast	B
+wang_style_cellcell_intra	M01	M06	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Mural	B
+wang_style_cellcell_intra	M01	M07	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Myeloid	B
+wang_style_cellcell_intra	M01	M08	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Plasma	B
+wang_style_cellcell_intra	M01	M09	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	T_NK	B
+wang_style_cellcell_intra	M02	M01	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	B	Endothelial
+wang_style_cellcell_intra	M02	M03	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Epithelial	Endothelial
+wang_style_cellcell_intra	M02	M04	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Fibroblast	Endothelial
+wang_style_cellcell_intra	M02	M05	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Mast	Endothelial
+wang_style_cellcell_intra	M02	M06	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Mural	Endothelial
+wang_style_cellcell_intra	M02	M07	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Myeloid	Endothelial
+wang_style_cellcell_intra	M02	M08	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Plasma	Endothelial
+wang_style_cellcell_intra	M02	M09	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	T_NK	Endothelial
+wang_style_cellcell_intra	M03	M01	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	B	Epithelial
+wang_style_cellcell_intra	M03	M02	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Endothelial	Epithelial
+wang_style_cellcell_intra	M03	M04	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Fibroblast	Epithelial
+wang_style_cellcell_intra	M03	M05	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Mast	Epithelial
+wang_style_cellcell_intra	M03	M06	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Mural	Epithelial
+wang_style_cellcell_intra	M03	M07	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Myeloid	Epithelial
+wang_style_cellcell_intra	M03	M08	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Plasma	Epithelial
+wang_style_cellcell_intra	M03	M09	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	T_NK	Epithelial
+wang_style_cellcell_intra	M04	M01	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	B	Fibroblast
+wang_style_cellcell_intra	M04	M02	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Endothelial	Fibroblast
+wang_style_cellcell_intra	M04	M03	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Epithelial	Fibroblast
+wang_style_cellcell_intra	M04	M05	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Mast	Fibroblast
+wang_style_cellcell_intra	M04	M06	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Mural	Fibroblast
+wang_style_cellcell_intra	M04	M07	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Myeloid	Fibroblast
+wang_style_cellcell_intra	M04	M08	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Plasma	Fibroblast
+wang_style_cellcell_intra	M04	M09	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	T_NK	Fibroblast
+wang_style_cellcell_intra	M05	M01	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	B	Mast
+wang_style_cellcell_intra	M05	M02	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Endothelial	Mast
+wang_style_cellcell_intra	M05	M03	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Epithelial	Mast
+wang_style_cellcell_intra	M05	M04	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Fibroblast	Mast
+wang_style_cellcell_intra	M05	M06	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Mural	Mast
+wang_style_cellcell_intra	M05	M07	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Myeloid	Mast
+wang_style_cellcell_intra	M05	M08	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Plasma	Mast
+wang_style_cellcell_intra	M05	M09	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	T_NK	Mast
+wang_style_cellcell_intra	M06	M01	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	B	Mural
+wang_style_cellcell_intra	M06	M02	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Endothelial	Mural
+wang_style_cellcell_intra	M06	M03	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Epithelial	Mural
+wang_style_cellcell_intra	M06	M04	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Fibroblast	Mural
+wang_style_cellcell_intra	M06	M05	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Mast	Mural
+wang_style_cellcell_intra	M06	M07	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Myeloid	Mural
+wang_style_cellcell_intra	M06	M08	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Plasma	Mural
+wang_style_cellcell_intra	M06	M09	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	T_NK	Mural
+wang_style_cellcell_intra	M07	M01	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	B	Myeloid
+wang_style_cellcell_intra	M07	M02	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Endothelial	Myeloid
+wang_style_cellcell_intra	M07	M03	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Epithelial	Myeloid
+wang_style_cellcell_intra	M07	M04	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Fibroblast	Myeloid
+wang_style_cellcell_intra	M07	M05	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Mast	Myeloid
+wang_style_cellcell_intra	M07	M06	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Mural	Myeloid
+wang_style_cellcell_intra	M07	M08	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Plasma	Myeloid
+wang_style_cellcell_intra	M07	M09	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	T_NK	Myeloid
+wang_style_cellcell_intra	M08	M01	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	B	Plasma
+wang_style_cellcell_intra	M08	M02	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Endothelial	Plasma
+wang_style_cellcell_intra	M08	M03	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Epithelial	Plasma
+wang_style_cellcell_intra	M08	M04	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Fibroblast	Plasma
+wang_style_cellcell_intra	M08	M05	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Mast	Plasma
+wang_style_cellcell_intra	M08	M06	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Mural	Plasma
+wang_style_cellcell_intra	M08	M07	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Myeloid	Plasma
+wang_style_cellcell_intra	M08	M09	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	T_NK	Plasma
+wang_style_cellcell_intra	M09	M01	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	B	T_NK
+wang_style_cellcell_intra	M09	M02	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Endothelial	T_NK
+wang_style_cellcell_intra	M09	M03	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Epithelial	T_NK
+wang_style_cellcell_intra	M09	M04	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Fibroblast	T_NK
+wang_style_cellcell_intra	M09	M05	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Mast	T_NK
+wang_style_cellcell_intra	M09	M06	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Mural	T_NK
+wang_style_cellcell_intra	M09	M07	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Myeloid	T_NK
+wang_style_cellcell_intra	M09	M08	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Plasma	T_NK
+mp10_technical_baseline	MP10	epi_fraction_gate	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	historical c2l mean fraction	EpiMP10 raw Top20 AUCell
+mp10_technical_baseline	MP10	log1p_nCount	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	raw X row sum over all frozen features	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	epi_fraction_gate	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	historical c2l mean fraction	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	log1p_nCount	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	raw X row sum over all frozen features	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F01	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Arterial EC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F02	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	C1QC TAM	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F03	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	CD4 Helper/Conventional	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F04	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	CD4 Naive/Memory-like	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F05	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	CD8 Exhausted	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F06	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	CD8 GZMK/Effector-memory-like	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F07	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Capillary EC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F08	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Classical Mono	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F10	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	GC B	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F11	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	LAMP3 DC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F12	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Lymphatic EC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F13	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Mast	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F14	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Matrix_CAF	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F15	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	NK	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F16	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Naive/Memory B	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F17	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Neutrophil	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F18	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Pericyte	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F19	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Plasma	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F20	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	SMC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F21	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	SPP1 TAM	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F22	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Tfh/CXCL13-like	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F23	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Treg	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F24	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	Venous EC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F25	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	cDC1	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F26	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	cDC2	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F27	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	iCAF	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F28	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	pDC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F29	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	rCAF	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F30	True	True	PASS	GSE285715_N1	GSE285715	GSE285715	NA	GSE285715_N1	vCAF	EpiMP10 raw Top20 AUCell
+wang_style_cellcell_intra	M01	M02	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Endothelial	B
+wang_style_cellcell_intra	M01	M03	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Epithelial	B
+wang_style_cellcell_intra	M01	M04	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Fibroblast	B
+wang_style_cellcell_intra	M01	M05	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Mast	B
+wang_style_cellcell_intra	M01	M06	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Mural	B
+wang_style_cellcell_intra	M01	M07	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Myeloid	B
+wang_style_cellcell_intra	M01	M08	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Plasma	B
+wang_style_cellcell_intra	M01	M09	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	T_NK	B
+wang_style_cellcell_intra	M02	M01	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	B	Endothelial
+wang_style_cellcell_intra	M02	M03	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Epithelial	Endothelial
+wang_style_cellcell_intra	M02	M04	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Fibroblast	Endothelial
+wang_style_cellcell_intra	M02	M05	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Mast	Endothelial
+wang_style_cellcell_intra	M02	M06	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Mural	Endothelial
+wang_style_cellcell_intra	M02	M07	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Myeloid	Endothelial
+wang_style_cellcell_intra	M02	M08	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Plasma	Endothelial
+wang_style_cellcell_intra	M02	M09	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	T_NK	Endothelial
+wang_style_cellcell_intra	M03	M01	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	B	Epithelial
+wang_style_cellcell_intra	M03	M02	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Endothelial	Epithelial
+wang_style_cellcell_intra	M03	M04	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Fibroblast	Epithelial
+wang_style_cellcell_intra	M03	M05	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Mast	Epithelial
+wang_style_cellcell_intra	M03	M06	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Mural	Epithelial
+wang_style_cellcell_intra	M03	M07	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Myeloid	Epithelial
+wang_style_cellcell_intra	M03	M08	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Plasma	Epithelial
+wang_style_cellcell_intra	M03	M09	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	T_NK	Epithelial
+wang_style_cellcell_intra	M04	M01	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	B	Fibroblast
+wang_style_cellcell_intra	M04	M02	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Endothelial	Fibroblast
+wang_style_cellcell_intra	M04	M03	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Epithelial	Fibroblast
+wang_style_cellcell_intra	M04	M05	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Mast	Fibroblast
+wang_style_cellcell_intra	M04	M06	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Mural	Fibroblast
+wang_style_cellcell_intra	M04	M07	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Myeloid	Fibroblast
+wang_style_cellcell_intra	M04	M08	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Plasma	Fibroblast
+wang_style_cellcell_intra	M04	M09	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	T_NK	Fibroblast
+wang_style_cellcell_intra	M05	M01	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	B	Mast
+wang_style_cellcell_intra	M05	M02	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Endothelial	Mast
+wang_style_cellcell_intra	M05	M03	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Epithelial	Mast
+wang_style_cellcell_intra	M05	M04	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Fibroblast	Mast
+wang_style_cellcell_intra	M05	M06	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Mural	Mast
+wang_style_cellcell_intra	M05	M07	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Myeloid	Mast
+wang_style_cellcell_intra	M05	M08	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Plasma	Mast
+wang_style_cellcell_intra	M05	M09	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	T_NK	Mast
+wang_style_cellcell_intra	M06	M01	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	B	Mural
+wang_style_cellcell_intra	M06	M02	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Endothelial	Mural
+wang_style_cellcell_intra	M06	M03	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Epithelial	Mural
+wang_style_cellcell_intra	M06	M04	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Fibroblast	Mural
+wang_style_cellcell_intra	M06	M05	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Mast	Mural
+wang_style_cellcell_intra	M06	M07	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Myeloid	Mural
+wang_style_cellcell_intra	M06	M08	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Plasma	Mural
+wang_style_cellcell_intra	M06	M09	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	T_NK	Mural
+wang_style_cellcell_intra	M07	M01	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	B	Myeloid
+wang_style_cellcell_intra	M07	M02	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Endothelial	Myeloid
+wang_style_cellcell_intra	M07	M03	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Epithelial	Myeloid
+wang_style_cellcell_intra	M07	M04	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Fibroblast	Myeloid
+wang_style_cellcell_intra	M07	M05	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Mast	Myeloid
+wang_style_cellcell_intra	M07	M06	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Mural	Myeloid
+wang_style_cellcell_intra	M07	M08	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Plasma	Myeloid
+wang_style_cellcell_intra	M07	M09	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	T_NK	Myeloid
+wang_style_cellcell_intra	M08	M01	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	B	Plasma
+wang_style_cellcell_intra	M08	M02	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Endothelial	Plasma
+wang_style_cellcell_intra	M08	M03	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Epithelial	Plasma
+wang_style_cellcell_intra	M08	M04	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Fibroblast	Plasma
+wang_style_cellcell_intra	M08	M05	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Mast	Plasma
+wang_style_cellcell_intra	M08	M06	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Mural	Plasma
+wang_style_cellcell_intra	M08	M07	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Myeloid	Plasma
+wang_style_cellcell_intra	M08	M09	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	T_NK	Plasma
+wang_style_cellcell_intra	M09	M01	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	B	T_NK
+wang_style_cellcell_intra	M09	M02	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Endothelial	T_NK
+wang_style_cellcell_intra	M09	M03	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Epithelial	T_NK
+wang_style_cellcell_intra	M09	M04	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Fibroblast	T_NK
+wang_style_cellcell_intra	M09	M05	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Mast	T_NK
+wang_style_cellcell_intra	M09	M06	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Mural	T_NK
+wang_style_cellcell_intra	M09	M07	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Myeloid	T_NK
+wang_style_cellcell_intra	M09	M08	True	True	PASS	GSE285715_N2	GSE285715	GSE285715	NA	GSE285715_N2	Plasma	T_NK
+wang_style_cellcell_intra	M01	M02	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Endothelial	B
+wang_style_cellcell_intra	M01	M03	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Epithelial	B
+wang_style_cellcell_intra	M01	M04	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Fibroblast	B
+wang_style_cellcell_intra	M01	M05	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Mast	B
+wang_style_cellcell_intra	M01	M06	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Mural	B
+wang_style_cellcell_intra	M01	M07	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Myeloid	B
+wang_style_cellcell_intra	M01	M08	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Plasma	B
+wang_style_cellcell_intra	M01	M09	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	T_NK	B
+wang_style_cellcell_intra	M02	M01	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	B	Endothelial
+wang_style_cellcell_intra	M02	M03	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Epithelial	Endothelial
+wang_style_cellcell_intra	M02	M04	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Fibroblast	Endothelial
+wang_style_cellcell_intra	M02	M05	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Mast	Endothelial
+wang_style_cellcell_intra	M02	M06	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Mural	Endothelial
+wang_style_cellcell_intra	M02	M07	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Myeloid	Endothelial
+wang_style_cellcell_intra	M02	M08	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Plasma	Endothelial
+wang_style_cellcell_intra	M02	M09	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	T_NK	Endothelial
+wang_style_cellcell_intra	M03	M01	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	B	Epithelial
+wang_style_cellcell_intra	M03	M02	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Endothelial	Epithelial
+wang_style_cellcell_intra	M03	M04	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Fibroblast	Epithelial
+wang_style_cellcell_intra	M03	M05	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Mast	Epithelial
+wang_style_cellcell_intra	M03	M06	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Mural	Epithelial
+wang_style_cellcell_intra	M03	M07	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Myeloid	Epithelial
+wang_style_cellcell_intra	M03	M08	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Plasma	Epithelial
+wang_style_cellcell_intra	M03	M09	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	T_NK	Epithelial
+wang_style_cellcell_intra	M04	M01	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	B	Fibroblast
+wang_style_cellcell_intra	M04	M02	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Endothelial	Fibroblast
+wang_style_cellcell_intra	M04	M03	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Epithelial	Fibroblast
+wang_style_cellcell_intra	M04	M05	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Mast	Fibroblast
+wang_style_cellcell_intra	M04	M06	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Mural	Fibroblast
+wang_style_cellcell_intra	M04	M07	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Myeloid	Fibroblast
+wang_style_cellcell_intra	M04	M08	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Plasma	Fibroblast
+wang_style_cellcell_intra	M04	M09	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	T_NK	Fibroblast
+wang_style_cellcell_intra	M05	M01	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	B	Mast
+wang_style_cellcell_intra	M05	M02	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Endothelial	Mast
+wang_style_cellcell_intra	M05	M03	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Epithelial	Mast
+wang_style_cellcell_intra	M05	M04	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Fibroblast	Mast
+wang_style_cellcell_intra	M05	M06	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Mural	Mast
+wang_style_cellcell_intra	M05	M07	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Myeloid	Mast
+wang_style_cellcell_intra	M05	M08	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Plasma	Mast
+wang_style_cellcell_intra	M05	M09	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	T_NK	Mast
+wang_style_cellcell_intra	M06	M01	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	B	Mural
+wang_style_cellcell_intra	M06	M02	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Endothelial	Mural
+wang_style_cellcell_intra	M06	M03	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Epithelial	Mural
+wang_style_cellcell_intra	M06	M04	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Fibroblast	Mural
+wang_style_cellcell_intra	M06	M05	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Mast	Mural
+wang_style_cellcell_intra	M06	M07	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Myeloid	Mural
+wang_style_cellcell_intra	M06	M08	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Plasma	Mural
+wang_style_cellcell_intra	M06	M09	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	T_NK	Mural
+wang_style_cellcell_intra	M07	M01	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	B	Myeloid
+wang_style_cellcell_intra	M07	M02	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Endothelial	Myeloid
+wang_style_cellcell_intra	M07	M03	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Epithelial	Myeloid
+wang_style_cellcell_intra	M07	M04	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Fibroblast	Myeloid
+wang_style_cellcell_intra	M07	M05	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Mast	Myeloid
+wang_style_cellcell_intra	M07	M06	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Mural	Myeloid
+wang_style_cellcell_intra	M07	M08	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Plasma	Myeloid
+wang_style_cellcell_intra	M07	M09	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	T_NK	Myeloid
+wang_style_cellcell_intra	M08	M01	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	B	Plasma
+wang_style_cellcell_intra	M08	M02	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Endothelial	Plasma
+wang_style_cellcell_intra	M08	M03	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Epithelial	Plasma
+wang_style_cellcell_intra	M08	M04	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Fibroblast	Plasma
+wang_style_cellcell_intra	M08	M05	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Mast	Plasma
+wang_style_cellcell_intra	M08	M06	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Mural	Plasma
+wang_style_cellcell_intra	M08	M07	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Myeloid	Plasma
+wang_style_cellcell_intra	M08	M09	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	T_NK	Plasma
+wang_style_cellcell_intra	M09	M01	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	B	T_NK
+wang_style_cellcell_intra	M09	M02	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Endothelial	T_NK
+wang_style_cellcell_intra	M09	M03	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Epithelial	T_NK
+wang_style_cellcell_intra	M09	M04	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Fibroblast	T_NK
+wang_style_cellcell_intra	M09	M05	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Mast	T_NK
+wang_style_cellcell_intra	M09	M06	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Mural	T_NK
+wang_style_cellcell_intra	M09	M07	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Myeloid	T_NK
+wang_style_cellcell_intra	M09	M08	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Plasma	T_NK
+mp10_technical_baseline	MP10	epi_fraction_gate	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	historical c2l mean fraction	EpiMP10 raw Top20 AUCell
+mp10_technical_baseline	MP10	log1p_nCount	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	raw X row sum over all frozen features	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	epi_fraction_gate	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	historical c2l mean fraction	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	log1p_nCount	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	raw X row sum over all frozen features	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F01	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Arterial EC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F02	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	C1QC TAM	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F03	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	CD4 Helper/Conventional	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F04	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	CD4 Naive/Memory-like	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F05	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	CD8 Exhausted	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F06	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	CD8 GZMK/Effector-memory-like	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F07	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Capillary EC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F08	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Classical Mono	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F10	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	GC B	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F11	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	LAMP3 DC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F12	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Lymphatic EC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F13	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Mast	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F14	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Matrix_CAF	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F15	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	NK	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F16	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Naive/Memory B	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F17	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Neutrophil	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F18	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Pericyte	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F19	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Plasma	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F20	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	SMC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F21	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	SPP1 TAM	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F22	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Tfh/CXCL13-like	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F23	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Treg	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F24	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	Venous EC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F25	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	cDC1	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F26	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	cDC2	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F27	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	iCAF	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F28	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	pDC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F29	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	rCAF	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F30	True	True	PASS	GSE285715_N3	GSE285715	GSE285715	NA	GSE285715_N3	vCAF	EpiMP10 raw Top20 AUCell
+wang_style_cellcell_intra	M01	M02	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Endothelial	B
+wang_style_cellcell_intra	M01	M03	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Epithelial	B
+wang_style_cellcell_intra	M01	M04	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Fibroblast	B
+wang_style_cellcell_intra	M01	M05	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Mast	B
+wang_style_cellcell_intra	M01	M06	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Mural	B
+wang_style_cellcell_intra	M01	M07	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Myeloid	B
+wang_style_cellcell_intra	M01	M08	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Plasma	B
+wang_style_cellcell_intra	M01	M09	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	T_NK	B
+wang_style_cellcell_intra	M02	M01	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	B	Endothelial
+wang_style_cellcell_intra	M02	M03	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Epithelial	Endothelial
+wang_style_cellcell_intra	M02	M04	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Fibroblast	Endothelial
+wang_style_cellcell_intra	M02	M05	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Mast	Endothelial
+wang_style_cellcell_intra	M02	M06	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Mural	Endothelial
+wang_style_cellcell_intra	M02	M07	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Myeloid	Endothelial
+wang_style_cellcell_intra	M02	M08	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Plasma	Endothelial
+wang_style_cellcell_intra	M02	M09	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	T_NK	Endothelial
+wang_style_cellcell_intra	M03	M01	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	B	Epithelial
+wang_style_cellcell_intra	M03	M02	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Endothelial	Epithelial
+wang_style_cellcell_intra	M03	M04	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Fibroblast	Epithelial
+wang_style_cellcell_intra	M03	M05	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Mast	Epithelial
+wang_style_cellcell_intra	M03	M06	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Mural	Epithelial
+wang_style_cellcell_intra	M03	M07	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Myeloid	Epithelial
+wang_style_cellcell_intra	M03	M08	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Plasma	Epithelial
+wang_style_cellcell_intra	M03	M09	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	T_NK	Epithelial
+wang_style_cellcell_intra	M04	M01	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	B	Fibroblast
+wang_style_cellcell_intra	M04	M02	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Endothelial	Fibroblast
+wang_style_cellcell_intra	M04	M03	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Epithelial	Fibroblast
+wang_style_cellcell_intra	M04	M05	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Mast	Fibroblast
+wang_style_cellcell_intra	M04	M06	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Mural	Fibroblast
+wang_style_cellcell_intra	M04	M07	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Myeloid	Fibroblast
+wang_style_cellcell_intra	M04	M08	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Plasma	Fibroblast
+wang_style_cellcell_intra	M04	M09	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	T_NK	Fibroblast
+wang_style_cellcell_intra	M05	M01	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	B	Mast
+wang_style_cellcell_intra	M05	M02	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Endothelial	Mast
+wang_style_cellcell_intra	M05	M03	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Epithelial	Mast
+wang_style_cellcell_intra	M05	M04	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Fibroblast	Mast
+wang_style_cellcell_intra	M05	M06	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Mural	Mast
+wang_style_cellcell_intra	M05	M07	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Myeloid	Mast
+wang_style_cellcell_intra	M05	M08	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Plasma	Mast
+wang_style_cellcell_intra	M05	M09	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	T_NK	Mast
+wang_style_cellcell_intra	M06	M01	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	B	Mural
+wang_style_cellcell_intra	M06	M02	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Endothelial	Mural
+wang_style_cellcell_intra	M06	M03	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Epithelial	Mural
+wang_style_cellcell_intra	M06	M04	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Fibroblast	Mural
+wang_style_cellcell_intra	M06	M05	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Mast	Mural
+wang_style_cellcell_intra	M06	M07	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Myeloid	Mural
+wang_style_cellcell_intra	M06	M08	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Plasma	Mural
+wang_style_cellcell_intra	M06	M09	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	T_NK	Mural
+wang_style_cellcell_intra	M07	M01	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	B	Myeloid
+wang_style_cellcell_intra	M07	M02	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Endothelial	Myeloid
+wang_style_cellcell_intra	M07	M03	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Epithelial	Myeloid
+wang_style_cellcell_intra	M07	M04	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Fibroblast	Myeloid
+wang_style_cellcell_intra	M07	M05	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Mast	Myeloid
+wang_style_cellcell_intra	M07	M06	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Mural	Myeloid
+wang_style_cellcell_intra	M07	M08	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Plasma	Myeloid
+wang_style_cellcell_intra	M07	M09	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	T_NK	Myeloid
+wang_style_cellcell_intra	M08	M01	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	B	Plasma
+wang_style_cellcell_intra	M08	M02	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Endothelial	Plasma
+wang_style_cellcell_intra	M08	M03	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Epithelial	Plasma
+wang_style_cellcell_intra	M08	M04	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Fibroblast	Plasma
+wang_style_cellcell_intra	M08	M05	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Mast	Plasma
+wang_style_cellcell_intra	M08	M06	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Mural	Plasma
+wang_style_cellcell_intra	M08	M07	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Myeloid	Plasma
+wang_style_cellcell_intra	M08	M09	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	T_NK	Plasma
+wang_style_cellcell_intra	M09	M01	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	B	T_NK
+wang_style_cellcell_intra	M09	M02	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Endothelial	T_NK
+wang_style_cellcell_intra	M09	M03	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Epithelial	T_NK
+wang_style_cellcell_intra	M09	M04	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Fibroblast	T_NK
+wang_style_cellcell_intra	M09	M05	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Mast	T_NK
+wang_style_cellcell_intra	M09	M06	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Mural	T_NK
+wang_style_cellcell_intra	M09	M07	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Myeloid	T_NK
+wang_style_cellcell_intra	M09	M08	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Plasma	T_NK
+mp10_technical_baseline	MP10	epi_fraction_gate	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	historical c2l mean fraction	EpiMP10 raw Top20 AUCell
+mp10_technical_baseline	MP10	log1p_nCount	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	raw X row sum over all frozen features	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	epi_fraction_gate	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	historical c2l mean fraction	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	log1p_nCount	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	raw X row sum over all frozen features	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F01	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Arterial EC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F02	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	C1QC TAM	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F03	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	CD4 Helper/Conventional	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F04	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	CD4 Naive/Memory-like	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F05	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	CD8 Exhausted	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F06	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	CD8 GZMK/Effector-memory-like	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F07	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Capillary EC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F08	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Classical Mono	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F10	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	GC B	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F11	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	LAMP3 DC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F12	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Lymphatic EC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F13	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Mast	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F14	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Matrix_CAF	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F15	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	NK	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F16	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Naive/Memory B	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F17	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Neutrophil	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F18	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Pericyte	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F19	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Plasma	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F20	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	SMC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F21	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	SPP1 TAM	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F22	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Tfh/CXCL13-like	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F23	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Treg	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F24	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	Venous EC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F25	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	cDC1	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F26	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	cDC2	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F27	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	iCAF	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F28	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	pDC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F29	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	rCAF	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F30	True	True	PASS	GSE285715_T1	GSE285715	GSE285715	NA	GSE285715_T1	vCAF	EpiMP10 raw Top20 AUCell
+wang_style_cellcell_intra	M01	M02	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Endothelial	B
+wang_style_cellcell_intra	M01	M03	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Epithelial	B
+wang_style_cellcell_intra	M01	M04	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Fibroblast	B
+wang_style_cellcell_intra	M01	M05	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Mast	B
+wang_style_cellcell_intra	M01	M06	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Mural	B
+wang_style_cellcell_intra	M01	M07	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Myeloid	B
+wang_style_cellcell_intra	M01	M08	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Plasma	B
+wang_style_cellcell_intra	M01	M09	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	T_NK	B
+wang_style_cellcell_intra	M02	M01	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	B	Endothelial
+wang_style_cellcell_intra	M02	M03	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Epithelial	Endothelial
+wang_style_cellcell_intra	M02	M04	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Fibroblast	Endothelial
+wang_style_cellcell_intra	M02	M05	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Mast	Endothelial
+wang_style_cellcell_intra	M02	M06	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Mural	Endothelial
+wang_style_cellcell_intra	M02	M07	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Myeloid	Endothelial
+wang_style_cellcell_intra	M02	M08	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Plasma	Endothelial
+wang_style_cellcell_intra	M02	M09	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	T_NK	Endothelial
+wang_style_cellcell_intra	M03	M01	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	B	Epithelial
+wang_style_cellcell_intra	M03	M02	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Endothelial	Epithelial
+wang_style_cellcell_intra	M03	M04	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Fibroblast	Epithelial
+wang_style_cellcell_intra	M03	M05	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Mast	Epithelial
+wang_style_cellcell_intra	M03	M06	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Mural	Epithelial
+wang_style_cellcell_intra	M03	M07	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Myeloid	Epithelial
+wang_style_cellcell_intra	M03	M08	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Plasma	Epithelial
+wang_style_cellcell_intra	M03	M09	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	T_NK	Epithelial
+wang_style_cellcell_intra	M04	M01	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	B	Fibroblast
+wang_style_cellcell_intra	M04	M02	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Endothelial	Fibroblast
+wang_style_cellcell_intra	M04	M03	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Epithelial	Fibroblast
+wang_style_cellcell_intra	M04	M05	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Mast	Fibroblast
+wang_style_cellcell_intra	M04	M06	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Mural	Fibroblast
+wang_style_cellcell_intra	M04	M07	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Myeloid	Fibroblast
+wang_style_cellcell_intra	M04	M08	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Plasma	Fibroblast
+wang_style_cellcell_intra	M04	M09	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	T_NK	Fibroblast
+wang_style_cellcell_intra	M05	M01	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	B	Mast
+wang_style_cellcell_intra	M05	M02	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Endothelial	Mast
+wang_style_cellcell_intra	M05	M03	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Epithelial	Mast
+wang_style_cellcell_intra	M05	M04	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Fibroblast	Mast
+wang_style_cellcell_intra	M05	M06	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Mural	Mast
+wang_style_cellcell_intra	M05	M07	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Myeloid	Mast
+wang_style_cellcell_intra	M05	M08	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Plasma	Mast
+wang_style_cellcell_intra	M05	M09	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	T_NK	Mast
+wang_style_cellcell_intra	M06	M01	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	B	Mural
+wang_style_cellcell_intra	M06	M02	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Endothelial	Mural
+wang_style_cellcell_intra	M06	M03	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Epithelial	Mural
+wang_style_cellcell_intra	M06	M04	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Fibroblast	Mural
+wang_style_cellcell_intra	M06	M05	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Mast	Mural
+wang_style_cellcell_intra	M06	M07	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Myeloid	Mural
+wang_style_cellcell_intra	M06	M08	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Plasma	Mural
+wang_style_cellcell_intra	M06	M09	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	T_NK	Mural
+wang_style_cellcell_intra	M07	M01	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	B	Myeloid
+wang_style_cellcell_intra	M07	M02	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Endothelial	Myeloid
+wang_style_cellcell_intra	M07	M03	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Epithelial	Myeloid
+wang_style_cellcell_intra	M07	M04	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Fibroblast	Myeloid
+wang_style_cellcell_intra	M07	M05	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Mast	Myeloid
+wang_style_cellcell_intra	M07	M06	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Mural	Myeloid
+wang_style_cellcell_intra	M07	M08	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Plasma	Myeloid
+wang_style_cellcell_intra	M07	M09	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	T_NK	Myeloid
+wang_style_cellcell_intra	M08	M01	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	B	Plasma
+wang_style_cellcell_intra	M08	M02	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Endothelial	Plasma
+wang_style_cellcell_intra	M08	M03	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Epithelial	Plasma
+wang_style_cellcell_intra	M08	M04	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Fibroblast	Plasma
+wang_style_cellcell_intra	M08	M05	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Mast	Plasma
+wang_style_cellcell_intra	M08	M06	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Mural	Plasma
+wang_style_cellcell_intra	M08	M07	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Myeloid	Plasma
+wang_style_cellcell_intra	M08	M09	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	T_NK	Plasma
+wang_style_cellcell_intra	M09	M01	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	B	T_NK
+wang_style_cellcell_intra	M09	M02	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Endothelial	T_NK
+wang_style_cellcell_intra	M09	M03	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Epithelial	T_NK
+wang_style_cellcell_intra	M09	M04	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Fibroblast	T_NK
+wang_style_cellcell_intra	M09	M05	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Mast	T_NK
+wang_style_cellcell_intra	M09	M06	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Mural	T_NK
+wang_style_cellcell_intra	M09	M07	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Myeloid	T_NK
+wang_style_cellcell_intra	M09	M08	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Plasma	T_NK
+mp10_technical_baseline	MP10	epi_fraction_gate	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	historical c2l mean fraction	EpiMP10 raw Top20 AUCell
+mp10_technical_baseline	MP10	log1p_nCount	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	raw X row sum over all frozen features	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	epi_fraction_gate	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	historical c2l mean fraction	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	log1p_nCount	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	raw X row sum over all frozen features	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F01	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Arterial EC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F02	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	C1QC TAM	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F03	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	CD4 Helper/Conventional	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F04	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	CD4 Naive/Memory-like	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F05	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	CD8 Exhausted	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F06	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	CD8 GZMK/Effector-memory-like	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F07	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Capillary EC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F08	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Classical Mono	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F10	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	GC B	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F11	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	LAMP3 DC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F12	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Lymphatic EC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F13	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Mast	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F14	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Matrix_CAF	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F15	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	NK	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F16	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Naive/Memory B	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F17	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Neutrophil	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F18	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Pericyte	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F19	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Plasma	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F20	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	SMC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F21	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	SPP1 TAM	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F22	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Tfh/CXCL13-like	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F23	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Treg	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F24	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	Venous EC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F25	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	cDC1	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F26	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	cDC2	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F27	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	iCAF	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F28	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	pDC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F29	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	rCAF	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F30	True	True	PASS	GSE285715_T2	GSE285715	GSE285715	NA	GSE285715_T2	vCAF	EpiMP10 raw Top20 AUCell
+wang_style_cellcell_intra	M01	M02	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Endothelial	B
+wang_style_cellcell_intra	M01	M03	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Epithelial	B
+wang_style_cellcell_intra	M01	M04	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Fibroblast	B
+wang_style_cellcell_intra	M01	M05	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Mast	B
+wang_style_cellcell_intra	M01	M06	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Mural	B
+wang_style_cellcell_intra	M01	M07	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Myeloid	B
+wang_style_cellcell_intra	M01	M08	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Plasma	B
+wang_style_cellcell_intra	M01	M09	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	T_NK	B
+wang_style_cellcell_intra	M02	M01	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	B	Endothelial
+wang_style_cellcell_intra	M02	M03	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Epithelial	Endothelial
+wang_style_cellcell_intra	M02	M04	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Fibroblast	Endothelial
+wang_style_cellcell_intra	M02	M05	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Mast	Endothelial
+wang_style_cellcell_intra	M02	M06	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Mural	Endothelial
+wang_style_cellcell_intra	M02	M07	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Myeloid	Endothelial
+wang_style_cellcell_intra	M02	M08	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Plasma	Endothelial
+wang_style_cellcell_intra	M02	M09	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	T_NK	Endothelial
+wang_style_cellcell_intra	M03	M01	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	B	Epithelial
+wang_style_cellcell_intra	M03	M02	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Endothelial	Epithelial
+wang_style_cellcell_intra	M03	M04	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Fibroblast	Epithelial
+wang_style_cellcell_intra	M03	M05	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Mast	Epithelial
+wang_style_cellcell_intra	M03	M06	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Mural	Epithelial
+wang_style_cellcell_intra	M03	M07	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Myeloid	Epithelial
+wang_style_cellcell_intra	M03	M08	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Plasma	Epithelial
+wang_style_cellcell_intra	M03	M09	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	T_NK	Epithelial
+wang_style_cellcell_intra	M04	M01	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	B	Fibroblast
+wang_style_cellcell_intra	M04	M02	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Endothelial	Fibroblast
+wang_style_cellcell_intra	M04	M03	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Epithelial	Fibroblast
+wang_style_cellcell_intra	M04	M05	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Mast	Fibroblast
+wang_style_cellcell_intra	M04	M06	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Mural	Fibroblast
+wang_style_cellcell_intra	M04	M07	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Myeloid	Fibroblast
+wang_style_cellcell_intra	M04	M08	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Plasma	Fibroblast
+wang_style_cellcell_intra	M04	M09	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	T_NK	Fibroblast
+wang_style_cellcell_intra	M05	M01	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	B	Mast
+wang_style_cellcell_intra	M05	M02	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Endothelial	Mast
+wang_style_cellcell_intra	M05	M03	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Epithelial	Mast
+wang_style_cellcell_intra	M05	M04	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Fibroblast	Mast
+wang_style_cellcell_intra	M05	M06	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Mural	Mast
+wang_style_cellcell_intra	M05	M07	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Myeloid	Mast
+wang_style_cellcell_intra	M05	M08	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Plasma	Mast
+wang_style_cellcell_intra	M05	M09	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	T_NK	Mast
+wang_style_cellcell_intra	M06	M01	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	B	Mural
+wang_style_cellcell_intra	M06	M02	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Endothelial	Mural
+wang_style_cellcell_intra	M06	M03	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Epithelial	Mural
+wang_style_cellcell_intra	M06	M04	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Fibroblast	Mural
+wang_style_cellcell_intra	M06	M05	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Mast	Mural
+wang_style_cellcell_intra	M06	M07	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Myeloid	Mural
+wang_style_cellcell_intra	M06	M08	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Plasma	Mural
+wang_style_cellcell_intra	M06	M09	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	T_NK	Mural
+wang_style_cellcell_intra	M07	M01	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	B	Myeloid
+wang_style_cellcell_intra	M07	M02	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Endothelial	Myeloid
+wang_style_cellcell_intra	M07	M03	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Epithelial	Myeloid
+wang_style_cellcell_intra	M07	M04	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Fibroblast	Myeloid
+wang_style_cellcell_intra	M07	M05	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Mast	Myeloid
+wang_style_cellcell_intra	M07	M06	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Mural	Myeloid
+wang_style_cellcell_intra	M07	M08	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Plasma	Myeloid
+wang_style_cellcell_intra	M07	M09	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	T_NK	Myeloid
+wang_style_cellcell_intra	M08	M01	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	B	Plasma
+wang_style_cellcell_intra	M08	M02	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Endothelial	Plasma
+wang_style_cellcell_intra	M08	M03	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Epithelial	Plasma
+wang_style_cellcell_intra	M08	M04	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Fibroblast	Plasma
+wang_style_cellcell_intra	M08	M05	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Mast	Plasma
+wang_style_cellcell_intra	M08	M06	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Mural	Plasma
+wang_style_cellcell_intra	M08	M07	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Myeloid	Plasma
+wang_style_cellcell_intra	M08	M09	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	T_NK	Plasma
+wang_style_cellcell_intra	M09	M01	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	B	T_NK
+wang_style_cellcell_intra	M09	M02	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Endothelial	T_NK
+wang_style_cellcell_intra	M09	M03	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Epithelial	T_NK
+wang_style_cellcell_intra	M09	M04	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Fibroblast	T_NK
+wang_style_cellcell_intra	M09	M05	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Mast	T_NK
+wang_style_cellcell_intra	M09	M06	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Mural	T_NK
+wang_style_cellcell_intra	M09	M07	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Myeloid	T_NK
+wang_style_cellcell_intra	M09	M08	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Plasma	T_NK
+mp10_technical_baseline	MP10	epi_fraction_gate	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	historical c2l mean fraction	EpiMP10 raw Top20 AUCell
+mp10_technical_baseline	MP10	log1p_nCount	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	raw X row sum over all frozen features	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	epi_fraction_gate	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	historical c2l mean fraction	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	log1p_nCount	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	raw X row sum over all frozen features	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F01	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Arterial EC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F02	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	C1QC TAM	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F03	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	CD4 Helper/Conventional	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F04	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	CD4 Naive/Memory-like	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F05	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	CD8 Exhausted	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F06	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	CD8 GZMK/Effector-memory-like	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F07	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Capillary EC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F08	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Classical Mono	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F10	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	GC B	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F11	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	LAMP3 DC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F12	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Lymphatic EC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F13	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Mast	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F14	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Matrix_CAF	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F15	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	NK	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F16	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Naive/Memory B	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F17	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Neutrophil	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F18	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Pericyte	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F19	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Plasma	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F20	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	SMC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F21	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	SPP1 TAM	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F22	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Tfh/CXCL13-like	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F23	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Treg	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F24	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	Venous EC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F25	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	cDC1	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F26	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	cDC2	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F27	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	iCAF	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F28	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	pDC	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F29	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	rCAF	EpiMP10 raw Top20 AUCell
+mp10_target_extension	MP10	F30	True	True	PASS	GSE285715_T3	GSE285715	GSE285715	NA	GSE285715_T3	vCAF	EpiMP10 raw Top20 AUCell

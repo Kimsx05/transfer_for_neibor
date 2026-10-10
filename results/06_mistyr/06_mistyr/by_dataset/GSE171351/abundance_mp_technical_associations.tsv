@@ -1,0 +1,454 @@
+scope	target	predictor	n	spearman_rho	meaning	section_id	dataset	cohort	patient_uid	specimen	predictor_label	target_label
+A_all_tissue	M01	M02	768	0.760208067716925	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Endothelial	B
+A_all_tissue	M01	M03	768	0.635078659190978	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Epithelial	B
+A_all_tissue	M01	M04	768	0.445428967673353	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Fibroblast	B
+A_all_tissue	M01	M05	768	0.385199113759552	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Mast	B
+A_all_tissue	M01	M06	768	0.421813222992321	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Mural	B
+A_all_tissue	M01	M07	768	0.779035802901888	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Myeloid	B
+A_all_tissue	M01	M08	768	0.381364462304793	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Plasma	B
+A_all_tissue	M01	M09	768	0.754818845017912	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	T_NK	B
+A_all_tissue	M01	log1p_nCount	768	0.876994148415369	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	raw X row sum over all frozen features	B
+A_all_tissue	M01	epi_fraction_gate	768	0.385670044233609	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	historical c2l mean fraction	B
+A_all_tissue	M02	M01	768	0.760208067716925	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	B	Endothelial
+A_all_tissue	M02	M03	768	0.678615581496483	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Epithelial	Endothelial
+A_all_tissue	M02	M04	768	0.533160689732343	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Fibroblast	Endothelial
+A_all_tissue	M02	M05	768	0.459302965677839	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Mast	Endothelial
+A_all_tissue	M02	M06	768	0.5951280882146	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Mural	Endothelial
+A_all_tissue	M02	M07	768	0.85935126406566	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Myeloid	Endothelial
+A_all_tissue	M02	M08	768	0.168358637887977	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Plasma	Endothelial
+A_all_tissue	M02	M09	768	0.649158227341084	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	T_NK	Endothelial
+A_all_tissue	M02	log1p_nCount	768	0.886731407060302	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	raw X row sum over all frozen features	Endothelial
+A_all_tissue	M02	epi_fraction_gate	768	0.409780349359045	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	historical c2l mean fraction	Endothelial
+A_all_tissue	M03	M01	768	0.635078659190978	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	B	Epithelial
+A_all_tissue	M03	M02	768	0.678615581496483	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Endothelial	Epithelial
+A_all_tissue	M03	M04	768	0.48729099662102	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Fibroblast	Epithelial
+A_all_tissue	M03	M05	768	0.0957009295585286	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Mast	Epithelial
+A_all_tissue	M03	M06	768	0.128658910173052	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Mural	Epithelial
+A_all_tissue	M03	M07	768	0.791140387667148	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Myeloid	Epithelial
+A_all_tissue	M03	M08	768	0.331457408620891	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Plasma	Epithelial
+A_all_tissue	M03	M09	768	0.675216256614272	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	T_NK	Epithelial
+A_all_tissue	M03	log1p_nCount	768	0.776006334634887	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	raw X row sum over all frozen features	Epithelial
+A_all_tissue	M03	epi_fraction_gate	768	0.895874668120775	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	historical c2l mean fraction	Epithelial
+A_all_tissue	M04	M01	768	0.445428967673353	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	B	Fibroblast
+A_all_tissue	M04	M02	768	0.533160689732343	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Endothelial	Fibroblast
+A_all_tissue	M04	M03	768	0.48729099662102	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Epithelial	Fibroblast
+A_all_tissue	M04	M05	768	0.236382011001606	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Mast	Fibroblast
+A_all_tissue	M04	M06	768	0.2288626471416	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Mural	Fibroblast
+A_all_tissue	M04	M07	768	0.535885712747723	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Myeloid	Fibroblast
+A_all_tissue	M04	M08	768	0.432464803000222	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Plasma	Fibroblast
+A_all_tissue	M04	M09	768	0.490743356481521	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	T_NK	Fibroblast
+A_all_tissue	M04	log1p_nCount	768	0.622194094368417	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	raw X row sum over all frozen features	Fibroblast
+A_all_tissue	M04	epi_fraction_gate	768	0.238806970480975	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	historical c2l mean fraction	Fibroblast
+A_all_tissue	M05	M01	768	0.385199113759552	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	B	Mast
+A_all_tissue	M05	M02	768	0.459302965677839	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Endothelial	Mast
+A_all_tissue	M05	M03	768	0.0957009295585286	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Epithelial	Mast
+A_all_tissue	M05	M04	768	0.236382011001606	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Fibroblast	Mast
+A_all_tissue	M05	M06	768	0.657775510619288	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Mural	Mast
+A_all_tissue	M05	M07	768	0.378698752634265	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Myeloid	Mast
+A_all_tissue	M05	M08	768	-0.0128782808571385	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Plasma	Mast
+A_all_tissue	M05	M09	768	0.211612874752256	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	T_NK	Mast
+A_all_tissue	M05	log1p_nCount	768	0.374128384704279	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	raw X row sum over all frozen features	Mast
+A_all_tissue	M05	epi_fraction_gate	768	-0.125908985619415	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	historical c2l mean fraction	Mast
+A_all_tissue	M06	M01	768	0.421813222992321	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	B	Mural
+A_all_tissue	M06	M02	768	0.5951280882146	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Endothelial	Mural
+A_all_tissue	M06	M03	768	0.128658910173052	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Epithelial	Mural
+A_all_tissue	M06	M04	768	0.2288626471416	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Fibroblast	Mural
+A_all_tissue	M06	M05	768	0.657775510619288	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Mast	Mural
+A_all_tissue	M06	M07	768	0.497759232430746	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Myeloid	Mural
+A_all_tissue	M06	M08	768	-0.150384734064287	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Plasma	Mural
+A_all_tissue	M06	M09	768	0.216071521668365	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	T_NK	Mural
+A_all_tissue	M06	log1p_nCount	768	0.441911592446191	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	raw X row sum over all frozen features	Mural
+A_all_tissue	M06	epi_fraction_gate	768	-0.160326752686823	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	historical c2l mean fraction	Mural
+A_all_tissue	M07	M01	768	0.779035802901888	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	B	Myeloid
+A_all_tissue	M07	M02	768	0.85935126406566	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Endothelial	Myeloid
+A_all_tissue	M07	M03	768	0.791140387667148	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Epithelial	Myeloid
+A_all_tissue	M07	M04	768	0.535885712747723	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Fibroblast	Myeloid
+A_all_tissue	M07	M05	768	0.378698752634265	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Mast	Myeloid
+A_all_tissue	M07	M06	768	0.497759232430746	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Mural	Myeloid
+A_all_tissue	M07	M08	768	0.232029725443057	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Plasma	Myeloid
+A_all_tissue	M07	M09	768	0.730258669761946	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	T_NK	Myeloid
+A_all_tissue	M07	log1p_nCount	768	0.890644353541175	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	raw X row sum over all frozen features	Myeloid
+A_all_tissue	M07	epi_fraction_gate	768	0.546705801994836	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	historical c2l mean fraction	Myeloid
+A_all_tissue	M08	M01	768	0.381364462304793	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	B	Plasma
+A_all_tissue	M08	M02	768	0.168358637887977	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Endothelial	Plasma
+A_all_tissue	M08	M03	768	0.331457408620891	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Epithelial	Plasma
+A_all_tissue	M08	M04	768	0.432464803000222	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Fibroblast	Plasma
+A_all_tissue	M08	M05	768	-0.0128782808571385	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Mast	Plasma
+A_all_tissue	M08	M06	768	-0.150384734064287	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Mural	Plasma
+A_all_tissue	M08	M07	768	0.232029725443057	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Myeloid	Plasma
+A_all_tissue	M08	M09	768	0.483619211822869	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	T_NK	Plasma
+A_all_tissue	M08	log1p_nCount	768	0.318971253114704	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	raw X row sum over all frozen features	Plasma
+A_all_tissue	M08	epi_fraction_gate	768	0.197046613984195	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	historical c2l mean fraction	Plasma
+A_all_tissue	M09	M01	768	0.754818845017912	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	B	T_NK
+A_all_tissue	M09	M02	768	0.649158227341084	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Endothelial	T_NK
+A_all_tissue	M09	M03	768	0.675216256614272	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Epithelial	T_NK
+A_all_tissue	M09	M04	768	0.490743356481521	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Fibroblast	T_NK
+A_all_tissue	M09	M05	768	0.211612874752256	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Mast	T_NK
+A_all_tissue	M09	M06	768	0.216071521668365	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Mural	T_NK
+A_all_tissue	M09	M07	768	0.730258669761946	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Myeloid	T_NK
+A_all_tissue	M09	M08	768	0.483619211822869	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Plasma	T_NK
+A_all_tissue	M09	log1p_nCount	768	0.782248727825841	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	raw X row sum over all frozen features	T_NK
+A_all_tissue	M09	epi_fraction_gate	768	0.44430209359418	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	historical c2l mean fraction	T_NK
+B_legacy_eligible_complete_cases	MP10	epi_fraction_gate	488	-0.0615210005678805	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	historical c2l mean fraction	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	log1p_nCount	488	-0.157839390219489	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	raw X row sum over all frozen features	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F01	488	-0.176800574393969	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Arterial EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F02	488	0.062218019234466	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	C1QC TAM	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F03	488	-0.180114775052928	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	CD4 Helper/Conventional	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F04	488	-0.153808992651718	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	CD4 Naive/Memory-like	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F05	488	-0.114956357022327	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	CD8 Exhausted	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F06	488	-0.174040119790551	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	CD8 GZMK/Effector-memory-like	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F07	488	-0.0393197974427335	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Capillary EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F08	488	-0.152101203817248	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Classical Mono	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F10	488	-0.171944046663259	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	GC B	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F11	488	-0.182842902803674	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	LAMP3 DC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F12	488	-0.192335566714312	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Lymphatic EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F13	488	-0.132130398357617	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Mast	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F14	488	-0.19307494648864	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Matrix_CAF	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F15	488	-0.169082732279502	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	NK	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F16	488	0.0545899164630186	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Naive/Memory B	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F17	488	-0.164243169681075	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Neutrophil	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F18	488	-0.205374563947581	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Pericyte	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F19	488	-0.0227841209325394	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Plasma	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F20	488	-0.0373831862143056	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	SMC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F21	488	-0.180801914633337	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	SPP1 TAM	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F22	488	-0.0386839153199224	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Tfh/CXCL13-like	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F23	488	-0.175879802183925	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Treg	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F24	488	-0.188780750825541	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	Venous EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F25	488	-0.16682166289617	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	cDC1	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F26	488	-0.14857897339597	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	cDC2	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F27	488	-0.0287514510440437	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	iCAF	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F28	488	-0.116237172786697	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	pDC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F29	488	-0.0937243388017863	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	rCAF	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F30	488	-0.0070856323221191	marginal association; separate from importance; no causal sign	GSE171351_A1	GSE171351	GSE171351	NA	GSE171351_A1	vCAF	EpiMP10 raw Top20 AUCell
+A_all_tissue	M01	M02	1017	0.767730864187728	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Endothelial	B
+A_all_tissue	M01	M03	1017	0.923954287256941	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Epithelial	B
+A_all_tissue	M01	M04	1017	0.13650135253861	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Fibroblast	B
+A_all_tissue	M01	M05	1017	0.727635540550216	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Mast	B
+A_all_tissue	M01	M06	1017	0.096310941186075	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Mural	B
+A_all_tissue	M01	M07	1017	0.620070320873295	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Myeloid	B
+A_all_tissue	M01	M08	1017	-0.332055336190231	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Plasma	B
+A_all_tissue	M01	M09	1017	0.219514536316251	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	T_NK	B
+A_all_tissue	M01	log1p_nCount	1017	0.824468309023546	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	raw X row sum over all frozen features	B
+A_all_tissue	M01	epi_fraction_gate	1017	0.5196178676285	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	historical c2l mean fraction	B
+A_all_tissue	M02	M01	1017	0.767730864187728	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	B	Endothelial
+A_all_tissue	M02	M03	1017	0.706470270092918	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Epithelial	Endothelial
+A_all_tissue	M02	M04	1017	0.341400969801146	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Fibroblast	Endothelial
+A_all_tissue	M02	M05	1017	0.518368539402957	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Mast	Endothelial
+A_all_tissue	M02	M06	1017	0.418007397744371	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Mural	Endothelial
+A_all_tissue	M02	M07	1017	0.635552791261942	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Myeloid	Endothelial
+A_all_tissue	M02	M08	1017	-0.0858071882616286	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Plasma	Endothelial
+A_all_tissue	M02	M09	1017	0.291973816528145	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	T_NK	Endothelial
+A_all_tissue	M02	log1p_nCount	1017	0.82712763948868	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	raw X row sum over all frozen features	Endothelial
+A_all_tissue	M02	epi_fraction_gate	1017	0.180556797152794	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	historical c2l mean fraction	Endothelial
+A_all_tissue	M03	M01	1017	0.923954287256941	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	B	Epithelial
+A_all_tissue	M03	M02	1017	0.706470270092918	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Endothelial	Epithelial
+A_all_tissue	M03	M04	1017	0.153255728067981	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Fibroblast	Epithelial
+A_all_tissue	M03	M05	1017	0.802882425221127	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Mast	Epithelial
+A_all_tissue	M03	M06	1017	-0.0352350579723617	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Mural	Epithelial
+A_all_tissue	M03	M07	1017	0.506577229226808	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Myeloid	Epithelial
+A_all_tissue	M03	M08	1017	-0.478298781640594	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Plasma	Epithelial
+A_all_tissue	M03	M09	1017	0.153139843123866	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	T_NK	Epithelial
+A_all_tissue	M03	log1p_nCount	1017	0.784281229997786	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	raw X row sum over all frozen features	Epithelial
+A_all_tissue	M03	epi_fraction_gate	1017	0.700480200376226	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	historical c2l mean fraction	Epithelial
+A_all_tissue	M04	M01	1017	0.13650135253861	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	B	Fibroblast
+A_all_tissue	M04	M02	1017	0.341400969801146	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Endothelial	Fibroblast
+A_all_tissue	M04	M03	1017	0.153255728067981	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Epithelial	Fibroblast
+A_all_tissue	M04	M05	1017	0.0857103893099824	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Mast	Fibroblast
+A_all_tissue	M04	M06	1017	0.365409163293363	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Mural	Fibroblast
+A_all_tissue	M04	M07	1017	0.332894960143474	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Myeloid	Fibroblast
+A_all_tissue	M04	M08	1017	0.320053190253873	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Plasma	Fibroblast
+A_all_tissue	M04	M09	1017	0.343984070075459	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	T_NK	Fibroblast
+A_all_tissue	M04	log1p_nCount	1017	0.394822000454553	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	raw X row sum over all frozen features	Fibroblast
+A_all_tissue	M04	epi_fraction_gate	1017	-0.207566636580845	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	historical c2l mean fraction	Fibroblast
+A_all_tissue	M05	M01	1017	0.727635540550216	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	B	Mast
+A_all_tissue	M05	M02	1017	0.518368539402957	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Endothelial	Mast
+A_all_tissue	M05	M03	1017	0.802882425221127	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Epithelial	Mast
+A_all_tissue	M05	M04	1017	0.0857103893099824	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Fibroblast	Mast
+A_all_tissue	M05	M06	1017	-0.0943922456430432	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Mural	Mast
+A_all_tissue	M05	M07	1017	0.344414651434562	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Myeloid	Mast
+A_all_tissue	M05	M08	1017	-0.450002206354419	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Plasma	Mast
+A_all_tissue	M05	M09	1017	0.0941888936909991	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	T_NK	Mast
+A_all_tissue	M05	log1p_nCount	1017	0.574813454081553	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	raw X row sum over all frozen features	Mast
+A_all_tissue	M05	epi_fraction_gate	1017	0.597410125510308	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	historical c2l mean fraction	Mast
+A_all_tissue	M06	M01	1017	0.096310941186075	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	B	Mural
+A_all_tissue	M06	M02	1017	0.418007397744371	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Endothelial	Mural
+A_all_tissue	M06	M03	1017	-0.0352350579723617	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Epithelial	Mural
+A_all_tissue	M06	M04	1017	0.365409163293363	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Fibroblast	Mural
+A_all_tissue	M06	M05	1017	-0.0943922456430432	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Mast	Mural
+A_all_tissue	M06	M07	1017	0.418667056646085	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Myeloid	Mural
+A_all_tissue	M06	M08	1017	0.468715160648384	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Plasma	Mural
+A_all_tissue	M06	M09	1017	0.329452807676124	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	T_NK	Mural
+A_all_tissue	M06	log1p_nCount	1017	0.330045412346357	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	raw X row sum over all frozen features	Mural
+A_all_tissue	M06	epi_fraction_gate	1017	-0.492932387398234	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	historical c2l mean fraction	Mural
+A_all_tissue	M07	M01	1017	0.620070320873295	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	B	Myeloid
+A_all_tissue	M07	M02	1017	0.635552791261942	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Endothelial	Myeloid
+A_all_tissue	M07	M03	1017	0.506577229226808	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Epithelial	Myeloid
+A_all_tissue	M07	M04	1017	0.332894960143474	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Fibroblast	Myeloid
+A_all_tissue	M07	M05	1017	0.344414651434562	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Mast	Myeloid
+A_all_tissue	M07	M06	1017	0.418667056646085	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Mural	Myeloid
+A_all_tissue	M07	M08	1017	0.205501173976773	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Plasma	Myeloid
+A_all_tissue	M07	M09	1017	0.655626532326834	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	T_NK	Myeloid
+A_all_tissue	M07	log1p_nCount	1017	0.808423153682145	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	raw X row sum over all frozen features	Myeloid
+A_all_tissue	M07	epi_fraction_gate	1017	-0.134022341083958	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	historical c2l mean fraction	Myeloid
+A_all_tissue	M08	M01	1017	-0.332055336190231	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	B	Plasma
+A_all_tissue	M08	M02	1017	-0.0858071882616286	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Endothelial	Plasma
+A_all_tissue	M08	M03	1017	-0.478298781640594	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Epithelial	Plasma
+A_all_tissue	M08	M04	1017	0.320053190253873	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Fibroblast	Plasma
+A_all_tissue	M08	M05	1017	-0.450002206354419	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Mast	Plasma
+A_all_tissue	M08	M06	1017	0.468715160648384	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Mural	Plasma
+A_all_tissue	M08	M07	1017	0.205501173976773	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Myeloid	Plasma
+A_all_tissue	M08	M09	1017	0.382850132588895	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	T_NK	Plasma
+A_all_tissue	M08	log1p_nCount	1017	-0.0612105417025108	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	raw X row sum over all frozen features	Plasma
+A_all_tissue	M08	epi_fraction_gate	1017	-0.791308168298251	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	historical c2l mean fraction	Plasma
+A_all_tissue	M09	M01	1017	0.219514536316251	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	B	T_NK
+A_all_tissue	M09	M02	1017	0.291973816528145	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Endothelial	T_NK
+A_all_tissue	M09	M03	1017	0.153139843123866	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Epithelial	T_NK
+A_all_tissue	M09	M04	1017	0.343984070075459	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Fibroblast	T_NK
+A_all_tissue	M09	M05	1017	0.0941888936909991	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Mast	T_NK
+A_all_tissue	M09	M06	1017	0.329452807676124	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Mural	T_NK
+A_all_tissue	M09	M07	1017	0.655626532326834	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Myeloid	T_NK
+A_all_tissue	M09	M08	1017	0.382850132588895	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Plasma	T_NK
+A_all_tissue	M09	log1p_nCount	1017	0.469709842000595	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	raw X row sum over all frozen features	T_NK
+A_all_tissue	M09	epi_fraction_gate	1017	-0.354330161065698	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	historical c2l mean fraction	T_NK
+B_legacy_eligible_complete_cases	MP10	epi_fraction_gate	959	0.0121936072956461	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	historical c2l mean fraction	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	log1p_nCount	959	0.0502025630587426	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	raw X row sum over all frozen features	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F01	959	0.0188047358749328	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Arterial EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F02	959	-0.0097232566378181	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	C1QC TAM	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F03	959	0.0177590057003157	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	CD4 Helper/Conventional	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F04	959	0.0832335905516512	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	CD4 Naive/Memory-like	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F05	959	0.0270872988437988	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	CD8 Exhausted	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F06	959	0.0294518876672518	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	CD8 GZMK/Effector-memory-like	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F07	959	-0.007289802175202	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Capillary EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F08	959	0.0045827565048234	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Classical Mono	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F10	959	0.0585164673583561	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	GC B	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F11	959	0.0789829406331638	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	LAMP3 DC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F12	959	0.0676511337333857	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Lymphatic EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F13	959	0.0379125826357595	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Mast	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F14	959	0.0054092054189272	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Matrix_CAF	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F15	959	0.0296299788374632	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	NK	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F16	959	0.0608664936849899	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Naive/Memory B	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F17	959	0.0249125736763036	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Neutrophil	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F18	959	0.0074681179072803	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Pericyte	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F19	959	0.0337051983036159	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Plasma	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F20	959	-0.0334237338207041	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	SMC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F21	959	0.0140626629329465	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	SPP1 TAM	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F22	959	0.080560705504652	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Tfh/CXCL13-like	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F23	959	-0.00038884588469	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Treg	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F24	959	0.0657743273092269	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	Venous EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F25	959	0.050587881940675	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	cDC1	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F26	959	0.0055790898736416	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	cDC2	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F27	959	0.0558850718174811	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	iCAF	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F28	959	0.0460859813177228	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	pDC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F29	959	0.015800281829097	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	rCAF	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F30	959	0.0142132895063533	marginal association; separate from importance; no causal sign	GSE171351_B1	GSE171351	GSE171351	NA	GSE171351_B1	vCAF	EpiMP10 raw Top20 AUCell
+A_all_tissue	M01	M02	1469	0.898540297513418	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Endothelial	B
+A_all_tissue	M01	M03	1469	0.907337173104301	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Epithelial	B
+A_all_tissue	M01	M04	1469	0.813855245709519	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Fibroblast	B
+A_all_tissue	M01	M05	1469	0.752116765448285	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Mast	B
+A_all_tissue	M01	M06	1469	0.773982534067895	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Mural	B
+A_all_tissue	M01	M07	1469	0.873758299902559	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Myeloid	B
+A_all_tissue	M01	M08	1469	0.199739194724675	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Plasma	B
+A_all_tissue	M01	M09	1469	0.839946686657814	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	T_NK	B
+A_all_tissue	M01	log1p_nCount	1469	0.917881830671016	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	raw X row sum over all frozen features	B
+A_all_tissue	M01	epi_fraction_gate	1469	0.397993956700729	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	historical c2l mean fraction	B
+A_all_tissue	M02	M01	1469	0.898540297513418	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	B	Endothelial
+A_all_tissue	M02	M03	1469	0.929049919205519	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Epithelial	Endothelial
+A_all_tissue	M02	M04	1469	0.811441688725987	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Fibroblast	Endothelial
+A_all_tissue	M02	M05	1469	0.769205456011383	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Mast	Endothelial
+A_all_tissue	M02	M06	1469	0.767221848999132	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Mural	Endothelial
+A_all_tissue	M02	M07	1469	0.872366485448949	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Myeloid	Endothelial
+A_all_tissue	M02	M08	1469	0.191059974311265	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Plasma	Endothelial
+A_all_tissue	M02	M09	1469	0.859560877156994	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	T_NK	Endothelial
+A_all_tissue	M02	log1p_nCount	1469	0.92141057789099	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	raw X row sum over all frozen features	Endothelial
+A_all_tissue	M02	epi_fraction_gate	1469	0.416264275310011	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	historical c2l mean fraction	Endothelial
+A_all_tissue	M03	M01	1469	0.907337173104301	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	B	Epithelial
+A_all_tissue	M03	M02	1469	0.929049919205519	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Endothelial	Epithelial
+A_all_tissue	M03	M04	1469	0.821587031727681	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Fibroblast	Epithelial
+A_all_tissue	M03	M05	1469	0.808970608236877	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Mast	Epithelial
+A_all_tissue	M03	M06	1469	0.72001345950095	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Mural	Epithelial
+A_all_tissue	M03	M07	1469	0.908978463019325	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Myeloid	Epithelial
+A_all_tissue	M03	M08	1469	0.186127617615714	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Plasma	Epithelial
+A_all_tissue	M03	M09	1469	0.883348190543925	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	T_NK	Epithelial
+A_all_tissue	M03	log1p_nCount	1469	0.946099857803822	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	raw X row sum over all frozen features	Epithelial
+A_all_tissue	M03	epi_fraction_gate	1469	0.608589596399322	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	historical c2l mean fraction	Epithelial
+A_all_tissue	M04	M01	1469	0.813855245709519	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	B	Fibroblast
+A_all_tissue	M04	M02	1469	0.811441688725987	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Endothelial	Fibroblast
+A_all_tissue	M04	M03	1469	0.821587031727681	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Epithelial	Fibroblast
+A_all_tissue	M04	M05	1469	0.685035390242816	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Mast	Fibroblast
+A_all_tissue	M04	M06	1469	0.689198792127517	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Mural	Fibroblast
+A_all_tissue	M04	M07	1469	0.80103654358986	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Myeloid	Fibroblast
+A_all_tissue	M04	M08	1469	0.227066910292366	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Plasma	Fibroblast
+A_all_tissue	M04	M09	1469	0.784632544002775	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	T_NK	Fibroblast
+A_all_tissue	M04	log1p_nCount	1469	0.895734544133365	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	raw X row sum over all frozen features	Fibroblast
+A_all_tissue	M04	epi_fraction_gate	1469	0.244595922925014	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	historical c2l mean fraction	Fibroblast
+A_all_tissue	M05	M01	1469	0.752116765448285	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	B	Mast
+A_all_tissue	M05	M02	1469	0.769205456011383	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Endothelial	Mast
+A_all_tissue	M05	M03	1469	0.808970608236877	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Epithelial	Mast
+A_all_tissue	M05	M04	1469	0.685035390242816	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Fibroblast	Mast
+A_all_tissue	M05	M06	1469	0.628875573318678	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Mural	Mast
+A_all_tissue	M05	M07	1469	0.756433186065942	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Myeloid	Mast
+A_all_tissue	M05	M08	1469	0.116506834777434	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Plasma	Mast
+A_all_tissue	M05	M09	1469	0.758272492207394	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	T_NK	Mast
+A_all_tissue	M05	log1p_nCount	1469	0.785877684405334	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	raw X row sum over all frozen features	Mast
+A_all_tissue	M05	epi_fraction_gate	1469	0.413750582152943	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	historical c2l mean fraction	Mast
+A_all_tissue	M06	M01	1469	0.773982534067895	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	B	Mural
+A_all_tissue	M06	M02	1469	0.767221848999132	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Endothelial	Mural
+A_all_tissue	M06	M03	1469	0.72001345950095	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Epithelial	Mural
+A_all_tissue	M06	M04	1469	0.689198792127517	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Fibroblast	Mural
+A_all_tissue	M06	M05	1469	0.628875573318678	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Mast	Mural
+A_all_tissue	M06	M07	1469	0.695136379275382	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Myeloid	Mural
+A_all_tissue	M06	M08	1469	0.182142441691111	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Plasma	Mural
+A_all_tissue	M06	M09	1469	0.693633961914034	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	T_NK	Mural
+A_all_tissue	M06	log1p_nCount	1469	0.751966623871036	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	raw X row sum over all frozen features	Mural
+A_all_tissue	M06	epi_fraction_gate	1469	0.208080621638461	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	historical c2l mean fraction	Mural
+A_all_tissue	M07	M01	1469	0.873758299902559	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	B	Myeloid
+A_all_tissue	M07	M02	1469	0.872366485448949	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Endothelial	Myeloid
+A_all_tissue	M07	M03	1469	0.908978463019325	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Epithelial	Myeloid
+A_all_tissue	M07	M04	1469	0.80103654358986	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Fibroblast	Myeloid
+A_all_tissue	M07	M05	1469	0.756433186065942	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Mast	Myeloid
+A_all_tissue	M07	M06	1469	0.695136379275382	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Mural	Myeloid
+A_all_tissue	M07	M08	1469	0.191548927894119	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Plasma	Myeloid
+A_all_tissue	M07	M09	1469	0.835014481379756	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	T_NK	Myeloid
+A_all_tissue	M07	log1p_nCount	1469	0.929107152645209	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	raw X row sum over all frozen features	Myeloid
+A_all_tissue	M07	epi_fraction_gate	1469	0.409383709226629	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	historical c2l mean fraction	Myeloid
+A_all_tissue	M08	M01	1469	0.199739194724675	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	B	Plasma
+A_all_tissue	M08	M02	1469	0.191059974311265	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Endothelial	Plasma
+A_all_tissue	M08	M03	1469	0.186127617615714	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Epithelial	Plasma
+A_all_tissue	M08	M04	1469	0.227066910292366	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Fibroblast	Plasma
+A_all_tissue	M08	M05	1469	0.116506834777434	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Mast	Plasma
+A_all_tissue	M08	M06	1469	0.182142441691111	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Mural	Plasma
+A_all_tissue	M08	M07	1469	0.191548927894119	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Myeloid	Plasma
+A_all_tissue	M08	M09	1469	0.213478219937467	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	T_NK	Plasma
+A_all_tissue	M08	log1p_nCount	1469	0.201176824459865	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	raw X row sum over all frozen features	Plasma
+A_all_tissue	M08	epi_fraction_gate	1469	-0.0605393748509248	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	historical c2l mean fraction	Plasma
+A_all_tissue	M09	M01	1469	0.839946686657814	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	B	T_NK
+A_all_tissue	M09	M02	1469	0.859560877156994	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Endothelial	T_NK
+A_all_tissue	M09	M03	1469	0.883348190543925	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Epithelial	T_NK
+A_all_tissue	M09	M04	1469	0.784632544002775	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Fibroblast	T_NK
+A_all_tissue	M09	M05	1469	0.758272492207394	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Mast	T_NK
+A_all_tissue	M09	M06	1469	0.693633961914034	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Mural	T_NK
+A_all_tissue	M09	M07	1469	0.835014481379756	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Myeloid	T_NK
+A_all_tissue	M09	M08	1469	0.213478219937467	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Plasma	T_NK
+A_all_tissue	M09	log1p_nCount	1469	0.87834846953238	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	raw X row sum over all frozen features	T_NK
+A_all_tissue	M09	epi_fraction_gate	1469	0.366468740028922	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	historical c2l mean fraction	T_NK
+B_legacy_eligible_complete_cases	MP10	epi_fraction_gate	1465	0.135927228075035	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	historical c2l mean fraction	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	log1p_nCount	1465	0.0758894530919089	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	raw X row sum over all frozen features	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F01	1465	0.030669802041555	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Arterial EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F02	1465	-0.0039233370285498	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	C1QC TAM	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F03	1465	0.0781843650024259	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	CD4 Helper/Conventional	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F04	1465	0.0664992417560162	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	CD4 Naive/Memory-like	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F05	1465	0.0747344812320112	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	CD8 Exhausted	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F06	1465	0.0820347409352414	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	CD8 GZMK/Effector-memory-like	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F07	1465	0.0037451038817412	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Capillary EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F08	1465	0.0435429102513827	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Classical Mono	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F10	1465	0.0585251004766674	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	GC B	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F11	1465	0.072887306522972	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	LAMP3 DC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F12	1465	0.0696950230760639	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Lymphatic EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F13	1465	0.0635015797416021	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Mast	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F14	1465	-0.0853299607012418	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Matrix_CAF	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F15	1465	0.0795358340300788	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	NK	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F16	1465	0.0349680812977934	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Naive/Memory B	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F17	1465	0.145119075743961	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Neutrophil	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F18	1465	-0.0047225867251216	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Pericyte	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F19	1465	-0.0616506800743695	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Plasma	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F20	1465	0.0013874190724303	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	SMC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F21	1465	0.0254891637718669	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	SPP1 TAM	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F22	1465	0.0694174030105456	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Tfh/CXCL13-like	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F23	1465	0.0672544121482836	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Treg	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F24	1465	0.0494361337867789	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	Venous EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F25	1465	0.0588541429030656	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	cDC1	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F26	1465	0.0456320717552716	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	cDC2	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F27	1465	0.0490218982079288	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	iCAF	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F28	1465	0.081649858484942	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	pDC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F29	1465	0.0443174668374445	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	rCAF	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F30	1465	0.0813239055602421	marginal association; separate from importance; no causal sign	GSE171351_C1	GSE171351	GSE171351	NA	GSE171351_C1	vCAF	EpiMP10 raw Top20 AUCell
+A_all_tissue	M01	M02	832	0.612407605363723	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Endothelial	B
+A_all_tissue	M01	M03	832	-0.310291542332012	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Epithelial	B
+A_all_tissue	M01	M04	832	0.762849363572144	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Fibroblast	B
+A_all_tissue	M01	M05	832	0.470757985226859	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Mast	B
+A_all_tissue	M01	M06	832	0.784479655511191	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Mural	B
+A_all_tissue	M01	M07	832	0.623251286073996	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Myeloid	B
+A_all_tissue	M01	M08	832	-0.0810441018951318	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Plasma	B
+A_all_tissue	M01	M09	832	0.654572471865725	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	T_NK	B
+A_all_tissue	M01	log1p_nCount	832	0.837143375152835	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	raw X row sum over all frozen features	B
+A_all_tissue	M01	epi_fraction_gate	832	-0.579561045467896	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	historical c2l mean fraction	B
+A_all_tissue	M02	M01	832	0.612407605363723	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	B	Endothelial
+A_all_tissue	M02	M03	832	-0.322311033549771	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Epithelial	Endothelial
+A_all_tissue	M02	M04	832	0.753171867191753	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Fibroblast	Endothelial
+A_all_tissue	M02	M05	832	0.437566716494985	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Mast	Endothelial
+A_all_tissue	M02	M06	832	0.60410596479636	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Mural	Endothelial
+A_all_tissue	M02	M07	832	0.689741378361953	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Myeloid	Endothelial
+A_all_tissue	M02	M08	832	0.198217665294388	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Plasma	Endothelial
+A_all_tissue	M02	M09	832	0.68042400937048	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	T_NK	Endothelial
+A_all_tissue	M02	log1p_nCount	832	0.795130473758434	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	raw X row sum over all frozen features	Endothelial
+A_all_tissue	M02	epi_fraction_gate	832	-0.590550931563961	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	historical c2l mean fraction	Endothelial
+A_all_tissue	M03	M01	832	-0.310291542332012	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	B	Epithelial
+A_all_tissue	M03	M02	832	-0.322311033549771	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Endothelial	Epithelial
+A_all_tissue	M03	M04	832	-0.176154862111465	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Fibroblast	Epithelial
+A_all_tissue	M03	M05	832	-0.289268928898969	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Mast	Epithelial
+A_all_tissue	M03	M06	832	-0.48034313697709	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Mural	Epithelial
+A_all_tissue	M03	M07	832	-0.210438972867681	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Myeloid	Epithelial
+A_all_tissue	M03	M08	832	0.334162150003017	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Plasma	Epithelial
+A_all_tissue	M03	M09	832	-0.0758776990385157	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	T_NK	Epithelial
+A_all_tissue	M03	log1p_nCount	832	-0.367828215686753	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	raw X row sum over all frozen features	Epithelial
+A_all_tissue	M03	epi_fraction_gate	832	0.903129420332421	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	historical c2l mean fraction	Epithelial
+A_all_tissue	M04	M01	832	0.762849363572144	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	B	Fibroblast
+A_all_tissue	M04	M02	832	0.753171867191753	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Endothelial	Fibroblast
+A_all_tissue	M04	M03	832	-0.176154862111465	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Epithelial	Fibroblast
+A_all_tissue	M04	M05	832	0.475151731061767	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Mast	Fibroblast
+A_all_tissue	M04	M06	832	0.75943563345916	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Mural	Fibroblast
+A_all_tissue	M04	M07	832	0.771257162959602	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Myeloid	Fibroblast
+A_all_tissue	M04	M08	832	0.17527992174376	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Plasma	Fibroblast
+A_all_tissue	M04	M09	832	0.796818331609234	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	T_NK	Fibroblast
+A_all_tissue	M04	log1p_nCount	832	0.914084559264068	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	raw X row sum over all frozen features	Fibroblast
+A_all_tissue	M04	epi_fraction_gate	832	-0.525975073450652	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	historical c2l mean fraction	Fibroblast
+A_all_tissue	M05	M01	832	0.470757985226859	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	B	Mast
+A_all_tissue	M05	M02	832	0.437566716494985	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Endothelial	Mast
+A_all_tissue	M05	M03	832	-0.289268928898969	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Epithelial	Mast
+A_all_tissue	M05	M04	832	0.475151731061767	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Fibroblast	Mast
+A_all_tissue	M05	M06	832	0.49861212188291	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Mural	Mast
+A_all_tissue	M05	M07	832	0.450843653206909	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Myeloid	Mast
+A_all_tissue	M05	M08	832	-0.0059108272578678	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Plasma	Mast
+A_all_tissue	M05	M09	832	0.419281083719242	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	T_NK	Mast
+A_all_tissue	M05	log1p_nCount	832	0.522105121868662	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	raw X row sum over all frozen features	Mast
+A_all_tissue	M05	epi_fraction_gate	832	-0.444932596754336	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	historical c2l mean fraction	Mast
+A_all_tissue	M06	M01	832	0.784479655511191	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	B	Mural
+A_all_tissue	M06	M02	832	0.60410596479636	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Endothelial	Mural
+A_all_tissue	M06	M03	832	-0.48034313697709	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Epithelial	Mural
+A_all_tissue	M06	M04	832	0.75943563345916	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Fibroblast	Mural
+A_all_tissue	M06	M05	832	0.49861212188291	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Mast	Mural
+A_all_tissue	M06	M07	832	0.637908370790693	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Myeloid	Mural
+A_all_tissue	M06	M08	832	-0.21298672204233	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Plasma	Mural
+A_all_tissue	M06	M09	832	0.607989919100103	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	T_NK	Mural
+A_all_tissue	M06	log1p_nCount	832	0.873821080707754	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	raw X row sum over all frozen features	Mural
+A_all_tissue	M06	epi_fraction_gate	832	-0.754169426726536	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	historical c2l mean fraction	Mural
+A_all_tissue	M07	M01	832	0.623251286073996	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	B	Myeloid
+A_all_tissue	M07	M02	832	0.689741378361953	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Endothelial	Myeloid
+A_all_tissue	M07	M03	832	-0.210438972867681	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Epithelial	Myeloid
+A_all_tissue	M07	M04	832	0.771257162959602	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Fibroblast	Myeloid
+A_all_tissue	M07	M05	832	0.450843653206909	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Mast	Myeloid
+A_all_tissue	M07	M06	832	0.637908370790693	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Mural	Myeloid
+A_all_tissue	M07	M08	832	0.173567795626998	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Plasma	Myeloid
+A_all_tissue	M07	M09	832	0.71811197403149	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	T_NK	Myeloid
+A_all_tissue	M07	log1p_nCount	832	0.780899989310179	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	raw X row sum over all frozen features	Myeloid
+A_all_tissue	M07	epi_fraction_gate	832	-0.498744388063473	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	historical c2l mean fraction	Myeloid
+A_all_tissue	M08	M01	832	-0.0810441018951318	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	B	Plasma
+A_all_tissue	M08	M02	832	0.198217665294388	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Endothelial	Plasma
+A_all_tissue	M08	M03	832	0.334162150003017	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Epithelial	Plasma
+A_all_tissue	M08	M04	832	0.17527992174376	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Fibroblast	Plasma
+A_all_tissue	M08	M05	832	-0.0059108272578678	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Mast	Plasma
+A_all_tissue	M08	M06	832	-0.21298672204233	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Mural	Plasma
+A_all_tissue	M08	M07	832	0.173567795626998	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Myeloid	Plasma
+A_all_tissue	M08	M09	832	0.198513826524778	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	T_NK	Plasma
+A_all_tissue	M08	log1p_nCount	832	0.017873545724029	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	raw X row sum over all frozen features	Plasma
+A_all_tissue	M08	epi_fraction_gate	832	0.233796705296948	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	historical c2l mean fraction	Plasma
+A_all_tissue	M09	M01	832	0.654572471865725	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	B	T_NK
+A_all_tissue	M09	M02	832	0.68042400937048	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Endothelial	T_NK
+A_all_tissue	M09	M03	832	-0.0758776990385157	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Epithelial	T_NK
+A_all_tissue	M09	M04	832	0.796818331609234	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Fibroblast	T_NK
+A_all_tissue	M09	M05	832	0.419281083719242	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Mast	T_NK
+A_all_tissue	M09	M06	832	0.607989919100103	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Mural	T_NK
+A_all_tissue	M09	M07	832	0.71811197403149	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Myeloid	T_NK
+A_all_tissue	M09	M08	832	0.198513826524778	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	Plasma	T_NK
+A_all_tissue	M09	log1p_nCount	832	0.751490966668453	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	raw X row sum over all frozen features	T_NK
+A_all_tissue	M09	epi_fraction_gate	832	-0.395092353797948	marginal association; separate from importance; no causal sign	GSE171351_D1	GSE171351	GSE171351	NA	GSE171351_D1	historical c2l mean fraction	T_NK

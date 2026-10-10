@@ -1,0 +1,848 @@
+scope	target	predictor	n	spearman_rho	meaning	section_id	dataset	cohort	patient_uid	specimen	predictor_label	target_label
+A_all_tissue	M01	M02	2076	-0.121866590208312	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Endothelial	B
+A_all_tissue	M01	M03	2076	-0.220246335432596	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Epithelial	B
+A_all_tissue	M01	M04	2076	-0.185991539665359	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Fibroblast	B
+A_all_tissue	M01	M05	2076	-0.130280277295433	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Mast	B
+A_all_tissue	M01	M06	2076	-0.506703678018142	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Mural	B
+A_all_tissue	M01	M07	2076	0.0482993415660186	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Myeloid	B
+A_all_tissue	M01	M08	2076	0.407502567814235	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Plasma	B
+A_all_tissue	M01	M09	2076	0.808105007158247	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	T_NK	B
+A_all_tissue	M01	log1p_nCount	2076	-0.220886852567959	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	raw X row sum over all frozen features	B
+A_all_tissue	M01	epi_fraction_gate	2076	-0.289027288852673	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	historical c2l mean fraction	B
+A_all_tissue	M02	M01	2076	-0.121866590208312	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	B	Endothelial
+A_all_tissue	M02	M03	2076	0.452769770614542	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Epithelial	Endothelial
+A_all_tissue	M02	M04	2076	0.550122659394763	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Fibroblast	Endothelial
+A_all_tissue	M02	M05	2076	0.429519822243044	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Mast	Endothelial
+A_all_tissue	M02	M06	2076	0.123429594432846	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Mural	Endothelial
+A_all_tissue	M02	M07	2076	0.545441669885869	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Myeloid	Endothelial
+A_all_tissue	M02	M08	2076	0.23791257635357	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Plasma	Endothelial
+A_all_tissue	M02	M09	2076	0.0366916704307385	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	T_NK	Endothelial
+A_all_tissue	M02	log1p_nCount	2076	0.417403019051518	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	raw X row sum over all frozen features	Endothelial
+A_all_tissue	M02	epi_fraction_gate	2076	0.438755815310692	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	historical c2l mean fraction	Endothelial
+A_all_tissue	M03	M01	2076	-0.220246335432596	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	B	Epithelial
+A_all_tissue	M03	M02	2076	0.452769770614542	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Endothelial	Epithelial
+A_all_tissue	M03	M04	2076	0.497281629880025	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Fibroblast	Epithelial
+A_all_tissue	M03	M05	2076	0.398618207708562	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Mast	Epithelial
+A_all_tissue	M03	M06	2076	-0.108465344760196	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Mural	Epithelial
+A_all_tissue	M03	M07	2076	0.607685397789935	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Myeloid	Epithelial
+A_all_tissue	M03	M08	2076	-0.0451774399409145	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Plasma	Epithelial
+A_all_tissue	M03	M09	2076	-0.156952116144899	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	T_NK	Epithelial
+A_all_tissue	M03	log1p_nCount	2076	0.330620177787997	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	raw X row sum over all frozen features	Epithelial
+A_all_tissue	M03	epi_fraction_gate	2076	0.987232269377688	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	historical c2l mean fraction	Epithelial
+A_all_tissue	M04	M01	2076	-0.185991539665359	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	B	Fibroblast
+A_all_tissue	M04	M02	2076	0.550122659394763	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Endothelial	Fibroblast
+A_all_tissue	M04	M03	2076	0.497281629880025	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Epithelial	Fibroblast
+A_all_tissue	M04	M05	2076	0.544169467157316	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Mast	Fibroblast
+A_all_tissue	M04	M06	2076	0.0242217210016898	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Mural	Fibroblast
+A_all_tissue	M04	M07	2076	0.524621171196289	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Myeloid	Fibroblast
+A_all_tissue	M04	M08	2076	0.112295660899742	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Plasma	Fibroblast
+A_all_tissue	M04	M09	2076	-0.149659700526861	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	T_NK	Fibroblast
+A_all_tissue	M04	log1p_nCount	2076	0.267164427065624	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	raw X row sum over all frozen features	Fibroblast
+A_all_tissue	M04	epi_fraction_gate	2076	0.491609884144603	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	historical c2l mean fraction	Fibroblast
+A_all_tissue	M05	M01	2076	-0.130280277295433	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	B	Mast
+A_all_tissue	M05	M02	2076	0.429519822243044	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Endothelial	Mast
+A_all_tissue	M05	M03	2076	0.398618207708562	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Epithelial	Mast
+A_all_tissue	M05	M04	2076	0.544169467157316	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Fibroblast	Mast
+A_all_tissue	M05	M06	2076	0.0630695371454118	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Mural	Mast
+A_all_tissue	M05	M07	2076	0.383998559800357	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Myeloid	Mast
+A_all_tissue	M05	M08	2076	0.17473926447374	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Plasma	Mast
+A_all_tissue	M05	M09	2076	-0.0619756171303419	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	T_NK	Mast
+A_all_tissue	M05	log1p_nCount	2076	0.173798776123458	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	raw X row sum over all frozen features	Mast
+A_all_tissue	M05	epi_fraction_gate	2076	0.39337429971248	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	historical c2l mean fraction	Mast
+A_all_tissue	M06	M01	2076	-0.506703678018142	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	B	Mural
+A_all_tissue	M06	M02	2076	0.123429594432846	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Endothelial	Mural
+A_all_tissue	M06	M03	2076	-0.108465344760196	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Epithelial	Mural
+A_all_tissue	M06	M04	2076	0.0242217210016898	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Fibroblast	Mural
+A_all_tissue	M06	M05	2076	0.0630695371454118	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Mast	Mural
+A_all_tissue	M06	M07	2076	-0.180743426951563	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Myeloid	Mural
+A_all_tissue	M06	M08	2076	-0.104448429088441	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Plasma	Mural
+A_all_tissue	M06	M09	2076	-0.397121668871908	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	T_NK	Mural
+A_all_tissue	M06	log1p_nCount	2076	0.0777066003768155	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	raw X row sum over all frozen features	Mural
+A_all_tissue	M06	epi_fraction_gate	2076	-0.0894892002294958	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	historical c2l mean fraction	Mural
+A_all_tissue	M07	M01	2076	0.0482993415660186	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	B	Myeloid
+A_all_tissue	M07	M02	2076	0.545441669885869	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Endothelial	Myeloid
+A_all_tissue	M07	M03	2076	0.607685397789935	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Epithelial	Myeloid
+A_all_tissue	M07	M04	2076	0.524621171196289	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Fibroblast	Myeloid
+A_all_tissue	M07	M05	2076	0.383998559800357	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Mast	Myeloid
+A_all_tissue	M07	M06	2076	-0.180743426951563	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Mural	Myeloid
+A_all_tissue	M07	M08	2076	0.208497733227459	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Plasma	Myeloid
+A_all_tissue	M07	M09	2076	0.258751709172484	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	T_NK	Myeloid
+A_all_tissue	M07	log1p_nCount	2076	0.578593767004337	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	raw X row sum over all frozen features	Myeloid
+A_all_tissue	M07	epi_fraction_gate	2076	0.543723014656526	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	historical c2l mean fraction	Myeloid
+A_all_tissue	M08	M01	2076	0.407502567814235	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	B	Plasma
+A_all_tissue	M08	M02	2076	0.23791257635357	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Endothelial	Plasma
+A_all_tissue	M08	M03	2076	-0.0451774399409145	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Epithelial	Plasma
+A_all_tissue	M08	M04	2076	0.112295660899742	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Fibroblast	Plasma
+A_all_tissue	M08	M05	2076	0.17473926447374	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Mast	Plasma
+A_all_tissue	M08	M06	2076	-0.104448429088441	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Mural	Plasma
+A_all_tissue	M08	M07	2076	0.208497733227459	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Myeloid	Plasma
+A_all_tissue	M08	M09	2076	0.481534331161869	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	T_NK	Plasma
+A_all_tissue	M08	log1p_nCount	2076	0.0803320677992136	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	raw X row sum over all frozen features	Plasma
+A_all_tissue	M08	epi_fraction_gate	2076	-0.0949080023841849	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	historical c2l mean fraction	Plasma
+A_all_tissue	M09	M01	2076	0.808105007158247	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	B	T_NK
+A_all_tissue	M09	M02	2076	0.0366916704307385	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Endothelial	T_NK
+A_all_tissue	M09	M03	2076	-0.156952116144899	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Epithelial	T_NK
+A_all_tissue	M09	M04	2076	-0.149659700526861	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Fibroblast	T_NK
+A_all_tissue	M09	M05	2076	-0.0619756171303419	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Mast	T_NK
+A_all_tissue	M09	M06	2076	-0.397121668871908	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Mural	T_NK
+A_all_tissue	M09	M07	2076	0.258751709172484	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Myeloid	T_NK
+A_all_tissue	M09	M08	2076	0.481534331161869	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Plasma	T_NK
+A_all_tissue	M09	log1p_nCount	2076	-0.0119250438484004	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	raw X row sum over all frozen features	T_NK
+A_all_tissue	M09	epi_fraction_gate	2076	-0.25799158204784	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	historical c2l mean fraction	T_NK
+B_legacy_eligible_complete_cases	MP10	epi_fraction_gate	996	0.615794556815611	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	historical c2l mean fraction	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	log1p_nCount	996	0.608542076761522	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	raw X row sum over all frozen features	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F01	996	0.227418233787695	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Arterial EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F02	996	0.44844186091158	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	C1QC TAM	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F03	996	-0.0640311718956301	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	CD4 Helper/Conventional	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F04	996	0.0630008086948314	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	CD4 Naive/Memory-like	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F05	996	0.0198289085664419	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	CD8 Exhausted	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F06	996	-0.106573662981895	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	CD8 GZMK/Effector-memory-like	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F07	996	0.454185751702079	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Capillary EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F08	996	0.151175464490143	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Classical Mono	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F10	996	0.0281544414660417	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	GC B	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F11	996	0.420057304448057	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	LAMP3 DC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F12	996	0.510543687341765	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Lymphatic EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F13	996	0.343200854468154	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Mast	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F14	996	0.312556980462063	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Matrix_CAF	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F15	996	-0.0464599695846089	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	NK	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F16	996	-0.210175166442314	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Naive/Memory B	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F17	996	0.587626211894558	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Neutrophil	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F18	996	0.429434057034859	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Pericyte	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F19	996	0.0755067711692533	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Plasma	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F20	996	-0.0008588343598788	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	SMC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F21	996	0.586351586106852	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	SPP1 TAM	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F22	996	0.283501939340868	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Tfh/CXCL13-like	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F23	996	0.0631915081907943	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Treg	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F24	996	0.402064280589125	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	Venous EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F25	996	0.398886877263832	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	cDC1	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F26	996	0.339409355432002	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	cDC2	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F27	996	-0.0223792527113178	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	iCAF	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F28	996	0.440805202094564	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	pDC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F29	996	0.345551740726931	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	rCAF	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F30	996	0.557499017863847	marginal association; separate from importance; no causal sign	NPJ_sample1	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample1	vCAF	EpiMP10 raw Top20 AUCell
+A_all_tissue	M01	M02	4506	-0.0933085822779973	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Endothelial	B
+A_all_tissue	M01	M03	4506	0.974264166719174	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Epithelial	B
+A_all_tissue	M01	M04	4506	-0.67205449078453	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Fibroblast	B
+A_all_tissue	M01	M05	4506	0.925070075828306	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Mast	B
+A_all_tissue	M01	M06	4506	-0.712892494314173	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Mural	B
+A_all_tissue	M01	M07	4506	0.957067125661359	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Myeloid	B
+A_all_tissue	M01	M08	4506	0.396994826702759	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Plasma	B
+A_all_tissue	M01	M09	4506	0.962491024177078	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	T_NK	B
+A_all_tissue	M01	log1p_nCount	4506	0.837813680217056	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	raw X row sum over all frozen features	B
+A_all_tissue	M01	epi_fraction_gate	4506	0.860899272487132	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	historical c2l mean fraction	B
+A_all_tissue	M02	M01	4506	-0.0933085822779973	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	B	Endothelial
+A_all_tissue	M02	M03	4506	-0.0763667281801908	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Epithelial	Endothelial
+A_all_tissue	M02	M04	4506	0.136572430953216	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Fibroblast	Endothelial
+A_all_tissue	M02	M05	4506	-0.115788844811214	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Mast	Endothelial
+A_all_tissue	M02	M06	4506	0.396567985345157	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Mural	Endothelial
+A_all_tissue	M02	M07	4506	-0.160606735637744	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Myeloid	Endothelial
+A_all_tissue	M02	M08	4506	-0.171885743292056	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Plasma	Endothelial
+A_all_tissue	M02	M09	4506	-0.116786443480425	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	T_NK	Endothelial
+A_all_tissue	M02	log1p_nCount	4506	0.0485275757794887	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	raw X row sum over all frozen features	Endothelial
+A_all_tissue	M02	epi_fraction_gate	4506	-0.0538896669760849	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	historical c2l mean fraction	Endothelial
+A_all_tissue	M03	M01	4506	0.974264166719174	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	B	Epithelial
+A_all_tissue	M03	M02	4506	-0.0763667281801908	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Endothelial	Epithelial
+A_all_tissue	M03	M04	4506	-0.687106708856753	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Fibroblast	Epithelial
+A_all_tissue	M03	M05	4506	0.92567314296771	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Mast	Epithelial
+A_all_tissue	M03	M06	4506	-0.683128801579676	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Mural	Epithelial
+A_all_tissue	M03	M07	4506	0.943377470718485	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Myeloid	Epithelial
+A_all_tissue	M03	M08	4506	0.374032656413832	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Plasma	Epithelial
+A_all_tissue	M03	M09	4506	0.923199920634668	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	T_NK	Epithelial
+A_all_tissue	M03	log1p_nCount	4506	0.827227361346791	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	raw X row sum over all frozen features	Epithelial
+A_all_tissue	M03	epi_fraction_gate	4506	0.929411781686719	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	historical c2l mean fraction	Epithelial
+A_all_tissue	M04	M01	4506	-0.67205449078453	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	B	Fibroblast
+A_all_tissue	M04	M02	4506	0.136572430953216	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Endothelial	Fibroblast
+A_all_tissue	M04	M03	4506	-0.687106708856753	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Epithelial	Fibroblast
+A_all_tissue	M04	M05	4506	-0.607723503347501	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Mast	Fibroblast
+A_all_tissue	M04	M06	4506	0.447941531258614	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Mural	Fibroblast
+A_all_tissue	M04	M07	4506	-0.654000305122588	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Myeloid	Fibroblast
+A_all_tissue	M04	M08	4506	-0.1887037903311	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Plasma	Fibroblast
+A_all_tissue	M04	M09	4506	-0.623237849612201	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	T_NK	Fibroblast
+A_all_tissue	M04	log1p_nCount	4506	-0.596955582361519	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	raw X row sum over all frozen features	Fibroblast
+A_all_tissue	M04	epi_fraction_gate	4506	-0.627095049115406	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	historical c2l mean fraction	Fibroblast
+A_all_tissue	M05	M01	4506	0.925070075828306	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	B	Mast
+A_all_tissue	M05	M02	4506	-0.115788844811214	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Endothelial	Mast
+A_all_tissue	M05	M03	4506	0.92567314296771	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Epithelial	Mast
+A_all_tissue	M05	M04	4506	-0.607723503347501	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Fibroblast	Mast
+A_all_tissue	M05	M06	4506	-0.679275408087739	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Mural	Mast
+A_all_tissue	M05	M07	4506	0.914929168915231	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Myeloid	Mast
+A_all_tissue	M05	M08	4506	0.394612452152823	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Plasma	Mast
+A_all_tissue	M05	M09	4506	0.903418185173446	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	T_NK	Mast
+A_all_tissue	M05	log1p_nCount	4506	0.753370067269413	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	raw X row sum over all frozen features	Mast
+A_all_tissue	M05	epi_fraction_gate	4506	0.82724460483445	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	historical c2l mean fraction	Mast
+A_all_tissue	M06	M01	4506	-0.712892494314173	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	B	Mural
+A_all_tissue	M06	M02	4506	0.396567985345157	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Endothelial	Mural
+A_all_tissue	M06	M03	4506	-0.683128801579676	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Epithelial	Mural
+A_all_tissue	M06	M04	4506	0.447941531258614	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Fibroblast	Mural
+A_all_tissue	M06	M05	4506	-0.679275408087739	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Mast	Mural
+A_all_tissue	M06	M07	4506	-0.758112528843351	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Myeloid	Mural
+A_all_tissue	M06	M08	4506	-0.344228886107185	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Plasma	Mural
+A_all_tissue	M06	M09	4506	-0.718567228556067	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	T_NK	Mural
+A_all_tissue	M06	log1p_nCount	4506	-0.523777094959726	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	raw X row sum over all frozen features	Mural
+A_all_tissue	M06	epi_fraction_gate	4506	-0.602921853945138	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	historical c2l mean fraction	Mural
+A_all_tissue	M07	M01	4506	0.957067125661359	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	B	Myeloid
+A_all_tissue	M07	M02	4506	-0.160606735637744	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Endothelial	Myeloid
+A_all_tissue	M07	M03	4506	0.943377470718485	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Epithelial	Myeloid
+A_all_tissue	M07	M04	4506	-0.654000305122588	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Fibroblast	Myeloid
+A_all_tissue	M07	M05	4506	0.914929168915231	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Mast	Myeloid
+A_all_tissue	M07	M06	4506	-0.758112528843351	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Mural	Myeloid
+A_all_tissue	M07	M08	4506	0.413858493425203	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Plasma	Myeloid
+A_all_tissue	M07	M09	4506	0.950663245487275	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	T_NK	Myeloid
+A_all_tissue	M07	log1p_nCount	4506	0.795014303977368	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	raw X row sum over all frozen features	Myeloid
+A_all_tissue	M07	epi_fraction_gate	4506	0.833245051328582	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	historical c2l mean fraction	Myeloid
+A_all_tissue	M08	M01	4506	0.396994826702759	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	B	Plasma
+A_all_tissue	M08	M02	4506	-0.171885743292056	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Endothelial	Plasma
+A_all_tissue	M08	M03	4506	0.374032656413832	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Epithelial	Plasma
+A_all_tissue	M08	M04	4506	-0.1887037903311	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Fibroblast	Plasma
+A_all_tissue	M08	M05	4506	0.394612452152823	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Mast	Plasma
+A_all_tissue	M08	M06	4506	-0.344228886107185	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Mural	Plasma
+A_all_tissue	M08	M07	4506	0.413858493425203	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Myeloid	Plasma
+A_all_tissue	M08	M09	4506	0.426437496267809	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	T_NK	Plasma
+A_all_tissue	M08	log1p_nCount	4506	0.256282392975573	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	raw X row sum over all frozen features	Plasma
+A_all_tissue	M08	epi_fraction_gate	4506	0.306275826776532	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	historical c2l mean fraction	Plasma
+A_all_tissue	M09	M01	4506	0.962491024177078	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	B	T_NK
+A_all_tissue	M09	M02	4506	-0.116786443480425	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Endothelial	T_NK
+A_all_tissue	M09	M03	4506	0.923199920634668	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Epithelial	T_NK
+A_all_tissue	M09	M04	4506	-0.623237849612201	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Fibroblast	T_NK
+A_all_tissue	M09	M05	4506	0.903418185173446	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Mast	T_NK
+A_all_tissue	M09	M06	4506	-0.718567228556067	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Mural	T_NK
+A_all_tissue	M09	M07	4506	0.950663245487275	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Myeloid	T_NK
+A_all_tissue	M09	M08	4506	0.426437496267809	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Plasma	T_NK
+A_all_tissue	M09	log1p_nCount	4506	0.79909992110445	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	raw X row sum over all frozen features	T_NK
+A_all_tissue	M09	epi_fraction_gate	4506	0.783143521671166	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	historical c2l mean fraction	T_NK
+B_legacy_eligible_complete_cases	MP10	epi_fraction_gate	3217	0.565556451794823	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	historical c2l mean fraction	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	log1p_nCount	3217	0.264126694833882	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	raw X row sum over all frozen features	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F01	3217	0.0306942981579303	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Arterial EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F02	3217	0.114371646100249	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	C1QC TAM	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F03	3217	0.517635049947636	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	CD4 Helper/Conventional	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F04	3217	0.535447222101719	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	CD4 Naive/Memory-like	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F05	3217	0.35348422185315	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	CD8 Exhausted	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F06	3217	0.407180340611015	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	CD8 GZMK/Effector-memory-like	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F07	3217	0.102291337833782	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Capillary EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F08	3217	0.474778241929817	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Classical Mono	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F10	3217	0.553912702162901	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	GC B	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F11	3217	0.211271852452167	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	LAMP3 DC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F12	3217	0.26525502913313	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Lymphatic EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F13	3217	0.482357374884237	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Mast	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F14	3217	-0.370038511443082	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Matrix_CAF	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F15	3217	0.397034889304148	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	NK	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F16	3217	0.316930377861539	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Naive/Memory B	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F17	3217	0.48982575196195	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Neutrophil	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F18	3217	0.0495622181456199	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Pericyte	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F19	3217	0.297710187543923	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Plasma	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F20	3217	-0.185257936212425	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	SMC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F21	3217	0.452063977637019	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	SPP1 TAM	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F22	3217	0.379487399683693	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Tfh/CXCL13-like	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F23	3217	0.379860440438426	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Treg	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F24	3217	0.0892277964328684	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	Venous EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F25	3217	0.485917975088919	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	cDC1	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F26	3217	0.371807302593336	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	cDC2	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F27	3217	-0.195025397499766	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	iCAF	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F28	3217	0.522111972430071	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	pDC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F29	3217	0.0170090365967175	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	rCAF	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F30	3217	-0.0432149455995103	marginal association; separate from importance; no causal sign	NPJ_sample2	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample2	vCAF	EpiMP10 raw Top20 AUCell
+A_all_tissue	M01	M02	4881	0.563862069730008	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Endothelial	B
+A_all_tissue	M01	M03	4881	0.43856452792931	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Epithelial	B
+A_all_tissue	M01	M04	4881	0.493597400263394	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Fibroblast	B
+A_all_tissue	M01	M05	4881	0.553527404865396	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Mast	B
+A_all_tissue	M01	M06	4881	0.368178289731841	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Mural	B
+A_all_tissue	M01	M07	4881	0.826016805356295	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Myeloid	B
+A_all_tissue	M01	M08	4881	0.100545969714011	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Plasma	B
+A_all_tissue	M01	M09	4881	0.489800449845345	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	T_NK	B
+A_all_tissue	M01	log1p_nCount	4881	0.251723725897921	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	raw X row sum over all frozen features	B
+A_all_tissue	M01	epi_fraction_gate	4881	-0.024744695748251	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	historical c2l mean fraction	B
+A_all_tissue	M02	M01	4881	0.563862069730008	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	B	Endothelial
+A_all_tissue	M02	M03	4881	-0.034629180403572	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Epithelial	Endothelial
+A_all_tissue	M02	M04	4881	0.715600151958669	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Fibroblast	Endothelial
+A_all_tissue	M02	M05	4881	0.615571029966256	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Mast	Endothelial
+A_all_tissue	M02	M06	4881	0.723291809488496	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Mural	Endothelial
+A_all_tissue	M02	M07	4881	0.509630145990707	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Myeloid	Endothelial
+A_all_tissue	M02	M08	4881	0.34435051798296	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Plasma	Endothelial
+A_all_tissue	M02	M09	4881	0.639096646416092	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	T_NK	Endothelial
+A_all_tissue	M02	log1p_nCount	4881	-0.0703201427245427	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	raw X row sum over all frozen features	Endothelial
+A_all_tissue	M02	epi_fraction_gate	4881	-0.443721726030851	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	historical c2l mean fraction	Endothelial
+A_all_tissue	M03	M01	4881	0.43856452792931	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	B	Epithelial
+A_all_tissue	M03	M02	4881	-0.034629180403572	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Endothelial	Epithelial
+A_all_tissue	M03	M04	4881	-0.282219049735372	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Fibroblast	Epithelial
+A_all_tissue	M03	M05	4881	-0.0387373601837155	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Mast	Epithelial
+A_all_tissue	M03	M06	4881	-0.300606805624889	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Mural	Epithelial
+A_all_tissue	M03	M07	4881	0.539343542103502	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Myeloid	Epithelial
+A_all_tissue	M03	M08	4881	-0.512542595890439	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Plasma	Epithelial
+A_all_tissue	M03	M09	4881	-0.364436294606044	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	T_NK	Epithelial
+A_all_tissue	M03	log1p_nCount	4881	0.766278618470419	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	raw X row sum over all frozen features	Epithelial
+A_all_tissue	M03	epi_fraction_gate	4881	0.806771012041855	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	historical c2l mean fraction	Epithelial
+A_all_tissue	M04	M01	4881	0.493597400263394	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	B	Fibroblast
+A_all_tissue	M04	M02	4881	0.715600151958669	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Endothelial	Fibroblast
+A_all_tissue	M04	M03	4881	-0.282219049735372	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Epithelial	Fibroblast
+A_all_tissue	M04	M05	4881	0.66302944023887	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Mast	Fibroblast
+A_all_tissue	M04	M06	4881	0.729709364525941	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Mural	Fibroblast
+A_all_tissue	M04	M07	4881	0.472667409270628	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Myeloid	Fibroblast
+A_all_tissue	M04	M08	4881	0.454941142072233	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Plasma	Fibroblast
+A_all_tissue	M04	M09	4881	0.773450060623847	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	T_NK	Fibroblast
+A_all_tissue	M04	log1p_nCount	4881	-0.327031978231917	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	raw X row sum over all frozen features	Fibroblast
+A_all_tissue	M04	epi_fraction_gate	4881	-0.647867785473365	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	historical c2l mean fraction	Fibroblast
+A_all_tissue	M05	M01	4881	0.553527404865396	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	B	Mast
+A_all_tissue	M05	M02	4881	0.615571029966256	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Endothelial	Mast
+A_all_tissue	M05	M03	4881	-0.0387373601837155	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Epithelial	Mast
+A_all_tissue	M05	M04	4881	0.66302944023887	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Fibroblast	Mast
+A_all_tissue	M05	M06	4881	0.61982587682876	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Mural	Mast
+A_all_tissue	M05	M07	4881	0.52322342812868	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Myeloid	Mast
+A_all_tissue	M05	M08	4881	0.373144610543777	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Plasma	Mast
+A_all_tissue	M05	M09	4881	0.658916108080821	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	T_NK	Mast
+A_all_tissue	M05	log1p_nCount	4881	-0.194183902744461	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	raw X row sum over all frozen features	Mast
+A_all_tissue	M05	epi_fraction_gate	4881	-0.432147553152254	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	historical c2l mean fraction	Mast
+A_all_tissue	M06	M01	4881	0.368178289731841	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	B	Mural
+A_all_tissue	M06	M02	4881	0.723291809488496	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Endothelial	Mural
+A_all_tissue	M06	M03	4881	-0.300606805624889	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Epithelial	Mural
+A_all_tissue	M06	M04	4881	0.729709364525941	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Fibroblast	Mural
+A_all_tissue	M06	M05	4881	0.61982587682876	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Mast	Mural
+A_all_tissue	M06	M07	4881	0.2821456811082	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Myeloid	Mural
+A_all_tissue	M06	M08	4881	0.449037911970377	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Plasma	Mural
+A_all_tissue	M06	M09	4881	0.68344970431528	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	T_NK	Mural
+A_all_tissue	M06	log1p_nCount	4881	-0.327530676953805	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	raw X row sum over all frozen features	Mural
+A_all_tissue	M06	epi_fraction_gate	4881	-0.646948039528308	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	historical c2l mean fraction	Mural
+A_all_tissue	M07	M01	4881	0.826016805356295	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	B	Myeloid
+A_all_tissue	M07	M02	4881	0.509630145990707	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Endothelial	Myeloid
+A_all_tissue	M07	M03	4881	0.539343542103502	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Epithelial	Myeloid
+A_all_tissue	M07	M04	4881	0.472667409270628	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Fibroblast	Myeloid
+A_all_tissue	M07	M05	4881	0.52322342812868	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Mast	Myeloid
+A_all_tissue	M07	M06	4881	0.2821456811082	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Mural	Myeloid
+A_all_tissue	M07	M08	4881	-0.0331719488469189	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Plasma	Myeloid
+A_all_tissue	M07	M09	4881	0.383519665576671	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	T_NK	Myeloid
+A_all_tissue	M07	log1p_nCount	4881	0.314625762329394	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	raw X row sum over all frozen features	Myeloid
+A_all_tissue	M07	epi_fraction_gate	4881	0.0471073044424352	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	historical c2l mean fraction	Myeloid
+A_all_tissue	M08	M01	4881	0.100545969714011	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	B	Plasma
+A_all_tissue	M08	M02	4881	0.34435051798296	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Endothelial	Plasma
+A_all_tissue	M08	M03	4881	-0.512542595890439	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Epithelial	Plasma
+A_all_tissue	M08	M04	4881	0.454941142072233	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Fibroblast	Plasma
+A_all_tissue	M08	M05	4881	0.373144610543777	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Mast	Plasma
+A_all_tissue	M08	M06	4881	0.449037911970377	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Mural	Plasma
+A_all_tissue	M08	M07	4881	-0.0331719488469189	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Myeloid	Plasma
+A_all_tissue	M08	M09	4881	0.58433669418472	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	T_NK	Plasma
+A_all_tissue	M08	log1p_nCount	4881	-0.525030801021808	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	raw X row sum over all frozen features	Plasma
+A_all_tissue	M08	epi_fraction_gate	4881	-0.666644013052039	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	historical c2l mean fraction	Plasma
+A_all_tissue	M09	M01	4881	0.489800449845345	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	B	T_NK
+A_all_tissue	M09	M02	4881	0.639096646416092	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Endothelial	T_NK
+A_all_tissue	M09	M03	4881	-0.364436294606044	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Epithelial	T_NK
+A_all_tissue	M09	M04	4881	0.773450060623847	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Fibroblast	T_NK
+A_all_tissue	M09	M05	4881	0.658916108080821	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Mast	T_NK
+A_all_tissue	M09	M06	4881	0.68344970431528	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Mural	T_NK
+A_all_tissue	M09	M07	4881	0.383519665576671	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Myeloid	T_NK
+A_all_tissue	M09	M08	4881	0.58433669418472	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Plasma	T_NK
+A_all_tissue	M09	log1p_nCount	4881	-0.388613164772808	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	raw X row sum over all frozen features	T_NK
+A_all_tissue	M09	epi_fraction_gate	4881	-0.715990198286502	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	historical c2l mean fraction	T_NK
+B_legacy_eligible_complete_cases	MP10	epi_fraction_gate	3182	0.0123718964096181	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	historical c2l mean fraction	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	log1p_nCount	3182	0.221116046383527	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	raw X row sum over all frozen features	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F01	3182	0.305038298172262	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Arterial EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F02	3182	0.0904976111136689	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	C1QC TAM	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F03	3182	0.207094979918692	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	CD4 Helper/Conventional	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F04	3182	0.330063124734874	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	CD4 Naive/Memory-like	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F05	3182	0.267777556803797	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	CD8 Exhausted	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F06	3182	0.290426546008671	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	CD8 GZMK/Effector-memory-like	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F07	3182	0.117241860170755	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Capillary EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F08	3182	0.506767931981616	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Classical Mono	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F10	3182	0.452695494878588	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	GC B	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F11	3182	0.488226926971182	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	LAMP3 DC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F12	3182	0.428081213210653	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Lymphatic EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F13	3182	0.352501291954302	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Mast	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F14	3182	0.230205178663053	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Matrix_CAF	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F15	3182	0.264373948030719	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	NK	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F16	3182	0.143527362494936	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Naive/Memory B	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F17	3182	0.562800895837292	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Neutrophil	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F18	3182	0.168284282360355	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Pericyte	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F19	3182	-0.0572615347193394	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Plasma	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F20	3182	0.239570598566718	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	SMC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F21	3182	0.490140574077911	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	SPP1 TAM	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F22	3182	0.369458699973959	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Tfh/CXCL13-like	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F23	3182	0.315618699677487	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Treg	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F24	3182	0.358714627450522	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	Venous EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F25	3182	0.436051844196469	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	cDC1	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F26	3182	0.224309706565522	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	cDC2	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F27	3182	0.236450723821049	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	iCAF	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F28	3182	0.439413967617269	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	pDC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F29	3182	0.360903874207505	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	rCAF	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F30	3182	0.314431130655168	marginal association; separate from importance; no causal sign	NPJ_sample3	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample3	vCAF	EpiMP10 raw Top20 AUCell
+A_all_tissue	M01	M02	2639	0.254533488393387	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Endothelial	B
+A_all_tissue	M01	M03	2639	0.0108282752793382	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Epithelial	B
+A_all_tissue	M01	M04	2639	0.353524627577594	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Fibroblast	B
+A_all_tissue	M01	M05	2639	0.266426481547001	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Mast	B
+A_all_tissue	M01	M06	2639	0.250746352416243	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Mural	B
+A_all_tissue	M01	M07	2639	0.127292887630526	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Myeloid	B
+A_all_tissue	M01	M08	2639	0.116045005685799	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Plasma	B
+A_all_tissue	M01	M09	2639	0.605660719897603	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	T_NK	B
+A_all_tissue	M01	log1p_nCount	2639	0.123388247740907	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	raw X row sum over all frozen features	B
+A_all_tissue	M01	epi_fraction_gate	2639	-0.141071003190948	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	historical c2l mean fraction	B
+A_all_tissue	M02	M01	2639	0.254533488393387	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	B	Endothelial
+A_all_tissue	M02	M03	2639	0.49145359302201	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Epithelial	Endothelial
+A_all_tissue	M02	M04	2639	0.529431855431176	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Fibroblast	Endothelial
+A_all_tissue	M02	M05	2639	0.573852669512914	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Mast	Endothelial
+A_all_tissue	M02	M06	2639	0.737171333019808	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Mural	Endothelial
+A_all_tissue	M02	M07	2639	0.62172516707104	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Myeloid	Endothelial
+A_all_tissue	M02	M08	2639	0.353253726483185	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Plasma	Endothelial
+A_all_tissue	M02	M09	2639	0.451778158313935	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	T_NK	Endothelial
+A_all_tissue	M02	log1p_nCount	2639	0.399232034970275	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	raw X row sum over all frozen features	Endothelial
+A_all_tissue	M02	epi_fraction_gate	2639	0.247229340553045	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	historical c2l mean fraction	Endothelial
+A_all_tissue	M03	M01	2639	0.0108282752793382	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	B	Epithelial
+A_all_tissue	M03	M02	2639	0.49145359302201	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Endothelial	Epithelial
+A_all_tissue	M03	M04	2639	-0.105511589614523	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Fibroblast	Epithelial
+A_all_tissue	M03	M05	2639	0.538435698072684	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Mast	Epithelial
+A_all_tissue	M03	M06	2639	0.149880259826361	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Mural	Epithelial
+A_all_tissue	M03	M07	2639	0.841111904820414	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Myeloid	Epithelial
+A_all_tissue	M03	M08	2639	0.158798790252974	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Plasma	Epithelial
+A_all_tissue	M03	M09	2639	0.286840239165105	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	T_NK	Epithelial
+A_all_tissue	M03	log1p_nCount	2639	0.851294075916409	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	raw X row sum over all frozen features	Epithelial
+A_all_tissue	M03	epi_fraction_gate	2639	0.915099426160605	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	historical c2l mean fraction	Epithelial
+A_all_tissue	M04	M01	2639	0.353524627577594	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	B	Fibroblast
+A_all_tissue	M04	M02	2639	0.529431855431176	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Endothelial	Fibroblast
+A_all_tissue	M04	M03	2639	-0.105511589614523	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Epithelial	Fibroblast
+A_all_tissue	M04	M05	2639	0.366454123116694	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Mast	Fibroblast
+A_all_tissue	M04	M06	2639	0.609804295336046	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Mural	Fibroblast
+A_all_tissue	M04	M07	2639	0.100282758860966	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Myeloid	Fibroblast
+A_all_tissue	M04	M08	2639	0.16855695610238	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Plasma	Fibroblast
+A_all_tissue	M04	M09	2639	0.237593559221098	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	T_NK	Fibroblast
+A_all_tissue	M04	log1p_nCount	2639	-0.260851084962253	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	raw X row sum over all frozen features	Fibroblast
+A_all_tissue	M04	epi_fraction_gate	2639	-0.262114715955138	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	historical c2l mean fraction	Fibroblast
+A_all_tissue	M05	M01	2639	0.266426481547001	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	B	Mast
+A_all_tissue	M05	M02	2639	0.573852669512914	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Endothelial	Mast
+A_all_tissue	M05	M03	2639	0.538435698072684	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Epithelial	Mast
+A_all_tissue	M05	M04	2639	0.366454123116694	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Fibroblast	Mast
+A_all_tissue	M05	M06	2639	0.421452162905981	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Mural	Mast
+A_all_tissue	M05	M07	2639	0.588079696309547	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Myeloid	Mast
+A_all_tissue	M05	M08	2639	0.215630399116452	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Plasma	Mast
+A_all_tissue	M05	M09	2639	0.364900097549571	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	T_NK	Mast
+A_all_tissue	M05	log1p_nCount	2639	0.384546725770556	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	raw X row sum over all frozen features	Mast
+A_all_tissue	M05	epi_fraction_gate	2639	0.375427644170945	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	historical c2l mean fraction	Mast
+A_all_tissue	M06	M01	2639	0.250746352416243	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	B	Mural
+A_all_tissue	M06	M02	2639	0.737171333019808	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Endothelial	Mural
+A_all_tissue	M06	M03	2639	0.149880259826361	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Epithelial	Mural
+A_all_tissue	M06	M04	2639	0.609804295336046	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Fibroblast	Mural
+A_all_tissue	M06	M05	2639	0.421452162905981	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Mast	Mural
+A_all_tissue	M06	M07	2639	0.33831164195403	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Myeloid	Mural
+A_all_tissue	M06	M08	2639	0.349609788658441	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Plasma	Mural
+A_all_tissue	M06	M09	2639	0.374099351669219	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	T_NK	Mural
+A_all_tissue	M06	log1p_nCount	2639	0.0997908646518561	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	raw X row sum over all frozen features	Mural
+A_all_tissue	M06	epi_fraction_gate	2639	-0.0830927046601147	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	historical c2l mean fraction	Mural
+A_all_tissue	M07	M01	2639	0.127292887630526	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	B	Myeloid
+A_all_tissue	M07	M02	2639	0.62172516707104	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Endothelial	Myeloid
+A_all_tissue	M07	M03	2639	0.841111904820414	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Epithelial	Myeloid
+A_all_tissue	M07	M04	2639	0.100282758860966	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Fibroblast	Myeloid
+A_all_tissue	M07	M05	2639	0.588079696309547	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Mast	Myeloid
+A_all_tissue	M07	M06	2639	0.33831164195403	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Mural	Myeloid
+A_all_tissue	M07	M08	2639	0.259751066950879	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Plasma	Myeloid
+A_all_tissue	M07	M09	2639	0.516500480121693	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	T_NK	Myeloid
+A_all_tissue	M07	log1p_nCount	2639	0.764296816060137	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	raw X row sum over all frozen features	Myeloid
+A_all_tissue	M07	epi_fraction_gate	2639	0.623750695071053	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	historical c2l mean fraction	Myeloid
+A_all_tissue	M08	M01	2639	0.116045005685799	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	B	Plasma
+A_all_tissue	M08	M02	2639	0.353253726483185	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Endothelial	Plasma
+A_all_tissue	M08	M03	2639	0.158798790252974	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Epithelial	Plasma
+A_all_tissue	M08	M04	2639	0.16855695610238	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Fibroblast	Plasma
+A_all_tissue	M08	M05	2639	0.215630399116452	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Mast	Plasma
+A_all_tissue	M08	M06	2639	0.349609788658441	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Mural	Plasma
+A_all_tissue	M08	M07	2639	0.259751066950879	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Myeloid	Plasma
+A_all_tissue	M08	M09	2639	0.215937437637524	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	T_NK	Plasma
+A_all_tissue	M08	log1p_nCount	2639	0.205760639836456	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	raw X row sum over all frozen features	Plasma
+A_all_tissue	M08	epi_fraction_gate	2639	-0.0374430894456515	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	historical c2l mean fraction	Plasma
+A_all_tissue	M09	M01	2639	0.605660719897603	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	B	T_NK
+A_all_tissue	M09	M02	2639	0.451778158313935	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Endothelial	T_NK
+A_all_tissue	M09	M03	2639	0.286840239165105	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Epithelial	T_NK
+A_all_tissue	M09	M04	2639	0.237593559221098	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Fibroblast	T_NK
+A_all_tissue	M09	M05	2639	0.364900097549571	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Mast	T_NK
+A_all_tissue	M09	M06	2639	0.374099351669219	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Mural	T_NK
+A_all_tissue	M09	M07	2639	0.516500480121693	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Myeloid	T_NK
+A_all_tissue	M09	M08	2639	0.215937437637524	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Plasma	T_NK
+A_all_tissue	M09	log1p_nCount	2639	0.392468210264207	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	raw X row sum over all frozen features	T_NK
+A_all_tissue	M09	epi_fraction_gate	2639	-0.0117082879213281	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	historical c2l mean fraction	T_NK
+B_legacy_eligible_complete_cases	MP10	epi_fraction_gate	1885	0.202369948595749	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	historical c2l mean fraction	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	log1p_nCount	1885	0.131451757535165	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	raw X row sum over all frozen features	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F01	1885	-0.0247380248999292	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Arterial EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F02	1885	-0.0238473143779954	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	C1QC TAM	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F03	1885	-0.0885883792074911	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	CD4 Helper/Conventional	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F04	1885	-0.051485077806129	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	CD4 Naive/Memory-like	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F05	1885	-0.198000544544043	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	CD8 Exhausted	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F06	1885	-0.112890254946871	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	CD8 GZMK/Effector-memory-like	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F07	1885	-0.131955889287224	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Capillary EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F08	1885	0.0322489830699832	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Classical Mono	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F10	1885	-0.0169083863276335	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	GC B	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F11	1885	0.0788587017339995	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	LAMP3 DC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F12	1885	0.0235285421946816	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Lymphatic EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F13	1885	0.0236840670566435	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Mast	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F14	1885	-0.0970413388337014	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Matrix_CAF	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F15	1885	-0.101964079036374	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	NK	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F16	1885	-0.0506634151023988	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Naive/Memory B	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F17	1885	0.115152713030607	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Neutrophil	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F18	1885	-0.0944285272102924	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Pericyte	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F19	1885	-0.0455291892826038	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Plasma	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F20	1885	0.0177350694559968	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	SMC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F21	1885	0.132263043822456	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	SPP1 TAM	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F22	1885	-0.155266335791984	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Tfh/CXCL13-like	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F23	1885	-0.148070419822482	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Treg	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F24	1885	-0.01323013045979	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	Venous EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F25	1885	0.148548781851432	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	cDC1	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F26	1885	0.0436718643744611	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	cDC2	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F27	1885	-0.0849227560863844	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	iCAF	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F28	1885	0.0963185977692688	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	pDC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F29	1885	0.0170288618338569	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	rCAF	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F30	1885	-0.0476394921948554	marginal association; separate from importance; no causal sign	NPJ_sample4	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample4	vCAF	EpiMP10 raw Top20 AUCell
+A_all_tissue	M01	M02	2815	0.801211334685767	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Endothelial	B
+A_all_tissue	M01	M03	2815	0.986145066245093	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Epithelial	B
+A_all_tissue	M01	M04	2815	0.631363789896048	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Fibroblast	B
+A_all_tissue	M01	M05	2815	0.952831610535418	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Mast	B
+A_all_tissue	M01	M06	2815	-0.0824192041869612	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Mural	B
+A_all_tissue	M01	M07	2815	0.917454867496042	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Myeloid	B
+A_all_tissue	M01	M08	2815	-0.287787359524837	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Plasma	B
+A_all_tissue	M01	M09	2815	0.985778037708163	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	T_NK	B
+A_all_tissue	M01	log1p_nCount	2815	0.772201186487549	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	raw X row sum over all frozen features	B
+A_all_tissue	M01	epi_fraction_gate	2815	0.795879575244352	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	historical c2l mean fraction	B
+A_all_tissue	M02	M01	2815	0.801211334685767	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	B	Endothelial
+A_all_tissue	M02	M03	2815	0.808835031779811	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Epithelial	Endothelial
+A_all_tissue	M02	M04	2815	0.740337950337354	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Fibroblast	Endothelial
+A_all_tissue	M02	M05	2815	0.788072279960834	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Mast	Endothelial
+A_all_tissue	M02	M06	2815	0.150578832793025	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Mural	Endothelial
+A_all_tissue	M02	M07	2815	0.795992758326944	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Myeloid	Endothelial
+A_all_tissue	M02	M08	2815	-0.363913569256954	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Plasma	Endothelial
+A_all_tissue	M02	M09	2815	0.790979576488105	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	T_NK	Endothelial
+A_all_tissue	M02	log1p_nCount	2815	0.802087624670612	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	raw X row sum over all frozen features	Endothelial
+A_all_tissue	M02	epi_fraction_gate	2815	0.60645614012588	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	historical c2l mean fraction	Endothelial
+A_all_tissue	M03	M01	2815	0.986145066245093	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	B	Epithelial
+A_all_tissue	M03	M02	2815	0.808835031779811	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Endothelial	Epithelial
+A_all_tissue	M03	M04	2815	0.632591194917262	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Fibroblast	Epithelial
+A_all_tissue	M03	M05	2815	0.965297719896286	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Mast	Epithelial
+A_all_tissue	M03	M06	2815	-0.0939619817813082	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Mural	Epithelial
+A_all_tissue	M03	M07	2815	0.947790931654902	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Myeloid	Epithelial
+A_all_tissue	M03	M08	2815	-0.298289867342832	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Plasma	Epithelial
+A_all_tissue	M03	M09	2815	0.986310211495577	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	T_NK	Epithelial
+A_all_tissue	M03	log1p_nCount	2815	0.773526250301278	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	raw X row sum over all frozen features	Epithelial
+A_all_tissue	M03	epi_fraction_gate	2815	0.803887789798614	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	historical c2l mean fraction	Epithelial
+A_all_tissue	M04	M01	2815	0.631363789896048	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	B	Fibroblast
+A_all_tissue	M04	M02	2815	0.740337950337354	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Endothelial	Fibroblast
+A_all_tissue	M04	M03	2815	0.632591194917262	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Epithelial	Fibroblast
+A_all_tissue	M04	M05	2815	0.603205532430177	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Mast	Fibroblast
+A_all_tissue	M04	M06	2815	0.101541012455771	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Mural	Fibroblast
+A_all_tissue	M04	M07	2815	0.593004812095264	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Myeloid	Fibroblast
+A_all_tissue	M04	M08	2815	-0.257568441026511	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Plasma	Fibroblast
+A_all_tissue	M04	M09	2815	0.620466570366949	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	T_NK	Fibroblast
+A_all_tissue	M04	log1p_nCount	2815	0.684629163130546	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	raw X row sum over all frozen features	Fibroblast
+A_all_tissue	M04	epi_fraction_gate	2815	0.546106305067245	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	historical c2l mean fraction	Fibroblast
+A_all_tissue	M05	M01	2815	0.952831610535418	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	B	Mast
+A_all_tissue	M05	M02	2815	0.788072279960834	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Endothelial	Mast
+A_all_tissue	M05	M03	2815	0.965297719896286	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Epithelial	Mast
+A_all_tissue	M05	M04	2815	0.603205532430177	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Fibroblast	Mast
+A_all_tissue	M05	M06	2815	-0.109355345807065	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Mural	Mast
+A_all_tissue	M05	M07	2815	0.937219192231445	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Myeloid	Mast
+A_all_tissue	M05	M08	2815	-0.285953526761076	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Plasma	Mast
+A_all_tissue	M05	M09	2815	0.958017250587619	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	T_NK	Mast
+A_all_tissue	M05	log1p_nCount	2815	0.756131522156291	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	raw X row sum over all frozen features	Mast
+A_all_tissue	M05	epi_fraction_gate	2815	0.745085720147274	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	historical c2l mean fraction	Mast
+A_all_tissue	M06	M01	2815	-0.0824192041869612	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	B	Mural
+A_all_tissue	M06	M02	2815	0.150578832793025	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Endothelial	Mural
+A_all_tissue	M06	M03	2815	-0.0939619817813082	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Epithelial	Mural
+A_all_tissue	M06	M04	2815	0.101541012455771	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Fibroblast	Mural
+A_all_tissue	M06	M05	2815	-0.109355345807065	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Mast	Mural
+A_all_tissue	M06	M07	2815	-0.146816348359297	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Myeloid	Mural
+A_all_tissue	M06	M08	2815	-0.353691165024168	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Plasma	Mural
+A_all_tissue	M06	M09	2815	-0.122037298929564	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	T_NK	Mural
+A_all_tissue	M06	log1p_nCount	2815	0.0871578298610871	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	raw X row sum over all frozen features	Mural
+A_all_tissue	M06	epi_fraction_gate	2815	-0.110977840721883	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	historical c2l mean fraction	Mural
+A_all_tissue	M07	M01	2815	0.917454867496042	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	B	Myeloid
+A_all_tissue	M07	M02	2815	0.795992758326944	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Endothelial	Myeloid
+A_all_tissue	M07	M03	2815	0.947790931654902	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Epithelial	Myeloid
+A_all_tissue	M07	M04	2815	0.593004812095264	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Fibroblast	Myeloid
+A_all_tissue	M07	M05	2815	0.937219192231445	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Mast	Myeloid
+A_all_tissue	M07	M06	2815	-0.146816348359297	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Mural	Myeloid
+A_all_tissue	M07	M08	2815	-0.281018256972674	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Plasma	Myeloid
+A_all_tissue	M07	M09	2815	0.93503640514929	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	T_NK	Myeloid
+A_all_tissue	M07	log1p_nCount	2815	0.767767384741377	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	raw X row sum over all frozen features	Myeloid
+A_all_tissue	M07	epi_fraction_gate	2815	0.677359168602732	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	historical c2l mean fraction	Myeloid
+A_all_tissue	M08	M01	2815	-0.287787359524837	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	B	Plasma
+A_all_tissue	M08	M02	2815	-0.363913569256954	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Endothelial	Plasma
+A_all_tissue	M08	M03	2815	-0.298289867342832	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Epithelial	Plasma
+A_all_tissue	M08	M04	2815	-0.257568441026511	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Fibroblast	Plasma
+A_all_tissue	M08	M05	2815	-0.285953526761076	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Mast	Plasma
+A_all_tissue	M08	M06	2815	-0.353691165024168	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Mural	Plasma
+A_all_tissue	M08	M07	2815	-0.281018256972674	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Myeloid	Plasma
+A_all_tissue	M08	M09	2815	-0.263514894429952	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	T_NK	Plasma
+A_all_tissue	M08	log1p_nCount	2815	-0.322468553093447	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	raw X row sum over all frozen features	Plasma
+A_all_tissue	M08	epi_fraction_gate	2815	-0.247516176958166	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	historical c2l mean fraction	Plasma
+A_all_tissue	M09	M01	2815	0.985778037708163	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	B	T_NK
+A_all_tissue	M09	M02	2815	0.790979576488105	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Endothelial	T_NK
+A_all_tissue	M09	M03	2815	0.986310211495577	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Epithelial	T_NK
+A_all_tissue	M09	M04	2815	0.620466570366949	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Fibroblast	T_NK
+A_all_tissue	M09	M05	2815	0.958017250587619	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Mast	T_NK
+A_all_tissue	M09	M06	2815	-0.122037298929564	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Mural	T_NK
+A_all_tissue	M09	M07	2815	0.93503640514929	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Myeloid	T_NK
+A_all_tissue	M09	M08	2815	-0.263514894429952	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Plasma	T_NK
+A_all_tissue	M09	log1p_nCount	2815	0.758644900495915	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	raw X row sum over all frozen features	T_NK
+A_all_tissue	M09	epi_fraction_gate	2815	0.776447678305894	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	historical c2l mean fraction	T_NK
+B_legacy_eligible_complete_cases	MP10	epi_fraction_gate	2186	0.360131436420392	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	historical c2l mean fraction	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	log1p_nCount	2186	0.41383244483233	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	raw X row sum over all frozen features	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F01	2186	0.35827893452502	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Arterial EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F02	2186	0.268982461420246	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	C1QC TAM	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F03	2186	0.446168126440389	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	CD4 Helper/Conventional	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F04	2186	0.440361031619987	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	CD4 Naive/Memory-like	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F05	2186	0.401369210413622	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	CD8 Exhausted	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F06	2186	0.45262886523879	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	CD8 GZMK/Effector-memory-like	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F07	2186	0.257755503374617	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Capillary EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F08	2186	0.340372884393816	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Classical Mono	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F10	2186	0.476263127090377	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	GC B	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F11	2186	0.319025767228281	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	LAMP3 DC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F12	2186	0.381873252423374	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Lymphatic EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F13	2186	0.432178477745984	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Mast	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F14	2186	0.184272153237645	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Matrix_CAF	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F15	2186	0.424569356194089	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	NK	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F16	2186	0.364086455151733	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Naive/Memory B	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F17	2186	0.332677422073874	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Neutrophil	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F18	2186	0.302907913128705	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Pericyte	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F19	2186	-0.176217727044627	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Plasma	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F20	2186	0.168536487021732	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	SMC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F21	2186	0.382756400290835	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	SPP1 TAM	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F22	2186	0.418156275573183	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Tfh/CXCL13-like	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F23	2186	0.366155305528346	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Treg	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F24	2186	0.422102416553098	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	Venous EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F25	2186	0.438671089372198	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	cDC1	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F26	2186	0.470541541512656	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	cDC2	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F27	2186	0.37875467916476	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	iCAF	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F28	2186	0.426016019563111	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	pDC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F29	2186	0.353065222453022	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	rCAF	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F30	2186	0.208534537202125	marginal association; separate from importance; no causal sign	NPJ_sample5	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample5	vCAF	EpiMP10 raw Top20 AUCell
+A_all_tissue	M01	M02	3497	0.865960063052334	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Endothelial	B
+A_all_tissue	M01	M03	3497	0.961965912023084	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Epithelial	B
+A_all_tissue	M01	M04	3497	0.151486023007444	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Fibroblast	B
+A_all_tissue	M01	M05	3497	0.945771750646717	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Mast	B
+A_all_tissue	M01	M06	3497	0.0542842313222402	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Mural	B
+A_all_tissue	M01	M07	3497	0.931670017114294	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Myeloid	B
+A_all_tissue	M01	M08	3497	-0.256585241744686	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Plasma	B
+A_all_tissue	M01	M09	3497	0.936010350055183	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	T_NK	B
+A_all_tissue	M01	log1p_nCount	3497	0.813509329998253	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	raw X row sum over all frozen features	B
+A_all_tissue	M01	epi_fraction_gate	3497	0.868005244140441	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	historical c2l mean fraction	B
+A_all_tissue	M02	M01	3497	0.865960063052334	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	B	Endothelial
+A_all_tissue	M02	M03	3497	0.85684067060051	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Epithelial	Endothelial
+A_all_tissue	M02	M04	3497	0.257086296992664	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Fibroblast	Endothelial
+A_all_tissue	M02	M05	3497	0.856771054908459	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Mast	Endothelial
+A_all_tissue	M02	M06	3497	0.239607344588293	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Mural	Endothelial
+A_all_tissue	M02	M07	3497	0.8372227639077	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Myeloid	Endothelial
+A_all_tissue	M02	M08	3497	-0.328218111693137	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Plasma	Endothelial
+A_all_tissue	M02	M09	3497	0.845211028758065	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	T_NK	Endothelial
+A_all_tissue	M02	log1p_nCount	3497	0.788349326453852	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	raw X row sum over all frozen features	Endothelial
+A_all_tissue	M02	epi_fraction_gate	3497	0.70716510258911	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	historical c2l mean fraction	Endothelial
+A_all_tissue	M03	M01	3497	0.961965912023084	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	B	Epithelial
+A_all_tissue	M03	M02	3497	0.85684067060051	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Endothelial	Epithelial
+A_all_tissue	M03	M04	3497	0.17530382690321	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Fibroblast	Epithelial
+A_all_tissue	M03	M05	3497	0.965214019225867	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Mast	Epithelial
+A_all_tissue	M03	M06	3497	0.0724510027697478	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Mural	Epithelial
+A_all_tissue	M03	M07	3497	0.960158629539715	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Myeloid	Epithelial
+A_all_tissue	M03	M08	3497	-0.29163325618349	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Plasma	Epithelial
+A_all_tissue	M03	M09	3497	0.896826862083361	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	T_NK	Epithelial
+A_all_tissue	M03	log1p_nCount	3497	0.769622566528259	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	raw X row sum over all frozen features	Epithelial
+A_all_tissue	M03	epi_fraction_gate	3497	0.93227169595637	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	historical c2l mean fraction	Epithelial
+A_all_tissue	M04	M01	3497	0.151486023007444	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	B	Fibroblast
+A_all_tissue	M04	M02	3497	0.257086296992664	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Endothelial	Fibroblast
+A_all_tissue	M04	M03	3497	0.17530382690321	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Epithelial	Fibroblast
+A_all_tissue	M04	M05	3497	0.234134841881424	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Mast	Fibroblast
+A_all_tissue	M04	M06	3497	-0.08219786917886	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Mural	Fibroblast
+A_all_tissue	M04	M07	3497	0.207677511649915	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Myeloid	Fibroblast
+A_all_tissue	M04	M08	3497	0.0014001679565137	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Plasma	Fibroblast
+A_all_tissue	M04	M09	3497	0.0921253836115282	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	T_NK	Fibroblast
+A_all_tissue	M04	log1p_nCount	3497	0.163955712636221	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	raw X row sum over all frozen features	Fibroblast
+A_all_tissue	M04	epi_fraction_gate	3497	0.115265679270651	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	historical c2l mean fraction	Fibroblast
+A_all_tissue	M05	M01	3497	0.945771750646717	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	B	Mast
+A_all_tissue	M05	M02	3497	0.856771054908459	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Endothelial	Mast
+A_all_tissue	M05	M03	3497	0.965214019225867	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Epithelial	Mast
+A_all_tissue	M05	M04	3497	0.234134841881424	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Fibroblast	Mast
+A_all_tissue	M05	M06	3497	0.0726417084946814	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Mural	Mast
+A_all_tissue	M05	M07	3497	0.935713257403602	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Myeloid	Mast
+A_all_tissue	M05	M08	3497	-0.266318707893516	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Plasma	Mast
+A_all_tissue	M05	M09	3497	0.879028552756613	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	T_NK	Mast
+A_all_tissue	M05	log1p_nCount	3497	0.752500991294316	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	raw X row sum over all frozen features	Mast
+A_all_tissue	M05	epi_fraction_gate	3497	0.88788207035095	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	historical c2l mean fraction	Mast
+A_all_tissue	M06	M01	3497	0.0542842313222402	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	B	Mural
+A_all_tissue	M06	M02	3497	0.239607344588293	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Endothelial	Mural
+A_all_tissue	M06	M03	3497	0.0724510027697478	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Epithelial	Mural
+A_all_tissue	M06	M04	3497	-0.08219786917886	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Fibroblast	Mural
+A_all_tissue	M06	M05	3497	0.0726417084946814	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Mast	Mural
+A_all_tissue	M06	M07	3497	-0.028560795366583	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Myeloid	Mural
+A_all_tissue	M06	M08	3497	-0.273089930547249	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Plasma	Mural
+A_all_tissue	M06	M09	3497	0.0094404818253988	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	T_NK	Mural
+A_all_tissue	M06	log1p_nCount	3497	0.0166990891885393	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	raw X row sum over all frozen features	Mural
+A_all_tissue	M06	epi_fraction_gate	3497	0.0034151417067577	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	historical c2l mean fraction	Mural
+A_all_tissue	M07	M01	3497	0.931670017114294	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	B	Myeloid
+A_all_tissue	M07	M02	3497	0.8372227639077	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Endothelial	Myeloid
+A_all_tissue	M07	M03	3497	0.960158629539715	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Epithelial	Myeloid
+A_all_tissue	M07	M04	3497	0.207677511649915	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Fibroblast	Myeloid
+A_all_tissue	M07	M05	3497	0.935713257403602	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Mast	Myeloid
+A_all_tissue	M07	M06	3497	-0.028560795366583	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Mural	Myeloid
+A_all_tissue	M07	M08	3497	-0.284763510539752	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Plasma	Myeloid
+A_all_tissue	M07	M09	3497	0.909048636608217	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	T_NK	Myeloid
+A_all_tissue	M07	log1p_nCount	3497	0.787820814616381	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	raw X row sum over all frozen features	Myeloid
+A_all_tissue	M07	epi_fraction_gate	3497	0.865248190605127	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	historical c2l mean fraction	Myeloid
+A_all_tissue	M08	M01	3497	-0.256585241744686	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	B	Plasma
+A_all_tissue	M08	M02	3497	-0.328218111693137	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Endothelial	Plasma
+A_all_tissue	M08	M03	3497	-0.29163325618349	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Epithelial	Plasma
+A_all_tissue	M08	M04	3497	0.0014001679565137	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Fibroblast	Plasma
+A_all_tissue	M08	M05	3497	-0.266318707893516	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Mast	Plasma
+A_all_tissue	M08	M06	3497	-0.273089930547249	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Mural	Plasma
+A_all_tissue	M08	M07	3497	-0.284763510539752	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Myeloid	Plasma
+A_all_tissue	M08	M09	3497	-0.249499069340348	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	T_NK	Plasma
+A_all_tissue	M08	log1p_nCount	3497	-0.246619647920545	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	raw X row sum over all frozen features	Plasma
+A_all_tissue	M08	epi_fraction_gate	3497	-0.222041618097656	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	historical c2l mean fraction	Plasma
+A_all_tissue	M09	M01	3497	0.936010350055183	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	B	T_NK
+A_all_tissue	M09	M02	3497	0.845211028758065	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Endothelial	T_NK
+A_all_tissue	M09	M03	3497	0.896826862083361	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Epithelial	T_NK
+A_all_tissue	M09	M04	3497	0.0921253836115282	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Fibroblast	T_NK
+A_all_tissue	M09	M05	3497	0.879028552756613	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Mast	T_NK
+A_all_tissue	M09	M06	3497	0.0094404818253988	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Mural	T_NK
+A_all_tissue	M09	M07	3497	0.909048636608217	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Myeloid	T_NK
+A_all_tissue	M09	M08	3497	-0.249499069340348	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Plasma	T_NK
+A_all_tissue	M09	log1p_nCount	3497	0.826643385408339	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	raw X row sum over all frozen features	T_NK
+A_all_tissue	M09	epi_fraction_gate	3497	0.745384636923805	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	historical c2l mean fraction	T_NK
+B_legacy_eligible_complete_cases	MP10	epi_fraction_gate	2414	0.563222698716848	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	historical c2l mean fraction	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	log1p_nCount	2414	0.317615308012281	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	raw X row sum over all frozen features	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F01	2414	0.306133205581232	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Arterial EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F02	2414	0.480202444225523	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	C1QC TAM	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F03	2414	0.339211086343541	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	CD4 Helper/Conventional	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F04	2414	0.567957441749156	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	CD4 Naive/Memory-like	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F05	2414	0.332606237927192	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	CD8 Exhausted	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F06	2414	0.45362994443466	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	CD8 GZMK/Effector-memory-like	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F07	2414	0.27405706623659	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Capillary EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F08	2414	0.437746422803891	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Classical Mono	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F10	2414	0.576525623088716	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	GC B	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F11	2414	0.418158595695372	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	LAMP3 DC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F12	2414	0.508972824637495	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Lymphatic EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F13	2414	0.583057714733686	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Mast	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F14	2414	0.190579641512134	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Matrix_CAF	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F15	2414	0.392907406404308	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	NK	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F16	2414	0.539308744195753	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Naive/Memory B	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F17	2414	0.503385606469531	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Neutrophil	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F18	2414	0.122274654747408	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Pericyte	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F19	2414	-0.0274090971973169	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Plasma	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F20	2414	0.0110538489004189	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	SMC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F21	2414	0.39056389012377	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	SPP1 TAM	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F22	2414	0.43147339655403	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Tfh/CXCL13-like	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F23	2414	0.234480040992715	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Treg	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F24	2414	0.366212748524612	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	Venous EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F25	2414	0.582553234110865	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	cDC1	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F26	2414	0.500465466794003	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	cDC2	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F27	2414	0.131545375006842	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	iCAF	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F28	2414	0.579937898928696	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	pDC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F29	2414	0.313708632180005	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	rCAF	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F30	2414	0.482024619669907	marginal association; separate from importance; no causal sign	NPJ_sample6	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample6	vCAF	EpiMP10 raw Top20 AUCell
+A_all_tissue	M01	M02	3386	0.627051856120001	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Endothelial	B
+A_all_tissue	M01	M03	3386	0.948739681239541	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Epithelial	B
+A_all_tissue	M01	M04	3386	-0.447422336319303	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Fibroblast	B
+A_all_tissue	M01	M05	3386	0.945140091101935	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Mast	B
+A_all_tissue	M01	M06	3386	0.161564201309204	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Mural	B
+A_all_tissue	M01	M07	3386	0.76704923384902	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Myeloid	B
+A_all_tissue	M01	M08	3386	0.011276506012965	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Plasma	B
+A_all_tissue	M01	M09	3386	0.91047536484851	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	T_NK	B
+A_all_tissue	M01	log1p_nCount	3386	0.865411879644829	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	raw X row sum over all frozen features	B
+A_all_tissue	M01	epi_fraction_gate	3386	0.833432507730128	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	historical c2l mean fraction	B
+A_all_tissue	M02	M01	3386	0.627051856120001	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	B	Endothelial
+A_all_tissue	M02	M03	3386	0.622985540294448	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Epithelial	Endothelial
+A_all_tissue	M02	M04	3386	-0.127750605641963	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Fibroblast	Endothelial
+A_all_tissue	M02	M05	3386	0.616410956117182	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Mast	Endothelial
+A_all_tissue	M02	M06	3386	0.497671747460753	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Mural	Endothelial
+A_all_tissue	M02	M07	3386	0.607573952524222	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Myeloid	Endothelial
+A_all_tissue	M02	M08	3386	0.167698299045999	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Plasma	Endothelial
+A_all_tissue	M02	M09	3386	0.663791119689207	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	T_NK	Endothelial
+A_all_tissue	M02	log1p_nCount	3386	0.646752848571042	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	raw X row sum over all frozen features	Endothelial
+A_all_tissue	M02	epi_fraction_gate	3386	0.395123226199263	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	historical c2l mean fraction	Endothelial
+A_all_tissue	M03	M01	3386	0.948739681239541	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	B	Epithelial
+A_all_tissue	M03	M02	3386	0.622985540294448	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Endothelial	Epithelial
+A_all_tissue	M03	M04	3386	-0.507088272585031	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Fibroblast	Epithelial
+A_all_tissue	M03	M05	3386	0.944303964969688	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Mast	Epithelial
+A_all_tissue	M03	M06	3386	0.106248123936116	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Mural	Epithelial
+A_all_tissue	M03	M07	3386	0.870429485933104	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Myeloid	Epithelial
+A_all_tissue	M03	M08	3386	-0.0814743241355353	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Plasma	Epithelial
+A_all_tissue	M03	M09	3386	0.86681325612192	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	T_NK	Epithelial
+A_all_tissue	M03	log1p_nCount	3386	0.867037097947571	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	raw X row sum over all frozen features	Epithelial
+A_all_tissue	M03	epi_fraction_gate	3386	0.887391574437606	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	historical c2l mean fraction	Epithelial
+A_all_tissue	M04	M01	3386	-0.447422336319303	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	B	Fibroblast
+A_all_tissue	M04	M02	3386	-0.127750605641963	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Endothelial	Fibroblast
+A_all_tissue	M04	M03	3386	-0.507088272585031	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Epithelial	Fibroblast
+A_all_tissue	M04	M05	3386	-0.409793364272364	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Mast	Fibroblast
+A_all_tissue	M04	M06	3386	0.328882463100803	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Mural	Fibroblast
+A_all_tissue	M04	M07	3386	-0.421518741631347	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Myeloid	Fibroblast
+A_all_tissue	M04	M08	3386	0.295067281363246	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Plasma	Fibroblast
+A_all_tissue	M04	M09	3386	-0.363580470556074	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	T_NK	Fibroblast
+A_all_tissue	M04	log1p_nCount	3386	-0.375411205849294	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	raw X row sum over all frozen features	Fibroblast
+A_all_tissue	M04	epi_fraction_gate	3386	-0.552567204611863	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	historical c2l mean fraction	Fibroblast
+A_all_tissue	M05	M01	3386	0.945140091101935	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	B	Mast
+A_all_tissue	M05	M02	3386	0.616410956117182	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Endothelial	Mast
+A_all_tissue	M05	M03	3386	0.944303964969688	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Epithelial	Mast
+A_all_tissue	M05	M04	3386	-0.409793364272364	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Fibroblast	Mast
+A_all_tissue	M05	M06	3386	0.139538615931658	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Mural	Mast
+A_all_tissue	M05	M07	3386	0.803266508416096	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Myeloid	Mast
+A_all_tissue	M05	M08	3386	-0.0175368009754138	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Plasma	Mast
+A_all_tissue	M05	M09	3386	0.863454311274316	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	T_NK	Mast
+A_all_tissue	M05	log1p_nCount	3386	0.826743971834849	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	raw X row sum over all frozen features	Mast
+A_all_tissue	M05	epi_fraction_gate	3386	0.830144190460789	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	historical c2l mean fraction	Mast
+A_all_tissue	M06	M01	3386	0.161564201309204	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	B	Mural
+A_all_tissue	M06	M02	3386	0.497671747460753	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Endothelial	Mural
+A_all_tissue	M06	M03	3386	0.106248123936116	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Epithelial	Mural
+A_all_tissue	M06	M04	3386	0.328882463100803	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Fibroblast	Mural
+A_all_tissue	M06	M05	3386	0.139538615931658	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Mast	Mural
+A_all_tissue	M06	M07	3386	0.0867156182236601	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Myeloid	Mural
+A_all_tissue	M06	M08	3386	0.389994091486222	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Plasma	Mural
+A_all_tissue	M06	M09	3386	0.280441914305605	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	T_NK	Mural
+A_all_tissue	M06	log1p_nCount	3386	0.208206725125792	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	raw X row sum over all frozen features	Mural
+A_all_tissue	M06	epi_fraction_gate	3386	-0.0807577065932958	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	historical c2l mean fraction	Mural
+A_all_tissue	M07	M01	3386	0.76704923384902	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	B	Myeloid
+A_all_tissue	M07	M02	3386	0.607573952524222	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Endothelial	Myeloid
+A_all_tissue	M07	M03	3386	0.870429485933104	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Epithelial	Myeloid
+A_all_tissue	M07	M04	3386	-0.421518741631347	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Fibroblast	Myeloid
+A_all_tissue	M07	M05	3386	0.803266508416096	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Mast	Myeloid
+A_all_tissue	M07	M06	3386	0.0867156182236601	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Mural	Myeloid
+A_all_tissue	M07	M08	3386	-0.0279770771479679	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Plasma	Myeloid
+A_all_tissue	M07	M09	3386	0.785477311289241	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	T_NK	Myeloid
+A_all_tissue	M07	log1p_nCount	3386	0.811278073703237	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	raw X row sum over all frozen features	Myeloid
+A_all_tissue	M07	epi_fraction_gate	3386	0.667336876479749	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	historical c2l mean fraction	Myeloid
+A_all_tissue	M08	M01	3386	0.011276506012965	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	B	Plasma
+A_all_tissue	M08	M02	3386	0.167698299045999	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Endothelial	Plasma
+A_all_tissue	M08	M03	3386	-0.0814743241355353	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Epithelial	Plasma
+A_all_tissue	M08	M04	3386	0.295067281363246	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Fibroblast	Plasma
+A_all_tissue	M08	M05	3386	-0.0175368009754138	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Mast	Plasma
+A_all_tissue	M08	M06	3386	0.389994091486222	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Mural	Plasma
+A_all_tissue	M08	M07	3386	-0.0279770771479679	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Myeloid	Plasma
+A_all_tissue	M08	M09	3386	0.178082593520543	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	T_NK	Plasma
+A_all_tissue	M08	log1p_nCount	3386	0.122791497333025	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	raw X row sum over all frozen features	Plasma
+A_all_tissue	M08	epi_fraction_gate	3386	-0.23261063011049	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	historical c2l mean fraction	Plasma
+A_all_tissue	M09	M01	3386	0.91047536484851	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	B	T_NK
+A_all_tissue	M09	M02	3386	0.663791119689207	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Endothelial	T_NK
+A_all_tissue	M09	M03	3386	0.86681325612192	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Epithelial	T_NK
+A_all_tissue	M09	M04	3386	-0.363580470556074	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Fibroblast	T_NK
+A_all_tissue	M09	M05	3386	0.863454311274316	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Mast	T_NK
+A_all_tissue	M09	M06	3386	0.280441914305605	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Mural	T_NK
+A_all_tissue	M09	M07	3386	0.785477311289241	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Myeloid	T_NK
+A_all_tissue	M09	M08	3386	0.178082593520543	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Plasma	T_NK
+A_all_tissue	M09	log1p_nCount	3386	0.861617515635767	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	raw X row sum over all frozen features	T_NK
+A_all_tissue	M09	epi_fraction_gate	3386	0.654329185535605	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	historical c2l mean fraction	T_NK
+B_legacy_eligible_complete_cases	MP10	epi_fraction_gate	2382	0.180815168468885	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	historical c2l mean fraction	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	log1p_nCount	2382	0.232532636442496	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	raw X row sum over all frozen features	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F01	2382	0.227190312339627	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Arterial EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F02	2382	0.1111897205655	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	C1QC TAM	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F03	2382	0.2283734491057	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	CD4 Helper/Conventional	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F04	2382	0.23482984011827	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	CD4 Naive/Memory-like	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F05	2382	0.196729065242035	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	CD8 Exhausted	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F06	2382	0.248076254607879	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	CD8 GZMK/Effector-memory-like	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F07	2382	0.129853318312862	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Capillary EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F08	2382	0.390143714521559	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Classical Mono	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F10	2382	0.218574460569211	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	GC B	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F11	2382	0.383392563893663	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	LAMP3 DC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F12	2382	0.136581492950078	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Lymphatic EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F13	2382	0.255582461171599	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Mast	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F14	2382	-0.278331781990029	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Matrix_CAF	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F15	2382	0.321922118670479	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	NK	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F16	2382	0.236051170730836	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Naive/Memory B	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F17	2382	0.426235790847661	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Neutrophil	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F18	2382	-0.0522406317921923	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Pericyte	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F19	2382	0.0513116161159878	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Plasma	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F20	2382	0.0259208912699748	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	SMC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F21	2382	0.305003296636402	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	SPP1 TAM	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F22	2382	0.248938330695529	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Tfh/CXCL13-like	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F23	2382	0.225063164745849	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Treg	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F24	2382	0.30289282389417	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	Venous EC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F25	2382	0.286621252689296	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	cDC1	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F26	2382	0.269196816055571	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	cDC2	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F27	2382	0.0520535766561452	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	iCAF	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F28	2382	0.387745337380089	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	pDC	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F29	2382	0.0457884465255933	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	rCAF	EpiMP10 raw Top20 AUCell
+B_legacy_eligible_complete_cases	MP10	F30	2382	0.0327989532567339	marginal association; separate from importance; no causal sign	NPJ_sample7	NPJ__UNVERIFIED	NPJ__UNVERIFIED	NA	NPJ_sample7	vCAF	EpiMP10 raw Top20 AUCell

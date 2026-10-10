@@ -1,0 +1,30 @@
+
+Training models
+
+Collecting improvements
+
+Collecting contributions
+
+Collecting importances
+
+Aggregating
+Warning message:
+9 parsing failures.
+row col  expected    actual                                                                                                                                                                    file
+  1  -- 5 columns 6 columns '/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/by_dataset/GSE285715/GSE285715_N2/wang_style_cellcell_intra/coefficients.txt'
+  2  -- 5 columns 6 columns '/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/by_dataset/GSE285715/GSE285715_N2/wang_style_cellcell_intra/coefficients.txt'
+  3  -- 5 columns 6 columns '/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/by_dataset/GSE285715/GSE285715_N2/wang_style_cellcell_intra/coefficients.txt'
+  4  -- 5 columns 6 columns '/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/by_dataset/GSE285715/GSE285715_N2/wang_style_cellcell_intra/coefficients.txt'
+ [... truncated] 
+   branch                status
+   <char>                <char>
+1:      A                  PASS
+2:      B SKIPPED_NOT_ESTIMABLE
+                                                                 reason     n
+                                                                 <char> <int>
+1:                                nonconstant major targets 9 excluded   1722
+2: NOT_ESTIMABLE_B: insufficient complete cases or zero target variance    72
+     section_id   dataset
+         <char>    <char>
+1: GSE285715_N2 GSE285715
+2: GSE285715_N2 GSE285715

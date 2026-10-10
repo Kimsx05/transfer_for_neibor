@@ -1,0 +1,385 @@
+check	status	detail
+63 frozen sections and 7 datasets	PASS	63, 7
+both branches have section status	PASS	A and B separately retained
+no technical block	PASS	{'PASS': 116, 'PASS_WITH_WARNING': 6, 'SKIPPED_NOT_ESTIMABLE': 4}
+pilot first and passed	PASS	BC15
+audited learner equals installed native learner	PASS	exact OOB predictions and impurity importances on real pilot
+native coefficient serialization defect audited and corrected	PASS	685 target-model records; native outputs retained
+only permitted predictors	PASS	checked below against exact allowlists, every target and fold
+CanDis_2026_Sample1 same evaluation spots	PASS	4486 baseline; 4486 full
+CanDis_2026_Sample1 baseline recomputed R2	PASS	0.012643444756883837
+CanDis_2026_Sample1 tme recomputed R2	PASS	0.04554190502153155
+CanDis_2026_Sample1 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+CanDis_2026_Sample1 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+CanDis_2026_Sample1 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE171351_A1 same evaluation spots	PASS	488 baseline; 488 full
+GSE171351_A1 baseline recomputed R2	PASS	-0.06347579984481233
+GSE171351_A1 tme recomputed R2	PASS	0.041849549096364624
+GSE171351_A1 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+GSE171351_A1 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE171351_A1 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE238145_B10 same evaluation spots	PASS	437 baseline; 437 full
+GSE238145_B10 baseline recomputed R2	PASS	0.008372506024041493
+GSE238145_B10 tme recomputed R2	PASS	0.023662100163722166
+GSE238145_B10 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+GSE238145_B10 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE238145_B10 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE285715_N1 same evaluation spots	PASS	213 baseline; 213 full
+GSE285715_N1 baseline recomputed R2	PASS	-0.04202180856135862
+GSE285715_N1 tme recomputed R2	PASS	0.08973267122426254
+GSE285715_N1 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+GSE285715_N1 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE285715_N1 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE319536_BC01 same evaluation spots	PASS	1567 baseline; 1567 full
+GSE319536_BC01 baseline recomputed R2	PASS	0.03564972011414658
+GSE319536_BC01 tme recomputed R2	PASS	0.05835677398172956
+GSE319536_BC01 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+GSE319536_BC01 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE319536_BC01 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+Inhousedata_T4384654 same evaluation spots	PASS	110 baseline; 110 full
+Inhousedata_T4384654 baseline recomputed R2	PASS	-0.07386942196002177
+Inhousedata_T4384654 tme recomputed R2	PASS	-0.08627577145287924
+Inhousedata_T4384654 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+Inhousedata_T4384654 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+Inhousedata_T4384654 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+NPJ_sample1 same evaluation spots	PASS	996 baseline; 996 full
+NPJ_sample1 baseline recomputed R2	PASS	0.2713210472163432
+NPJ_sample1 tme recomputed R2	PASS	0.3806795141103513
+NPJ_sample1 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+NPJ_sample1 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+NPJ_sample1 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+CanDis_2026_Sample10 same evaluation spots	PASS	2111 baseline; 2111 full
+CanDis_2026_Sample10 baseline recomputed R2	PASS	0.06283665454889564
+CanDis_2026_Sample10 tme recomputed R2	PASS	0.12595203300383173
+CanDis_2026_Sample10 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+CanDis_2026_Sample10 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+CanDis_2026_Sample10 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+CanDis_2026_Sample11 same evaluation spots	PASS	247 baseline; 247 full
+CanDis_2026_Sample11 baseline recomputed R2	PASS	-0.029303365330899167
+CanDis_2026_Sample11 tme recomputed R2	PASS	-0.011022390971334062
+CanDis_2026_Sample11 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+CanDis_2026_Sample11 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+CanDis_2026_Sample11 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+CanDis_2026_Sample12 same evaluation spots	PASS	405 baseline; 405 full
+CanDis_2026_Sample12 baseline recomputed R2	PASS	-0.11657221227041248
+CanDis_2026_Sample12 tme recomputed R2	PASS	0.3945526945164215
+CanDis_2026_Sample12 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+CanDis_2026_Sample12 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+CanDis_2026_Sample12 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+CanDis_2026_Sample13 same evaluation spots	PASS	3430 baseline; 3430 full
+CanDis_2026_Sample13 baseline recomputed R2	PASS	0.05303838954784623
+CanDis_2026_Sample13 tme recomputed R2	PASS	0.359272584638316
+CanDis_2026_Sample13 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+CanDis_2026_Sample13 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+CanDis_2026_Sample13 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+CanDis_2026_Sample2 same evaluation spots	PASS	4928 baseline; 4928 full
+CanDis_2026_Sample2 baseline recomputed R2	PASS	0.13819036598596623
+CanDis_2026_Sample2 tme recomputed R2	PASS	0.22460127056592127
+CanDis_2026_Sample2 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+CanDis_2026_Sample2 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+CanDis_2026_Sample2 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+CanDis_2026_Sample3 same evaluation spots	PASS	4553 baseline; 4553 full
+CanDis_2026_Sample3 baseline recomputed R2	PASS	-0.02818284426548079
+CanDis_2026_Sample3 tme recomputed R2	PASS	0.24465511624260639
+CanDis_2026_Sample3 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+CanDis_2026_Sample3 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+CanDis_2026_Sample3 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+CanDis_2026_Sample4 same evaluation spots	PASS	2997 baseline; 2997 full
+CanDis_2026_Sample4 baseline recomputed R2	PASS	0.11109332377335779
+CanDis_2026_Sample4 tme recomputed R2	PASS	0.227164843177868
+CanDis_2026_Sample4 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+CanDis_2026_Sample4 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+CanDis_2026_Sample4 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+CanDis_2026_Sample5 same evaluation spots	PASS	2455 baseline; 2455 full
+CanDis_2026_Sample5 baseline recomputed R2	PASS	-0.024343882306540054
+CanDis_2026_Sample5 tme recomputed R2	PASS	-0.0003450449959478963
+CanDis_2026_Sample5 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+CanDis_2026_Sample5 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+CanDis_2026_Sample5 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+CanDis_2026_Sample6 same evaluation spots	PASS	1753 baseline; 1753 full
+CanDis_2026_Sample6 baseline recomputed R2	PASS	-0.04288238625172225
+CanDis_2026_Sample6 tme recomputed R2	PASS	0.009455964975177755
+CanDis_2026_Sample6 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+CanDis_2026_Sample6 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+CanDis_2026_Sample6 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+CanDis_2026_Sample7 same evaluation spots	PASS	1858 baseline; 1858 full
+CanDis_2026_Sample7 baseline recomputed R2	PASS	0.004789222206740162
+CanDis_2026_Sample7 tme recomputed R2	PASS	0.029925614729734873
+CanDis_2026_Sample7 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+CanDis_2026_Sample7 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+CanDis_2026_Sample7 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+CanDis_2026_Sample8 same evaluation spots	PASS	10711 baseline; 10711 full
+CanDis_2026_Sample8 baseline recomputed R2	PASS	0.022177300021295143
+CanDis_2026_Sample8 tme recomputed R2	PASS	0.1052105604024669
+CanDis_2026_Sample8 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+CanDis_2026_Sample8 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+CanDis_2026_Sample8 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+CanDis_2026_Sample9 same evaluation spots	PASS	2310 baseline; 2310 full
+CanDis_2026_Sample9 baseline recomputed R2	PASS	0.05095119867782172
+CanDis_2026_Sample9 tme recomputed R2	PASS	0.10349175454022985
+CanDis_2026_Sample9 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+CanDis_2026_Sample9 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+CanDis_2026_Sample9 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE171351_B1 same evaluation spots	PASS	959 baseline; 959 full
+GSE171351_B1 baseline recomputed R2	PASS	-0.009265027730904096
+GSE171351_B1 tme recomputed R2	PASS	-0.004650204168219263
+GSE171351_B1 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+GSE171351_B1 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE171351_B1 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE171351_C1 same evaluation spots	PASS	1465 baseline; 1465 full
+GSE171351_C1 baseline recomputed R2	PASS	0.03790139559147132
+GSE171351_C1 tme recomputed R2	PASS	0.058043950013068835
+GSE171351_C1 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+GSE171351_C1 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE171351_C1 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE238145_B11 same evaluation spots	PASS	4887 baseline; 4887 full
+GSE238145_B11 baseline recomputed R2	PASS	-0.01077401970848868
+GSE238145_B11 tme recomputed R2	PASS	0.037106843405650625
+GSE238145_B11 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+GSE238145_B11 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE238145_B11 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE238145_B14 same evaluation spots	PASS	2138 baseline; 2138 full
+GSE238145_B14 baseline recomputed R2	PASS	0.055265742802837914
+GSE238145_B14 tme recomputed R2	PASS	0.10610185536734962
+GSE238145_B14 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+GSE238145_B14 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE238145_B14 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE238145_B15 same evaluation spots	PASS	2782 baseline; 2782 full
+GSE238145_B15 baseline recomputed R2	PASS	0.010153167243784122
+GSE238145_B15 tme recomputed R2	PASS	0.05315101103476849
+GSE238145_B15 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+GSE238145_B15 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE238145_B15 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE238145_B16 same evaluation spots	PASS	4440 baseline; 4440 full
+GSE238145_B16 baseline recomputed R2	PASS	0.011546168087553266
+GSE238145_B16 tme recomputed R2	PASS	0.06971437933268876
+GSE238145_B16 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+GSE238145_B16 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE238145_B16 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE238145_B17 same evaluation spots	PASS	1494 baseline; 1494 full
+GSE238145_B17 baseline recomputed R2	PASS	0.004143650342463778
+GSE238145_B17 tme recomputed R2	PASS	0.06397591182239903
+GSE238145_B17 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+GSE238145_B17 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE238145_B17 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE238145_B5 same evaluation spots	PASS	305 baseline; 305 full
+GSE238145_B5 baseline recomputed R2	PASS	-0.030456360723751796
+GSE238145_B5 tme recomputed R2	PASS	0.03629555106404658
+GSE238145_B5 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+GSE238145_B5 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE238145_B5 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE238145_B9 same evaluation spots	PASS	10550 baseline; 10550 full
+GSE238145_B9 baseline recomputed R2	PASS	0.21195010384766333
+GSE238145_B9 tme recomputed R2	PASS	0.34006521449391625
+GSE238145_B9 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+GSE238145_B9 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE238145_B9 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE285715_N3 same evaluation spots	PASS	2024 baseline; 2024 full
+GSE285715_N3 baseline recomputed R2	PASS	-0.0282990216676704
+GSE285715_N3 tme recomputed R2	PASS	0.05241594554407347
+GSE285715_N3 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+GSE285715_N3 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE285715_N3 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE285715_T1 same evaluation spots	PASS	4167 baseline; 4167 full
+GSE285715_T1 baseline recomputed R2	PASS	0.011151450396170492
+GSE285715_T1 tme recomputed R2	PASS	0.24621563487971754
+GSE285715_T1 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+GSE285715_T1 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE285715_T1 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE285715_T2 same evaluation spots	PASS	3821 baseline; 3821 full
+GSE285715_T2 baseline recomputed R2	PASS	-0.0710289310997021
+GSE285715_T2 tme recomputed R2	PASS	0.11208138097258946
+GSE285715_T2 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+GSE285715_T2 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE285715_T2 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE285715_T3 same evaluation spots	PASS	3317 baseline; 3317 full
+GSE285715_T3 baseline recomputed R2	PASS	-0.026006249135206883
+GSE285715_T3 tme recomputed R2	PASS	0.2997305208435518
+GSE285715_T3 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+GSE285715_T3 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE285715_T3 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE319536_BC02 same evaluation spots	PASS	1744 baseline; 1744 full
+GSE319536_BC02 baseline recomputed R2	PASS	0.1755091482830986
+GSE319536_BC02 tme recomputed R2	PASS	0.34140587924499133
+GSE319536_BC02 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+GSE319536_BC02 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE319536_BC02 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE319536_BC04 same evaluation spots	PASS	2365 baseline; 2365 full
+GSE319536_BC04 baseline recomputed R2	PASS	0.0055168746378423394
+GSE319536_BC04 tme recomputed R2	PASS	0.025826475634871282
+GSE319536_BC04 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+GSE319536_BC04 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE319536_BC04 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE319536_BC05 same evaluation spots	PASS	210 baseline; 210 full
+GSE319536_BC05 baseline recomputed R2	PASS	-0.050771342232937444
+GSE319536_BC05 tme recomputed R2	PASS	-0.01867037605451949
+GSE319536_BC05 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+GSE319536_BC05 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE319536_BC05 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE319536_BC08 same evaluation spots	PASS	1297 baseline; 1297 full
+GSE319536_BC08 baseline recomputed R2	PASS	0.08955880545451633
+GSE319536_BC08 tme recomputed R2	PASS	0.183513181856239
+GSE319536_BC08 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+GSE319536_BC08 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE319536_BC08 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE319536_BC10 same evaluation spots	PASS	2174 baseline; 2174 full
+GSE319536_BC10 baseline recomputed R2	PASS	0.0685593172867125
+GSE319536_BC10 tme recomputed R2	PASS	0.14697370592853776
+GSE319536_BC10 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+GSE319536_BC10 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE319536_BC10 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE319536_BC11 same evaluation spots	PASS	5719 baseline; 5719 full
+GSE319536_BC11 baseline recomputed R2	PASS	0.36091006365104983
+GSE319536_BC11 tme recomputed R2	PASS	0.43744687115338365
+GSE319536_BC11 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+GSE319536_BC11 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE319536_BC11 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE319536_BC12 same evaluation spots	PASS	884 baseline; 884 full
+GSE319536_BC12 baseline recomputed R2	PASS	0.10998587164462137
+GSE319536_BC12 tme recomputed R2	PASS	0.14285797645711606
+GSE319536_BC12 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+GSE319536_BC12 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE319536_BC12 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE319536_BC13 same evaluation spots	PASS	1759 baseline; 1759 full
+GSE319536_BC13 baseline recomputed R2	PASS	-0.051154691305312916
+GSE319536_BC13 tme recomputed R2	PASS	0.12375818287824569
+GSE319536_BC13 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+GSE319536_BC13 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE319536_BC13 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE319536_BC14 same evaluation spots	PASS	1066 baseline; 1066 full
+GSE319536_BC14 baseline recomputed R2	PASS	-0.11636491792521664
+GSE319536_BC14 tme recomputed R2	PASS	0.09601727017959394
+GSE319536_BC14 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+GSE319536_BC14 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE319536_BC14 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE319536_BC15 same evaluation spots	PASS	167 baseline; 167 full
+GSE319536_BC15 baseline recomputed R2	PASS	0.025690850079331362
+GSE319536_BC15 tme recomputed R2	PASS	0.30130114651993745
+GSE319536_BC15 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+GSE319536_BC15 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE319536_BC15 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE319536_BC16 same evaluation spots	PASS	1718 baseline; 1718 full
+GSE319536_BC16 baseline recomputed R2	PASS	0.10919341147358075
+GSE319536_BC16 tme recomputed R2	PASS	0.1499184028413043
+GSE319536_BC16 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+GSE319536_BC16 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE319536_BC16 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE319536_BC17 same evaluation spots	PASS	3508 baseline; 3508 full
+GSE319536_BC17 baseline recomputed R2	PASS	0.020720611002563838
+GSE319536_BC17 tme recomputed R2	PASS	0.02962526089039408
+GSE319536_BC17 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+GSE319536_BC17 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE319536_BC17 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE319536_BC18 same evaluation spots	PASS	2656 baseline; 2656 full
+GSE319536_BC18 baseline recomputed R2	PASS	0.03819411354497082
+GSE319536_BC18 tme recomputed R2	PASS	0.18604585782374727
+GSE319536_BC18 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+GSE319536_BC18 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE319536_BC18 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE319536_BC19 same evaluation spots	PASS	784 baseline; 784 full
+GSE319536_BC19 baseline recomputed R2	PASS	-0.00311681351125781
+GSE319536_BC19 tme recomputed R2	PASS	0.06566922280383103
+GSE319536_BC19 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+GSE319536_BC19 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE319536_BC19 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE319536_BC21 same evaluation spots	PASS	1705 baseline; 1705 full
+GSE319536_BC21 baseline recomputed R2	PASS	0.08049519259880622
+GSE319536_BC21 tme recomputed R2	PASS	0.17327245835383598
+GSE319536_BC21 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+GSE319536_BC21 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+GSE319536_BC21 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+Inhousedata_T4398343 same evaluation spots	PASS	1517 baseline; 1517 full
+Inhousedata_T4398343 baseline recomputed R2	PASS	0.10230948252096761
+Inhousedata_T4398343 tme recomputed R2	PASS	0.18705565588501227
+Inhousedata_T4398343 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+Inhousedata_T4398343 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+Inhousedata_T4398343 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+Inhousedata_T4413900 same evaluation spots	PASS	3842 baseline; 3842 full
+Inhousedata_T4413900 baseline recomputed R2	PASS	0.04764945241153862
+Inhousedata_T4413900 tme recomputed R2	PASS	0.1293834756984129
+Inhousedata_T4413900 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+Inhousedata_T4413900 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+Inhousedata_T4413900 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+Inhousedata_T4463209 same evaluation spots	PASS	1829 baseline; 1829 full
+Inhousedata_T4463209 baseline recomputed R2	PASS	0.23908920187640847
+Inhousedata_T4463209 tme recomputed R2	PASS	0.27672580055222795
+Inhousedata_T4463209 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+Inhousedata_T4463209 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+Inhousedata_T4463209 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+Inhousedata_T4465935 same evaluation spots	PASS	581 baseline; 581 full
+Inhousedata_T4465935 baseline recomputed R2	PASS	-0.024958429722764075
+Inhousedata_T4465935 tme recomputed R2	PASS	-0.01068298033911419
+Inhousedata_T4465935 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+Inhousedata_T4465935 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+Inhousedata_T4465935 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+Inhousedata_T4469479 same evaluation spots	PASS	1846 baseline; 1846 full
+Inhousedata_T4469479 baseline recomputed R2	PASS	0.06979539950911084
+Inhousedata_T4469479 tme recomputed R2	PASS	0.2290941343305033
+Inhousedata_T4469479 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+Inhousedata_T4469479 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+Inhousedata_T4469479 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+Inhousedata_T4471438 same evaluation spots	PASS	2256 baseline; 2256 full
+Inhousedata_T4471438 baseline recomputed R2	PASS	0.024142567703487217
+Inhousedata_T4471438 tme recomputed R2	PASS	0.17149537992476727
+Inhousedata_T4471438 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+Inhousedata_T4471438 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+Inhousedata_T4471438 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+NPJ_sample2 same evaluation spots	PASS	3217 baseline; 3217 full
+NPJ_sample2 baseline recomputed R2	PASS	0.11593307292192156
+NPJ_sample2 tme recomputed R2	PASS	0.3296503712342349
+NPJ_sample2 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+NPJ_sample2 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+NPJ_sample2 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+NPJ_sample3 same evaluation spots	PASS	3182 baseline; 3182 full
+NPJ_sample3 baseline recomputed R2	PASS	-0.126370712964871
+NPJ_sample3 tme recomputed R2	PASS	0.36832091414138746
+NPJ_sample3 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+NPJ_sample3 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+NPJ_sample3 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+NPJ_sample4 same evaluation spots	PASS	1885 baseline; 1885 full
+NPJ_sample4 baseline recomputed R2	PASS	-0.08046552650058647
+NPJ_sample4 tme recomputed R2	PASS	0.13661859433152024
+NPJ_sample4 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+NPJ_sample4 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+NPJ_sample4 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+NPJ_sample5 same evaluation spots	PASS	2186 baseline; 2186 full
+NPJ_sample5 baseline recomputed R2	PASS	0.29524662467097385
+NPJ_sample5 tme recomputed R2	PASS	0.47769048260469493
+NPJ_sample5 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+NPJ_sample5 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+NPJ_sample5 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+NPJ_sample6 same evaluation spots	PASS	2414 baseline; 2414 full
+NPJ_sample6 baseline recomputed R2	PASS	0.2563919337178364
+NPJ_sample6 tme recomputed R2	PASS	0.3853436492828176
+NPJ_sample6 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+NPJ_sample6 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+NPJ_sample6 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+NPJ_sample7 same evaluation spots	PASS	2382 baseline; 2382 full
+NPJ_sample7 baseline recomputed R2	PASS	-0.06666728280855838
+NPJ_sample7 tme recomputed R2	PASS	0.20120691772224297
+NPJ_sample7 spatial fold audit	PASS	training-only OOB calibration; fixed folds
+NPJ_sample7 wang_style_cellcell_intra importance formula	PASS	sample-SD standardization times (1-p_intra)
+NPJ_sample7 mp10_target_extension importance formula	PASS	sample-SD standardization times (1-p_intra)
+cellcell_median_standardized_importance PDF	PASS	/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/by_dataset/CanDis__UNVERIFIED/figures/cellcell_median_standardized_importance.pdf
+mp10_predictive_importance_by_section PDF	PASS	/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/by_dataset/CanDis__UNVERIFIED/figures/mp10_predictive_importance_by_section.pdf
+mp10_baseline_vs_tme_spatial_R2 PDF	PASS	/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/by_dataset/CanDis__UNVERIFIED/figures/mp10_baseline_vs_tme_spatial_R2.pdf
+cellcell_median_standardized_importance PDF	PASS	/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/by_dataset/GSE171351/figures/cellcell_median_standardized_importance.pdf
+mp10_predictive_importance_by_section PDF	PASS	/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/by_dataset/GSE171351/figures/mp10_predictive_importance_by_section.pdf
+mp10_baseline_vs_tme_spatial_R2 PDF	PASS	/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/by_dataset/GSE171351/figures/mp10_baseline_vs_tme_spatial_R2.pdf
+cellcell_median_standardized_importance PDF	PASS	/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/by_dataset/GSE238145/figures/cellcell_median_standardized_importance.pdf
+mp10_predictive_importance_by_section PDF	PASS	/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/by_dataset/GSE238145/figures/mp10_predictive_importance_by_section.pdf
+mp10_baseline_vs_tme_spatial_R2 PDF	PASS	/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/by_dataset/GSE238145/figures/mp10_baseline_vs_tme_spatial_R2.pdf
+cellcell_median_standardized_importance PDF	PASS	/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/by_dataset/GSE285715/figures/cellcell_median_standardized_importance.pdf
+mp10_predictive_importance_by_section PDF	PASS	/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/by_dataset/GSE285715/figures/mp10_predictive_importance_by_section.pdf
+mp10_baseline_vs_tme_spatial_R2 PDF	PASS	/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/by_dataset/GSE285715/figures/mp10_baseline_vs_tme_spatial_R2.pdf
+cellcell_median_standardized_importance PDF	PASS	/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/by_dataset/GSE319536/figures/cellcell_median_standardized_importance.pdf
+mp10_predictive_importance_by_section PDF	PASS	/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/by_dataset/GSE319536/figures/mp10_predictive_importance_by_section.pdf
+mp10_baseline_vs_tme_spatial_R2 PDF	PASS	/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/by_dataset/GSE319536/figures/mp10_baseline_vs_tme_spatial_R2.pdf
+cellcell_median_standardized_importance PDF	PASS	/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/by_dataset/Inhousedata__UNVERIFIED/figures/cellcell_median_standardized_importance.pdf
+mp10_predictive_importance_by_section PDF	PASS	/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/by_dataset/Inhousedata__UNVERIFIED/figures/mp10_predictive_importance_by_section.pdf
+mp10_baseline_vs_tme_spatial_R2 PDF	PASS	/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/by_dataset/Inhousedata__UNVERIFIED/figures/mp10_baseline_vs_tme_spatial_R2.pdf
+cellcell_median_standardized_importance PDF	PASS	/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/by_dataset/NPJ__UNVERIFIED/figures/cellcell_median_standardized_importance.pdf
+mp10_predictive_importance_by_section PDF	PASS	/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/by_dataset/NPJ__UNVERIFIED/figures/mp10_predictive_importance_by_section.pdf
+mp10_baseline_vs_tme_spatial_R2 PDF	PASS	/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/by_dataset/NPJ__UNVERIFIED/figures/mp10_baseline_vs_tme_spatial_R2.pdf
+pilot_spatial_fold_audit PDF	PASS	/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/figures/pilot_spatial_fold_audit.pdf
+600 dpi PNGs	PASS	22

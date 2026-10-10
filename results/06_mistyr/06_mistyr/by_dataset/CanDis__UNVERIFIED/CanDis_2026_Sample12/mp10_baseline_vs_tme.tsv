@@ -1,0 +1,3 @@
+model	n_complete_case	n_predictions	target_variance	spatial_r2	spatial_rmse	spatial_mae	spatial_q2_train_mean	spatial_cv_complete	delta_r2_tme_minus_baseline	delta_rmse_baseline_minus_tme	importance_interpretable	status
+"baseline"	405	405	0.0152602541420387	-0.116572212270413	0.130372940782788	0.108669981031907	-0.00820998524004901	TRUE	0.511124906786834	0.0343705100069529	TRUE	"PASS"
+"tme"	405	405	0.0152602541420387	0.394552694516421	0.0960024307758352	0.0770668828979284	0.453310755706507	TRUE	0.511124906786834	0.0343705100069529	TRUE	"PASS"

@@ -1,0 +1,6 @@
+Error in parse("spatial_ecology_top20_v2/06_mistyr/code/model_section.R") : 
+  spatial_ecology_top20_v2/06_mistyr/code/model_section.R:63:8: unexpected ')'
+62:     data.table(scope=scope,target=t,predictor=v,n=sum(z),spearman_rho=if(length(a)>2&&var(a)>0&&var(b)>0)cor(a,b,method='spearman') else NA_real_,meaning='marginal association; separate from i
+63:   })))))
+           ^
+Execution halted

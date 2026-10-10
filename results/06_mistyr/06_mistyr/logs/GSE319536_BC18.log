@@ -1,0 +1,56 @@
+
+Training models
+
+Collecting improvements
+
+Collecting contributions
+
+Collecting importances
+
+Aggregating
+Warning message:
+9 parsing failures.
+row col  expected    actual                                                                                                                                                                      file
+  1  -- 5 columns 6 columns '/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/by_dataset/GSE319536/GSE319536_BC18/wang_style_cellcell_intra/coefficients.txt'
+  2  -- 5 columns 6 columns '/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/by_dataset/GSE319536/GSE319536_BC18/wang_style_cellcell_intra/coefficients.txt'
+  3  -- 5 columns 6 columns '/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/by_dataset/GSE319536/GSE319536_BC18/wang_style_cellcell_intra/coefficients.txt'
+  4  -- 5 columns 6 columns '/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/by_dataset/GSE319536/GSE319536_BC18/wang_style_cellcell_intra/coeffici [... truncated] 
+
+Training models
+
+Collecting improvements
+
+Collecting contributions
+
+Collecting importances
+
+Aggregating
+
+Training models
+
+Collecting improvements
+
+Collecting contributions
+
+Collecting importances
+
+Aggregating
+Warning messages:
+1: In ...furrr_fn(...) :
+  Negative performance detected and replaced with 0 for target MP10
+2: 1 parsing failure.
+row col  expected    actual                                                                                                                                                                    file
+  1  -- 5 columns 6 columns '/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/by_dataset/GSE319536/GSE319536_BC18/mp10_technical_baseline/coefficients.txt'
+ 
+3: 1 parsing failure.
+row col  expected    actual                                                                                                                                                                  file
+  1  -- 5 columns 6 columns '/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/06_mistyr/by_dataset/GSE319536/GSE319536_BC18/mp10_target_extension/coefficients.txt'
+ 
+   branch status                                     reason     n
+   <char> <char>                                     <char> <int>
+1:      A   PASS      nonconstant major targets 9 excluded   2847
+2:      B   PASS positive spatial performance and increment  2656
+       section_id   dataset
+           <char>    <char>
+1: GSE319536_BC18 GSE319536
+2: GSE319536_BC18 GSE319536
