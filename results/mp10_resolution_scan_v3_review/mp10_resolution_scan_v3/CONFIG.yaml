@@ -1,0 +1,78 @@
+version: mp10_resolution_scan_v3.1
+FULL_n: 123699
+representations:
+- FULL_RAW
+- FULL_Z
+resolutions:
+- 0.05
+- 0.1
+- 0.2
+- 0.3
+- 0.4
+- 0.5
+- 0.6
+- 0.8
+- 1.0
+- 1.2
+- 1.5
+- 2.0
+seed: 42
+threads: 2
+source_v1: /home/data/t070721/codex_workspace/Bladder Metabolism/mp_ucell_state_v1
+source_v2: /home/data/t070721/codex_workspace/Bladder Metabolism/mp_ucell_state_followup_v2
+frozen: /home/data/t070721/Metabolistic_scRNA/Multi2/4.3 NMF allgene/output_full_cc_seed5_v2
+input: /home/data/t070721/Metabolistic_scRNA/Multi2/3.4 malignant cell process/PCA_ALLGENE1/epi_cycling_allgene_harmony_clustered_final_after_small_removal.qs
+graph:
+  reuse: yes
+  k: 20
+  nn_method: annoy
+  n_trees: 50
+  metric: euclidean
+  l2_norm: no
+  prune_SNN: 0.06666666666666667
+leiden:
+  algorithm: 4
+  backend: leidenbase
+  objective: RBConfigurationVertexPartition
+  modularity_fxn: 1
+  n_iter: 10
+  group_singletons: yes
+high:
+  NMF: frozen raw usage >= saved cutoff
+  UCell: FULL raw MP10 quantile(type=7,p=.90), >= cutoff, ties retained
+candidate:
+  rank: F1 desc, min(P,R) desc, P desc, canonical numeric cluster ID asc
+  local: sum(SNN[C,K])/(n_C*n_K); max; tie canonical numeric cluster ID
+  extra: maximum outside high TP; winner high, NMF if dual; only when different from
+    nearest; max one
+DE:
+  min_cells: 30
+  min_pairs: 3
+  design: ~sample+group; reference Right; groupLeft
+  filter_min_count: 10.0
+  filter_min_total_count: 15.0
+  filter_large_n: 10.0
+  filter_min_prop: 0.7
+  TMM: yes
+  robust: yes
+  legacy: no
+  shortlist: FDR<.05, log2FC>=.5, detection_left>=.1, positive_fraction>=.7; dataset
+    direction, sample direction, detection delta, logFC desc, gene ID asc; max20
+function_analysis:
+  cache: /home/data/t070721/Metabolistic_scRNA/Multi2/4.3 NMF allgene/output_full_cc_seed5_v2/11A_msigdb_gene_sets_cache.qs
+  collections:
+  - GO:BP
+  - Reactome
+  rank: sign(log2FC)*sqrt(F)
+  duplicate_mapping: highest logCPM, then original gene_id; no merge
+  method: fgseaMultilevel
+  sampleSize: 101
+  nPermSimple: 1000
+  minSize: 10
+  maxSize: 500
+  eps: 0.0001
+  nproc: 1
+  seed: 42
+recommendation: Global F1 winner for each high across all 24 partitions; same tie
+  rules then representation and resolution asc; union; selected before DEG. q80/q95
+  descriptive only.

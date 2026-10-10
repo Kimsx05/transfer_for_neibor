@@ -1,0 +1,331 @@
+expression(source("/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_resolution_scan_v3/code/00_common.R"), 
+    checks <- list(), add <- function(item, pass, detail = "") {
+        checks[[length(checks) + 1L]] <<- data.table(item = item, 
+            status = if (all(pass)) 
+                "PASS"
+            else "FAIL", detail = as.character(detail))
+    }, md <- qread(out("00_audit/cell_metadata.qs")), sizes <- fread(out("01_partitions/all_cluster_sizes.tsv")), 
+    met <- fread(out("02_coverage/all_clusters_two_high.tsv")), 
+    can <- fread(out("03_candidates/candidates_preDE.tsv")), 
+    ct <- fread(out("03_candidates/comparisons_preDE.tsv")), 
+    models <- fread(out("04_pseudobulk_markers/model_summary.tsv")), 
+    cov <- fread(out("02_coverage/candidate_source_coverage.tsv")), 
+    add("FULL identity", nrow(md) == 123699 & !anyDuplicated(md$cell_id) & 
+        uniqueN(md$sample) == 57 & uniqueN(md$dataset) == 5 & 
+        sum(md$source == "Normal") == 22436), add("24 partitions", 
+        uniqueN(sizes$partition) == 24), add("each partition cell sums", 
+        sizes[, sum(n_cells), by = partition]$V1 == 123699), 
+    add("fixed high totals", sum(md$NMF_high) == 12370 & sum(md$UCell_high) == 
+        12372 & sum(md$NMF_high & md$UCell_high) == 7002), add("all old partitions reproduced", 
+        all(fread(out("00_audit/old_partition_reproduction.tsv"))$reproduced_up_to_permutation)), 
+    add("all TP sums", met[, .(observed = sum(TP), expected = unique(n_high)), 
+        by = .(partition, high)][, all(observed == expected)]), 
+    add("all confusion nonnegative", all(as.matrix(met[, .(TP, 
+        FP, FN, TN)]) >= 0)), add("all F1 formula", max(abs(met$F1 - 
+        2 * met$TP/(met$n_cluster + met$n_high))) < 1e-12), for (p in unique(sizes$partition)) {
+        a <- qread(out(paste0("01_partitions/", p, ".qs")))
+        add(paste(p, "ID alignment and member hashes"), identical(a$cell_id, 
+            md$cell_id) & all(a[, .(member_hash = memberhash(cell_id)), 
+            by = cluster][sizes[partition == p], on = "cluster", 
+            member_hash == i.member_hash]))
+    }, rank <- copy(met), setorderv(rank, c("partition", "high", 
+        "F1", "minPR", "precision", "cluster_numeric"), c(1, 
+        1, -1, -1, -1, 1)), wins <- rank[, .SD[1], by = .(partition, 
+        high)], add("fixed per-partition winners", setequal(wins$result_id, 
+        can$result_id)), add("all candidates have rest and local", 
+        ct[, all(c("rest", "local") %in% control_type), by = candidate_id]$V1 & 
+            uniqueN(ct$candidate_id) == nrow(can)), add("each comparison has model status", 
+        setequal(ct$comparison_id, models$comparison_id) & !anyNA(models$status)), 
+    add("no silently missing candidates", all(can$candidate_id %in% 
+        models$candidate_id)), add("all57 sample coverage retained", 
+        cov[field == "sample", .N, by = .(candidate_id, high)]$N == 
+            57), add("all5 datasets retained", cov[field == "dataset", 
+        .N, by = .(candidate_id, high)]$N == 5), add("zero high denominator NA recall", 
+        cov[n_high == 0, all(is.na(recall))]), add("zero candidate denominator NA precision", 
+        cov[n_candidate == 0, all(is.na(precision))]), add("zero-hit samples recall0", 
+        cov[n_high > 0 & TP == 0, all(recall == 0)]), fi <- fread(out("00_audit/INPUT_MANIFEST.tsv"), 
+        colClasses = c(mtime = "character")), now <- file.info(fi$path), 
+    add("readonly input sizes unchanged", now$size == fi$bytes), 
+    add("readonly input mtimes unchanged", format(now$mtime, 
+        "%Y-%m-%d %H:%M:%OS6 %z") == fi$mtime), tot <- qread(out("04_pseudobulk_markers/sample_totals.qs")), 
+    nn <- md[, .(features = sum(nFeature_counts), counts = sum(nCount_counts), 
+        cells = .N), by = sample], nn <- nn[match(tot$meta$sample, 
+        sample)], add("sample count totals match original metadata", 
+        all(colSums(tot$counts) == nn$counts)), add("detected sums match original positive-feature counts", 
+        all(colSums(tot$detected_sum) == nn$features), "Also rules out counting explicit stored zero entries as detections"), 
+    add("sample cell totals", tot$meta$n_cells == nn$cells), 
+    for (k in unique(models$model_key)) {
+        d <- paste0("04_pseudobulk_markers/models/", k, "/")
+        st <- fread(out(paste0(d, "status.tsv")))
+        el <- fread(out(paste0(d, "eligibility.tsv")))
+        add(paste(k, "complete eligibility"), nrow(el) == 57 & 
+            all(el$eligible == (el$n_left >= 30 & el$n_right >= 
+                30)))
+        add(paste(k, "checkpoint exists"), file.exists(out(paste0(d, 
+            "COMPLETE"))))
+        if (st$status == "COMPLETE") {
+            r <- fread(out(paste0(d, "DE_full.tsv.gz")))
+            f <- fread(out(paste0(d, "filter.tsv.gz")))
+            add(paste(k, "DE finite and BH"), all(is.finite(r$log2FC)) & 
+                all(is.finite(r$PValue)) & max(abs(r$FDR - p.adjust(r$PValue, 
+                "BH"))) < 1e-10)
+            add(paste(k, "tested IDs and pair count"), setequal(r$gene_id, 
+                f[tested == TRUE, gene_id]) & unique(r$n_samples) == 
+                sum(el$eligible) & st$n_pairs >= 3)
+            sh <- fread(out(paste0(d, "shortlist.tsv")))
+            add(paste(k, "shortlist rules"), nrow(sh) <= 20 & 
+                all(sh$FDR < 0.05 & sh$log2FC >= 0.5 & sh$pct_left >= 
+                  0.1 & sh$positive_fraction >= 0.7))
+            fg <- fread(out(paste0("05_function/", k, "/enrichment_all.tsv.gz")))
+            add(paste(k, "functional results retained"), all(c("NES", 
+                "padj", "leadingEdge", "leading_edge_input_genes") %in% 
+                names(fg)))
+            rk <- fread(out(paste0(d, "rank_mapping.tsv.gz")))
+            add(paste(k, "all tested rank IDs"), setequal(rk$gene_id, 
+                r$gene_id) & !anyDuplicated(rk[mapping_reason == 
+                "eligible", gene_symbol]))
+            add(paste(k, "positive residual df"), st$residual_df > 
+                0)
+        }
+        else add(paste(k, "explicit not-testable reason"), nzchar(st$reason) & 
+            st$status == "NOT_TESTABLE")
+    }, idx <- fread(out("07_figures/figure_index.tsv")), add("all figure pairs/data exist", 
+        file.exists(c(idx$pdf, idx$png, idx$plot_data))), pdfpages <- vapply(idx$pdf, 
+        function(p) pdftools::pdf_info(p)$pages, integer(1)), 
+    add("all PDF readable", pdfpages == 1), add("all datasets have figures", 
+        vapply(unique(md$dataset), function(ds) any(startsWith(idx$figure, 
+            paste0(ds, "__"))), logical(1))), final <- fread(out("08_review/FINAL_CANDIDATES.tsv")), 
+    add("38 complete candidate review rows", nrow(final) == nrow(can) & 
+        setequal(final$candidate_id, can$candidate_id)), dm <- fread(out("08_review/display_marker_evidence.tsv")), 
+    add("display max3", dm[, .N, by = candidate_id]$N <= 3), 
+    wt(rbindlist(checks), "FINAL_ACCEPTANCE.tsv"), stopifnot(all(rbindlist(checks)$status == 
+        "PASS")), capture.output(sessionInfo(), file = out("logs/sessionInfo_final.txt")), 
+    logmsg(nrow(rbindlist(checks)), "checks passed;", nrow(idx), 
+        "figure pairs"))
+expression(source("/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_resolution_scan_v3/code/00_common.R"), 
+    stopifnot(file.exists(out("04_pseudobulk_markers/COMPLETE"))), 
+    can <- fread(out("03_candidates/candidates_preDE.tsv")), 
+    cts <- fread(out("04_pseudobulk_markers/model_summary.tsv")), 
+    ann <- fread(out("00_audit/gene_annotation.tsv.gz")), sets <- qread(out("05_function/frozen_GO_BP_Reactome.qs")), 
+    md <- qread(out("00_audit/cell_metadata.qs")), sm <- unique(md[, 
+        .(sample, dataset, source)]), sig <- fread(file.path(old, 
+        "01_signatures/top50_signatures.tsv")), display <- list(), 
+    allshort <- list(), fun <- list(), dot <- list(), directions <- list(), 
+    eligs <- list(), families <- list(fatty_acid = "FATTY_ACID", 
+        cholesterol_sterol = "CHOLESTEROL|STEROL|MEVALONATE", 
+        other_lipid = "LIPID|PHOSPHOLIPID|SPHINGO|TRIGLYCERIDE", 
+        response_stress = "STRESS|RESPONSE_TO|HEAT_SHOCK|UNFOLDED_PROTEIN", 
+        proliferation = "CELL_CYCLE|MITOTIC|DNA_REPLICATION", 
+        epithelial = "EPITHELI|KERATIN|CELL_CELL_ADHESION|TIGHT_JUNCTION"), 
+    familygenes <- lapply(families, function(p) unique(unlist(sets[grepl(p, 
+        names(sets))]))), familyof <- function(g) {
+        f <- names(familygenes)[vapply(familygenes, function(x) g %in% 
+            x, logical(1))]
+        if (length(f)) 
+            paste(f, collapse = ";")
+        else "unclassified"
+    }, for (i in 1:nrow(cts)) {
+        ct <- cts[i]
+        dir <- paste0("04_pseudobulk_markers/models/", ct$model_key, 
+            "/")
+        el <- fread(out(paste0(dir, "eligibility.tsv")))
+        el[, `:=`(comparison_id, ct$comparison_id)]
+        eligs[[i]] <- el
+        if (ct$status != "COMPLETE") 
+            next
+        sh <- fread(out(paste0(dir, "shortlist.tsv")))
+        sh[, `:=`(comparison_id = ct$comparison_id, candidate_id = ct$candidate_id, 
+            control_type = ct$control_type)]
+        allshort[[length(allshort) + 1L]] <- sh
+        fg <- fread(out(paste0("05_function/", ct$model_key, 
+            "/enrichment_all.tsv.gz")))
+        for (fa in names(families)) {
+            z <- fg[grepl(families[[fa]], pathway)]
+            if (fa == "other_lipid") 
+                z <- z[!grepl("FATTY_ACID|CHOLESTEROL|STEROL|MEVALONATE", 
+                  pathway)]
+            for (di in c("positive", "negative")) {
+                zz <- z[is.finite(padj) & if (di == "positive") 
+                  NES > 0
+                else NES < 0]
+                setorderv(zz, c("padj", "NES", "pathway"), c(1, 
+                  if (di == "positive") -1 else 1, 1))
+                zz <- head(zz, 3)
+                zz[, `:=`(comparison_id = ct$comparison_id, candidate_id = ct$candidate_id, 
+                  control_type = ct$control_type, function_family = fa, 
+                  direction = di)]
+                fun[[length(fun) + 1L]] <- zz
+            }
+        }
+    }, wt(rbindlist(eligs), "04_pseudobulk_markers/all_comparison_eligibility.tsv"), 
+    wt(rbindlist(allshort, fill = TRUE), "08_review/all_shortlists.tsv"), 
+    fs <- rbindlist(fun, fill = TRUE), wt(fs, "08_review/function_family_summary.tsv"), 
+    for (k in can$candidate_id) {
+        ct <- cts[candidate_id == k]
+        rest <- ct[control_type == "rest"]
+        loc <- ct[control_type == "local"]
+        chosen <- data.table(gene_id = character(), in_any_14MP_top50 = logical())
+        if (rest$status == "COMPLETE") {
+            r <- fread(out(paste0("04_pseudobulk_markers/models/", 
+                rest$model_key, "/DE_full.tsv.gz")))
+            r <- r[FDR < 0.05 & log2FC >= 0.5 & pct_left >= 0.1 & 
+                positive_fraction >= 0.7]
+            r[, `:=`(local_qualified, FALSE)]
+            if (loc$status == "COMPLETE") {
+                l <- fread(out(paste0("04_pseudobulk_markers/models/", 
+                  loc$model_key, "/DE_full.tsv.gz")))
+                ll <- l[FDR < 0.05 & log2FC >= 0.5 & pct_left >= 
+                  0.1 & positive_fraction >= 0.7, gene_id]
+                r[, `:=`(local_qualified, gene_id %in% ll)]
+                r <- r[local_qualified == TRUE]
+            }
+            else {
+                r[, `:=`(local_qualified, NA)]
+            }
+            r[, `:=`(function_family, vapply(gene_id, familyof, 
+                character(1)))]
+            r[, `:=`(gene_family_prefix, sub("[0-9].*$", "", 
+                gene_id))]
+            setorderv(r, c("in_any_14MP_top50", "positive_fraction", 
+                "detection_delta", "log2FC", "gene_id"), c(1, 
+                -1, -1, -1, 1))
+            picked <- integer()
+            usedprefix <- character()
+            usedcat <- character()
+            for (j in seq_len(nrow(r))) {
+                if (length(picked) >= 3) 
+                  break
+                if (r$gene_family_prefix[j] %in% usedprefix) 
+                  next
+                if (length(picked) > 0 && r$function_family[j] %in% 
+                  usedcat && any(!r$function_family[seq_len(nrow(r))] %in% 
+                  usedcat)) 
+                  next
+                picked <- c(picked, j)
+                usedprefix <- c(usedprefix, r$gene_family_prefix[j])
+                usedcat <- c(usedcat, r$function_family[j])
+            }
+            chosen <- r[picked]
+            chosen[, `:=`(candidate_id = k, selection_reason = if (loc$status == 
+                "COMPLETE") 
+                "passes rest and nearest-local fixed gates; non-input priority, diverse gene prefix/function annotations"
+            else "rest-supported only; local NOT_TESTABLE; no local specificity claim")]
+            if (nrow(chosen)) 
+                display[[k]] <- chosen
+        }
+        can[candidate_id == k, `:=`(display_markers = paste(chosen$gene_id, 
+            collapse = ";"), non_input_markers = paste(chosen[in_any_14MP_top50 == 
+            FALSE, gene_id], collapse = ";"), marker_status = if (rest$status != 
+            "COMPLETE") 
+            "NOT_TESTABLE_rest"
+        else if (loc$status != "COMPLETE") 
+            "local_NOT_TESTABLE"
+        else if (nrow(chosen) == 0) 
+            "no_gene_passes_rest_and_local_gates"
+        else "paired_local_supported", rest_pairs = rest$n_pairs, 
+            local_pairs = loc$n_pairs)]
+        if (nrow(chosen)) 
+            for (j in 1:nrow(ct)) {
+                cc <- ct[j]
+                a <- qread(out(paste0("04_pseudobulk_markers/models/", 
+                  cc$model_key, "/sample_expression.qs")))
+                ix <- match(chosen$gene_id, a$genes)
+                qual <- which(a$eligible)
+                if (!length(qual)) 
+                  next
+                d <- rbindlist(lapply(seq_along(ix), function(z) data.table(gene_id = chosen$gene_id[z], 
+                  sample = a$samples[qual], expr_left = a$expression_left[ix[z], 
+                    qual], expr_right = a$expression_right[ix[z], 
+                    qual], det_left = a$detection_left[ix[z], 
+                    qual], det_right = a$detection_right[ix[z], 
+                    qual])))
+                d <- merge(d, sm, by = "sample", all.x = TRUE)
+                d[, `:=`(candidate_id = k, comparison_id = cc$comparison_id, 
+                  control_type = cc$control_type, delta = expr_left - 
+                    expr_right)]
+                directions[[length(directions) + 1L]] <- d
+                for (ds in c("ALL", sort(unique(md$dataset)))) {
+                  dd <- if (ds == "ALL") 
+                    d
+                  else d[dataset == ds]
+                  if (!nrow(dd)) 
+                    next
+                  dd <- dd[, .(expr_left = mean(expr_left), expr_right = mean(expr_right), 
+                    det_left = mean(det_left), det_right = mean(det_right), 
+                    n_samples = .N, positive_fraction = mean(delta > 
+                      0)), by = .(gene_id, candidate_id, comparison_id, 
+                    control_type)]
+                  dd[, `:=`(scope, ds)]
+                  dot[[length(dot) + 1L]] <- dd
+                }
+            }
+    }, wt(rbindlist(display, fill = TRUE), "08_review/display_marker_evidence.tsv"), 
+    wt(rbindlist(dot, fill = TRUE), "08_review/display_marker_DotPlot_data.tsv"), 
+    wt(rbindlist(directions, fill = TRUE), "08_review/display_marker_sample_directions.tsv.gz"), 
+    cov <- fread(out("02_coverage/candidate_source_coverage.tsv")), 
+    eq <- fread(out("02_coverage/sample_equal_summary.tsv")), 
+    for (i in 1:nrow(can)) {
+        k <- can$candidate_id[i]
+        s <- cov[candidate_id == k & high == "NMF" & field == 
+            "sample"]
+        ds <- cov[candidate_id == k & high == "NMF" & field == 
+            "dataset"]
+        src <- cov[candidate_id == k & high == "NMF" & field == 
+            "source"]
+        a <- s[which.max(contribution)]
+        b <- ds[which.max(contribution)]
+        f <- fs[candidate_id == k & control_type == "rest" & 
+            direction == "positive" & padj < 0.05]
+        funstr <- if (nrow(f)) 
+            paste(unique(f$function_family), collapse = ";")
+        else "no_positive_family_FDR_lt05"
+        can[i, `:=`(n_samples_present = sum(s$n_candidate > 0), 
+            n_datasets_present = sum(ds$n_candidate > 0), max_sample = a$level, 
+            max_sample_contribution = a$contribution, max_dataset = b$level, 
+            max_dataset_contribution = b$contribution, source_composition = paste(paste0(src$level, 
+                ":", src$n_candidate), collapse = ";"), NMF_zero_recall = eq[candidate_id == 
+                k & high == "NMF", n_high_zero_recall], UCell_zero_recall = eq[candidate_id == 
+                k & high == "UCell", n_high_zero_recall], function_summary = funstr, 
+            limitations = paste("Discovery RNA; sample not verified patient;", 
+                if (b$contribution > 0.5) 
+                  "one dataset >50%;"
+                else "", if (a$contribution > 0.25) 
+                  "one sample >25%;"
+                else "", can$marker_status[i]))]
+    }, wt(can, "08_review/FINAL_CANDIDATES.tsv"), wt(can[recommended == 
+        TRUE], "08_review/RECOMMENDED_CANDIDATES.tsv"), keycan <- can[recommended == 
+        TRUE], restcts <- cts[candidate_id %in% keycan$candidate_id & 
+        control_type == "rest"], shared <- Reduce(intersect, 
+        lapply(restcts$model_key, function(k) fread(out(paste0("04_pseudobulk_markers/models/", 
+            k, "/eligibility.tsv")))[eligible == TRUE, sample])), 
+    oldpb <- qread(file.path(v2, "02_pseudobulk_markers/r04_C8_vs_rest_pseudobulk.qs")), 
+    shared <- intersect(shared, oldpb$meta[eligible == TRUE, 
+        sample]), gg <- sort(unique(c(unlist(strsplit(keycan$display_markers, 
+        ";", fixed = TRUE)), sig[MP == "EpiMP10", gene]))), gg <- gg[nzchar(gg)], 
+    sh <- list(), if (length(shared)) {
+        for (i in 1:nrow(restcts)) {
+            cc <- restcts[i]
+            a <- qread(out(paste0("04_pseudobulk_markers/models/", 
+                cc$model_key, "/sample_expression.qs")))
+            ix <- match(gg, a$genes)
+            ss <- match(shared, a$samples)
+            de <- a$expression_left[ix, ss, drop = FALSE] - a$expression_right[ix, 
+                ss, drop = FALSE]
+            sh[[length(sh) + 1L]] <- data.table(candidate_id = cc$candidate_id, 
+                gene_id = gg, n_common_samples = length(shared), 
+                mean_delta = rowMeans(de), positive_fraction = rowMeans(de > 
+                  0))
+        }
+        ix <- match(gg, rownames(oldpb$expression))
+        li <- match(paste(shared, "Left", sep = "::"), oldpb$meta$column_id)
+        ri <- match(paste(shared, "Right", sep = "::"), oldpb$meta$column_id)
+        de <- oldpb$expression[ix, li, drop = FALSE] - oldpb$expression[ix, 
+            ri, drop = FALSE]
+        sh[[length(sh) + 1L]] <- data.table(candidate_id = "old_C8", 
+            gene_id = gg, n_common_samples = length(shared), 
+            mean_delta = rowMeans(de), positive_fraction = rowMeans(de > 
+                0))
+    }, wt(data.table(sample = shared), "08_review/shared_eligible_samples.tsv"), 
+    if (length(sh)) wt(rbindlist(sh), "08_review/shared_sample_marker_directions.tsv"), 
+    writeLines("complete", out("08_review/TABLES_COMPLETE")), 
+    logmsg("Candidate review complete"))

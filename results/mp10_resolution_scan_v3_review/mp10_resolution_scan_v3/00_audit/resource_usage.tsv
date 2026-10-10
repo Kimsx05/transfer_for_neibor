@@ -1,0 +1,5 @@
+metric	value	meaning
+output_bytes_before_review_zip	4443880003	All v3 outputs including pseudobulk/sample-expression caches
+observed_R_allocated_heap_peak_MiB	30427.0	Aggregation gc maximum Ncells plus Vcells, not OS RSS
+estimated_RNA_process_peak_GiB	30-40	Pre-run estimate from same original Seurat in v2
+BLAS_threads	1	Sequential heavy models; no replicated original RNA workers

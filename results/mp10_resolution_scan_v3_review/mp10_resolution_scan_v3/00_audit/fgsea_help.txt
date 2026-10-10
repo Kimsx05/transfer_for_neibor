@@ -1,0 +1,134 @@
+$pathways
+
+
+$stats
+
+
+$sampleSize
+[1] 101
+
+$minSize
+[1] 1
+
+$maxSize
+length(stats) - 1
+
+$eps
+[1] 1e-50
+
+$scoreType
+c("std", "pos", "neg")
+
+$nproc
+[1] 0
+
+$gseaParam
+[1] 1
+
+$BPPARAM
+NULL
+
+$nPermSimple
+[1] 1000
+
+$absEps
+NULL
+
+_R_u_n_s _p_r_e_r_a_n_k_e_d _g_e_n_e _s_e_t _e_n_r_i_c_h_m_e_n_t _a_n_a_l_y_s_i_s.
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     This feature is based on the adaptive multilevel splitting Monte
+     Carlo approach. This allows us to exceed the results of simple
+     sampling and calculate arbitrarily small P-values.
+
+_U_s_a_g_e:
+
+     fgseaMultilevel(
+       pathways,
+       stats,
+       sampleSize = 101,
+       minSize = 1,
+       maxSize = length(stats) - 1,
+       eps = 1e-50,
+       scoreType = c("std", "pos", "neg"),
+       nproc = 0,
+       gseaParam = 1,
+       BPPARAM = NULL,
+       nPermSimple = 1000,
+       absEps = NULL
+     )
+     
+_A_r_g_u_m_e_n_t_s:
+
+pathways: List of gene sets to check.
+
+   stats: Named vector of gene-level stats. Names should be the same as
+          in 'pathways'
+
+sampleSize: The size of a random set of genes which in turn has size =
+          pathwaySize
+
+ minSize: Minimal size of a gene set to test. All pathways below the
+          threshold are excluded.
+
+ maxSize: Maximal size of a gene set to test. All pathways above the
+          threshold are excluded.
+
+     eps: This parameter sets the boundary for calculating the p value.
+
+scoreType: This parameter defines the GSEA score type. Possible options
+          are ("std", "pos", "neg"). By default ("std") the enrichment
+          score is computed as in the original GSEA. The "pos" and
+          "neg" score types are intended to be used for one-tailed
+          tests (i.e. when one is interested only in positive ("pos")
+          or negateive ("neg") enrichment).
+
+   nproc: If not equal to zero sets BPPARAM to use nproc workers
+          (default = 0).
+
+gseaParam: GSEA parameter value, all gene-level statis are raised to
+          the power of `gseaParam` before calculation of GSEA
+          enrichment scores.
+
+ BPPARAM: Parallelization parameter used in bplapply. Can be used to
+          specify cluster to run. If not initialized explicitly or by
+          setting `nproc` default value `bpparam()` is used.
+
+nPermSimple: Number of permutations in the simple fgsea implementation
+          for preliminary estimation of P-values.
+
+  absEps: deprecated, use `eps` parameter instead
+
+_V_a_l_u_e:
+
+     A table with GSEA results. Each row corresponds to a tested
+     pathway. The columns are the following
+
+        • pathway -- name of the pathway as in `names(pathway)`;
+
+        • pval -- an enrichment p-value;
+
+        • padj -- a BH-adjusted p-value;
+
+        • log2err -- the expected error for the standard deviation of
+          the P-value logarithm.
+
+        • ES -- enrichment score, same as in Broad GSEA implementation;
+
+        • NES -- enrichment score normalized to mean enrichment of
+          random samples of the same size;
+
+        • size -- size of the pathway after removing genes not present
+          in `names(stats)`.
+
+        • leadingEdge -- vector with indexes of leading edge genes that
+          drive the enrichment, see
+          <http://software.broadinstitute.org/gsea/doc/GSEAUserGuideTEXT.htm#_Running_a_Leading>.
+
+_E_x_a_m_p_l_e_s:
+
+     data(examplePathways)
+     data(exampleRanks)
+     fgseaMultilevelRes <- fgseaMultilevel(examplePathways, exampleRanks, maxSize=500)
+     
