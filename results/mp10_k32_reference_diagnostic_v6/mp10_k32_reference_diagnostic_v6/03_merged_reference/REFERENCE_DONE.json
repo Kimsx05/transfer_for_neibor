@@ -1,0 +1,22 @@
+{
+  "training_completed": true,
+  "converged": true,
+  "epochs": 250,
+  "n_cells": 135860,
+  "n_genes": 11230,
+  "n_labels": 30,
+  "signature_sha256": "4450811e55514cf52b9b9a771413ef2b6b8025407e964be94be92f5581fe9a2f",
+  "QC": {
+    "cell_total_pearson": 0.6126794138163021,
+    "log1p_gene_mean_pearson": 0.9964933074531492,
+    "observed_total": 4512862.0,
+    "expected_total": 4402229.5,
+    "all_finite": true,
+    "n_QC_cells": 1000,
+    "signature_detection_scale": 1.0110361576080322
+  },
+  "status": "COMPLETED",
+  "input_counts_path": "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_k32_reference_identifiability_v5/scope_frozen_resume_v1/02_inputs/TRAIN_counts.h5ad",
+  "label_column": "label_S30",
+  "biological_identifiability": "not_determined_by_reference_training"
+}

@@ -1,0 +1,23 @@
+{
+  "time": "2026-10-10T21:51:15.878113",
+  "threshold": 8.367393,
+  "threshold_refit": false,
+  "models_summarized": [
+    "HIST_MAIN_DEV",
+    "HIST_MAIN_TEST",
+    "HIST_NO_P07T_DEV",
+    "HIST_NO_P07T_TEST",
+    "S30_FULL_DEV",
+    "S31_TARGET_UMI",
+    "S31_FIXED_CAPTURE",
+    "S30_TARGET_UMI",
+    "S30_FIXED_CAPTURE"
+  ],
+  "source_weighting": "Within each source_group average sample metrics, then equally average groups; macro precision averages defined sources and explicit undefined counts supplied",
+  "no_total_cell_calibration": "Truth constant20, slope/intercept/correlation undefined",
+  "S30_K32": "not applicable; NA, never zero or truth allocation",
+  "draws": "1000; epithelial sums and all ratios computed within draw",
+  "denominator": "Epi<0.1 in >5%draws -> epithelial K32 ratio NA; counts retained",
+  "historical_TEST": "Previously inspected; not new independent validation",
+  "per_spot_tests": false
+}

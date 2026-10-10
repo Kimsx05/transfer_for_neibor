@@ -1,0 +1,80 @@
+Seed set to 1670225554
+Seed set to 1670225554
+2026-10-10T21:20:06.430987 MAP_START S30 FIXED_CAPTURE 3000 (648, 11230)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+2026-10-10T21:22:36.167491 EPOCH S30 FIXED_CAPTURE 500
+2026-10-10T21:25:04.094821 EPOCH S30 FIXED_CAPTURE 1000
+2026-10-10T21:27:32.454871 EPOCH S30 FIXED_CAPTURE 1500
+2026-10-10T21:29:21.850333 EPOCH S30 FIXED_CAPTURE 2000
+2026-10-10T21:31:23.240507 EPOCH S30 FIXED_CAPTURE 2500
+2026-10-10T21:33:46.966347 EPOCH S30 FIXED_CAPTURE 3000
+`Trainer.fit` stopped: `max_epochs=3000` reached.
+Seed set to 765089629
+Sampling local variables, batch:   0%|          | 0/1 [00:00<?, ?it/s]Sampling local variables, batch: 100%|██████████| 1/1 [00:14<00:00, 14.26s/it]Sampling local variables, batch: 100%|██████████| 1/1 [00:14<00:00, 14.27s/it]
+2026-10-10T21:34:01.522603 CONVERGENCE S30 FIXED_CAPTURE 3000 False
+Seed set to 1670225554
+2026-10-10T21:34:01.523024 MAP_START S30 FIXED_CAPTURE 2000 (648, 11230)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:538: Found 6 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+2026-10-10T21:36:01.790324 EPOCH S30 FIXED_CAPTURE 3500
+2026-10-10T21:38:03.946640 EPOCH S30 FIXED_CAPTURE 4000
+2026-10-10T21:40:05.934489 EPOCH S30 FIXED_CAPTURE 4500
+2026-10-10T21:41:12.457379 EPOCH S30 FIXED_CAPTURE 5000
+`Trainer.fit` stopped: `max_epochs=2000` reached.
+Seed set to 765089629
+Sampling local variables, batch:   0%|          | 0/1 [00:00<?, ?it/s]Sampling local variables, batch: 100%|██████████| 1/1 [00:06<00:00,  6.67s/it]Sampling local variables, batch: 100%|██████████| 1/1 [00:06<00:00,  6.67s/it]
+2026-10-10T21:41:19.324085 CONVERGENCE S30 FIXED_CAPTURE 5000 False
+Seed set to 1670225554
+2026-10-10T21:41:19.324562 MAP_START S30 FIXED_CAPTURE 2000 (648, 11230)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:538: Found 6 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+2026-10-10T21:42:27.750486 EPOCH S30 FIXED_CAPTURE 5500
+2026-10-10T21:43:35.134917 EPOCH S30 FIXED_CAPTURE 6000
+2026-10-10T21:44:42.258984 EPOCH S30 FIXED_CAPTURE 6500
+2026-10-10T21:45:48.694095 EPOCH S30 FIXED_CAPTURE 7000
+`Trainer.fit` stopped: `max_epochs=2000` reached.
+Seed set to 765089629
+Sampling local variables, batch:   0%|          | 0/1 [00:00<?, ?it/s]Sampling local variables, batch: 100%|██████████| 1/1 [00:06<00:00,  6.69s/it]Sampling local variables, batch: 100%|██████████| 1/1 [00:06<00:00,  6.69s/it]
+2026-10-10T21:45:55.616286 CONVERGENCE S30 FIXED_CAPTURE 7000 False
+Seed set to 1670225554
+2026-10-10T21:45:55.616740 MAP_START S30 FIXED_CAPTURE 2000 (648, 11230)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:538: Found 6 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+2026-10-10T21:46:45.843906 EPOCH S30 FIXED_CAPTURE 7500
+2026-10-10T21:47:26.083597 EPOCH S30 FIXED_CAPTURE 8000
+2026-10-10T21:48:04.064966 EPOCH S30 FIXED_CAPTURE 8500
+2026-10-10T21:48:41.904663 EPOCH S30 FIXED_CAPTURE 9000
+`Trainer.fit` stopped: `max_epochs=2000` reached.
+Seed set to 765089629
+Sampling local variables, batch:   0%|          | 0/1 [00:00<?, ?it/s]Sampling local variables, batch: 100%|██████████| 1/1 [00:03<00:00,  3.41s/it]Sampling local variables, batch: 100%|██████████| 1/1 [00:03<00:00,  3.41s/it]
+2026-10-10T21:48:45.505291 CONVERGENCE S30 FIXED_CAPTURE 9000 True
+Seed set to 765089629
+Sampling local variables, batch:   0%|          | 0/1 [00:00<?, ?it/s]Sampling local variables, batch: 100%|██████████| 1/1 [00:13<00:00, 13.49s/it]Sampling local variables, batch: 100%|██████████| 1/1 [00:13<00:00, 13.49s/it]Seed set to 1343796971
+
+Sampling local variables, batch:   0%|          | 0/1 [00:00<?, ?it/s]Sampling local variables, batch: 100%|██████████| 1/1 [00:01<00:00,  1.30s/it]Sampling local variables, batch: 100%|██████████| 1/1 [00:01<00:00,  1.30s/it]
+Sampling global variables, sample:   0%|          | 0/99 [00:00<?, ?it/s]Sampling global variables, sample:   8%|▊         | 8/99 [00:00<00:01, 77.37it/s]Sampling global variables, sample:  16%|█▌        | 16/99 [00:00<00:01, 77.38it/s]Sampling global variables, sample:  24%|██▍       | 24/99 [00:00<00:00, 77.20it/s]Sampling global variables, sample:  32%|███▏      | 32/99 [00:00<00:00, 77.09it/s]Sampling global variables, sample:  40%|████      | 40/99 [00:00<00:00, 77.21it/s]Sampling global variables, sample:  48%|████▊     | 48/99 [00:00<00:00, 77.40it/s]Sampling global variables, sample:  57%|█████▋    | 56/99 [00:00<00:00, 77.40it/s]Sampling global variables, sample:  65%|██████▍   | 64/99 [00:00<00:00, 77.32it/s]Sampling global variables, sample:  73%|███████▎  | 72/99 [00:00<00:00, 77.29it/s]Sampling global variables, sample:  81%|████████  | 80/99 [00:01<00:00, 75.98it/s]Sampling global variables, sample:  89%|████████▉ | 88/99 [00:01<00:00, 74.88it/s]Sampling global variables, sample:  97%|█████████▋| 96/99 [00:01<00:00, 74.09it/s]Sampling global variables, sample: 100%|██████████| 99/99 [00:01<00:00, 75.99it/s]
+2026-10-10T21:49:04.527187 MAPPING_DONE S30 FIXED_CAPTURE 9000 True

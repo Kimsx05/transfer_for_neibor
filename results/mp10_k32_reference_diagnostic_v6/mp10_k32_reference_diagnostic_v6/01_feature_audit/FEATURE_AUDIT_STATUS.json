@@ -1,0 +1,15 @@
+{
+  "status": "PARTIAL",
+  "resolved": "Derived gene presence, G0 selection and preflight no-gene-filtering established",
+  "unresolved": "Exact probe CSV inaccessible; raw absence vs probe filtering remains unresolved. GSE285715 public assembly metadata conflict recorded.",
+  "searched_root": "/home/data/t070721/Metabolistic_scRNA",
+  "search_file": "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_k32_reference_diagnostic_v6/01_feature_audit/raw_feature_search.txt",
+  "n_raw_annotation_files_found": 0,
+  "frozen_basis_file": "/home/data/t070721/Metabolistic_scRNA/Multi2/4.3 NMF allgene/output_full_cc_seed5_v2/07_EpiMP_basis_program_weighted.csv",
+  "basis_sha256": "24a4c1e1f4beeab37865877d2521670690a1517c202e5e0b5449a9a3bff12316",
+  "Top20_definition": "rank<=20 from frozen 07_EpiMP_top50_genes.csv, not v4 differential-expression Top20",
+  "eligible_sections": 63,
+  "public_annotation_files": 6,
+  "assay_evidence": "Added official GEO per-section/series evidence with limitations",
+  "newly_resolved": "GSE285715 HSD17B7/KRT18 already absent from deposited feature lists; not caused by this project preflight. GSE238145 B5 uses documentedv1 probe panel and B9 usesv2. GSE171351 retained features are eligible for an observed-matrix G1 diagnostic."
+}

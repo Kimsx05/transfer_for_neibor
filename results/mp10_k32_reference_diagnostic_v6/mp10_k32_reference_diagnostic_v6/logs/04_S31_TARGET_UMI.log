@@ -1,0 +1,116 @@
+Seed set to 1670225554
+Seed set to 1670225554
+2026-10-10T20:19:00.470387 MAP_START S31 TARGET_UMI 3000 (648, 11230)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+2026-10-10T20:19:56.219723 EPOCH S31 TARGET_UMI 500
+2026-10-10T20:20:50.488461 EPOCH S31 TARGET_UMI 1000
+2026-10-10T20:21:44.826949 EPOCH S31 TARGET_UMI 1500
+2026-10-10T20:22:39.976816 EPOCH S31 TARGET_UMI 2000
+2026-10-10T20:23:34.720695 EPOCH S31 TARGET_UMI 2500
+2026-10-10T20:24:29.122555 EPOCH S31 TARGET_UMI 3000
+`Trainer.fit` stopped: `max_epochs=3000` reached.
+Seed set to 765089629
+Sampling local variables, batch:   0%|          | 0/1 [00:00<?, ?it/s]Sampling local variables, batch: 100%|██████████| 1/1 [00:04<00:00,  4.85s/it]Sampling local variables, batch: 100%|██████████| 1/1 [00:04<00:00,  4.86s/it]
+2026-10-10T20:24:34.167195 CONVERGENCE S31 TARGET_UMI 3000 False
+Seed set to 1670225554
+2026-10-10T20:24:34.167714 MAP_START S31 TARGET_UMI 2000 (648, 11230)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:538: Found 6 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+2026-10-10T20:25:28.885029 EPOCH S31 TARGET_UMI 3500
+2026-10-10T20:26:23.511705 EPOCH S31 TARGET_UMI 4000
+2026-10-10T20:27:28.850212 EPOCH S31 TARGET_UMI 4500
+2026-10-10T20:28:58.746702 EPOCH S31 TARGET_UMI 5000
+`Trainer.fit` stopped: `max_epochs=2000` reached.
+Seed set to 765089629
+Sampling local variables, batch:   0%|          | 0/1 [00:00<?, ?it/s]Sampling local variables, batch: 100%|██████████| 1/1 [00:09<00:00,  9.79s/it]Sampling local variables, batch: 100%|██████████| 1/1 [00:09<00:00,  9.79s/it]
+2026-10-10T20:29:08.752530 CONVERGENCE S31 TARGET_UMI 5000 False
+Seed set to 1670225554
+2026-10-10T20:29:08.753539 MAP_START S31 TARGET_UMI 2000 (648, 11230)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:538: Found 6 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+2026-10-10T20:30:38.272603 EPOCH S31 TARGET_UMI 5500
+2026-10-10T20:32:06.495872 EPOCH S31 TARGET_UMI 6000
+2026-10-10T20:33:35.209962 EPOCH S31 TARGET_UMI 6500
+2026-10-10T20:35:03.237419 EPOCH S31 TARGET_UMI 7000
+`Trainer.fit` stopped: `max_epochs=2000` reached.
+Seed set to 765089629
+Sampling local variables, batch:   0%|          | 0/1 [00:00<?, ?it/s]Sampling local variables, batch: 100%|██████████| 1/1 [00:09<00:00,  9.59s/it]Sampling local variables, batch: 100%|██████████| 1/1 [00:09<00:00,  9.59s/it]
+2026-10-10T20:35:13.054970 CONVERGENCE S31 TARGET_UMI 7000 False
+Seed set to 1670225554
+2026-10-10T20:35:13.055574 MAP_START S31 TARGET_UMI 2000 (648, 11230)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:538: Found 6 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+2026-10-10T20:36:41.476515 EPOCH S31 TARGET_UMI 7500
+2026-10-10T20:38:09.501998 EPOCH S31 TARGET_UMI 8000
+2026-10-10T20:39:38.661695 EPOCH S31 TARGET_UMI 8500
+2026-10-10T20:41:07.256912 EPOCH S31 TARGET_UMI 9000
+`Trainer.fit` stopped: `max_epochs=2000` reached.
+Seed set to 765089629
+Sampling local variables, batch:   0%|          | 0/1 [00:00<?, ?it/s]Sampling local variables, batch: 100%|██████████| 1/1 [00:09<00:00,  9.67s/it]Sampling local variables, batch: 100%|██████████| 1/1 [00:09<00:00,  9.67s/it]
+2026-10-10T20:41:17.188690 CONVERGENCE S31 TARGET_UMI 9000 False
+Seed set to 1670225554
+2026-10-10T20:41:17.189119 MAP_START S31 TARGET_UMI 2000 (648, 11230)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:538: Found 6 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+2026-10-10T20:42:46.335120 EPOCH S31 TARGET_UMI 9500
+2026-10-10T20:44:15.935756 EPOCH S31 TARGET_UMI 10000
+2026-10-10T20:45:54.463596 EPOCH S31 TARGET_UMI 10500
+2026-10-10T20:48:20.532996 EPOCH S31 TARGET_UMI 11000
+`Trainer.fit` stopped: `max_epochs=2000` reached.
+Seed set to 765089629
+Sampling local variables, batch:   0%|          | 0/1 [00:00<?, ?it/s]Sampling local variables, batch: 100%|██████████| 1/1 [00:18<00:00, 18.33s/it]Sampling local variables, batch: 100%|██████████| 1/1 [00:18<00:00, 18.33s/it]
+2026-10-10T20:48:39.136057 CONVERGENCE S31 TARGET_UMI 11000 False
+Seed set to 1670225554
+2026-10-10T20:48:39.136692 MAP_START S31 TARGET_UMI 2000 (648, 11230)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:538: Found 6 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+2026-10-10T20:51:06.618077 EPOCH S31 TARGET_UMI 11500
+2026-10-10T20:53:33.150370 EPOCH S31 TARGET_UMI 12000
+2026-10-10T20:56:00.799555 EPOCH S31 TARGET_UMI 12500
+2026-10-10T20:58:27.201157 EPOCH S31 TARGET_UMI 13000
+`Trainer.fit` stopped: `max_epochs=2000` reached.
+Seed set to 765089629
+Sampling local variables, batch:   0%|          | 0/1 [00:00<?, ?it/s]Sampling local variables, batch: 100%|██████████| 1/1 [00:18<00:00, 18.34s/it]Sampling local variables, batch: 100%|██████████| 1/1 [00:18<00:00, 18.34s/it]
+2026-10-10T20:58:45.852184 CONVERGENCE S31 TARGET_UMI 13000 True
+Seed set to 765089629
+Sampling local variables, batch:   0%|          | 0/1 [00:00<?, ?it/s]Sampling local variables, batch: 100%|██████████| 1/1 [01:11<00:00, 71.71s/it]Sampling local variables, batch: 100%|██████████| 1/1 [01:11<00:00, 71.71s/it]Seed set to 1343796971
+
+Sampling local variables, batch:   0%|          | 0/1 [00:00<?, ?it/s]Sampling local variables, batch: 100%|██████████| 1/1 [00:07<00:00,  7.04s/it]Sampling local variables, batch: 100%|██████████| 1/1 [00:07<00:00,  7.04s/it]
+Sampling global variables, sample:   0%|          | 0/99 [00:00<?, ?it/s]Sampling global variables, sample:   2%|▏         | 2/99 [00:00<00:05, 16.80it/s]Sampling global variables, sample:   4%|▍         | 4/99 [00:00<00:06, 15.32it/s]Sampling global variables, sample:   6%|▌         | 6/99 [00:00<00:05, 15.67it/s]Sampling global variables, sample:   8%|▊         | 8/99 [00:00<00:06, 14.34it/s]Sampling global variables, sample:  10%|█         | 10/99 [00:00<00:06, 14.27it/s]Sampling global variables, sample:  12%|█▏        | 12/99 [00:00<00:06, 13.65it/s]Sampling global variables, sample:  14%|█▍        | 14/99 [00:00<00:06, 13.81it/s]Sampling global variables, sample:  16%|█▌        | 16/99 [00:01<00:05, 14.60it/s]Sampling global variables, sample:  18%|█▊        | 18/99 [00:01<00:05, 14.83it/s]Sampling global variables, sample:  20%|██        | 20/99 [00:01<00:05, 15.23it/s]Sampling global variables, sample:  22%|██▏       | 22/99 [00:01<00:05, 14.37it/s]Sampling global variables, sample:  24%|██▍       | 24/99 [00:01<00:05, 14.33it/s]Sampling global variables, sample:  26%|██▋       | 26/99 [00:01<00:05, 13.94it/s]Sampling global variables, sample:  28%|██▊       | 28/99 [00:01<00:04, 14.86it/s]Sampling global variables, sample:  30%|███       | 30/99 [00:02<00:04, 15.56it/s]Sampling global variables, sample:  32%|███▏      | 32/99 [00:02<00:04, 14.40it/s]Sampling global variables, sample:  34%|███▍      | 34/99 [00:02<00:04, 14.76it/s]Sampling global variables, sample:  36%|███▋      | 36/99 [00:02<00:04, 14.09it/s]Sampling global variables, sample:  38%|███▊      | 38/99 [00:02<00:04, 14.14it/s]Sampling global variables, sample:  40%|████      | 40/99 [00:02<00:04, 14.69it/s]Sampling global variables, sample:  42%|████▏     | 42/99 [00:02<00:03, 15.00it/s]Sampling global variables, sample:  44%|████▍     | 44/99 [00:02<00:03, 15.34it/s]Sampling global variables, sample:  46%|████▋     | 46/99 [00:03<00:03, 14.23it/s]Sampling global variables, sample:  48%|████▊     | 48/99 [00:03<00:03, 14.45it/s]Sampling global variables, sample:  51%|█████     | 50/99 [00:03<00:03, 13.90it/s]Sampling global variables, sample:  53%|█████▎    | 52/99 [00:03<00:03, 13.99it/s]Sampling global variables, sample:  55%|█████▍    | 54/99 [00:03<00:03, 14.59it/s]Sampling global variables, sample:  57%|█████▋    | 56/99 [00:03<00:02, 14.92it/s]Sampling global variables, sample:  59%|█████▊    | 58/99 [00:03<00:02, 15.28it/s]Sampling global variables, sample:  61%|██████    | 60/99 [00:04<00:02, 14.41it/s]Sampling global variables, sample:  63%|██████▎   | 62/99 [00:04<00:02, 14.35it/s]Sampling global variables, sample:  65%|██████▍   | 64/99 [00:04<00:02, 13.85it/s]Sampling global variables, sample:  67%|██████▋   | 66/99 [00:04<00:02, 13.97it/s]Sampling global variables, sample:  69%|██████▊   | 68/99 [00:04<00:02, 14.58it/s]Sampling global variables, sample:  71%|███████   | 70/99 [00:04<00:01, 14.90it/s]Sampling global variables, sample:  73%|███████▎  | 72/99 [00:04<00:01, 15.26it/s]Sampling global variables, sample:  75%|███████▍  | 74/99 [00:05<00:01, 14.33it/s]Sampling global variables, sample:  77%|███████▋  | 76/99 [00:05<00:01, 14.25it/s]Sampling global variables, sample:  79%|███████▉  | 78/99 [00:05<00:01, 13.75it/s]Sampling global variables, sample:  81%|████████  | 80/99 [00:05<00:01, 13.81it/s]Sampling global variables, sample:  83%|████████▎ | 82/99 [00:05<00:01, 14.39it/s]Sampling global variables, sample:  85%|████████▍ | 84/99 [00:05<00:01, 14.68it/s]Sampling global variables, sample:  87%|████████▋ | 86/99 [00:05<00:00, 15.02it/s]Sampling global variables, sample:  89%|████████▉ | 88/99 [00:06<00:00, 13.74it/s]Sampling global variables, sample:  91%|█████████ | 90/99 [00:06<00:00, 14.30it/s]Sampling global variables, sample:  93%|█████████▎| 92/99 [00:06<00:00, 13.72it/s]Sampling global variables, sample:  95%|█████████▍| 94/99 [00:06<00:00, 13.81it/s]Sampling global variables, sample:  97%|█████████▋| 96/99 [00:06<00:00, 13.39it/s]Sampling global variables, sample:  99%|█████████▉| 98/99 [00:06<00:00, 13.57it/s]Sampling global variables, sample: 100%|██████████| 99/99 [00:06<00:00, 14.43it/s]
+2026-10-10T21:00:14.811942 MAPPING_DONE S31 TARGET_UMI 13000 True

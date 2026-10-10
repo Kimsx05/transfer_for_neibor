@@ -1,0 +1,16 @@
+{
+  "status": "COMPLETED",
+  "installed_source": "/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/cell2location/models/reference/_reference_model.py",
+  "source_sha256": "90e04d594f4b0356e19cd59bc7595d405d8b3a88a862c8b91486d4762aee452c",
+  "module_source": "/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/cell2location/models/reference/_reference_module.py",
+  "module_sha256": "13aa90f6c4c0e5643c8ea239727f859f488233e0862ee61549fcd9a598734ecc",
+  "signature_formula": "posterior mean per_cluster_mu_fg.T times TRAIN-cell-weighted mean batch detection_mean_y_e",
+  "project_scale_verified_both_references": true,
+  "installed_export_nuance": "export_posterior multiplies by mean detection_y_c only when that site is in summaries; this installed module computes detection_y_c deterministically as obs2sample @ detection_mean_y_e and does not export it as a pyro.sample site. Project explicitly reconstructs that mean normalization; not an automatic library export. Matched convention in S31/S30. Raw latent signatures would differ by reported ~1% scalar, not an arbitrary truth calibration.",
+  "spatial_detection": "detection_y_s is per-location with batch-level hypermean, not one fixed sample coefficient",
+  "spatial_mean_formula": "((w_sf @ signature.T)*m_g + batch-specific s_g_gene_add) * detection_y_s",
+  "technical_UMI": "plug-in expectation from posterior means; not joint posterior expectation/interval",
+  "signature_stability": "S30 stopped after its prespecified first250 epochs; no earlier signature checkpoint available, no claim of interstage signature stability",
+  "old_metric_checks": 44,
+  "all_passed": true
+}

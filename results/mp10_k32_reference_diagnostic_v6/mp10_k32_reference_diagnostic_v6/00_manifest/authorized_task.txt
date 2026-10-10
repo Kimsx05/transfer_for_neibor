@@ -1,0 +1,344 @@
+K32 v6：cell2location 合并上皮基线与配对捕获率诊断
+请在现有项目上直接执行以下已确定方案，完成审阅包。不要只给计划，不需要再次确认已授权的冻结范围或标签规则。
+
+【本轮目的与计算边界】
+本轮回答：当前 K32 映射失败，主要表现为整体上皮/数量校准困难，还是上皮内部细分增加了困难？旧逐 spot 定额稀释设计对结果有什么影响？
+本轮新增最多：
+- 1 个 NB reference：MAIN、G0 基因集、合并上皮的 30 标签参考。
+- 1 个完整 DEV 映射：新 30 标签参考，对应旧 31 标签的同一份 DEV counts。
+- 4 个小型配对映射：2 种稀释规则 × 2 个标签粒度，每个映射同时包含可实现的低/中/高水平。
+复用旧 MAIN 31 标签 reference、旧完整 DEV 结果及已有有效审计。NO_P07T 和旧 TEST 仅做已有结果的只读复核。
+按 assay 调整基因范围的 G1，本轮完成来源审计、候选 panel 和下一轮配置，不自动训练。这是为了保持归因清楚和计算范围有限。
+本轮不拟合真实 Visium，不运行 DestVI、分类器、重聚类或新的参数扫描。
+
+一、定位与续跑
+
+项目根目录：
+/home/data/t070721/codex_workspace/Bladder Metabolism
+
+主要输入：
+mp10_k32_reference_identifiability_v5/scope_frozen_resume_v1
+冻结候选来源：
+mp10_k32_validation_v4，以及可追溯的 v3 成员清单。
+旧参考来源：
+cell2location_full_run/v2_30type
+
+上一轮公开审阅包：
+https://github.com/Kimsx05/transfer_for_neibor/tree/main/results/review/scope_frozen_resume_v1
+
+新派生目录：
+/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_k32_reference_diagnostic_v6
+
+如实际路径不同，先用 rg、项目 README、STATUS 和 manifest 定位真实输入并记录，不根据目录名猜测。优先本地已完成模型、counts 和完整日志；GitHub review 只作辅助定位，不代表全部建模文件。
+
+先读上一轮：
+- CONFIG.yaml、DEV_FROZEN_CONFIG.yaml、METHODS.md、RUN_NOTES.md、STATUS.md；
+- INPUTS_READY、REFERENCE_DONE、MAPPING_DONE、convergence 和相关冻结配置；
+- 实际入模成员/split、基因顺序、原始 RNA counts 审计；
+- DEV 伪 spot 的 manifest、逐细胞成员、真值、counts；
+- reference 和 mapping 代码。
+
+DEV_FROZEN_CONFIG.yaml 才是上轮实际有效的映射配置；不要仅使用初始 CONFIG.yaml，把已经废弃的早停结果当作最终结果。
+新目录如存在，按配置与输入哈希断点续跑；保留旧结果，禁止覆盖 v5 原始文件。缺失某项辅助审计不能让全部独立可执行步骤停止。
+
+二、冻结对象、标签、来源与输入
+
+保留已核实定义：
+- 冻结上皮：123,699。
+- Epi_K32：3,282。
+- Epi_other：120,417。
+- 范围外旧上皮：18,182，继续排除，理由为 outside_frozen_discovery_scope。
+- 当前全部候选参考成员：281,851。
+- MAIN TRAIN：135,860 个细胞，其中 K32 2,395。
+- TRAIN/DEV/TEST：25/8/8 个保守来源组；K32 分别 2,395/634/253。
+
+以上是核对用预期值，不能为凑数修改成员。实际值若不同，定位差异并记录受影响步骤。
+来源组仍标注“保守来源组隔离，未独立核验患者”。不要重分组、把缺失来源默认放 TRAIN、或将 paired 来源拆开。P07T/P07N 的既有映射不变。
+旧 Epithelial 包含合法的原 Cycling 成员；以冻结 cell_id 和旧参考对应关系为准，不再按原 major == Epithelial 二次筛选。
+
+标签粒度：
+- S31：旧 MAIN 的 31 标签，保留 Epi_K32、Epi_other 及其余 29 标签。
+- S30：仅在新增 reference 标签列中，将上述两个上皮标签合并成 Epithelial，其余 29 标签与成员完全不变。
+S30 的元数据仍保留每个细胞原来的 K32 身份，供真值审计使用，但不能将该身份输入合并模型。
+Epi_other 只表示冻结 K32 之外的上皮，不代表 MP10-low；不为 18,182 个范围外成员赋予新的阴性生物学标签。
+
+不修改 NMF、14 个 MP、MP10 基因/权重/Top20、UCell 分数、high flag、K32 成员或冻结聚类。
+不做 sample-balance，不对 reference 训练细胞进行来源或标签平衡下采样。
+输入使用通过审计的原始整数 RNA counts；不能使用 normalized/log/SCT/integrated 表达或程序分数训练 NB。
+InhouseData 的 MT 比例仍按既有审计标记为不可可靠评价，不解释为真实低 MT，也不单凭此事实阻塞模型。
+
+G0：
+使用旧 MAIN 实际冻结的 11,230 个基因及其确切顺序。先核验真实输入文件和 hash。
+本轮 G0 所有对照使用同一个成员、基因、counts 来源及旧协变量定义。不能一边重新筛基因、一边声称只比较标签粒度。
+
+三、模块 A：关键基因的真实可测范围与处理来源审计
+
+重点追溯：
+HSD17B7、HMGCS1、KRT18；
+同时检查 KRT8、EPCAM、SREBF2、FASN、ACSS2、INSIG1、ELOVL5 作为上下文。
+复用冻结 14 MP、MP10 完整集合及 Top20，汇总各 dataset/assay 的基因覆盖；不补入替代基因，不重新选择 MP10 核心基因。
+
+上一轮需核验的事实：
+- HSD17B7 通过 TRAIN 过滤，在既有空间 feature inventory 中为 4/63；
+- HMGCS1 为 62/63；
+- KRT18 为 5/63；
+- 三者因此未进入 G0。
+这些是“矩阵基因列表中的可用性”，不是相应组织中的表达阳性率。
+
+对相关 dataset/section 建立：
+原始 assay/平台及版本 → 原始 feature/probe → 基因 ID 转换/去重/过滤 → 既有 preflight h5ad → G0
+的证据链。
+
+至少区分：
+1. 原始 assay 确实没有该基因或探针；
+2. 原始有，但被探针 QC、预过滤、基因 ID 映射或其他处理移除；
+3. 原始有且可恢复，只是在全 63 张切片交集中被其他切片限制；
+4. 尚无原始证据，不能确定。
+
+记录 dataset、section、assay、panel/version、原始 feature/probe ID、canonical ID、原始是否可测、过滤记录、现有 h5ad 是否保留、G0 是否保留、证据文件及结论。
+优先查看现有原始 feature/probe 和脚本，不为少量基因审计重新下载全量空间表达。必要时获取可公开访问的小型原始注释/探针文件并记录来源。
+没有原始证据的条目标 PARTIAL/UNRESOLVED，不能推断为 gene-ID bug，也不能把未检测基因伪造成零表达列。
+
+交付：
+- gene_provenance_audit.tsv
+- frozen_MP_gene_coverage_by_assay.tsv
+- G0_feature_loss_summary.tsv
+- G1_panel_candidates.tsv / 各 panel 的真实基因清单
+- NEXT_G1_CONFIG.yaml
+
+NEXT_G1_CONFIG.yaml 描述下一轮可比较的合法 assay-specific 基因范围、对应空间目标、TRAIN-only 过滤与 matched S31/S30 设计。
+候选依据只能是 assay 证据、可测基因范围和预先冻结的研究目标，不能依据旧 TEST、某来源是否“被救回”或新的预测成绩选择。
+本轮不训练 G1；不让尚未闭合的 G1 审计阻塞 G0 基线与配对控制。
+
+四、模块 B：已有输出的校准与技术项复核，不重新训练旧模型
+
+读取旧 MAIN 与 NO_P07T 的完整 DEV/TEST 结果，按原方法复现主要数字，并区分：
+- K32 数量；
+- Epi_other 数量；
+- 总上皮数量；
+- 全部细胞数量；
+- K32 在全部细胞中的比例、在上皮中的比例。
+
+检查保存的 detection、背景项、总 abundance 与 pre/post full RNA UMI、G0 UMI、thinning probability 的关系。
+先检查安装版本及旧代码对应的真实参数/site 名称。模型存在 per-location detection，不能误写成“每个 sample 只有一个固定归一化系数”。
+若原输出未保存所需后验量，可从同一个冻结 checkpoint 追加导出支持的 posterior site；这不构成重新训练。确实不支持导出的项如实记录。
+仅导出需要的低维后验与汇总，禁止生成或保存庞大的 spot × gene × draw 稠密张量。
+
+重新确认旧 G0 的 signature 导出与尺度换算是否使用正确版本约定，并检查训练 batch 权重；不得通过乘任意系数把数量修正得接近真值。
+旧结果可补算 AUROC/AUPRC、固定阈值下的检出与误认、各来源困难负对照。固定阈值读取真实冻结值（上一轮约 8.367393），不得只用四舍五入数值。
+明确：
+- 检出率指 N_K32 > 0 的伪 spot 被检出的比例；
+- 它不同于 K32 对 MP10-high 单细胞的覆盖率；
+- precision 要交代 micro/宏平均及未定义值处理；
+- AUPRC 要交代模拟阳性比例；
+- TEST 已经被查看，不能再称为未触碰的独立测试。
+
+对之前暴露的纯 K32、纯 Epi_other、来源特异误认作只读分层复核，包括 InhouseData|T4463209a；不能因为来源结果不好而删除它，也不能用它挑新基因或调参。
+旧 NO_P07T 不重训、不增加新映射。旧 TEST 不用于本轮拟合、p 的选择、控制 bag 的抽取或任何模型选择。
+
+五、模块 C：真实重拟合 MAIN 合并上皮的 S30/G0 NB reference
+
+使用与旧 MAIN 完全相同的 TRAIN 细胞、原始 counts、G0 及其顺序、batch 与技术协变量。
+唯一计划内标签变化：Epi_K32 + Epi_other → Epithelial。
+在整个 30 标签参考上真实重拟合 cell2location NB RegressionModel，不是相加两列均值，也不是把旧包含 DEV/TEST 的历史 signature 拼进来。
+不把 K32、MP10、真值数量等目标生物学变量加入 nuisance covariate。
+
+保留 master seed=123，并记录新增步骤的确定性派生种子；不尝试多个 seed 选最好结果。
+NB 沿用旧已确认规则（初始 250 epochs、必要时每次延长 125、上限 1000，具体以核实后的有效配置为准）。记录 loss、重建、支持细胞数及可获得的 signature 稳定性，不盲目加训。
+简要检查其余 29 标签在 S31/S30 间的 signature 相关性和尺度变化，识别标签合并是否伴随全局检测尺度改变。相关性不作为唯一通过门槛。
+
+然后将 S30 映射到与旧 S31 完全相同的完整 DEV 伪 spot counts（上一轮 9,120 个，先核对 manifest/hash）。
+S31 复用其最终完成结果；S30 新跑一次。输入、spot 顺序、原始真值逐项精确对应。
+
+比较总上皮时：
+S31 每个 posterior draw 内先做 Epi = Epi_K32 + Epi_other，再计算均值、分位数及比例。
+S30 使用 Epithelial 的对应 posterior。
+禁止相加两个 q05，禁止以两个 q05 相除；不能将 S30 的 K32 数量写成 0 或按真值比例分摊，相关字段应为不适用。
+
+六、模块 D：小型“同一批细胞”配对稀释控制
+
+1. 先选定 cell bag，再生成两种规则
+
+只从冻结 DEV 中选择，不使用 TRAIN/TEST。
+优先复用旧 DEV manifest 中完整的 mixture_id 与逐细胞成员，每个 bag 恰好 20 个不同细胞，来自同一个真实 sample；保留 sample、dataset、source_group。
+不能只凭相同来源/相同数量把两个不同细胞集合称为配对。
+
+小型控制的固定场景：
+- S1 regular：N_epi=10，N_K32=0、1、2、5、10；
+- S3 pure epithelial：N_epi=20，N_K32=0、10、20；
+- S2 hard negatives：N_epi=10、N_K32=0，分别为 C14、C7、C17、UCell_high_non_K32、NMF_high_non_K32。
+cluster 与 high flag 沿用冻结定义。
+
+每个 sample × 可支持场景，选择旧 repeat 0、1 的 bag；如字段不同，用等价的预先固定排序选择前两个，并记录规则。
+覆盖全部可支持 DEV 来源，不凭预测好坏选择来源或 bag。某来源不支持某场景则如实记录，不跨来源混合、不借用 TRAIN、不扩展重复数。
+不新增其他场景或强度分层；旧完整 DEV 中的既有强度场景仍可评价。
+
+输出 cell_bag_manifest、逐细胞成员、成员 hash、场景可用性、复用次数。
+bag 定义、概率和随机种子必须在新映射前写入 CONTROL_FROZEN.yaml 并记录 hash。
+
+2. 使用一致的 full RNA UMI 定义
+
+令 S_b 为 bag 中 20 个细胞在“与旧模拟完全相同的原始 full RNA counts 范围”内的总 UMI。
+不能一支用 full RNA 总量，另一支用 G0 的 11,230 基因总量。
+记录每个 bag 的 pre_full_UMI 和 pre_G0_UMI。
+
+保留旧冻结深度锚点：
+T_low=3146，T_mid=7005，T_high=14967。
+先从旧 SIMULATION_FROZEN 文件核实精确值；若实际值不同，采用真实冻结值并说明，不能静默改成本文近似值。
+
+3. 两种稀释规则
+
+规则 A：TARGET_UMI，复现旧逐 spot 定额规则
+对每个 bag b、深度 d：
+p_target(b,d) = min(1, T_d / S_b)
+对该 bag 中每个细胞的每个基因做整数 Binomial thinning，再求和。
+这是期望 UMI 锚定，不要求随机结果精确等于 T_d；不足深度不能上采样。
+
+规则 B：FIXED_CAPTURE，全局固定捕获率
+在模拟前，使用本轮冻结的 unique DEV bag 的 S_b，一次性计算：
+p_mid = T_mid / median_b(S_b)
+p_low = p_mid * T_low / T_mid
+p_high = p_mid * T_high / T_mid
+
+每个深度的 p_d 对全部 bag、sample、dataset、细胞类型和基因都相同。
+不逐 spot 调整 p，不在 thinning 后将每个 spot 重新缩放到 T_d。
+固定捕获率组中，不同 spot 的实际 UMI 应当允许不同。T_d 只是典型深度锚点。
+这个中位数仅用于冻结模拟的技术参数，不改变训练细胞及标签范围。
+
+若某个全局 p_d > 1，将该 FIXED_CAPTURE 深度标为不可通过 thinning 实现并记录；不静默 clip、不上采样、不临时选择更有利的锚点。继续执行可实现深度与其他模块。
+
+对同一 bag 的两种规则及不同深度保持明确配对。使用确定性随机种子；可用嵌套 Binomial thinning 减少额外模拟噪声，但必须保留每种规则正确的边缘分布并说明实现。
+若没有全基因逐基因缓存，允许使用可核验 G0 原始 counts，加上每细胞 full RNA 与 G0 的 UMI 差额，对未保留部分作数学等价的 Binomial 总量抽样；不能伪造缺失基因列。
+记录每个细胞/类型的实际保留 RNA、zero-retained-RNA 标记。即使某细胞保留 RNA 为零，其真实细胞计数仍然保留。
+两种规则最终都截取相同的 G0 输入；两份 reference 使用字节相同的对应 counts。
+
+4. 最多四个小型映射
+
+- S31/G0 × TARGET_UMI；
+- S30/G0 × TARGET_UMI；
+- S31/G0 × FIXED_CAPTURE；
+- S30/G0 × FIXED_CAPTURE。
+
+每个映射将同一规则下全部可实现低/中/高深度合并为一份输入，sample batch 规则与上轮一致。
+不把 depth、scenario、p、真实细胞数量、K32 身份或程序强度作为预测协变量。
+S31/S30 reference 在此固定，不再重训。
+
+不要直接把新 FIXED_CAPTURE bag 与不匹配的旧全量 DEV 汇总比较来解释稀释机制。
+此模块的主比较是同一个 bag、同一深度在两种规则之间的差异，以及在两份 reference 下的差异。旧完整 DEV 结果作为另一个明确标注的评价集合。
+即使沿用旧 bag，若重新生成了 counts 或改变映射集合，也要如实记录，不能声称逐数值复现了旧预测。
+
+七、映射参数、收敛与资源使用
+
+按上一轮实际有效的 DEV-frozen 配置，保持 N_cells_per_location=20、detection_alpha=20 及其他超参数。
+沿用 loss 与丰度稳定性的停止规则：读取旧实现中至少 5,000 epochs、每次延长 2,000、最大 30,000，以及中位/高分位相对变化标准的实际定义；不要仅凭 loss 平稳早停。
+不新增 detection_alpha、N_cells、协变量或学习率网格，不通过 seed 选择较好结果。
+
+N_cells_per_location=20 是模型先验，不是预测 abundance 总和必须等于 20 的硬约束。
+禁止将预测丰度事后强制归一到 20，再声称数量回收良好；禁止乘真实总上皮数量或使用真值拟合事后校准。
+可以报告后验组成比例，但与原始 abundance 的数量评价分开。
+
+优先使用已有正确环境。兼容性处理依据当前安装 API 和上轮有效代码，记录版本与必要修改。
+单 GPU 顺序执行；不停止其他任务、不为本轮重装整个环境。定期保存 checkpoint；有足够证据后停止可选加训。
+达到上限仍不收敛，标记该分支 NOT_CONVERGED，保留诊断，继续其他可执行分支，最后仍生成报告。不可将这类状态写成生物学不可区分。
+不复制整套原始 counts，不保存不必要的大体积后验，保留可复现路径、hash 与必要摘要。
+
+八、评价：首先判断整体上皮，再评价细分
+
+A. 新 S30 与旧 S31 的完整 DEV 成对比较
+主终点：
+- 总上皮数量：MAE、RMSE、bias、校准曲线；
+- 全部细胞数量：MAE、RMSE、bias、预测分布；
+- 上皮占全部细胞的比例误差；
+- 总上皮数量的 90% 后验区间覆盖率及区间宽度；
+- 非上皮信号吸收：按其余标签及既有 major crosswalk 汇总，不单看 K32。
+
+总细胞真值恒为 20，不能计算有意义的“总细胞校准斜率”或与真值的相关性。某分层中真值恒定时，同样将相关/斜率标为不可评，改报偏差和误差。
+S31 中继续报告 K32 数量、K32/总细胞、K32/上皮，并单列阳性 spot 和困难负对照；S30 不报告不存在的 K32 预测。
+
+B. 配对稀释控制
+在固定 bag 与深度下，报告两种规则、两份 reference 的原始预测及成对差值。
+检查：
+- 合并上皮是否改善总体回收；
+- 固定捕获率是否改变同真值下的数量偏差；
+- 预测 abundance、detection 与深度的关系；
+- 纯 K32、纯 Epi_other 与有非上皮背景时的表现；
+- K32 数量与上皮内比例是否出现不同结论。
+
+固定捕获率控制只是技术诊断，不能仅凭改善就断言检测先验是唯一原因，或宣布真实 Visium 注释已验证。
+
+C. 检测与阈值
+S31 报告冻结 v5 阈值下的检出和假阳性，注明这是历史阈值在本轮控制上的描述性应用。
+同时给 AUROC/AUPRC 曲线、模拟阳性比例及可计算来源内的指标；不根据新结果挑一个“最好”阈值。
+K32=0 困难负对照即使没有超过阈值，也要报告预测数量/比例，不能用零检出掩盖 abundance 泄漏。
+明确 undefined precision/AUC 的情况及数量，不静默删除后只报高 precision。
+
+D. 分层与统计单位
+必须按 scenario、true quantity、depth、sample、source_group、dataset 输出；保留数据集内少样本结果。
+成对差异先在同一 bag/spot 上计算，再在 sample 与保守来源组层面汇总。
+旧结果先复现原“样本等权”口径；新主汇总采用“组内样本等权，再来源组等权”，并保留旧口径对照。明确分母、场景支持和纳入数量。
+大量伪 spot 重复不是独立患者，不做逐 spot 的显著性检验来夸大样本量。
+以来源层面的成对点和效应大小为主；如果计算区间，以 source_group 为重采样单位并报告实际组数，不能把重复 bag 当独立生物重复。
+比例按 posterior draw 计算。沿用并注明近零分母处理，报告不可评数量和有效比例；不能把这些 spot 从数量误差表中静默剔除。
+
+九、图表与交付结构
+
+建议目录：
+00_manifest/
+01_feature_audit/
+02_existing_output_audit/
+03_merged_reference/
+04_paired_depth_control/
+05_deconvolution/
+06_evaluation/
+07_figures/by_dataset/
+08_review/
+code/
+
+至少输出以下图及底层数据：
+1. 关键基因/冻结 MP 在各 assay 的可用性与 G0 丢失概览；
+2. S31/S30 完整 DEV 的总上皮真实值—预测值图，按深度、来源分层；
+3. 总细胞预测与深度关系，画真实值 20；
+4. 配对控制：2 种稀释规则 × 2 份 reference 的数量误差与来源配对图；
+5. S31 的 K32 数量、上皮内比例和困难负对照热图/分布；
+6. 非上皮标签吸收与可获得的 detection/背景诊断；
+7. 旧 MAIN/NO_P07T 与旧 TEST 的只读汇总，清楚标注历史结果。
+
+图需有图例、透明底、PDF 与 300 dpi PNG，提供作图表；按 dataset 分目录，坐标尽量保持可比较，不隐藏极端值。缺失或支持不足明确显示。
+不新增 NMF/UCell/UMAP 计算。引用旧连续 MP10 图时保留冻结数据与既有配色。
+
+保存：
+README、METHODS、CONFIG、CONTROL_FROZEN、STATUS；
+输入/模型/成员/基因 hash、模型索引、环境、命令和日志；
+所有评价 TSV、per-spot 配对表、场景与来源支持表；
+G1 审计和 NEXT_G1_CONFIG.yaml；
+轻量 review.zip 及一份中文审阅说明。
+模型、原始 counts 和大后验留在服务器，review.zip 放关键图表、配置、代码与可追溯索引。不要覆盖旧 results/review。
+所有模型/评价列出 COMPLETED、NOT_CONVERGED、UNAVAILABLE 或 NOT_RUN_BY_DESIGN 的真实原因，不把未运行写成失败。
+
+十、最终报告必须明确回答
+
+A. 关键基因究竟是 assay 不可测、处理丢失、跨 63 张交集损失，还是证据不足？哪些可以在未来合法 G1 恢复？
+B. 同一 G0 与同一 DEV 下，S30 的总体上皮回收相对 S31 改善多少？其余 29 标签的尺度是否也发生变化？
+C. 两种稀释规则使用的具体细胞是否完全配对？改变规则后的数量偏差怎样变化？
+D. 当前错误更支持整体上皮/数量校准问题、细分困难，还是混合原因？哪部分仍无法归因？
+E. K32 数量、K32 在上皮中的比例及困难负对照是否给出一致结论？
+F. 哪些结论依赖少量来源？旧 TEST/NO_P07T 提供了什么历史描述，哪些并非新的独立证据？
+G. 下一步更适合：按合法 G1 继续有限参考诊断、继续 K32 的独立验证，还是转向较宽的上皮 MP10 连续状态？给具体数据理由，不根据图是否漂亮选择。
+
+判读原则：
+- G0 合并上皮仍差：整体参考/特征/数量校准尚未解决，不能证明 K32 本质不可分。
+- G0 合并上皮明显更可靠、细分却恶化：支持当前细分方案增加了解卷积困难；不将原因简化为某个 signature 相关系数超过阈值。
+- 技术对照使两者都改善：说明值得继续验证，但 DEV 上改善不是独立空间有效性证明。
+- 不论结果好坏，完成报告。计算完成、模型收敛、可区分性证据和真实空间有效性分别说明。
+
+十一、本轮明确终点
+
+本轮新的 reference 拟合仅用 TRAIN，新增映射仅用 DEV。
+旧 TEST 仅只读重汇总；不重新拟合 TEST。当前 TEST 已被查看，未来在其上的修复后复核必须标为探索性，重抽同一批细胞不是新的独立验证。
+冻结 K32 本身来自既有发现流程，因此来源留出检验的是冻结候选的迁移表现，不是全流程独立候选发现。
+
+本轮完成上述审计、1 个 NB、1 个完整 DEV 映射、最多 4 个小型映射及审阅包后结束。
+不自动进入 G1 训练、实际空间 63 切片、DestVI、scRNA CNV、预后重筛、CellChat 或 niche。
+遇到已有文件缺失、当前 API 差异等实际问题，先按输入证据解决；只能标记受影响分支，继续可以独立执行的工作。
+不要再次因已授权的 18,182 个排除成员、合并上皮或使用冻结 DEV 而请求确认。
+

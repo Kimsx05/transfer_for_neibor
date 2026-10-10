@@ -1,0 +1,6 @@
+dataset	n_cells	n_recorded_zero	n_recomputed_positive	total_MT_UMI	median_recomputed_MT_percent	n_discordant	field	status	interpretation
+CNP0000460	49327	0	49327	37890439	9.42437147959885	0	percent.mt	RECOMPUTED_MATCH	Stored percent.mt agrees with sparse RNA-count recalculation.
+GSE326225	6288	1	6287	4155804	5.66065480858559	0	percent.mt	RECOMPUTED_MATCH	Stored percent.mt agrees with sparse RNA-count recalculation.
+HRA003620	19435	17	19418	27087676	9.93133265513733	0	percent.mt	RECOMPUTED_MATCH	Stored percent.mt agrees with sparse RNA-count recalculation.
+InhouseData	13460	13460	0	0	0.0	0	percent.mt	NOT_RELIABLY_EVALUABLE	All MT-symbol UMI zero in discovery and harmonized reference counts. Cannot distinguish upstream feature omission from biological absence; not true-zero QC evidence.
+PRJNA662018	35189	9	35180	29838749	5.13274336283186	0	percent.mt	RECOMPUTED_MATCH	Stored percent.mt agrees with sparse RNA-count recalculation.
