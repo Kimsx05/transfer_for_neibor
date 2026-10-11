@@ -1,0 +1,36 @@
+{
+  "config": {
+    "N": 20,
+    "repeats": 2,
+    "epi_counts": [
+      4,
+      12
+    ],
+    "fractions": [
+      0,
+      0.25,
+      0.5,
+      0.75,
+      1
+    ],
+    "C_epi_counts": [
+      0,
+      4,
+      12,
+      20
+    ],
+    "target_full_UMI": 7005,
+    "cross_sample": false
+  },
+  "n_unique_bags": 436,
+  "n_samples": 15,
+  "n_source_groups": 8,
+  "counts_sha256": "4bef93b6e28d73427cab98e2396a97731c75615361771af24a103d42ae9bcb48",
+  "bag_manifest_sha256": "7fc7408f2241ba56c56566e559d3e3711ec39876b9611d0aeefc2ed046ea7c3c",
+  "member_sha256": "77400772cf0ab9da8fbd763a64e5455f7b7a2fea6e76719a34473105707e4de4",
+  "gene_hash": "14316088d684099c8695b1427f6691e7e8945a96986d17d3a034f76ad3260954",
+  "spot_hash": "8081ff2738d49258253e3a50bcc096a6b765bb8941a5318366b7f06bffbce652",
+  "frozen_epoch": 1791649359.4337702,
+  "truth_policy": "all 20 cells contribute counts; withheld high not assigned a reference truth column",
+  "thinning": "integer binomial G0 plus full RNA remainder; fixed full RNA target7005; no renormalization"
+}

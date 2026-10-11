@@ -1,0 +1,246 @@
+K32 v7：完整 K32 对 UCell MP10 后 80% 上皮的新参考、精简伪 spot 与真实空间探索
+
+请直接执行以下方案。用户未来约 8 小时不在，希望回来看到实际分析结果和空间图。不要只给计划或停在 preflight，也不要在已授权模块之间等待再次确认。
+
+【本轮最新授权与目标】
+本轮目标：检验“以 K32 为参考的脂质／甾醇代谢活跃上皮状态”能否通过 cell2location 被识别，并完成少量真实 Visium 切片的探索性映射。
+默认必须推进：1 套新 NB reference＋1 次精简 DEV 伪 spot 映射＋2 张真实切片的独立映射＋完整图表和中文审阅包。
+真实切片探索已经获得本次用户明确授权。旧 v5/v6 中“不进行真实空间拟合”的限制只适用于旧轮次；本轮按此新授权执行，保留旧记录即可，不修改旧规则文件来绕过检查。
+DEV 指标不好、signature 相关性仍高、marker 不理想、高状态泛化弱，都影响结论，不构成暂停真实切片探索的理由。只在输入错位、非法 counts、非有限参数等实际技术问题使结果不可解释时阻断受影响依赖，并继续其他可执行工作。
+本轮是探索性迭代。K32 来自既有发现集，已有 DEV/TEST 也已被查看；不宣称完成全新的独立候选发现或独立临床验证。
+
+一、工作目录、输入与复用
+
+项目根目录：
+/home/data/t070721/codex_workspace/Bladder Metabolism
+
+新输出目录：
+/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_k32_lower80_spatial_v7
+
+主要复用输入：
+1. mp10_k32_reference_identifiability_v5/scope_frozen_resume_v1
+2. mp10_k32_reference_diagnostic_v6
+3. mp10_k32_validation_v4 及其可追溯的冻结成员、MP、UCell 定义
+4. cell2location_full_run/v2_30type 的已接受真实切片配置和旧空间结果
+5. cell2location_preflight_v1/02_visium/anndata 中已通过既有 QC 的空间对象
+
+公开审阅来源（辅助定位，本地建模输入优先）：
+https://github.com/Kimsx05/transfer_for_neibor/tree/main/results/mp10_k32_reference_diagnostic_v6/mp10_k32_reference_diagnostic_v6
+https://github.com/Kimsx05/transfer_for_neibor/tree/main/results/review/scope_frozen_resume_v1
+
+先读取实际有效的 METHODS、CONFIG、DEV_FROZEN_CONFIG、INPUTS_READY、模型索引及已跑通代码；不得把已废弃的初始早停结果当作最终模型。
+已知 v6 核验环境为 cell2location 0.1.5 / scvi-tools 1.3.3 / torch 2.6，优先复用实际可用环境。以服务器当前安装源码与旧成功调用为准，不夜间升级整套环境。
+先用 rg、明确目录和 manifest 定位输入，不在全服务器展开无边界搜索。缺失辅助报告不阻断已能核实输入的模型。已验证的大 counts 缓存按路径、既有 hash 和当前文件信息复用，说明哪些 hash 是沿用记录，避免复制或无意义地反复遍历大文件。
+新目录已存在时按输入、配置、reference hash 和模型状态断点续跑；有冲突时新建带时间戳的派生 run，保留旧结果。
+
+二、固定本轮标签：完整 K32＋非 K32 的 lower80
+
+保留旧冻结上皮集合 E=123,699 个、K32 集合 K=3,282 个，原旧参考范围外 18,182 个继续不进入本轮，理由仍为 outside_frozen_discovery_scope，不能标作 MP10-low。
+旧 Epithelial 中合法的原 Cycling 成员以冻结 cell_id 为准保留，不再按 major == Epithelial 二次筛除。
+沿用旧 TRAIN/DEV/TEST 来源组划分（25/8/8），P07T/P07N 的原分组保持；来源组称“保守来源组，未独立核验患者”。不重新随机分组。
+
+读取旧 actual_cell_split_manifest.tsv.gz 中冻结 raw UCell MP10 字段 ucell10，并与 v6 的 member_label_manifest.tsv.gz 一对一核对。不要直接复用旧 UCell_high 二元标记，它与此次 q80 定义不一定相同。
+在 TRAIN 的全部冻结上皮内计算 t=quantile(ucell10,0.80)，使用 R type=7／NumPy-Pandas linear 等价定义，float64，保存完整精度与算法。预期 TRAIN 上皮 57,008 个，t≈0.22016683621566624。
+将同一个 t 应用于所有来源；不按 sample 各取 20%，不以 z 分数切分，不重新计算单细胞 UCell。
+
+新增本轮标签列，按以下优先级赋值：
+- Epi_K32_anchor：全部冻结 K32；K32 优先，包含较低 UCell 的 K32。
+- Epi_MP10_lower80：冻结上皮中非 K32 且 ucell10≤t。
+- withheld_MP10high_nonK32：冻结上皮中非 K32 且 ucell10>t；作为“本轮未纳入上皮 reference 的高状态集合”，不是第三个 reference 列。
+- 其余原有 29 类非上皮：沿用原标签及成员。
+
+核对用预期值（不为凑数篡改数据）：
+分组       K32_anchor   nonK32_lower80   withheld_high_nonK32
+TRAIN          2395             45544                  9069
+DEV             634             23943                  4385
+TEST            253             29864                  7612
+ALL            3282             99351                 21066
+
+全量 K32 中预计 3,176 个高于 t、106 个不高于 t；后者仍保留在 K32，不重复进入 lower80。
+本轮 NB 仅使用 TRAIN 中的 K32_anchor、lower80 和原 29 类非上皮。预计总计 126,791 个 TRAIN 细胞，即原 135,860 减去 9,069 个 TRAIN 高分非 K32。其他 TRAIN 细胞不下采样。
+DEV 高分非 K32 保留用于泛化评价；TEST 只做标签规模核对和已有结果的描述，本轮不新增 TEST 拟合或 TEST 调参。
+
+输出：逐细胞新标签与 inclusion/exclusion_reason；K32×q80 四格表；按 sample/source_group/dataset/split 的人数、UCell 分布与支持度。
+若仅有可解释的浮点边界差异，记录具体细胞、精度和实际冻结 t；若成员或分数来源实质不匹配，先沿已知输入解决，不静默改阈值或改 K32。
+不改原 NMF、14 个 MP、MP10 基因及权重、Top20、原聚类、K32 成员、原 UCell。此次选择 reference 成员不构成重跑发现流程。不新增 sample-balance、q70/q90 扫描或 K32∩top20 第二套正参考。
+
+三、只训练一套新 NB reference
+
+使用已核验的原始非负整数 RNA counts；不使用 normalized/log/SCT/integrated 矩阵或 UCell/NMF 分数拟合 NB。
+G0 固定为旧实际 11,230 个基因及确切顺序；本轮不同时改标签和扩充 G1。核对两个默认真实切片都能提供该基因范围，不把未测基因补成零列。
+RegressionModel 训练输入限本轮 126,791 个左右的 TRAIN 成员，完整包含 31 个 reference 标签。sample batch 沿用旧有效实现，不把 MP10、K32 身份、真值组成等加入额外 nuisance covariate。
+使用 master seed=123，并以明确目的字符串确定性派生其他种子，保存数值；不搜索 seed。
+沿用 NB 初始 250 epochs、每次延长 125、上限 1,000，batch_size=2,500、lr=0.002、train_size=1.0。这里的 1.0 仅针对已限定的 TRAIN 输入。
+使用旧已验证 loss 停止规则：相邻 50 epoch loss 均值相对变化<1%，记录实际完成 epoch 与 loss；不为 signature 不够漂亮无限加训。
+signature 导出沿用 v6 已核验的尺度约定，按本轮实际入模 TRAIN 的 batch 细胞权重计算必要 detection 尺度，避免漏乘、重复乘或沿用旧权重。保存基因、标签顺序与 reference hash。其他 29 类均在这次 TRAIN 模型内学习，不拼入含 DEV/TEST 的历史全量 signature。
+当参考数值有效但到达时间预算仍未满足稳定条件，可冻结当前 checkpoint 为 PROVISIONAL_REFERENCE，并继续用户授权的探索映射，所有下游标注该状态；出现 NaN/Inf、缺失标签、错位基因等不可用参数才阻断下游。
+开始下游后本轮 reference 固定；不要继续修改 reference 而让不同切片实际使用不同版本。
+
+四、reference 的简短可区分性检查
+
+先完成可复查的新旧表达谱比较，不启动分类器或另一套大规模 DEG 分析：
+1. 新 K32/lower80 与旧 S31 的 K32/Epi_other：全 G0 的 log1p 相关性、幅度、表达差异表；同时标明旧 S31 与新参考背景定义不同。
+2. 导出本轮 K32 对 lower80 的 TRAIN 表达效应表：均值、检测率、明确 pseudocount 的 log2FC；结合 NB 学到的差异，给出排名靠前基因。
+3. 优先复用既有 MP10/脂质/甾醇注释，在多个基因层面说明模式；补一张按有足够两组细胞的 sample/source_group 汇总的方向图，展示样本支持度。没有足够支持的来源列为 NA，不以逐细胞 p 值冒充独立来源证据。
+4. 固定用于后续空间展示的 2–3 个脂质／甾醇基因：从冻结 MP10 Top20 内、两个预选空间对象实际可测的基因中，按 TRAIN 的表达支持和差异排名选取，并在读取新空间预测之前写入 DISPLAY_GENES.tsv。不足则如实减少，不为改进 MP10 score 替补基因。
+5. 其余 29 类与旧参考的幅度变化只做简表，尤其列出 vCAF。
+
+相关性不设人为硬门槛；按 UCell 选择背景后 MP10 基因出现差异是设计预期，不能单独称为独立生物学验证。上述任何生物学结果均不阻断模块七的真实切片探索。
+
+五、精简 DEV 伪 spot：单个中等深度，最多约 560 个唯一组合
+
+只使用既有 DEV，预计 14 个 sample、8 个保守来源组。每个 bag 恰好 20 个不同细胞，全部来自同一个真实 sample；不把 source_group 当作可以跨 sample 混合的许可。
+每个可实现条件 2 个技术重复。使用所有可支持的 DEV 来源，不挑预测好的来源，不需要 sample-balance reference。
+
+面板 A：K32 两端对照
+- N_epi=4 或 12。
+- 上皮内 K32 设计比例=0、0.25、0.50、0.75、1.00，其余为 lower80。
+- 其余 20-N_epi 个细胞来自同一样本原非上皮池。
+
+面板 B：高分非 K32 泛化
+- N_epi=4 或 12。
+- 上皮内 withheld-high 设计比例=0、0.25、0.50、0.75、1.00，其余为 lower80，K32=0。
+- 非上皮背景与对应 A 系列尽量使用同一批具体细胞。
+
+面板 C：低状态背景
+- N_epi=0、4、12、20；全部上皮为 lower80，K32=0，withheld-high=0。
+- 其余由同一样本非上皮细胞组成。
+
+A/B 的零剂量及 C 中重叠条件只生成和映射一次；evaluation 可引用同一 bag，但总体汇总不能重复计权。完整支持时最多约 560 个唯一伪 spot，支持不足则更少。
+对同一个 sample×repeat×N_epi 的系列，固定非上皮细胞身份；用确定性细胞顺序和嵌套替换名单改变高状态数量，使剂量变化发生在相同背景中。
+若来源细胞数不足，只标注该格不可构建，不借 TRAIN/TEST、不跨样本、不复制细胞凑数。不因缺少个别格停掉整套模拟。
+保存每个 bag 的具体 cell_id、来源、场景、成员 hash、重复使用次数及可构建性表。模拟方案与随机种子在拟合前冻结。
+
+采用一种已验证稀释规则即可：TARGET_UMI，中等 full-RNA UMI 锚点 7,005（先核对旧冻结值）。对 bag 的原始 full RNA 总量 S_b 使用 p_b=min(1,7005/S_b)，做整数 Binomial thinning，再聚合到同一 G0。
+不能以 G0 总量替代 full RNA 分母；若复用“G0 counts＋非 G0 RNA remainder”生成器，沿用已验证的数学等价实现。记录 pre/post full RNA、G0 RNA、p、目标不可达到情况与逐细胞 zero-retained-RNA。
+thinning 后不再强制缩放到同一 UMI；保留真实 20 个细胞的计数，即使某细胞保留 RNA 为 0。此轮不再增加 FIXED_CAPTURE 对照或其他深度。
+
+对每个 bag 独立保存三种真值：
+- n_K32_true：冻结 K32 数量。
+- n_MP10high_epi_true：满足 ucell10>t 的真实上皮数量。
+- mean_ucell_epi_true：该 bag 中真实上皮细胞的原冻结 UCell 均值，以及对应分布摘要。
+另存 n_epi_true、31 个 reference 标签的对应真值及原 29 类真值，并单独保留 n_withheld_high_true。高分非 K32 既不补成 lower80，也不写入 exact K32；因此，31 个 reference 标签的真值之和可以小于 20。真实总上皮与总细胞数必须从完整 bag 名单计算，不能用这 31 列相加代替。
+模拟 counts、full RNA 分母和 thinning 必须包括 bag 的全部 20 个细胞，包括 withheld-high。只在 NB 训练时排除 TRAIN withheld-high；不要在构建 DEV counts 时再次按 reference 标签过滤，不能用 reference-only 缓存替代完整 DEV 输入。K32 中低于阈值的成员贡献 K32 真值，但不贡献 MP10high 真值。
+N_epi=0 时，真实上皮内比例和上皮 UCell 均值为 NA；不能填 0 后混入比例相关。细胞 UCell 均值与聚合表达后重新算 UCell 不是同一个量。
+
+把上述全部唯一 bag 放入一次新的 DEV mapping，使用 sample batch，不输入场景、剂量、真值、UCell 或稀释概率等预测协变量。
+主任务只要求新 reference 的一次 DEV mapping。若在默认 DEV、两张真实切片均完成且留足报告时间后仍有明确余量，优先可复用旧 S31 reference 对完全相同的这份新 DEV counts 追加一次配对基线；不重训旧 reference。新旧基线必须共享 counts、spot 顺序、场景和对应模拟种子。
+没有做这次配对旧基线时，旧 v6 数字只作历史背景，不能直接宣称新旧 MAE 的差值就是标签改变带来的提升。
+
+六、DEV 评价：两端回收、状态响应、低状态误报分别报告
+
+面板 A/C：报告 K32 数量、总上皮数量的 MAE/bias/校准，K32/上皮比例误差、90% 后验区间覆盖；比例仅在真实上皮>0且预测分母可评时计算。全部细胞真值恒为 20，只报偏差/误差，不计算与常数真值的相关性。
+面板 A/B/C：在固定 N_epi 与背景下，画预测高参考 abundance、相对状态指标随真实高分比例及上皮 UCell 均值的响应。分开展示 Epi=4/12，A/B 只在共同可构建来源和背景中成对比较。
+面板 B 的高参考响应在 state 目标下属于待检验的泛化，不能全部记作假阳性；若按 exact K32 目标计算，明确其真实 K32=0。两种目标的结果都保留，不能依据成绩临时切换解释。
+面板 C：展示纯 lower80 及纯非上皮 bag 的高参考预测分布。把总上皮、vCAF 的真值与预测放在同一简表，原 29 类再给完整简表。
+主分析不调二元分类阈值，不沿用旧 8.367393，也不以 posterior mean>0 或 q05>0 定义检出。可补描述性 AUROC/AUPRC，但注明真值目标、模拟阳性比例、不可计算来源；不能拿模拟 PR 当真实组织患病率下的 precision。
+主汇总沿用：来源组内样本等权，再来源组等权；每项注明有效样本/来源/场景数。技术重复不是独立患者，不做逐 spot 显著性检验夸大样本量。
+每个来源的方向、低背景分布和极端误报都应可见，不只交一张 pooled correlation。
+
+七、真实切片：默认两张，直接执行探索性映射
+
+预选名单基于已冻结 QC、规模、深度和不同 dataset/assay，不以旧或新 MP10 图是否漂亮选择：
+1. GSE171351_B1：GSE171351，1,017 spots，原矩阵 UMI median 8,940，fresh-frozen polyA。
+2. GSE238145_B17：GSE238145，2,399 spots，原矩阵 UMI median 6,479，CytAssist FFPE v2。
+两张原矩阵的冻结 MP10 Top20 均已记录为可测 20/20；映射使用的 G0 仍为统一 11,230 基因，Top20 的实际计分与 G0 基因覆盖分别记录。
+
+已知输入路径：
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_preflight_v1/02_visium/anndata/GSE171351_B1.h5ad
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_preflight_v1/02_visium/anndata/GSE238145_B17.h5ad
+
+拟合前核对 frozen eligible manifest、文件、spot ID、counts、基因、坐标和现有图片／scale factors，并写 SELECTED_SECTIONS.tsv。
+仅当真实技术缺失导致默认切片无法完成空间探索时采用预定替换：B1→GSE171351_A1（768 spots）；B17→GSE238145_B18（3,303 spots）。记录原因，不基于生物学结果换片。图片缺失但坐标有效时直接画坐标图，不伪造 H&E 叠图，也不因此阻断拟合。
+最多两张默认切片均完成后，且有充分运行余量、不会挤占出图报告时间，才可追加 GSE319536_BC10（2,499 spots，UMI median 6,798）；第三张优先级低于默认交付与可完成的配对 DEV 基线。
+每张独立拟合，使用同一冻结新 reference 和全部 31 类；保留各自原 QC spot 集合。不先按新预测上皮≥0.25筛掉 spots，不仅留两类上皮，也不因竞争问题删掉 vCAF 或其他类型。
+真实切片的 N_cells_per_location、detection_alpha 优先沿用已接受的 v2_30type 对应切片配置，记录来源。若该历史值无法定位，允许本轮透明采用 N_cells_per_location=20、detection_alpha=20 的探索性 prior，不等待用户；这不是核计数或已知真实细胞数，不按新图或预测数量调参。
+原项目范围已确定无需此处重做 CNV、核分割、tumor/normal 筛选或全套 major 注释。
+
+八、映射、posterior 与数值状态
+
+DEV：沿用 N_cells_per_location=20、detection_alpha=20、lr=0.002、train_size=1.0、旧已跑通 batch 设置。20 是生成真值及先验，不能强制将预测总和归一到 20。
+映射初始 epoch 目标 3,000，按约 2,000 epoch 续训；minimum=5,000，cap=30,000。为了轮转和墙钟预算可缩短单个训练块，记录实际完成 epoch，不能将请求 epoch 当实际完成值。
+使用旧已验证的 loss＋丰度稳定性停止标准：相邻 500 epoch loss 均值相对变化<0.005；相邻检查点的 256-draw posterior means，对 K32_anchor、lower80、两者和计算 abs(new-old)/(old+0.1)，median<0.05 且 q95<0.20。无可比前一检查点则不能宣称该项通过。
+训练可以分成短块保存和轮转，但正式丰度稳定性判定仍比较至少相隔 2,000 个实际完成 epochs 的检查点，例如 3,000→5,000→7,000。中间短块只用于续跑，不能因间隔变短而更容易宣称稳定；minimum=5,000 保持。
+达到数值稳定即可停止可选加训；结果不符合预期不触发更多 seed/超参数搜索。达到时间／epoch 上限仍未稳定，输出 PROVISIONAL_NOT_CONVERGED，并保留已有图表和 checkpoint。
+
+最终优先导出 1,000 个必要 w_sf posterior draws，分批处理，不导出所有 posterior sites 或 spot×gene×draw 巨型张量。若预算只允许较少 draws，至少导出已可用的 256 draws 和摘要，明确 actual_n_draws，不伪称 1,000。
+每个 draw 先计算：
+Epi_total = w_K32_anchor + w_lower80
+I_state = w_K32_anchor / Epi_total
+再得到 mean、median、q05、q95。不得相加两列 q05，不得以两个 q05 相除；E[I_state] 与 E[w_K32]/E[Epi_total] 分别命名，主图使用前者。
+沿用 near-zero denominator 规则：draw 中 Epi_total<0.1 时该比例无效；若某 spot 无效 draw>5%，其比例汇总设 NA，空间标灰并报告数量。该 spot 的 abundance 和数量误差仍保留。此为数值分母处理，不是重新引入 Epi≥0.25 生物学筛选。
+保存非负有限性、标签／基因顺序、实际 epochs、训练时间、loss、reference hash 和数值状态。有限但未收敛的结果与技术无效结果分开。
+
+九、每张真实切片必须出图，不只保存模型
+
+同一切片使用相同坐标、方向和 spot 集合，输出：
+1. 组织图／坐标底图；有可靠 H&E 和比例信息才叠加。
+2. Epi_K32_anchor posterior mean 空间图，深蓝渐变。
+3. Epi_MP10_lower80 posterior mean 空间图。
+4. Epi_total posterior mean 空间图。
+5. draw-level I_state 连续空间图，色标固定 0–1，低分母／缺失值灰色。
+6. 高参考 q05 或后验区间宽度辅图，并注明其含义；不把 q05>0 当检出证据。
+7. 冻结 MP10 Top20 连续分数图：优先复用与该 spot 集合精确匹配的既有结果。若没有，则在该切片完整实测表达矩阵上沿用项目已确定的 Top20 计分方法和参数补算；不以 G0 裁剪后的基因宇宙悄悄替换原计分方法，不更换 Top20、不补替代基因。可测缺失如实记录。
+8. 上皮表达参照：EPCAM、KRT8，KRT18 若实际可测可加；缺失标不可测，不造零列。
+9. 模块四预先固定的 2–3 个脂质／甾醇基因空间表达图。
+10. vCAF abundance 辅图，与总上皮图并排供诊断。
+
+MP10 连续图用 plasma、真零黑色，NA 灰色，图例完整。PDF＋300 dpi PNG、透明底；按 dataset 分目录。
+两张切片至少保留一版共同 abundance 色标和共同 0–1 状态比例色标。必要时可用 pooled q99 作为显示上限，但必须标明截断、报告超界数量，原始表保留完整数值；不能只交每张独立拉伸的漂亮图。
+少量描述性散点／相关：I_state 与原空间 MP10 连续分数、上皮表达、nCount、总上皮 abundance 的关系，按 section 分开。使用同一程序基因的共定位只能称表达一致性，不能称独立验证。原始 spot 的 MP10 分数是混合转录组分数，不自动等于上皮内在代谢活性。
+单细胞 TRAIN 的 q80 阈值只定义本轮参考与单细胞模拟真值；不得直接把 0.22017 套到真实混合 spot 分数上判阳性。初期不把每个 spot 硬贴成一种细胞、不自动命名 XXgene+，也不进入 niche／CAF 通讯推断。
+若映射未收敛，仍可输出有限数值的初版图，但图标题、总览和表中均明确 PROVISIONAL_NOT_CONVERGED；若数值无效则不绘制伪造的 abundance，仅交真实可用的原始表达／坐标图和错误说明。
+
+十、8 小时预算、持续运行与优先级
+
+预算从 Codex 实际开始执行本任务的 t0 起算，保存 UTC 和 +08:00 时间及可用的单调时钟记录。目标在 t0+8h 前完成一次可查看的审阅包；训练软截止设为 t0+7h，预留约 1 小时做 posterior、出图和报告。
+这是计算预算，不是统计上保证收敛。按照真实首段运行耗时调整任务轮转，不能将时间到限写成“数值收敛”。
+
+建议安排：
+- 前 30–45 分钟：定位可复用输入，核对标签/q80，固定切片和精简 DEV 组合；同时准备真实切片已有表达图。
+- 接下来约 60–90 分钟预算：完成新 NB，冻结可用 reference 和数值状态。
+- NB 后：先让真实切片 1、DEV、真实切片 2 分别获得初始训练段、checkpoint 和可用初版摘要；再轮转延长尚未稳定的模型。不要让第一个任务独占全部训练预算。
+- 每块以约 30–45 分钟为软预算，用当前 API 支持的 checkpoint/callback 或既有分块机制安全返回；每完成一块更新实际耗时、ETA、STATUS，优先保证三个主要 mapping 都实际执行。
+- 默认三个 mapping 已稳定且预计能在 t0+7h 前完成时，才安排可选配对旧 DEV 基线；再有充分余量才加第三张真实切片。
+- 不启动预计无法在 t0+7h 前完成的完整训练块；按实测速度缩短最后一块。既有 callback 支持 deadline 时，在截止后的下一个 epoch 边界返回，避免多跑 30–45 分钟挤占报告时间。
+- t0+7h 起导出已可用后验并整理报告。提前完成则提前交付，不为凑满 8 小时增加其他分析。
+
+优先复用项目已验证的续训方式。继续同一个模型的参数，能可靠保存优化器状态时一并保存；API 限制如实记录，不能每次重新初始化模型后宣称续训。恢复时核对本轮 reference 和输入 hash。
+启动时只读检查可用 GPU、显存、利用率、已有进程、RAM 和磁盘空间。旧 mapping 代码有硬编码 device=1 的风险，必须使用当前可用设备并正确处理 CUDA_VISIBLE_DEVICES 内的编号。
+默认一张可用 GPU 串行训练、CPU 表格/出图可并行；确有独立空闲 GPU 时可分配不同任务，不抢占其他任务。只管理本轮创建并记录的 PID；不全局 pkill、不清理旧 counts/模型、不终止用户其他训练。
+遇到 OOM 先减小合法训练／posterior batch 或改串行、恢复本轮 checkpoint；不删细胞、删 reference 类型、缩小 K32 或改分位数来换取运行。
+每 10–15 分钟或训练块边界保存 checkpoint／状态。使用可断线持续的项目既有 launcher、tmux/nohup 或等价机制，留唯一 run ID、日志和续跑入口；不要只提交一个后台命令就报告“完成”，应跟进到实际报告生成。
+不要盲目 sleep 8 小时，不因用户不在线请求例行选择，不启动到未来的提醒任务。若确实发生不可修复技术阻塞，仍在预算内完成能独立执行的原始空间图、标签表、日志和已完成结果包。
+
+十一、交付目录和增量报告
+
+建议结构：
+00_manifest/：输入、标签、来源、阈值、seed、切片选择、环境及时间预算
+01_reference/：NB checkpoint、signature、有效配置、TRAIN 表达差异与相关性
+02_pseudospots/：唯一 bag manifest、逐细胞名单、真值、稀释记录、稀疏 counts
+03_dev_mapping/：新 DEV 模型及可选旧 reference 的同输入映射
+04_spatial_mapping/<dataset>/<section>/：独立模型、配置、逐 spot 结果
+05_evaluation/：两端回收、泛化响应、低背景、全类型分配简表
+06_figures/by_dataset/：按 dataset 输出的真实空间总览、单图和图底表
+07_review/：中文审阅说明、报告首页、模型索引和轻量 review.zip
+code/、logs/、STATUS.json、CONFIG.yaml、README.md、METHODS.md
+
+每完成一个模型即更新报告首页，不等全部成功才出图。最终提供一个可直接打开的本地 HTML 或 Markdown 总览，首页能看到两张切片的核心图、DEV 主要结果和实际运行状态。
+review.zip 包含主要 PDF/PNG、精简 TSV、图底表、配置、代码、README/METHODS/状态和模型路径索引；不要塞原始大 counts、全部 checkpoint 或巨型 posterior。保留服务器完整模型和明确续跑命令。
+同时输出适合我上传审阅的目录：
+/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_k32_lower80_spatial_v7/07_review
+所有结果保存在新的派生目录；本次不需要自动发布、推送 GitHub 或写入既有正式空间注释。
+
+十二、最终中文报告直接回答这些问题
+
+A. q80、三类上皮集合的实际人数与来源支持是什么？K32 高分占比、K32 对全部高分上皮的覆盖率分别是多少？
+B. 新 reference 的 K32 与 lower80 是否在多个脂质／甾醇基因上形成更清楚的差异？哪些结果只是标签构建的预期，哪些来自来源留出评价？
+C. 精简 DEV 中，两端已知组成能否回收？低分背景／纯非上皮会不会产生高状态信号？总上皮与 vCAF 分配表现怎样？
+D. 高分非 K32 是否随真实 MP10 状态产生合理响应？模型更像在识别冻结 K32、较广的 MP10 活跃状态，还是主要受到上皮量／来源影响？
+E. 两张真实切片分别用了什么 prior、运行到多少 epochs、是否稳定？图中有什么实际可观察模式？表达一致性与统计独立验证分开表述。
+F. 哪些任务完整完成，哪些因为时间只得到初版，哪些技术不可用？提供每项具体路径、训练与数值状态和续跑命令。
+G. 根据现有证据，下一步适合扩大探索、仅继续 K32-like 状态映射，还是先解决参考分配问题？给出实际数字和图的依据，不根据图是否漂亮选择结论。
+
+分别记录 execution_status（完成／时间受限／技术阻塞）、numerical_status（稳定／未稳定／不可用）、biological_evidence（支持／部分支持／不支持／不可评价）；不得用一个 PASS 混写三层含义。
+本轮明确终点是新参考、精简 DEV、两张真实切片探索及审阅包。不要自动继续 63 张全量、G1、多阈值、sample-balance、重跑 NMF/CNV、预后筛选、CellChat 或 niche。
+现在直接开始定位已知输入并执行；已确定且用户明确授权的步骤无需再次询问。

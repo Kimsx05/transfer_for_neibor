@@ -1,0 +1,30 @@
+{
+  "execution_status": "COMPLETED",
+  "stop_reason": "NUMERICAL_STABLE",
+  "numerical_status": "STABLE",
+  "biological_evidence": "部分支持",
+  "epochs": 9000,
+  "actual_n_draws": 1000,
+  "n_spots": 436,
+  "n_labels": 31,
+  "reference_status": "STABLE",
+  "reference_sha256": "be3b6462389733d3dab6a02fbe009c73f28acd72409c7d558430353855020539",
+  "counts_sha256": "4bef93b6e28d73427cab98e2396a97731c75615361771af24a103d42ae9bcb48",
+  "convergence": {
+    "epochs": 9000,
+    "converged": true,
+    "loss_relative_change": 0.0001288368447520017,
+    "abundance_stable": true,
+    "comparison_epoch_gap": 2000,
+    "reference_numerical_status": "STABLE",
+    "wall_seconds_last_block": 252.7001428604126
+  },
+  "updated_epoch": 1791653987.2675676,
+  "draws_sha256": "08fe26218772120729417e8a8363c860463d50575d2e53ddabcdef9888bbaad8",
+  "biological_evidence_detail": "A/C exact K32 count calibration slope0.4555 and true12 predicted5.0957; epithelial fraction MAE0.2158. Dose response exists but absolute recovery is not reliable; withheld-high response is weaker in matched backgrounds.",
+  "target_specific_evidence": {
+    "exact_K32_cell_count": "不支持可靠定量",
+    "directional_K32_response": "有方向响应，但尺度偏差",
+    "all_MP10high_epithelial_cells": "仅有限泛化，不能等价"
+  }
+}

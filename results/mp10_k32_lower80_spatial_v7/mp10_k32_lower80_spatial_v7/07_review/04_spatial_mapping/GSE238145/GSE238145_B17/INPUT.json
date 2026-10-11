@@ -1,0 +1,32 @@
+{
+  "section": "GSE238145_B17",
+  "dataset": "GSE238145",
+  "input_path": "/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_preflight_v1/02_visium/anndata/GSE238145_B17.h5ad",
+  "input_sha256": "ef60912eb401870714b20b7c2cdc02cf57ae6937f5d25c0d1105849794840001",
+  "counts_sha256": "c41c3a02268bdef95f1280471e84104cede6e81ccb700b041370af96741b331a",
+  "gene_hash": "14316088d684099c8695b1427f6691e7e8945a96986d17d3a034f76ad3260954",
+  "spot_hash": "2c40efef1a28a8a9a17e9c7797f5cce88ce6c3ef00acd66f0e7372d3162e8176",
+  "prior_source": "/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_full_run/v2_30type/02_sections/GSE238145_B17/model_config.json",
+  "N_cells_per_location": 20,
+  "detection_alpha": 20,
+  "input_provenance": {
+    "coordinate_columns": [
+      "imagecol",
+      "imagerow"
+    ],
+    "counts_location": "X",
+    "embedded_image_available": true,
+    "matrix_scope": "existing hard-QC retained spots",
+    "scale_factors": {
+      "fiducial": 22.3797,
+      "hires": 1.0,
+      "lowres": 1.0,
+      "spot": 1.0
+    },
+    "section_id": "GSE238145_B17",
+    "source_assay": "Spatial",
+    "source_file": "/home/data/t070721/codex_workspace/Bladder Metabolism/ST/all_ST_combined_list_SeuratObject_updated.qs",
+    "source_layer": "counts"
+  },
+  "image_note": "preflight h5ad has coordinates but no embedded image; coordinate-only figures, no unverified H&E overlay"
+}

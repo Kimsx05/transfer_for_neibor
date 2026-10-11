@@ -1,0 +1,11 @@
+{
+  "time_epoch": 1791658772.9050756,
+  "models": [
+    "DEV"
+  ],
+  "binary_threshold": "NONE_BY_DESIGN",
+  "weights": "equal samples within conservative source group, then equal source groups; spots within sample equal",
+  "targets": "exact frozen K32 and broad MP10high state kept distinct; B withheld not assigned K32 truth",
+  "source_independence": "not verified patients; no per-spot significance tests",
+  "old_v6_comparison": "historical only unless paired DEV_OLD generated on identical v7 counts"
+}

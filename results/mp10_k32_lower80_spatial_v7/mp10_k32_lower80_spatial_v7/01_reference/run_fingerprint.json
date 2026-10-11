@@ -1,0 +1,47 @@
+{
+  "n_cells": 126791,
+  "n_genes": 11230,
+  "member_order_hash": "7a4e875e1ac7861b3306a0b62d986b5b34ec37aed86bba94c7df03072e2116a2",
+  "gene_order_hash": "14316088d684099c8695b1427f6691e7e8945a96986d17d3a034f76ad3260954",
+  "label_order_hash": "40a56836e22323a399f2def7acfb7d25e2932210f9b78e48b3f5df818b05c860",
+  "member_label_hash": "ffb1c3906088cb4eeae5dfdf63f8e19938cbd6972b5066d48fe2a71e68fa80b9",
+  "manifest_sha256": "67af0869aea4aed76ca6af46a4561879d98c055852b7ecc25d96e2a557607442",
+  "TRAIN_path": "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_k32_lower80_spatial_v7/01_reference/TRAIN_counts.h5ad",
+  "TRAIN_sha256": "7d68b6d9c336d8274592cf8040f632adf19a5cd043d7f8a560f5ce114cb58f1e",
+  "old_counts_hash_policy": "Inherited v6 recorded hashes plus current stat; no repeated giant-cache hash",
+  "old_INPUTS_READY": {
+    "candidate_n": 281851,
+    "TRAIN_n": 135860,
+    "n_genes": 11230,
+    "gene_order_hash": "14316088d684099c8695b1427f6691e7e8945a96986d17d3a034f76ad3260954",
+    "member_order_hash": "a4b0418c41d9ff4d803ce9673da7e56c88472721f14fdc0d106ab7a5b19dc958",
+    "S30_label_hash": "d82c7513566f734d6649124eb76ce888a20fbb19cec7cba432215dc27950e2ca",
+    "S31_label_hash": "c558014f60e8c445ae94345fef5832acc1e22bd715c8fca88bead2e45d7c861f",
+    "counts_TRAIN_sha256": "1ec3cc80dbe0ba61130f893e2dfc029fd4b2832c647e888702c5df2c4142a12c",
+    "counts_DEV_sha256": "b7cf2d59a3e60aa759e8b0a0b6789a3de379bd3f21c1393b5e00eb02ff5dedbe",
+    "full_DEV_sha256": "4459eb6d5bb986c8e7e42473691e9f06c1c23d5b68dcfcbf3fbc16ddc76c4adb",
+    "config_sha256": "f94f0ddf5b18a63e6036a4dbf63c4f95e550438de93cdadece3aad1d0dcf7aa3",
+    "source_manifest_sha256": "b076387835266e364420f2a3361a23f6c3b93b923760b13fe31766bd3363e922"
+  },
+  "old_cache_stats": {
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_k32_reference_identifiability_v5/scope_frozen_resume_v1/02_inputs/TRAIN_counts.h5ad": {
+      "size": 1227880141,
+      "mtime_ns": 1791613300230320449
+    },
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_k32_reference_identifiability_v5/scope_frozen_resume_v1/02_inputs/DEV_counts.h5ad": {
+      "size": 818724134,
+      "mtime_ns": 1791613319933396653
+    }
+  },
+  "branch": "LOWER80",
+  "member_order": "7a4e875e1ac7861b3306a0b62d986b5b34ec37aed86bba94c7df03072e2116a2",
+  "reference_settings": {
+    "initial_epochs": 250,
+    "extension_epochs": 125,
+    "max_epochs": 1000,
+    "batch_size": 2500,
+    "lr": 0.002,
+    "convergence_relative_window_change": 0.01
+  },
+  "seed": 654519674
+}

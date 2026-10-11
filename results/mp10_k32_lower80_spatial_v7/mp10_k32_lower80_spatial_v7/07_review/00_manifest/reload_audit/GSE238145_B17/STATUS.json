@@ -1,0 +1,29 @@
+{
+  "model": "GSE238145_B17",
+  "snapshot_epoch": 11000,
+  "checkpoint_sha256": "9612b8083603322ae3bfc0d3521da4eaa31fdb1a571919c94f382d3dd64a9efb",
+  "n_draws": 256,
+  "original_draw_device": "GPU",
+  "reload_draw_device": "CPU",
+  "interpretation": "Different device RNG; checks whether model restore reproduces abundance distribution, not bitwise equality",
+  "results": [
+    {
+      "label": "Epi_K32_anchor",
+      "median_relative_difference": 0.007422443033986739,
+      "q95_relative_difference": 0.02546536554292298,
+      "correlation": 0.9999187253319382
+    },
+    {
+      "label": "Epi_MP10_lower80",
+      "median_relative_difference": 0.003064112193084387,
+      "q95_relative_difference": 0.024466575073618498,
+      "correlation": 0.9999954245534243
+    },
+    {
+      "label": "epithelial",
+      "median_relative_difference": 0.003142963702451879,
+      "q95_relative_difference": 0.022297210136937876,
+      "correlation": 0.999994830047176
+    }
+  ]
+}

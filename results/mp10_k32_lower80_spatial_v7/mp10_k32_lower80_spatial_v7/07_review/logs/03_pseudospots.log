@@ -1,0 +1,3 @@
+/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_k32_lower80_spatial_v7/code/03_pseudospots.py:21: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  b=pd.DataFrame(bags);ms=pd.DataFrame(members);tr=pd.DataFrame(truth);pan=pd.DataFrame(panelrefs);pan['mapped']=pan.pseudospot_id.isin(b.pseudospot_id);pan=pan.drop_duplicates();assert b.pseudospot_id.is_unique and len(b)<=560 and not ms.duplicated(['pseudospot_id','cell_id']).any();assert np.all(tr[labels].sum(1).to_numpy()+b.n_withheld_high_true.to_numpy()==20)
+2026-10-10T16:22:39.434213+00:00 PSEUDOSPOTS READY (436, 11230) 15 8

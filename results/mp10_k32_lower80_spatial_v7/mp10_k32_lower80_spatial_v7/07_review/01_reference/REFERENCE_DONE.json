@@ -1,0 +1,24 @@
+{
+  "training_completed": true,
+  "converged": true,
+  "epochs": 250,
+  "n_cells": 126791,
+  "n_genes": 11230,
+  "n_labels": 31,
+  "signature_sha256": "be3b6462389733d3dab6a02fbe009c73f28acd72409c7d558430353855020539",
+  "QC": {
+    "cell_total_pearson": 0.5973853467182283,
+    "log1p_gene_mean_pearson": 0.99673458755252,
+    "observed_total": 4309417.0,
+    "expected_total": 4147950.0,
+    "all_finite": true,
+    "n_QC_cells": 1000,
+    "signature_detection_scale": 0.9796364903450012
+  },
+  "status": "STABLE",
+  "input_counts_path": "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_k32_lower80_spatial_v7/01_reference/TRAIN_counts.h5ad",
+  "label_column": "label_v7",
+  "biological_identifiability": "not_determined_by_reference_training",
+  "biological_evidence": "部分支持",
+  "biological_evidence_detail": "Multi-gene TRAIN differences and source-direction support; selection of lower80 makes enrichment partly expected, not independent validation."
+}

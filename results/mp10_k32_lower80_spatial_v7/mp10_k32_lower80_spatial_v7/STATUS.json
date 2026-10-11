@@ -1,0 +1,107 @@
+{
+  "execution_status": "FINISHED_WITH_PROVISIONAL_SPATIAL_OUTPUTS",
+  "numerical_status": "NB_AND_DEV_STABLE_SPATIAL_MODEL_SPECIFIC",
+  "biological_evidence": "部分支持",
+  "target_specific_evidence": {
+    "exact_K32_count": "不支持可靠定量",
+    "K32_like_directional_state": "部分支持",
+    "all_MP10high_count": "不支持等价解释",
+    "real_spatial_validation": "不可评价"
+  },
+  "models": {
+    "DEV": {
+      "execution_status": "COMPLETED",
+      "stop_reason": "NUMERICAL_STABLE",
+      "numerical_status": "STABLE",
+      "biological_evidence": "部分支持",
+      "epochs": 9000,
+      "actual_n_draws": 1000,
+      "n_spots": 436,
+      "n_labels": 31,
+      "reference_status": "STABLE",
+      "reference_sha256": "be3b6462389733d3dab6a02fbe009c73f28acd72409c7d558430353855020539",
+      "counts_sha256": "4bef93b6e28d73427cab98e2396a97731c75615361771af24a103d42ae9bcb48",
+      "convergence": {
+        "epochs": 9000,
+        "converged": true,
+        "loss_relative_change": 0.0001288368447520017,
+        "abundance_stable": true,
+        "comparison_epoch_gap": 2000,
+        "reference_numerical_status": "STABLE",
+        "wall_seconds_last_block": 252.7001428604126
+      },
+      "updated_epoch": 1791653987.2675676,
+      "draws_sha256": "08fe26218772120729417e8a8363c860463d50575d2e53ddabcdef9888bbaad8",
+      "biological_evidence_detail": "A/C exact K32 count calibration slope0.4555 and true12 predicted5.0957; epithelial fraction MAE0.2158. Dose response exists but absolute recovery is not reliable; withheld-high response is weaker in matched backgrounds.",
+      "target_specific_evidence": {
+        "exact_K32_cell_count": "不支持可靠定量",
+        "directional_K32_response": "有方向响应，但尺度偏差",
+        "all_MP10high_epithelial_cells": "仅有限泛化，不能等价"
+      }
+    },
+    "GSE171351_B1": {
+      "execution_status": "COMPLETED",
+      "stop_reason": "EPOCH_CAP",
+      "numerical_status": "PROVISIONAL_NOT_CONVERGED",
+      "biological_evidence": "不可评价",
+      "epochs": 30000,
+      "actual_n_draws": 1000,
+      "n_spots": 1017,
+      "n_labels": 31,
+      "reference_status": "STABLE",
+      "reference_sha256": "be3b6462389733d3dab6a02fbe009c73f28acd72409c7d558430353855020539",
+      "counts_sha256": "80f24c11234e1d9d7caaf02f3f6a47cebf55d741dbbfa5f89cd90ff3644e01e6",
+      "convergence": {
+        "epochs": 30000,
+        "converged": false,
+        "loss_relative_change": 1.850824417825124e-05,
+        "abundance_stable": false,
+        "comparison_epoch_gap": 3000,
+        "reference_numerical_status": "STABLE",
+        "wall_seconds_last_block": 190.55039262771606
+      },
+      "updated_epoch": 1791658571.9265165,
+      "draws_sha256": "355770015965d3a00b4b9d91ac3b44cc1ab69913d522d174397a1cc5570bf468",
+      "biological_evidence_detail": "真实切片无状态/细胞数量真值；仅探索性空间表达一致性。未满足预设丰度稳定性，不能据此作可靠状态定位或细胞定量。"
+    },
+    "GSE238145_B17": {
+      "execution_status": "COMPLETED",
+      "stop_reason": "NUMERICAL_STABLE",
+      "numerical_status": "STABLE",
+      "biological_evidence": "不可评价",
+      "epochs": 29000,
+      "actual_n_draws": 1000,
+      "n_spots": 2399,
+      "n_labels": 31,
+      "reference_status": "STABLE",
+      "reference_sha256": "be3b6462389733d3dab6a02fbe009c73f28acd72409c7d558430353855020539",
+      "counts_sha256": "c41c3a02268bdef95f1280471e84104cede6e81ccb700b041370af96741b331a",
+      "convergence": {
+        "epochs": 29000,
+        "converged": true,
+        "loss_relative_change": 1.0232020632016393e-05,
+        "abundance_stable": true,
+        "comparison_epoch_gap": 2000,
+        "reference_numerical_status": "STABLE",
+        "wall_seconds_last_block": 293.2782714366913
+      },
+      "updated_epoch": 1791658450.8830383,
+      "draws_sha256": "93a1b17915a2ff7696f08be5d80325c6de7806a8a06fa7c3ea176eee52e0816c",
+      "biological_evidence_detail": "真实切片无状态/细胞数量真值；仅探索性空间表达一致性。数值稳定不代表生物学定量通过。"
+    }
+  },
+  "active": {},
+  "validation": {
+    "n_checks": 951,
+    "n_failed": 0,
+    "time_epoch": 1791658764.9716015
+  },
+  "training_cap": 30000,
+  "training_deadline": 1791674214.0,
+  "delivery_deadline": 1791677814.0,
+  "updated": 1791658765.6900802,
+  "elapsed_hours": 2.7088028001123003,
+  "report": "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_k32_lower80_spatial_v7/REPORT.html",
+  "review_zip": "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_k32_lower80_spatial_v7/07_review/review.zip",
+  "optional_tasks_note": "未追加旧S31同输入配对基线：附件要求默认三个mapping均已稳定后才启动可选基线，本轮该前提未满足。不是因DEV生物学效果不佳而跳过。旧v6数值仅为历史背景，不计算“标签修改带来的MAE改善”。第三张切片也未追加。"
+}

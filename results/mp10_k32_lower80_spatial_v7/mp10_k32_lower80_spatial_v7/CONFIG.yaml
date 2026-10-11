@@ -1,0 +1,66 @@
+{
+  "version": "v7_lower80",
+  "master_seed": 123,
+  "t0_epoch": 1791649014.0,
+  "t0_UTC": "2026-10-10T16:16:54+00:00",
+  "t0_Asia_Shanghai": "2026-10-11T00:16:54+08:00",
+  "monotonic_recorded": 5233051.186814465,
+  "monotonic_recorded_at_epoch": 1791649141.0661106,
+  "training_deadline": 1791674214.0,
+  "delivery_deadline": 1791677814.0,
+  "NB": {
+    "initial_epochs": 250,
+    "extension_epochs": 125,
+    "max_epochs": 1000,
+    "batch_size": 2500,
+    "lr": 0.002,
+    "convergence_relative_window_change": 0.01
+  },
+  "mapping": {
+    "N_cells_per_location": 20,
+    "detection_alpha": 20,
+    "lr": 0.002,
+    "initial_epochs": 3000,
+    "extension_epochs": 2000,
+    "minimum_epochs": 5000,
+    "max_epochs": 30000,
+    "loss_change_max": 0.005,
+    "median_change_max": 0.05,
+    "q95_change_max": 0.2,
+    "checkpoint_seconds": 600,
+    "block_seconds": 2100
+  },
+  "simulation": {
+    "N": 20,
+    "repeats": 2,
+    "epi_counts": [
+      4,
+      12
+    ],
+    "fractions": [
+      0,
+      0.25,
+      0.5,
+      0.75,
+      1
+    ],
+    "C_epi_counts": [
+      0,
+      4,
+      12,
+      20
+    ],
+    "target_full_UMI": 7005,
+    "cross_sample": false
+  },
+  "posterior_samples": 1000,
+  "device": "CUDA_VISIBLE_DEVICES=0; scvi device=[0]",
+  "source_status": "conservative source groups; patients not independently verified",
+  "real_spatial_authorized": true,
+  "sections": [
+    "GSE171351_B1",
+    "GSE238145_B17"
+  ],
+  "optional_old_DEV_baseline": "only after three default maps stable with time reserve",
+  "optional_third_section": "lower priority than baseline"
+}

@@ -1,0 +1,25 @@
+{
+  "execution_status": "COMPLETED",
+  "stop_reason": "EPOCH_CAP",
+  "numerical_status": "PROVISIONAL_NOT_CONVERGED",
+  "biological_evidence": "不可评价",
+  "epochs": 30000,
+  "actual_n_draws": 1000,
+  "n_spots": 1017,
+  "n_labels": 31,
+  "reference_status": "STABLE",
+  "reference_sha256": "be3b6462389733d3dab6a02fbe009c73f28acd72409c7d558430353855020539",
+  "counts_sha256": "80f24c11234e1d9d7caaf02f3f6a47cebf55d741dbbfa5f89cd90ff3644e01e6",
+  "convergence": {
+    "epochs": 30000,
+    "converged": false,
+    "loss_relative_change": 1.850824417825124e-05,
+    "abundance_stable": false,
+    "comparison_epoch_gap": 3000,
+    "reference_numerical_status": "STABLE",
+    "wall_seconds_last_block": 190.55039262771606
+  },
+  "updated_epoch": 1791658571.9265165,
+  "draws_sha256": "355770015965d3a00b4b9d91ac3b44cc1ab69913d522d174397a1cc5570bf468",
+  "biological_evidence_detail": "真实切片无状态/细胞数量真值；仅探索性空间表达一致性。未满足预设丰度稳定性，不能据此作可靠状态定位或细胞定量。"
+}

@@ -1,0 +1,455 @@
+Seed set to 138910377
+2026-10-10T17:00:18.351565+00:00 TRAIN_START GSE171351_B1 0 3000 (1017, 11230)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+`Trainer.fit` stopped: `max_epochs=3000` reached.
+2026-10-10T17:07:14.231144+00:00 BLOCK_FINISHED GSE171351_B1 3000 seconds 415.8796343803406
+Seed set to 1918464067
+Sampling local variables, batch:   0%|          | 0/2 [00:00<?, ?it/s]Sampling local variables, batch:  50%|█████     | 1/2 [00:07<00:07,  7.37s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:13<00:00,  6.83s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:13<00:00,  6.91s/it]Seed set to 1918464067
+
+Sampling local variables, batch:   0%|          | 0/2 [00:00<?, ?it/s]Sampling local variables, batch:  50%|█████     | 1/2 [00:07<00:07,  7.01s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:13<00:00,  6.49s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:13<00:00,  6.57s/it]
+2026-10-10T17:07:42.531929+00:00 EXIT GSE171351_B1 3000 False block
+Seed set to 138910377
+INFO     File /home/data/t070721/codex_workspace/Bladder                        
+         Metabolism/mp10_k32_lower80_spatial_v7/04_spatial_mapping/GSE171351/GSE
+         171351_B1/model/model.pt already downloaded                            
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+Training:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<2:58:32,  2.80it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<2:58:32,  2.80it/s, v_num=1]`Trainer.fit` stopped: `max_steps=1` reached.
+Epoch 1/30000:   0%|          | 1/30000 [00:00<3:04:24,  2.71it/s, v_num=1]
+2026-10-10T17:09:12.154832+00:00 TRAIN_START GSE171351_B1 3000 2000 (1017, 11230)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:538: Found 6 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+2026-10-10T17:09:12.368975+00:00 OPTIMIZER_RESTORED GSE171351_B1
+`Trainer.fit` stopped: `max_epochs=2000` reached.
+2026-10-10T17:15:04.380083+00:00 BLOCK_FINISHED GSE171351_B1 5000 seconds 352.22528886795044
+Seed set to 1918464067
+Sampling local variables, batch:   0%|          | 0/2 [00:00<?, ?it/s]Sampling local variables, batch:  50%|█████     | 1/2 [00:09<00:09,  9.12s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:17<00:00,  8.57s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:17<00:00,  8.65s/it]Seed set to 1918464067
+
+Sampling local variables, batch:   0%|          | 0/2 [00:00<?, ?it/s]Sampling local variables, batch:  50%|█████     | 1/2 [00:09<00:09,  9.05s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:17<00:00,  8.72s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:17<00:00,  8.77s/it]
+2026-10-10T17:15:40.606687+00:00 EXIT GSE171351_B1 5000 False block
+Seed set to 138910377
+INFO     File /home/data/t070721/codex_workspace/Bladder                        
+         Metabolism/mp10_k32_lower80_spatial_v7/04_spatial_mapping/GSE171351/GSE
+         171351_B1/model/model.pt already downloaded                            
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+Training:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<2:50:18,  2.94it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<2:50:18,  2.94it/s, v_num=1]`Trainer.fit` stopped: `max_steps=1` reached.
+Epoch 1/30000:   0%|          | 1/30000 [00:00<2:55:52,  2.84it/s, v_num=1]
+2026-10-10T17:22:38.457166+00:00 TRAIN_START GSE171351_B1 5000 2000 (1017, 11230)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:538: Found 6 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+2026-10-10T17:22:38.659937+00:00 OPTIMIZER_RESTORED GSE171351_B1
+`Trainer.fit` stopped: `max_epochs=2000` reached.
+2026-10-10T17:26:24.883008+00:00 BLOCK_FINISHED GSE171351_B1 7000 seconds 226.4258861541748
+Seed set to 1918464067
+Sampling local variables, batch:   0%|          | 0/2 [00:00<?, ?it/s]Sampling local variables, batch:  50%|█████     | 1/2 [00:07<00:07,  7.38s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:13<00:00,  6.82s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:13<00:00,  6.90s/it]Seed set to 1918464067
+
+Sampling local variables, batch:   0%|          | 0/2 [00:00<?, ?it/s]Sampling local variables, batch:  50%|█████     | 1/2 [00:07<00:07,  7.31s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:14<00:00,  7.00s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:14<00:00,  7.05s/it]
+2026-10-10T17:26:54.188697+00:00 EXIT GSE171351_B1 7000 False block
+Seed set to 138910377
+INFO     File /home/data/t070721/codex_workspace/Bladder                        
+         Metabolism/mp10_k32_lower80_spatial_v7/04_spatial_mapping/GSE171351/GSE
+         171351_B1/model/model.pt already downloaded                            
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+Training:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<3:07:06,  2.67it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<3:07:06,  2.67it/s, v_num=1]`Trainer.fit` stopped: `max_steps=1` reached.
+Epoch 1/30000:   0%|          | 1/30000 [00:00<3:12:32,  2.60it/s, v_num=1]
+2026-10-10T17:29:51.781847+00:00 TRAIN_START GSE171351_B1 7000 2000 (1017, 11230)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:538: Found 6 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+2026-10-10T17:29:51.990367+00:00 OPTIMIZER_RESTORED GSE171351_B1
+`Trainer.fit` stopped: `max_epochs=2000` reached.
+2026-10-10T17:34:28.451063+00:00 BLOCK_FINISHED GSE171351_B1 9000 seconds 276.6692564487457
+Seed set to 1918464067
+Sampling local variables, batch:   0%|          | 0/2 [00:00<?, ?it/s]Sampling local variables, batch:  50%|█████     | 1/2 [00:03<00:03,  3.87s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:06<00:00,  3.37s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:06<00:00,  3.44s/it]Seed set to 1918464067
+
+Sampling local variables, batch:   0%|          | 0/2 [00:00<?, ?it/s]Sampling local variables, batch:  50%|█████     | 1/2 [00:03<00:03,  3.82s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:07<00:00,  3.54s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:07<00:00,  3.58s/it]
+2026-10-10T17:34:43.896402+00:00 EXIT GSE171351_B1 9000 False block
+Seed set to 138910377
+INFO     File /home/data/t070721/codex_workspace/Bladder                        
+         Metabolism/mp10_k32_lower80_spatial_v7/04_spatial_mapping/GSE171351/GSE
+         171351_B1/model/model.pt already downloaded                            
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+Training:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<2:15:24,  3.69it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<2:15:24,  3.69it/s, v_num=1]`Trainer.fit` stopped: `max_steps=1` reached.
+Epoch 1/30000:   0%|          | 1/30000 [00:00<2:20:47,  3.55it/s, v_num=1]
+2026-10-10T17:41:16.855127+00:00 TRAIN_START GSE171351_B1 9000 2000 (1017, 11230)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:538: Found 6 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+2026-10-10T17:41:17.038194+00:00 OPTIMIZER_RESTORED GSE171351_B1
+`Trainer.fit` stopped: `max_epochs=2000` reached.
+2026-10-10T17:45:19.279448+00:00 BLOCK_FINISHED GSE171351_B1 11000 seconds 242.4243564605713
+Seed set to 1918464067
+Sampling local variables, batch:   0%|          | 0/2 [00:00<?, ?it/s]Sampling local variables, batch:  50%|█████     | 1/2 [00:09<00:09,  9.01s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:17<00:00,  8.43s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:17<00:00,  8.52s/it]Seed set to 1918464067
+
+Sampling local variables, batch:   0%|          | 0/2 [00:00<?, ?it/s]Sampling local variables, batch:  50%|█████     | 1/2 [00:08<00:08,  8.91s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:17<00:00,  8.59s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:17<00:00,  8.64s/it]
+2026-10-10T17:45:55.028776+00:00 EXIT GSE171351_B1 11000 False block
+Seed set to 138910377
+INFO     File /home/data/t070721/codex_workspace/Bladder                        
+         Metabolism/mp10_k32_lower80_spatial_v7/04_spatial_mapping/GSE171351/GSE
+         171351_B1/model/model.pt already downloaded                            
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+Training:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<2:52:51,  2.89it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<2:52:51,  2.89it/s, v_num=1]`Trainer.fit` stopped: `max_steps=1` reached.
+Epoch 1/30000:   0%|          | 1/30000 [00:00<2:58:06,  2.81it/s, v_num=1]
+2026-10-10T17:47:15.251190+00:00 TRAIN_START GSE171351_B1 11000 2000 (1017, 11230)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:538: Found 6 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+2026-10-10T17:47:15.457476+00:00 OPTIMIZER_RESTORED GSE171351_B1
+`Trainer.fit` stopped: `max_epochs=2000` reached.
+2026-10-10T17:51:03.091457+00:00 BLOCK_FINISHED GSE171351_B1 13000 seconds 227.84029507637024
+Seed set to 1918464067
+Sampling local variables, batch:   0%|          | 0/2 [00:00<?, ?it/s]Sampling local variables, batch:  50%|█████     | 1/2 [00:09<00:09,  9.03s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:17<00:00,  8.48s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:17<00:00,  8.56s/it]Seed set to 1918464067
+
+Sampling local variables, batch:   0%|          | 0/2 [00:00<?, ?it/s]Sampling local variables, batch:  50%|█████     | 1/2 [00:08<00:08,  8.90s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:17<00:00,  8.59s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:17<00:00,  8.64s/it]
+2026-10-10T17:51:38.896528+00:00 EXIT GSE171351_B1 13000 False block
+Seed set to 138910377
+INFO     File /home/data/t070721/codex_workspace/Bladder                        
+         Metabolism/mp10_k32_lower80_spatial_v7/04_spatial_mapping/GSE171351/GSE
+         171351_B1/model/model.pt already downloaded                            
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+Training:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<2:57:17,  2.82it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<2:57:17,  2.82it/s, v_num=1]`Trainer.fit` stopped: `max_steps=1` reached.
+Epoch 1/30000:   0%|          | 1/30000 [00:00<3:02:51,  2.73it/s, v_num=1]
+2026-10-10T17:53:05.603936+00:00 TRAIN_START GSE171351_B1 13000 2000 (1017, 11230)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:538: Found 6 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+2026-10-10T17:53:05.815482+00:00 OPTIMIZER_RESTORED GSE171351_B1
+`Trainer.fit` stopped: `max_epochs=2000` reached.
+2026-10-10T17:56:58.567261+00:00 BLOCK_FINISHED GSE171351_B1 15000 seconds 232.96335792541504
+Seed set to 1918464067
+Sampling local variables, batch:   0%|          | 0/2 [00:00<?, ?it/s]Sampling local variables, batch:  50%|█████     | 1/2 [00:09<00:09,  9.00s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:17<00:00,  8.42s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:17<00:00,  8.50s/it]Seed set to 1918464067
+
+Sampling local variables, batch:   0%|          | 0/2 [00:00<?, ?it/s]Sampling local variables, batch:  50%|█████     | 1/2 [00:08<00:08,  8.89s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:17<00:00,  8.58s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:17<00:00,  8.63s/it]
+2026-10-10T17:57:34.239112+00:00 EXIT GSE171351_B1 15000 False block
+Seed set to 138910377
+INFO     File /home/data/t070721/codex_workspace/Bladder                        
+         Metabolism/mp10_k32_lower80_spatial_v7/04_spatial_mapping/GSE171351/GSE
+         171351_B1/model/model.pt already downloaded                            
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+Training:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<3:09:11,  2.64it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<3:09:11,  2.64it/s, v_num=1]`Trainer.fit` stopped: `max_steps=1` reached.
+Epoch 1/30000:   0%|          | 1/30000 [00:00<3:14:43,  2.57it/s, v_num=1]
+2026-10-10T17:58:53.616153+00:00 TRAIN_START GSE171351_B1 15000 2000 (1017, 11230)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:538: Found 6 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+2026-10-10T17:58:53.818163+00:00 OPTIMIZER_RESTORED GSE171351_B1
+`Trainer.fit` stopped: `max_epochs=2000` reached.
+2026-10-10T18:02:51.296158+00:00 BLOCK_FINISHED GSE171351_B1 17000 seconds 237.68004441261292
+Seed set to 1918464067
+Sampling local variables, batch:   0%|          | 0/2 [00:00<?, ?it/s]Sampling local variables, batch:  50%|█████     | 1/2 [00:03<00:03,  3.79s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:06<00:00,  3.28s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:06<00:00,  3.36s/it]Seed set to 1918464067
+
+Sampling local variables, batch:   0%|          | 0/2 [00:00<?, ?it/s]Sampling local variables, batch:  50%|█████     | 1/2 [00:03<00:03,  3.73s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:08<00:00,  4.45s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:08<00:00,  4.35s/it]
+2026-10-10T18:03:08.081797+00:00 EXIT GSE171351_B1 17000 False block
+Seed set to 138910377
+INFO     File /home/data/t070721/codex_workspace/Bladder                        
+         Metabolism/mp10_k32_lower80_spatial_v7/04_spatial_mapping/GSE171351/GSE
+         171351_B1/model/model.pt already downloaded                            
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+Training:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<3:21:47,  2.48it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<3:21:47,  2.48it/s, v_num=1]`Trainer.fit` stopped: `max_steps=1` reached.
+Epoch 1/30000:   0%|          | 1/30000 [00:00<3:27:38,  2.41it/s, v_num=1]
+2026-10-10T18:04:32.778979+00:00 TRAIN_START GSE171351_B1 17000 2000 (1017, 11230)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:538: Found 6 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+2026-10-10T18:04:32.981215+00:00 OPTIMIZER_RESTORED GSE171351_B1
+`Trainer.fit` stopped: `max_epochs=2000` reached.
+2026-10-10T18:09:09.772464+00:00 BLOCK_FINISHED GSE171351_B1 19000 seconds 276.9935190677643
+Seed set to 1918464067
+Sampling local variables, batch:   0%|          | 0/2 [00:00<?, ?it/s]Sampling local variables, batch:  50%|█████     | 1/2 [00:03<00:03,  3.88s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:06<00:00,  3.36s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:06<00:00,  3.44s/it]Seed set to 1918464067
+
+Sampling local variables, batch:   0%|          | 0/2 [00:00<?, ?it/s]Sampling local variables, batch:  50%|█████     | 1/2 [00:03<00:03,  3.81s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:07<00:00,  3.54s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:07<00:00,  3.59s/it]
+2026-10-10T18:09:25.209371+00:00 EXIT GSE171351_B1 19000 False block
+Seed set to 138910377
+INFO     File /home/data/t070721/codex_workspace/Bladder                        
+         Metabolism/mp10_k32_lower80_spatial_v7/04_spatial_mapping/GSE171351/GSE
+         171351_B1/model/model.pt already downloaded                            
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+Training:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<3:08:59,  2.65it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<3:08:59,  2.65it/s, v_num=1]`Trainer.fit` stopped: `max_steps=1` reached.
+Epoch 1/30000:   0%|          | 1/30000 [00:00<3:14:18,  2.57it/s, v_num=1]
+2026-10-10T18:10:51.099371+00:00 TRAIN_START GSE171351_B1 19000 2000 (1017, 11230)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:538: Found 6 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+2026-10-10T18:10:51.300196+00:00 OPTIMIZER_RESTORED GSE171351_B1
+`Trainer.fit` stopped: `max_epochs=2000` reached.
+2026-10-10T18:15:36.802694+00:00 BLOCK_FINISHED GSE171351_B1 21000 seconds 285.7033622264862
+Seed set to 1918464067
+Sampling local variables, batch:   0%|          | 0/2 [00:00<?, ?it/s]Sampling local variables, batch:  50%|█████     | 1/2 [00:03<00:03,  3.78s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:06<00:00,  3.28s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:06<00:00,  3.35s/it]Seed set to 1918464067
+
+Sampling local variables, batch:   0%|          | 0/2 [00:00<?, ?it/s]Sampling local variables, batch:  50%|█████     | 1/2 [00:03<00:03,  3.73s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:06<00:00,  3.43s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:06<00:00,  3.48s/it]
+2026-10-10T18:15:51.816669+00:00 EXIT GSE171351_B1 21000 False block
+Seed set to 138910377
+INFO     File /home/data/t070721/codex_workspace/Bladder                        
+         Metabolism/mp10_k32_lower80_spatial_v7/04_spatial_mapping/GSE171351/GSE
+         171351_B1/model/model.pt already downloaded                            
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+Training:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<3:08:35,  2.65it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<3:08:35,  2.65it/s, v_num=1]`Trainer.fit` stopped: `max_steps=1` reached.
+Epoch 1/30000:   0%|          | 1/30000 [00:00<3:14:02,  2.58it/s, v_num=1]
+2026-10-10T18:17:50.593330+00:00 TRAIN_START GSE171351_B1 21000 2000 (1017, 11230)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:538: Found 6 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+2026-10-10T18:17:50.793849+00:00 OPTIMIZER_RESTORED GSE171351_B1
+`Trainer.fit` stopped: `max_epochs=2000` reached.
+2026-10-10T18:23:29.152030+00:00 BLOCK_FINISHED GSE171351_B1 23000 seconds 338.55874824523926
+Seed set to 1918464067
+Sampling local variables, batch:   0%|          | 0/2 [00:00<?, ?it/s]Sampling local variables, batch:  50%|█████     | 1/2 [00:07<00:07,  7.04s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:12<00:00,  6.20s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:12<00:00,  6.33s/it]Seed set to 1918464067
+
+Sampling local variables, batch:   0%|          | 0/2 [00:00<?, ?it/s]Sampling local variables, batch:  50%|█████     | 1/2 [00:06<00:06,  6.93s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:13<00:00,  6.70s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:13<00:00,  6.74s/it]
+2026-10-10T18:23:56.648510+00:00 EXIT GSE171351_B1 23000 False block
+Seed set to 138910377
+INFO     File /home/data/t070721/codex_workspace/Bladder                        
+         Metabolism/mp10_k32_lower80_spatial_v7/04_spatial_mapping/GSE171351/GSE
+         171351_B1/model/model.pt already downloaded                            
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+Training:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<2:53:43,  2.88it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<2:53:43,  2.88it/s, v_num=1]`Trainer.fit` stopped: `max_steps=1` reached.
+Epoch 1/30000:   0%|          | 1/30000 [00:00<2:58:59,  2.79it/s, v_num=1]
+2026-10-10T18:25:32.260034+00:00 TRAIN_START GSE171351_B1 23000 2000 (1017, 11230)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:538: Found 6 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+2026-10-10T18:25:32.462665+00:00 OPTIMIZER_RESTORED GSE171351_B1
+`Trainer.fit` stopped: `max_epochs=2000` reached.
+2026-10-10T18:31:11.286872+00:00 BLOCK_FINISHED GSE171351_B1 25000 seconds 339.02687525749207
+Seed set to 1918464067
+Sampling local variables, batch:   0%|          | 0/2 [00:00<?, ?it/s]Sampling local variables, batch:  50%|█████     | 1/2 [00:06<00:06,  6.87s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:12<00:00,  5.93s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:12<00:00,  6.07s/it]Seed set to 1918464067
+
+Sampling local variables, batch:   0%|          | 0/2 [00:00<?, ?it/s]Sampling local variables, batch:  50%|█████     | 1/2 [00:06<00:06,  6.95s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:13<00:00,  6.62s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:13<00:00,  6.67s/it]
+2026-10-10T18:31:38.127126+00:00 EXIT GSE171351_B1 25000 False block
+Seed set to 138910377
+INFO     File /home/data/t070721/codex_workspace/Bladder                        
+         Metabolism/mp10_k32_lower80_spatial_v7/04_spatial_mapping/GSE171351/GSE
+         171351_B1/model/model.pt already downloaded                            
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+Training:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<3:03:09,  2.73it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<3:03:09,  2.73it/s, v_num=1]`Trainer.fit` stopped: `max_steps=1` reached.
+Epoch 1/30000:   0%|          | 1/30000 [00:00<3:08:52,  2.65it/s, v_num=1]
+2026-10-10T18:33:15.043590+00:00 TRAIN_START GSE171351_B1 25000 2000 (1017, 11230)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:538: Found 6 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+2026-10-10T18:33:15.264663+00:00 OPTIMIZER_RESTORED GSE171351_B1
+`Trainer.fit` stopped: `max_epochs=2000` reached.
+2026-10-10T18:38:55.972874+00:00 BLOCK_FINISHED GSE171351_B1 27000 seconds 340.92931723594666
+Seed set to 1918464067
+Sampling local variables, batch:   0%|          | 0/2 [00:00<?, ?it/s]Sampling local variables, batch:  50%|█████     | 1/2 [00:06<00:06,  6.58s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:12<00:00,  6.19s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:12<00:00,  6.25s/it]Seed set to 1918464067
+
+Sampling local variables, batch:   0%|          | 0/2 [00:00<?, ?it/s]Sampling local variables, batch:  50%|█████     | 1/2 [00:07<00:07,  7.29s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:13<00:00,  6.65s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:13<00:00,  6.74s/it]
+2026-10-10T18:39:23.305177+00:00 EXIT GSE171351_B1 27000 False block
+Seed set to 138910377
+INFO     File /home/data/t070721/codex_workspace/Bladder                        
+         Metabolism/mp10_k32_lower80_spatial_v7/04_spatial_mapping/GSE171351/GSE
+         171351_B1/model/model.pt already downloaded                            
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+Training:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<3:24:07,  2.45it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<3:24:07,  2.45it/s, v_num=1]`Trainer.fit` stopped: `max_steps=1` reached.
+Epoch 1/30000:   0%|          | 1/30000 [00:00<3:29:36,  2.39it/s, v_num=1]
+2026-10-10T18:40:57.431735+00:00 TRAIN_START GSE171351_B1 27000 2000 (1017, 11230)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:538: Found 6 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+2026-10-10T18:40:57.641521+00:00 OPTIMIZER_RESTORED GSE171351_B1
+`Trainer.fit` stopped: `max_epochs=2000` reached.
+2026-10-10T18:46:36.132664+00:00 BLOCK_FINISHED GSE171351_B1 29000 seconds 338.700959444046
+Seed set to 1918464067
+Sampling local variables, batch:   0%|          | 0/2 [00:00<?, ?it/s]Sampling local variables, batch:  50%|█████     | 1/2 [00:06<00:06,  6.84s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:12<00:00,  5.98s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:12<00:00,  6.11s/it]Seed set to 1918464067
+
+Sampling local variables, batch:   0%|          | 0/2 [00:00<?, ?it/s]Sampling local variables, batch:  50%|█████     | 1/2 [00:06<00:06,  6.94s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:13<00:00,  6.75s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:13<00:00,  6.78s/it]
+2026-10-10T18:47:03.277486+00:00 EXIT GSE171351_B1 29000 False block
+Seed set to 138910377
+INFO     File /home/data/t070721/codex_workspace/Bladder                        
+         Metabolism/mp10_k32_lower80_spatial_v7/04_spatial_mapping/GSE171351/GSE
+         171351_B1/model/model.pt already downloaded                            
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+Training:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<2:53:07,  2.89it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<2:53:07,  2.89it/s, v_num=1]`Trainer.fit` stopped: `max_steps=1` reached.
+Epoch 1/30000:   0%|          | 1/30000 [00:00<2:58:51,  2.80it/s, v_num=1]
+2026-10-10T18:48:39.757078+00:00 TRAIN_START GSE171351_B1 29000 1000 (1017, 11230)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:538: Found 6 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+2026-10-10T18:48:39.961000+00:00 OPTIMIZER_RESTORED GSE171351_B1
+`Trainer.fit` stopped: `max_epochs=1000` reached.
+2026-10-10T18:51:32.950462+00:00 BLOCK_FINISHED GSE171351_B1 30000 seconds 173.19339632987976
+Seed set to 1918464067
+Sampling local variables, batch:   0%|          | 0/2 [00:00<?, ?it/s]Sampling local variables, batch:  50%|█████     | 1/2 [00:09<00:09,  9.08s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:17<00:00,  8.48s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:17<00:00,  8.57s/it]Seed set to 1918464067
+
+Sampling local variables, batch:   0%|          | 0/2 [00:00<?, ?it/s]Sampling local variables, batch:  50%|█████     | 1/2 [00:08<00:08,  8.97s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:17<00:00,  8.43s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:17<00:00,  8.51s/it]
+2026-10-10T18:52:08.517933+00:00 EXIT GSE171351_B1 30000 False block
+Seed set to 138910377
+INFO     File /home/data/t070721/codex_workspace/Bladder                        
+         Metabolism/mp10_k32_lower80_spatial_v7/04_spatial_mapping/GSE171351/GSE
+         171351_B1/model/model.pt already downloaded                            
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+Training:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<2:11:35,  3.80it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<2:11:35,  3.80it/s, v_num=1]`Trainer.fit` stopped: `max_steps=1` reached.
+Epoch 1/30000:   0%|          | 1/30000 [00:00<2:17:11,  3.64it/s, v_num=1]Seed set to 1918464067
+
+Sampling local variables, batch:   0%|          | 0/2 [00:00<?, ?it/s]Sampling local variables, batch:  50%|█████     | 1/2 [00:14<00:14, 14.63s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:26<00:00, 12.78s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:26<00:00, 13.06s/it]Seed set to 156700516
+
+Sampling local variables, batch:   0%|          | 0/2 [00:00<?, ?it/s]Sampling local variables, batch:  50%|█████     | 1/2 [00:01<00:01,  1.46s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:02<00:00,  1.28s/it]Sampling local variables, batch: 100%|██████████| 2/2 [00:02<00:00,  1.31s/it]
+Sampling global variables, sample:   0%|          | 0/99 [00:00<?, ?it/s]Sampling global variables, sample:   9%|▉         | 9/99 [00:00<00:01, 87.48it/s]Sampling global variables, sample:  18%|█▊        | 18/99 [00:00<00:00, 87.34it/s]Sampling global variables, sample:  27%|██▋       | 27/99 [00:00<00:00, 87.19it/s]Sampling global variables, sample:  36%|███▋      | 36/99 [00:00<00:00, 87.23it/s]Sampling global variables, sample:  45%|████▌     | 45/99 [00:00<00:00, 87.15it/s]Sampling global variables, sample:  55%|█████▍    | 54/99 [00:00<00:00, 87.18it/s]Sampling global variables, sample:  64%|██████▎   | 63/99 [00:00<00:00, 87.22it/s]Sampling global variables, sample:  73%|███████▎  | 72/99 [00:00<00:00, 87.21it/s]Sampling global variables, sample:  82%|████████▏ | 81/99 [00:00<00:00, 87.21it/s]Sampling global variables, sample:  91%|█████████ | 90/99 [00:01<00:00, 87.19it/s]Sampling global variables, sample: 100%|██████████| 99/99 [00:01<00:00, 87.11it/s]Sampling global variables, sample: 100%|██████████| 99/99 [00:01<00:00, 87.18it/s]
+2026-10-10T18:56:15.958343+00:00 EXIT GSE171351_B1 30000 False final
