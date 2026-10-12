@@ -1,0 +1,44 @@
+# Inhousedata__UNVERIFIED — 候选区域证据
+所有标签待真实复核；坐标表中image row/col可定位原H&E，现有overlay仅作形态上下文。
+
+## Inhousedata_T4384654
+![ROI定位](/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_ring_comparison_v2/01_regions/Inhousedata__UNVERIFIED/Inhousedata_T4384654__ROI_priority.png)
+[全证据图](/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_ring_comparison_v2/01_regions/Inhousedata__UNVERIFIED/Inhousedata_T4384654__evidence.png)
+[既有H&E上下文](/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_full_run/v2_30type/03_incremental_plots/identifiability_watch/Inhousedata_T4384654/Inhousedata_T4384654__CD4__family_total__mean__HE_overlay.png)
+[历史CNV profile图](/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/03_copykat_geography/by_dataset/Inhousedata__UNVERIFIED/Inhousedata_T4384654/figures/final_CNA_profile.png)
+
+## Inhousedata_T4398343
+![ROI定位](/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_ring_comparison_v2/01_regions/Inhousedata__UNVERIFIED/Inhousedata_T4398343__ROI_priority.png)
+[全证据图](/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_ring_comparison_v2/01_regions/Inhousedata__UNVERIFIED/Inhousedata_T4398343__evidence.png)
+[既有H&E上下文](/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_full_run/v2_30type/03_incremental_plots/identifiability_watch/Inhousedata_T4398343/Inhousedata_T4398343__CD4__family_total__mean__HE_overlay.png)
+[历史CNV profile图](/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/03_copykat_geography/by_dataset/Inhousedata__UNVERIFIED/Inhousedata_T4398343/figures/final_CNA_profile.png)
+
+## Inhousedata_T4413900
+![ROI定位](/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_ring_comparison_v2/01_regions/Inhousedata__UNVERIFIED/Inhousedata_T4413900__ROI_priority.png)
+[全证据图](/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_ring_comparison_v2/01_regions/Inhousedata__UNVERIFIED/Inhousedata_T4413900__evidence.png)
+[既有H&E上下文](/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_full_run/v2_30type/03_incremental_plots/identifiability_watch/Inhousedata_T4413900/Inhousedata_T4413900__CD4__family_total__mean__HE_overlay.png)
+[历史CNV profile图](/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/03_copykat_geography/by_dataset/Inhousedata__UNVERIFIED/Inhousedata_T4413900/figures/final_CNA_profile.png)
+
+## Inhousedata_T4463209
+![ROI定位](/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_ring_comparison_v2/01_regions/Inhousedata__UNVERIFIED/Inhousedata_T4463209__ROI_priority.png)
+[全证据图](/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_ring_comparison_v2/01_regions/Inhousedata__UNVERIFIED/Inhousedata_T4463209__evidence.png)
+[既有H&E上下文](/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_full_run/v2_30type/03_incremental_plots/identifiability_watch/Inhousedata_T4463209/Inhousedata_T4463209__CD4__family_total__mean__HE_overlay.png)
+[历史CNV profile图](/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/03_copykat_geography/by_dataset/Inhousedata__UNVERIFIED/Inhousedata_T4463209/figures/final_CNA_profile.png)
+
+## Inhousedata_T4465935
+![ROI定位](/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_ring_comparison_v2/01_regions/Inhousedata__UNVERIFIED/Inhousedata_T4465935__ROI_priority.png)
+[全证据图](/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_ring_comparison_v2/01_regions/Inhousedata__UNVERIFIED/Inhousedata_T4465935__evidence.png)
+[既有H&E上下文](/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_full_run/v2_30type/03_incremental_plots/identifiability_watch/Inhousedata_T4465935/Inhousedata_T4465935__CD4__family_total__mean__HE_overlay.png)
+[历史CNV profile图](/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/03_copykat_geography/by_dataset/Inhousedata__UNVERIFIED/Inhousedata_T4465935/figures/final_CNA_profile.png)
+
+## Inhousedata_T4469479
+![ROI定位](/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_ring_comparison_v2/01_regions/Inhousedata__UNVERIFIED/Inhousedata_T4469479__ROI_priority.png)
+[全证据图](/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_ring_comparison_v2/01_regions/Inhousedata__UNVERIFIED/Inhousedata_T4469479__evidence.png)
+[既有H&E上下文](/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_full_run/v2_30type/03_incremental_plots/identifiability_watch/Inhousedata_T4469479/Inhousedata_T4469479__CD4__family_total__mean__HE_overlay.png)
+[历史CNV profile图](/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/03_copykat_geography/by_dataset/Inhousedata__UNVERIFIED/Inhousedata_T4469479/figures/final_CNA_profile.png)
+
+## Inhousedata_T4471438
+![ROI定位](/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_ring_comparison_v2/01_regions/Inhousedata__UNVERIFIED/Inhousedata_T4471438__ROI_priority.png)
+[全证据图](/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_ring_comparison_v2/01_regions/Inhousedata__UNVERIFIED/Inhousedata_T4471438__evidence.png)
+[既有H&E上下文](/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_full_run/v2_30type/03_incremental_plots/identifiability_watch/Inhousedata_T4471438/Inhousedata_T4471438__CD4__family_total__mean__HE_overlay.png)
+[历史CNV profile图](/home/data/t070721/codex_workspace/Bladder Metabolism/spatial_ecology_top20_v2/03_copykat_geography/by_dataset/Inhousedata__UNVERIFIED/Inhousedata_T4471438/figures/final_CNA_profile.png)

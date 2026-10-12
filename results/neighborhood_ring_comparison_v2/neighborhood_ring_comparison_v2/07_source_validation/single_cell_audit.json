@@ -1,0 +1,25 @@
+{
+  "status": "PARTIAL_SOURCE_VALIDATION",
+  "n_cells": 9600,
+  "n_types": 32,
+  "n_source_samples": 58,
+  "n_genes": 89219,
+  "top20_missing": [],
+  "score_method": "Original top20; ranks average; K=ceil(.05*n_genes); original AUCell formula; full reference RNA universe",
+  "single_cell_input": "/home/data/t070721/codex_workspace/Bladder Metabolism/subtype/v2/reference_training_v2/04_gene_harmonization/reference_v2_raw_counts_minimally_harmonized.h5ad",
+  "input_size": 3903220404,
+  "n_general_bags": 260,
+  "normal_vs_malignant": "No independently verified cell malignancy annotation in this source; not inferred from sample suffix",
+  "source_patients": "reference_batch is source sample, not verified independent patient",
+  "state_definition": "MP10 itself, only scoring-fidelity check, not independent biological validation",
+  "pseudospot_scope": "general source-matched mixing at target 7005 UMI; does not match all actual anchors/depth/gene universes; NOT environment-conditioned composition-only attribution",
+  "spatial_MP10_values_loaded": false,
+  "required_remaining": [
+    "environment-conditioned composition-only control with frozen labels and actual center composition",
+    "matched spatial gene-universe and depth coverage",
+    "independent malignant/normal cell labels",
+    "high-Epi and complete-ring real-data sensitivity after region freeze"
+  ],
+  "legacy_DestVI": "v8 19-gene G0-UCell is auxiliary evidence; not validation of original Top20 AUCell",
+  "pseudospot_details": "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_ring_comparison_v2/07_source_validation/general_pseudospot_status.json"
+}

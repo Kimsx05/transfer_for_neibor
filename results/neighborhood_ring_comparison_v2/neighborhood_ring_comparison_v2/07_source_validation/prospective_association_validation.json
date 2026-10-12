@@ -1,0 +1,23 @@
+{
+  "frozen_before_spatial_MP10": true,
+  "original_top20": true,
+  "score": "Direct Top20 AUCell",
+  "high_epi_threshold": 0.7,
+  "high_epi_n": 23057,
+  "labels": "reuse six frozen native application labels; no refit",
+  "composition_only_design": {
+    "target": "actual center mean c2l30 proportions and six frozen environment labels",
+    "n_anchor_per_dataset_max": 100,
+    "seed": 789,
+    "n_cells": 20,
+    "n_technical_repeats": 2,
+    "source": "same-sample scRNA counts; independent source assignment, constant epithelial-state distribution across labels",
+    "depth": "actual center nCount; thinning only, report unattainable low input depth",
+    "genes": "actual section original feature universe and original available Top20 set; unavailable features cannot be silently zero-filled",
+    "sampling": "multinomial center30, without cell duplication within bag; unsupported sample-type requests logged",
+    "primary_comparison": "patient/source-stratified label contrasts, no spot-independent P values",
+    "limitation": "Cannot perform patient-matched causal attribution without verified spatial-scRNA linkage"
+  },
+  "status": "PLANNED_REQUIRED_NOT_EXECUTED",
+  "reason": "exact per-source feature availability, normal/malignant labels and patient matching need provenance reconciliation; general mixing already run is not this control"
+}
