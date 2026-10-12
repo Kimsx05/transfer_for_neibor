@@ -1,0 +1,3 @@
+# Scope and acceptance
+
+18 main configurations validated. 5 R12 pilot representations retained. Scope: niche only. Region review independent. MP10 analysis, unblinding and source validation DEFERRED_BY_USER. See validation.tsv for label semantics, reference and denominator checks. No unique best integration declared without pathology. NONE Leiden low-resolution choices were revised after negative silhouette and source-concentration evidence; archived diagnostics retained and fixed-representation stability recomputed for the selected finite-grid alternatives. Initial Harmony export compatibility error was corrected using installed 2.0.5 getZcorr(); affected runs repeated with identical parameters. All final results derive from successful corrected runs.

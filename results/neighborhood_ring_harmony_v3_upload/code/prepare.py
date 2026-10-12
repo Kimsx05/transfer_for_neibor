@@ -1,0 +1,19 @@
+from base import *
+import shutil,platform,importlib.metadata
+m,f,ref=inputs();assert len(m)==129632 and len(ref)==20000 and m.complete_rings.sum()==108345
+assert m.spot_uid.is_unique and m.iloc[ref].reference.all() and m.reference.sum()==len(ref)
+assert (m.ring1_valid_n>=4).all() and (m.ring2_valid_n>=8).all()
+assert (m.epithelial_fraction>=.25).all()
+for k in ['q1','q2']:assert np.isfinite(f[k]).all() and np.allclose(f[k].sum(1),1,atol=1e-5)
+js(OUT/'00_preflight/RUN_SCOPE.json',dict(stop_after='niche',mp10_authorized_this_run=False,mp10_values_loaded=False,mp10_analysis_executed=False,source_validation_status='DEFERRED_BY_USER',region_review_required_for_niche_completion=False))
+contract=json.loads((OLD/'00_preflight/input_contract.json').read_text());contract.update(sample_key_definition='dataset_id::section_id; independent spatial measurement section, not patient',target_sections=63,sections_with_anchors=m.section_id.nunique(),reference_sections=m.iloc[ref].section_id.nunique(),n_common=len(m),n_reference=len(ref),n_complete=int(m.complete_rings.sum()),source_known_patients=m.loc[m.source_patient_identity_known,'patient_uid'].nunique());js(OUT/'00_preflight/input_contract.json',contract)
+over=pd.read_csv(ROOT/'spatial_ecology_top20_v2/05_07_shared_K12/v1/section_identity_overlay.tsv',sep='\t',usecols=['section_id','source_sample_id','patient_uid','analysis_unit_uid','analysis_unit_type','source_patient_identity_known'])
+cov=m.groupby(['dataset_id','section_id','sample_uid']).agg(n_common_anchors=('spot_uid','size'),n_reference_anchors=('reference','sum'),n_complete=('complete_rings','sum')).reset_index();b=cov.merge(over,on='section_id',validate='one_to_one');b=b.rename(columns={'source_sample_id':'original_sample_id'});b['specimen_uid_if_known']='';b['sample_key_definition']='dataset_id::section_id (independent section)';tab(OUT/'00_preflight/batch_key_mapping.tsv',b);tab(OUT/'00_preflight/coverage_by_dataset_sample.tsv',b)
+m.merge(over[['section_id','analysis_unit_uid','analysis_unit_type']],on='section_id',validate='many_to_one').to_parquet(OUT/'01_features/metadata.parquet',index=False)
+tab(OUT/'01_features/reference_anchor_ids.tsv',m.iloc[ref][['spot_uid']]);tab(OUT/'01_features/harmony_metadata.tsv',m[['spot_uid','dataset_id','sample_uid']])
+pm=[]
+for ring,key in [('R1','X1'),('R2','X2'),('R12','X12')]:
+ p=joblib.load(OLD/'04_clustering'/ring/'pca95.joblib');x=f[key].astype('float64');z=p.transform(x);assert np.isfinite(z).all();np.save(OUT/'01_features'/f'{ring}_PCA.npy',z);np.savetxt(OUT/'01_features'/f'{ring}_PCA.tsv',z,delimiter='\t',fmt='%.17g');joblib.dump(p,OUT/'01_features'/f'{ring}_PCA.joblib');pm.append(dict(ring=ring,n_pc=z.shape[1],source=str(OLD/'04_clustering'/ring/'pca95.joblib'),fit_on='fixed 20000 reference',dtype=str(z.dtype),center=True,scale=False,whiten=False,variance_ratio=p.explained_variance_ratio_.tolist()))
+js(OUT/'01_features/pca_manifest.json',pm);js(OUT/'01_features/feature_manifest.json',dict(source=str(OLD/'03_features/features.npz'),feature_hash=sha(OLD/'03_features/features.npz'),factors=TYPES,ring1='exact one physical hex hop',ring2='exact two hops; excludes center and ring1',X12='concatenate(sqrt(q1),sqrt(q2))/sqrt(2)',reuse_v2_float32_features=True,projection_float64=True))
+files=[OLD/'03_features'/s for s in ['features.npz','common_anchors.parquet','reference_anchor_ids.tsv','feature_columns.json']]+[ROOT/'spatial_ecology_top20_v2/05_07_shared_K12/v1/section_identity_overlay.tsv'];tab(OUT/'00_preflight/input_hashes.tsv',[dict(path=str(p),sha256=sha(p)) for p in files]);js(OUT/'00_preflight/software_and_resources.json',dict(python=platform.python_version(),packages={p:importlib.metadata.version(p) for p in ['numpy','pandas','scipy','scikit-learn','igraph','leidenalg','umap-learn','pyarrow']},R_harmony='2.0.5',threads=1))
+log('PREPARED '+str(contract))
