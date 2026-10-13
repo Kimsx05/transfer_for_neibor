@@ -1,0 +1,9 @@
+item	status	reason
+first_synthetic_attempt	FAILED_TECHNICAL	5000 steps completed;logger=False omitted history;exception before model save. One retry with default logger and checkpoint-first order.
+second_gene_background	NOT_RUN	Two fresh attempts consumed on one fixed background;no third new fit.
+held_out_donors	NOT_ESTABLISHED	All selected donor cells match original reference;no independent donor validation.
+identity	LIMITED	Full epithelial orig.ident is source unit,not verified patient. Spatial identity policy unchanged.
+gradient	TWO_POINT_DIAGNOSTIC	P10/P90 positive central target fractions;no claim of global monotonicity.
+repeat_noise	DESCRIPTIVE	Two repeats in controlled panel;rank and truth-repeat SD flags separated;refit rep0 only.
+official_AUCell	IMPLEMENTATION_DIFFERENCE	Random integer ties differ from frozen average ties;no primary replacement.
+saved_checkpoint_export	RECOVERED	Second fit checkpoint recovered after scalar history conversion and AnnData slash-column export compatibility fix; no additional optimization or fresh fit.

@@ -1,0 +1,29 @@
+{
+  "seed": 123,
+  "n_panel": 540,
+  "n_donors": 5,
+  "depths": [
+    5852,
+    12175,
+    24337
+  ],
+  "target_levels": {
+    "GC B": [
+      0.02216234547068347,
+      0.30818784143647326
+    ],
+    "SPP1 TAM": [
+      0.004234583830070329,
+      0.06995051569553885
+    ],
+    "Neutrophil": [
+      0.022291747892935414,
+      0.1366859718687923
+    ]
+  },
+  "platform": "real donor panel m_g1 ambient0; baseline original mg and explicit ambient",
+  "weights": "known expected RNA allocation / fixed reference type library; cell-equivalent numbers use training source mean library, not realized E gene vector",
+  "reference_scope": "original overlapping reference; no independent donor claim",
+  "fit_selection": "rep0 only, all donors/backgrounds/depth/state conditions",
+  "near_zero": "one original normalized rank step; noise summarized across matched technical repetitions"
+}

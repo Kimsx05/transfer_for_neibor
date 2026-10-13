@@ -1,0 +1,48 @@
+{
+  "seed": 123,
+  "status": "RESULT_INFORMED_EXPLORATORY_CALIBRATION",
+  "fixed_pairs": [
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      7,
+      6
+    ]
+  ],
+  "min_n_each": 20,
+  "min_unit_cells_fidelity": 30,
+  "min_CI_units": 5,
+  "bootstrap": 2000,
+  "matching": {
+    "epi_caliper": 0.05,
+    "logUMI_caliper_sd": 0.25,
+    "replacement": false
+  },
+  "near_zero": "1/original_AUC_denominator; additionally paired Monte Carlo noise from fixed-state repeats",
+  "reference_background_selection": "first lexicographic full20 section CanDis_2026_Sample1; same30 mapping",
+  "new_synthetic_models_max": 2,
+  "new_synthetic_models_planned": 1,
+  "synthetic_bags_max": 2000,
+  "extra_panel_max": 3000,
+  "optimizer_checkpoints": [
+    5000,
+    10000,
+    20000
+  ],
+  "convergence": "finite loss; abs difference last500 vs previous500 median / abs previous median <0.01; no truth score selection",
+  "threads": 4,
+  "synthetic_fit_device": "CPU while existing GPU jobs active",
+  "official_AUCell_seeds": [
+    123,
+    124,
+    125
+  ],
+  "primary_score": "unchanged v4 average-ties; full model genes; Top20",
+  "source_interpretation": "replay distinct from known-mixture distinct from new synthetic fit"
+}

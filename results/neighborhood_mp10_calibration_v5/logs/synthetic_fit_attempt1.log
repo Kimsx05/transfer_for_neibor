@@ -1,0 +1,18 @@
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+Seed set to 123
+GPU available: True (cuda), used: False
+TPU available: False, using: 0 TPU cores
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/setup.py:175: GPU available but not used. You can set it by doing `Trainer(accelerator='gpu')`.
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+`Trainer.fit` stopped: `max_steps=5000` reached.
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_calibration_v5/code/04_synthetic_fit.py", line 14, in <module>
+    if __name__=='__main__':main(OUT)
+                            ^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_calibration_v5/code/04_synthetic_fit.py", line 11, in main
+    h=np.asarray(m.history_['elbo_train']).reshape(-1);assert np.isfinite(h).all();change=abs(np.median(h[-500:])-np.median(h[-1000:-500]))/max(abs(np.median(h[-1000:-500])),1) if len(h)>=1000 else np.inf;converged=change<.01;history.append(dict(total_optimizer_step_cap=total,n_history_epochs=len(h),relative_last500_change=change,converged=converged));write_tsv(out,dest/'convergence_history.tsv',history);m.save(str(safe(out,dest/'model')),overwrite=True);np.save(safe(out,dest/'elbo.npy'),h);log(f'synthetic checkpoint {total}, objective change {change}, converged {converged}')
+                 ~~~~~~~~~~^^^^^^^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable

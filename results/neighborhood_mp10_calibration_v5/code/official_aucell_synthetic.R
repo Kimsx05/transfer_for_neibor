@@ -1,0 +1,5 @@
+suppressPackageStartupMessages({library(AUCell);library(Matrix)})
+OUT <- '/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_calibration_v5'
+p <- file.path(OUT,'01_score_fidelity'); x <- as(readMM(file.path(p,'official_synthetic_input.mtx')),'dgCMatrix');rownames(x)<-readLines(file.path(p,'official_synthetic_genes.txt'));md<-read.delim(file.path(p,'official_synthetic_axes.tsv'),check.names=FALSE);colnames(x)<-md$cell_id;top<-readLines(file.path(p,'top20.txt'));out<-list()
+for(seed in c(123,124,125)) {set.seed(seed);r<-AUCell_buildRankings(x,plotStats=FALSE,nCores=1,verbose=FALSE);a<-AUCell_calcAUC(list(Top20=top),r,aucMaxRank=ceiling(.05*nrow(x)),nCores=1,verbose=FALSE);out[[as.character(seed)]]<-data.frame(cell_id=colnames(x),seed=seed,official_score=as.numeric(getAUC(a)[1,]),historical_score=md$Top20_score,background_genes=nrow(x),input_type=md$input_type,AUCell_version=as.character(packageVersion('AUCell')))}
+write.table(do.call(rbind,out),file.path(p,'official_AUCell_synthetic_comparison.tsv'),sep='\t',row.names=FALSE,quote=FALSE)
