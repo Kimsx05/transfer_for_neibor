@@ -1,0 +1,14 @@
+{
+  "n_sc": 9600,
+  "n_types": 30,
+  "n_blueprints": 360,
+  "n_bags": 1800,
+  "n_state_blueprints": 99,
+  "n_usage_matched": 209,
+  "state_variable": "MP10_usage",
+  "seed": 20261013,
+  "composition": "central posterior mean cell abundance, raw model-gene single-cell library-size-weighted counts; exact actual depth",
+  "epi_distribution": "same five Epi donor sets per repetition across all niches",
+  "independence": "simulation blueprints/repeats not independent patients; sc not paired to Visium",
+  "oracle": "not performed; true Epi counts retained for technical scoring check only"
+}

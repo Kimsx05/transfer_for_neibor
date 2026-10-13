@@ -1,0 +1,36 @@
+{
+  "frozen_before_new_scoring": true,
+  "niche": "SAMPLE_R12_LEIDEN",
+  "niche_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "primary_signature": "original Top20; no replacement",
+  "rank_method": "average descending raw counts incl zero ties",
+  "auc_max_rank": "ceil(0.05*n_model_genes)",
+  "denominator": "sum(K-r), r=1..min(n_available_signature,K)",
+  "min_anchors_per_section_niche": 20,
+  "min_rest": 20,
+  "min_independent_units_CI": 5,
+  "bootstrap_replicates": 1000,
+  "seed": 20261013,
+  "adjustment": "section+niche+bs(center_mean_epi,df=3)+log1p(nCount); coefficients descriptive, no iid spot SE",
+  "sensitivity": [
+    "complete_6_12",
+    "epi_ge_0.5",
+    "epi_ge_0.7",
+    "candidate",
+    "leave_largest_dataset_out"
+  ],
+  "primary_attribution": "complete posterior means plug-in Y*(w_epi*reference_epi*m_g)/(w@reference.T*m_g+ambient)",
+  "partial_signature": "separate columns and sensitivity; full20 scores NA",
+  "pathology_unknown": "retain unknown, scoring allowed",
+  "simulation": "up to500 central-mean blueprints x5; fixed Epi donor distribution; up to100 state controls; no independent patient claim"
+}

@@ -1,0 +1,509 @@
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+INFO     File /home/data/t070721/codex_workspace/Bladder                        
+         Metabolism/cell2location_full_run/v2_30type/02_sections/CanDis_2026_Sam
+         ple1/model/model.pt already downloaded                                 
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+Training:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<2:49:00,  2.96it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<2:49:00,  2.96it/s, v_num=1]`Trainer.fit` stopped: `max_steps=1` reached.
+Epoch 1/30000:   0%|          | 1/30000 [00:00<2:54:47,  2.86it/s, v_num=1]
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 42, in main
+    mod=loadmodel(p,a);official=mod.module.model.compute_expected_per_cell_type(a.uns['mod']['post_sample_means'],mod.adata_manager,ind_x=ids);Y,E,A=calc(a,t,ids);oe=official['mu'][t[-1]].toarray();err=float(np.max(np.abs(oe-E)));np.testing.assert_allclose(E,oe,rtol=1e-5,atol=1e-6);total=sum(v.toarray() for v in official['mu'])+A;np.testing.assert_allclose(total,Y,rtol=1e-5,atol=1e-6)
+                                                                                                                                                     ^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 17, in calc
+    C,w,mg,b,batch,ep=t;Y=sparse.csr_matrix(a.X[ids]).toarray().astype(float);mu=(w[ids]@C.T)*mg+b[batch];num=(w[ids,ep,None]*C[None,:,ep])*mg
+                                                                                 ~~~~~~~~~~~~~~~^~~~~~~~~
+ValueError: operands could not be broadcast together with shapes (128,13855) (4823,13855) 
+INFO     File /home/data/t070721/codex_workspace/Bladder                        
+         Metabolism/cell2location_full_run/v2_30type/02_sections/GSE171351_A1/mo
+         del/model.pt already downloaded                                        
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+Training:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<34:50, 14.35it/s, v_num=1]`Trainer.fit` stopped: `max_steps=1` reached.
+Epoch 1/30000:   0%|          | 1/30000 [00:00<35:58, 13.90it/s, v_num=1]
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 42, in main
+    mod=loadmodel(p,a);official=mod.module.model.compute_expected_per_cell_type(a.uns['mod']['post_sample_means'],mod.adata_manager,ind_x=ids);Y,E,A=calc(a,t,ids);oe=official['mu'][t[-1]].toarray();err=float(np.max(np.abs(oe-E)));np.testing.assert_allclose(E,oe,rtol=1e-5,atol=1e-6);total=sum(v.toarray() for v in official['mu'])+A;np.testing.assert_allclose(total,Y,rtol=1e-5,atol=1e-6)
+                                                                                                                                                     ^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 17, in calc
+    C,w,mg,b,batch,ep=t;Y=sparse.csr_matrix(a.X[ids]).toarray().astype(float);mu=(w[ids]@C.T)*mg+b[batch];num=(w[ids,ep,None]*C[None,:,ep])*mg
+                                                                                 ~~~~~~~~~~~~~~~^~~~~~~~~
+ValueError: operands could not be broadcast together with shapes (128,15943) (768,15943) 
+INFO     File /home/data/t070721/codex_workspace/Bladder                        
+         Metabolism/cell2location_full_run/v2_30type/02_sections/GSE238145_B10/m
+         odel/model.pt already downloaded                                       
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+Training:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<1:31:16,  5.48it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<1:31:16,  5.48it/s, v_num=1]`Trainer.fit` stopped: `max_steps=1` reached.
+Epoch 1/30000:   0%|          | 1/30000 [00:00<1:32:24,  5.41it/s, v_num=1]
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 42, in main
+    mod=loadmodel(p,a);official=mod.module.model.compute_expected_per_cell_type(a.uns['mod']['post_sample_means'],mod.adata_manager,ind_x=ids);Y,E,A=calc(a,t,ids);oe=official['mu'][t[-1]].toarray();err=float(np.max(np.abs(oe-E)));np.testing.assert_allclose(E,oe,rtol=1e-5,atol=1e-6);total=sum(v.toarray() for v in official['mu'])+A;np.testing.assert_allclose(total,Y,rtol=1e-5,atol=1e-6)
+                                                                                                                                                     ^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 17, in calc
+    C,w,mg,b,batch,ep=t;Y=sparse.csr_matrix(a.X[ids]).toarray().astype(float);mu=(w[ids]@C.T)*mg+b[batch];num=(w[ids,ep,None]*C[None,:,ep])*mg
+                                                                                 ~~~~~~~~~~~~~~~^~~~~~~~~
+ValueError: operands could not be broadcast together with shapes (128,13946) (7399,13946) 
+INFO     File /home/data/t070721/codex_workspace/Bladder                        
+         Metabolism/cell2location_full_run/v2_30type/02_sections/GSE285715_N1/mo
+         del/model.pt already downloaded                                        
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+Training:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<38:30, 12.99it/s, v_num=1]`Trainer.fit` stopped: `max_steps=1` reached.
+Epoch 1/30000:   0%|          | 1/30000 [00:00<39:38, 12.61it/s, v_num=1]
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 42, in main
+    mod=loadmodel(p,a);official=mod.module.model.compute_expected_per_cell_type(a.uns['mod']['post_sample_means'],mod.adata_manager,ind_x=ids);Y,E,A=calc(a,t,ids);oe=official['mu'][t[-1]].toarray();err=float(np.max(np.abs(oe-E)));np.testing.assert_allclose(E,oe,rtol=1e-5,atol=1e-6);total=sum(v.toarray() for v in official['mu'])+A;np.testing.assert_allclose(total,Y,rtol=1e-5,atol=1e-6)
+                                                                                                                                                     ^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 17, in calc
+    C,w,mg,b,batch,ep=t;Y=sparse.csr_matrix(a.X[ids]).toarray().astype(float);mu=(w[ids]@C.T)*mg+b[batch];num=(w[ids,ep,None]*C[None,:,ep])*mg
+                                                                                 ~~~~~~~~~~~~~~~^~~~~~~~~
+ValueError: operands could not be broadcast together with shapes (40,13200) (1417,13200) 
+INFO     File /home/data/t070721/codex_workspace/Bladder                        
+         Metabolism/cell2location_full_run/v2_30type/02_sections/GSE319536_BC01/
+         model/model.pt already downloaded                                      
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+Training:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<1:08:21,  7.31it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<1:08:21,  7.31it/s, v_num=1]`Trainer.fit` stopped: `max_steps=1` reached.
+Epoch 1/30000:   0%|          | 1/30000 [00:00<1:09:29,  7.19it/s, v_num=1]
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 42, in main
+    mod=loadmodel(p,a);official=mod.module.model.compute_expected_per_cell_type(a.uns['mod']['post_sample_means'],mod.adata_manager,ind_x=ids);Y,E,A=calc(a,t,ids);oe=official['mu'][t[-1]].toarray();err=float(np.max(np.abs(oe-E)));np.testing.assert_allclose(E,oe,rtol=1e-5,atol=1e-6);total=sum(v.toarray() for v in official['mu'])+A;np.testing.assert_allclose(total,Y,rtol=1e-5,atol=1e-6)
+                                                                                                                                                     ^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 17, in calc
+    C,w,mg,b,batch,ep=t;Y=sparse.csr_matrix(a.X[ids]).toarray().astype(float);mu=(w[ids]@C.T)*mg+b[batch];num=(w[ids,ep,None]*C[None,:,ep])*mg
+                                                                                 ~~~~~~~~~~~~~~~^~~~~~~~~
+ValueError: operands could not be broadcast together with shapes (128,13940) (5278,13940) 
+INFO     File /home/data/t070721/codex_workspace/Bladder                        
+         Metabolism/cell2location_full_run/v2_30type/02_sections/Inhousedata_T43
+         84654/model/model.pt already downloaded                                
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+Training:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<1:04:53,  7.71it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<1:04:53,  7.71it/s, v_num=1]`Trainer.fit` stopped: `max_steps=1` reached.
+Epoch 1/30000:   0%|          | 1/30000 [00:00<1:06:01,  7.57it/s, v_num=1]
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 42, in main
+    mod=loadmodel(p,a);official=mod.module.model.compute_expected_per_cell_type(a.uns['mod']['post_sample_means'],mod.adata_manager,ind_x=ids);Y,E,A=calc(a,t,ids);oe=official['mu'][t[-1]].toarray();err=float(np.max(np.abs(oe-E)));np.testing.assert_allclose(E,oe,rtol=1e-5,atol=1e-6);total=sum(v.toarray() for v in official['mu'])+A;np.testing.assert_allclose(total,Y,rtol=1e-5,atol=1e-6)
+                                                                                                                                                     ^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 17, in calc
+    C,w,mg,b,batch,ep=t;Y=sparse.csr_matrix(a.X[ids]).toarray().astype(float);mu=(w[ids]@C.T)*mg+b[batch];num=(w[ids,ep,None]*C[None,:,ep])*mg
+                                                                                 ~~~~~~~~~~~~~~~^~~~~~~~~
+ValueError: operands could not be broadcast together with shapes (99,13961) (4755,13961) 
+INFO     File /home/data/t070721/codex_workspace/Bladder                        
+         Metabolism/cell2location_full_run/v2_30type/02_sections/NPJ_sample1/mod
+         el/model.pt already downloaded                                         
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/configuration_validator.py:68: You passed in a `val_dataloader` but have no `validation_step`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=255` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+Training:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 0/30000 [00:00<?, ?it/s]Epoch 1/30000:   0%|          | 1/30000 [00:00<44:22, 11.27it/s, v_num=1]`Trainer.fit` stopped: `max_steps=1` reached.
+Epoch 1/30000:   0%|          | 1/30000 [00:00<45:26, 11.00it/s, v_num=1]
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 42, in main
+    mod=loadmodel(p,a);official=mod.module.model.compute_expected_per_cell_type(a.uns['mod']['post_sample_means'],mod.adata_manager,ind_x=ids);Y,E,A=calc(a,t,ids);oe=official['mu'][t[-1]].toarray();err=float(np.max(np.abs(oe-E)));np.testing.assert_allclose(E,oe,rtol=1e-5,atol=1e-6);total=sum(v.toarray() for v in official['mu'])+A;np.testing.assert_allclose(total,Y,rtol=1e-5,atol=1e-6)
+                                                                                                                                                     ^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 17, in calc
+    C,w,mg,b,batch,ep=t;Y=sparse.csr_matrix(a.X[ids]).toarray().astype(float);mu=(w[ids]@C.T)*mg+b[batch];num=(w[ids,ep,None]*C[None,:,ep])*mg
+                                                                                 ~~~~~~~~~~~~~~~^~~~~~~~~
+ValueError: operands could not be broadcast together with shapes (128,13950) (2076,13950) 
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:24 1/63 CanDis_2026_Sample1: FAILED, 4292 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:25 2/63 GSE171351_A1: FAILED, 409 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:25 3/63 GSE238145_B10: FAILED, 411 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:25 4/63 GSE285715_N1: FAILED, 40 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:25 5/63 GSE319536_BC01: FAILED, 1244 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:25 6/63 Inhousedata_T4384654: FAILED, 99 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:25 7/63 NPJ_sample1: FAILED, 855 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:25 8/63 CanDis_2026_Sample10: FAILED, 1521 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:26 9/63 CanDis_2026_Sample11: FAILED, 205 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:26 10/63 CanDis_2026_Sample12: FAILED, 387 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:26 11/63 CanDis_2026_Sample13: FAILED, 3226 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:26 12/63 CanDis_2026_Sample2: FAILED, 4657 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:26 13/63 CanDis_2026_Sample3: FAILED, 4269 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:26 14/63 CanDis_2026_Sample4: FAILED, 2429 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:26 15/63 CanDis_2026_Sample5: FAILED, 2207 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:27 16/63 CanDis_2026_Sample6: FAILED, 1455 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:27 17/63 CanDis_2026_Sample7: FAILED, 1624 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:27 18/63 CanDis_2026_Sample8: FAILED, 10298 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:27 19/63 CanDis_2026_Sample9: FAILED, 2180 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:27 20/63 GSE171351_B1: FAILED, 860 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:27 21/63 GSE171351_C1: FAILED, 1295 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:27 23/63 GSE238145_B11: FAILED, 4686 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:28 25/63 GSE238145_B14: FAILED, 2080 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:28 26/63 GSE238145_B15: FAILED, 2689 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:28 27/63 GSE238145_B16: FAILED, 4336 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:28 28/63 GSE238145_B17: FAILED, 1355 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:28 29/63 GSE238145_B18: FAILED, 82 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:28 30/63 GSE238145_B5: FAILED, 220 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:29 31/63 GSE238145_B9: FAILED, 10060 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:29 32/63 GSE285715_N2: FAILED, 39 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:29 33/63 GSE285715_N3: FAILED, 1581 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:29 34/63 GSE285715_T1: FAILED, 3913 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:29 35/63 GSE285715_T2: FAILED, 3502 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:29 36/63 GSE285715_T3: FAILED, 3006 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:29 37/63 GSE319536_BC02: FAILED, 1396 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:29 38/63 GSE319536_BC04: FAILED, 1589 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:30 39/63 GSE319536_BC05: FAILED, 165 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:30 40/63 GSE319536_BC08: FAILED, 1147 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:30 41/63 GSE319536_BC10: FAILED, 2036 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:30 42/63 GSE319536_BC11: FAILED, 4782 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:31 43/63 GSE319536_BC12: FAILED, 726 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:31 44/63 GSE319536_BC13: FAILED, 1429 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:31 45/63 GSE319536_BC14: FAILED, 845 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:31 46/63 GSE319536_BC15: FAILED, 104 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:31 47/63 GSE319536_BC16: FAILED, 1480 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:31 48/63 GSE319536_BC17: FAILED, 2953 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:31 49/63 GSE319536_BC18: FAILED, 2353 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:32 50/63 GSE319536_BC19: FAILED, 652 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:32 51/63 GSE319536_BC21: FAILED, 1272 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:32 52/63 Inhousedata_T4398343: FAILED, 1441 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:32 53/63 Inhousedata_T4413900: FAILED, 3682 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:32 54/63 Inhousedata_T4463209: FAILED, 1676 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:32 55/63 Inhousedata_T4465935: FAILED, 521 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:32 56/63 Inhousedata_T4469479: FAILED, 1673 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:33 57/63 Inhousedata_T4471438: FAILED, 2148 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:33 58/63 NPJ_sample2: FAILED, 2974 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:33 59/63 NPJ_sample3: FAILED, 2935 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:33 60/63 NPJ_sample4: FAILED, 1725 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:33 61/63 NPJ_sample5: FAILED, 2041 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:33 62/63 NPJ_sample6: FAILED, 2166 anchors
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_source_v4/code/02_scores.py", line 57, in main
+    assert r.dataset_id in passed,'Dataset pilot failed; cannot extend'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Dataset pilot failed; cannot extend
+2026-10-13 11:21:33 63/63 NPJ_sample7: FAILED, 2209 anchors
+2026-10-13 11:21:34 ALL LAYERS SAVED

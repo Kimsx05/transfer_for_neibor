@@ -1,0 +1,98 @@
+HTTP/1.1 200 Connection established
+
+HTTP/2 303 
+location: https://idp.nature.com/authorize?response_type=cookie&client_id=grover&redirect_uri=https%3A%2F%2Fwww.nature.com%2Farticles%2Fs41698-026-01417-x%2Ftables%2F1
+server: Oscar Platform 0.2467.0
+x-vcap-request-id: a92b2a99-75b5-499e-597a-9a945606198d
+content-type: text/html
+via: 1.1 google, 1.1 varnish
+strict-transport-security: max-age=31536000;preload
+accept-ranges: bytes
+date: Fri, 02 Oct 2026 12:51:02 GMT
+x-served-by: cache-sin-wsat1880065-SIN, cache-hkg17935-HKG
+x-cache: MISS, MISS
+x-cache-hits: 0, 0
+x-timer: S1790945462.458316,VS0,VE447
+vary: x-forwarded-host, upgrade-insecure-requests
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+content-length: 150
+
+HTTP/1.1 200 Connection established
+
+HTTP/2 302 
+x-vcap-request-id: 77b56ad1-3cce-43e1-7c83-9e6b7fd99fd0
+server-timing: traceparent;desc="00-77b56ad13cce43e17c839e6b7fd99fd0-52c324ca572af80a-01"
+pragma: no-cache
+traceparent: 00-77b56ad13cce43e17c839e6b7fd99fd0-52c324ca572af80a-01
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+strict-transport-security: max-age=31536000 ; includeSubDomains
+x-frame-options: DENY
+access-control-expose-headers: Server-Timing
+location: https://idp.nature.com/transit?redirect_uri=https%3A%2F%2Fwww.nature.com%2Farticles%2Fs41698-026-01417-x%2Ftables%2F1&code=08d3bf9a-9171-40f5-bf03-8db25523a69d
+expires: 0
+via: 1.1 google, 1.1 varnish
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+content-security-policy: frame-ancestors 'none';
+set-cookie: idp_session=sVERSION_139929ef5-1efe-4d82-899c-0321c7c7bccb; Domain=.nature.com; Path=/; Secure; SameSite=None; HttpOnly
+set-cookie: idp_session_http=hVERSION_173c24bf1-2414-489a-84dd-d34868c5e85d; Domain=.nature.com; Path=/; HttpOnly
+set-cookie: idp_marker=23821763-7ed0-4ff2-b2e1-e746a8ad8fe8; Domain=.nature.com; Path=/; Max-Age=34560000; HttpOnly
+accept-ranges: bytes
+date: Fri, 02 Oct 2026 12:51:03 GMT
+x-served-by: cache-sin-wsap440098-SIN, cache-sin-wsat1880078-SIN
+x-cache: MISS, MISS
+x-cache-hits: 0, 0
+x-timer: S1790945463.251734,VS0,VE403
+vary: x-forwarded-proto
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+content-length: 0
+
+HTTP/2 302 
+content-language: en-US
+x-vcap-request-id: 78696fdc-bae0-4da4-7ded-fbe41f790422
+server-timing: traceparent;desc="00-78696fdcbae04da47dedfbe41f790422-b9ca0b7e99e7050f-01"
+pragma: no-cache
+traceparent: 00-78696fdcbae04da47dedfbe41f790422-b9ca0b7e99e7050f-01
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+strict-transport-security: max-age=31536000 ; includeSubDomains
+x-frame-options: DENY
+access-control-expose-headers: Server-Timing
+location: https://www.nature.com/articles/s41698-026-01417-x/tables/1?error=cookies_not_supported&code=08d3bf9a-9171-40f5-bf03-8db25523a69d
+expires: 0
+via: 1.1 google, 1.1 varnish
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+content-security-policy: frame-ancestors 'none';
+accept-ranges: bytes
+date: Fri, 02 Oct 2026 12:51:04 GMT
+x-served-by: cache-sin-wsap440079-SIN, cache-sin-wsat1880078-SIN
+x-cache: MISS, MISS
+x-cache-hits: 0, 0
+x-timer: S1790945464.790834,VS0,VE369
+vary: x-forwarded-proto
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+content-length: 0
+
+HTTP/2 200 
+server: Oscar Platform 0.2467.0
+set-cookie: user.uuid.v2="aa81325f-761f-469c-894d-20c68cac617d"; Expires=Sat, 02 Jan 2027 12:51:04 GMT; Path=/; secure; HttpOnly
+x-robots-tag: noindex
+x-vcap-request-id: a9fb19f7-25c3-4bef-72ce-20847bc77826
+content-type: text/html; charset=utf-8
+traceparent: 00-a9fb19f725c34bef72ce20847bc77826-c6017f1e21452c1b-01
+x-content-type-options: nosniff
+strict-transport-security: max-age=31536000;preload
+via: 1.1 google, 1.1 varnish
+tracestate: gorouter=f6ac6d1b96ff9885
+cache-control: private, must-revalidate
+x-frame-options: DENY
+accept-ranges: bytes
+age: 0
+date: Fri, 02 Oct 2026 12:51:04 GMT
+x-served-by: cache-5d90f688-internal, cache-sin-wsat1880091-SIN, cache-hkg17935-HKG
+x-cache: MISS, MISS, MISS
+x-cache-hits: 0, 0
+x-timer: S1790945464.271734,VS0,VE675
+vary: X-Oscar-Cache-Mode,x-frame-options, Accept-Encoding
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+
