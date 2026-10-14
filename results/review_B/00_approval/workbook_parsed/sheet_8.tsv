@@ -1,0 +1,10 @@
+0	1	2	3
+种类	来源	位置或URL	用途边界
+输入	neighborhood_niche_celltype_screen_v6.zip	用户当前附件；SHA256 a1709852787db0565d30cdb1a67040f2b61105e140b07a3d4b8449c916965ea8	本次v6结果的唯一数值主来源
+输入表	总体及dataset统计	04_gate/all_niche_celltype_evidence.tsv	目标/其余均值、单位差、q、支持数、Gate ID
+输入表	已核实患者敏感性	02_statistics/verified_patients_only_sensitivity.tsv	敏感性有来源子集，不能当独立队列
+背景文献	Khaliq et al., Nat Genet 2024	https://doi.org/10.1038/s41588-024-01914-4	组成异质性与富集图先例；不能当MP10机制证明
+背景文献	Lin et al., Advanced Science 2025	https://pmc.ncbi.nlm.nih.gov/articles/PMC11831474/	MIBC的T/B/浆细胞/C1QC机制背景；不将本次niche直接等同TLS
+背景文献	Ji et al., Cell 2020	https://pubmed.ncbi.nlm.nih.gov/32579974/	纤维血管环境与免疫组分研究先例；非本次直接验证
+背景文献	Qi et al., Nat Commun 2022	https://www.nature.com/articles/s41467-022-29366-6	CAF–SPP1假说依据；本次相应配对总体证据较弱
+背景文献	Falquet et al., Nat Commun 2026	https://www.nature.com/articles/s41467-026-69841-y	Mast在膀胱癌中的生物学先例，不证明本次MP10–Mast关系

@@ -1,0 +1,59 @@
+{
+  "seed": 123,
+  "configuration": "SAMPLE_R12_LEIDEN",
+  "n_pairs": 139,
+  "scopes": [
+    "ALL_DATASETS",
+    "CanDis__UNVERIFIED",
+    "GSE171351",
+    "GSE238145",
+    "GSE285715",
+    "GSE319536",
+    "Inhousedata__UNVERIFIED",
+    "NPJ__UNVERIFIED"
+  ],
+  "ring_min_valid": [
+    4,
+    8,
+    12
+  ],
+  "ring_complete": [
+    6,
+    12,
+    18
+  ],
+  "section_min_target": 20,
+  "section_min_rest": 20,
+  "association_min_centers": 30,
+  "min_distinct": 3,
+  "signed_min_units": 5,
+  "signed_min_nonzero": 5,
+  "signed_zero_tolerance": 0.0,
+  "signed_rule": "n<50 no zero and no absolute ties exact, else continuity-corrected approx; Wilcox exclusion",
+  "composition_tolerance": 1e-06,
+  "rank_variance_tolerance": 1e-12,
+  "QR_relative_tolerance": 1e-10,
+  "Fisher_clip": 1e-07,
+  "TME_min_share_all_rings": 0.05,
+  "main_covariates": [
+    "intercept",
+    "rank(center_mean_Epi)",
+    "rank(log1p(center_nCount))"
+  ],
+  "center_type_sensitivity": "add rank(center_mean_celltype)",
+  "block": "floor(array_row/8), floor(array_col/8); stable SHA256(seed123|spot_uid) minimum per block; shared across all targets/rings/layers",
+  "families": {
+    "background_zero": 417,
+    "ring_pairwise": 417,
+    "association_per_method": 1008
+  },
+  "sets": [
+    "MAIN",
+    "COMPLETE_RINGS",
+    "TME_MATCHED_RAW",
+    "TME_CONDITIONAL"
+  ],
+  "main_plots": "3 panels of 3 unconnected boxes: raw/excess/ringpairs; association 2 score layers x main/raw panels",
+  "only_sensitivity_tests": "verified-patient subset separate BH; other sensitivities descriptive",
+  "approval": "current user blanket authorization; original v6 gate read only"
+}

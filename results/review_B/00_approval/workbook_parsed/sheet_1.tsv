@@ -1,0 +1,14 @@
+0	1	2	3	4	5	6	7
+niche × celltype 生物学评审 | v6							
+评审范围		基于用户上传 neighborhood_niche_celltype_screen_v6.zip；仅整理建议，不运行阶段B，不修改原始统计或niche标签。					
+宽口径候选		60个正向单位支持组合（其中28个核心），另加39个假说/队列特异探索组合，共99个正向或探索候选。					
+负向处理		另列40个非niche0、非Epithelial的单位层面显著负向组合，作为对照候选，不等于主动排斥。					
+niche0		29个非上皮类型全部相对降低，不能视作29种独立回避机制。上皮总比例差和组成闭合必须同时考虑。					
+统计口径		R12=(R1+R2)/2。目标/其余均值是pooling的anchor均值；单位差为先同切片target−rest、再按分析单位归并后的中位差，二者不能相减替代。					
+q值		anchor q来自单侧greater rank-sum；单位q来自双侧paired signed-rank；每scope分别按270项计划比较进行BH。数值0表示数值下溢，非数学上概率恰好为0。					
+单位		有效单位包含已核实患者与按来源政策定义的匿名单位；已核实患者敏感性单独列出。不能把全部单位叫患者。					
+重要限制		用组成聚类再检验组成是探索性描述；环重叠、同切片相关及单/多dataset权重均可能影响结果。不是独立验证，不是MP10共定位证据。					
+筛选原则		研究优先级是人工提出的建议；未以MP10正负方向替换统计结果，反向或弱结果保留。39个扩展候选不宣称已显著富集。					
+Gate		本文件及TSV中人工决定均为空。即使用户在本表填写，也应由Codex按candidate_id同步至原Gate副本并校验；当前不构成执行授权。					
+数据来源		04_gate/all_niche_celltype_evidence.tsv；02_statistics/verified_patients_only_sensitivity.tsv；reports/METHODS.md。					
+背景演示		“闭合示例”只用pooling均值说明分母影响；其TME内部比例不是正式逐环/逐样本重分析，也没有新的P值。					
