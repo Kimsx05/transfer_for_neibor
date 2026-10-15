@@ -1,0 +1,7 @@
+item	source	paper	v8
+statistic	G_Local defaults star=False, transform R	G* terminology	SOURCE_G starFalse; pilot starTrue audit only
+local cutoff	native p_sim<.05; local FDR commented out		separate SOURCE_P05 and doubled-native localBH
+coordinates	Euclidean raw array_row/array_col		true pixel XY normalized by physical R1 pitch
+components	rebuild grid graph on hotspot subset		induced subgraph of full tissue R1
+empty target	API defaults max distance fill		NA; same-component nearest; no fill
+units	no inherited patient hierarchy		same-section effect -> equal sections per frozen unit -> signedrank

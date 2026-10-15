@@ -1,0 +1,64 @@
+{
+  "statistic": "SOURCE_G",
+  "star": false,
+  "transform": "R",
+  "primary_k": 10,
+  "sensitivity_k": [
+    6,
+    18
+  ],
+  "permutations": 9999,
+  "seed": 123,
+  "n_jobs": 1,
+  "section_workers": 2,
+  "component_min_spots": 5,
+  "min_variable_positions": 30,
+  "min_distinct": 3,
+  "source": "v7 score_eligible E0",
+  "cell_targets": "full tissue valid per-spot q05/all30 nonEpi",
+  "niche_targets": "all frozen accepted common anchors, not limited to E0",
+  "coordinate_unit": "spot pitches; median physical R1 fullres-pixel edge length",
+  "KNN_ties": "rounded distance 12 decimals then canonical spot_uid; include boundary radius tolerance1e-10",
+  "G_null_background": "all supported positions within section; block-diagonal component-local W",
+  "track_A": "Z direction with native p_sim<0.05; no local FDR",
+  "track_B": "min(1,2*p_sim_native) then BH over all calculable local positions; q<0.05",
+  "inference": {
+    "O": {
+      "E": 30,
+      "H": 20,
+      "nonhot": 20,
+      "target_in_E": 20,
+      "rest_in_E": 20
+    },
+    "D": {
+      "E": 30,
+      "H": 20,
+      "nonhot": 20,
+      "target": 5
+    },
+    "D_out": {
+      "E": 30,
+      "H": 20,
+      "nonhot": 20,
+      "target": 5
+    },
+    "unit_min": 5,
+    "nonzero_min": 5,
+    "zero_tolerance": 1e-12
+  },
+  "families": {
+    "NICHE_PRIMARY": 36,
+    "CELL_PRIMARY_DISTANCE": 58,
+    "NICHE_OUTSIDE_SECONDARY": 18,
+    "CELL_OVERLAP_SECONDARY": 58,
+    "CELL_OUTSIDE_SECONDARY": 58
+  },
+  "geometry_sensitivity": "all k neighbors reachable within R<=3; kth distance<=3 pitch",
+  "stratified": "Epi and log1p(nCount) qcut3x3, duplicate boundaries dropped; if any nonempty <20 retry2x2; if still insufficient unavailable, never one stratum",
+  "LOW_ABSOLUTE_RELATIVE_COMPOSITION": "formal target hot mean<0.001",
+  "source_hot_fraction_warning": 0.8,
+  "one_component_warning": true,
+  "primary_distance": "nearest within same full-tissue connected component; no max fill",
+  "keep_simulations": false,
+  "pilot_Gstar_only": true
+}

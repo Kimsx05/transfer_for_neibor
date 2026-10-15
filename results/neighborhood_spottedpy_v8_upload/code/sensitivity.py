@@ -1,0 +1,23 @@
+from common import *
+
+def enrich():
+ s=pd.read_parquet(OUT/'07_synthesis/all_section_effects.parquet');ev=pd.read_csv(OUT/'07_synthesis/dataset_evidence_all.tsv',sep='\t');rows=[]
+ for scope in SCOPES:
+  ss=s if scope=='ALL_DATASETS' else s[s.dataset_id.eq(scope)]
+  for key,gg in ss.groupby(['layer','track','target_kind','target_id','metric'],sort=False):
+   base=dict(scope=scope,**dict(zip(['layer','track','target_kind','target_id','metric'],key)));m=gg[gg.k.eq(10)&gg.analysis_domain.eq('MAIN')&gg.eligible];comparisons=[('K6',gg[gg.k.eq(6)&gg.eligible]),('K18',gg[gg.k.eq(18)&gg.eligible]),('GEOMETRY_LOCAL',gg[gg.analysis_domain.eq('GEOMETRY_LOCAL_SUPPORT')&gg.eligible])]
+   for name,b in comparisons:
+    z=m.merge(b,on=['section_id','analysis_unit_uid'],suffixes=('_main','_sensitivity'),validate='one_to_one');u=z.groupby('analysis_unit_uid')[['effect_main','effect_sensitivity']].mean();a=u.effect_main.mean();b=u.effect_sensitivity.mean();rows.append(dict(**base,sensitivity=name,n_matched_sections=len(z),n_matched_units=len(u),mean_main=a,mean_sensitivity=b,median_main=u.effect_main.median(),median_sensitivity=u.effect_sensitivity.median(),same_direction_units=int((u.effect_main*u.effect_sensitivity>1e-24).sum()),opposite_direction_units=int((u.effect_main*u.effect_sensitivity<-1e-24).sum()),mean_direction_agreement=bool(np.isfinite(a*b) and a*b>1e-24)))
+   for name,col in [('STRATIFIED','stratified_effect'),('COMPONENT_EQUAL','component_equal_effect')]:
+    z=m[m[col].notna()];u=z.groupby('analysis_unit_uid')[['effect',col]].mean();a=u.effect.mean();b=u[col].mean();rows.append(dict(**base,sensitivity=name,n_matched_sections=len(z),n_matched_units=len(u),mean_main=a,mean_sensitivity=b,median_main=u.effect.median(),median_sensitivity=u[col].median(),same_direction_units=int((u.effect*u[col]>1e-24).sum()),opposite_direction_units=int((u.effect*u[col]<-1e-24).sum()),mean_direction_agreement=bool(np.isfinite(a*b) and a*b>1e-24)))
+ r=pd.DataFrame(rows);tab('05_sensitivity/matched_sensitivity_effects.tsv',r)
+ keys=['scope','layer','track','target_kind','target_id','metric']
+ for name,g in r.groupby('sensitivity'):
+  z=g[keys+['n_matched_units','mean_main','mean_sensitivity','mean_direction_agreement']].rename(columns={c:name+'_'+c for c in ['n_matched_units','mean_main','mean_sensitivity','mean_direction_agreement']});ev=ev.merge(z,on=keys,validate='one_to_one')
+ other_layer=ev[keys+['q_scope','mean_effect','n_units']].copy();other_layer['layer']=other_layer.layer.map({LAYERS[0]:LAYERS[1],LAYERS[1]:LAYERS[0]});other_layer=other_layer.rename(columns={c:'unmatched_other_layer_'+c for c in ['q_scope','mean_effect','n_units']});ev=ev.merge(other_layer,on=keys,validate='one_to_one');ev['raw_unmatched_layer_mean_direction_agreement']=(ev.mean_effect*ev.unmatched_other_layer_mean_effect>1e-24);other=ev[keys+['q_scope','mean_effect','n_units']].copy();other['track']=other.track.map({'SOURCE_P05':'LOCAL_BH05','LOCAL_BH05':'SOURCE_P05'});other=other.rename(columns={c:'other_track_'+c for c in ['q_scope','mean_effect','n_units']});ev=ev.merge(other,on=keys,validate='one_to_one')
+ ev['single_layer_q05']=ev.q_scope.lt(.05);ev['two_layers_paired_q05_same_direction']=ev.both_matched_layers_q05&ev.paired_mean_direction_agreement;ev['SOURCE_P05_ONLY']=ev.track.eq('SOURCE_P05')&ev.q_scope.lt(.05)&~ev.other_track_q_scope.lt(.05);ev['LOCAL_BH_AND_UNIT_TEST_SUPPORTED']=ev.track.eq('LOCAL_BH05')&ev.q_scope.lt(.05);ev['SCALE_SENSITIVE']=((ev.K6_n_matched_units.ge(5)&(ev.K6_mean_main*ev.K6_mean_sensitivity<-1e-24)&ev.K6_mean_main.abs().gt(1e-12)&ev.K6_mean_sensitivity.abs().gt(1e-12))|(ev.K18_n_matched_units.ge(5)&(ev.K18_mean_main*ev.K18_mean_sensitivity<-1e-24)&ev.K18_mean_main.abs().gt(1e-12)&ev.K18_mean_sensitivity.abs().gt(1e-12)));ev['TECHNICAL_BACKGROUND_SENSITIVE']=ev.STRATIFIED_n_matched_units.ge(5)&(ev.STRATIFIED_mean_main*ev.STRATIFIED_mean_sensitivity<-1e-24)&ev.STRATIFIED_mean_main.abs().gt(1e-12)&ev.STRATIFIED_mean_sensitivity.abs().gt(1e-12);ev['SCORE_LAYER_SENSITIVE']=ev.n_matched_units.ge(5)&(ev.mean_spot*ev.mean_epi<-1e-24)&ev.mean_spot.abs().gt(1e-12)&ev.mean_epi.abs().gt(1e-12)
+ group=['layer','track','target_kind','target_id','metric'];ds=ev[ev.scope.ne('ALL_DATASETS')&ev.n_units.ge(5)];hetero=ds.groupby(group).mean_effect.agg(lambda x:bool((x>1e-12).any() and (x<-1e-12).any())).rename('DATASET_HETEROGENEOUS').reset_index();ev=ev.merge(hetero,on=group,how='left');ev['DATASET_HETEROGENEOUS']=ev.DATASET_HETEROGENEOUS.fillna(False)
+ tab('07_synthesis/dataset_evidence_all.tsv',ev)
+ for kind,name in [('NICHE','niche_geometry_evidence_all9'),('CELL','cell_geometry_evidence_all29')]:tab(f'07_synthesis/{name}.tsv',ev[ev.target_kind.eq(kind)])
+ return ev
+if __name__=='__main__':enrich()
