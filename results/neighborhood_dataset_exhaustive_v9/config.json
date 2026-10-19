@@ -1,0 +1,35 @@
+{
+  "run_id": "neighborhood_dataset_exhaustive_v9_20261018",
+  "datasets": [
+    "CanDis__UNVERIFIED",
+    "GSE171351",
+    "GSE238145",
+    "GSE285715",
+    "GSE319536",
+    "Inhousedata__UNVERIFIED",
+    "NPJ__UNVERIFIED"
+  ],
+  "seed": 123,
+  "budget_bytes": 3221225472,
+  "cache_budget_bytes": 805306368,
+  "temp_budget_bytes": 483183820,
+  "figure_budget_bytes": 644245094,
+  "reserve_bytes": 2147483648,
+  "startup_effective_available_bytes": 40142381056,
+  "quota": {
+    "status": "KNOWN",
+    "remaining_bytes": 40142381056,
+    "raw": "Disk quotas for user t070721 (uid 1291): \n     Filesystem  blocks   quota   limit   grace   files   quota   limit   grace\n       /dev/sda 485086456  524288000 529530880          566776       0       0        \n"
+  },
+  "combination_workers": 1,
+  "section_workers": 1,
+  "numerical_threads": 1,
+  "primary": "REFIT|SOURCE_P05|k10|ALL_POLICY_UNITS|NICHE|O_D|two_layers",
+  "ring_pairs": "all K x 29 nonEpi; prior v7 manual list cannot be transferred",
+  "selection": "v3 audited positive silhouettes, nondegenerate, moderate K then embedding silhouette and accepted fraction",
+  "source_domain": "base geometry 4/8/12 & fullTop20 & epi valid & two finite scores & CURRENT accepted",
+  "frozen_source": "v8 original E0; separate control family",
+  "k": 10,
+  "permutations": 9999,
+  "SpottedPy_commit": "9dc364f203b7617b6701aa8fb579cbbb35357b26"
+}

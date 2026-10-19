@@ -1,0 +1,11 @@
+{
+  "cgroup_mounts": "35 25 0:30 / /sys/fs/cgroup rw,nosuid,nodev,noexec,relatime shared:10 - cgroup2 cgroup2 rw,nsdelegate,memory_recursiveprot",
+  "self_cgroup": "0::/user.slice/user-1291.slice/session-280165.scope",
+  "self_status": "VmRSS:\t    1852 kB\nCpus_allowed_list:\t0-255\nMems_allowed_list:\t0-1",
+  "readable_limits": {
+    "/sys/fs/cgroup/user.slice/user-1291.slice/session-280165.scope/memory.max": "max\n",
+    "/sys/fs/cgroup/user.slice/user-1291.slice/memory.max": "549755813888\n",
+    "/sys/fs/cgroup/user.slice/memory.max": "max\n"
+  },
+  "cgroup_limit_status": "KNOWN"
+}

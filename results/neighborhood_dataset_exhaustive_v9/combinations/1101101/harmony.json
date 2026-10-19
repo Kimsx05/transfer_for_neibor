@@ -1,0 +1,21 @@
+{
+  "implementation": "R harmony",
+  "version": "2.0.5",
+  "batch_key": "sample_uid",
+  "theta": 1,
+  "lambda": 5,
+  "sigma": 0.1,
+  "nclust": 100,
+  "max_iter": 50,
+  "early_stop": true,
+  "ncores": 1,
+  "seed": 123,
+  "max_iter_cluster": 20,
+  "epsilon_cluster": 0.001,
+  "epsilon_harmony": 0.0001,
+  "iterations": 23,
+  "extended": true,
+  "convergence_status": "converged",
+  "fit_n": 92473,
+  "fit_scope": "all anchors joint; not independent holdout representation"
+}

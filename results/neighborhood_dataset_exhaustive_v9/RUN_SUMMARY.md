@@ -1,0 +1,99 @@
+# v9 穷举运行汇总
+
+执行状态：EXECUTION_COMPLETE。已完成 99/99；含 inhouse 57/57，不含 42/42。
+
+全局校正状态：FINAL。当前 REFIT 主关系 2876 条；全局 BH 阳性 85 条；仅组合内 BH 阳性 87 条。未完成时这些数量不能当最终搜索结论。
+
+新增文件逻辑字节 1,124,818,120；累计清理本轮可再生临时文件 7,454,176,002 字节。预算 3 GiB。
+
+主分析 family 为 REFIT × SOURCE_P05 × k10 × ALL_POLICY_UNITS × 两层 × 全部冻结 niche × O/D。NA 仅表示已成功计算后的支持不足；技术失败保留未结算状态。
+
+inhouse 纳入与实际支持分列；实际支持表示有可估计单位且其单位平均效应与总体同向，不等于独立显著或已核实独立患者。
+
+99 个组合共享样本，属于穷举探索，不能称为独立重复验证。BH/BY 不消除赢家选择偏差，未核实身份和空间零模型限制仍然存在。
+
+O>0 重叠增加，O<0 重叠减少；D<0 更近，D>0 更远。距离单位 spot pitch。不能解释为细胞接触、招募或主动免疫排斥。
+
+
+
+当前主命中（完整表见 global_primary_hits.tsv）：
+
+combo_id	layer	target_id	metric	mean_effect	n_units	q_within_BH	q_global_BH	q_global_BY	inhouse_n_units	inhouse_actual_support
+1001001	spot_MP10_model_universe	niche2	O	-0.09595785066333251	21	6.866455078125e-05	0.001645660400390625	0.014056482736969708	0	False
+1011001	spot_MP10_model_universe	niche3	O	-0.04432231976863848	20	5.340576171875e-05	0.001645660400390625	0.014056482736969708	0	False
+1110110	spot_MP10_model_universe	niche4	O	-0.05953155327674601	32	7.401406764984131e-05	0.001645660400390625	0.014056482736969708	3	True
+1011111	spot_MP10_model_universe	niche3	O	-0.06817922007343019	47	3.373343520252092e-05	0.001645660400390625	0.014056482736969708	5	True
+1111101	spot_MP10_model_universe	niche2	O	-0.07816221346255028	41	4.969866495230235e-05	0.001645660400390625	0.014056482736969708	0	False
+1010111	spot_MP10_model_universe	niche3	O	-0.07249958596748185	38	0.00027734506875276566	0.0031157985067693517	0.02661373386142329	3	True
+1001011	spot_MP10_model_universe	niche5	O	-0.02616169846350246	18	0.00030517578125	0.0031157985067693517	0.02661373386142329	3	True
+1001101	spot_MP10_model_universe	niche2	O	-0.11031882053046155	36	0.0002651698887348175	0.0031157985067693517	0.02661373386142329	0	False
+1111110	spot_MP10_model_universe	niche3	O	-0.07806790096679089	41	0.0004203491043881513	0.003358122289500898	0.02868355341101849	4	True
+1000111	spot_MP10_model_universe	niche3	O	-0.07371166562830747	32	0.0003582090139389038	0.003358122289500898	0.02868355341101849	3	True
+1110000	spot_MP10_model_universe	niche3	O	-0.07401605473278694	17	0.0003662109375	0.003851394537681093	0.032896860627699	0	False
+1110111	spot_MP10_model_universe	niche3	O	-0.07665040233902738	35	0.0006427918560802937	0.003851394537681093	0.032896860627699	2	True
+1111111	spot_MP10_model_universe	niche3	O	-0.07064814806678886	35	0.0006386151071637869	0.003924480872228742	0.03352113085965789	2	True
+1111001	spot_MP10_model_universe	niche0	D	1.5632186503985928	32	0.000444900244474411	0.004660944321325847	0.039811666717593945	0	False
+1101001	spot_MP10_model_universe	niche4	D	3.4871006248280203	19	0.000640869140625	0.004799842834472656	0.04099807464949499	0	False
+1110100	spot_MP10_model_universe	niche1	O	-0.10145295245237544	35	0.00094032590277493	0.004799842834472656	0.04099807464949499	0	False
+1111001	spot_MP10_model_universe	niche0	O	-0.08904472172392199	31	0.000444900244474411	0.005376189508858849	0.04592096583475801	0	False
+1110101	spot_MP10_model_universe	niche3	O	-0.07751325996204067	35	0.0018307622522115707	0.00664807100676828	0.056784799171570026	0	False
+1010001	spot_MP10_model_universe	niche0	D	1.5101305365990703	26	0.0012350082397460938	0.0066764731156198605	0.05702739706884641	0	False
+1000011	spot_MP10_model_universe	niche2	D	1.8074178371457361	24	0.001705169677734375	0.0076626062393188475	0.0654504977440152	6	True
+
+
+
+
+重点关系（未经赢家选择偏差校正；完整单位与敏感性表在 review）：
+
+combo_id	target_id	layer	metric	n_units	mean_effect	q_within_BH	q_global_BH	q_global_BY	inhouse_n_units	inhouse_mean_effect	inhouse_actual_support
+1111111	niche2	spot_MP10_model_universe	O	49	-0.0488392552680045	0.0070371960872961	0.029360335541226	0.2507826338829815	6	-0.0292049464682187	True
+1111111	niche3	spot_MP10_model_universe	O	35	-0.0706481480667888	0.0006386151071637	0.0039244808722287	0.0335211308596578	2	-0.0507812277449225	True
+1111111	niche8	spot_MP10_model_universe	O	20	-0.0208194960362894	0.0014762878417968	0.0100568135579427	0.0859007278370371	3	-0.015449699389139	True
+1011111	niche3	spot_MP10_model_universe	O	47	-0.0681792200734301	3.373343520252092e-05	0.0016456604003906	0.0140564827369697	5	-0.0418336996381283	True
+1011111	niche1	spot_MP10_model_universe	O	30	0.1092240240946868	0.0095747709274292	0.0370121521334494	0.3161409713683552	3	-0.0017418349001896	False
+1010111	niche4	spot_MP10_model_universe	D	43	1.5148191474542918	0.0098441671677088	0.0297938031389397	0.2544851169729624	6	0.8095881143007166	True
+1010111	niche2	spot_MP10_model_universe	O	43	-0.0521875425595063	0.0098441671677088	0.0379539695945945	0.3241855478075897	6	-0.0110422029088253	True
+1010111	niche3	spot_MP10_model_universe	O	38	-0.0724995859674818	0.0002773450687527	0.0031157985067693	0.0266137338614232	3	-0.0555943460512801	True
+
+
+1111111：删除单dataset后方向改变或不可估计的诊断 0 条；这是固定标签影响诊断，不是独立验证。
+
+1111111：删除单单位后方向改变或不可估计 0 条。
+
+最大单位均值影响（不把均值影响等同于 signed-rank P 的单一驱动）：
+target_id	layer	metric	removed_unit	mean_remaining	absolute_mean_change	same_direction
+niche3	spot_MP10_model_universe	O	GSE319536::BC12	-0.0632405485775129	0.0074075994892758	True
+niche2	spot_MP10_model_universe	O	CanDis__UNVERIFIED::anonymous_unit::CanDis_2026_Sample12	-0.0539899635550961	0.0051507082870915	True
+niche8	spot_MP10_model_universe	O	NPJ__UNVERIFIED::anonymous_unit::NPJ_sample2	-0.0179771831525829	0.0028423128837064	True
+
+
+1111111：组成匹配后的新旧标签方向一致 3/3；两分支源域与有效N分别保留。
+
+1011111：删除单dataset后方向改变或不可估计的诊断 0 条；这是固定标签影响诊断，不是独立验证。
+
+1011111：删除单单位后方向改变或不可估计 0 条。
+
+最大单位均值影响（不把均值影响等同于 signed-rank P 的单一驱动）：
+target_id	layer	metric	removed_unit	mean_remaining	absolute_mean_change	same_direction
+niche1	spot_MP10_model_universe	O	GSE319536::BC11	0.096530535372544	0.0126934887221428	True
+niche3	spot_MP10_model_universe	O	GSE319536::BC10	-0.0767612076825109	0.0085819876090807	True
+
+
+1011111：组成匹配后的新旧标签方向一致 2/2；两分支源域与有效N分别保留。
+
+1010111：删除单dataset后方向改变或不可估计的诊断 0 条；这是固定标签影响诊断，不是独立验证。
+
+1010111：删除单单位后方向改变或不可估计 0 条。
+
+最大单位均值影响（不把均值影响等同于 signed-rank P 的单一驱动）：
+target_id	layer	metric	removed_unit	mean_remaining	absolute_mean_change	same_direction
+niche4	spot_MP10_model_universe	D	GSE238145::P3	2.005097337655156	0.4902781902008641	True
+niche3	spot_MP10_model_universe	O	GSE319536::BC10	-0.0854537810703394	0.0129541951028575	True
+niche2	spot_MP10_model_universe	O	CanDis__UNVERIFIED::anonymous_unit::CanDis_2026_Sample12	-0.0598540059911285	0.0076664634316222	True
+
+
+1010111：组成匹配后的新旧标签方向一致 3/3；两分支源域与有效N分别保留。
+
+详细图表状态：COMPLETE
+
+最终独立校验：PASSED。99 个组合产物哈希、planned family 数量、SciPy BH/BY 数值、标签和参考索引、图包数量及逻辑/实际分配磁盘预算均通过。详见 audit/final_validation.json。

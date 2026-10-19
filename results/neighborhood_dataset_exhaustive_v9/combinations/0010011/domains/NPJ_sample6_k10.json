@@ -1,0 +1,48 @@
+{
+  "key": "9fbfc866aefc1386755cd4081c7423b95ebaf538527f54e84d191902211a7473",
+  "domain_hash": "25116bdcc0b83cd0ef16bd47a803f1418e09da037dba15f1dfb4121ade2a88df",
+  "sha256": "f8d4f3f884447cdcdd2f81dcef4b5d0408655424ed3c2c2f90d13c39fea1c1e9",
+  "seconds": 1.3920884132385254,
+  "records": [
+    {
+      "layer": "spot_MP10_model_universe",
+      "reason": "NEW_ACCEPTED_DOMAIN_RECOMPUTED",
+      "n_supported": 2029,
+      "n_calculable": 2029,
+      "coverage": [
+        {
+          "track": "SOURCE_P05",
+          "n_hot": 569,
+          "n_raw": 577,
+          "n_components": 4
+        },
+        {
+          "track": "LOCAL_BH05",
+          "n_hot": 378,
+          "n_raw": 394,
+          "n_components": 5
+        }
+      ]
+    },
+    {
+      "layer": "epi_MP10_model_universe",
+      "reason": "NEW_ACCEPTED_DOMAIN_RECOMPUTED",
+      "n_supported": 2029,
+      "n_calculable": 2029,
+      "coverage": [
+        {
+          "track": "SOURCE_P05",
+          "n_hot": 488,
+          "n_raw": 500,
+          "n_components": 6
+        },
+        {
+          "track": "LOCAL_BH05",
+          "n_hot": 233,
+          "n_raw": 253,
+          "n_components": 6
+        }
+      ]
+    }
+  ]
+}

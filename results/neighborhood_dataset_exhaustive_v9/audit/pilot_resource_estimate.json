@@ -1,0 +1,13 @@
+{
+  "actual_combo_bytes": 18121677,
+  "upper_estimated_99_bytes": 1794046023,
+  "seconds": 119.85723519325256,
+  "rss_max_bytes": 517345280,
+  "budget_bytes": 3221225472,
+  "interpretation": "pilot measured; smaller combinations have fewer sections; guards enforce actual cumulative usage",
+  "seconds_controller_scope": "Final controller resumed after representation and rings had already completed; this is not full pilot runtime",
+  "representation_seconds": 604.3157658576965,
+  "approx_ring_seconds": 151,
+  "conservative_remaining_source_seconds_if_all_domains_change": 12280.57030248642,
+  "source_timing_caveat": "Original v8 per-variable seconds include possible startup/competing-worker overhead; all7 pilot source cache reuse cannot estimate changed-domain permutation time"
+}

@@ -1,0 +1,190 @@
+[
+  {
+    "time": 1792314149.2285254,
+    "reason": [
+      "Recursive completed-combination artifact verification on future resume; numeric methods unchanged",
+      "SPARSE_BLOCK is association-only as in v7; omit undefined composition sensitivity rows. MAIN unaffected",
+      "Review loads finalized sensitivity module after scan"
+    ],
+    "before": {
+      "code/core.py": "5e721c615e86bbf1f9996e3ee86e47e0b82709163e2349e98a4b28342778dcba",
+      "code/preflight.py": "5159e8051f5168fb8558aa3a6b84e89d5a38098912287ef01c1fd2971484b348",
+      "code/harmony.R": "e511f26c3860a19aad5a9e4d2520b10def3eda734f6464eb5e0feda42cc06733",
+      "code/refit.py": "fe411c085a45104b54a384b5b6e3e79b7f26a5bd8d813f6bb7df2e3aff7a8858",
+      "code/report.py": "425ee71a5142eb740c1b967ce720608351b25fc2cb92187ea352d1e586c45738",
+      "code/run.py": "aad5077dc10f1f189a835db70f916cff8f33b9efbe0d690fa5b4e5dcde5c45ba",
+      "code/review.py": "3d052b832d2a6d0d672f4347dc2a5801851b3a34f597c03a511e196e860b463a",
+      "code/frozen.py": "ef5ad24e4b39cb47794ffac3302ddb8a0752e74d0a90dd4a66b768d0e424cc44",
+      "code/umap_display.py": "24c48f30cfdb0abfd86fd714dae95e80a50bde7498bbedc8a47e161fb3fc3360",
+      "code/spotted.py": "ac68ee4690137db33c96f5ee875277784b54024cf137fdb7ed98f74a2407cd47",
+      "code/rings.py": "26525ab85dccdbebbb9c874697c536b57e7798dc3f9bef266e38351aeb680978",
+      "code/stats.py": "a508d0f4b3be32a575fba64032936db99dc8edd6885f540be527748e27a6d660",
+      "code/validate.py": "65f30d45dbd10d0d07c0d8a8228e6d00a578afe71afb4a3d886472a7c29fec7c"
+    },
+    "after": {
+      "code/core.py": "d331ebb7c43c0c2f3d5b994b71b4e49edb56a1898649d6bf05cf8866083e5687",
+      "code/preflight.py": "5159e8051f5168fb8558aa3a6b84e89d5a38098912287ef01c1fd2971484b348",
+      "code/harmony.R": "e511f26c3860a19aad5a9e4d2520b10def3eda734f6464eb5e0feda42cc06733",
+      "code/refit.py": "fe411c085a45104b54a384b5b6e3e79b7f26a5bd8d813f6bb7df2e3aff7a8858",
+      "code/report.py": "425ee71a5142eb740c1b967ce720608351b25fc2cb92187ea352d1e586c45738",
+      "code/run.py": "aad5077dc10f1f189a835db70f916cff8f33b9efbe0d690fa5b4e5dcde5c45ba",
+      "code/review.py": "72c801b90f7f332d46bf1ebb9369e2ff41e0421b2c1feb2b77ea5ddd33053bf7",
+      "code/frozen.py": "ef5ad24e4b39cb47794ffac3302ddb8a0752e74d0a90dd4a66b768d0e424cc44",
+      "code/umap_display.py": "24c48f30cfdb0abfd86fd714dae95e80a50bde7498bbedc8a47e161fb3fc3360",
+      "code/spotted.py": "ac68ee4690137db33c96f5ee875277784b54024cf137fdb7ed98f74a2407cd47",
+      "code/rings.py": "80eaa2a477993eaf1fc3b8fc2bc7825f76539883fe0d0a1d475d8d72f9c32ef2",
+      "code/stats.py": "a508d0f4b3be32a575fba64032936db99dc8edd6885f540be527748e27a6d660",
+      "code/validate.py": "65f30d45dbd10d0d07c0d8a8228e6d00a578afe71afb4a3d886472a7c29fec7c"
+    },
+    "primary_scientific_parameters_changed": false
+  },
+  {
+    "time": 1792314402.6235104,
+    "reason": [
+      "Refit lock and exact temporary Harmony checkpoint reuse after interruption",
+      "Final report verifies all required artifacts and sum(4K) before final correction"
+    ],
+    "before": {
+      "code/core.py": "d331ebb7c43c0c2f3d5b994b71b4e49edb56a1898649d6bf05cf8866083e5687",
+      "code/preflight.py": "5159e8051f5168fb8558aa3a6b84e89d5a38098912287ef01c1fd2971484b348",
+      "code/harmony.R": "e511f26c3860a19aad5a9e4d2520b10def3eda734f6464eb5e0feda42cc06733",
+      "code/refit.py": "fe411c085a45104b54a384b5b6e3e79b7f26a5bd8d813f6bb7df2e3aff7a8858",
+      "code/report.py": "425ee71a5142eb740c1b967ce720608351b25fc2cb92187ea352d1e586c45738",
+      "code/run.py": "aad5077dc10f1f189a835db70f916cff8f33b9efbe0d690fa5b4e5dcde5c45ba",
+      "code/review.py": "72c801b90f7f332d46bf1ebb9369e2ff41e0421b2c1feb2b77ea5ddd33053bf7",
+      "code/frozen.py": "ef5ad24e4b39cb47794ffac3302ddb8a0752e74d0a90dd4a66b768d0e424cc44",
+      "code/umap_display.py": "24c48f30cfdb0abfd86fd714dae95e80a50bde7498bbedc8a47e161fb3fc3360",
+      "code/spotted.py": "ac68ee4690137db33c96f5ee875277784b54024cf137fdb7ed98f74a2407cd47",
+      "code/rings.py": "80eaa2a477993eaf1fc3b8fc2bc7825f76539883fe0d0a1d475d8d72f9c32ef2",
+      "code/stats.py": "a508d0f4b3be32a575fba64032936db99dc8edd6885f540be527748e27a6d660",
+      "code/validate.py": "65f30d45dbd10d0d07c0d8a8228e6d00a578afe71afb4a3d886472a7c29fec7c"
+    },
+    "after": {
+      "code/core.py": "d331ebb7c43c0c2f3d5b994b71b4e49edb56a1898649d6bf05cf8866083e5687",
+      "code/preflight.py": "5159e8051f5168fb8558aa3a6b84e89d5a38098912287ef01c1fd2971484b348",
+      "code/harmony.R": "e511f26c3860a19aad5a9e4d2520b10def3eda734f6464eb5e0feda42cc06733",
+      "code/refit.py": "6a5ad286c562a774354a193bdc1e23af3be4ffb967aa5655ab77f756f6fe19d6",
+      "code/report.py": "5b5d37186ab8de43b68576cb80e795d00917dcafd443d036b3daf71210c5286f",
+      "code/run.py": "aad5077dc10f1f189a835db70f916cff8f33b9efbe0d690fa5b4e5dcde5c45ba",
+      "code/review.py": "72c801b90f7f332d46bf1ebb9369e2ff41e0421b2c1feb2b77ea5ddd33053bf7",
+      "code/frozen.py": "ef5ad24e4b39cb47794ffac3302ddb8a0752e74d0a90dd4a66b768d0e424cc44",
+      "code/umap_display.py": "24c48f30cfdb0abfd86fd714dae95e80a50bde7498bbedc8a47e161fb3fc3360",
+      "code/spotted.py": "ac68ee4690137db33c96f5ee875277784b54024cf137fdb7ed98f74a2407cd47",
+      "code/rings.py": "80eaa2a477993eaf1fc3b8fc2bc7825f76539883fe0d0a1d475d8d72f9c32ef2",
+      "code/stats.py": "a508d0f4b3be32a575fba64032936db99dc8edd6885f540be527748e27a6d660",
+      "code/validate.py": "65f30d45dbd10d0d07c0d8a8228e6d00a578afe71afb4a3d886472a7c29fec7c"
+    },
+    "primary_scientific_parameters_changed": false
+  },
+  {
+    "time": 1792314464.022483,
+    "reason": [
+      "Complete separate O/D/D_out selected distributions and analysis-unit contribution figure",
+      "Vector scatter PDF export; no primary numerical changes"
+    ],
+    "before": {
+      "code/core.py": "d331ebb7c43c0c2f3d5b994b71b4e49edb56a1898649d6bf05cf8866083e5687",
+      "code/preflight.py": "5159e8051f5168fb8558aa3a6b84e89d5a38098912287ef01c1fd2971484b348",
+      "code/harmony.R": "e511f26c3860a19aad5a9e4d2520b10def3eda734f6464eb5e0feda42cc06733",
+      "code/refit.py": "6a5ad286c562a774354a193bdc1e23af3be4ffb967aa5655ab77f756f6fe19d6",
+      "code/report.py": "5b5d37186ab8de43b68576cb80e795d00917dcafd443d036b3daf71210c5286f",
+      "code/run.py": "aad5077dc10f1f189a835db70f916cff8f33b9efbe0d690fa5b4e5dcde5c45ba",
+      "code/review.py": "72c801b90f7f332d46bf1ebb9369e2ff41e0421b2c1feb2b77ea5ddd33053bf7",
+      "code/frozen.py": "ef5ad24e4b39cb47794ffac3302ddb8a0752e74d0a90dd4a66b768d0e424cc44",
+      "code/umap_display.py": "24c48f30cfdb0abfd86fd714dae95e80a50bde7498bbedc8a47e161fb3fc3360",
+      "code/spotted.py": "ac68ee4690137db33c96f5ee875277784b54024cf137fdb7ed98f74a2407cd47",
+      "code/rings.py": "80eaa2a477993eaf1fc3b8fc2bc7825f76539883fe0d0a1d475d8d72f9c32ef2",
+      "code/stats.py": "a508d0f4b3be32a575fba64032936db99dc8edd6885f540be527748e27a6d660",
+      "code/validate.py": "65f30d45dbd10d0d07c0d8a8228e6d00a578afe71afb4a3d886472a7c29fec7c"
+    },
+    "after": {
+      "code/core.py": "d331ebb7c43c0c2f3d5b994b71b4e49edb56a1898649d6bf05cf8866083e5687",
+      "code/preflight.py": "5159e8051f5168fb8558aa3a6b84e89d5a38098912287ef01c1fd2971484b348",
+      "code/harmony.R": "e511f26c3860a19aad5a9e4d2520b10def3eda734f6464eb5e0feda42cc06733",
+      "code/refit.py": "6a5ad286c562a774354a193bdc1e23af3be4ffb967aa5655ab77f756f6fe19d6",
+      "code/report.py": "5b5d37186ab8de43b68576cb80e795d00917dcafd443d036b3daf71210c5286f",
+      "code/run.py": "aad5077dc10f1f189a835db70f916cff8f33b9efbe0d690fa5b4e5dcde5c45ba",
+      "code/review.py": "26fde3fb823081d5b7f52947fd1814d25e74c37ad34029cf03d08b096f327469",
+      "code/frozen.py": "ef5ad24e4b39cb47794ffac3302ddb8a0752e74d0a90dd4a66b768d0e424cc44",
+      "code/umap_display.py": "24c48f30cfdb0abfd86fd714dae95e80a50bde7498bbedc8a47e161fb3fc3360",
+      "code/spotted.py": "ac68ee4690137db33c96f5ee875277784b54024cf137fdb7ed98f74a2407cd47",
+      "code/rings.py": "80eaa2a477993eaf1fc3b8fc2bc7825f76539883fe0d0a1d475d8d72f9c32ef2",
+      "code/stats.py": "a508d0f4b3be32a575fba64032936db99dc8edd6885f540be527748e27a6d660",
+      "code/validate.py": "65f30d45dbd10d0d07c0d8a8228e6d00a578afe71afb4a3d886472a7c29fec7c"
+    },
+    "primary_scientific_parameters_changed": false
+  },
+  {
+    "time": 1792314750.8746488,
+    "reason": [
+      "Reconstruct full domain audit after partial section resume instead of retaining only newly evaluated rows",
+      "Final review report lists dataset and unit influence identities"
+    ],
+    "before": {
+      "code/core.py": "d331ebb7c43c0c2f3d5b994b71b4e49edb56a1898649d6bf05cf8866083e5687",
+      "code/preflight.py": "5159e8051f5168fb8558aa3a6b84e89d5a38098912287ef01c1fd2971484b348",
+      "code/harmony.R": "e511f26c3860a19aad5a9e4d2520b10def3eda734f6464eb5e0feda42cc06733",
+      "code/refit.py": "6a5ad286c562a774354a193bdc1e23af3be4ffb967aa5655ab77f756f6fe19d6",
+      "code/report.py": "5b5d37186ab8de43b68576cb80e795d00917dcafd443d036b3daf71210c5286f",
+      "code/run.py": "aad5077dc10f1f189a835db70f916cff8f33b9efbe0d690fa5b4e5dcde5c45ba",
+      "code/review.py": "26fde3fb823081d5b7f52947fd1814d25e74c37ad34029cf03d08b096f327469",
+      "code/frozen.py": "ef5ad24e4b39cb47794ffac3302ddb8a0752e74d0a90dd4a66b768d0e424cc44",
+      "code/umap_display.py": "24c48f30cfdb0abfd86fd714dae95e80a50bde7498bbedc8a47e161fb3fc3360",
+      "code/spotted.py": "ac68ee4690137db33c96f5ee875277784b54024cf137fdb7ed98f74a2407cd47",
+      "code/rings.py": "80eaa2a477993eaf1fc3b8fc2bc7825f76539883fe0d0a1d475d8d72f9c32ef2",
+      "code/stats.py": "a508d0f4b3be32a575fba64032936db99dc8edd6885f540be527748e27a6d660",
+      "code/validate.py": "65f30d45dbd10d0d07c0d8a8228e6d00a578afe71afb4a3d886472a7c29fec7c"
+    },
+    "after": {
+      "code/core.py": "d331ebb7c43c0c2f3d5b994b71b4e49edb56a1898649d6bf05cf8866083e5687",
+      "code/preflight.py": "5159e8051f5168fb8558aa3a6b84e89d5a38098912287ef01c1fd2971484b348",
+      "code/harmony.R": "e511f26c3860a19aad5a9e4d2520b10def3eda734f6464eb5e0feda42cc06733",
+      "code/refit.py": "6a5ad286c562a774354a193bdc1e23af3be4ffb967aa5655ab77f756f6fe19d6",
+      "code/report.py": "12d1bc4a48c75e123344efbe1be6411b0dbc0e3dd3cb96a80363c6de4a71e6f1",
+      "code/run.py": "aad5077dc10f1f189a835db70f916cff8f33b9efbe0d690fa5b4e5dcde5c45ba",
+      "code/review.py": "26fde3fb823081d5b7f52947fd1814d25e74c37ad34029cf03d08b096f327469",
+      "code/frozen.py": "ef5ad24e4b39cb47794ffac3302ddb8a0752e74d0a90dd4a66b768d0e424cc44",
+      "code/umap_display.py": "24c48f30cfdb0abfd86fd714dae95e80a50bde7498bbedc8a47e161fb3fc3360",
+      "code/spotted.py": "773deabc21dc95017675ff5ee552851b7e100b5d100f40b7cc5304f1c017f8b2",
+      "code/rings.py": "80eaa2a477993eaf1fc3b8fc2bc7825f76539883fe0d0a1d475d8d72f9c32ef2",
+      "code/stats.py": "a508d0f4b3be32a575fba64032936db99dc8edd6885f540be527748e27a6d660",
+      "code/validate.py": "65f30d45dbd10d0d07c0d8a8228e6d00a578afe71afb4a3d886472a7c29fec7c"
+    },
+    "primary_scientific_parameters_changed": false
+  },
+  {
+    "time": 1792319428.2652617,
+    "reason": "Repair domain audit E0 count: cached E0 denotes boolean layer-0 calculability, not a packed full base domain. Reconstruct actual accepted E0 and verify its stored hash. No statistical arrays, inputs or parameters changed.",
+    "before": {
+      "code/core.py": "d331ebb7c43c0c2f3d5b994b71b4e49edb56a1898649d6bf05cf8866083e5687",
+      "code/preflight.py": "5159e8051f5168fb8558aa3a6b84e89d5a38098912287ef01c1fd2971484b348",
+      "code/harmony.R": "e511f26c3860a19aad5a9e4d2520b10def3eda734f6464eb5e0feda42cc06733",
+      "code/refit.py": "6a5ad286c562a774354a193bdc1e23af3be4ffb967aa5655ab77f756f6fe19d6",
+      "code/report.py": "12d1bc4a48c75e123344efbe1be6411b0dbc0e3dd3cb96a80363c6de4a71e6f1",
+      "code/run.py": "aad5077dc10f1f189a835db70f916cff8f33b9efbe0d690fa5b4e5dcde5c45ba",
+      "code/review.py": "26fde3fb823081d5b7f52947fd1814d25e74c37ad34029cf03d08b096f327469",
+      "code/frozen.py": "ef5ad24e4b39cb47794ffac3302ddb8a0752e74d0a90dd4a66b768d0e424cc44",
+      "code/umap_display.py": "24c48f30cfdb0abfd86fd714dae95e80a50bde7498bbedc8a47e161fb3fc3360",
+      "code/spotted.py": "773deabc21dc95017675ff5ee552851b7e100b5d100f40b7cc5304f1c017f8b2",
+      "code/rings.py": "80eaa2a477993eaf1fc3b8fc2bc7825f76539883fe0d0a1d475d8d72f9c32ef2",
+      "code/stats.py": "a508d0f4b3be32a575fba64032936db99dc8edd6885f540be527748e27a6d660",
+      "code/validate.py": "65f30d45dbd10d0d07c0d8a8228e6d00a578afe71afb4a3d886472a7c29fec7c"
+    },
+    "after": {
+      "code/core.py": "d331ebb7c43c0c2f3d5b994b71b4e49edb56a1898649d6bf05cf8866083e5687",
+      "code/preflight.py": "5159e8051f5168fb8558aa3a6b84e89d5a38098912287ef01c1fd2971484b348",
+      "code/harmony.R": "e511f26c3860a19aad5a9e4d2520b10def3eda734f6464eb5e0feda42cc06733",
+      "code/refit.py": "6a5ad286c562a774354a193bdc1e23af3be4ffb967aa5655ab77f756f6fe19d6",
+      "code/report.py": "12d1bc4a48c75e123344efbe1be6411b0dbc0e3dd3cb96a80363c6de4a71e6f1",
+      "code/run.py": "aad5077dc10f1f189a835db70f916cff8f33b9efbe0d690fa5b4e5dcde5c45ba",
+      "code/review.py": "26fde3fb823081d5b7f52947fd1814d25e74c37ad34029cf03d08b096f327469",
+      "code/frozen.py": "ef5ad24e4b39cb47794ffac3302ddb8a0752e74d0a90dd4a66b768d0e424cc44",
+      "code/umap_display.py": "24c48f30cfdb0abfd86fd714dae95e80a50bde7498bbedc8a47e161fb3fc3360",
+      "code/spotted.py": "9fb50e3a5aa6301ff9757c4038d5827afde98897ed649c9aa2b109a442f91760",
+      "code/rings.py": "80eaa2a477993eaf1fc3b8fc2bc7825f76539883fe0d0a1d475d8d72f9c32ef2",
+      "code/stats.py": "a508d0f4b3be32a575fba64032936db99dc8edd6885f540be527748e27a6d660",
+      "code/validate.py": "65f30d45dbd10d0d07c0d8a8228e6d00a578afe71afb4a3d886472a7c29fec7c"
+    },
+    "primary_scientific_parameters_changed": false
+  }
+]

@@ -1,0 +1,133 @@
+{
+  "status": "PASSED",
+  "checks": [
+    {
+      "check": "99_57_42",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "planned_missing_fdr_bh",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "planned_missing_fdr_by",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "scientific_NA_stays_NA",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "all_zero_and_insufficient",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "zero_distance_disconnected_empty_target",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E0_reconstructed_old",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "exact_v8_geometry",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "source_compact_cache_parity",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "changed_source_mask_invalidates_cache",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "real_section_direct_G_p_parity",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "bounded_permutation_memo_bitwise",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "all_real_section_effects_exact",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "cross_dataset_unit_merge",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "ring_float32_provenance_tolerance",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "v7_partial_correlation_parity",
+      "passed": true,
+      "details": {
+        "n": 3024,
+        "max_abs": 5.551115123125783e-17
+      }
+    },
+    {
+      "check": "owned_temp_cleanup_only",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "atomic_checkpoint_resume",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "all7_frozen_all_7296_p_q_N_exact",
+      "passed": true,
+      "rows": 7296
+    },
+    {
+      "check": "all7_refit_labels_exact_original",
+      "passed": true,
+      "n": 129632
+    },
+    {
+      "check": "active_temp_reference_prevents_cleanup_including_EPERM",
+      "passed": true
+    },
+    {
+      "check": "producer_v2_COMPLETE_hash_contract",
+      "passed": true
+    },
+    {
+      "check": "all_per_size_inhouse_counts",
+      "passed": true,
+      "counts": {
+        "(3, False)": 20,
+        "(3, True)": 15,
+        "(4, False)": 15,
+        "(4, True)": 20,
+        "(5, False)": 6,
+        "(5, True)": 15,
+        "(6, False)": 1,
+        "(6, True)": 6,
+        "(7, True)": 1
+      }
+    }
+  ],
+  "v8_earlier_evidence": "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_spottedpy_v8/reports",
+  "time": 1792313256.8536205
+}

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_dataset_exhaustive_v9/code/run.py", line 34, in main
+    ring(row.combo_id);spotted(row.combo_id);frozen(row.combo_id)
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_dataset_exhaustive_v9/code/spotted.py", line 82, in run
+    meta=json.loads((folder/'domains'/f'{sec}_k10.json').read_text());mask=np.load(folder/'domains'/f'{sec}_k10.npz');old=pd.read_parquet(V8/'01_geometry'/sec/'nodes.parquet',columns=['E0']);domainaudit.append(dict(section_id=sec,n_E0=int(np.unpackbits(mask['E0']).sum()),n_old_E0=int(old.E0.sum()),domain_hash=meta['domain_hash'],seconds=meta['seconds'],source_decisions='|'.join(x['reason'] for x in meta['records'])))
+                                                                                                                                                                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Expected an input array of unsigned byte data type
