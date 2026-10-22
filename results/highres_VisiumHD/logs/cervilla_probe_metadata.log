@@ -1,0 +1,84 @@
+{'url': 'https://zenodo.org/api/records/17999961/files/visiumhd_Bladder.zip/content', 'error': "HTTPSConnectionPool(host='zenodo.org', port=443): Max retries exceeded with url: /api/records/17999961/files/visiumhd_Bladder.zip/content (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)')))", 'attempt': 0}
+{'url': 'https://zenodo.org/api/records/17999961/files/visiumhd_Bladder.zip/content', 'error': "HTTPSConnectionPool(host='zenodo.org', port=443): Max retries exceeded with url: /api/records/17999961/files/visiumhd_Bladder.zip/content (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)')))", 'attempt': 1}
+{'url': 'https://zenodo.org/api/records/17999961/files/visiumhd_Bladder.zip/content', 'error': "HTTPSConnectionPool(host='zenodo.org', port=443): Max retries exceeded with url: /api/records/17999961/files/visiumhd_Bladder.zip/content (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)')))", 'attempt': 2}
+urllib3.exceptions.SSLError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/data/t070721/miniconda3/lib/python3.13/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "/home/data/t070721/miniconda3/lib/python3.13/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "/home/data/t070721/miniconda3/lib/python3.13/site-packages/urllib3/util/retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='zenodo.org', port=443): Max retries exceeded with url: /api/records/17999961/files/visiumhd_Bladder.zip/content (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<stdin>", line 3, in <module>
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/code/download_inputs.py", line 46, in cervilla
+    get_range(url,size-22,size-1,size)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/code/download_inputs.py", line 12, in get_range
+    r=S.get(url,headers={'Range':f'bytes={start}-{end}','Accept-Encoding':'identity'},stream=True,timeout=(15,90))
+  File "/home/data/t070721/miniconda3/lib/python3.13/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/miniconda3/lib/python3.13/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/data/t070721/miniconda3/lib/python3.13/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/data/t070721/miniconda3/lib/python3.13/site-packages/requests/adapters.py", line 675, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='zenodo.org', port=443): Max retries exceeded with url: /api/records/17999961/files/visiumhd_Bladder.zip/content (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)')))
+{'url': 'https://zenodo.org/api/records/17999961/files/visiumhd_Bladder.zip/content', 'error': "HTTPSConnectionPool(host='zenodo.org', port=443): Max retries exceeded with url: /api/records/17999961/files/visiumhd_Bladder.zip/content (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)')))", 'attempt': 0}
+{'url': 'https://zenodo.org/api/records/17999961/files/visiumhd_Bladder.zip/content', 'error': "HTTPSConnectionPool(host='zenodo.org', port=443): Max retries exceeded with url: /api/records/17999961/files/visiumhd_Bladder.zip/content (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)')))", 'attempt': 1}
+{'url': 'https://zenodo.org/api/records/17999961/files/visiumhd_Bladder.zip/content', 'error': "HTTPSConnectionPool(host='zenodo.org', port=443): Max retries exceeded with url: /api/records/17999961/files/visiumhd_Bladder.zip/content (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)')))", 'attempt': 2}
+urllib3.exceptions.SSLError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/data/t070721/miniconda3/lib/python3.13/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "/home/data/t070721/miniconda3/lib/python3.13/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "/home/data/t070721/miniconda3/lib/python3.13/site-packages/urllib3/util/retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='zenodo.org', port=443): Max retries exceeded with url: /api/records/17999961/files/visiumhd_Bladder.zip/content (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<stdin>", line 3, in <module>
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/code/download_inputs.py", line 46, in cervilla
+    get_range(url,size-22,size-1,size)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/code/download_inputs.py", line 12, in get_range
+    r=S.get(url,headers={'Range':f'bytes={start}-{end}','Accept-Encoding':'identity'},stream=True,timeout=(15,90))
+  File "/home/data/t070721/miniconda3/lib/python3.13/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/miniconda3/lib/python3.13/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/data/t070721/miniconda3/lib/python3.13/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/data/t070721/miniconda3/lib/python3.13/site-packages/requests/adapters.py", line 675, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='zenodo.org', port=443): Max retries exceeded with url: /api/records/17999961/files/visiumhd_Bladder.zip/content (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)')))

@@ -1,0 +1,36 @@
+{
+  "annotation_version": "frozen_subtypes_v1",
+  "status": "computational_annotation_frozen_pending_user_review",
+  "frozen_utc": "2026-10-21T14:13:22.324646+00:00",
+  "workspace": "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD",
+  "output_directory": "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1",
+  "section_completion": {
+    "full_section": 0,
+    "partial_ROI": [
+      "Cervilla"
+    ],
+    "blocked": [
+      "D1_Johnson",
+      "UC_SCC"
+    ]
+  },
+  "n_cells": 97847,
+  "n_genes": 18085,
+  "annotation_counts": {
+    "Unknown": 50767,
+    "major_only": 42968,
+    "mixed_or_ambiguous": 3283,
+    "subtype_supported": 829
+  },
+  "scvi_sections": 1,
+  "scvi_core_cells": 84985,
+  "reference_version": "cell2location_v2_frozen_20260916__scRNA32",
+  "seed": 123,
+  "validation_checks_passed": 32,
+  "cell_matrix_sha256": "c93b28b4e255cd92ce786a1a78968df2c6ba8fb7bb018a13b2ce24b8f24e5ae4",
+  "labels_sha256": "0d247038109207260ab3d845b14722f50e580f00ba9333a482b62d63862fe007",
+  "report_sha256": "248bb56c37f9a31359f25ed6984613f19502ba77aa76343ed5ac674971ce6681",
+  "checksum_manifest_sha256": "30379617a7011f455171feab9dc8638b4ca6b9bb6b6356e083350d5a73f2a4b8",
+  "immutable_rule": "No overwrite of v1. Changes require a new v2 and differences report.",
+  "next_action": "Await user label review; no downstream scoring or niche analysis authorized in this run."
+}

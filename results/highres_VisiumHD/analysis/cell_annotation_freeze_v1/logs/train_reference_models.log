@@ -1,0 +1,28 @@
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/celltypist/classifier.py:11: FutureWarning: `__version__` is deprecated, use `importlib.metadata.version('scanpy')` instead
+  from scanpy import __version__ as scv
+READ stratified reference 50885 genes 14327
+... storing 'major_label' as categorical
+... storing 'source_group' as categorical
+... storing 'split' as categorical
+TRAIN major (46140, 14327)
+🍳 Preparing data before training
+✂️ 33 non-expressed genes are filtered out
+🔬 Input data has 46140 cells and 14294 genes
+⚖️ Scaling input data
+🏋️ Training data using SGD logistic regression
+✅ Model training done!
+TRAIN subtype (46140, 14327)
+🍳 Preparing data before training
+✂️ 33 non-expressed genes are filtered out
+🔬 Input data has 46140 cells and 14294 genes
+⚖️ Scaling input data
+🏋️ Training data using SGD logistic regression
+✅ Model training done!
+TRAIN b_plasma (5209, 14327)
+🍳 Preparing data before training
+✂️ 351 non-expressed genes are filtered out
+🔬 Input data has 5209 cells and 13976 genes
+⚖️ Scaling input data
+🏋️ Training data using SGD logistic regression
+✅ Model training done!
+TRAINING DONE 46140 4745

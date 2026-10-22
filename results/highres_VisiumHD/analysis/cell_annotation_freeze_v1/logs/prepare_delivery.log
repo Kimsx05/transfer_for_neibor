@@ -1,0 +1,51 @@
+{
+  "n_cells": 97847,
+  "annotation_status": {
+    "Unknown": 50767,
+    "major_only": 42968,
+    "mixed_or_ambiguous": 3283,
+    "subtype_supported": 829
+  },
+  "major_labels": {
+    "Unknown": 50853,
+    "Epithelial": 37413,
+    "Fibroblast": 7629,
+    "Plasma": 928,
+    "Myeloid": 561,
+    "Endothelial": 363,
+    "Mast": 53,
+    "T/NK": 45,
+    "B": 2
+  },
+  "subtype_supported": {
+    "Matrix_CAF": 679,
+    "Pericyte": 52,
+    "SMC": 51,
+    "iCAF": 26,
+    "FOLR2 TAM": 5,
+    "Lymphatic EC": 4,
+    "Arterial EC": 4,
+    "SPP1 TAM": 2,
+    "cDC2": 1,
+    "cDC1": 1,
+    "rCAF": 1,
+    "Venous EC": 1,
+    "Classical Mono": 1,
+    "Neutrophil": 1
+  },
+  "targets_raw_shared_counts": {
+    "hd_median": 359,
+    "low_information_median": 21
+  },
+  "n_reference_heldout": 4745,
+  "calibration": "Per-class logit margin threshold, >=20 accepted heldout predictions and empirical precision >=0.8 on matching HD thinning depth; full-depth class must also be calibratable, but its margin threshold is not transferred; same holdout used for calibration, optimistic and not independent HD validation",
+  "low_information": "Kept independently; use separate median-depth thinning calibration",
+  "gc_b_rule": "B major with >=2 observed B markers including pan-B anchor, GC B model calibration, and >=2 of BCL6/AICDA/RGS13 observed; no cycling or spatial evidence substitution",
+  "mixed": "Potential epithelial/other lineage marker conflicts retained, not asserted doublets",
+  "malignancy": "not inferred",
+  "morphology_review_uncertain_retained": 6,
+  "low_information_retained": 12798,
+  "full_sections_frozen": 0,
+  "partial_sections_frozen": 1,
+  "blocked_sections": 2
+}

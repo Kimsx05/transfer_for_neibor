@@ -1,0 +1,38 @@
+READ original integer bins
+DESTRIPE diagnostics
+EXPAND nuclei by <=2 array bins (4um)
+AGGREGATE from original integer counts 106934
+{
+  "segmentation_nuclei": 172320,
+  "nuclei_with_assigned_bins": 106934,
+  "nuclei_without_assigned_bins": 65386,
+  "reconstructed": 106934,
+  "retained": 97847,
+  "excluded": 9087,
+  "low_information_retained": 12798,
+  "structure_core": 84985,
+  "source_bins": 4722911,
+  "image_uncovered_bins": 1274,
+  "assigned_bins": 3039039,
+  "unassigned_bins": 1683872,
+  "source_counts": 64431796,
+  "assigned_counts": 45682594,
+  "unassigned_counts": 18749202,
+  "retained_counts": 45632235,
+  "excluded_counts": 50359,
+  "per_gene_count_conservation": true,
+  "mt_features": [
+    "MT-ND1",
+    "MT-ND2",
+    "MT-CO2",
+    "MT-ATP6",
+    "MT-CO3",
+    "MT-ND3",
+    "MT-ND4L",
+    "MT-ND4",
+    "MT-ND5",
+    "MT-ND6",
+    "MT-CYB"
+  ],
+  "reconstruction": "Bin2cell 0.3.5 max_bin_distance=2; seed123 PCA30; no GEX salvage in dense tissue; original counts aggregated"
+}

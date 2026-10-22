@@ -1,0 +1,17 @@
+Working directory: /home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD
+Environment: /home/data/t070721/codex_singularity/python-envs/bladder-spatial-py312/bin/python
+No package installation or shared-environment upgrade.
+
+Initial inventory: rg --files (project, highres_ST, manifest-referenced user data/temp directories); filename metadata only before matrix audit.
+Resource checks: df -h . /tmp; quota -s; free -h; ps -u t070721 -o pid,pcpu,pmem,comm --sort=-pcpu
+python code/check_sources.py > logs/check_sources.log 2>&1
+python code/relocate_inputs.py
+python -u code/recover_thor.py > logs/recover_thor.log 2>&1
+python -u code/download_inputs.py > logs/download_inputs.log 2>&1
+python -u code/additional_sources.py > logs/additional_sources.log 2>&1
+python -u code/follow_sources.py > logs/follow_sources.log 2>&1
+OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 /home/data/t070721/codex_singularity/python-envs/bladder-spatial-py312/bin/python -u code/audit_inputs.py
+Final supported audit entrypoint: bash code/run_audit.sh
+
+Initial default filesystem sandbox failed before command execution (bwrap RTM_NEWADDR Operation not permitted). Commands executed with approved escalation.
+Initial requests used conflicting lowercase/uppercase proxy settings and got TLS EOF. HTTP clients use explicit existing local proxy thereafter.

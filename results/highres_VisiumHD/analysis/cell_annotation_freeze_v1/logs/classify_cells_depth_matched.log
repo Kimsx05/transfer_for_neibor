@@ -1,0 +1,26 @@
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/celltypist/classifier.py:11: FutureWarning: `__version__` is deprecated, use `importlib.metadata.version('scanpy')` instead
+  from scanpy import __version__ as scv
+PREDICT HD major
+PREDICT HD subtype
+PREDICT HD b_plasma
+{
+  "n_cells": 97847,
+  "annotation_status": {
+    "Unknown": 94570,
+    "mixed_or_ambiguous": 3277
+  },
+  "major_labels": {
+    "Unknown": 97847
+  },
+  "subtype_supported": {},
+  "targets_raw_shared_counts": {
+    "hd_median": 359,
+    "low_information_median": 21
+  },
+  "n_reference_heldout": 4745,
+  "calibration": "Per-class logit margin threshold, >=20 accepted heldout predictions and empirical precision >=0.8 on matching HD thinning depth; full-depth class must also be calibratable, but its margin threshold is not transferred; same holdout used for calibration, optimistic and not independent HD validation",
+  "low_information": "Kept independently; use separate median-depth thinning calibration",
+  "gc_b_rule": "B major with >=2 observed B markers including pan-B anchor, GC B model calibration, and >=2 of BCL6/AICDA/RGS13 observed; no cycling or spatial evidence substitution",
+  "mixed": "Potential epithelial/other lineage marker conflicts retained, not asserted doublets",
+  "malignancy": "not inferred"
+}

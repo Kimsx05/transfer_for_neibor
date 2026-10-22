@@ -1,0 +1,36 @@
+{
+  "validation": {
+    "audited_rows": 7,
+    "sections": 5,
+    "mp10_rows": 140,
+    "all_matrices_audited": true,
+    "no_negative_nonfinite_noninteger": true,
+    "mp10_counts_bounded": true,
+    "no_remaining_part_files": true,
+    "frozen_MP10_exact_match": true,
+    "downloaded_SHA256_crosscheck": "PASS",
+    "relocation_inode_and_symlink_check": "PASS",
+    "per_sample_gene_denominators_and_totals": "PASS"
+  },
+  "resources": {
+    "initial_user_quota_used_GiB_rounded": 458,
+    "soft_quota_GiB": 500,
+    "hard_quota_GiB": 505,
+    "initial_filesystem_available": "12 TiB rounded",
+    "initial_memory_available": "1.1 TiB rounded",
+    "download_payload_bytes": 515181780,
+    "data_bytes_by_dataset": {
+      "Cervilla": 353743901,
+      "GSE300692": 1666378877,
+      "GSE299573": 234260074,
+      "GSE318916": 388844138
+    },
+    "final_data_bytes": 2643226990,
+    "new_network_final_bytes": 507370390,
+    "download_scope": "selected ZIP members plus one GEO H5",
+    "temporary_peak_budget_bytes": 1000000000,
+    "audit_seed": 123,
+    "threads": 2,
+    "resource_blocked": false
+  }
+}

@@ -1,0 +1,38 @@
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/celltypist/classifier.py:11: FutureWarning: `__version__` is deprecated, use `importlib.metadata.version('scanpy')` instead
+  from scanpy import __version__ as scv
+PREDICT HD major
+PREDICT HD subtype
+PREDICT HD b_plasma
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/code/classify_cells.py", line 105, in <module>
+    result.loc[mixed,'annotation_status']='mixed_or_ambiguous';result.loc[mixed,'subtype_label']='mixed_or_ambiguous';result.loc[mixed,'unresolved_reason']=conflict[mixed];result.loc[mixed,'label_evidence']='conflicting_observed_major_marker_combinations';result.loc[mixed,'qc_flags']=result.loc[mixed,'qc_flags'].map(lambda x:('' if x=='none' else x+';')+'marker_conflict_unconfirmed')
+                                                                                                                                                                                                                                                                ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/pandas/core/indexing.py", line 938, in __setitem__
+    iloc._setitem_with_indexer(indexer, value, self.name)
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/pandas/core/indexing.py", line 1953, in _setitem_with_indexer
+    self._setitem_with_indexer_split_path(indexer, value, name)
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/pandas/core/indexing.py", line 1997, in _setitem_with_indexer_split_path
+    self._setitem_single_column(ilocs[0], value, pi)
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/pandas/core/indexing.py", line 2181, in _setitem_single_column
+    self.obj._mgr.column_setitem(loc, plane_indexer, value)
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/pandas/core/internals/managers.py", line 1541, in column_setitem
+    new_mgr = col_mgr.setitem((idx,), value)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/pandas/core/internals/managers.py", line 620, in setitem
+    return self.apply("setitem", indexer=indexer, value=value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/pandas/core/internals/managers.py", line 445, in apply
+    applied = getattr(b, f)(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/pandas/core/internals/blocks.py", line 1669, in setitem
+    values[indexer] = value
+    ~~~~~~^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/pandas/core/arrays/_mixins.py", line 272, in __setitem__
+    value = self._validate_setitem_value(value)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/pandas/core/arrays/categorical.py", line 1651, in _validate_setitem_value
+    return self._validate_listlike(value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/pandas/core/arrays/categorical.py", line 2389, in _validate_listlike
+    raise TypeError(
+TypeError: Cannot set a Categorical with another, without identical categories

@@ -1,0 +1,35 @@
+required_fields True 
+ids_unique_aligned True 
+full_metadata_matches_h5ad True 
+main_sparse_raw_integer True (97847, 18085) int32
+raw_count_and_gene_QC True 
+raw_retention_floor True 
+low_information_exact True 12798
+single_actual_section True 
+uncertainty_retained True 
+excluded_not_in_main True 
+all_input_genes_preserved True 
+latent_finite_and_roles True 
+UMAP_only_core True 84985
+unchanged_input_sha256_Cervilla True /home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/data/Cervilla/visiumhd_Bladder/binned_outputs/square_002um/filtered_feature_bc_matrix.h5
+unchanged_input_sha256_D1_Johnson True /home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/data/GSE300692/D1_Johnson/outs/binned_outputs/square_002um/filtered_feature_bc_matrix.h5
+unchanged_input_sha256_UC_SCC True /home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/data/GSE299573/GSM9040999/square_008um/filtered_feature_bc_matrix.h5
+Read original counts for full independent aggregation
+mapping_original_barcode_order True 
+original_feature_identity True 
+bin_raw_count_metadata True 
+uncovered_bins_not_assigned True 
+every_cell_mapping_present True 
+every_cell_raw_qc_reproduced True 
+full_raw_cell_matrix_reproduced True Every retained cell/gene exactly equals independent original-bin SUM
+per_gene_conservation True 
+assigned_unassigned_count_conservation True 64431796
+cell_bin_counts_and_area True 
+all_cell_coordinates_reproduced True 
+main_image_coordinate_obsm True 
+annotation_summary_exact True 
+reference_model_genes_unique True 
+training_holdout_cell_disjoint True 
+SELECTION_COLUMNS ['reference_celltype_v2', 'major_label', 'dataset', 'orig.ident', 'source_group', 'split']
+training_holdout_group_disjoint True source_group
+VALIDATION COMPLETE 32
