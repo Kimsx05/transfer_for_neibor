@@ -1,0 +1,43 @@
+{
+  "section": "Cervilla",
+  "objects": [
+    {
+      "source_cell_id": 131584,
+      "disposition": "retain_morphology_ambiguous",
+      "evidence": "Large irregular or multilobed stained profile; merged tissue versus a single atypical nucleus cannot be reliably distinguished from this representative image",
+      "review_basis": "representative_large_nuclei.png, actual image and predicted boundary; not size alone"
+    },
+    {
+      "source_cell_id": 152964,
+      "disposition": "retain_morphology_ambiguous",
+      "evidence": "Large irregular or multilobed stained profile; merged tissue versus a single atypical nucleus cannot be reliably distinguished from this representative image",
+      "review_basis": "representative_large_nuclei.png, actual image and predicted boundary; not size alone"
+    },
+    {
+      "source_cell_id": 154303,
+      "disposition": "retain_morphology_ambiguous",
+      "evidence": "Large irregular or multilobed stained profile; merged tissue versus a single atypical nucleus cannot be reliably distinguished from this representative image",
+      "review_basis": "representative_large_nuclei.png, actual image and predicted boundary; not size alone"
+    },
+    {
+      "source_cell_id": 154272,
+      "disposition": "retain_morphology_ambiguous",
+      "evidence": "Large irregular or multilobed stained profile; merged tissue versus a single atypical nucleus cannot be reliably distinguished from this representative image",
+      "review_basis": "representative_large_nuclei.png, actual image and predicted boundary; not size alone"
+    },
+    {
+      "source_cell_id": 142585,
+      "disposition": "retain_morphology_ambiguous",
+      "evidence": "Large irregular or multilobed stained profile; merged tissue versus a single atypical nucleus cannot be reliably distinguished from this representative image",
+      "review_basis": "representative_large_nuclei.png, actual image and predicted boundary; not size alone"
+    },
+    {
+      "source_cell_id": 153091,
+      "disposition": "retain_morphology_ambiguous",
+      "evidence": "Large irregular or multilobed stained profile; merged tissue versus a single atypical nucleus cannot be reliably distinguished from this representative image",
+      "review_basis": "representative_large_nuclei.png, actual image and predicted boundary; not size alone"
+    }
+  ],
+  "review": "computational visual review, not pathology diagnosis",
+  "core_note": "Four excluded D1 objects are low-information and were never in scVI training. One retained ambiguous Cervilla object was in training; historical training flag stays true, final identity is ambiguous."
+}

@@ -1,0 +1,12 @@
+{
+  "review": "Visual computational review of raw image/nuclear overlay/bin center panels, not pathology validation",
+  "parameters": "retain prob=.05,nms=.3,mpp~.5",
+  "findings": [
+    "Dense nuclei mostly follow distinct hematoxylin profiles; occasional adjacent profiles remain merged or missed in crowded regions.",
+    "Stromal field includes both epithelial nests and spindle cells; elongated profiles incompletely modeled by star-convex nuclei.",
+    "Edge bins stop near tissue coverage; no global crop-offset mismatch apparent. A detached fragment is not counted as expression-bearing without bins.",
+    "Original resolution is 0.864 um/pixel; 0.5 model pixels do not create new optical detail."
+  ],
+  "decision": "Proceed to tiled capture inference; inspect expanded-bin assignments and large nuclei before final review.",
+  "seed": 123
+}

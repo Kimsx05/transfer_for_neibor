@@ -1,0 +1,56 @@
+[
+  {
+    "roi": "dense",
+    "model_bbox": [
+      8395,
+      3459,
+      9163,
+      4227
+    ],
+    "native_local_bbox": [
+      16937,
+      6979,
+      18486,
+      8528
+    ],
+    "n_bins": 36808,
+    "assigned_bins": 31847,
+    "n_labels": 2495
+  },
+  {
+    "roi": "stroma",
+    "model_bbox": [
+      5823,
+      6385,
+      6591,
+      7153
+    ],
+    "native_local_bbox": [
+      11748,
+      12882,
+      13297,
+      14431
+    ],
+    "n_bins": 36864,
+    "assigned_bins": 26207,
+    "n_labels": 875
+  },
+  {
+    "roi": "edge",
+    "model_bbox": [
+      1250,
+      5100,
+      2018,
+      5868
+    ],
+    "native_local_bbox": [
+      2522,
+      10289,
+      4072,
+      11839
+    ],
+    "n_bins": 18026,
+    "assigned_bins": 10887,
+    "n_labels": 290
+  }
+]

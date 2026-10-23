@@ -1,0 +1,9 @@
+{
+  "review": "Computational visual review of actual saved morphology, observed-marker dotplots, spatial labels, two-section UMAP/PCA and same-coverage v1/v2 figures; not independent pathology validation",
+  "morphology_summary": "两张代表窗口的核与bin分配没有明显全局坐标偏移，扩张局部且保留未分配空隙。Cervilla仍受0.864µm原生像素及拥挤/细长轮廓限制；D1边缘血样聚集/碎片区域出现明确非核假分割。本次4个逐一确认对象排除，另8个大而不规则轮廓保留为歧义；这是代表对象审查，并非已穷尽全片血液/碎片区伪分割。",
+  "annotation_summary": "Matrix_CAF在Cervilla三个谱系内簇、D1六个簇有成组COL11A1/COL10A1/MMP11/POSTN/CTHRC1/FAP（D1亦LRRC15）支持，最终分别1517/10469。D1 Arterial EC有GJA5/EFNB2/HEY1簇证据（最终323；Cervilla仅11个逐细胞建议）。上皮保持broad；Plasma及多数免疫谱系仍有大量候选未获marker支持。Cervilla B候选仅约2.0%检出任一B marker，T/NK候选约3.3%，不能将模型候选直接当作细胞组成，也不能将未支持解释为生物学不存在。SPP1 TAM仅2/16个逐细胞组合支持，没有形成满足本轮一致性条件的SPP1群体；GC B两张均0，模型候选190/1087仍保留。其他极小亚群的逐细胞建议不等于已验证稳定群体。COL1A1及部分基质信号横跨多个标签，可能含环境/跨细胞污染或重建边界影响，不据此宣称所有类型均产生胶原。",
+  "comparison_summary": "相同物理ROI相交核数：dense 1707→1709，stroma 1260→1241，edge607→612；局部拆分/边界变化存在，但没有可据以声明全片分割准确率大幅改善的真值证据。共同覆盖counts分配70.90%→70.57%，保留细胞97847→97927，中位counts271→268、genes227→224。Unknown下降包含群体marker证据规则改变，不能都归因于新图像。",
+  "embedding_review": "Joint UMAP retains source-enriched areas and overlapping broad expression gradients; PCA shows substantial source separation. No forced mixing or extra training for visual appearance. Core-only UMAP denominators and all-retained physical maps explicitly shown.",
+  "future_limit": "Technical inputs for per-section neighborhood design exist; high-confidence cell-neighborhood interpretation still requires attention to blood/debris regions, ambient stromal signal, broad/unresolved labels and sensitivity to reconstruction/uncertainty. No neighborhood analysis run.",
+  "seed": 123
+}

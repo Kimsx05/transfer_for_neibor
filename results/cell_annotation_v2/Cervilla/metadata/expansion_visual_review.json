@@ -1,0 +1,17 @@
+{
+  "section": "Cervilla",
+  "reviewed": [
+    "segmentation_pilot.png",
+    "morphology_and_expansion.png",
+    "expansion_detail.png"
+  ],
+  "finding": "In selected dense/stromal/edge windows, assigned bin colors remain local to nuclear seeds; unassigned gaps remain. No obvious systematic crop-offset or image-axis mismatch. This is a representative visual check, not proof of cell membrane accuracy or global segmentation sensitivity.",
+  "limits": [
+    "Crowded adjacent profiles can be merged/missed; elongated nuclei are approximated by star-convex boundaries.",
+    "Fixed 4um expansion is not a measured cytoplasmic boundary; ambiguous contacts remain.",
+    "Space Ranger in-tissue designation extends beyond histological edge locally; unused bins remain unassigned."
+  ],
+  "parameter_decision": "retain max_bin_distance=2; no GEX-only salvage",
+  "seed": 123,
+  "native_resolution_limit": "0.864um/pixel; upsampling to0.5 does not add optical detail"
+}

@@ -1,0 +1,59 @@
+{
+  "section": "D1_Johnson",
+  "retained": 210622,
+  "low_information": 30342,
+  "status": {
+    "reference_broad_identity": 73944,
+    "lineage_unresolved": 67513,
+    "subtype_unresolved": 48616,
+    "subtype_supported": 11635,
+    "mixed_or_ambiguous": 8914
+  },
+  "major": {
+    "Epithelial": 75850,
+    "Unknown": 67680,
+    "Fibroblast": 32507,
+    "Myeloid": 12601,
+    "T/NK": 10360,
+    "Plasma": 6230,
+    "B": 2956,
+    "Endothelial": 2230,
+    "Mast": 208
+  },
+  "supported_subtypes": {
+    "Matrix_CAF": 10469,
+    "Pericyte": 340,
+    "Arterial EC": 323,
+    "SMC": 172,
+    "iCAF": 74,
+    "LAMP3 DC": 64,
+    "Tfh/CXCL13-like": 25,
+    "Memory B": 20,
+    "pDC": 20,
+    "FOLR2 TAM": 19,
+    "CD8 GZMK/Effector-memory-like": 17,
+    "NK": 16,
+    "SPP1 TAM": 16,
+    "Treg": 13,
+    "cDC2": 13,
+    "Venous EC": 10,
+    "Classical Mono": 9,
+    "rCAF": 8,
+    "Capillary EC": 2,
+    "Naive B": 2,
+    "cDC1": 2,
+    "Lymphatic EC": 1
+  },
+  "low_information_status": {
+    "lineage_unresolved": 29878,
+    "subtype_unresolved": 452,
+    "reference_broad_identity": 11,
+    "mixed_or_ambiguous": 1,
+    "subtype_supported": 0
+  },
+  "scvi_core": 170812,
+  "umap_unmapped": 39810,
+  "cluster_supported_subtype_cells": 8414,
+  "cell_marker_supported_subtype_cells": 3221,
+  "limitations": "Computational suggested labels; no spatial voting; reference and cluster evidence are not independent ground truth; sparse populations may remain unresolved"
+}

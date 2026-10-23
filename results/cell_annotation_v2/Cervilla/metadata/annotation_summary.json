@@ -1,0 +1,54 @@
+{
+  "section": "Cervilla",
+  "retained": 97927,
+  "low_information": 12573,
+  "status": {
+    "reference_broad_identity": 55484,
+    "lineage_unresolved": 28129,
+    "subtype_unresolved": 9169,
+    "mixed_or_ambiguous": 3323,
+    "subtype_supported": 1822
+  },
+  "major": {
+    "Epithelial": 55136,
+    "Unknown": 28210,
+    "Fibroblast": 8332,
+    "Plasma": 3449,
+    "Myeloid": 1524,
+    "Endothelial": 1123,
+    "T/NK": 93,
+    "Mast": 56,
+    "B": 4
+  },
+  "supported_subtypes": {
+    "Matrix_CAF": 1517,
+    "SMC": 123,
+    "Pericyte": 53,
+    "iCAF": 51,
+    "C1QC TAM": 40,
+    "Arterial EC": 11,
+    "Lymphatic EC": 10,
+    "FOLR2 TAM": 3,
+    "Neutrophil": 2,
+    "SPP1 TAM": 2,
+    "Venous EC": 2,
+    "cDC1": 2,
+    "pDC": 2,
+    "Classical Mono": 1,
+    "LAMP3 DC": 1,
+    "cDC2": 1,
+    "rCAF": 1
+  },
+  "low_information_status": {
+    "lineage_unresolved": 12166,
+    "subtype_unresolved": 400,
+    "reference_broad_identity": 6,
+    "mixed_or_ambiguous": 1,
+    "subtype_supported": 0
+  },
+  "scvi_core": 81789,
+  "umap_unmapped": 16138,
+  "cluster_supported_subtype_cells": 1187,
+  "cell_marker_supported_subtype_cells": 635,
+  "limitations": "Computational suggested labels; no spatial voting; reference and cluster evidence are not independent ground truth; sparse populations may remain unresolved"
+}

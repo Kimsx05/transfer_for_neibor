@@ -1,0 +1,26 @@
+Seed set to 123
+SCVI_INPUT (252601, 2000) {'D1_Johnson': 170812, 'Cervilla': 81789}
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=7` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=7` in the `DataLoader` to improve performance.
+`Trainer.fit` stopped: `max_epochs=50` reached.
+SCVI_TRAINING_DONE 50 152.8542492520064
+INFO     Input AnnData not setup with scvi-tools. attempting to transfer AnnData
+         setup                                                                  
+INFO     Input AnnData not setup with scvi-tools. attempting to transfer AnnData
+         setup                                                                  
+EXPRESSION_GRAPH 252601
+2026-10-23 08:41:26.670427: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+LINEAGE_CLUSTER B 8324 14
+LINEAGE_CLUSTER Endothelial 8039 12
+LINEAGE_CLUSTER Epithelial 119819 21
+LINEAGE_CLUSTER Fibroblast 41206 17
+LINEAGE_CLUSTER Mast 8828 13
+LINEAGE_CLUSTER Myeloid 17795 15
+LINEAGE_CLUSTER Plasma 30941 14
+LINEAGE_CLUSTER T/NK 17649 16
+SCVI_DONE {'seed': 123, 'n_sections': 2, 'sections': ['Cervilla', 'D1_Johnson'], 'structure_core_by_section': {'Cervilla': 81789, 'D1_Johnson': 170812}, 'total_training_cells': 252601, 'training_genes': 2000, 'hvg_selection': 'section-wise seurat dispersion ranks, prioritize shared HVGs then equal-weight mean rank; master all features retained', 'raw_counts': True, 'batch_key': 'section_id', 'likelihood': 'nb', 'latent': 20, 'max_epochs': 50, 'kl_warmup_epochs': 10, 'early_stopping_patience': 10, 'batch_size': 1024, 'device': 'Quadro RTX 6000', 'cuda': '12.8', 'torch': '2.8.0+cu128', 'scvi': '1.5.1', 'training_seconds': 152.8542492520064, 'trained_epochs': 50, 'runtime_seconds': 425.6854682341218, 'noncore': 'latent inference with positive HVG counts, zero-HVG latent NA; all noncore UMAP NA; all retained in master/spatial plots', 'n_global_clusters': 33, 'lineage_clusters': {'B': 14, 'Endothelial': 12, 'Epithelial': 21, 'Fibroblast': 17, 'Mast': 13, 'Myeloid': 15, 'Plasma': 14, 'T/NK': 16}, 'limitation': 'One section per source: section/cohort/tissue effects confounded; no acceptance criterion based on complete mixing'}

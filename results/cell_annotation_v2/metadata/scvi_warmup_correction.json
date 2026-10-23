@@ -1,0 +1,12 @@
+{
+  "training_seconds": 34.1937651950866,
+  "trained_epochs": 11,
+  "training_cells": 252601,
+  "sections": {
+    "Cervilla": 81789,
+    "D1_Johnson": 170812
+  },
+  "reason": "Default KL warmup is 400 epochs while this task permits <=50. Actual KL weights remained <=0.025; ELBO was best at epoch0 and stopped after11 despite improving reconstruction. Set n_epochs_kl_warmup=10, keep same seed/core/HVG/architecture and <=50 maximum; this is a convergence correction before interpreting clusters, not UMAP tuning.",
+  "validation_elbo_first": 112.32814025878906,
+  "validation_elbo_last": 121.77189636230469
+}

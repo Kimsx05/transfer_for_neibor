@@ -1,0 +1,22 @@
+{
+  "section": "Cervilla",
+  "n_nuclei": 173057,
+  "shape": [
+    15483,
+    19721
+  ],
+  "model": "2D_versatile_he",
+  "prob_thresh": 0.05,
+  "nms_thresh": 0.3,
+  "block_size": 2048,
+  "min_overlap": 128,
+  "context": 128,
+  "device": "GPU0 RTX6000; TensorFlow memory cap 6144MiB",
+  "native_mpp": 0.8636122748145504,
+  "actual_model_mpp_xy": [
+    0.5000114068167201,
+    0.49999486090793965
+  ],
+  "runtime_seconds": 214.65901722293347,
+  "seed": 123
+}

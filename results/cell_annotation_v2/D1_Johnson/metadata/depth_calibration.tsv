@@ -1,0 +1,229 @@
+head	condition	label	true_n	predicted_n	calibrated	threshold	accepted_n	accepted_precision
+major	full	B	372	384	True	6.730222702026367	384	0.9557291666666666
+major	full	Endothelial	330	331	True	3.8437676429748535	331	0.9969788519637462
+major	full	Epithelial	262	256	True	0.6862907409667969	256	0.93359375
+major	full	Fibroblast	566	564	True	11.2958402633667	564	1.0
+major	full	Mast	174	164	True	1.607614517211914	164	0.9939024390243902
+major	full	Myeloid	1409	1416	True	1.9943876266479492	1416	0.9915254237288136
+major	full	Plasma	186	173	True	0.7831325531005859	173	0.9479768786127167
+major	full	T/NK	1446	1457	True	0.3201913833618164	1457	0.9897048730267674
+major	ordinary	B	372	371	True	0.004611968994140625	371	0.9407008086253369
+major	ordinary	Endothelial	330	334	True	0.593205451965332	334	0.9820359281437125
+major	ordinary	Epithelial	262	205	True	0.27812910079956055	205	0.8975609756097561
+major	ordinary	Fibroblast	566	562	True	1.1106147766113281	562	0.99644128113879
+major	ordinary	Mast	174	169	True	0.1905202865600586	169	0.9349112426035503
+major	ordinary	Myeloid	1409	1406	True	0.37537622451782227	1406	0.980796586059744
+major	ordinary	Plasma	186	194	True	0.09989356994628906	194	0.8402061855670103
+major	ordinary	T/NK	1446	1504	True	0.18767118453979492	1504	0.9507978723404256
+major	low_information	B	372	405	True	13.630184173583984	81	0.8148148148148148
+major	low_information	Endothelial	330	399	True	6.688587236404419	140	0.8357142857142857
+major	low_information	Epithelial	262	236	False		0	
+major	low_information	Fibroblast	566	316	True	0.021361351013183594	316	0.8227848101265823
+major	low_information	Mast	174	331	True	14.89988565444946	83	0.8554216867469879
+major	low_information	Myeloid	1409	910	True	3.24249267578125e-05	910	0.8252747252747252
+major	low_information	Plasma	186	536	True	16.684505462646484	161	0.8074534161490683
+major	low_information	T/NK	1446	1612	True	9.054014873504638	725	0.8055172413793104
+subtype	full	Arterial EC	97	105	True	6.718212127685547	105	0.9142857142857143
+subtype	full	C1QC TAM	198	142	True	7.954405975341797	120	0.8166666666666667
+subtype	full	CD4 Helper/Conventional	214	196	True	31.989887237548828	127	0.8188976377952756
+subtype	full	CD4 Naive/Memory-like	167	195	True	89.54078750610347	68	0.8382352941176471
+subtype	full	CD8 Exhausted	206	219	True	17.79692230224609	197	0.8071065989847716
+subtype	full	CD8 GZMK/Effector-memory-like	179	187	True	7.686267518997192	177	0.8135593220338984
+subtype	full	Capillary EC	104	91	True	0.07488536834716797	91	0.8791208791208791
+subtype	full	Classical Mono	221	206	True	8.771589756011963	195	0.8102564102564103
+subtype	full	Epithelial	262	258	True	0.025038719177246094	258	0.9302325581395349
+subtype	full	FOLR2 TAM	212	266	True	48.107505798339844	173	0.815028901734104
+subtype	full	GC B	91	86	True	9.914884567260742	86	0.9534883720930233
+subtype	full	LAMP3 DC	128	132	True	9.062187194824219	132	0.946969696969697
+subtype	full	Lymphatic EC	29	30	True	12.203091621398926	30	0.9666666666666667
+subtype	full	Mast	174	161	True	0.9716720581054688	161	0.9937888198757764
+subtype	full	Matrix_CAF	104	71	True	1.7318305969238281	71	0.9154929577464789
+subtype	full	Memory B	146	141	True	1.0762042999267578	141	0.8226950354609929
+subtype	full	NK	240	242	True	0.3197898864746094	242	0.9380165289256198
+subtype	full	Naive B	135	156	True	16.28402328491211	140	0.8214285714285714
+subtype	full	Neutrophil	68	47	True	3.4486236572265625	47	0.8723404255319149
+subtype	full	Pericyte	121	107	True	2.0988054275512695	107	0.8037383177570093
+subtype	full	Plasma	186	172	True	0.5475177764892578	172	0.9534883720930233
+subtype	full	SMC	91	95	True	2.520435333251953	95	0.8526315789473684
+subtype	full	SPP1 TAM	181	205	True	37.54741897583008	133	0.8195488721804511
+subtype	full	Tfh/CXCL13-like	200	193	True	35.39329147338866	145	0.8137931034482758
+subtype	full	Treg	240	229	True	0.028570175170898438	229	0.8864628820960698
+subtype	full	Venous EC	100	106	True	17.593704223632812	106	0.8490566037735849
+subtype	full	cDC1	109	108	True	20.076690673828125	108	1.0
+subtype	full	cDC2	202	217	True	5.870800018310547	217	0.8663594470046083
+subtype	full	iCAF	160	186	True	2.219937562942505	186	0.8333333333333334
+subtype	full	pDC	90	90	True	14.689021110534668	90	0.9222222222222223
+subtype	full	rCAF	45	50	True	6.9166717529296875	50	0.84
+subtype	full	vCAF	45	56	False		0	
+subtype__B	full	GC B	91	85	True	9.914884567260742	85	0.9882352941176471
+subtype__B	full	Memory B	146	141	True	1.0762042999267578	141	0.8368794326241135
+subtype__B	full	Naive B	135	146	True	1.2977828979492188	146	0.815068493150685
+subtype__Endothelial	full	Arterial EC	97	105	True	6.718212127685547	105	0.9142857142857143
+subtype__Endothelial	full	Capillary EC	104	90	True	2.9452152252197266	90	0.9
+subtype__Endothelial	full	Lymphatic EC	29	29	True	78.44317626953125	29	1.0
+subtype__Endothelial	full	Venous EC	100	106	True	17.593704223632812	106	0.8490566037735849
+subtype__Fibroblast	full	Matrix_CAF	104	72	True	1.7318305969238281	72	0.9027777777777778
+subtype__Fibroblast	full	Pericyte	121	108	True	24.17386951446533	97	0.8144329896907216
+subtype__Fibroblast	full	SMC	91	95	True	2.520435333251953	95	0.8526315789473684
+subtype__Fibroblast	full	iCAF	160	185	True	2.219937562942505	185	0.8378378378378378
+subtype__Fibroblast	full	rCAF	45	50	True	6.9166717529296875	50	0.84
+subtype__Fibroblast	full	vCAF	45	56	False		0	
+subtype__Myeloid	full	C1QC TAM	198	142	True	8.133175468444824	120	0.8083333333333333
+subtype__Myeloid	full	Classical Mono	221	207	True	8.867198371887206	196	0.8112244897959183
+subtype__Myeloid	full	FOLR2 TAM	212	264	True	51.39633560180664	171	0.8070175438596491
+subtype__Myeloid	full	LAMP3 DC	128	133	True	9.062187194824219	133	0.9473684210526315
+subtype__Myeloid	full	Neutrophil	68	48	True	3.4486236572265625	48	0.8541666666666666
+subtype__Myeloid	full	SPP1 TAM	181	205	True	39.24843597412108	133	0.8270676691729323
+subtype__Myeloid	full	cDC1	109	108	True	20.076690673828125	108	1.0
+subtype__Myeloid	full	cDC2	202	217	True	5.870800018310547	217	0.8663594470046083
+subtype__Myeloid	full	pDC	90	85	True	14.689021110534668	85	0.9882352941176471
+subtype__T/NK	full	CD4 Helper/Conventional	214	198	True	31.913628196716306	129	0.813953488372093
+subtype__T/NK	full	CD4 Naive/Memory-like	167	192	True	85.2871109008789	77	0.8051948051948052
+subtype__T/NK	full	CD8 Exhausted	206	212	True	7.414522743225097	201	0.8159203980099502
+subtype__T/NK	full	CD8 GZMK/Effector-memory-like	179	181	True	0.18321752548217773	181	0.8011049723756906
+subtype__T/NK	full	NK	240	242	True	0.3197898864746094	242	0.9421487603305785
+subtype__T/NK	full	Tfh/CXCL13-like	200	191	True	38.14553260803223	143	0.8111888111888111
+subtype__T/NK	full	Treg	240	230	True	0.028570175170898438	230	0.8869565217391304
+subtype	ordinary	Arterial EC	97	91	True	1.861724853515625	91	0.9230769230769231
+subtype	ordinary	C1QC TAM	198	300	False		0	
+subtype	ordinary	CD4 Helper/Conventional	214	210	True	59.05020751953124	21	0.8571428571428571
+subtype	ordinary	CD4 Naive/Memory-like	167	256	False		0	
+subtype	ordinary	CD8 Exhausted	206	162	True	54.09608364105224	41	0.8048780487804879
+subtype	ordinary	CD8 GZMK/Effector-memory-like	179	286	True	35.211090087890625	115	0.8
+subtype	ordinary	Capillary EC	104	137	True	22.70812072753906	89	0.8089887640449438
+subtype	ordinary	Classical Mono	221	328	True	48.124460220336914	82	0.8048780487804879
+subtype	ordinary	Epithelial	262	162	True	0.37088024616241455	162	0.9074074074074074
+subtype	ordinary	FOLR2 TAM	212	134	True	30.819565296173085	47	0.8085106382978723
+subtype	ordinary	GC B	91	80	True	0.9677863121032715	80	0.9125
+subtype	ordinary	LAMP3 DC	128	134	True	0.42555904388427734	134	0.9328358208955224
+subtype	ordinary	Lymphatic EC	29	29	True	4.875265121459961	29	0.9655172413793104
+subtype	ordinary	Mast	174	172	True	0.37560176849365234	172	0.9127906976744186
+subtype	ordinary	Matrix_CAF	104	73	True	10.413326835632324	58	0.8103448275862069
+subtype	ordinary	Memory B	146	119	True	28.324570465087888	48	0.8125
+subtype	ordinary	NK	240	216	True	0.28627610206604004	216	0.9027777777777778
+subtype	ordinary	Naive B	135	200	True	38.245331573486304	80	0.8
+subtype	ordinary	Neutrophil	68	76	True	25.15838527679443	38	0.8157894736842105
+subtype	ordinary	Pericyte	121	96	True	17.21132755279541	67	0.8208955223880597
+subtype	ordinary	Plasma	186	182	True	0.2292804718017578	182	0.8791208791208791
+subtype	ordinary	SMC	91	109	True	20.01387977600097	82	0.8292682926829268
+subtype	ordinary	SPP1 TAM	181	114	True	16.70120668411255	63	0.8253968253968254
+subtype	ordinary	Tfh/CXCL13-like	200	148	True	29.49570207595825	52	0.8076923076923077
+subtype	ordinary	Treg	240	237	True	7.5098327636718745	201	0.8308457711442786
+subtype	ordinary	Venous EC	100	93	True	6.301623821258545	93	0.8387096774193549
+subtype	ordinary	cDC1	109	91	True	0.2539386749267578	91	0.989010989010989
+subtype	ordinary	cDC2	202	134	True	0.3270549774169922	134	0.8880597014925373
+subtype	ordinary	iCAF	160	167	True	10.587288284301756	150	0.8266666666666667
+subtype	ordinary	pDC	90	93	True	1.4592087268829346	93	0.8279569892473119
+subtype	ordinary	rCAF	45	71	True	63.53669738769531	25	0.8
+subtype	ordinary	vCAF	45	45	False		0	
+subtype__B	ordinary	GC B	91	82	True	3.6076889038085938	82	0.9634146341463414
+subtype__B	ordinary	Memory B	146	113	True	18.652737426757813	79	0.810126582278481
+subtype__B	ordinary	Naive B	135	177	True	58.381569671630814	80	0.8125
+subtype__Endothelial	ordinary	Arterial EC	97	90	True	1.861724853515625	90	0.9333333333333333
+subtype__Endothelial	ordinary	Capillary EC	104	116	True	22.50365829467773	93	0.8064516129032258
+subtype__Endothelial	ordinary	Lymphatic EC	29	30	True	14.811758995056152	30	0.9666666666666667
+subtype__Endothelial	ordinary	Venous EC	100	94	True	6.301623821258545	94	0.851063829787234
+subtype__Fibroblast	ordinary	Matrix_CAF	104	76	True	12.576656103134155	57	0.8070175438596491
+subtype__Fibroblast	ordinary	Pericyte	121	97	True	22.111806869506836	73	0.821917808219178
+subtype__Fibroblast	ordinary	SMC	91	105	True	21.613819503784175	84	0.8214285714285714
+subtype__Fibroblast	ordinary	iCAF	160	169	True	1.857757568359375	169	0.8106508875739645
+subtype__Fibroblast	ordinary	rCAF	45	71	True	65.09813690185545	25	0.8
+subtype__Fibroblast	ordinary	vCAF	45	48	False		0	
+subtype__Myeloid	ordinary	C1QC TAM	198	301	False		0	
+subtype__Myeloid	ordinary	Classical Mono	221	321	True	49.66328811645508	97	0.8041237113402062
+subtype__Myeloid	ordinary	FOLR2 TAM	212	134	True	33.905471801757805	47	0.8085106382978723
+subtype__Myeloid	ordinary	LAMP3 DC	128	137	True	0.5067863464355469	137	0.9124087591240876
+subtype__Myeloid	ordinary	Neutrophil	68	78	True	21.785926437377928	43	0.813953488372093
+subtype__Myeloid	ordinary	SPP1 TAM	181	114	True	16.619736862182616	68	0.8088235294117647
+subtype__Myeloid	ordinary	cDC1	109	94	True	0.2539386749267578	94	0.9787234042553191
+subtype__Myeloid	ordinary	cDC2	202	139	True	0.3270549774169922	139	0.9136690647482014
+subtype__Myeloid	ordinary	pDC	90	91	True	0.050350189208984375	91	0.8791208791208791
+subtype__T/NK	ordinary	CD4 Helper/Conventional	214	200	True	62.39243507385254	20	0.9
+subtype__T/NK	ordinary	CD4 Naive/Memory-like	167	232	False		0	
+subtype__T/NK	ordinary	CD8 Exhausted	206	156	True	55.3564453125	47	0.8297872340425532
+subtype__T/NK	ordinary	CD8 GZMK/Effector-memory-like	179	267	True	35.80680427551269	120	0.8
+subtype__T/NK	ordinary	NK	240	213	True	0.9583806991577148	213	0.92018779342723
+subtype__T/NK	ordinary	Tfh/CXCL13-like	200	148	True	16.431017780303954	96	0.8020833333333334
+subtype__T/NK	ordinary	Treg	240	230	True	0.0968618392944336	230	0.8043478260869565
+subtype	low_information	Arterial EC	97	95	False		0	
+subtype	low_information	C1QC TAM	198	309	False		0	
+subtype	low_information	CD4 Helper/Conventional	214	240	False		0	
+subtype	low_information	CD4 Naive/Memory-like	167	327	False		0	
+subtype	low_information	CD8 Exhausted	206	154	False		0	
+subtype	low_information	CD8 GZMK/Effector-memory-like	179	299	False		0	
+subtype	low_information	Capillary EC	104	248	False		0	
+subtype	low_information	Classical Mono	221	398	False		0	
+subtype	low_information	Epithelial	262	31	False		0	
+subtype	low_information	FOLR2 TAM	212	95	False		0	
+subtype	low_information	GC B	91	36	False		0	
+subtype	low_information	LAMP3 DC	128	60	True	3.0259887695312497	36	0.8055555555555556
+subtype	low_information	Lymphatic EC	29	37	False		0	
+subtype	low_information	Mast	174	99	True	1.9704564094543453	79	0.810126582278481
+subtype	low_information	Matrix_CAF	104	102	False		0	
+subtype	low_information	Memory B	146	111	False		0	
+subtype	low_information	NK	240	145	True	9.08419418334961	37	0.8378378378378378
+subtype	low_information	Naive B	135	254	False		0	
+subtype	low_information	Neutrophil	68	254	False		0	
+subtype	low_information	Pericyte	121	102	False		0	
+subtype	low_information	Plasma	186	181	True	1.8239765167236328	154	0.8246753246753247
+subtype	low_information	SMC	91	135	False		0	
+subtype	low_information	SPP1 TAM	181	84	False		0	
+subtype	low_information	Tfh/CXCL13-like	200	149	False		0	
+subtype	low_information	Treg	240	162	False		0	
+subtype	low_information	Venous EC	100	57	False		0	
+subtype	low_information	cDC1	109	56	True	4.487469911575314	20	0.8
+subtype	low_information	cDC2	202	74	False		0	
+subtype	low_information	iCAF	160	102	True	6.276282262802123	31	0.8064516129032258
+subtype	low_information	pDC	90	84	False		0	
+subtype	low_information	rCAF	45	149	False		0	
+subtype	low_information	vCAF	45	116	False		0	
+subtype__B	low_information	GC B	91	56	True	7.8725790977478	31	0.8064516129032258
+subtype__B	low_information	Memory B	146	126	False		0	
+subtype__B	low_information	Naive B	135	190	False		0	
+subtype__Endothelial	low_information	Arterial EC	97	84	False		0	
+subtype__Endothelial	low_information	Capillary EC	104	146	False		0	
+subtype__Endothelial	low_information	Lymphatic EC	29	39	True	6.081452322006226	21	0.8095238095238095
+subtype__Endothelial	low_information	Venous EC	100	61	False		0	
+subtype__Fibroblast	low_information	Matrix_CAF	104	90	False		0	
+subtype__Fibroblast	low_information	Pericyte	121	87	False		0	
+subtype__Fibroblast	low_information	SMC	91	113	False		0	
+subtype__Fibroblast	low_information	iCAF	160	111	True	10.044639587402338	50	0.8
+subtype__Fibroblast	low_information	rCAF	45	95	False		0	
+subtype__Fibroblast	low_information	vCAF	45	70	False		0	
+subtype__Myeloid	low_information	C1QC TAM	198	290	False		0	
+subtype__Myeloid	low_information	Classical Mono	221	385	False		0	
+subtype__Myeloid	low_information	FOLR2 TAM	212	94	False		0	
+subtype__Myeloid	low_information	LAMP3 DC	128	86	True	1.682086706161499	73	0.8082191780821918
+subtype__Myeloid	low_information	Neutrophil	68	196	False		0	
+subtype__Myeloid	low_information	SPP1 TAM	181	94	False		0	
+subtype__Myeloid	low_information	cDC1	109	74	True	6.076047420501708	30	0.8333333333333334
+subtype__Myeloid	low_information	cDC2	202	84	False		0	
+subtype__Myeloid	low_information	pDC	90	106	False		0	
+subtype__T/NK	low_information	CD4 Helper/Conventional	214	220	False		0	
+subtype__T/NK	low_information	CD4 Naive/Memory-like	167	270	False		0	
+subtype__T/NK	low_information	CD8 Exhausted	206	154	False		0	
+subtype__T/NK	low_information	CD8 GZMK/Effector-memory-like	179	287	False		0	
+subtype__T/NK	low_information	NK	240	165	True	9.949588966369628	58	0.8103448275862069
+subtype__T/NK	low_information	Tfh/CXCL13-like	200	156	False		0	
+subtype__T/NK	low_information	Treg	240	194	False		0	
+b_plasma	full	GC B	91	85	True	35.90325927734375	85	0.9882352941176471
+b_plasma	full	Memory B	146	134	True	1.0647563934326172	134	0.8208955223880597
+b_plasma	full	Naive B	135	157	True	73.55413513183593	133	0.8270676691729323
+b_plasma	full	Plasma	186	182	True	7.607694625854492	182	0.9505494505494505
+b_plasma__B	full	GC B	91	87	True	35.90325927734375	87	0.9885057471264368
+b_plasma__B	full	Memory B	146	135	True	1.0647563934326172	135	0.8444444444444444
+b_plasma__B	full	Naive B	135	150	True	44.5050106048584	142	0.8028169014084507
+b_plasma	ordinary	GC B	91	83	True	1.748469352722168	83	0.9518072289156626
+b_plasma	ordinary	Memory B	146	114	True	86.9363021850586	57	0.8070175438596491
+b_plasma	ordinary	Naive B	135	187	True	156.93215942382812	56	0.8214285714285714
+b_plasma	ordinary	Plasma	186	174	True	0.09885478019714355	174	0.9597701149425287
+b_plasma__B	ordinary	GC B	91	85	True	1.748469352722168	85	0.9529411764705882
+b_plasma__B	ordinary	Memory B	146	111	True	88.82201385498047	61	0.8032786885245902
+b_plasma__B	ordinary	Naive B	135	176	True	132.7291793823242	88	0.8068181818181818
+b_plasma	low_information	GC B	91	58	True	18.381171798706053	20	0.85
+b_plasma	low_information	Memory B	146	122	False		0	
+b_plasma	low_information	Naive B	135	213	False		0	
+b_plasma	low_information	Plasma	186	165	True	1.516179847717285	156	0.8012820512820513
+b_plasma__B	low_information	GC B	91	59	True	22.271879577636717	21	0.8095238095238095
+b_plasma__B	low_information	Memory B	146	116	False		0	
+b_plasma__B	low_information	Naive B	135	197	False		0	

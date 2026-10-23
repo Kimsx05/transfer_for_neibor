@@ -1,0 +1,19 @@
+{
+  "training_seconds": 37.61358057335019,
+  "trained_epochs": 0,
+  "training_cells": 253277,
+  "sections": {
+    "Cervilla": 81988,
+    "D1_Johnson": 171289
+  },
+  "reason": "676 preliminary core cells had no counts in selected HVG view; excluded from structure core, retained in master; initial training model superseded. Also use scVI dictionary logger to retain actual epoch metrics.",
+  "zero_hvg_core": {
+    "Cervilla": 199,
+    "D1_Johnson": 477
+  },
+  "zero_hvg_all": {
+    "Cervilla": 1948,
+    "D1_Johnson": 4330
+  },
+  "reported_trained_epochs_note": "0 was unavailable history under Lightning logger=True, not zero training; see first-pass log"
+}

@@ -1,0 +1,43 @@
+{
+  "seed": 123,
+  "n_sections": 2,
+  "sections": [
+    "Cervilla",
+    "D1_Johnson"
+  ],
+  "structure_core_by_section": {
+    "Cervilla": 81789,
+    "D1_Johnson": 170812
+  },
+  "total_training_cells": 252601,
+  "training_genes": 2000,
+  "hvg_selection": "section-wise seurat dispersion ranks, prioritize shared HVGs then equal-weight mean rank; master all features retained",
+  "raw_counts": true,
+  "batch_key": "section_id",
+  "likelihood": "nb",
+  "latent": 20,
+  "max_epochs": 50,
+  "kl_warmup_epochs": 10,
+  "early_stopping_patience": 10,
+  "batch_size": 1024,
+  "device": "Quadro RTX 6000",
+  "cuda": "12.8",
+  "torch": "2.8.0+cu128",
+  "scvi": "1.5.1",
+  "training_seconds": 152.8542492520064,
+  "trained_epochs": 50,
+  "runtime_seconds": 425.6854682341218,
+  "noncore": "latent inference with positive HVG counts, zero-HVG latent NA; all noncore UMAP NA; all retained in master/spatial plots",
+  "n_global_clusters": 33,
+  "lineage_clusters": {
+    "B": 14,
+    "Endothelial": 12,
+    "Epithelial": 21,
+    "Fibroblast": 17,
+    "Mast": 13,
+    "Myeloid": 15,
+    "Plasma": 14,
+    "T/NK": 16
+  },
+  "limitation": "One section per source: section/cohort/tissue effects confounded; no acceptance criterion based on complete mixing"
+}

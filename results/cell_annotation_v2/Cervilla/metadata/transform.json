@@ -1,0 +1,72 @@
+{
+  "section": "Cervilla",
+  "source_image": "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/data/Cervilla/visiumhd_Bladder/binned_outputs/square_002um/spatial/recovered/Cervilla_Bladder_HD_HE_from_Loupe.png",
+  "source_image_shape_yx": [
+    8964,
+    11418
+  ],
+  "model_image_shape_yx": [
+    15483,
+    19721
+  ],
+  "native_mpp": 0.8636122748145504,
+  "model_nominal_mpp": 0.5,
+  "actual_model_mpp_xy": [
+    0.5000114068167201,
+    0.49999486090793965
+  ],
+  "local_to_model_scale_xy": [
+    1.7271851462602907,
+    1.7272423025435073
+  ],
+  "fullres_crop_xyxy": [
+    0,
+    0,
+    11418,
+    8964
+  ],
+  "model_xy_formula": "((fullres_xy-crop_origin_xy)+0.5)*local_to_model_scale_xy-0.5",
+  "physical_xy_formula": "original_fullres_xy*native_mpp; no batch correction",
+  "original_image_recovered": true,
+  "rotation_added": 0,
+  "flip_added": false,
+  "seed": 123,
+  "normalization": {
+    "percentiles": [
+      1,
+      99.8
+    ],
+    "stride_sample": 8,
+    "low_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "high_rgb": [
+      178.0,
+      180.0,
+      183.0
+    ],
+    "scope": "one fixed per-section channel normalization, shared across all tiles"
+  },
+  "representative_model_bboxes": {
+    "dense": [
+      4930,
+      6903,
+      5916,
+      7889
+    ],
+    "stroma": [
+      8053,
+      8875,
+      9039,
+      9861
+    ],
+    "edge": [
+      11833,
+      11110,
+      12819,
+      12096
+    ]
+  }
+}

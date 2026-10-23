@@ -1,0 +1,102 @@
+FETCH tensorflow 620682547
+FETCH nvidia-cuda-nvcc-cu12 40128098
+READY nvidia-cuda-nvcc-cu12
+FETCH nvidia-cuda-nvrtc-cu12 88040029
+READY tensorflow
+FETCH nvidia-cuda-runtime-cu12 954765
+READY nvidia-cuda-runtime-cu12
+FETCH nvidia-cuda-cupti-cu12 10248621
+READY nvidia-cuda-cupti-cu12
+FETCH nvidia-cudnn-cu12 706758467
+READY nvidia-cuda-nvrtc-cu12
+FETCH nvidia-cublas-cu12 594346921
+READY nvidia-cublas-cu12
+FETCH nvidia-cufft-cu12 193118695
+READY nvidia-cudnn-cu12
+FETCH nvidia-curand-cu12 63619976
+READY nvidia-curand-cu12
+FETCH nvidia-cusolver-cu12 267506905
+READY nvidia-cufft-cu12
+FETCH nvidia-cusparse-cu12 288216466
+READY nvidia-cusolver-cu12
+FETCH nvidia-cusparselt-cu12 287193691
+READY nvidia-cusparse-cu12
+FETCH nvidia-nvtx-cu12 89954
+READY nvidia-nvtx-cu12
+FETCH nvidia-nvjitlink-cu12 39254836
+READY nvidia-nvjitlink-cu12
+FETCH nvidia-cufile-cu12 1197834
+READY nvidia-cufile-cu12
+READY nvidia-cusparselt-cu12
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 540, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 638, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_singularity/python-envs/bladder-spatial-py312/lib/python3.12/http/client.py", line 1478, in getresponse
+    response.begin()
+  File "/home/data/t070721/codex_singularity/python-envs/bladder-spatial-py312/lib/python3.12/http/client.py", line 343, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_singularity/python-envs/bladder-spatial-py312/lib/python3.12/http/client.py", line 312, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+The above exception was the direct cause of the following exception:
+
+urllib3.exceptions.ProxyError: ('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 555, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='pypi.org', port=443): Max retries exceeded with url: /pypi/nvidia-nccl-cu12/2.27.3/json (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_v2/code/enable_gpu.py", line 50, in <module>
+    with concurrent.futures.ThreadPoolExecutor(max_workers=2) as e:results=list(e.map(install,requirements.items()))
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_singularity/python-envs/bladder-spatial-py312/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_singularity/python-envs/bladder-spatial-py312/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_singularity/python-envs/bladder-spatial-py312/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_singularity/python-envs/bladder-spatial-py312/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/data/t070721/codex_singularity/python-envs/bladder-spatial-py312/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_v2/code/enable_gpu.py", line 17, in install
+    x=s.get(f'https://pypi.org/pypi/{n}/{v}/json',timeout=30);x.raise_for_status();j=x.json()
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/requests/sessions.py", line 671, in get
+    return self.request("GET", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/requests/adapters.py", line 723, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='pypi.org', port=443): Max retries exceeded with url: /pypi/nvidia-nccl-cu12/2.27.3/json (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))

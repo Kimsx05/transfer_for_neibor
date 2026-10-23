@@ -1,0 +1,12 @@
+{
+  "review": "Visual computational review of raw recovered image/nuclear overlay/bin centers",
+  "parameters": "retain prob=.05,nms=.3,mpp~.5",
+  "findings": [
+    "Dense small nuclei mostly individually resolved; occasional crowded profiles remain merged or missed.",
+    "Stromal field contains spindle and larger epithelial profiles; nuclear outlines generally track stain, star-convex approximation remains.",
+    "Revised edge ROI spans tissue/blank transition. Nuclei stay primarily in stained tissue. Space Ranger in-tissue bin designation extends beyond histological boundary locally; these bins are not automatically cells.",
+    "Original fullres crop offset (23764,35851) applied once before model resize. Existing quantitative transform checks reused; visual bin grid alone is not independent registration ground truth."
+  ],
+  "decision": "Proceed to tiled capture inference; inspect expanded assignments and representative largest profiles.",
+  "seed": 123
+}

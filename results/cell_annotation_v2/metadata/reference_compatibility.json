@@ -1,0 +1,28 @@
+[
+  {
+    "section": "Cervilla",
+    "features": 18085,
+    "mapped_genes": 14327,
+    "exact_feature_order_matches_v1_mapping": true,
+    "compatible_models": [
+      "major",
+      "subtype",
+      "b_plasma"
+    ],
+    "normalization": "sum duplicate mapped genes, restrict to same14327, normalize_total1e4 then log1p, same scaler and max10 clipping",
+    "reference_labels": 32
+  },
+  {
+    "section": "D1_Johnson",
+    "features": 18085,
+    "mapped_genes": 14327,
+    "exact_feature_order_matches_v1_mapping": true,
+    "compatible_models": [
+      "major",
+      "subtype",
+      "b_plasma"
+    ],
+    "normalization": "sum duplicate mapped genes, restrict to same14327, normalize_total1e4 then log1p, same scaler and max10 clipping",
+    "reference_labels": 32
+  }
+]

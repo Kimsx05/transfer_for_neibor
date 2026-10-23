@@ -1,0 +1,43 @@
+{
+  "section": "D1_Johnson",
+  "objects": [
+    {
+      "source_cell_id": 229374,
+      "disposition": "exclude_confirmed_segmentation_artifact",
+      "evidence": "Polygon spans multiple small eosinophilic ring-like profiles in blood-like aggregate without a matching single hematoxylin nucleus; not a nuclear contour",
+      "review_basis": "representative_large_nuclei.png, actual image and predicted boundary; not size alone"
+    },
+    {
+      "source_cell_id": 229215,
+      "disposition": "exclude_confirmed_segmentation_artifact",
+      "evidence": "Polygon spans multiple small eosinophilic ring-like profiles in blood-like aggregate without a matching single hematoxylin nucleus; not a nuclear contour",
+      "review_basis": "representative_large_nuclei.png, actual image and predicted boundary; not size alone"
+    },
+    {
+      "source_cell_id": 221110,
+      "disposition": "retain_morphology_ambiguous",
+      "evidence": "Large irregular or multilobed stained profile; merged tissue versus a single atypical nucleus cannot be reliably distinguished from this representative image",
+      "review_basis": "representative_large_nuclei.png, actual image and predicted boundary; not size alone"
+    },
+    {
+      "source_cell_id": 229261,
+      "disposition": "exclude_confirmed_segmentation_artifact",
+      "evidence": "Polygon spans multiple small eosinophilic ring-like profiles in blood-like aggregate without a matching single hematoxylin nucleus; not a nuclear contour",
+      "review_basis": "representative_large_nuclei.png, actual image and predicted boundary; not size alone"
+    },
+    {
+      "source_cell_id": 217352,
+      "disposition": "retain_morphology_ambiguous",
+      "evidence": "Large irregular or multilobed stained profile; merged tissue versus a single atypical nucleus cannot be reliably distinguished from this representative image",
+      "review_basis": "representative_large_nuclei.png, actual image and predicted boundary; not size alone"
+    },
+    {
+      "source_cell_id": 229125,
+      "disposition": "exclude_confirmed_segmentation_artifact",
+      "evidence": "Polygon spans multiple small eosinophilic ring-like profiles in blood-like aggregate without a matching single hematoxylin nucleus; not a nuclear contour",
+      "review_basis": "representative_large_nuclei.png, actual image and predicted boundary; not size alone"
+    }
+  ],
+  "review": "computational visual review, not pathology diagnosis",
+  "core_note": "Four excluded D1 objects are low-information and were never in scVI training. One retained ambiguous Cervilla object was in training; historical training flag stays true, final identity is ambiguous."
+}

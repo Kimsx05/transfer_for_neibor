@@ -1,0 +1,40 @@
+{
+  "object_path": "/home/data/t070721/codex_workspace/Bladder Metabolism/subtype/v2/reference_training_v2/11_final_spatial_reference/reference_v2_final_30type_regression_input.h5ad",
+  "object_use": "read_only; raw integer count X; labels selected from preserved 32-type scRNA field",
+  "reference_version": "cell2location_v2_frozen_20260916__scRNA32",
+  "label_field": "reference_celltype_v2",
+  "major_field": "major_celltype with frozen Cycling-to-Epithelial policy when reference_celltype_v2=Epithelial",
+  "n_cells": 300033,
+  "n_genes": 17987,
+  "n_subtypes": 32,
+  "n_source_specimens": 58,
+  "datasets": {
+    "PRJNA662018": 84080,
+    "CNP0000460": 81267,
+    "HRA003620": 74419,
+    "InhouseData": 46286,
+    "GSE326225": 13981
+  },
+  "donor_id": "not present; orig.ident is specimen, not a verified independent donor",
+  "membership_exact_match_to_frozen_mapping": true,
+  "label_exact_match_to_frozen_mapping": true,
+  "gene_harmonization": {
+    "collapse": "SUM",
+    "normalization_applied": false,
+    "resolved_classes": [
+      "EXACT_APPROVED",
+      "UNIQUE_PREVIOUS_SYMBOL",
+      "EXACT_ENSEMBL_ID"
+    ],
+    "unresolved_policy": "retain unchanged before filtering"
+  },
+  "spatial_30_merge_status": "PENDING_REVIEW in final 30-type report; do not silently replace preserved scRNA labels",
+  "known_missing_or_unsupported": [
+    "IFN-stimulated B excluded by frozen decision",
+    "Independent Cycling B not an allowed identity; cycling GC B remains GC B",
+    "FOLR2 TAM vs C1QC TAM and Naive B vs Memory B have known spatial identifiability risks",
+    "vCAF provisionally included; must assess against Pericyte",
+    "Epithelial only broad identity; no validated malignancy field used"
+  ],
+  "counts_provenance": "Derived minimally harmonized raw counts then gene-filtered; source scripts/count-conservation audits retained in subtype/v2; no learned signature or latent used as counts"
+}

@@ -1,0 +1,17 @@
+Seed set to 123
+SCVI_INPUT (252601, 2000) {'D1_Johnson': 170812, 'Cervilla': 81789}
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=7` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=7` in the `DataLoader` to improve performance.
+Monitored metric elbo_validation did not improve in the last 10 records. Best score: 112.328. Signaling Trainer to stop.
+SCVI_TRAINING_DONE 11 34.1937651950866
+INFO     Input AnnData not setup with scvi-tools. attempting to transfer AnnData
+         setup                                                                  
+INFO     Input AnnData not setup with scvi-tools. attempting to transfer AnnData
+         setup                                                                  
+EXPRESSION_GRAPH 252601
+2026-10-23 08:36:33.546736: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.

@@ -1,0 +1,19 @@
+Seed set to 123
+SCVI_INPUT (253277, 2000) {'D1_Johnson': 171289, 'Cervilla': 81988}
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_v2/code/fit_structure.py:17: UserWarning: Some cells have zero counts
+  base=train.copy();sc.pp.normalize_total(base,target_sum=1e4);sc.pp.log1p(base);sc.tl.pca(base,n_comps=30,random_state=123);baseline=base.obsm['X_pca'].astype('float32');del base
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+2026-10-23 08:31:50.027444: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=7` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=7` in the `DataLoader` to improve performance.
+Monitored metric elbo_validation did not improve in the last 10 records. Best score: 111.780. Signaling Trainer to stop.
+SCVI_TRAINING_DONE 0 37.61358057335019
+INFO     Input AnnData not setup with scvi-tools. attempting to transfer AnnData
+         setup                                                                  
+INFO     Input AnnData not setup with scvi-tools. attempting to transfer AnnData
+         setup                                                                  
+EXPRESSION_GRAPH 253277

@@ -1,0 +1,22 @@
+{
+  "section": "D1_Johnson",
+  "n_nuclei": 229392,
+  "shape": [
+    13302,
+    13541
+  ],
+  "model": "2D_versatile_he",
+  "prob_thresh": 0.05,
+  "nms_thresh": 0.3,
+  "block_size": 2048,
+  "min_overlap": 128,
+  "context": 128,
+  "device": "GPU0 RTX6000; TensorFlow memory cap 6144MiB",
+  "native_mpp": 0.2478437292776258,
+  "actual_model_mpp_xy": [
+    0.5000070154646025,
+    0.5000100976465468
+  ],
+  "runtime_seconds": 229.35122083034366,
+  "seed": 123
+}

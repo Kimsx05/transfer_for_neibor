@@ -1,0 +1,73 @@
+{
+  "section": "D1_Johnson",
+  "source_image": "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/data/GSE300692/D1_Johnson/outs/spatial/recovered/D1_Johnson_HE_capture_from_Loupe.tif",
+  "source_image_shape_yx": [
+    26836,
+    27318
+  ],
+  "model_image_shape_yx": [
+    13302,
+    13541
+  ],
+  "native_mpp": 0.2478437292776258,
+  "model_nominal_mpp": 0.5,
+  "actual_model_mpp_xy": [
+    0.5000070154646025,
+    0.5000100976465468
+  ],
+  "local_to_model_scale_xy": [
+    0.49568050369719596,
+    0.4956774482039052
+  ],
+  "fullres_crop_xyxy": [
+    23764,
+    35851,
+    51082,
+    62687
+  ],
+  "model_xy_formula": "((fullres_xy-crop_origin_xy)+0.5)*local_to_model_scale_xy-0.5",
+  "physical_xy_formula": "original_fullres_xy*native_mpp; no batch correction",
+  "original_image_recovered": true,
+  "rotation_added": 0,
+  "flip_added": false,
+  "seed": 123,
+  "normalization": {
+    "percentiles": [
+      1,
+      99.8
+    ],
+    "stride_sample": 8,
+    "low_rgb": [
+      124.0,
+      0.0,
+      103.0
+    ],
+    "high_rgb": [
+      254.0,
+      239.0,
+      244.0
+    ],
+    "scope": "one fixed per-section channel normalization, shared across all tiles"
+  },
+  "representative_model_bboxes": {
+    "dense": [
+      8395,
+      3459,
+      9163,
+      4227
+    ],
+    "stroma": [
+      5823,
+      6385,
+      6591,
+      7153
+    ],
+    "edge": [
+      1250,
+      5100,
+      2018,
+      5868
+    ]
+  },
+  "roi_selection_note": "D1 edge revised after pilot visual review: previous edge was fully intratissue; new ROI spans left tissue boundary."
+}
