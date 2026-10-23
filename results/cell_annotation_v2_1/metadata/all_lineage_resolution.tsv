@@ -1,0 +1,21 @@
+lineage	section	n	fine_supported	subtype_unknown	subtypes	states
+B	Cervilla	23	1	22	Memory B (1)	none
+B	D1_Johnson	1500	129	1371	Naive B (96); Memory B (33)	Stress (10); Interferon (3)
+Endothelial	Cervilla	360	27	333	Capillary EC (11); Arterial EC (10); Venous EC (5); Lymphatic EC (1)	Stress (4)
+Endothelial	D1_Johnson	738	74	664	Arterial EC (41); Venous EC (26); Capillary EC (6); Lymphatic EC (1)	Stress (55); Interferon (7)
+Epithelial	Cervilla	55782	0	55782	none	Cycling (904); Stress (9994); Interferon (121); Epithelial_basal (5822); Epithelial_luminal (20710); Epithelial_squamous (722)
+Epithelial	D1_Johnson	46991	0	46991	none	Cycling (6169); Stress (15727); Interferon (6872); Epithelial_basal (22582); Epithelial_luminal (608); Epithelial_squamous (17352)
+Erythroid	Cervilla	0	0	0	none	none
+Erythroid	D1_Johnson	2	0	2	none	none
+Fibroblast	Cervilla	5435	2389	3046	Matrix_CAF (2162); iCAF (222); rCAF (5)	Cycling (19); Stress (148); Interferon (9)
+Fibroblast	D1_Johnson	32859	18424	14435	Matrix_CAF (18069); iCAF (313); rCAF (26); vCAF (16)	Cycling (307); Stress (4729); Interferon (982)
+Mast	Cervilla	77	0	77	none	Stress (3)
+Mast	D1_Johnson	240	0	240	none	Stress (6); Mast_activation (1)
+Mural	Cervilla	477	261	216	Pericyte (176); SMC (85)	Stress (8)
+Mural	D1_Johnson	925	590	335	SMC (308); Pericyte (282)	Stress (81); Interferon (7)
+Myeloid	Cervilla	1246	417	829	C1QC TAM (379); SPP1 TAM (22); Classical Mono (6); FOLR2 TAM (3); Neutrophil (3); cDC2 (3); LAMP3 DC (1)	Cycling (5); Stress (57); Interferon (7); C1Q_program (207); SPP1_program (46); FOLR2_program (82); Myeloid_S100A8_A9_program (24)
+Myeloid	D1_Johnson	7465	3820	3645	C1QC TAM (3299); SPP1 TAM (361); Classical Mono (131); FOLR2 TAM (15); LAMP3 DC (10); cDC2 (4)	Cycling (297); Stress (1412); Interferon (632); C1Q_program (2538); SPP1_program (817); FOLR2_program (151); Myeloid_S100A8_A9_program (2605)
+Plasma	Cervilla	631	0	631	none	Stress (1); Plasma_IgA (318); Plasma_IgG (175)
+Plasma	D1_Johnson	736	0	736	none	Stress (17); Interferon (1); Plasma_IgA (271); Plasma_IgG (96)
+T/NK	Cervilla	150	1	149	Treg (1)	Stress (3)
+T/NK	D1_Johnson	4048	142	3906	CD4 Naive/Memory-like (71); Treg (30); Tfh/CXCL13-like (23); NK (11); CD8 GZMK/Effector-memory-like (5); CD4 Helper/Conventional (2)	Cycling (2); Stress (88); Interferon (4)

@@ -1,0 +1,39 @@
+also installing the dependencies ‘biocmake’, ‘Rigraphlib’
+
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/biocmake_1.2.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/Rigraphlib_1.2.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/scrapper_1.4.0.tar.gz'
+begin installing package ‘biocmake’
+* installing *source* package ‘biocmake’ ...
+** this is package ‘biocmake’ version ‘1.2.0’
+** package ‘biocmake’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (biocmake)
+begin installing package ‘Rigraphlib’
+make: *** [Makefile:9: Rigraphlib.ts] Error 1
+make: Target 'all' not remade because of errors.
+* installing *source* package ‘Rigraphlib’ ...
+** this is package ‘Rigraphlib’ version ‘1.2.0’
+** package ‘Rigraphlib’ successfully unpacked and MD5 sums checked
+** using staged installation
+Error in loadNamespace(x) : there is no package called ‘biocmake’
+Calls: loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
+Execution halted
+ERROR: configuration failed for package ‘Rigraphlib’
+* removing ‘/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_v2_1/Rlib/Rigraphlib’
+
+The downloaded source packages are in
+	‘/home/data/t070721/tmpdir/RtmpmPVwrb/downloaded_packages’
+Warning message:
+In install.packages("scrapper", repos = repos, lib = lib, dependencies = NA) :
+  installation of 2 packages failed:  ‘Rigraphlib’, ‘scrapper’

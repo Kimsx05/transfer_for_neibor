@@ -1,0 +1,182 @@
+{
+  "anchors": {
+    "Naive B": [
+      "IGHD",
+      "TCL1A",
+      "FCER2"
+    ],
+    "Memory B": [
+      "CD27",
+      "TNFRSF13B",
+      "AIM2"
+    ],
+    "GC B": [
+      "BCL6",
+      "AICDA",
+      "RGS13"
+    ],
+    "Classical Mono": [
+      "FCN1",
+      "S100A12",
+      "CCR2"
+    ],
+    "FOLR2 TAM": [
+      "FOLR2",
+      "LYVE1"
+    ],
+    "C1QC TAM": [
+      "C1QA",
+      "C1QB",
+      "C1QC"
+    ],
+    "SPP1 TAM": [
+      "SPP1"
+    ],
+    "cDC1": [
+      "CLEC9A",
+      "XCR1"
+    ],
+    "cDC2": [
+      "CD1C",
+      "FCER1A",
+      "CLEC10A"
+    ],
+    "LAMP3 DC": [
+      "LAMP3",
+      "FSCN1"
+    ],
+    "pDC": [
+      "LILRA4",
+      "CLEC4C"
+    ],
+    "Neutrophil": [
+      "CSF3R",
+      "FCGR3B",
+      "CXCR2"
+    ],
+    "Treg": [
+      "FOXP3",
+      "IL2RA"
+    ],
+    "CD8 Exhausted": [
+      "TOX",
+      "ENTPD1",
+      "LAG3",
+      "HAVCR2"
+    ],
+    "CD8 GZMK/Effector-memory-like": [
+      "GZMK"
+    ],
+    "CD4 Helper/Conventional": [
+      "CD40LG",
+      "IL17A",
+      "IL26",
+      "IL23R",
+      "IL7R"
+    ],
+    "CD4 Naive/Memory-like": [
+      "CCR7",
+      "TCF7",
+      "LEF1",
+      "SELL"
+    ],
+    "Tfh/CXCL13-like": [
+      "CXCL13",
+      "IL21",
+      "TOX2"
+    ],
+    "NK": [
+      "GNLY",
+      "KLRD1",
+      "FGFBP2"
+    ],
+    "iCAF": [
+      "PI16",
+      "DPT",
+      "PDGFRA",
+      "CXCL12",
+      "CFD",
+      "APOD",
+      "PLA2G2A"
+    ],
+    "Matrix_CAF": [
+      "COL11A1",
+      "COL10A1",
+      "MMP11",
+      "POSTN",
+      "CTHRC1",
+      "LRRC15",
+      "FAP"
+    ],
+    "rCAF": [
+      "CCL19",
+      "CCL21"
+    ],
+    "Pericyte": [
+      "RGS5",
+      "CSPG4",
+      "PDGFRB"
+    ],
+    "SMC": [
+      "MYH11",
+      "CNN1",
+      "MYOCD",
+      "LMOD1"
+    ],
+    "vCAF": [
+      "COL18A1"
+    ],
+    "Venous EC": [
+      "ACKR1"
+    ],
+    "Capillary EC": [
+      "CA4",
+      "RGCC"
+    ],
+    "Arterial EC": [
+      "GJA5",
+      "EFNB2",
+      "HEY1"
+    ],
+    "Lymphatic EC": [
+      "PROX1",
+      "LYVE1"
+    ]
+  },
+  "reference_labels": {
+    "Arterial EC": "Endothelial",
+    "C1QC TAM": "Myeloid",
+    "CD4 Helper/Conventional": "T/NK",
+    "CD4 Naive/Memory-like": "T/NK",
+    "CD8 Exhausted": "T/NK",
+    "CD8 GZMK/Effector-memory-like": "T/NK",
+    "Capillary EC": "Endothelial",
+    "Classical Mono": "Myeloid",
+    "Epithelial": "Epithelial",
+    "FOLR2 TAM": "Myeloid",
+    "GC B": "B",
+    "LAMP3 DC": "Myeloid",
+    "Lymphatic EC": "Endothelial",
+    "Mast": "Mast",
+    "Matrix_CAF": "Fibroblast",
+    "Memory B": "B",
+    "NK": "T/NK",
+    "Naive B": "B",
+    "Neutrophil": "Myeloid",
+    "Pericyte": "Mural",
+    "Plasma": "Plasma",
+    "SMC": "Mural",
+    "SPP1 TAM": "Myeloid",
+    "Tfh/CXCL13-like": "T/NK",
+    "Treg": "T/NK",
+    "Venous EC": "Endothelial",
+    "cDC1": "Myeloid",
+    "cDC2": "Myeloid",
+    "iCAF": "Fibroblast",
+    "pDC": "Myeloid",
+    "rCAF": "Fibroblast",
+    "vCAF": "Fibroblast"
+  },
+  "note": "Alternative measured-program/strong-anchor/reference/compatible-cluster routes; all score contrasts and cutoffs are descriptive proposal heuristics, not calibrated accuracy. SingleR within-major initial scores are not separate fine-tuned runs. Near-tied related identities retained as parent, C1Q/SPP1/FOLR2 programs nonexclusive. Epithelial/plasma/mast states reviewed without inventing fine identities.",
+  "cluster_route": "same-lineage observed enrichment; anchor>=7% detection, mean-log2difference>.08 and detectiondiff>.015; 2 panel genes>=7%; actual same-member anchor+panel cooccurrence>=5%; n>=20; individual reference/marker compatibility. No spatial propagation."
+}

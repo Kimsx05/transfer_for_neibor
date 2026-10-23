@@ -1,0 +1,836 @@
+{
+  "panels": {
+    "major:Epithelial": [
+      "EPCAM",
+      "KRT8",
+      "KRT18",
+      "KRT19",
+      "KRT7",
+      "KRT5",
+      "KRT14",
+      "UPK1A",
+      "UPK2"
+    ],
+    "major:T/NK": [
+      "CD3D",
+      "CD3E",
+      "CD3G",
+      "TRAC",
+      "TRBC1",
+      "TRBC2",
+      "NKG7",
+      "GNLY",
+      "KLRD1"
+    ],
+    "major:B": [
+      "CD79A",
+      "CD79B",
+      "MS4A1",
+      "CD19",
+      "CD22",
+      "CD37"
+    ],
+    "major:Plasma": [
+      "MZB1",
+      "JCHAIN",
+      "DERL3",
+      "SDC1",
+      "TNFRSF17",
+      "XBP1"
+    ],
+    "major:Myeloid": [
+      "LST1",
+      "LYZ",
+      "TYROBP",
+      "FCER1G",
+      "CSF1R",
+      "CD68",
+      "AIF1",
+      "C1QA",
+      "C1QB",
+      "C1QC"
+    ],
+    "major:Fibroblast": [
+      "DCN",
+      "LUM",
+      "COL1A1",
+      "COL1A2",
+      "COL3A1",
+      "PDGFRA",
+      "DPT",
+      "COL6A1"
+    ],
+    "major:Mural": [
+      "RGS5",
+      "CSPG4",
+      "PDGFRB",
+      "MCAM",
+      "NOTCH3",
+      "MYH11",
+      "CNN1",
+      "MYOCD",
+      "LMOD1",
+      "ACTA2",
+      "TAGLN"
+    ],
+    "major:Endothelial": [
+      "PECAM1",
+      "VWF",
+      "EMCN",
+      "KDR",
+      "CLDN5",
+      "RAMP2",
+      "ESAM",
+      "FLT1",
+      "PROX1"
+    ],
+    "major:Mast": [
+      "TPSAB1",
+      "TPSB2",
+      "CPA3",
+      "KIT",
+      "MS4A2"
+    ],
+    "major:Erythroid": [
+      "HBB",
+      "HBA1",
+      "HBA2",
+      "ALAS2",
+      "GYPA",
+      "KLF1"
+    ],
+    "major:Neural_glial": [
+      "SOX10",
+      "S100B",
+      "PLP1",
+      "MPZ",
+      "SLC1A3",
+      "GFAP"
+    ],
+    "subtype:Naive B": [
+      "IGHD",
+      "TCL1A",
+      "FCER2"
+    ],
+    "subtype:Memory B": [
+      "CD27",
+      "TNFRSF13B",
+      "AIM2"
+    ],
+    "subtype:GC B": [
+      "BCL6",
+      "AICDA",
+      "RGS13"
+    ],
+    "subtype:Classical Mono": [
+      "FCN1",
+      "VCAN",
+      "S100A8",
+      "S100A9",
+      "S100A12",
+      "CCR2"
+    ],
+    "subtype:FOLR2 TAM": [
+      "FOLR2",
+      "LYVE1",
+      "SELENOP",
+      "F13A1"
+    ],
+    "subtype:C1QC TAM": [
+      "C1QA",
+      "C1QC",
+      "APOE"
+    ],
+    "subtype:SPP1 TAM": [
+      "SPP1",
+      "GPNMB",
+      "FN1"
+    ],
+    "subtype:cDC1": [
+      "CLEC9A",
+      "XCR1",
+      "CADM1",
+      "BATF3"
+    ],
+    "subtype:cDC2": [
+      "CD1C",
+      "FCER1A",
+      "CLEC10A"
+    ],
+    "subtype:LAMP3 DC": [
+      "LAMP3",
+      "CCR7",
+      "FSCN1"
+    ],
+    "subtype:pDC": [
+      "LILRA4",
+      "CLEC4C",
+      "GZMB",
+      "IL3RA"
+    ],
+    "subtype:Neutrophil": [
+      "CSF3R",
+      "FCGR3B",
+      "CXCR2"
+    ],
+    "subtype:Treg": [
+      "FOXP3",
+      "IL2RA",
+      "CTLA4",
+      "IKZF2"
+    ],
+    "subtype:CD8 Exhausted": [
+      "CD8A",
+      "CD8B",
+      "TOX",
+      "ENTPD1",
+      "LAG3",
+      "HAVCR2",
+      "ITGAE"
+    ],
+    "subtype:CD8 GZMK/Effector-memory-like": [
+      "GZMK",
+      "CD8A",
+      "CD8B",
+      "CCL5"
+    ],
+    "subtype:CD4 Helper/Conventional": [
+      "IL7R",
+      "KLRB1",
+      "CD40LG",
+      "RORA",
+      "IL17A",
+      "IL26",
+      "IL23R"
+    ],
+    "subtype:CD4 Naive/Memory-like": [
+      "CCR7",
+      "TCF7",
+      "LEF1",
+      "SELL",
+      "KLF2",
+      "IL7R"
+    ],
+    "subtype:Tfh/CXCL13-like": [
+      "CXCL13",
+      "IL21",
+      "TOX2",
+      "MAF",
+      "CD4",
+      "PDCD1",
+      "ICOS"
+    ],
+    "subtype:NK": [
+      "FGFBP2",
+      "FCGR3A",
+      "GNLY",
+      "GZMB",
+      "PRF1",
+      "KLRD1",
+      "NKG7"
+    ],
+    "subtype:iCAF": [
+      "PI16",
+      "DPT",
+      "PDGFRA",
+      "CXCL12",
+      "CFD",
+      "APOD",
+      "PLA2G2A"
+    ],
+    "subtype:Matrix_CAF": [
+      "COL11A1",
+      "COL10A1",
+      "MMP11",
+      "POSTN",
+      "CTHRC1",
+      "LRRC15",
+      "FAP"
+    ],
+    "subtype:rCAF": [
+      "CCL19",
+      "CCL21"
+    ],
+    "subtype:Pericyte": [
+      "RGS5",
+      "CSPG4",
+      "PDGFRB",
+      "MCAM",
+      "NOTCH3"
+    ],
+    "subtype:SMC": [
+      "MYH11",
+      "CNN1",
+      "MYOCD",
+      "LMOD1",
+      "DES",
+      "ACTA2",
+      "TAGLN"
+    ],
+    "subtype:vCAF": [
+      "MCAM",
+      "NOTCH3",
+      "COL18A1"
+    ],
+    "subtype:Venous EC": [
+      "ACKR1",
+      "SELE",
+      "VCAM1"
+    ],
+    "subtype:Capillary EC": [
+      "CA4",
+      "CD36",
+      "RGCC"
+    ],
+    "subtype:Arterial EC": [
+      "GJA5",
+      "EFNB2",
+      "HEY1"
+    ],
+    "subtype:Lymphatic EC": [
+      "PROX1",
+      "LYVE1",
+      "CCL21"
+    ],
+    "state:Cycling": [
+      "MKI67",
+      "TOP2A",
+      "UBE2C",
+      "TYMS",
+      "PCNA",
+      "STMN1"
+    ],
+    "state:Stress": [
+      "FOS",
+      "JUN",
+      "JUNB",
+      "HSPA1A",
+      "DDIT3",
+      "HSPA1B"
+    ],
+    "state:Interferon": [
+      "ISG15",
+      "IFIT1",
+      "IFIT3",
+      "MX1",
+      "ISG20"
+    ],
+    "state:Epithelial_basal": [
+      "KRT5",
+      "KRT14",
+      "KRT17",
+      "TP63"
+    ],
+    "state:Epithelial_luminal": [
+      "UPK1A",
+      "UPK1B",
+      "UPK2",
+      "UPK3A",
+      "KRT20",
+      "GATA3",
+      "FOXA1"
+    ],
+    "state:Epithelial_squamous": [
+      "IVL",
+      "DSG3",
+      "DSC3",
+      "KRT6A",
+      "KRT16"
+    ],
+    "state:Plasma_IgA": [
+      "IGHA1",
+      "IGHA2",
+      "JCHAIN"
+    ],
+    "state:Plasma_IgG": [
+      "IGHG1",
+      "IGHG2",
+      "IGHG3",
+      "IGHG4"
+    ],
+    "state:Mast_activation": [
+      "HDC",
+      "LTC4S",
+      "HPGDS",
+      "IL1RL1"
+    ],
+    "state:C1Q_program": [
+      "C1QA",
+      "C1QB",
+      "C1QC"
+    ],
+    "state:SPP1_program": [
+      "SPP1",
+      "GPNMB",
+      "APOC1"
+    ],
+    "state:FOLR2_program": [
+      "FOLR2",
+      "LYVE1",
+      "SELENOP",
+      "F13A1"
+    ],
+    "state:Myeloid_S100A8_A9_program": [
+      "S100A8",
+      "S100A9",
+      "S100A12"
+    ]
+  },
+  "weights": {
+    "COL1A1": 0.15,
+    "COL1A2": 0.3,
+    "COL3A1": 0.4,
+    "COL6A1": 0.3,
+    "XBP1": 0.2,
+    "SDC1": 0.4,
+    "CD37": 0.3,
+    "LYZ": 0.6,
+    "ACTA2": 0.35,
+    "TAGLN": 0.35,
+    "MCAM": 0.5,
+    "NOTCH3": 0.5,
+    "RAMP2": 0.5,
+    "FLT1": 0.5
+  },
+  "available": {
+    "major:Epithelial": [
+      "EPCAM",
+      "KRT8",
+      "KRT19",
+      "KRT7",
+      "KRT5",
+      "KRT14",
+      "UPK1A",
+      "UPK2"
+    ],
+    "major:T/NK": [
+      "CD3D",
+      "CD3E",
+      "CD3G",
+      "TRAC",
+      "TRBC1",
+      "TRBC2",
+      "NKG7",
+      "GNLY",
+      "KLRD1"
+    ],
+    "major:B": [
+      "CD79A",
+      "CD79B",
+      "MS4A1",
+      "CD19",
+      "CD22",
+      "CD37"
+    ],
+    "major:Plasma": [
+      "MZB1",
+      "JCHAIN",
+      "DERL3",
+      "SDC1",
+      "TNFRSF17",
+      "XBP1"
+    ],
+    "major:Myeloid": [
+      "LST1",
+      "LYZ",
+      "TYROBP",
+      "FCER1G",
+      "CSF1R",
+      "CD68",
+      "AIF1",
+      "C1QA",
+      "C1QB",
+      "C1QC"
+    ],
+    "major:Fibroblast": [
+      "DCN",
+      "LUM",
+      "COL1A1",
+      "COL1A2",
+      "COL3A1",
+      "PDGFRA",
+      "DPT",
+      "COL6A1"
+    ],
+    "major:Mural": [
+      "RGS5",
+      "CSPG4",
+      "PDGFRB",
+      "MCAM",
+      "NOTCH3",
+      "MYH11",
+      "CNN1",
+      "MYOCD",
+      "LMOD1",
+      "ACTA2",
+      "TAGLN"
+    ],
+    "major:Endothelial": [
+      "PECAM1",
+      "VWF",
+      "EMCN",
+      "KDR",
+      "CLDN5",
+      "RAMP2",
+      "ESAM",
+      "FLT1",
+      "PROX1"
+    ],
+    "major:Mast": [
+      "CPA3",
+      "KIT",
+      "MS4A2"
+    ],
+    "major:Erythroid": [
+      "HBB",
+      "HBA2",
+      "ALAS2",
+      "GYPA",
+      "KLF1"
+    ],
+    "major:Neural_glial": [
+      "SOX10",
+      "S100B",
+      "PLP1",
+      "MPZ",
+      "SLC1A3",
+      "GFAP"
+    ],
+    "subtype:Naive B": [
+      "IGHD",
+      "TCL1A",
+      "FCER2"
+    ],
+    "subtype:Memory B": [
+      "CD27",
+      "TNFRSF13B",
+      "AIM2"
+    ],
+    "subtype:GC B": [
+      "BCL6",
+      "AICDA",
+      "RGS13"
+    ],
+    "subtype:Classical Mono": [
+      "VCAN",
+      "S100A8",
+      "S100A9",
+      "S100A12",
+      "CCR2"
+    ],
+    "subtype:FOLR2 TAM": [
+      "FOLR2",
+      "LYVE1",
+      "SELENOP",
+      "F13A1"
+    ],
+    "subtype:C1QC TAM": [
+      "C1QA",
+      "C1QC",
+      "APOE"
+    ],
+    "subtype:SPP1 TAM": [
+      "SPP1",
+      "GPNMB",
+      "FN1"
+    ],
+    "subtype:cDC1": [
+      "CLEC9A",
+      "XCR1",
+      "CADM1",
+      "BATF3"
+    ],
+    "subtype:cDC2": [
+      "CD1C",
+      "FCER1A",
+      "CLEC10A"
+    ],
+    "subtype:LAMP3 DC": [
+      "LAMP3",
+      "CCR7",
+      "FSCN1"
+    ],
+    "subtype:pDC": [
+      "LILRA4",
+      "CLEC4C",
+      "GZMB",
+      "IL3RA"
+    ],
+    "subtype:Neutrophil": [
+      "CSF3R",
+      "FCGR3B",
+      "CXCR2"
+    ],
+    "subtype:Treg": [
+      "FOXP3",
+      "IL2RA",
+      "CTLA4",
+      "IKZF2"
+    ],
+    "subtype:CD8 Exhausted": [
+      "CD8A",
+      "TOX",
+      "ENTPD1",
+      "LAG3",
+      "HAVCR2"
+    ],
+    "subtype:CD8 GZMK/Effector-memory-like": [
+      "GZMK",
+      "CD8A",
+      "CCL5"
+    ],
+    "subtype:CD4 Helper/Conventional": [
+      "IL7R",
+      "KLRB1",
+      "CD40LG",
+      "RORA",
+      "IL17A",
+      "IL26",
+      "IL23R"
+    ],
+    "subtype:CD4 Naive/Memory-like": [
+      "CCR7",
+      "TCF7",
+      "LEF1",
+      "SELL",
+      "KLF2",
+      "IL7R"
+    ],
+    "subtype:Tfh/CXCL13-like": [
+      "CXCL13",
+      "IL21",
+      "TOX2",
+      "MAF",
+      "CD4",
+      "PDCD1",
+      "ICOS"
+    ],
+    "subtype:NK": [
+      "FGFBP2",
+      "FCGR3A",
+      "GNLY",
+      "GZMB",
+      "PRF1",
+      "KLRD1",
+      "NKG7"
+    ],
+    "subtype:iCAF": [
+      "PI16",
+      "DPT",
+      "PDGFRA",
+      "CXCL12",
+      "CFD",
+      "APOD",
+      "PLA2G2A"
+    ],
+    "subtype:Matrix_CAF": [
+      "COL11A1",
+      "COL10A1",
+      "MMP11",
+      "POSTN",
+      "CTHRC1",
+      "LRRC15",
+      "FAP"
+    ],
+    "subtype:rCAF": [
+      "CCL19",
+      "CCL21"
+    ],
+    "subtype:Pericyte": [
+      "RGS5",
+      "CSPG4",
+      "PDGFRB",
+      "MCAM",
+      "NOTCH3"
+    ],
+    "subtype:SMC": [
+      "MYH11",
+      "CNN1",
+      "MYOCD",
+      "LMOD1",
+      "DES",
+      "ACTA2",
+      "TAGLN"
+    ],
+    "subtype:vCAF": [
+      "MCAM",
+      "NOTCH3",
+      "COL18A1"
+    ],
+    "subtype:Venous EC": [
+      "ACKR1",
+      "SELE",
+      "VCAM1"
+    ],
+    "subtype:Capillary EC": [
+      "CA4",
+      "CD36",
+      "RGCC"
+    ],
+    "subtype:Arterial EC": [
+      "GJA5",
+      "EFNB2",
+      "HEY1"
+    ],
+    "subtype:Lymphatic EC": [
+      "PROX1",
+      "LYVE1",
+      "CCL21"
+    ],
+    "state:Cycling": [
+      "MKI67",
+      "TOP2A",
+      "UBE2C",
+      "TYMS",
+      "PCNA",
+      "STMN1"
+    ],
+    "state:Stress": [
+      "FOS",
+      "JUN",
+      "JUNB",
+      "HSPA1A",
+      "DDIT3",
+      "HSPA1B"
+    ],
+    "state:Interferon": [
+      "ISG15",
+      "IFIT1",
+      "IFIT3",
+      "MX1",
+      "ISG20"
+    ],
+    "state:Epithelial_basal": [
+      "KRT5",
+      "KRT14",
+      "KRT17",
+      "TP63"
+    ],
+    "state:Epithelial_luminal": [
+      "UPK1A",
+      "UPK1B",
+      "UPK2",
+      "UPK3A",
+      "KRT20",
+      "GATA3",
+      "FOXA1"
+    ],
+    "state:Epithelial_squamous": [
+      "IVL",
+      "DSG3",
+      "DSC3",
+      "KRT6A",
+      "KRT16"
+    ],
+    "state:Plasma_IgA": [
+      "IGHA1",
+      "IGHA2",
+      "JCHAIN"
+    ],
+    "state:Plasma_IgG": [
+      "IGHG1",
+      "IGHG3"
+    ],
+    "state:Mast_activation": [
+      "HDC",
+      "LTC4S",
+      "HPGDS"
+    ],
+    "state:C1Q_program": [
+      "C1QA",
+      "C1QB",
+      "C1QC"
+    ],
+    "state:SPP1_program": [
+      "SPP1",
+      "GPNMB",
+      "APOC1"
+    ],
+    "state:FOLR2_program": [
+      "FOLR2",
+      "LYVE1",
+      "SELENOP",
+      "F13A1"
+    ],
+    "state:Myeloid_S100A8_A9_program": [
+      "S100A8",
+      "S100A9",
+      "S100A12"
+    ]
+  },
+  "missing": {
+    "major:Epithelial": [
+      "KRT18"
+    ],
+    "major:T/NK": [],
+    "major:B": [],
+    "major:Plasma": [],
+    "major:Myeloid": [],
+    "major:Fibroblast": [],
+    "major:Mural": [],
+    "major:Endothelial": [],
+    "major:Mast": [
+      "TPSAB1",
+      "TPSB2"
+    ],
+    "major:Erythroid": [
+      "HBA1"
+    ],
+    "major:Neural_glial": [],
+    "subtype:Naive B": [],
+    "subtype:Memory B": [],
+    "subtype:GC B": [],
+    "subtype:Classical Mono": [
+      "FCN1"
+    ],
+    "subtype:FOLR2 TAM": [],
+    "subtype:C1QC TAM": [],
+    "subtype:SPP1 TAM": [],
+    "subtype:cDC1": [],
+    "subtype:cDC2": [],
+    "subtype:LAMP3 DC": [],
+    "subtype:pDC": [],
+    "subtype:Neutrophil": [],
+    "subtype:Treg": [],
+    "subtype:CD8 Exhausted": [
+      "CD8B",
+      "ITGAE"
+    ],
+    "subtype:CD8 GZMK/Effector-memory-like": [
+      "CD8B"
+    ],
+    "subtype:CD4 Helper/Conventional": [],
+    "subtype:CD4 Naive/Memory-like": [],
+    "subtype:Tfh/CXCL13-like": [],
+    "subtype:NK": [],
+    "subtype:iCAF": [],
+    "subtype:Matrix_CAF": [],
+    "subtype:rCAF": [],
+    "subtype:Pericyte": [],
+    "subtype:SMC": [],
+    "subtype:vCAF": [],
+    "subtype:Venous EC": [],
+    "subtype:Capillary EC": [],
+    "subtype:Arterial EC": [],
+    "subtype:Lymphatic EC": [],
+    "state:Cycling": [],
+    "state:Stress": [],
+    "state:Interferon": [],
+    "state:Epithelial_basal": [],
+    "state:Epithelial_luminal": [],
+    "state:Epithelial_squamous": [],
+    "state:Plasma_IgA": [],
+    "state:Plasma_IgG": [
+      "IGHG2",
+      "IGHG4"
+    ],
+    "state:Mast_activation": [
+      "IL1RL1"
+    ],
+    "state:C1Q_program": [],
+    "state:SPP1_program": [],
+    "state:FOLR2_program": [],
+    "state:Myeloid_S100A8_A9_program": []
+  },
+  "note": "Observed all-query genes including those absent from reference; program strengths are descriptive weighted log-expression, not probabilities. COL1A1/downweighted shared programs mitigate widespread ECM background."
+}

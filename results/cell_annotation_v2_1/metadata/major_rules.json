@@ -1,0 +1,102 @@
+{
+  "anchors": {
+    "Epithelial": [
+      "EPCAM",
+      "KRT8",
+      "KRT18",
+      "KRT19",
+      "KRT7",
+      "KRT5",
+      "KRT14",
+      "UPK1A",
+      "UPK2"
+    ],
+    "T/NK": [
+      "CD3D",
+      "CD3E",
+      "CD3G",
+      "TRAC",
+      "TRBC1",
+      "TRBC2",
+      "GNLY",
+      "KLRD1"
+    ],
+    "B": [
+      "CD79A",
+      "CD79B",
+      "MS4A1",
+      "CD19",
+      "CD22"
+    ],
+    "Plasma": [
+      "MZB1",
+      "JCHAIN",
+      "DERL3",
+      "TNFRSF17"
+    ],
+    "Myeloid": [
+      "LST1",
+      "TYROBP",
+      "FCER1G",
+      "CSF1R",
+      "CD68",
+      "AIF1",
+      "C1QA",
+      "C1QB",
+      "C1QC"
+    ],
+    "Fibroblast": [
+      "DCN",
+      "LUM",
+      "PDGFRA",
+      "DPT"
+    ],
+    "Mural": [
+      "RGS5",
+      "CSPG4",
+      "PDGFRB",
+      "MYH11",
+      "CNN1",
+      "MYOCD",
+      "LMOD1"
+    ],
+    "Endothelial": [
+      "PECAM1",
+      "VWF",
+      "EMCN",
+      "KDR",
+      "CLDN5",
+      "ESAM",
+      "PROX1"
+    ],
+    "Mast": [
+      "TPSAB1",
+      "TPSB2",
+      "CPA3",
+      "KIT",
+      "MS4A2"
+    ],
+    "Erythroid": [
+      "HBB",
+      "HBA1",
+      "HBA2",
+      "ALAS2",
+      "GYPA",
+      "KLF1"
+    ],
+    "Neural_glial": [
+      "SOX10",
+      "S100B",
+      "PLP1",
+      "MPZ",
+      "GFAP"
+    ]
+  },
+  "note": "Heuristic review proposals, not calibrated probabilities. Alternative direct-marker, strong-anchor, reference-supported and measured-cluster-compatible routes. Old calibration and tool agreement are never mandatory. Ratios are program contrasts; missing markers alone are not contradictory expression.",
+  "strong": "3 observed anchors,ratio>=1.35,score>=1.2 OR 2 specific anchors with no coherent competitor,ratio>=1.1,n_genes>30",
+  "anchor": ">=4 anchor UMIs,ratio>=1.8,n_genes>30",
+  "reference": "any anchor,ratio>=1.5,SingleR unpruned delta>.05,n_genes>30",
+  "cluster": "measured coherent global context (>=70% direct-expression members), any anchor,ratio>=1.8,one compatible classifier,n_genes>30",
+  "mixed": "two coherent competing programs of comparable weighted strength",
+  "external": "3 anchors,6UMIs,ratio>=1.8,n_genes>30; manual review remains required"
+}
