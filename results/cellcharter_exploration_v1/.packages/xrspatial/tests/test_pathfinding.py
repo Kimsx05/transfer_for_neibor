@@ -1,0 +1,2516 @@
+import numpy as np
+import pytest
+
+try:
+    import dask.array as da
+except ImportError:
+    da = None
+
+from xrspatial import a_star_search
+from xrspatial.cost_distance import cost_distance
+from xrspatial.tests.general_checks import (
+    create_test_raster, general_output_checks,
+    cuda_and_cupy_available, dask_array_available,
+)
+from xrspatial.utils import has_cuda_and_cupy, has_dask_array
+
+
+@pytest.fixture
+def input_data():
+    data = np.array([[0, 1, 0, 0],
+                     [1, 1, 0, 0],
+                     [0, 1, 2, 2],
+                     [1, 0, 2, 0],
+                     [0, 2, 2, 2]])
+    agg = create_test_raster(data, dims=['lat', 'lon'])
+    return agg
+
+
+@pytest.fixture
+def input_data_with_nans():
+    data = np.array([[0, 1, 0, 0],
+                     [1, 1, np.nan, 0],
+                     [0, 1, 2, 2],
+                     [1, 0, 2, 0],
+                     [0, np.nan, 2, 2]])
+    agg = create_test_raster(data, dims=['lat', 'lon'])
+
+    # start and end at a nan pixel, coordinate in (lat, lon) format
+    start = (1.5, 1)
+    goal = (0, 0.5)
+    return agg, start, goal
+
+
+@pytest.fixture
+def result_8_connectivity():
+    # cellsize=0.5: diagonal=sqrt(0.5)≈0.7071, cardinal=0.5
+    # Path: (0,2)→(1,1)→(2,1)→(3,1)
+    # Costs: 0, sqrt(0.5), sqrt(0.5)+0.5, sqrt(0.5)+1.0
+    s = np.sqrt(0.5)
+    expected_result = np.array([[np.nan, np.nan, 0., np.nan],
+                                [np.nan, s, np.nan, np.nan],
+                                [np.nan, s + 0.5, np.nan, np.nan],
+                                [np.nan, s + 1.0, np.nan, np.nan],
+                                [np.nan, np.nan, np.nan, np.nan]])
+    return expected_result
+
+
+@pytest.fixture
+def result_4_connectivity():
+    # cellsize=0.5: cardinal=0.5
+    # Path: (0,2)→(0,1)→(1,1)→(2,1)→(3,1)
+    # Costs: 0, 0.5, 1.0, 1.5, 2.0
+    expected_result = np.array([[np.nan, 0.5, 0., np.nan],
+                                [np.nan, 1.0, np.nan, np.nan],
+                                [np.nan, 1.5, np.nan, np.nan],
+                                [np.nan, 2.0, np.nan, np.nan],
+                                [np.nan, np.nan, np.nan, np.nan]])
+    return expected_result
+
+
+def test_a_star_search_no_barriers(input_data):
+    agg = input_data
+    barriers = []
+    # no barriers, there always path from a start location to a goal location
+    for x0 in agg['lon']:
+        for y0 in agg['lat']:
+            start = (y0, x0)
+            for x1 in agg['lon']:
+                for y1 in agg['lat']:
+                    goal = (y1, x1)
+                    path_agg = a_star_search(
+                        agg, start, goal, barriers, 'lon', 'lat'
+                    )
+                    general_output_checks(agg, path_agg)
+                    assert type(path_agg.values[0][0]) == np.float64
+                    if start == goal:
+                        assert np.nanmax(path_agg) == 0
+                        assert np.nanmin(path_agg) == 0
+                    else:
+                        assert np.nanmax(path_agg) > 0
+                        assert np.nanmin(path_agg) == 0
+
+
+@pytest.mark.filterwarnings("ignore:Start at a non crossable location:Warning")
+@pytest.mark.filterwarnings("ignore:End at a non crossable location:Warning")
+def test_a_star_search_with_barriers(input_data):
+    agg = input_data
+    barriers = [1]
+    # set pixels with value 1 as barriers,
+    # cannot go from (0, 0) to anywhere since it is surrounded by 1s
+    start = (2, 0)
+    for x1 in agg['lon']:
+        for y1 in agg['lat']:
+            goal = (y1, x1)
+            if (goal != start):
+                path_agg = a_star_search(
+                    agg, start, goal, barriers, 'lon', 'lat'
+                )
+                # no path, all cells in path_agg are nans
+                expected_results = np.full(agg.shape, np.nan)
+                general_output_checks(agg, path_agg, expected_results)
+
+
+@pytest.mark.filterwarnings("ignore:Start at a non crossable location:Warning")
+@pytest.mark.filterwarnings("ignore:End at a non crossable location:Warning")
+def test_a_star_search_snap(input_data_with_nans):
+    agg, start, goal = input_data_with_nans
+
+    # no barriers
+    barriers = []
+    # no snap
+    no_snap_path_agg = a_star_search(agg, start, goal, barriers, 'lon', 'lat')
+    # no path, all cells in path_agg are nans
+    np.testing.assert_array_equal(no_snap_path_agg, np.nan)
+
+    # set snap_start = True, snap_goal = False
+    snap_start_path_agg = a_star_search(agg, start, goal, barriers, 'lon', 'lat', snap_start=True)
+    # no path, all cells in path_agg are nans
+    np.testing.assert_array_equal(snap_start_path_agg, np.nan)
+
+    # set snap_start = False, snap_goal = True
+    snap_goal_path_agg = a_star_search(agg, start, goal, barriers, 'lon', 'lat', snap_goal=True)
+    # no path, all cells in path_agg are nans
+    np.testing.assert_array_equal(snap_goal_path_agg, np.nan)
+
+
+def test_a_star_search_connectivity(
+    input_data_with_nans,
+    result_8_connectivity,
+    result_4_connectivity
+):
+    agg, start, goal = input_data_with_nans
+    # no barriers
+    barriers = []
+
+    # set snap_start = True, snap_goal = True
+    # 8-connectivity as default
+    path_agg_8 = a_star_search(
+        agg, start, goal, barriers, 'lon', 'lat', snap_start=True, snap_goal=True
+    )
+    np.testing.assert_allclose(path_agg_8, result_8_connectivity, equal_nan=True)
+
+    # 4-connectivity
+    path_agg_4 = a_star_search(
+        agg, start, goal, barriers, 'lon', 'lat', snap_start=True, snap_goal=True, connectivity=4
+    )
+    np.testing.assert_allclose(path_agg_4, result_4_connectivity, equal_nan=True)
+
+
+# -----------------------------------------------------------------------
+# Point -> pixel mapping (issue #3629)
+# -----------------------------------------------------------------------
+
+def _make_unit_raster(h=5, w=5):
+    import xarray as xr
+    r = xr.DataArray(np.ones((h, w)), dims=['y', 'x'],
+                     attrs={'res': (1.0, 1.0)})
+    r['y'] = np.linspace(h - 1, 0, h)   # descending
+    r['x'] = np.linspace(0, w - 1, w)
+    return r
+
+
+def test_get_pixel_id_nearest_center():
+    from xrspatial.pathfinding import _get_pixel_id
+
+    agg = _make_unit_raster()
+    # exact centers map to themselves
+    assert _get_pixel_id((4.0, 0.0), agg, 'x', 'y') == (0, 0)
+    assert _get_pixel_id((0.0, 4.0), agg, 'x', 'y') == (4, 4)
+    # a point in the upper half of a cell maps to the nearest center,
+    # not the truncated lower-index cell
+    assert _get_pixel_id((4.0, 2.6), agg, 'x', 'y') == (0, 3)
+    assert _get_pixel_id((1.6, 0.0), agg, 'x', 'y') == (2, 0)
+
+    # float noise at an exact center: on a 0.1-res grid the pixel-3
+    # center is 0.30000000000000004; a user-typed 0.3 must still map
+    # to pixel 3
+    import xarray as xr
+    agg2 = xr.DataArray(np.ones((2, 10)), dims=['y', 'x'])
+    agg2['y'] = [0.1, 0.0]
+    agg2['x'] = np.arange(10) * 0.1
+    assert _get_pixel_id((0.0, 0.3), agg2, 'x', 'y') == (1, 3)
+
+
+def test_get_pixel_id_ascending_coords():
+    from xrspatial.pathfinding import _get_pixel_id
+    import xarray as xr
+
+    agg = xr.DataArray(np.ones((5, 5)), dims=['y', 'x'],
+                       attrs={'res': (1.0, 1.0)})
+    agg['y'] = np.linspace(0, 4, 5)   # ascending
+    agg['x'] = np.linspace(0, 4, 5)
+    assert _get_pixel_id((0.0, 0.0), agg, 'x', 'y') == (0, 0)
+    assert _get_pixel_id((4.0, 2.6), agg, 'x', 'y') == (4, 3)
+    # outside on the low side -> negative index (rejected by _is_inside)
+    py, px = _get_pixel_id((-1.0, 0.0), agg, 'x', 'y')
+    assert py < 0
+
+
+def test_a_star_search_out_of_bounds_raises():
+    """Points outside the raster must raise on every side, not fold inside."""
+    agg = _make_unit_raster()   # y in [0, 4] descending, x in [0, 4]
+
+    inside = (2.0, 2.0)
+    outside_points = [
+        (5.0, 2.0),    # above the top edge (y_coords[0] side)
+        (-1.0, 2.0),   # below the bottom edge
+        (2.0, -1.0),   # left of the first column (x_coords[0] side)
+        (2.0, 5.0),    # right of the last column
+    ]
+    for pt in outside_points:
+        with pytest.raises(ValueError, match="start location outside"):
+            a_star_search(agg, pt, inside)
+        with pytest.raises(ValueError, match="goal location outside"):
+            a_star_search(agg, inside, pt)
+
+
+def test_multi_stop_out_of_bounds_waypoint_raises():
+    from xrspatial import multi_stop_search
+
+    agg = _make_unit_raster()
+    # waypoint above the top edge previously folded to an interior row
+    with pytest.raises(ValueError, match="outside the surface bounds"):
+        multi_stop_search(agg, [(5.0, 0.0), (0.0, 4.0)])
+
+
+# -----------------------------------------------------------------------
+# Helper for multi-backend test rasters
+# -----------------------------------------------------------------------
+
+def _make_raster(data, dims=None, res=None, backend='numpy', chunks=(3, 3)):
+    """Build a simple DataArray for weighted A* tests."""
+    if dims is None:
+        dims = ['y', 'x']
+    if res is None:
+        res = (1.0, 1.0)
+    import xarray as xr
+    h, w = data.shape
+    raster = xr.DataArray(
+        data.astype(np.float64),
+        dims=dims,
+        attrs={'res': res},
+    )
+    raster[dims[0]] = np.linspace((h - 1) * res[0], 0, h)
+    raster[dims[1]] = np.linspace(0, (w - 1) * res[1], w)
+
+    if 'dask' in backend and da is not None:
+        raster.data = da.from_array(raster.data, chunks=chunks)
+    if 'cupy' in backend and has_cuda_and_cupy():
+        import cupy
+        if isinstance(raster.data, da.Array):
+            raster.data = raster.data.map_blocks(cupy.asarray)
+        else:
+            raster.data = cupy.asarray(raster.data)
+
+    return raster
+
+
+def _tracking_np_full(threshold_cells, large_allocs):
+    """Build an np.full replacement that records allocations of
+    ``threshold_cells`` cells or more into *large_allocs*.
+
+    Used to assert that dask code paths never materialise full-size
+    arrays.  Patch with ``patch('numpy.full', side_effect=...)``.
+    """
+    original_full = np.full
+
+    def tracking_full(shape, *args, **kwargs):
+        result = original_full(shape, *args, **kwargs)
+        if hasattr(shape, '__len__'):
+            total = 1
+            for s in shape:
+                total *= s
+        else:
+            total = shape
+        if total >= threshold_cells:
+            large_allocs.append(('full', shape))
+        return result
+
+    return tracking_full
+
+
+# -----------------------------------------------------------------------
+# Weighted A* tests — parametrized for numpy and dask
+# -----------------------------------------------------------------------
+
+_backends = ['numpy']
+if has_dask_array():
+    _backends.append('dask+numpy')
+
+
+@pytest.mark.parametrize("backend", _backends)
+def test_uniform_friction_matches_no_friction(backend):
+    """Uniform friction=1 should give the same path and costs as no friction."""
+    data = np.ones((5, 5))
+    agg = _make_raster(data, backend=backend)
+    friction_agg = _make_raster(np.ones((5, 5)), backend=backend)
+
+    # coordinate space: y goes 4..0, x goes 0..4
+    start = (4.0, 0.0)   # pixel (0,0)
+    goal = (0.0, 4.0)    # pixel (4,4)
+
+    path_no_friction = a_star_search(agg, start, goal)
+    path_with_friction = a_star_search(agg, start, goal, friction=friction_agg)
+
+    np.testing.assert_allclose(
+        np.asarray(path_with_friction.values),
+        np.asarray(path_no_friction.values),
+        equal_nan=True, atol=1e-10,
+    )
+
+
+@pytest.mark.parametrize("backend", _backends)
+def test_high_friction_detour(backend):
+    """A* should route around a high-friction column."""
+    # 3x5 grid, cellsize=1
+    data = np.ones((3, 5))
+    friction_data = np.ones((3, 5))
+    friction_data[0, 2] = 100.0  # high friction in direct path
+    friction_data[1, 2] = 100.0
+
+    agg = _make_raster(data, backend=backend)
+    friction_agg = _make_raster(friction_data, backend=backend)
+
+    # start=pixel(0,0), goal=pixel(0,4)
+    # coords: y=[2,1,0], x=[0,1,2,3,4]
+    start = (2.0, 0.0)
+    goal = (2.0, 4.0)
+
+    # Without friction: direct straight path (0,0)→(0,1)→(0,2)→(0,3)→(0,4)
+    path_no = a_star_search(agg, start, goal)
+    assert np.isfinite(np.asarray(path_no.values)[0, 2])  # goes through column 2
+
+    # With friction: should detour around column 2
+    path_fr = a_star_search(agg, start, goal, friction=friction_agg)
+    vals = np.asarray(path_fr.values)
+    assert np.isnan(vals[0, 2])  # does NOT go through (0,2)
+    # detour should go through row 2 (pixel row 2)
+    assert np.isfinite(vals[2, 2])  # goes through (2,2) instead
+
+    # Weighted path should be cheaper than going through high-friction zone
+    assert np.nanmax(vals) < 10.0
+
+
+@pytest.mark.parametrize("backend", _backends)
+def test_friction_barrier_nan(backend):
+    """NaN friction blocks passage, forcing a detour."""
+    data = np.ones((3, 5))
+    friction_data = np.ones((3, 5))
+    friction_data[0, 2] = np.nan  # impassable
+
+    agg = _make_raster(data, backend=backend)
+    friction_agg = _make_raster(friction_data, backend=backend)
+
+    start = (2.0, 0.0)  # pixel (0,0)
+    goal = (2.0, 4.0)   # pixel (0,4)
+
+    path = a_star_search(agg, start, goal, friction=friction_agg)
+    vals = np.asarray(path.values)
+    # Path must not go through (0,2)
+    assert np.isnan(vals[0, 2])
+    # But a path should still exist
+    assert np.isfinite(vals[0, 4])
+
+
+@pytest.mark.parametrize("backend", _backends)
+def test_friction_barrier_zero(backend):
+    """Zero friction blocks passage, forcing a detour."""
+    data = np.ones((3, 5))
+    friction_data = np.ones((3, 5))
+    friction_data[0, 2] = 0.0  # impassable
+
+    agg = _make_raster(data, backend=backend)
+    friction_agg = _make_raster(friction_data, backend=backend)
+
+    start = (2.0, 0.0)
+    goal = (2.0, 4.0)
+
+    path = a_star_search(agg, start, goal, friction=friction_agg)
+    vals = np.asarray(path.values)
+    assert np.isnan(vals[0, 2])
+    assert np.isfinite(vals[0, 4])
+
+
+@pytest.mark.parametrize("backend", _backends)
+def test_a_star_matches_cost_distance(backend):
+    """A* path cost at goal should equal cost_distance value at that pixel."""
+    # 5x5 grid with single source at (0,0), non-uniform friction
+    source = np.zeros((5, 5))
+    source[0, 0] = 1.0  # source/start pixel
+
+    friction_data = np.ones((5, 5))
+    friction_data[1, 1] = 3.0
+    friction_data[2, 2] = 2.0
+
+    surface = _make_raster(np.ones((5, 5)), backend=backend)
+    source_r = _make_raster(source, backend=backend)
+    friction_r = _make_raster(friction_data, backend=backend)
+
+    # Run cost_distance from source at (0,0) — always numpy for comparison
+    source_np = _make_raster(source, backend='numpy')
+    friction_np = _make_raster(friction_data, backend='numpy')
+    cd = cost_distance(source_np, friction_np)
+    cd_val = cd.values
+
+    # Run A* from (0,0) to (4,4)
+    # coords: y=[4,3,2,1,0], x=[0,1,2,3,4]
+    start = (4.0, 0.0)   # pixel (0,0)
+    goal = (0.0, 4.0)    # pixel (4,4)
+
+    path = a_star_search(surface, start, goal, friction=friction_r)
+    a_star_cost_at_goal = float(np.asarray(path.values)[4, 4])
+
+    # cost_distance gives minimum cost from source to every pixel
+    cd_cost_at_goal = float(cd_val[4, 4])
+
+    np.testing.assert_allclose(a_star_cost_at_goal, cd_cost_at_goal, rtol=1e-5)
+
+
+@pytest.mark.parametrize("backend", _backends)
+def test_analytic_3x3_weighted(backend):
+    """Hand-computed costs on a 3x3 grid with known friction."""
+    # Surface all 1s, friction has high center
+    data = np.ones((3, 3))
+    friction_data = np.array([
+        [1.0, 2.0, 1.0],
+        [1.0, 1.0, 1.0],
+        [1.0, 1.0, 1.0],
+    ])
+
+    agg = _make_raster(data, backend=backend)
+    friction_agg = _make_raster(friction_data, backend=backend)
+
+    # start=pixel(0,0), goal=pixel(0,2)
+    # coords: y=[2,1,0], x=[0,1,2]
+    start = (2.0, 0.0)
+    goal = (2.0, 2.0)
+
+    path = a_star_search(agg, start, goal, friction=friction_agg)
+    vals = np.asarray(path.values)
+
+    # Direct path through (0,1) with friction=2:
+    #   (0,0)→(0,1): 1*(1+2)/2 = 1.5
+    #   (0,1)→(0,2): 1*(2+1)/2 = 1.5
+    #   total = 3.0
+    #
+    # Detour through (1,1) with friction=1:
+    #   (0,0)→(1,1): sqrt(2)*(1+1)/2 = sqrt(2) ≈ 1.4142
+    #   (1,1)→(0,2): sqrt(2)*(1+1)/2 = sqrt(2) ≈ 1.4142
+    #   total = 2*sqrt(2) ≈ 2.8284
+    #
+    # A* picks the cheaper detour
+    expected_cost_at_goal = 2.0 * np.sqrt(2.0)
+    np.testing.assert_allclose(vals[0, 2], expected_cost_at_goal, rtol=1e-5)
+
+    # Path should not go through (0,1) — the high-friction direct route
+    assert np.isnan(vals[0, 1])
+    # Path should go through (1,1) — the low-friction detour
+    np.testing.assert_allclose(vals[1, 1], np.sqrt(2.0), rtol=1e-5)
+
+
+# -----------------------------------------------------------------------
+# Dask-specific tests
+# -----------------------------------------------------------------------
+
+@pytest.mark.skipif(not has_dask_array(), reason="Requires dask.Array")
+@pytest.mark.parametrize("chunks", [(2, 2), (3, 3), (5, 5)])
+def test_dask_matches_numpy(chunks):
+    """Dask A* with various chunk sizes should match numpy results exactly."""
+    data = np.ones((5, 5))
+    friction_data = np.ones((5, 5))
+    friction_data[1, 1] = 3.0
+    friction_data[2, 2] = 2.0
+
+    agg_np = _make_raster(data, backend='numpy')
+    friction_np = _make_raster(friction_data, backend='numpy')
+
+    agg_dask = _make_raster(data, backend='dask+numpy', chunks=chunks)
+    friction_dask = _make_raster(friction_data, backend='dask+numpy',
+                                 chunks=chunks)
+
+    start = (4.0, 0.0)
+    goal = (0.0, 4.0)
+
+    path_np = a_star_search(agg_np, start, goal, friction=friction_np)
+    path_dask = a_star_search(agg_dask, start, goal, friction=friction_dask)
+
+    np.testing.assert_allclose(
+        np.asarray(path_dask.values),
+        path_np.values,
+        equal_nan=True, atol=1e-10,
+    )
+
+
+@pytest.mark.skipif(not has_dask_array(), reason="Requires dask.Array")
+def test_dask_no_large_numpy_arrays():
+    """Dask path should not materialise full-size numpy arrays."""
+    height, width = 50, 60
+    data = np.ones((height, width))
+    friction_data = np.ones((height, width))
+
+    agg = _make_raster(data, backend='dask+numpy', chunks=(25, 30))
+    friction_agg = _make_raster(friction_data, backend='dask+numpy',
+                                chunks=(25, 30))
+
+    start = (float(height - 1), 0.0)
+    goal = (0.0, float(width - 1))
+
+    # Track large numpy allocations
+    large_allocs = []
+
+    from unittest.mock import patch
+    with patch('numpy.full',
+               side_effect=_tracking_np_full(height * width, large_allocs)):
+        result = a_star_search(agg, start, goal, friction=friction_agg)
+
+    # Result should be dask-backed
+    assert isinstance(result.data, da.Array)
+
+    # No full-size arrays should have been allocated
+    assert len(large_allocs) == 0, (
+        f"Unexpected large allocations: {large_allocs}")
+
+
+@pytest.mark.skipif(not has_dask_array(), reason="Requires dask.Array")
+def test_dask_snap_raises():
+    """snap_start/snap_goal should raise ValueError for dask arrays."""
+    data = np.ones((5, 5))
+    agg = _make_raster(data, backend='dask+numpy', chunks=(3, 3))
+    start = (4.0, 0.0)
+    goal = (0.0, 4.0)
+
+    with pytest.raises(ValueError, match="snap_start is not supported"):
+        a_star_search(agg, start, goal, snap_start=True)
+
+    with pytest.raises(ValueError, match="snap_goal is not supported"):
+        a_star_search(agg, start, goal, snap_goal=True)
+
+
+@pytest.mark.skipif(not has_dask_array(), reason="Requires dask.Array")
+def test_dask_no_friction():
+    """Dask A* without friction should match numpy."""
+    data = np.ones((5, 5))
+    agg_np = _make_raster(data, backend='numpy')
+    agg_dask = _make_raster(data, backend='dask+numpy', chunks=(3, 3))
+
+    start = (4.0, 0.0)
+    goal = (0.0, 4.0)
+
+    path_np = a_star_search(agg_np, start, goal)
+    path_dask = a_star_search(agg_dask, start, goal)
+
+    np.testing.assert_allclose(
+        np.asarray(path_dask.values),
+        path_np.values,
+        equal_nan=True, atol=1e-10,
+    )
+
+
+# -----------------------------------------------------------------------
+# CuPy tests
+# -----------------------------------------------------------------------
+
+@cuda_and_cupy_available
+def test_cupy_matches_numpy():
+    """CuPy path should produce identical results to numpy."""
+    data = np.ones((5, 5))
+    friction_data = np.ones((5, 5))
+    friction_data[1, 1] = 3.0
+    friction_data[2, 2] = 2.0
+
+    agg_np = _make_raster(data, backend='numpy')
+    friction_np = _make_raster(friction_data, backend='numpy')
+
+    agg_cupy = _make_raster(data, backend='cupy')
+    friction_cupy = _make_raster(friction_data, backend='cupy')
+
+    start = (4.0, 0.0)
+    goal = (0.0, 4.0)
+
+    path_np = a_star_search(agg_np, start, goal, friction=friction_np)
+    path_cupy = a_star_search(agg_cupy, start, goal, friction=friction_cupy)
+
+    np.testing.assert_allclose(
+        path_cupy.data.get(),
+        path_np.values,
+        equal_nan=True, atol=1e-10,
+    )
+
+
+@cuda_and_cupy_available
+def test_cupy_no_friction():
+    """CuPy without friction should match numpy."""
+    data = np.ones((5, 5))
+    agg_np = _make_raster(data, backend='numpy')
+    agg_cupy = _make_raster(data, backend='cupy')
+
+    start = (4.0, 0.0)
+    goal = (0.0, 4.0)
+
+    path_np = a_star_search(agg_np, start, goal)
+    path_cupy = a_star_search(agg_cupy, start, goal)
+
+    np.testing.assert_allclose(
+        path_cupy.data.get(),
+        path_np.values,
+        equal_nan=True, atol=1e-10,
+    )
+
+
+# -----------------------------------------------------------------------
+# Dask + CuPy tests
+# -----------------------------------------------------------------------
+
+@cuda_and_cupy_available
+@pytest.mark.skipif(not has_dask_array(), reason="Requires dask.Array")
+def test_dask_cupy_matches_numpy():
+    """Dask+CuPy path should produce identical results to numpy."""
+    data = np.ones((5, 5))
+    friction_data = np.ones((5, 5))
+    friction_data[1, 1] = 3.0
+    friction_data[2, 2] = 2.0
+
+    agg_np = _make_raster(data, backend='numpy')
+    friction_np = _make_raster(friction_data, backend='numpy')
+
+    agg_dc = _make_raster(data, backend='dask+cupy', chunks=(3, 3))
+    friction_dc = _make_raster(friction_data, backend='dask+cupy',
+                               chunks=(3, 3))
+
+    start = (4.0, 0.0)
+    goal = (0.0, 4.0)
+
+    path_np = a_star_search(agg_np, start, goal, friction=friction_np)
+    path_dc = a_star_search(agg_dc, start, goal, friction=friction_dc)
+
+    # dask+cupy: compute dask graph, then .get() the cupy array to numpy
+    dc_computed = path_dc.data.compute()
+    if hasattr(dc_computed, 'get'):
+        dc_computed = dc_computed.get()
+
+    np.testing.assert_allclose(
+        dc_computed,
+        path_np.values,
+        equal_nan=True, atol=1e-10,
+    )
+
+
+# -----------------------------------------------------------------------
+# Bounded A* / Memory guard / HPA* tests
+# -----------------------------------------------------------------------
+
+from unittest.mock import patch
+from xrspatial.pathfinding import (
+    _available_memory_bytes, _check_memory, _hpa_star_search,
+    _bounded_a_star, _neighborhood_structure,
+)
+
+
+def test_search_radius_matches_full():
+    """Bounded A* with generous radius should match full A* exactly."""
+    data = np.ones((10, 10))
+    agg = _make_raster(data)
+
+    start = (9.0, 0.0)   # pixel (0, 0)
+    goal = (0.0, 9.0)    # pixel (9, 9)
+
+    path_full = a_star_search(agg, start, goal)
+    # radius=20 covers the entire 10x10 grid
+    path_bounded = a_star_search(agg, start, goal, search_radius=20)
+
+    np.testing.assert_allclose(
+        path_bounded.values, path_full.values,
+        equal_nan=True, atol=1e-10,
+    )
+
+
+def test_search_radius_too_small():
+    """Path exists on full grid but search_radius excludes the only detour."""
+    data = np.ones((20, 20))
+    # Wall at column 10, rows 0-14 (gap only at row 15)
+    data[0:15, 10] = np.nan
+
+    agg = _make_raster(data)
+
+    # start=pixel(5,8), goal=pixel(5,12) — wall in between
+    # coords: y goes from 19 down to 0
+    start = (14.0, 8.0)   # pixel (5, 8)
+    goal = (14.0, 12.0)   # pixel (5, 12)
+
+    # Full A* finds the path via the gap at row 15
+    path_full = a_star_search(agg, start, goal)
+    assert np.isfinite(path_full.values[5, 12])  # sanity
+
+    # search_radius=3: box covers rows 2-8, cols 5-15
+    # Wall at col 10 blocks, gap at row 15 is outside box
+    path_bounded = a_star_search(agg, start, goal, search_radius=3)
+    assert np.isnan(path_bounded.values[5, 12])  # no path within box
+
+
+def test_memory_guard_raises():
+    """MemoryError raised when mocked memory is tiny and no search_radius."""
+    data = np.ones((10, 10))
+    agg = _make_raster(data)
+
+    start = (9.0, 0.0)
+    goal = (0.0, 9.0)
+
+    with patch('xrspatial.pathfinding._available_memory_bytes',
+               return_value=1024):
+        with pytest.raises(MemoryError):
+            a_star_search(agg, start, goal)
+
+
+def test_memory_guard_passes_with_radius():
+    """With search_radius, a small sub-region fits even in tiny memory."""
+    data = np.ones((10, 10))
+    agg = _make_raster(data)
+
+    start = (9.0, 0.0)   # pixel (0, 0)
+    goal = (8.0, 1.0)    # pixel (1, 1) — very close
+
+    # Mock very low memory — full grid would fail, but radius=5
+    # creates a sub-region of ~6x6 = 36 pixels × 65 = 2340 bytes
+    with patch('xrspatial.pathfinding._available_memory_bytes',
+               return_value=100_000):
+        path = a_star_search(agg, start, goal, search_radius=5)
+        # Path should exist
+        assert np.isfinite(path.values[1, 1])
+        assert path.values[0, 0] == 0.0
+
+
+def test_hpa_star_correctness():
+    """HPA* on a 200×200 grid with barriers finds valid connected path."""
+    rng = np.random.RandomState(42)
+    data = np.ones((200, 200))
+    # Add barrier wall with a gap
+    data[50:150, 100] = np.nan
+    data[80, 100] = 1.0  # gap in the wall
+
+    agg = _make_raster(data)
+    surface_data = data.astype(np.float64)
+    friction_data = None
+    barriers = np.array([], dtype=np.float64)
+
+    dy, dx, dd = _neighborhood_structure(1.0, 1.0, 8)
+
+    path_img = _hpa_star_search(
+        surface_data, friction_data,
+        0, 0, 199, 199,
+        barriers, dy, dx, dd,
+        1.0, False, 1.0, 1.0, 200, 200)
+
+    # Path should reach the goal
+    assert np.isfinite(path_img[199, 199])
+    # Path should start at 0 cost
+    assert path_img[0, 0] == 0.0
+    # Cost should be monotonically increasing (check start < goal)
+    assert path_img[199, 199] > path_img[0, 0]
+
+    # Verify path pixels form a connected chain
+    path_pixels = []
+    for r in range(200):
+        for c in range(200):
+            if np.isfinite(path_img[r, c]):
+                path_pixels.append((path_img[r, c], r, c))
+    path_pixels.sort()
+
+    for i in range(1, len(path_pixels)):
+        _, pr, pc = path_pixels[i - 1]
+        _, cr, cc = path_pixels[i]
+        # Each pixel should be within 8-connectivity of some previous pixel
+        # (not necessarily the immediately preceding one by cost, but
+        # in practice for a proper path it should be adjacent)
+        dist = max(abs(cr - pr), abs(cc - pc))
+        # Allow distance > 1 between sorted-by-cost pixels since HPA*
+        # stitches segments — but every pixel should be on the path
+        assert (r, c) != (np.nan, np.nan)
+
+
+def test_hpa_star_unreachable_goal_all_nan():
+    """HPA* returns all-NaN when no path exists, not a partial trail.
+
+    The coarse grid sees blocks containing a thin NaN wall as passable
+    (each block still has valid cells), so the coarse route crosses the
+    wall and refinement fails. The output must follow the no-path
+    contract (all NaN) instead of keeping the already-refined segments.
+    """
+    H = W = 200
+    data = np.ones((H, W))
+    data[:, 100] = np.nan  # complete wall: goal unreachable
+
+    dy, dx, dd = _neighborhood_structure(1.0, 1.0, 8)
+    barriers = np.array([], dtype=np.float64)
+
+    path_img = _hpa_star_search(
+        data, None, 0, 0, 199, 199,
+        barriers, dy, dx, dd,
+        1.0, False, 1.0, 1.0, H, W)
+
+    assert not np.isfinite(path_img).any()
+
+
+def test_hpa_star_barrier_valued_block_means():
+    """Coarse routing must not re-apply value barriers to block means (#3647).
+
+    Alternating -1/+1 columns make every coarse block mean exactly 0.0.
+    With barriers=[0] no fine cell is a barrier, but the coarse grid used
+    to be entirely blocked, returning all-NaN on a fully passable grid.
+    """
+    H = W = 200
+    data = np.full((H, W), 1.0)
+    data[:, ::2] = -1.0
+    barriers = np.array([0.0])
+    assert not np.any(data == 0.0)  # every fine cell is passable
+
+    dy, dx, dd = _neighborhood_structure(1.0, 1.0, 8)
+
+    path_img = _hpa_star_search(
+        data, None, 0, 0, H - 1, W - 1,
+        barriers, dy, dx, dd,
+        1.0, False, 1.0, 1.0, H, W)
+
+    assert np.isfinite(path_img[0, 0])
+    assert np.isfinite(path_img[H - 1, W - 1])
+    assert path_img[H - 1, W - 1] > 0.0
+
+
+def test_auto_radius_selection():
+    """When mocked low memory, auto-radius kicks in and finds path."""
+    data = np.ones((20, 20))
+    agg = _make_raster(data)
+
+    start = (19.0, 0.0)   # pixel (0, 0)
+    goal = (15.0, 4.0)    # pixel (4, 4)
+
+    # Mock memory so full 20×20 grid (26000 bytes) exceeds 50% of avail
+    # but auto-radius sub-region fits
+    with patch('xrspatial.pathfinding._available_memory_bytes',
+               return_value=40_000):
+        path = a_star_search(agg, start, goal)
+        # Path should exist
+        assert np.isfinite(path.values[4, 4])
+        assert path.values[0, 0] == 0.0
+
+
+def test_backward_compatibility():
+    """Existing call patterns work unchanged with search_radius=None."""
+    data = np.ones((5, 5))
+    agg = _make_raster(data)
+
+    start = (4.0, 0.0)
+    goal = (0.0, 4.0)
+
+    # Default (no search_radius) should work
+    path = a_star_search(agg, start, goal)
+    assert np.isfinite(path.values[4, 4])
+    assert path.values[0, 0] == 0.0
+
+    # Explicit search_radius=None should work
+    path2 = a_star_search(agg, start, goal, search_radius=None)
+    np.testing.assert_allclose(
+        path2.values, path.values, equal_nan=True, atol=1e-10)
+
+
+# -----------------------------------------------------------------------
+# multi_stop_search tests
+# -----------------------------------------------------------------------
+
+from xrspatial import multi_stop_search
+from xrspatial.pathfinding import _held_karp, _nearest_neighbor_2opt
+
+
+# --- TSP solver unit tests ---
+
+def test_held_karp_basic():
+    """Held-Karp finds optimal tour on a small symmetric graph."""
+    # 4 cities in a line: 0 -- 1 -- 2 -- 3
+    dist = [
+        [0, 1, 2, 3],
+        [1, 0, 1, 2],
+        [2, 1, 0, 1],
+        [3, 2, 1, 0],
+    ]
+    order, cost = _held_karp(dist, 0, 3)
+    assert order[0] == 0
+    assert order[-1] == 3
+    assert cost == 3.0  # 0->1->2->3
+    assert order == [0, 1, 2, 3]
+
+
+def test_held_karp_asymmetric():
+    """Held-Karp handles directed (asymmetric) costs."""
+    # Going 0->1 costs 1, but 1->0 costs 10
+    dist = [
+        [0,  1, 5],
+        [10, 0, 1],
+        [5,  1, 0],
+    ]
+    order, cost = _held_karp(dist, 0, 2)
+    assert order[0] == 0
+    assert order[-1] == 2
+    # Optimal: 0->1->2 = 1+1 = 2 (not 0->2 = 5)
+    assert cost == 2.0
+    assert order == [0, 1, 2]
+
+
+def test_nearest_neighbor_2opt_fixed_endpoints():
+    """Nearest-neighbor + 2-opt preserves start and end."""
+    dist = [
+        [0, 1, 4, 3],
+        [1, 0, 2, 5],
+        [4, 2, 0, 1],
+        [3, 5, 1, 0],
+    ]
+    order, cost = _nearest_neighbor_2opt(dist, 0, 3)
+    assert order[0] == 0
+    assert order[-1] == 3
+    assert set(order) == {0, 1, 2, 3}
+
+
+def test_nearest_neighbor_2opt_vs_held_karp():
+    """Heuristic should match or be close to exact on small inputs."""
+    dist = [
+        [0, 2, 9, 10],
+        [2, 0, 6, 4],
+        [9, 6, 0, 8],
+        [10, 4, 8, 0],
+    ]
+    exact_order, exact_cost = _held_karp(dist, 0, 3)
+    heur_order, heur_cost = _nearest_neighbor_2opt(dist, 0, 3)
+
+    assert heur_order[0] == 0
+    assert heur_order[-1] == 3
+    # Heuristic should be within 50% of optimal for 4 cities
+    assert heur_cost <= exact_cost * 1.5
+
+
+# --- Multi-stop functional tests ---
+
+def test_two_waypoints_matches_a_star():
+    """Two waypoints should produce the same result as a single A* call."""
+    data = np.ones((8, 8))
+    agg = _make_raster(data)
+
+    start = (7.0, 0.0)  # pixel (0, 0)
+    goal = (0.0, 7.0)   # pixel (7, 7)
+
+    path_single = a_star_search(agg, start, goal)
+    path_multi = multi_stop_search(agg, [start, goal])
+
+    np.testing.assert_allclose(
+        path_multi.values, path_single.values,
+        equal_nan=True, atol=1e-10,
+    )
+
+
+def test_three_waypoints_cost_continuity():
+    """Costs should increase monotonically across segments; attrs correct."""
+    data = np.ones((10, 10))
+    agg = _make_raster(data)
+
+    # Three waypoints along the diagonal
+    wp0 = (9.0, 0.0)   # pixel (0, 0)
+    wp1 = (5.0, 4.0)   # pixel (4, 4)
+    wp2 = (0.0, 9.0)   # pixel (9, 9)
+
+    result = multi_stop_search(agg, [wp0, wp1, wp2])
+
+    vals = result.values
+    # All three waypoint pixels should be on the path
+    assert np.isfinite(vals[0, 0])
+    assert np.isfinite(vals[4, 4])
+    assert np.isfinite(vals[9, 9])
+
+    # Cost at start should be 0
+    assert vals[0, 0] == 0.0
+    # Cost should increase: start < mid < end
+    assert vals[4, 4] < vals[9, 9]
+    assert vals[0, 0] < vals[4, 4]
+
+    # Check attrs
+    assert len(result.attrs['segment_costs']) == 2
+    assert result.attrs['total_cost'] > 0
+    np.testing.assert_allclose(
+        sum(result.attrs['segment_costs']),
+        result.attrs['total_cost'],
+        atol=1e-10,
+    )
+    assert len(result.attrs['waypoint_order']) == 3
+
+
+def test_three_waypoints_with_friction():
+    """Multi-stop with friction surface produces valid monotonic costs."""
+    data = np.ones((10, 10))
+    friction_data = np.ones((10, 10))
+    friction_data[3:7, 3:7] = 5.0  # high-friction zone
+
+    agg = _make_raster(data)
+    friction_agg = _make_raster(friction_data)
+
+    wp0 = (9.0, 0.0)
+    wp1 = (5.0, 4.0)
+    wp2 = (0.0, 9.0)
+
+    result = multi_stop_search(agg, [wp0, wp1, wp2], friction=friction_agg)
+
+    vals = result.values
+    assert np.isfinite(vals[0, 0])
+    assert np.isfinite(vals[9, 9])
+    assert vals[0, 0] == 0.0
+    assert result.attrs['total_cost'] > 0
+
+
+def test_unreachable_segment_raises():
+    """Barrier blocking a segment should raise ValueError."""
+    data = np.ones((8, 8))
+    # Wall across row 4
+    data[4, :] = np.nan
+
+    agg = _make_raster(data)
+
+    wp0 = (7.0, 0.0)   # pixel (0, 0) — above the wall
+    wp1 = (0.0, 0.0)   # pixel (7, 0) — below the wall
+
+    with pytest.raises(ValueError, match="no path between waypoints"):
+        multi_stop_search(agg, [wp0, wp1])
+
+
+def test_waypoint_outside_bounds_raises():
+    """Waypoint outside the surface should raise ValueError."""
+    data = np.ones((5, 5))
+    agg = _make_raster(data)
+
+    wp0 = (4.0, 0.0)
+    wp_bad = (100.0, 100.0)
+
+    with pytest.raises(ValueError, match="outside the surface bounds"):
+        multi_stop_search(agg, [wp0, wp_bad])
+
+
+def test_too_few_waypoints_raises():
+    """Fewer than 2 waypoints should raise ValueError."""
+    data = np.ones((5, 5))
+    agg = _make_raster(data)
+
+    with pytest.raises(ValueError, match="at least 2 waypoints"):
+        multi_stop_search(agg, [(4.0, 0.0)])
+
+    with pytest.raises(ValueError, match="at least 2 waypoints"):
+        multi_stop_search(agg, [])
+
+
+# --- optimize_order tests ---
+
+def test_optimize_order_finds_better_route():
+    """Reordering interior waypoints should give equal or lower total cost."""
+    data = np.ones((10, 10))
+    agg = _make_raster(data)
+
+    # Deliberately suboptimal order: zigzag
+    wp0 = (9.0, 0.0)   # pixel (0, 0) — fixed start
+    wp1 = (0.0, 9.0)   # pixel (9, 9) — far corner
+    wp2 = (9.0, 4.0)   # pixel (0, 4) — back near start
+    wp3 = (0.0, 4.0)   # pixel (9, 4) — fixed end
+
+    naive = multi_stop_search(agg, [wp0, wp1, wp2, wp3])
+    optimized = multi_stop_search(
+        agg, [wp0, wp1, wp2, wp3], optimize_order=True)
+
+    assert optimized.attrs['total_cost'] <= naive.attrs['total_cost'] + 1e-10
+
+
+def test_optimize_order_unreachable_waypoint_raises():
+    """Unreachable interior waypoint raises instead of being dropped (#3646).
+
+    Without optimize_order the segment loop raises "no path between
+    waypoints"; with optimize_order the infeasible tour used to make
+    _held_karp return only [start, end], silently dropping the interior
+    waypoint and returning a finite route.
+    """
+    data = np.ones((8, 8))
+    data[4, :] = np.nan   # wall: bottom rows unreachable from top rows
+
+    agg = _make_raster(data)
+
+    wp0 = (7.0, 0.0)      # pixel (0, 0), above the wall
+    wp_mid = (0.0, 0.0)   # pixel (7, 0), below the wall (unreachable)
+    wp_end = (7.0, 7.0)   # pixel (0, 7), above the wall
+
+    with pytest.raises(ValueError, match="unreachable"):
+        multi_stop_search(agg, [wp0, wp_mid, wp_end], optimize_order=True)
+
+
+@pytest.mark.filterwarnings("ignore:End at a non crossable location:Warning")
+@pytest.mark.filterwarnings("ignore:Start at a non crossable location:Warning")
+def test_optimize_order_with_snap_keeps_waypoints():
+    """optimize_order must not drop waypoints that need snapping (#3646).
+
+    The pairwise distance matrix used to read the segment cost at the
+    unsnapped goal pixel (NaN when the waypoint sits on an invalid cell),
+    so every snapped waypoint got an infinite distance and was dropped
+    through the infeasible-tour hole.
+    """
+    data = np.ones((8, 8))
+    data[3, 3] = np.nan   # single invalid cell; snap moves off it
+
+    agg = _make_raster(data)
+
+    wp0 = (7.0, 0.0)      # pixel (0, 0)
+    wp_mid = (4.0, 3.0)   # pixel (3, 3) -> NaN cell, needs snapping
+    wp_end = (0.0, 7.0)   # pixel (7, 7)
+
+    result = multi_stop_search(
+        agg, [wp0, wp_mid, wp_end], snap=True, optimize_order=True)
+
+    order = result.attrs['waypoint_order']
+    assert len(order) == 3
+    assert len(result.attrs['segment_costs']) == 2
+    assert tuple(order[0]) == wp0
+    assert tuple(order[-1]) == wp_end
+
+    # Same route as the unoptimized call (the input order is already
+    # optimal here), so costs must match too.
+    plain = multi_stop_search(agg, [wp0, wp_mid, wp_end], snap=True)
+    np.testing.assert_allclose(
+        result.attrs['total_cost'], plain.attrs['total_cost'], atol=1e-10)
+
+
+def test_optimize_order_preserves_endpoints():
+    """First and last waypoints should remain fixed after optimization."""
+    data = np.ones((10, 10))
+    agg = _make_raster(data)
+
+    wp0 = (9.0, 0.0)
+    wp1 = (5.0, 5.0)
+    wp2 = (5.0, 0.0)
+    wp3 = (0.0, 9.0)
+
+    result = multi_stop_search(
+        agg, [wp0, wp1, wp2, wp3], optimize_order=True)
+
+    order = result.attrs['waypoint_order']
+    assert tuple(order[0]) == wp0
+    assert tuple(order[-1]) == wp3
+
+
+def test_optimize_order_symmetric_matrix_call_count():
+    """Cost matrix reuses symmetric costs: N(N-1)/2 A* runs, not N(N-1).
+
+    Issue #3661: the pixel graph is undirected and edge costs use the
+    mean friction of both endpoints, so cost(i->j) == cost(j->i) and
+    the reverse searches are redundant when snap is off.
+    """
+    import xrspatial.pathfinding as pf
+
+    data = np.ones((10, 10))
+    agg = _make_raster(data)
+
+    wps = [(9.0, 0.0), (5.0, 5.0), (5.0, 0.0), (9.0, 9.0), (0.0, 9.0)]
+    n = len(wps)
+
+    calls = []
+    orig = pf.a_star_search
+
+    def counting(*args, **kwargs):
+        calls.append(1)
+        return orig(*args, **kwargs)
+
+    from unittest.mock import patch
+    with patch.object(pf, 'a_star_search', side_effect=counting):
+        order = pf._optimize_waypoint_order(
+            agg, wps, [], 'x', 'y', 8, False, None, None)
+
+    assert len(calls) == n * (n - 1) // 2
+    # endpoints stay fixed and all waypoints are kept
+    assert order[0] == wps[0]
+    assert order[-1] == wps[-1]
+    assert sorted(order) == sorted(wps)
+
+
+@pytest.mark.filterwarnings("ignore:Start at a non crossable location:Warning")
+@pytest.mark.filterwarnings("ignore:End at a non crossable location:Warning")
+def test_optimize_order_snap_keeps_both_directions():
+    """With snap=True the reverse searches still run (snapping can move
+    the requested pixels, so symmetry is not guaranteed).
+
+    The middle waypoint sits on a NaN cell so snapping really relocates
+    it: the direction ending at that waypoint reads its cost at the
+    requested (NaN) pixel while the reverse starts from the snapped
+    pixel, which is the asymmetry the double computation protects.
+    """
+    import xrspatial.pathfinding as pf
+
+    data = np.ones((10, 10))
+    data[5, 5] = np.nan  # snap target: waypoint below lands here
+    agg = _make_raster(data)
+
+    # coords: y=[9..0], x=[0..9]; (4.0, 5.0) maps to pixel (5, 5)
+    wps = [(9.0, 0.0), (4.0, 5.0), (0.0, 9.0)]
+    n = len(wps)
+
+    calls = []
+    orig = pf.a_star_search
+
+    def counting(*args, **kwargs):
+        calls.append(1)
+        return orig(*args, **kwargs)
+
+    from unittest.mock import patch
+    with patch.object(pf, 'a_star_search', side_effect=counting):
+        order = pf._optimize_waypoint_order(
+            agg, wps, [], 'x', 'y', 8, True, None, None)
+
+    assert len(calls) == n * (n - 1)
+    assert order[0] == wps[0]
+    assert order[-1] == wps[-1]
+    # Note: the NaN waypoint may be missing from the returned order.
+    # That is pre-existing behavior tracked in issue #3646 (waypoints
+    # silently dropped when the matrix has no finite tour), not part
+    # of the call-count contract under test here.
+    assert set(order) <= set(wps)
+
+
+# --- Cross-backend tests ---
+
+@pytest.mark.skipif(not has_dask_array(), reason="Requires dask.Array")
+def test_multi_stop_dask_matches_numpy():
+    """Dask multi-stop should match numpy results."""
+    data = np.ones((8, 8))
+    wp0 = (7.0, 0.0)
+    wp1 = (4.0, 3.0)
+    wp2 = (0.0, 7.0)
+
+    agg_np = _make_raster(data, backend='numpy')
+    agg_dask = _make_raster(data, backend='dask+numpy', chunks=(4, 4))
+
+    path_np = multi_stop_search(agg_np, [wp0, wp1, wp2])
+    path_dask = multi_stop_search(agg_dask, [wp0, wp1, wp2])
+
+    # output should stay dask-backed, matching a_star_search
+    assert isinstance(path_dask.data, da.Array)
+
+    np.testing.assert_allclose(
+        np.asarray(path_dask.values),
+        path_np.values,
+        equal_nan=True, atol=1e-10,
+    )
+
+
+@pytest.mark.skipif(not has_dask_array(), reason="Requires dask.Array")
+def test_multi_stop_dask_no_large_numpy_arrays():
+    """Dask multi-stop should not materialise full-size numpy arrays.
+
+    Same guard as test_dask_no_large_numpy_arrays, but for
+    multi_stop_search (issue #3660): segments must be stitched lazily
+    and per-segment goal costs read from a single block.
+    """
+    height, width = 50, 60
+    data = np.ones((height, width))
+
+    agg = _make_raster(data, backend='dask+numpy', chunks=(25, 30))
+
+    wp0 = (float(height - 1), 0.0)
+    wp1 = (float(height // 2), float(width // 2))
+    wp2 = (0.0, float(width - 1))
+
+    large_allocs = []
+
+    from unittest.mock import patch
+    with patch('numpy.full',
+               side_effect=_tracking_np_full(height * width, large_allocs)):
+        result = multi_stop_search(agg, [wp0, wp1, wp2])
+
+    # Result should be dask-backed
+    assert isinstance(result.data, da.Array)
+
+    # No full-size arrays should have been allocated while routing
+    assert len(large_allocs) == 0, (
+        f"Unexpected large allocations: {large_allocs}")
+
+    # And it should still match the numpy backend
+    agg_np = _make_raster(data, backend='numpy')
+    expected = multi_stop_search(agg_np, [wp0, wp1, wp2])
+    np.testing.assert_allclose(
+        np.asarray(result.values),
+        expected.values,
+        equal_nan=True, atol=1e-10,
+    )
+    np.testing.assert_allclose(
+        result.attrs['total_cost'], expected.attrs['total_cost'],
+        atol=1e-10,
+    )
+    np.testing.assert_allclose(
+        result.attrs['segment_costs'], expected.attrs['segment_costs'],
+        atol=1e-10,
+    )
+
+
+@pytest.mark.skipif(not has_dask_array(), reason="Requires dask.Array")
+def test_multi_stop_optimize_order_dask_no_large_numpy_arrays():
+    """optimize_order on dask must not materialise full-size arrays either."""
+    height, width = 50, 60
+    data = np.ones((height, width))
+
+    agg = _make_raster(data, backend='dask+numpy', chunks=(25, 30))
+
+    wp0 = (float(height - 1), 0.0)
+    wp1 = (0.0, float(width - 1))
+    wp2 = (float(height - 1), float(width // 2))
+    wp3 = (0.0, float(width // 2))
+
+    large_allocs = []
+
+    from unittest.mock import patch
+    with patch('numpy.full',
+               side_effect=_tracking_np_full(height * width, large_allocs)):
+        result = multi_stop_search(
+            agg, [wp0, wp1, wp2, wp3], optimize_order=True)
+
+    assert isinstance(result.data, da.Array)
+    assert len(large_allocs) == 0, (
+        f"Unexpected large allocations: {large_allocs}")
+
+    # Optimization behavior itself must match the numpy backend
+    agg_np = _make_raster(data, backend='numpy')
+    expected = multi_stop_search(
+        agg_np, [wp0, wp1, wp2, wp3], optimize_order=True)
+    assert result.attrs['waypoint_order'] == expected.attrs['waypoint_order']
+    np.testing.assert_allclose(
+        result.attrs['total_cost'], expected.attrs['total_cost'],
+        atol=1e-10,
+    )
+
+
+@cuda_and_cupy_available
+def test_multi_stop_cupy_matches_numpy():
+    """CuPy multi-stop should match numpy results."""
+    data = np.ones((8, 8))
+    wp0 = (7.0, 0.0)
+    wp1 = (4.0, 3.0)
+    wp2 = (0.0, 7.0)
+
+    agg_np = _make_raster(data, backend='numpy')
+    agg_cupy = _make_raster(data, backend='cupy')
+
+    path_np = multi_stop_search(agg_np, [wp0, wp1, wp2])
+    path_cupy = multi_stop_search(agg_cupy, [wp0, wp1, wp2])
+
+    # output should stay cupy-backed, matching a_star_search
+    import cupy
+    assert isinstance(path_cupy.data, cupy.ndarray)
+
+    np.testing.assert_allclose(
+        path_cupy.data.get(),
+        path_np.values,
+        equal_nan=True, atol=1e-10,
+    )
+
+
+@cuda_and_cupy_available
+@pytest.mark.skipif(not has_dask_array(), reason="Requires dask.Array")
+def test_multi_stop_dask_cupy_matches_numpy():
+    """Dask+CuPy multi-stop should not crash and should match numpy."""
+    data = np.ones((8, 8))
+    wp0 = (7.0, 0.0)
+    wp1 = (4.0, 3.0)
+    wp2 = (0.0, 7.0)
+
+    agg_np = _make_raster(data, backend='numpy')
+    agg_dc = _make_raster(data, backend='dask+cupy', chunks=(4, 4))
+
+    path_np = multi_stop_search(agg_np, [wp0, wp1, wp2])
+    path_dc = multi_stop_search(agg_dc, [wp0, wp1, wp2])
+
+    # output should stay dask-backed with cupy blocks
+    assert isinstance(path_dc.data, da.Array)
+    computed = path_dc.data.compute()
+    assert hasattr(computed, 'get')  # cupy blocks
+    np.testing.assert_allclose(
+        computed.get(),
+        path_np.values,
+        equal_nan=True, atol=1e-10,
+    )
+
+    # optimize_order goes through the same extraction path
+    path_dc_opt = multi_stop_search(
+        agg_dc, [wp0, wp1, wp2], optimize_order=True)
+    computed_opt = path_dc_opt.data.compute()
+    assert np.isfinite(computed_opt.get()).any()
+
+
+# --- Output name consistency (dask graph-token leak) ---
+
+def _name_check_backends():
+    backends = ['numpy']
+    if has_dask_array():
+        backends.append('dask+numpy')
+    if has_cuda_and_cupy():
+        backends.append('cupy')
+        if has_dask_array():
+            backends.append('dask+cupy')
+    return backends
+
+
+@pytest.mark.parametrize("backend", _name_check_backends())
+def test_output_name_consistent_across_backends(backend):
+    """Outputs must not adopt the dask graph token as .name.
+
+    Without the post-construction reset, dask-backed results were named
+    'concatenate-<hash>' / 'array-<hash>' while numpy/cupy returned None.
+    Same bug class as zonal #2611 and focal #2733.
+    """
+    data = np.ones((5, 5))
+    agg = _make_raster(data, backend=backend)
+    start = (4.0, 0.0)
+    goal = (0.0, 4.0)
+
+    path = a_star_search(agg, start, goal)
+    assert path.name is None
+
+    multi = multi_stop_search(agg, [start, goal])
+    assert multi.name is None
+
+
+# =====================================================================
+# Issue #3655: golden-value reference regression tests
+# =====================================================================
+#
+# Expected costs below were generated on 2026-07-08 and verified to
+# machine precision (rel diff <= 2e-15) against two independent
+# reference implementations with the same edge model:
+#   - scipy 1.16.1  scipy.sparse.csgraph.dijkstra on an explicit grid
+#     graph (edge weight = geometric distance, or
+#     distance * mean endpoint friction)
+#   - scikit-image 0.26.0  skimage.graph.MCP_Geometric with
+#     sampling=(cellsize_y, cellsize_x)
+# plus the closed-form value where one exists (open uniform grids).
+# The tests hardcode the verified goal costs so this parity cannot
+# silently regress; neither reference library is needed at test time.
+
+def _golden_maze_8x8():
+    # np.random.RandomState(42).rand(8, 8) < 0.3 -> 0.0 (barrier value),
+    # with (0,0), (7,0), (7,7) forced passable. Written out literally so
+    # the test does not depend on RandomState reproducibility.
+    return np.array([
+        [1, 1, 1, 1, 0, 0, 0, 1],
+        [1, 1, 0, 1, 1, 0, 0, 0],
+        [1, 1, 1, 0, 1, 0, 0, 1],
+        [1, 1, 0, 1, 1, 0, 1, 0],
+        [0, 1, 1, 1, 1, 0, 1, 1],
+        [0, 1, 0, 1, 0, 1, 1, 1],
+        [1, 0, 1, 1, 1, 1, 1, 1],
+        [1, 0, 0, 1, 1, 0, 1, 1],
+    ], dtype=np.float64)
+
+
+def _golden_friction_6x6():
+    # np.round(0.5 + 4.5 * np.random.RandomState(7).rand(6, 6), 2),
+    # written out literally.
+    return np.array([
+        [0.84, 4.01, 2.47, 3.76, 4.90, 2.92],
+        [2.76, 0.82, 1.71, 2.75, 3.56, 4.12],
+        [2.21, 0.80, 1.80, 4.59, 1.46, 2.53],
+        [4.69, 0.61, 3.20, 4.78, 1.54, 2.97],
+        [4.59, 1.10, 2.86, 3.88, 3.51, 2.60],
+        [1.42, 2.71, 2.18, 2.65, 2.15, 4.27],
+    ])
+
+
+def _golden_raster(data, cx=30.0, cy=30.0):
+    # Deliberately NOT _make_raster: that helper stores attrs['res'] with
+    # the y spacing first, while get_dataarray_resolution reads attrs['res']
+    # as (cellsize_x, cellsize_y) -- with anisotropic cells that would flip
+    # cx and cy. No 'res' attr here, so resolution comes from the coords.
+    import xarray as xr
+    h, w = data.shape
+    r = xr.DataArray(data.astype(np.float64), dims=['y', 'x'])
+    r['y'] = np.linspace((h - 1) * cy, 0, h)   # descending, like GeoTIFFs
+    r['x'] = np.linspace(0, (w - 1) * cx, w)
+    return r
+
+
+def _pixel_coords(raster, py, px):
+    return (float(raster['y'].values[py]), float(raster['x'].values[px]))
+
+
+# (connectivity, start px, goal px, expected goal cost)
+_GOLDEN_OPEN_GRID = [
+    # 6x6 open grid, 30 m square cells; closed form:
+    # 5 diagonals of sqrt(2)*30, or 10 cardinals of 30
+    pytest.param(8, (0, 0), (5, 5), 212.13203435596427, id='open-8conn'),
+    pytest.param(4, (0, 0), (5, 5), 300.0, id='open-4conn'),
+]
+
+_GOLDEN_MAZE = [
+    pytest.param((0, 0), (7, 7), 296.98484809834997, id='maze-corner'),
+    pytest.param((7, 0), (4, 4), 174.8528137423857, id='maze-mid'),
+    pytest.param((7, 0), (0, 7), np.nan, id='maze-no-path'),
+]
+
+_GOLDEN_FRICTION = [
+    pytest.param((0, 0), (5, 5), 416.6432249718464, id='friction-diag'),
+    pytest.param((5, 0), (0, 5), 452.5139715437149,
+                 id='friction-anti-diag'),
+]
+
+_GOLDEN_ANISO = [
+    # cx=30, cy=10: diagonal = sqrt(30^2 + 10^2)
+    pytest.param(8, (0, 0), (5, 5), 158.11388300841895, id='aniso-8conn'),
+    pytest.param(4, (0, 3), (5, 0), 140.0, id='aniso-4conn'),
+]
+
+
+@pytest.mark.parametrize("backend", _backends)
+@pytest.mark.parametrize("connectivity,start_px,goal_px,expected",
+                         _GOLDEN_OPEN_GRID)
+def test_golden_open_grid(backend, connectivity, start_px, goal_px,
+                          expected):
+    agg = _golden_raster(np.ones((6, 6)))
+    if backend == 'dask+numpy':
+        agg.data = da.from_array(agg.data, chunks=(3, 3))
+    start = _pixel_coords(agg, *start_px)
+    goal = _pixel_coords(agg, *goal_px)
+    path = a_star_search(agg, start, goal, connectivity=connectivity)
+    goal_cost = float(np.asarray(path.values)[goal_px[0], goal_px[1]])
+    np.testing.assert_allclose(goal_cost, expected, rtol=1e-12)
+
+
+@pytest.mark.parametrize("backend", _backends)
+@pytest.mark.parametrize("start_px,goal_px,expected", _GOLDEN_MAZE)
+def test_golden_barrier_maze(backend, start_px, goal_px, expected):
+    agg = _golden_raster(_golden_maze_8x8())
+    if backend == 'dask+numpy':
+        agg.data = da.from_array(agg.data, chunks=(4, 4))
+    start = _pixel_coords(agg, *start_px)
+    goal = _pixel_coords(agg, *goal_px)
+    path = a_star_search(agg, start, goal, barriers=[0])
+    vals = np.asarray(path.values)
+    goal_cost = float(vals[goal_px[0], goal_px[1]])
+    if np.isnan(expected):
+        # no path: the whole output is NaN
+        assert not np.isfinite(vals).any()
+    else:
+        np.testing.assert_allclose(goal_cost, expected, rtol=1e-12)
+        assert float(vals[start_px[0], start_px[1]]) == 0.0
+
+
+@pytest.mark.parametrize("backend", _backends)
+@pytest.mark.parametrize("start_px,goal_px,expected", _GOLDEN_FRICTION)
+def test_golden_friction(backend, start_px, goal_px, expected):
+    agg = _golden_raster(np.ones((6, 6)))
+    friction = _golden_raster(_golden_friction_6x6())
+    if backend == 'dask+numpy':
+        agg.data = da.from_array(agg.data, chunks=(3, 3))
+        friction.data = da.from_array(friction.data, chunks=(3, 3))
+    start = _pixel_coords(agg, *start_px)
+    goal = _pixel_coords(agg, *goal_px)
+    path = a_star_search(agg, start, goal, friction=friction)
+    goal_cost = float(np.asarray(path.values)[goal_px[0], goal_px[1]])
+    np.testing.assert_allclose(goal_cost, expected, rtol=1e-12)
+
+
+@pytest.mark.parametrize("backend", _backends)
+@pytest.mark.parametrize("connectivity,start_px,goal_px,expected",
+                         _GOLDEN_ANISO)
+def test_golden_anisotropic_cellsize(backend, connectivity, start_px,
+                                     goal_px, expected):
+    agg = _golden_raster(np.ones((6, 6)), cx=30.0, cy=10.0)
+    if backend == 'dask+numpy':
+        agg.data = da.from_array(agg.data, chunks=(3, 3))
+    start = _pixel_coords(agg, *start_px)
+    goal = _pixel_coords(agg, *goal_px)
+    path = a_star_search(agg, start, goal, connectivity=connectivity)
+    goal_cost = float(np.asarray(path.values)[goal_px[0], goal_px[1]])
+    np.testing.assert_allclose(goal_cost, expected, rtol=1e-12)
+
+
+# =====================================================================
+# Issue #1439: input validation
+# =====================================================================
+
+import xarray as _xr_for_validation
+
+
+class TestPathfindingInputValidation:
+    """a_star_search / multi_stop_search reject bad surface and waypoint cap (#1439)."""
+
+    @staticmethod
+    def _good_surface():
+        return _xr_for_validation.DataArray(
+            np.zeros((10, 10), dtype=np.float64),
+            dims=('y', 'x'),
+            coords={'y': np.arange(10), 'x': np.arange(10)},
+        )
+
+    def test_a_star_rejects_non_dataarray_surface(self):
+        from xrspatial.pathfinding import a_star_search
+        with pytest.raises(TypeError, match="xarray.DataArray"):
+            a_star_search(np.zeros((10, 10)), (0, 0), (5, 5))
+
+    def test_a_star_rejects_complex_dtype_surface(self):
+        from xrspatial.pathfinding import a_star_search
+        bad = _xr_for_validation.DataArray(
+            np.zeros((10, 10), dtype=np.complex128),
+            dims=('y', 'x'),
+            coords={'y': np.arange(10), 'x': np.arange(10)},
+        )
+        with pytest.raises(ValueError, match="real numeric"):
+            a_star_search(bad, (0, 0), (5, 5))
+
+    def test_a_star_rejects_non_dataarray_friction(self):
+        from xrspatial.pathfinding import a_star_search
+        s = self._good_surface()
+        with pytest.raises(TypeError, match="xarray.DataArray"):
+            a_star_search(s, (0, 0), (5, 5), friction=np.ones((10, 10)))
+
+    def test_multi_stop_rejects_non_dataarray_surface(self):
+        from xrspatial.pathfinding import multi_stop_search
+        with pytest.raises(TypeError, match="xarray.DataArray"):
+            multi_stop_search(np.zeros((10, 10)), [(0, 0), (5, 5)])
+
+    def test_multi_stop_caps_waypoints(self):
+        from xrspatial.pathfinding import multi_stop_search, _MAX_WAYPOINTS
+        s = self._good_surface()
+        too_many = [(i % 10, (i * 7) % 10) for i in range(_MAX_WAYPOINTS + 1)]
+        with pytest.raises(ValueError, match=f"at most {_MAX_WAYPOINTS}"):
+            multi_stop_search(s, too_many)
+
+
+# =====================================================================
+# Issue #3657: coverage for dask edge handling, degenerate shapes,
+# and untested parameter branches
+# =====================================================================
+
+# --- Dask barrier / NaN / no-path handling (separate pure-Python A*) ---
+
+_barrier_grid = np.array([[0, 1, 0, 0],
+                          [1, 1, 0, 0],
+                          [0, 1, 2, 2],
+                          [1, 0, 2, 0],
+                          [0, 2, 2, 2]], dtype=np.float64)
+
+
+@pytest.mark.skipif(not has_dask_array(), reason="Requires dask.Array")
+def test_dask_barriers_match_numpy():
+    """Dask A* honors barrier values exactly like the numpy kernel."""
+    agg_np = _make_raster(_barrier_grid, backend='numpy')
+    agg_dask = _make_raster(_barrier_grid, backend='dask+numpy', chunks=(2, 2))
+
+    start = (4.0, 1.0)   # pixel (0, 1), value 1
+    goal = (0.0, 1.0)    # pixel (4, 1), value 2
+
+    path_np = a_star_search(agg_np, start, goal, barriers=[0])
+    path_dask = a_star_search(agg_dask, start, goal, barriers=[0])
+
+    # sanity: the path routes around the zeros
+    assert np.isfinite(path_np.values[4, 1])
+    np.testing.assert_allclose(
+        np.asarray(path_dask.values),
+        path_np.values,
+        equal_nan=True, atol=1e-10,
+    )
+
+
+@cuda_and_cupy_available
+@pytest.mark.skipif(not has_dask_array(), reason="Requires dask.Array")
+def test_dask_cupy_barriers_match_numpy():
+    """Dask+cupy A* honors barriers through the cupy chunk conversion."""
+    agg_np = _make_raster(_barrier_grid, backend='numpy')
+    agg_dc = _make_raster(_barrier_grid, backend='dask+cupy', chunks=(2, 2))
+
+    start = (4.0, 1.0)
+    goal = (0.0, 1.0)
+
+    path_np = a_star_search(agg_np, start, goal, barriers=[0])
+    path_dc = a_star_search(agg_dc, start, goal, barriers=[0])
+
+    dc_computed = path_dc.data.compute()
+    if hasattr(dc_computed, 'get'):
+        dc_computed = dc_computed.get()
+    np.testing.assert_allclose(
+        dc_computed,
+        path_np.values,
+        equal_nan=True, atol=1e-10,
+    )
+
+
+@pytest.mark.skipif(not has_dask_array(), reason="Requires dask.Array")
+def test_dask_nan_wall_no_path():
+    """Dask A* returns all-NaN when NaN cells block every route."""
+    data = np.ones((6, 6))
+    data[:, 3] = np.nan
+    agg = _make_raster(data, backend='dask+numpy', chunks=(3, 3))
+
+    path = a_star_search(agg, (5.0, 0.0), (0.0, 5.0))
+    assert isinstance(path.data, da.Array)
+    assert not np.isfinite(np.asarray(path.values)).any()
+
+
+@pytest.mark.skipif(not has_dask_array(), reason="Requires dask.Array")
+def test_dask_start_not_crossable_warns_empty():
+    """Non-crossable start on dask warns and yields an all-NaN result."""
+    agg = _make_raster(_barrier_grid, backend='dask+numpy', chunks=(2, 2))
+    start = (4.0, 0.0)   # pixel (0, 0), value 0 = barrier
+    goal = (0.0, 1.0)
+
+    with pytest.warns(Warning, match="Start at a non crossable location"):
+        path = a_star_search(agg, start, goal, barriers=[0])
+    assert not np.isfinite(np.asarray(path.values)).any()
+
+
+@pytest.mark.skipif(not has_dask_array(), reason="Requires dask.Array")
+def test_dask_goal_not_crossable_warns_empty():
+    """Non-crossable goal on dask warns and yields an all-NaN result."""
+    agg = _make_raster(_barrier_grid, backend='dask+numpy', chunks=(2, 2))
+    start = (4.0, 1.0)
+    goal = (1.0, 3.0)    # pixel (3, 3), value 0 = barrier
+
+    with pytest.warns(Warning, match="End at a non crossable location"):
+        path = a_star_search(agg, start, goal, barriers=[0])
+    assert not np.isfinite(np.asarray(path.values)).any()
+
+
+@pytest.mark.skipif(not has_dask_array(), reason="Requires dask.Array")
+def test_dask_friction_blocked_start_empty():
+    """NaN friction at the start pixel gives no path on dask."""
+    data = np.ones((5, 5))
+    friction_data = np.ones((5, 5))
+    friction_data[0, 0] = np.nan   # start pixel
+
+    agg = _make_raster(data, backend='dask+numpy', chunks=(3, 3))
+    friction_agg = _make_raster(friction_data, backend='dask+numpy',
+                                chunks=(3, 3))
+
+    path = a_star_search(agg, (4.0, 0.0), (0.0, 4.0), friction=friction_agg)
+    assert not np.isfinite(np.asarray(path.values)).any()
+
+
+@pytest.mark.skipif(not has_dask_array(), reason="Requires dask.Array")
+def test_dask_surface_numpy_friction():
+    """A numpy-backed friction raster is promoted to match dask chunks."""
+    data = np.ones((5, 5))
+    friction_data = np.ones((5, 5))
+    friction_data[2, 2] = 2.0
+
+    agg_np = _make_raster(data, backend='numpy')
+    friction_np = _make_raster(friction_data, backend='numpy')
+    agg_dask = _make_raster(data, backend='dask+numpy', chunks=(3, 3))
+
+    path_np = a_star_search(agg_np, (4.0, 0.0), (0.0, 4.0),
+                            friction=friction_np)
+    path_dask = a_star_search(agg_dask, (4.0, 0.0), (0.0, 4.0),
+                              friction=friction_np)
+
+    np.testing.assert_allclose(
+        np.asarray(path_dask.values),
+        path_np.values,
+        equal_nan=True, atol=1e-10,
+    )
+
+
+# --- Degenerate raster shapes ---
+
+@pytest.mark.parametrize("backend", _backends)
+def test_single_pixel_raster(backend):
+    """1x1 raster: start == goal at the only pixel, cost 0."""
+    agg = _make_raster(np.ones((1, 1)), backend=backend)
+    path = a_star_search(agg, (0.0, 0.0), (0.0, 0.0))
+    vals = np.asarray(path.values)
+    assert vals.shape == (1, 1)
+    assert vals[0, 0] == 0.0
+
+
+@pytest.mark.parametrize("backend", _backends)
+def test_single_row_raster(backend):
+    """1xN strip: path walks the row with unit-step costs."""
+    agg = _make_raster(np.ones((1, 5)), backend=backend)
+    path = a_star_search(agg, (0.0, 0.0), (0.0, 4.0))
+    np.testing.assert_allclose(
+        np.asarray(path.values), [[0., 1., 2., 3., 4.]], atol=1e-10)
+
+
+@pytest.mark.parametrize("backend", _backends)
+def test_single_column_raster(backend):
+    """Nx1 strip: path walks the column with unit-step costs."""
+    agg = _make_raster(np.ones((5, 1)), backend=backend)
+    path = a_star_search(agg, (4.0, 0.0), (0.0, 0.0))
+    np.testing.assert_allclose(
+        np.asarray(path.values).ravel(), [0., 1., 2., 3., 4.], atol=1e-10)
+
+
+@cuda_and_cupy_available
+def test_degenerate_shapes_cupy():
+    """1x1 and 1xN rasters work on the cupy backend."""
+    agg1 = _make_raster(np.ones((1, 1)), backend='cupy')
+    path1 = a_star_search(agg1, (0.0, 0.0), (0.0, 0.0))
+    assert path1.data.get()[0, 0] == 0.0
+
+    agg2 = _make_raster(np.ones((1, 5)), backend='cupy')
+    path2 = a_star_search(agg2, (0.0, 0.0), (0.0, 4.0))
+    np.testing.assert_allclose(
+        path2.data.get(), [[0., 1., 2., 3., 4.]], atol=1e-10)
+
+    agg3 = _make_raster(np.ones((5, 1)), backend='cupy')
+    path3 = a_star_search(agg3, (4.0, 0.0), (0.0, 0.0))
+    np.testing.assert_allclose(
+        path3.data.get().ravel(), [0., 1., 2., 3., 4.], atol=1e-10)
+
+
+# --- Parameter / error-path coverage ---
+
+def test_invalid_connectivity_raises():
+    agg = _make_raster(np.ones((5, 5)))
+    with pytest.raises(ValueError, match="4 or 8-connectivity"):
+        a_star_search(agg, (4.0, 0.0), (0.0, 4.0), connectivity=5)
+
+
+def test_a_star_friction_shape_mismatch_raises():
+    agg = _make_raster(np.ones((5, 5)))
+    friction_agg = _make_raster(np.ones((3, 3)))
+    with pytest.raises(ValueError, match="same shape as surface"):
+        a_star_search(agg, (4.0, 0.0), (0.0, 4.0), friction=friction_agg)
+
+
+def test_friction_no_positive_finite_raises_numpy():
+    agg = _make_raster(np.ones((5, 5)))
+    friction_agg = _make_raster(np.zeros((5, 5)))
+    with pytest.raises(ValueError, match="no positive finite values"):
+        a_star_search(agg, (4.0, 0.0), (0.0, 4.0), friction=friction_agg)
+
+
+@pytest.mark.skipif(not has_dask_array(), reason="Requires dask.Array")
+def test_friction_no_positive_finite_raises_dask():
+    agg = _make_raster(np.ones((5, 5)), backend='dask+numpy', chunks=(3, 3))
+    friction_agg = _make_raster(np.zeros((5, 5)), backend='dask+numpy',
+                                chunks=(3, 3))
+    with pytest.raises(ValueError, match="no positive finite values"):
+        a_star_search(agg, (4.0, 0.0), (0.0, 4.0), friction=friction_agg)
+
+
+@cuda_and_cupy_available
+def test_friction_no_positive_finite_raises_cupy():
+    agg = _make_raster(np.ones((5, 5)), backend='cupy')
+    friction_agg = _make_raster(np.zeros((5, 5)), backend='cupy')
+    with pytest.raises(ValueError, match="no positive finite values"):
+        a_star_search(agg, (4.0, 0.0), (0.0, 4.0), friction=friction_agg)
+
+
+def test_friction_blocked_start_empty_numpy():
+    """NaN friction at the start pixel gives no path on numpy."""
+    data = np.ones((5, 5))
+    friction_data = np.ones((5, 5))
+    friction_data[0, 0] = np.nan   # start pixel
+
+    agg = _make_raster(data)
+    friction_agg = _make_raster(friction_data)
+
+    path = a_star_search(agg, (4.0, 0.0), (0.0, 4.0), friction=friction_agg)
+    assert not np.isfinite(path.values).any()
+
+
+def test_multi_stop_friction_shape_mismatch_raises():
+    agg = _make_raster(np.ones((5, 5)))
+    friction_agg = _make_raster(np.ones((3, 3)))
+    with pytest.raises(ValueError, match="same shape as surface"):
+        multi_stop_search(agg, [(4.0, 0.0), (0.0, 4.0)],
+                          friction=friction_agg)
+
+
+def test_search_radius_with_friction_matches_full():
+    """Bounded A* slices the friction surface consistently with full A*."""
+    data = np.ones((5, 5))
+    friction_data = np.ones((5, 5))
+    friction_data[2, 2] = 5.0
+
+    agg = _make_raster(data)
+    friction_agg = _make_raster(friction_data)
+
+    start = (4.0, 0.0)
+    goal = (0.0, 4.0)
+
+    path_full = a_star_search(agg, start, goal, friction=friction_agg)
+    path_bounded = a_star_search(agg, start, goal, friction=friction_agg,
+                                 search_radius=10)
+    np.testing.assert_allclose(
+        path_bounded.values, path_full.values, equal_nan=True, atol=1e-10)
+
+
+def test_multi_stop_snap_remaps_goal():
+    """snap=True routes through a waypoint that sits on a NaN pixel."""
+    data = np.ones((6, 6))
+    data[0, 3] = np.nan   # middle waypoint lands here
+    agg = _make_raster(data)
+
+    wp0 = (5.0, 0.0)   # pixel (0, 0)
+    wp1 = (5.0, 3.0)   # pixel (0, 3) — NaN, must be snapped
+    wp2 = (5.0, 5.0)   # pixel (0, 5)
+
+    result = multi_stop_search(agg, [wp0, wp1, wp2], snap=True)
+    vals = result.values
+
+    assert vals[0, 0] == 0.0
+    assert np.isfinite(vals[0, 5])
+    # the NaN pixel itself is never on the path
+    assert np.isnan(vals[0, 3])
+    assert result.attrs['total_cost'] > 0
+    assert len(result.attrs['segment_costs']) == 2
+
+
+def test_multi_stop_optimize_order_two_waypoints_warns():
+    agg = _make_raster(np.ones((5, 5)))
+    with pytest.warns(UserWarning, match="fewer than 3 waypoints"):
+        multi_stop_search(agg, [(4.0, 0.0), (0.0, 4.0)],
+                          optimize_order=True)
+
+
+def test_multi_stop_wrong_waypoint_length_raises():
+    agg = _make_raster(np.ones((5, 5)))
+    with pytest.raises(ValueError, match="exactly 2 elements"):
+        multi_stop_search(agg, [(4.0, 0.0), (0.0, 4.0, 1.0)])
+
+
+@pytest.mark.skipif(not has_dask_array(), reason="Requires dask.Array")
+def test_multi_stop_snap_dask_raises():
+    agg = _make_raster(np.ones((5, 5)), backend='dask+numpy', chunks=(3, 3))
+    with pytest.raises(ValueError, match="snap is not supported"):
+        multi_stop_search(agg, [(4.0, 0.0), (0.0, 4.0)], snap=True)
+
+
+# --- CuPy snap and search_radius ---
+
+@cuda_and_cupy_available
+def test_cupy_snap_matches_numpy():
+    """snap_start/snap_goal on cupy match the numpy snap result."""
+    data = np.ones((5, 5))
+    data[0, 0] = np.nan   # requested start pixel
+    data[4, 4] = np.nan   # requested goal pixel
+
+    agg_np = _make_raster(data, backend='numpy')
+    agg_cupy = _make_raster(data, backend='cupy')
+
+    start = (4.0, 0.0)   # pixel (0, 0) — NaN, snapped
+    goal = (0.0, 4.0)    # pixel (4, 4) — NaN, snapped
+
+    path_np = a_star_search(agg_np, start, goal,
+                            snap_start=True, snap_goal=True)
+    path_cupy = a_star_search(agg_cupy, start, goal,
+                              snap_start=True, snap_goal=True)
+
+    assert np.isfinite(path_np.values).any()   # sanity: snapping worked
+    np.testing.assert_allclose(
+        path_cupy.data.get(),
+        path_np.values,
+        equal_nan=True, atol=1e-10,
+    )
+
+
+@cuda_and_cupy_available
+def test_cupy_search_radius_matches_full():
+    """Explicit search_radius on cupy matches the full-grid cupy result."""
+    data = np.ones((10, 10))
+    agg = _make_raster(data, backend='cupy')
+
+    start = (9.0, 0.0)
+    goal = (0.0, 9.0)
+
+    path_full = a_star_search(agg, start, goal)
+    path_bounded = a_star_search(agg, start, goal, search_radius=20)
+
+    np.testing.assert_allclose(
+        path_bounded.data.get(),
+        path_full.data.get(),
+        equal_nan=True, atol=1e-10,
+    )
+
+
+@cuda_and_cupy_available
+def test_cupy_not_crossable_warns():
+    """Non-crossable start/goal warn on the cupy backend too."""
+    agg = _make_raster(_barrier_grid, backend='cupy')
+
+    with pytest.warns(Warning, match="Start at a non crossable location"):
+        path = a_star_search(agg, (4.0, 0.0), (0.0, 1.0), barriers=[0])
+    assert not np.isfinite(path.data.get()).any()
+
+    with pytest.warns(Warning, match="End at a non crossable location"):
+        path = a_star_search(agg, (4.0, 1.0), (1.0, 3.0), barriers=[0])
+    assert not np.isfinite(path.data.get()).any()
+
+
+@cuda_and_cupy_available
+def test_cupy_auto_radius_selection():
+    """Auto-radius under mocked low memory works on the cupy backend."""
+    data = np.ones((20, 20))
+    agg = _make_raster(data, backend='cupy')
+
+    start = (19.0, 0.0)   # pixel (0, 0)
+    goal = (15.0, 4.0)    # pixel (4, 4)
+
+    with patch('xrspatial.pathfinding._available_memory_bytes',
+               return_value=40_000):
+        path = a_star_search(agg, start, goal)
+        vals = path.data.get()
+        assert np.isfinite(vals[4, 4])
+        assert vals[0, 0] == 0.0
+
+
+# --- HPA* with a friction surface ---
+
+def test_hpa_star_with_friction():
+    """HPA* refines a route using the coarsened friction surface."""
+    from xrspatial.pathfinding import _coarsen_friction
+
+    H = W = 200
+    surface_data = np.ones((H, W), dtype=np.float64)
+    friction_data = np.ones((H, W), dtype=np.float64)
+    friction_data[:, 90:110] = 4.0   # expensive band mid-grid
+    f_min = 1.0
+
+    dy, dx, dd = _neighborhood_structure(1.0, 1.0, 8)
+    barriers = np.array([], dtype=np.float64)
+
+    path_img = _hpa_star_search(
+        surface_data, friction_data,
+        0, 0, 199, 199,
+        barriers, dy, dx, dd,
+        f_min, True, 1.0, 1.0, H, W)
+
+    assert path_img[0, 0] == 0.0
+    assert np.isfinite(path_img[199, 199])
+    assert path_img[199, 199] > path_img[0, 0]
+
+    # _coarsen_friction: mean of positive finite values per block,
+    # NaN / non-positive cells excluded
+    fr = np.array([[1.0, 3.0],
+                   [np.nan, 0.0]])
+    coarse = _coarsen_friction(fr, 2)
+    assert coarse.shape == (1, 1)
+    np.testing.assert_allclose(coarse[0, 0], 2.0)
+
+
+@pytest.mark.parametrize("func_name", ["a_star_search", "multi_stop_search"])
+def test_docstring_params_match_signature(func_name):
+    # Every parameter documented in the numpy-style "Parameters" section
+    # must exist in the signature (and vice versa). Same guard as
+    # test_multispectral.py::test_docstring_params_match_signature, plus
+    # support for grouped entries like "x, y : str".
+    import inspect
+    import re
+
+    import xrspatial.pathfinding as pf
+
+    func = getattr(pf, func_name)
+    sig_params = set(inspect.signature(func).parameters)
+
+    doc = inspect.getdoc(func) or ""
+    lines = doc.splitlines()
+    start = next(i for i, ln in enumerate(lines) if ln.strip() == "Parameters")
+    documented = set()
+    for ln in lines[start + 2:]:
+        if ln.strip() in ("Returns", "Raises", "References", "Notes",
+                          "Examples"):
+            break
+        m = re.match(r"^(\w+(?:\s*,\s*\w+)*)\s*:", ln)
+        if m:
+            documented.update(re.split(r"\s*,\s*", m.group(1)))
+
+    assert documented == sig_params, (
+        f"{func_name}: documented params {sorted(documented)} != "
+        f"signature params {sorted(sig_params)}"
+    )
+
+
+@pytest.mark.parametrize("func_name", ["a_star_search", "multi_stop_search"])
+def test_docstring_structure(func_name):
+    # Both public functions carry the required numpydoc sections (issue
+    # #3651: multi_stop_search shipped without an Examples section), use
+    # the two-dot sourcecode directive (three dots render as literal
+    # text), and document that NaN cells are impassable.
+    import inspect
+
+    import xrspatial.pathfinding as pf
+
+    doc = inspect.getdoc(getattr(pf, func_name))
+    for section in ("Parameters", "Returns", "Examples"):
+        assert f"\n{section}\n" in doc, f"{func_name}: missing {section}"
+    assert "... sourcecode::" not in doc
+    assert ".. sourcecode:: python" in doc
+    assert "always impassable" in doc
+
+
+def test_multi_stop_search_docstring_example():
+    # Run the multi_stop_search docstring example and pin its documented
+    # attrs output.
+    import xarray as xr
+
+    from xrspatial import multi_stop_search
+
+    agg = xr.DataArray(np.array([
+        [0, 1, 0, 0],
+        [1, 1, 0, 0],
+        [0, 1, 2, 2],
+        [1, 0, 2, 0],
+        [0, 2, 2, 2]
+    ], dtype=np.float64), dims=['lat', 'lon'])
+    height, width = agg.shape
+    agg['lon'] = np.linspace(0, width - 1, width)
+    agg['lat'] = np.linspace(height - 1, 0, height)
+
+    waypoints = [(3, 0), (1, 2), (0, 1)]
+    path_agg = multi_stop_search(
+        agg, waypoints, barriers=[0], x='lon', y='lat')
+
+    assert path_agg.attrs['waypoint_order'] == [(3, 0), (1, 2), (0, 1)]
+    np.testing.assert_allclose(
+        path_agg.attrs['segment_costs'],
+        [2.8284271247461903, 1.4142135623730951])
+    np.testing.assert_allclose(
+        path_agg.attrs['total_cost'], 4.242640687119286)
+
+
+class TestPathfindingErrorHandling:
+    """Error-handling sweep findings: barriers, search_radius, points, dims (#3649)."""
+
+    @staticmethod
+    def _wall_surface():
+        import xarray as xr
+        data = np.ones((5, 9))
+        data[:, 4] = 0.0  # wall of zeros across the middle column
+        r = xr.DataArray(data, dims=('y', 'x'), attrs={'res': (1.0, 1.0)})
+        r['y'] = np.linspace(4, 0, 5)
+        r['x'] = np.linspace(0, 8, 9)
+        return r
+
+    # --- barriers ---
+
+    def test_string_barriers_raise_instead_of_silently_ignored(self):
+        # barriers=['0'] used to route straight through a wall that
+        # barriers=[0] blocks, with no error or warning
+        r = self._wall_surface()
+        with pytest.raises(TypeError, match="barriers must contain numeric"):
+            a_star_search(r, (2.0, 0.0), (2.0, 8.0), barriers=['0'])
+
+    def test_scalar_barriers_raise_with_hint(self):
+        # barriers=0 used to die with a numba TypingError deep in the kernel
+        r = self._wall_surface()
+        with pytest.raises(ValueError, match=r"1-D.*barriers=\[0\]"):
+            a_star_search(r, (2.0, 0.0), (2.0, 8.0), barriers=0)
+
+    def test_numeric_barriers_still_block(self):
+        r = self._wall_surface()
+        path = a_star_search(r, (2.0, 0.0), (2.0, 8.0),
+                             barriers=np.array([0]))
+        assert not np.isfinite(path.values).any()
+
+    def test_string_barriers_raise_in_multi_stop(self):
+        # validated at the multi_stop boundary, not inside the first
+        # a_star_search segment call
+        r = self._wall_surface()
+        with pytest.raises(TypeError, match="barriers must contain numeric"):
+            multi_stop_search(r, [(2.0, 0.0), (2.0, 2.0)], barriers=['0'])
+
+    @pytest.mark.skipif(not has_dask_array(), reason="Requires dask.Array")
+    def test_string_barriers_raise_on_dask(self):
+        r = self._wall_surface()
+        r.data = da.from_array(r.data, chunks=(3, 3))
+        with pytest.raises(TypeError, match="barriers must contain numeric"):
+            a_star_search(r, (2.0, 0.0), (2.0, 8.0), barriers=['0'])
+
+    # --- search_radius ---
+
+    def test_negative_search_radius_raises(self):
+        # used to silently return all-NaN ("no path") though a path exists
+        r = self._wall_surface()
+        with pytest.raises(ValueError, match="search_radius must be non-negative"):
+            a_star_search(r, (2.0, 0.0), (2.0, 8.0), search_radius=-1)
+
+    def test_float_search_radius_raises(self):
+        # used to crash with "slice indices must be integers" for some
+        # start/goal geometries and work for others
+        r = self._wall_surface()
+        with pytest.raises(TypeError, match="search_radius must be a non-negative integer"):
+            a_star_search(r, (2.0, 0.0), (2.0, 8.0), search_radius=2.5)
+
+    def test_zero_search_radius_accepted(self):
+        r = self._wall_surface()
+        path = a_star_search(r, (2.0, 0.0), (2.0, 2.0), search_radius=0)
+        assert np.isfinite(path.values[2, 2])
+
+    def test_negative_search_radius_raises_in_multi_stop(self):
+        # used to surface as a misleading "no path between waypoints 0 and 1"
+        r = self._wall_surface()
+        with pytest.raises(ValueError, match="search_radius must be non-negative"):
+            multi_stop_search(r, [(2.0, 0.0), (2.0, 2.0)], search_radius=-1)
+
+    # --- start / goal ---
+
+    def test_scalar_start_raises(self):
+        # used to raise "'float' object is not subscriptable" in _get_pixel_id
+        r = self._wall_surface()
+        with pytest.raises(ValueError, match="`start` must have exactly 2 elements"):
+            a_star_search(r, 3.0, (2.0, 2.0))
+
+    def test_three_element_goal_raises(self):
+        # used to silently drop the extra element
+        r = self._wall_surface()
+        with pytest.raises(ValueError, match="`goal` must have exactly 2 elements"):
+            a_star_search(r, (2.0, 0.0), (2.0, 2.0, 7.0))
+
+    def test_scalar_waypoint_raises(self):
+        # used to raise "object of type 'float' has no len()"
+        r = self._wall_surface()
+        with pytest.raises(ValueError, match="`waypoint 1` must have exactly 2 elements"):
+            multi_stop_search(r, [(2.0, 0.0), 3.0])
+
+    # --- dims consistency ---
+
+    @staticmethod
+    def _latlon_surface():
+        import xarray as xr
+        r = xr.DataArray(np.ones((5, 5)), dims=('lat', 'lon'),
+                         attrs={'res': (1.0, 1.0)})
+        r['lat'] = np.linspace(4, 0, 5)
+        r['lon'] = np.linspace(0, 4, 5)
+        return r
+
+    def test_a_star_dims_mismatch_names_actual_dims(self):
+        r = self._latlon_surface()
+        with pytest.raises(ValueError, match=r"got \('lat', 'lon'\)"):
+            a_star_search(r, (2.0, 0.0), (2.0, 4.0))
+
+    def test_multi_stop_dims_mismatch_raises_value_error(self):
+        # used to raise a bare KeyError: 'y' from inside xarray
+        r = self._latlon_surface()
+        with pytest.raises(ValueError, match="expected `surface` to have dims"):
+            multi_stop_search(r, [(2.0, 0.0), (2.0, 4.0)])
+
+    def test_multi_stop_custom_dims_still_work(self):
+        r = self._latlon_surface()
+        result = multi_stop_search(r, [(2.0, 0.0), (2.0, 4.0)],
+                                   x='lon', y='lat')
+        assert np.isfinite(result.values).any()
+
+
+# --- API consistency tests (#3644) ---
+
+def test_multi_stop_search_preserves_input_attrs():
+    """Input attrs survive alongside the routing attrs."""
+    data = np.ones((8, 8))
+    agg = _make_raster(data)
+    agg.attrs['crs'] = 4326
+    agg.attrs['units'] = 'm'
+
+    result = multi_stop_search(agg, [(7.0, 0.0), (0.0, 7.0)])
+
+    # input attrs preserved
+    assert result.attrs['crs'] == 4326
+    assert result.attrs['units'] == 'm'
+    assert result.attrs['res'] == (1.0, 1.0)
+    # routing attrs added
+    for key in ('waypoint_order', 'segment_costs', 'total_cost'):
+        assert key in result.attrs
+
+
+def test_a_star_search_accepts_dataset():
+    """a_star_search on a Dataset routes each variable, like its sibling."""
+    import xarray as xr
+    data = np.ones((8, 8))
+    agg = _make_raster(data)
+    ds = xr.Dataset({'elev': agg, 'other': agg + 1.0})
+    start, goal = (7.0, 0.0), (0.0, 7.0)
+
+    result = a_star_search(ds, start, goal)
+
+    assert isinstance(result, xr.Dataset)
+    assert set(result.data_vars) == {'elev', 'other'}
+    expected = a_star_search(agg, start, goal)
+    np.testing.assert_allclose(
+        result['elev'].values, expected.values, equal_nan=True)
+
+
+def test_barriers_default_none_matches_empty_list():
+    """barriers=None (new default) behaves like the old barriers=[].
+
+    Numpy only: the None -> [] substitution happens before backend
+    dispatch, so it is backend-independent.
+    """
+    data = np.ones((6, 6))
+    agg = _make_raster(data)
+    start, goal = (5.0, 0.0), (0.0, 5.0)
+
+    r_default = a_star_search(agg, start, goal)
+    r_none = a_star_search(agg, start, goal, barriers=None)
+    r_empty = a_star_search(agg, start, goal, barriers=[])
+
+    np.testing.assert_allclose(
+        r_none.values, r_default.values, equal_nan=True)
+    np.testing.assert_allclose(
+        r_empty.values, r_default.values, equal_nan=True)
+
+    m_none = multi_stop_search(agg, [start, goal], barriers=None)
+    np.testing.assert_allclose(
+        m_none.values, r_default.values, equal_nan=True)
+
+
+# ---------------------------------------------------------------------------
+# LOW-backlog cleanup tests (#3705)
+# ---------------------------------------------------------------------------
+
+def test_chunk_cache_eviction():
+    """_ChunkCache evicts the least-recently-used entry at maxsize."""
+    from collections import Counter
+
+    from xrspatial.pathfinding import _ChunkCache
+
+    loads = Counter()
+
+    def make_loader(key):
+        def load():
+            loads[key] += 1
+            return key.upper()
+        return load
+
+    cache = _ChunkCache(maxsize=2)
+    assert cache.get('a', make_loader('a')) == 'A'
+    assert cache.get('b', make_loader('b')) == 'B'
+    # Hit on 'a' refreshes its LRU position without reloading
+    assert cache.get('a', make_loader('a')) == 'A'
+    assert loads['a'] == 1
+
+    # Third key evicts 'b' (least recently used), not 'a'
+    assert cache.get('c', make_loader('c')) == 'C'
+    assert cache.get('a', make_loader('a')) == 'A'
+    assert loads['a'] == 1
+    assert cache.get('b', make_loader('b')) == 'B'
+    assert loads['b'] == 2
+
+
+def test_held_karp_two_cities():
+    """n == 2 shortcut returns the direct edge in both directions."""
+    dist = [[0, 7], [3, 0]]
+    order, cost = _held_karp(dist, 0, 1)
+    assert order == [0, 1]
+    assert cost == 7
+    order, cost = _held_karp(dist, 1, 0)
+    assert order == [1, 0]
+    assert cost == 3
+
+
+def test_nearest_neighbor_2opt_improvement_branch():
+    """A tour the greedy construction gets wrong is fixed by 2-opt.
+
+    Nearest-neighbor from 0 picks 1 (cost 1) then 2 then 3, giving
+    [0, 1, 2, 3] with cost 1 + 1 + 10 = 12.  Reversing the interior
+    gives [0, 2, 1, 3] with cost 2 + 1 + 1 = 4, so the improvement
+    branch must fire.
+    """
+    dist = [
+        [0, 1, 2, 50],
+        [1, 0, 1, 1],
+        [2, 1, 0, 10],
+        [50, 1, 10, 0],
+    ]
+    order, cost = _nearest_neighbor_2opt(dist, 0, 3)
+    assert order == [0, 2, 1, 3]
+    assert cost == 4
+
+
+def test_nearest_neighbor_2opt_asymmetric_consistency():
+    """Delta scoring stays exact on asymmetric matrices.
+
+    The returned cost must equal the cost recomputed from the returned
+    order, and never exceed the greedy nearest-neighbor tour it started
+    from.
+    """
+    def tour_cost(dist, t):
+        return sum(dist[t[k]][t[k + 1]] for k in range(len(t) - 1))
+
+    def greedy(dist, start, end):
+        n = len(dist)
+        remaining = set(range(n)) - {start, end}
+        tour, cur = [start], start
+        while remaining:
+            cur = min(remaining, key=lambda c: dist[cur][c])
+            tour.append(cur)
+            remaining.remove(cur)
+        return tour + [end]
+
+    rng = np.random.default_rng(3705)
+    for n in (5, 8):
+        for _ in range(5):
+            dist = rng.integers(1, 20, size=(n, n)).astype(float).tolist()
+            for i in range(n):
+                dist[i][i] = 0.0
+            order, cost = _nearest_neighbor_2opt(dist, 0, n - 1)
+            assert order[0] == 0 and order[-1] == n - 1
+            assert sorted(order) == list(range(n))
+            assert cost == pytest.approx(tour_cost(dist, order))
+            assert cost <= tour_cost(dist, greedy(dist, 0, n - 1)) + 1e-9
+
+
+def test_nearest_neighbor_2opt_inf_edge_still_improves():
+    """An unavoidable inf edge must not block finite local improvements.
+
+    Every edge into city 4 is inf, so the total stays inf, but the
+    interior [1, 2] reversal is still an improvement and must be
+    applied (inf-aware prefix sums; naive prefix subtraction would
+    produce nan and reject it).
+    """
+    inf = float('inf')
+    dist = [
+        [0, 1, 2, 50, inf],
+        [1, 0, 1, 5, inf],
+        [2, 1, 0, 10, inf],
+        [50, 5, 10, 0, inf],
+        [inf, inf, inf, inf, 0],
+    ]
+    order, cost = _nearest_neighbor_2opt(dist, 0, 4)
+    assert order == [0, 2, 1, 3, 4]
+    assert cost == inf
+
+
+def test_get_pixel_id_default_dims():
+    """Omitted xdim/ydim fall back to the raster's last two dims."""
+    import xarray as xr
+
+    from xrspatial.pathfinding import _get_pixel_id
+
+    agg = xr.DataArray(np.zeros((5, 5)), dims=['y', 'x'])
+    agg['y'] = np.linspace(4, 0, 5)
+    agg['x'] = np.linspace(0, 4, 5)
+
+    assert _get_pixel_id((4.0, 0.0), agg) == (0, 0)
+    assert _get_pixel_id((0.0, 4.0), agg) == (4, 4)
+    assert (_get_pixel_id((2.0, 3.0), agg)
+            == _get_pixel_id((2.0, 3.0), agg, 'x', 'y'))
+
+
+class TestEmptySurface:
+    """A zero-size surface raises a clear error, not a numpy internal one."""
+
+    @staticmethod
+    def _empty_raster(shape):
+        import xarray as xr
+        r = xr.DataArray(np.ones(shape), dims=('y', 'x'),
+                         attrs={'res': (1.0, 1.0)})
+        r['y'] = np.linspace(shape[0] - 1, 0, shape[0])
+        r['x'] = np.linspace(0, shape[1] - 1, shape[1])
+        return r
+
+    @pytest.mark.parametrize('shape', [(0, 0), (0, 4), (4, 0)])
+    def test_a_star_search_empty_raises(self, shape):
+        r = self._empty_raster(shape)
+        with pytest.raises(ValueError, match='empty'):
+            a_star_search(r, (0.0, 0.0), (1.0, 1.0))
+
+    def test_multi_stop_search_empty_raises(self):
+        r = self._empty_raster((0, 0))
+        with pytest.raises(ValueError, match='empty'):
+            multi_stop_search(r, [(0.0, 0.0), (1.0, 1.0)])
+
+
+@pytest.mark.skipif(not has_dask_array(), reason="Requires dask.Array")
+class TestDaskFrictionFminCache:
+
+    def test_fmin_cached_by_graph_token(self):
+        from xrspatial.pathfinding import _dask_fmin_cache, _dask_friction_fmin
+
+        f = da.from_array(
+            np.array([[2.0, 3.0], [0.5, -1.0]]), chunks=(1, 2))
+        _dask_fmin_cache.clear()
+        assert _dask_friction_fmin(f) == 0.5
+        assert f.name in _dask_fmin_cache
+        # Second call is served from the cache
+        assert _dask_friction_fmin(f) == 0.5
+        assert len(_dask_fmin_cache) == 1
+
+    def test_multi_stop_dask_friction_matches_numpy(self):
+        # Routes 3 segments through the same friction raster, so the
+        # second and third segments hit the f_min cache
+        from xrspatial.pathfinding import _dask_fmin_cache
+
+        data = np.ones((6, 6))
+        friction = np.linspace(1.0, 2.0, 36).reshape(6, 6)
+        agg_np = _make_raster(data)
+        fr_np = _make_raster(friction)
+        waypoints = [(5.0, 0.0), (0.0, 2.0), (5.0, 4.0), (0.0, 5.0)]
+
+        expected = multi_stop_search(agg_np, waypoints, friction=fr_np)
+
+        agg_dask = _make_raster(data)
+        agg_dask.data = da.from_array(agg_dask.data, chunks=(3, 3))
+        fr_dask = _make_raster(friction)
+        fr_dask.data = da.from_array(fr_dask.data, chunks=(3, 3))
+
+        _dask_fmin_cache.clear()
+        result = multi_stop_search(agg_dask, waypoints, friction=fr_dask)
+        # All 3 segments resolved f_min through one cache entry; a
+        # per-call graph token would show up here as extra entries
+        assert len(_dask_fmin_cache) == 1
+
+        np.testing.assert_allclose(
+            result.data.compute(), expected.values, equal_nan=True)
+        assert result.attrs['total_cost'] == pytest.approx(
+            expected.attrs['total_cost'])

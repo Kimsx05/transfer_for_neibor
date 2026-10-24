@@ -1,0 +1,434 @@
+"""Base classes and wrappers for transforms."""
+
+from __future__ import annotations
+
+from abc import ABC, abstractmethod
+from collections.abc import Iterator, Sequence
+from copy import copy
+from typing import Self, TYPE_CHECKING
+from types import ModuleType
+
+from array_api_compat import array_namespace
+
+from .util import (
+    ArrayT,
+    join_strs,
+)
+from itertools import pairwise
+
+from .types import TransformSignature, NDims
+
+if TYPE_CHECKING:
+    from .transforms import Affine
+
+
+class Transform[ArrayT](ABC):
+    """Base class for transforms."""
+
+    def __init__(
+        self,
+        ndims: NDims,
+    ):
+        """
+        Parameters
+        ----------
+        ndims
+            Source and target dimensionality.
+        """
+        self.ndims: NDims = ndims
+
+    def is_identity(self) -> bool:
+        """Whether this is a no-op transformation."""
+        return False
+
+    def to_affine(self) -> Affine[ArrayT] | None:
+        """Convert the transform into affine, if conversion is possible.
+
+        Returns
+        -------
+        Affine[ArrayT] | None
+            The affine transformation, if conversion is possible.
+            None otherwise.
+        """
+        return None
+
+    def _validate_coords(self, coords: ArrayT) -> ArrayT:
+        """Check that input coordinates are of the correct shape.
+
+        Also ensure that coords is a 2Darray.
+
+        Parameters
+        ----------
+        coords
+            NxD array of N D-dimensional coordinates.
+
+        Returns
+        -------
+        ArrayT
+            The validated coordinates.
+
+        Raises
+        ------
+        ValueError
+            If dimensions are not supported.
+        """
+        xp = array_namespace(coords)
+        if xp.ndim(coords) != 2:
+            raise ValueError("Coords must be a 2D array")
+        dim = xp.shape(coords)[1]
+        if xp.shape(coords)[1] != self.ndims.source:
+            raise ValueError(
+                f"Coords must have dimensionality {self.ndims.source}, got {dim}"
+            )
+        return coords
+
+    @abstractmethod
+    def apply(self, coords: ArrayT) -> ArrayT:
+        """Apply transformation.
+
+        Parameters
+        ----------
+        coords
+            NxD array of N D-dimensional coordinates.
+
+        Returns
+        -------
+        ArrayT
+            Transformed coordinates in the same shape.
+        """
+        pass
+
+    def invert(self) -> Transform[ArrayT] | None:
+        """Invert the transformation, returning `None` if not possible."""
+        return None
+
+    def __invert__(self) -> Transform[ArrayT]:
+        """Invert transformation if possible.
+
+        Returns `NotImplemented` otherwise (will raise `NotImplementedError`).
+
+        Returns
+        -------
+        Transform[ArrayT]
+            Inverted transformation.
+        """
+        t = self.invert()
+        if t is None:
+            return NotImplemented
+        return t
+
+    def to_device(self, xp: ModuleType, device: str | None = None) -> Self:  # noqa: ARG002
+        """Return a copy of this transform with array parameters placed on the given device.
+
+        Useful for pre-allocating parameters on GPU before a tight apply() loop,
+        avoiding per-call host-to-device transfers.
+
+        Parameters
+        ----------
+        xp
+            The target array namespace (e.g. jax.numpy, torch).
+        device
+            Target device (e.g. from array_api_compat.device(array)).
+            If None, uses xp's default device.
+
+        Returns
+        -------
+        Self
+            A new transform instance with parameters on the target device
+        """
+        return self
+
+    def __or__(self, other: Transform[ArrayT]) -> TransformSequence[ArrayT]:
+        """Compose transformations into a sequence.
+
+        If other is a TransformSequence, prepend this transform to the others.
+
+        Parameters
+        ----------
+        other
+            The transform to compose with.
+
+        Returns
+        -------
+        TransformSequence[ArrayT]
+            The composed transform sequence.
+        """
+        if not isinstance(other, Transform):
+            return NotImplemented
+        transforms = as_transform_list(self) + as_transform_list(other)
+        return TransformSequence[ArrayT](
+            transforms,
+        )
+
+    def __ror__(self, other: Transform[ArrayT]) -> TransformSequence[ArrayT]:
+        """Compose transformations into a sequence.
+
+        If other is a TransformSequence, append this transform to the others.
+
+        Parameters
+        ----------
+        other
+            The transform to compose with.
+
+        Returns
+        -------
+        TransformSequence[ArrayT]
+            The composed transform sequence.
+        """
+        if not isinstance(other, Transform):
+            return NotImplemented
+        transforms = as_transform_list(other) + as_transform_list(self)
+        return TransformSequence(
+            transforms,
+        )
+
+    def __str__(self) -> str:
+        return f"{type(self).__qualname__}@{hex(id(self))}[{self.ndims}]"
+
+
+class TransformFnWrapper(Transform[ArrayT]):
+    """Wrapper around an arbitrary function which transforms coordinates."""
+
+    def __init__(
+        self,
+        fn: TransformSignature[ArrayT],
+        in_ndim: int,
+        out_ndim: int,
+    ):
+        """Wrapper around an arbitrary function.
+
+        `fn` should take and return an identically-shaped
+        NxD numpy array of N D-dimensional coordinates.
+
+        Parameters
+        ----------
+        fn
+            Callable.
+        in_ndim
+            Dimensionality of the input coordinates.
+        out_ndim
+            Dimensionality of the output coordinates.
+        """
+        super().__init__(NDims(in_ndim, out_ndim))
+        self.fn = fn
+
+    def apply(self, coords: ArrayT) -> ArrayT:
+        self._validate_coords(coords)
+        return self.fn(coords)
+
+    def __str__(self) -> str:
+        return f"{super().__str__()}({self.fn})"
+
+    @classmethod
+    def from_flat(cls, fn: TransformSignature[ArrayT]) -> Self:
+        """Create a 1D transform from a function which would take and return a 1D array."""
+
+        def fn2(arr: ArrayT) -> ArrayT:
+            xp = array_namespace(arr)
+            flat = xp.reshape(arr, (-1,))
+            transformed = fn(flat)
+            return xp.expand_dims(transformed, 1)
+
+        return cls(fn2, 1, 1)
+
+
+def as_transform_list(t: Transform[ArrayT]) -> list[Transform[ArrayT]]:
+    if isinstance(t, TransformSequence):
+        return t.transforms.copy()
+    else:
+        return [t]
+
+
+class TransformSequence(Transform[ArrayT], Sequence[Transform[ArrayT]]):
+    """Chain transforms, applying one after another.
+
+    The `TransformSequence()` constructor takes a sequence of transforms which must not be empty.
+    Empty sequences can be handled with `TransformSequence.empty(ndim: int)`.
+    """
+
+    def __init__(
+        self,
+        transforms: Sequence[Transform[ArrayT]],
+    ) -> None:
+        """Combine transforms by chaining them.
+
+        Empty sequences raise an error;
+        use the `TransformSequence.empty(ndim)` constructor instead.
+
+        Also checks for consistent dimensionality.
+
+        Parameters
+        ----------
+        transforms :
+            Items which are a TransformSequences
+            will each still be treated as a single transform.
+
+        Raises
+        ------
+        ValueError
+            If spaces are incompatible, or no spaces are given.
+        """
+        ts = list(transforms)
+        if not ts:
+            raise ValueError(
+                "Empty transform sequence; use TransformSequence.empty(ndim)"
+            )
+
+        for idx, (t1, t2) in enumerate(pairwise(ts)):
+            if t1.ndims.target != t2.ndims.source:
+                raise ValueError(
+                    "Incompatible dimensionality: "
+                    f"transform {idx}'s target is {t1.ndims.target}D "
+                    f"and the next source is {t2.ndims.source}D"
+                )
+
+        ndims = NDims(ts[0].ndims.source, ts[-1].ndims.target)
+
+        super().__init__(ndims)
+
+        self.transforms: list[Transform[ArrayT]] = ts
+
+    @classmethod
+    def empty(cls, ndim: int) -> Self:
+        from .transforms import Identity
+
+        out = cls([Identity(ndim)])
+        out.transforms.pop()
+        return out
+
+    def __iter__(self) -> Iterator[Transform[ArrayT]]:
+        """Iterate through component transforms.
+
+        Yields
+        -------
+        Transform
+        """
+        yield from self.transforms
+
+    def __len__(self) -> int:
+        """Number of transforms.
+
+        Returns
+        -------
+        int
+        """
+        return len(self.transforms)
+
+    def invert(self) -> Transform[ArrayT] | None:
+        if self.is_empty():
+            return type(self).empty(self.ndims.source)
+
+        try:
+            transforms = [~t for t in reversed(self.transforms)]
+        except NotImplementedError:
+            return None
+        return type(self)(
+            transforms,
+        )
+
+    def apply(self, coords: ArrayT) -> ArrayT:
+        for t in self.transforms:
+            coords = t.apply(coords)
+        return coords
+
+    def to_device(self, xp: ModuleType, device: str | None = None) -> Self:
+        result = copy(self)
+        if not self.is_empty():
+            result.transforms = [t.to_device(xp, device) for t in self.transforms]
+        return result
+
+    def __str__(self) -> str:
+        spaces_str = join_strs(self.transforms, "|")
+        return f"{super().__str__()}({spaces_str})"
+
+    def __getitem__(self, idx: slice | int):
+        if isinstance(idx, int):
+            return self.transforms[idx]
+        return type(self)(self.transforms[idx])
+
+    def is_identity(self) -> bool:
+        return all(t.is_identity() for t in self)
+
+    def is_empty(self) -> bool:
+        return not self.transforms
+
+    def flatten(self, drop_inverse: bool = True) -> Self:
+        """Flatten nested sequences."""
+        from .transforms.bijection import Bijection
+
+        if self.is_empty():
+            return copy(self)
+
+        out: list[Transform[ArrayT]] = []
+
+        for t in self.transforms:
+            if drop_inverse and isinstance(t, Bijection):
+                t = t.forward
+            if isinstance(t, TransformSequence):
+                out.extend(t.flatten())
+            else:
+                out.append(t)
+        return TransformSequence(out)  # type:ignore
+
+    def simplify(self, drop_inverse: bool = True):
+        """Reduce the number of transformations in this sequence if possible.
+
+        - Compose consecutive transformations which can be expressed as affines
+        - Drop trivial transforms (e.g. identity)
+        - Optionally drop explicit inverse transforms
+          (e.g. replace `Bijection`s with their `forward` transform)
+
+        Also drops all internal space tuples; only the sequence's remains.
+
+        Does not check whether transforms invert each other,
+        e.g. `Translation(1) | Translation(-1)`.
+        """
+        if self.is_empty():
+            return copy(self)
+
+        out: list[Transform[ArrayT]] = []
+        affine = None
+        for t in self.flatten(drop_inverse):
+            if t.is_identity():
+                continue
+
+            new_affine = t.to_affine()
+
+            if new_affine is None:
+                if affine is not None:
+                    add_to_output(affine, out)
+                    affine = None
+                add_to_output(t, out)
+                continue
+
+            if affine is None:
+                affine = new_affine
+            else:
+                affine = new_affine @ affine  # type: ignore[operator]
+
+        if affine is not None:
+            add_to_output(affine, out)
+
+        if not out:
+            return type(self).empty(self.ndims.source)
+
+        return type(self)(out)
+
+    def to_affine(self) -> Affine[ArrayT] | None:
+        if self.is_empty():
+            from .transforms import Affine
+
+            return Affine.identity(self.ndims.source)  # type: ignore
+        simple = self.simplify(True)
+        if len(simple) != 1:
+            return None
+        return simple[0].to_affine()
+
+
+def add_to_output(transform: Transform, lst: list[Transform]) -> bool:
+    if transform.is_identity():
+        return False
+
+    transform = copy(transform)
+    lst.append(transform)
+    return True

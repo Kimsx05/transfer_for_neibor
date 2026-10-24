@@ -1,0 +1,203 @@
+from collections.abc import Sequence
+from copy import copy
+from typing import Self
+
+import numpy as np
+from numpy.typing import ArrayLike
+
+from transformnd.transforms import Affine
+
+from ..base import Transform
+from ..types import NDims
+from ..util import is_square
+
+
+def proj(u: np.ndarray, v: np.ndarray) -> np.ndarray:
+    return (np.inner(u, v) / np.inner(u, u)) * u
+
+
+def gram_schmidt(vecs: np.ndarray) -> np.ndarray:
+    """
+    https://en.wikipedia.org/wiki/Gram%E2%80%93Schmidt_process
+    """
+    if not is_square(vecs):
+        raise ValueError("Wrong number of dimensions")
+
+    out: list[np.ndarray] = []
+    for v in vecs:
+        b = v.copy()
+
+        for u in out:
+            b -= proj(u, v)
+
+        out.append(b)
+    return np.array(out)
+
+
+def get_hyperplanes(
+    points: np.ndarray, unitise: bool = True, seed: int | None = None
+) -> tuple[np.ndarray, list[np.ndarray]]:
+    """
+    Reflective: point/line/.../hyperplane to be reflected around
+
+    Returns point-normal representation.
+    """
+    points = np.asarray(points)
+    if points.ndim <= 1:
+        points = np.expand_dims(points, -1)
+    elif points.ndim > 2:
+        raise ValueError("Points must be 2D array")
+
+    n_points, ndim = points.shape
+    n_reflections = ndim - n_points + 1
+
+    if n_reflections <= 0:
+        raise ValueError("Too many points given, must be hyperplane or lower-dim")
+
+    point = points[0]
+
+    if n_points == 1:
+        return point, list(np.eye(len(point)))
+
+    # non-orthogonal vectors spanning provided reflective
+    # transpose into row vectors for easier vectorisation
+    reflective_vecs = np.diff(points, axis=0)
+    rng = np.random.default_rng(seed)
+    randoms = rng.random((n_reflections, ndim))
+    non_orth = np.concatenate((reflective_vecs, randoms), 0)
+
+    basis = gram_schmidt(non_orth)
+    extras = basis[-n_reflections:]
+    if unitise:
+        extras /= np.linalg.norm(extras, axis=1)
+    return point, list(extras)
+
+
+def unitise(v: np.ndarray) -> np.ndarray:
+    return v / np.linalg.norm(v)
+
+
+def ensure_tuple(obj: int | Sequence[int]) -> tuple[int, ...]:
+    if isinstance(obj, int):
+        return (obj,)
+    return tuple(obj)
+
+
+class Reflect(Transform[np.ndarray]):
+    """Reflect coordinates about arbitrary planes."""
+
+    def __init__(
+        self,
+        normals: ArrayLike,
+        point: float | ArrayLike = 0.0,
+    ):
+        """
+        Parameters
+        ----------
+        normals
+            Normal vectors to the planes of reflection.
+            Unitised internally.
+        point
+            Intersection point of all reflection planes
+            (can be broadcast from scalar), by default 0 (i.e. the origin)
+
+        Raises
+        ------
+        ValueError
+            Inconsistent dimensionality
+        """
+        normals = np.asarray(normals)
+        if normals.ndim == 1:
+            normals = [normals]
+
+        n1 = normals[0]
+        if (
+            not np.isscalar(point)
+            and isinstance(point, Sequence)
+            and len(n1) != len(point)
+        ):
+            raise ValueError("Point and normals are not of the same dimensionality")
+        self.point: np.ndarray = np.asarray(point, dtype=float)
+        self.ndim = {len(n1)}
+        self.normals = [unitise(n) for n in normals]
+        # todo: matmul is associative, so turn this into an affine in 2/3D?
+        super().__init__(NDims(len(n1), len(n1)))
+
+    def apply(self, coords: np.ndarray) -> np.ndarray:
+        coords = self._validate_coords(coords)
+        out = coords - self.point
+        for n in self.normals:
+            # mul->sum vectorises dot product
+            # normals are unit, avoids unnecessary division by 1
+            out -= 2 * np.sum(coords * n, axis=1) * n
+        out += self.point
+        return out
+
+    @classmethod
+    def from_points(
+        cls,
+        points: ArrayLike,
+    ) -> Self:
+        """Infer a single plane of reflection from a minimal number of points on it.
+
+        Parameters
+        ----------
+        points
+            NxD array of N points in D dimensions. N == D
+
+        Returns
+        -------
+        Self
+        """
+        point, normals = get_hyperplanes(np.asarray(points), unitise=False)
+        return cls(normals, point)
+
+    @classmethod
+    def from_axis(
+        cls,
+        axis: int | Sequence[int],
+        origin: ArrayLike,
+    ) -> Self:
+        """Reflect around hyperplane(s) parallel with axes.
+
+        Parameters
+        ----------
+        axis
+            Index (or indices) of axes in which to reflect.
+        origin
+            Point around which to reflect.
+
+        Returns
+        -------
+        Self
+
+        Raises
+        ------
+        ValueError
+            Selected axis does not exist.
+        """
+        origin = np.asarray(origin)
+        axis = ensure_tuple(axis)
+
+        for a in axis:
+            if a >= len(axis):
+                raise ValueError(
+                    "Cannot reflect in axis which does not exist (too high)"
+                )
+
+        normals = []
+        for i in range(len(origin) - len(axis) + 1):
+            if i not in axis:
+                v = np.zeros_like(origin)
+                v[i] += 1
+                normals.append(v)
+
+        return cls(normals, origin)
+
+    def invert(self) -> Self | None:
+        return copy(self)
+
+    def to_affine(self) -> Affine[np.ndarray] | None:
+        # TODO: should be possible?
+        # rotate to align plane with origin and reflect it
+        return None

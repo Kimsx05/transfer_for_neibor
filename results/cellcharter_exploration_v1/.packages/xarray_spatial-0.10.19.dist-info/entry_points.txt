@@ -1,0 +1,5 @@
+[console_scripts]
+xrspatial = xrspatial.__main__:main
+
+[xarray.backends]
+xrspatial = xrspatial.geotiff._xarray_backend:GeoTIFFBackendEntrypoint

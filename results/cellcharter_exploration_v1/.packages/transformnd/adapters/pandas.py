@@ -1,0 +1,51 @@
+"""Adapt pandas DataFrames for transformation."""
+
+from collections.abc import Hashable
+from typing import TYPE_CHECKING
+
+import numpy as np
+
+from ..base import Transform
+from .base import BaseAdapter
+
+if TYPE_CHECKING:
+    import pandas as pd
+
+
+class PandasAdapter(BaseAdapter["pd.DataFrame", np.ndarray]):
+    def __init__(self, columns: list[Hashable]):
+        """Adapt transformation for coordinates stored in a pandas DataFrame.
+
+        Parameters
+        ----------
+        columns
+            Keys for columns containing coordinates, e.g. `["x", "y", "z"]`
+        """
+        self.columns = columns
+
+    def apply(
+        self, transform: Transform, df: "pd.DataFrame", in_place: bool = False
+    ) -> "pd.DataFrame":
+        """Transform the dataframe, optionally in-place.
+
+        Parameters
+        ----------
+        transform
+            The transformation to apply.
+        df
+            The DataFrame to transform.
+        in_place
+            Whether to mutate the dataframe in place,
+            by default False (i.e. make a copy of it).
+
+        Returns
+        -------
+        pd.DataFrame
+            The transformed DataFrame.
+        """
+        coords = df[self.columns].to_numpy()
+        transformed = transform.apply(coords)
+        if not in_place:
+            df = df.copy()
+        df[self.columns] = transformed
+        return df

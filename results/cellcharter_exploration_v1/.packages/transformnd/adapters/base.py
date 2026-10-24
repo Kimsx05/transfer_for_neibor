@@ -1,0 +1,190 @@
+"""Simple adapter cases."""
+
+from abc import ABC, abstractmethod
+from copy import deepcopy
+from functools import partial
+from collections.abc import Callable
+from typing import TypeVar, Any
+
+from array_api_compat import array_namespace
+
+from ..base import Transform, ArrayT
+
+ObjectT = TypeVar("ObjectT")
+
+
+class BaseAdapter[ObjectT, ArrayT](ABC):
+    """Base class for adapters that transform non-array objects."""
+
+    @abstractmethod
+    def apply(self, transform: Transform[ArrayT], obj: ObjectT) -> ObjectT:
+        """Apply the given transformation to a non-array object.
+
+        Parameters
+        ----------
+        transform
+            The transformation to apply.
+        obj
+            The object to transform.
+
+        Returns
+        -------
+        ObjectT
+            The transformed object.
+        """
+        pass
+
+    def partial(self, *args: Any, **kwargs: Any) -> Callable[..., ObjectT]:
+        """Create a partial function with frozen arguments.
+
+        Useful for applying the same transform to many objects,
+        or many transforms to the same object,
+        or for adapters with additional arguments,
+        using the same config repeatedly.
+
+        Parameters
+        ----------
+        *args
+            Positional arguments to freeze.
+        **kwargs
+            Keyword arguments to freeze.
+
+        Returns
+        -------
+        Callable[..., ObjectT]
+            A partial function with the given arguments frozen.
+        """
+        return partial(self.apply, *args, **kwargs)
+
+
+class NullAdapter(BaseAdapter[ArrayT, ArrayT]):
+    """Adapter which simply applies the transform."""
+
+    def apply(self, transform: Transform[ArrayT], obj: ArrayT) -> ArrayT:
+        return transform.apply(obj)
+
+
+class FnAdapter(BaseAdapter[ObjectT, ArrayT]):
+    """Adapter which simply wraps a function, for typing purposes.
+
+    Parameters
+    ----------
+    fn
+        Function which takes the object,
+        and applies the transformation to it.
+    """
+
+    def __init__(self, fn: Callable[[Transform[ArrayT], ObjectT], ObjectT]):
+        self.fn = fn
+
+    def apply(self, transform: Transform[ArrayT], obj: ObjectT) -> ObjectT:
+        return self.fn(transform, obj)
+
+
+class AttrAdapter(BaseAdapter[ObjectT, ArrayT]):
+    """Adapter which transforms an object by applying transforms to its attributes.
+
+    Parameters
+    ----------
+    **kwargs
+        Keys are attribute names, values are adapters with which
+        to apply the transform to those attributes.
+        `None` is shorthand for `NullAdapter()`;
+        i.e. the attribute is an array and can be transformed
+        without being adapted.
+    """
+
+    def __init__(self, **kwargs: BaseAdapter[Any, ArrayT] | None) -> None:
+        self.adapters = {
+            k: NullAdapter[ArrayT]() if v is None else v for k, v in kwargs.items()
+        }
+
+    def apply(
+        self, transform: Transform[ArrayT], obj: ObjectT, in_place: bool = False
+    ) -> ObjectT:
+        """Apply the given transformation to the object, via its attributes.
+
+        Parameters
+        ----------
+        transform
+            The transformation to apply.
+        obj
+            The object to transform.
+        in_place
+            Whether to mutate the given object in place,
+            by default False (i.e. make a deep copy of it).
+
+        Returns
+        -------
+        ObjectT
+            The transformed object.
+
+        Raises
+        ------
+        TypeError
+            If the adapter does not support the in_place argument.
+        """
+        if not in_place:
+            obj = deepcopy(obj)
+
+        for k, v in self.adapters.items():
+            member = getattr(obj, k)
+            try:
+                transformed = v.apply(transform, member, in_place=True)  # type: ignore
+            except TypeError as e:
+                if "got an unexpected keyword argument 'in_place'" in str(e):
+                    transformed = v.apply(transform, member)
+                else:
+                    raise e
+            setattr(obj, k, transformed)
+
+        return obj
+
+
+class SimpleAdapter(BaseAdapter[ObjectT, ArrayT], ABC):
+    """
+    Helper class for cases with simple conversion methods.
+    """
+
+    @abstractmethod
+    def _to_array(self, obj: ObjectT) -> ArrayT:
+        """Convert the object into an array of coordinates."""
+        pass
+
+    @abstractmethod
+    def _from_array(self, coords: ArrayT) -> ObjectT:
+        """Convert an array of coordinates into the correct type."""
+        pass
+
+    def apply(self, transform: Transform[ArrayT], obj: ObjectT) -> ObjectT:
+        coords: ArrayT = self._to_array(obj)
+        transformed = transform.apply(coords)
+        return self._from_array(transformed)
+
+
+class ReshapeAdapter(BaseAdapter[ArrayT, ArrayT]):
+    """Adapter which reshapes a numpy.ndarray"""
+
+    def __init__(self, dim_axis: int = -1) -> None:
+        """Adapt numpy arrays which are not of the correct shape.
+
+        Parameters
+        ----------
+        dim_axis
+            Which axis contains the coordinates' dimensions,
+            by default -1 (last)
+        """
+        self.dim_axis: int = dim_axis
+
+    def apply(self, transform: Transform[ArrayT], obj: ArrayT) -> ArrayT:
+        xp = array_namespace(obj)
+        dim_axis = self.dim_axis
+        if self.dim_axis < 0:
+            dim_axis += xp.ndim(obj)
+
+        moved = xp.moveaxis(obj, dim_axis, -1)
+        m_shape = moved.shape
+
+        flattened = xp.reshape(moved, (-1, m_shape[-1]))
+        transformed = transform.apply(flattened)
+        return xp.moveaxis(xp.reshape(transformed, m_shape), -1, dim_axis)

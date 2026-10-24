@@ -1,0 +1,172 @@
+INSTALL ['dask-image>=0.5', 'dask[array]>=2021.2', 'imagecodecs<2026,>=2025.8.2', 'matplotlib-scalebar>=0.8', 'omnipath>=1.0.7', 'pooch>=1.6', 'rasterio', 'sknw', 'spatialdata', 'spatialdata-plot', 'spatialdata-plot>=0.3.3', 'spatialdata>=0.7.2', 'torchgmm>=0.1.4', 'validators>=0.18.2']
+Looking in indexes: https://mirrors.aliyun.com/pypi/simple/, https://pypi.mirrors.ustc.edu.cn/simple/
+Collecting dask-image>=0.5
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/3f/5b/15d6d6ff8697b188787609be059fe4f07f99fc00f43f68e9e1540fa8733e/dask_image-2026.5.0-py3-none-any.whl (43 kB)
+Collecting dask>=2021.2 (from dask[array]>=2021.2)
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/f8/3a/4fc99e788bcfa1b3b3f21abf57da45898d807d007e7f6fd1c7300904eb70/dask-2026.8.0-py3-none-any.whl (1.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 6.8 MB/s eta 0:00:00
+Collecting imagecodecs<2026,>=2025.8.2
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/a8/ac/fde1f9f99ebe7d8b989bb0005883b69f35abd6ac2d677e0a0caf23f29961/imagecodecs-2025.11.11-cp311-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (23.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 23.2/23.2 MB 15.6 MB/s eta 0:00:00
+Collecting matplotlib-scalebar>=0.8
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/a8/c0/2dfab7b319dabe23f5a7b515a797c74b501d15c72e7a03837cf0cf779b9e/matplotlib_scalebar-0.9.0-py3-none-any.whl (16 kB)
+Collecting omnipath>=1.0.7
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/d7/ba/704f9e56ae80ef66cf0534e23dac22ada34845f86b5e5b8b3294649d96b6/omnipath-1.0.12-py3-none-any.whl (51 kB)
+Collecting pooch>=1.6
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/2a/2d/d4bf65e47cea8ff2c794a600c4fd1273a7902f268757c531e0ee9f18aa58/pooch-1.9.0-py3-none-any.whl (67 kB)
+Collecting rasterio
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/06/c5/860f1c58249b5229722bcde42b4c9c88766450107977f57d283579a7934b/rasterio-1.5.2-cp312-cp312-manylinux_2_28_x86_64.whl (39.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 39.2/39.2 MB 10.5 MB/s eta 0:00:00
+Collecting sknw
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/27/7d/0d86fe9ef28cff6481245849cad826959b1d962f26b170f34add06fbbaaa/sknw-0.15-py3-none-any.whl (4.6 kB)
+Collecting spatialdata
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/cf/08/f5cac3e58d1bb092bfb6015104e6cce925bbe10a2cae44428c790d4e5d06/spatialdata-0.8.0-py3-none-any.whl (202 kB)
+Collecting spatialdata-plot
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/6e/a7/99a9a4397111dd497f8cae506c6100c5058f6c1ddc73e18affd9f5ae7f2a/spatialdata_plot-0.4.3-py3-none-any.whl (154 kB)
+Collecting torchgmm>=0.1.4
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/6f/21/03a0086804c3921f24404a3865ec67c12b4f5cfbdac477ae0f42d7ec5af3/torchgmm-0.1.4-py3-none-any.whl (46 kB)
+Collecting validators>=0.18.2
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/d5/ce/fc5090ea3789bdfd22e90f2515b237194c5dacfc8f26d2082a0b50b2ca86/validators-0.36.0-py3-none-any.whl (46 kB)
+Installing collected packages: sknw, validators, torchgmm, spatialdata-plot, spatialdata, rasterio, pooch, omnipath, matplotlib-scalebar, imagecodecs, dask-image, dask
+Successfully installed dask-2026.8.0 dask-image-2026.5.0 imagecodecs-2025.11.11 matplotlib-scalebar-0.9.0 omnipath-1.0.12 pooch-1.9.0 rasterio-1.5.2 sknw-0.15 spatialdata-0.8.0 spatialdata-plot-0.4.3 torchgmm-0.1.4 validators-0.36.0
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.2
+[notice] To update, run: /home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/bin/python -m pip install --upgrade pip
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cellcharter_exploration_v1/code/install_missing.py", line 21, in <module>
+    todo=sorted(set(todo));print('INSTALL',todo,flush=True);subprocess.run([sys.executable,'-m','pip','install','--target',str(target),'--upgrade','--no-deps',*todo],check=True);md.MetadataPathFinder.invalidate_caches(md.MetadataPathFinder)
+                                                                                                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: MetadataPathFinder.invalidate_caches() takes 1 positional argument but 2 were given
+INSTALL ['affine', 'annsel>=0.1.2', 'datashader', 'distributed>=2026.3.0', 'geopandas>=0.14', 'inflect>=4.1.0', 'multiscale-spatial-image==2.0.3', 'ome-zarr>=0.16.0', 'partd>=1.4.0', 'pims>=0.4.1', 'platformdirs>=2.5.0', 'session-info', 'shapely>=2.0.1', 'spatial-image>=1.2.3', 'toolz>=0.12.0', 'universal-pathlib>=0.2.6', 'xarray-spatial>=0.3.5']
+Looking in indexes: https://mirrors.aliyun.com/pypi/simple/, https://pypi.mirrors.ustc.edu.cn/simple/
+Collecting affine
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/3d/87/e62f55c956b583380e7d2a71705dfd431ee32dd1689d50491ba0c610fc11/affine-3.0.1-py3-none-any.whl (10 kB)
+Collecting annsel>=0.1.2
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/69/21/3587d7b32dfade1532d9cbb67291cb26f4353c296cadcda6767bd62458d3/annsel-0.1.3-py3-none-any.whl (16 kB)
+Collecting datashader
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/cb/41/247627c8b9fef5c605d00546b85771a8fe42975b9616a557cead5468789b/datashader-0.19.1-py3-none-any.whl (10.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.7/10.7 MB 5.1 MB/s eta 0:00:00
+Collecting distributed>=2026.3.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/28/d4/017e2d39d797eaa38a52b4459c8bea875d5e0ada335a62aafe98193041a6/distributed-2026.8.0-py3-none-any.whl (1.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 52.7 MB/s eta 0:00:00
+Collecting geopandas>=0.14
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/c7/26/10e1061c79b388621b7bae46fcd4942a8c62f960018adf4c38719e9e91ac/geopandas-1.2.0-py3-none-any.whl (368 kB)
+Collecting inflect>=4.1.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/d6/b1/819d4158942c33d7eaa241c5d2e49ece9825dc4a8d0c72e8edd2813c0dd1/inflect-7.6.0-py3-none-any.whl (37 kB)
+Collecting multiscale-spatial-image==2.0.3
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/01/a7/fec56dbac873a18930b2127d400794a91dd53898bff811aa4802ddbbfac9/multiscale_spatial_image-2.0.3-py3-none-any.whl (29 kB)
+Collecting ome-zarr>=0.16.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/4d/d2/4d98262ff9c13d1a152aa0b066549df278676d160a641453cfe53cb9b037/ome_zarr-0.21.0-py3-none-any.whl (66 kB)
+Collecting partd>=1.4.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/71/e7/40fb618334dcdf7c5a316c0e7343c5cd82d3d866edc100d98e29bc945ecd/partd-1.4.2-py3-none-any.whl (18 kB)
+Collecting pims>=0.4.1
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/b8/02/5bf3639f5b77e9b183011c08541c5039ba3d04f5316c70312b48a8e003a9/pims-0.7.tar.gz (87 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting platformdirs>=2.5.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/6c/8a/1d8cb3842909dc193a73835adedf412e32e18f8ffd59f43983949622fe6f/platformdirs-4.13.5-py3-none-any.whl (32 kB)
+Collecting session-info
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/c5/c4/f6b7c0ec5241a2bde90c7ba1eca6ba44f8488bcedafe9072c79593015ec0/session_info-1.0.1-py3-none-any.whl (9.1 kB)
+Collecting shapely>=2.0.1
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/ad/87/6842e4c996914a47b6bfd3ef14a543e67e993f86a9ea5679c34efc9314ab/shapely-2.2.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (2.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 65.7 MB/s eta 0:00:00
+Collecting spatial-image>=1.2.3
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/d0/5a/8ef888a4f56fa2ea5c10a7d6ff02286f503a93ea298bcaa9f51a41a20df8/spatial_image-1.2.3-py3-none-any.whl (8.7 kB)
+Collecting toolz>=0.12.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/db/17/4c8beb6c8c4176c6bf143bfd7e1e4dd6719b00ced90738c7ac471b71c1df/toolz-1.2.0-py3-none-any.whl (60 kB)
+Collecting universal-pathlib>=0.2.6
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/dd/1a/5d9a402b39ec892d856bbdd9db502ff73ce28cdf4aff72eb1ce1d6843506/universal_pathlib-0.3.10-py3-none-any.whl (83 kB)
+Collecting xarray-spatial>=0.3.5
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/5b/b7/6d58a2ddb22f9a531688e72c4c411477bfe31b2bd3b5055c518106f5b70b/xarray_spatial-0.10.19-py3-none-any.whl (6.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 36.2 MB/s eta 0:00:00
+Building wheels for collected packages: pims
+  Building wheel for pims (setup.py): started
+  Building wheel for pims (setup.py): finished with status 'done'
+  Created wheel for pims: filename=pims-0.7-py3-none-any.whl size=84645 sha256=1f5176129e5d850d7017d20e8a14b51fc04fb0628a9ffd60e4d423e399c29ef8
+  Stored in directory: /home/data/t070721/.cache/pip/wheels/26/55/bb/73326ae38cb08bab99f9763d053abb759a3fc596994cdb14c6
+Successfully built pims
+Installing collected packages: xarray-spatial, universal-pathlib, toolz, spatial-image, shapely, session-info, platformdirs, pims, partd, ome-zarr, multiscale-spatial-image, inflect, geopandas, distributed, datashader, annsel, affine
+Successfully installed affine-3.0.1 annsel-0.1.3 datashader-0.19.1 distributed-2026.8.0 geopandas-1.2.0 inflect-7.6.0 multiscale-spatial-image-2.0.3 ome-zarr-0.21.0 partd-1.4.2 pims-0.7 platformdirs-4.13.5 session-info-1.0.1 shapely-2.2.0 spatial-image-1.2.3 toolz-1.2.0 universal-pathlib-0.3.10 xarray-spatial-0.10.19
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.2
+[notice] To update, run: /home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/bin/python -m pip install --upgrade pip
+INSTALL ['Deprecated', 'colorcet', 'jaraco.functools', 'locket', 'locket>=1.0.0', 'more-itertools>=10.7', 'more_itertools>=8.5.0', 'msgpack>=1.0.2', 'multipledispatch', 'ome-zarr-models>=1.8.1', 'param', 'pathlib-abc<0.6.0,>=0.5.1', 'psutil>=5.8.0', 'pyct', 'pyogrio>=0.8', 'pyproj>=3.7.0', 'rangehttpserver', 'slicerator>=0.9.8', 'sortedcontainers>=2.0.5', 'stdlib_list', 'tblib!=3.2.0,!=3.2.1,>=1.6.0', 'tornado>=6.2.0', 'transformnd<0.10.0,>=0.9.2', 'typeguard>=4.0.1', 'xarray-dataclass>=3.0.0', 'zict>=3.0.0']
+Looking in indexes: https://mirrors.aliyun.com/pypi/simple/, https://pypi.mirrors.ustc.edu.cn/simple/
+Collecting Deprecated
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/83/ae/676feae8e4644a6d7169951a97f61c56f416c73f67bf1761f2461d75cc81/deprecated-3.0.0-py3-none-any.whl (21 kB)
+Collecting colorcet
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/1b/24/e95471ae93c08d3606c9c7343cf65d490f154daa88b50581957a0aa780f4/colorcet-3.2.1-py3-none-any.whl (262 kB)
+Collecting jaraco.functools
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/02/36/ecc85bc96c273dc8a11273ed4782272975e6338d4a3e9228621175edf0e3/jaraco_functools-4.6.0-py3-none-any.whl (11 kB)
+Collecting locket
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/db/bc/83e112abc66cd466c6b83f99118035867cecd41802f8d044638aa78a106e/locket-1.0.0-py2.py3-none-any.whl (4.4 kB)
+Collecting more-itertools>=10.7
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/5d/57/3c4b1c6f2e0cc29ba023802458ea3d2a996f87085559e4a5f2192d549532/more_itertools-11.2.1-py3-none-any.whl (74 kB)
+Collecting msgpack>=1.0.2
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/3a/cf/9c2e4d6c179529d5bf4a64cff76fa581486569e9fbdd35bd98f51cb624bf/msgpack-1.2.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (472 kB)
+Collecting multipledispatch
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/51/c0/00c9809d8b9346eb238a6bbd5f83e846a4ce4503da94a4c08cb7284c325b/multipledispatch-1.0.0-py3-none-any.whl (12 kB)
+Collecting ome-zarr-models>=1.8.1
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/2d/70/9ab676f57fe2cb5457db80dd0cc4648b02cbe777d47f159e357391a1e00a/ome_zarr_models-1.8.1-py3-none-any.whl (75 kB)
+Collecting param
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/35/94/ff5ad5b758c61c1b33755e02c3a653d1d41c36891329e76a8e6b6e69e8b1/param-2.4.2-py3-none-any.whl (155 kB)
+Collecting pathlib-abc<0.6.0,>=0.5.1
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/b1/29/c028a0731e202035f0e2e0bfbf1a3e46ad6c628cbb17f6f1cc9eea5d9ff1/pathlib_abc-0.5.2-py3-none-any.whl (19 kB)
+Collecting psutil>=5.8.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/b5/70/5d8df3b09e25bce090399cf48e452d25c935ab72dad19406c77f4e828045/psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+Collecting pyct
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/8c/b2/23f4032cd1c9744aa8e9ecda43cd4d755fcb209f7f40fae035248f31a679/pyct-0.6.0-py3-none-any.whl (16 kB)
+Collecting pyogrio>=0.8
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/20/c2/247c150f5ca12f8593c20e39115db551b18de5c6cb383006de21b57399e4/pyogrio-0.13.0-cp311-abi3-manylinux_2_28_x86_64.whl (33.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 33.3/33.3 MB 11.0 MB/s eta 0:00:00
+Collecting pyproj>=3.7.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/5f/ed/035354de8fbc1c1350f5b7f66361995f187d89675622eb63016bf7261dd5/pyproj-3.8.0-cp312-cp312-manylinux_2_28_x86_64.whl (10.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.0/10.0 MB 8.4 MB/s eta 0:00:00
+Collecting rangehttpserver
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/2f/43/d7e2b9ad768c07b5473bea3ac7db9ca4d995c09399cbea3d4df1c0bd4955/rangehttpserver-1.4.0-py2.py3-none-any.whl (7.8 kB)
+Collecting slicerator>=0.9.8
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/e8/ae/fa6cd331b364ad2bbc31652d025f5747d89cbb75576733dfdf8efe3e4d62/slicerator-1.1.0-py3-none-any.whl (10 kB)
+Collecting sortedcontainers>=2.0.5
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/32/46/9cb0e58b2deb7f82b84065f37f3bffeb12413f947f9388e4cac22c4621ce/sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+Collecting stdlib_list
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/3b/3d/2970b27a11ae17fb2d353e7a179763a2fe6f37d6d2a9f4d40104a2f132e9/stdlib_list-0.12.0-py3-none-any.whl (87 kB)
+Collecting tblib!=3.2.0,!=3.2.1,>=1.6.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/02/be/5d2d47b1fb58943194fb59dcf222f7c4e35122ec0ffe8c36e18b5d728f0b/tblib-3.2.2-py3-none-any.whl (12 kB)
+Collecting tornado>=6.2.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/30/69/b20cf3a8bf641ec792a5a6050aa153e8f120604f9c23471142de535113e5/tornado-6.6-cp311-abi3-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (529 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 529.5/529.5 kB 52.6 MB/s eta 0:00:00
+Collecting transformnd<0.10.0,>=0.9.2
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/56/55/1681d3d3cb0b73f91d4f0a8b8fc4b01a33861ae76c5151227ffdac09c109/transformnd-0.9.2-py3-none-any.whl (39 kB)
+Collecting typeguard>=4.0.1
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/8f/eb/461d5f167b6f5c7d97696f397c82f82e3480e003fce3f0a1cd1dd26e2eb2/typeguard-4.6.0-py3-none-any.whl (36 kB)
+Collecting xarray-dataclass>=3.0.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/bc/ea/bc1de04d06b7c59fc3ff647a11fa248bf80af5a6227647a31c6250c32ce6/xarray_dataclass-3.0.0-py3-none-any.whl (16 kB)
+Collecting zict>=3.0.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/80/ab/11a76c1e2126084fde2639514f24e6111b789b0bfa4fc6264a8975c7e1f1/zict-3.0.0-py2.py3-none-any.whl (43 kB)
+Installing collected packages: sortedcontainers, slicerator, rangehttpserver, multipledispatch, zict, xarray-dataclass, typeguard, transformnd, tornado, tblib, stdlib_list, pyproj, pyogrio, pyct, psutil, pathlib-abc, param, ome-zarr-models, msgpack, more-itertools, locket, jaraco.functools, Deprecated, colorcet
+Successfully installed Deprecated-3.0.0 colorcet-3.2.1 jaraco.functools-4.6.0 locket-1.0.0 more-itertools-11.2.1 msgpack-1.2.3 multipledispatch-1.0.0 ome-zarr-models-1.8.1 param-2.4.2 pathlib-abc-0.5.2 psutil-7.2.2 pyct-0.6.0 pyogrio-0.13.0 pyproj-3.8.0 rangehttpserver-1.4.0 slicerator-1.1.0 sortedcontainers-2.4.0 stdlib_list-0.12.0 tblib-3.2.2 tornado-6.6 transformnd-0.9.2 typeguard-4.6.0 xarray-dataclass-3.0.0 zict-3.0.0
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.2
+[notice] To update, run: /home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/bin/python -m pip install --upgrade pip
+INSTALL ['pydantic-zarr>=0.8.2', 'pydantic<2.13,>=2.11.5']
+Looking in indexes: https://mirrors.aliyun.com/pypi/simple/, https://pypi.mirrors.ustc.edu.cn/simple/
+Collecting pydantic-zarr>=0.8.2
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/c7/05/04af0ca9c5747c95591a549509ebbb0a986155015de59f1e4c984e3af9ab/pydantic_zarr-0.10.0-py3-none-any.whl (52 kB)
+Collecting pydantic<2.13,>=2.11.5
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/5a/87/b70ad306ebb6f9b585f114d0ac2137d792b48be34d732d60e597c2f8465a/pydantic-2.12.5-py3-none-any.whl (463 kB)
+Installing collected packages: pydantic-zarr, pydantic
+Successfully installed pydantic-2.12.5 pydantic-zarr-0.10.0
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.2
+[notice] To update, run: /home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/bin/python -m pip install --upgrade pip
+INSTALL ['pydantic-core==2.41.5']
+Looking in indexes: https://mirrors.aliyun.com/pypi/simple/, https://pypi.mirrors.ustc.edu.cn/simple/
+Collecting pydantic-core==2.41.5
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/0d/76/941cc9f73529988688a665a5c0ecff1112b3d95ab48f81db5f7606f522d3/pydantic_core-2.41.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 57.1 MB/s eta 0:00:00
+Installing collected packages: pydantic-core
+Successfully installed pydantic-core-2.41.5
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.2
+[notice] To update, run: /home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/bin/python -m pip install --upgrade pip
+DEPS_COMPLETE

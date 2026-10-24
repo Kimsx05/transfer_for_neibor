@@ -1,0 +1,168 @@
+Metadata-Version: 2.4
+Name: transformnd
+Version: 0.9.2
+Summary: ND coordinate transformations
+Author: Chris Barnes
+Author-email: Chris Barnes <chris.barnes@gerbi-gmb.de>
+License-Expression: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: GIS
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Requires-Dist: numpy>=2
+Requires-Dist: networkx>=3
+Requires-Dist: array-api-compat>=1.14
+Requires-Dist: typing-extensions>=4.15.0
+Requires-Dist: transformnd[pandas] ; extra == 'adapters'
+Requires-Dist: transformnd[shapely] ; extra == 'adapters'
+Requires-Dist: transformnd[polars] ; extra == 'adapters'
+Requires-Dist: transformnd[transforms] ; extra == 'all'
+Requires-Dist: transformnd[adapters] ; extra == 'all'
+Requires-Dist: molesq>=0.4.0 ; extra == 'movingleastsquares'
+Requires-Dist: pandas>=3.0.2 ; extra == 'pandas'
+Requires-Dist: polars>=1.40.1 ; extra == 'polars'
+Requires-Dist: shapely>=2.1.2 ; extra == 'shapely'
+Requires-Dist: morphops>=0.1.13 ; extra == 'thinplatesplines'
+Requires-Dist: transformnd[thinplatesplines] ; extra == 'transforms'
+Requires-Dist: transformnd[movingleastsquares] ; extra == 'transforms'
+Requires-Dist: transformnd[vectorfield] ; extra == 'transforms'
+Requires-Dist: transformnd[vectorfield-dask] ; extra == 'transforms'
+Requires-Dist: scipy>=1.17.1 ; extra == 'vectorfield'
+Requires-Dist: dask>=2026.3.0 ; extra == 'vectorfield-dask'
+Requires-Dist: dask-image>=2026.5.0 ; extra == 'vectorfield-dask'
+Requires-Python: >=3.12, <4.0
+Project-URL: documentation, https://transformnd.readthedocs.io/en/latest/
+Project-URL: source, https://github.com/clbarnes/transformnd
+Project-URL: issues, https://github.com/clbarnes/transformnd/issues
+Provides-Extra: adapters
+Provides-Extra: all
+Provides-Extra: movingleastsquares
+Provides-Extra: pandas
+Provides-Extra: polars
+Provides-Extra: shapely
+Provides-Extra: thinplatesplines
+Provides-Extra: transforms
+Provides-Extra: vectorfield
+Provides-Extra: vectorfield-dask
+Description-Content-Type: text/markdown
+
+# transformnd
+
+[![PyPI - Version](https://img.shields.io/pypi/v/transformnd)](https://pypi.org/project/transformnd/)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/clbarnes/transformnd/ci.yaml)](https://github.com/clbarnes/transformnd/actions)
+[![Read the Docs](https://img.shields.io/readthedocs/transformnd)](https://transformnd.readthedocs.io)
+![PyPI - License](https://img.shields.io/pypi/l/transformnd)
+
+A library providing an API for coordinate transformations,
+as well as some common transforms.
+The goal is to allow downstream applications which require such transformations
+(e.g. image registration) to be generic over anything inheriting from `transformnd.Transform`.
+
+The base classes and utilities are very lightweight with few dependencies, for use as an API; additional transforms and features use extras.
+
+Heavily inspired by/ cribbed directly from
+[Philipp Schlegel's work in navis](https://github.com/schlegelp/navis/tree/master/navis/transforms);
+co-developed with [xform](https://github.com/schlegelp/xform/) as a red team prototype.
+
+`N` coordinates in `D` dimensions are given as a numpy array of shape `(N, D)`.
+
+`Transform` subclasses which are restricted to certain dimensionalities
+can specify this in their `ndim` class variable.
+Instances of `Transform` subclasses can further restrict their `ndim`.
+Use `self._validate_coords(coords)` in the `apply` method to ensure the coordinates
+are of valid type and dimensions.
+
+Additionally, `transformnd` provides an interface for transforming types other than NxD numpy arrays,
+and implements these adapters for a few common types.
+
+## Usage
+
+`transformnd` is pre-1.0 and the API is subject to change.
+Production users should pin the maximum dependency version at the next minor version, like `uv add --bounds minor`.
+
+## Implemented transforms
+
+All transforms are accessed under the `transformnd.transforms` subpackage.
+
+| Transform | Extra | Description |
+| --------- | ----- | ----------- |
+| `Identity` | | No-op transformation |
+| `Translation` | | Add a constant translation to the input coordinates |
+| `Scale` | | Multiply the input coordinates by constant scale factor |
+| `Reflection` | | Reflect coordinates about arbitrary planes |
+| `MapAxis` | | Rearrange axes of the input coordinates |
+| `Affine` | | Multiply augmented coordinates by an affine transformation matrix. Can represent all of the above transformations. Can be composed with matrix multiplication `aff2 @ aff1`. |
+| `ByDimension` | | Apply different transformations to subsets of the input coordinates' dimensions |
+| `MovingLeastSquares` | `movingleastsquares` | Landmark-based transformation. |
+| `ThinPlateSplines` | `thinplatesplines` | Landmark-based transformation. |
+| `Coordinates` | `vectorfield` for in-memory, `vectorfield-dask` for chunked | Look up output coordinates in a vector field indexed by the input coordinates |
+| `Displacements` | `vectorfield`, `vectorfield-dask` for chunked | Look up translations in a vector field indexed by the input coordinates, and add them to input coordinates |
+
+Arbitrary transforms can be composed into a `TransformSequence` with `transform1 | transform2`.
+A graph of transforms between defined spaces can be traversed using the `TransformGraph`.
+
+## Implemented adapters
+
+- Numpy arrays of shape `(..., D, ...)` (`transformnd.adapters.ReshapeAdapter`)
+- `pandas.DataFrame` (`transformnd.adapters.pandas.PandasAdapter`)
+  - Takes a subset of columns as a coordinate array
+- `polars.DataFrame` (`transformnd.adapters.polars.PolarsAdapter`)
+  - Similar to the pandas adapter
+  - Currently, only scalar columns are supported (e.g. not a single struct column with fields `x`, `y`, `z`)
+- Geometries from `shapely` (`transformnd.adapters.shapely.ShapelyAdapter`)
+- Objects composed of transformable attributes (`transformnd.adapters.AttrAdapter`).
+
+## Additional transforms and adapters
+
+Contributions of additional transforms and adapters are welcome!
+Even if they're only thin wrappers around an external library,
+the downstream ecosystem benefits from a consistent API.
+
+Such external transformation libraries should be specified as "extras" (`pyproject.toml:project.optional-dependencies`),
+and be contained in a submodule so that they are not immediately imported
+with `transformnd`.
+
+Alternatively, consider adopting `transformnd`'s base classes in your own library,
+and have your transformation instantly compatible for downstream users.
+
+Methods which MUST be implemented:
+
+- `__init__`: should validate parameters and must call the `super()` constructor
+- `apply`: should call `_validate_coords` method early to check that the given coordinates are the correct shape
+
+Methods which SHOULD be implemented if applicable:
+
+- `to_device`: if any of the transformation's parameters need to be placed on a specific device (e.g. affine matrices on the GPU). The base class implementation returns `self`.
+- `is_identity`: if you can cheaply check whether your transformation is an identity transformation. The base class implementation returns `False`.
+- `to_affine`: if your transformation can be represented as an affine matrix. The base class implementation returns `None`.
+- `invert`: if your transformation can be inverted (default None if not)
+  - This automatically implements `__invert__` (the `~` operator), which returns `NotImplemented` (probably raising `NotImplementedError`) if `invert` would return `None`.
+
+## Contributing
+
+- Use [`uv`](https://docs.astral.sh/uv/) for environment and dependency management.
+  - `uv sync` to set up the environment.
+- Use [`prek`](https://prek.j178.dev/) for running pre-commit hooks.
+  - `prek install-hooks && prek run --all-files` to get started.
+- Use [`just`](https://github.com/casey/just) for common development tasks (format, lint, test, generate docs, run benchmarks).
+  - `just` to list commands.
+- Docs are generated with [`pdoc`](https://pdoc.dev/) (use `just doc`) and hosted on ReadTheDocs
+- `just bump` bumps the version, commits, and tags (but does not push); depends on [`schpet/changelog`](https://github.com/schpet/changelog)
+- `just repl` starts an IPython shell with all dependencies installed
+
+## Thanks
+
+Thanks to contributors
+
+- [Francesca Drummer](https://github.com/FrancescaDr)
+- [Johannes Soltwedel](https://github.com/jo-mueller)
+- [Lorenzo Cerrone](https://github.com/lorenzocerrone)
+- [Maks Hess](https://github.com/MaksHess)
+- [Silvia Maria Macrì](https://github.com/SilviaMariaMacri)

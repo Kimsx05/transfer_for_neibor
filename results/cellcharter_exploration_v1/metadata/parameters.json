@@ -1,0 +1,27 @@
+{
+  "versions": {
+    "cellcharter": "0.3.8",
+    "squidpy": "1.8.3",
+    "anndata": "0.13.4",
+    "torchgmm": "0.1.4",
+    "torch": "2.8.0"
+  },
+  "seed": 123,
+  "model": {
+    "random_state": 1514383052,
+    "batch_size": 16384,
+    "covariance_regularization": 1e-05,
+    "trainer_params": {
+      "accelerator": "gpu",
+      "devices": 1,
+      "max_epochs": 100,
+      "enable_progress_bar": false,
+      "logger": false
+    }
+  },
+  "graph": "Per-section scipy Delaunay (same triangulation underlying generic Squidpy); PRIMARY cutoff min(99th percentile,40um); identical cutoff for sensitivities",
+  "aggregate": "CellCharter aggregate_neighbors n_layers=3 mean sample_key=section_id",
+  "gpu_fraction": 0.4,
+  "autok_base_seed": 123,
+  "selected_primary_and_sensitivity_seed": 1514383052
+}
