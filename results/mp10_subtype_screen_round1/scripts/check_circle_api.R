@@ -1,0 +1,4 @@
+.libPaths(c('/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.5','/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4',.libPaths()))
+library(data.table);library(CellChat);library(qs)
+n<-qread('mp10_subtype_screen_round1/objects/networks/CNP0000460__MP10_low_high__high.qs');ix<-which.max(apply(n$net$prob,c(3),sum));mat<-n$net$prob[,,ix];mat[n$net$pval[,,ix]>=.05]<-0;inds<-order(rowSums(mat)+colSums(mat),decreasing=TRUE)[1:5];mat<-mat[inds,inds];theta<-seq(0,2*pi,length.out=6)[-1];lo<-cbind(cos(theta),sin(theta))
+png('mp10_subtype_screen_round1/logs/circle_api_preview.png',width=1600,height=1400,res=180,bg='transparent');netVisual_circle(mat,layout=igraph::in_circle(),vertex.weight=rep(1,5),vertex.weight.max=1,vertex.size.max=12,edge.weight.max=max(mat),edge.width.max=8,weight.scale=TRUE,margin=.4,vertex.label.cex=.8);dev.off()

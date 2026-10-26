@@ -1,0 +1,128 @@
+Loading required package: dplyr
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:data.table’:
+
+    between, first, last
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: igraph
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:dplyr’:
+
+    as_data_frame, groups, union
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+Loading required package: ggplot2
+function (object, type = c("triMean", "truncatedMean", "thresholdedMean", 
+    "median"), trim = 0.1, LR.use = NULL, raw.use = TRUE, population.size = FALSE, 
+    distance.use = TRUE, interaction.length = 200, scale.distance = 0.01, 
+    k.min = 10, nboot = 100, seed.use = 1L, Kh = 0.5, n = 1) 
+{
+    type <- match.arg(type)
+    cat(type, "is used for calculating the average gene expression per cell group.", 
+        "\n")
+    FunMean <- switch(type, triMean = triMean, truncatedMean = function(x) mean(x, 
+        trim = trim, na.rm = TRUE), median = function(x) median(x, 
+        na.rm = TRUE))
+    if (raw.use) {
+        data <- as.matrix(object@data.signaling)
+    }
+    else {
+        data <- object@data.project
+    }
+    if (is.null(LR.use)) {
+        pairLR.use <- object@LR$LRsig
+    }
+    else {
+        pairLR.use <- LR.use
+    }
+    complex_input <- object@DB$complex
+    cofactor_input <- object@DB$cofactor
+    my.sapply <- ifelse(test = future::nbrOfWorkers() == 1, yes = sapply, 
+        no = future.apply::future_sapply)
+    ptm = Sys.time()
+    pairLRsig <- pairLR.use
+    group <- object@idents
+    geneL <- as.character(pairLRsig$ligand)
+    geneR <- as.character(pairLRsig$receptor)
+    nLR <- nrow(pairLRsig)
+    numCluster <- nlevels(group)
+    if (numCluster != length(unique(group))) {
+        stop("Please check `unique(object@idents)` and ensure that the factor levels are correct!\n         You may need to drop unused levels using 'droplevels' function. e.g.,\n         `meta$labels = droplevels(meta$labels, exclude = setdiff(levels(meta$labels),unique(meta$labels)))`")
+    }
+    data.use <- data/max(data)
+    nC <- ncol(data.use)
+    data.use.avg <- aggregate(t(data.use), list(group), FUN = FunMean)
+    data.use.avg <- t(data.use.avg[, -1])
+    colnames(data.use.avg) <- levels(group)
+    dataLavg <- computeExpr_LR(geneL, data.use.avg, complex_input)
+    dataRavg <- computeExpr_LR(geneR, data.use.avg, complex_input)
+    dataRavg.co.A.receptor <- computeExpr_coreceptor(cofactor_input, 
+        data.use.avg, pairLRsig, type = "A")
+    dataRavg.co.I.receptor <- computeExpr_coreceptor(cofactor_input, 
+        data.use.avg, pairLRsig, type = "I")
+    dataRavg <- dataRavg * dataRavg.co.A.receptor/dataRavg.co.I.receptor
+    dataLavg2 <- t(replicate(nrow(dataLavg), as.numeric(table(group))/nC))
+    dataRavg2 <- dataLavg2
+    index.agonist <- which(!is.na(pairLRsig$agonist) & pairLRsig$agonist != 
+        "")
+    index.antagonist <- which(!is.na(pairLRsig$antagonist) & 
+        pairLRsig$antagonist != "")
+    if (object@options$datatype != "RNA") {
+        data.spatial <- object@images$coordinates
+        spot.size.fullres <- object@images$scale.factors$spot
+        spot.size <- object@images$scale.factors$spot.diameter
+        d.spatial <- computeRegionDistance(coordinates = data.spatial, 
+            group = group, trim = trim, interaction.length = interaction.length, 
+            spot.size = spot.size, spot.size.fullres = spot.size.fullres, 
+            k.min = k.min)
+        if (distance.use) {
+            print(paste0(">>> Run CellChat on spatial imaging data using distances as constraints <<< [", 
+                Sys.time(), "]"))
+            d.spatial <- d.spatial * scale.distance
+            diag(d.spatial) <- NaN
+            cat("The suggested minimum value of scaled distances is in [1,2], and the calculated value here is ", 
+                min(d.spatial, na.rm = TRUE), "\n")
+            if (min(d.spatial, na.rm = TRUE) < 1) {
+                stop("Please increase the value of `scale.distance` and check the suggested values in the parameter description (e.g., 1, 0.1, 0.01, 0.001, 0.11, 0.011)")
+            }
+            P.spatial <- 1/d.spatial
+            P.spatial[is.na(d.spatial)] <- 0
+            diag(P.spatial) <- max(P.spatial)
+            d.spatial <- d.spatial/scale.distance
+        }
+        else {
+            print(paste0(">>> Run CellChat on spatial imaging data without distances as constraints <<< [", 
+                Sys.time(), "]"))
+            P.spatial <- matrix(1, nrow = numCluster, ncol = numCluster)
+            P.spatial[is.na(d.spatial)] <- 0
+        }
+    }
+    else {
+        print(paste0(">>> Run CellChat on sc/snRNA-seq data <<< [", 
+            Sys.time(), "]"))
+        d.spatial <- matrix(NaN, nrow = numCluster, ncol = numCluster)
+        P.spatial <- matrix(1, nrow = numCluster, ncol = numCluster)
+        distance.use = NULL
+        interaction.length = NULL
+        spot.size = NULL
+        spot.size.fullres = NULL
+        k.min = NULL

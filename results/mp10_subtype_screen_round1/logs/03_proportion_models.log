@@ -1,0 +1,304 @@
+Performing logit transformation of proportions
+Performing logit transformation of proportions
+Performing logit transformation of proportions
+Performing logit transformation of proportions
+Performing logit transformation of proportions
+Performing logit transformation of proportions
+Performing logit transformation of proportions
+Performing logit transformation of proportions
+Performing logit transformation of proportions
+Performing logit transformation of proportions
+Model statuses
+                        comparison       scope
+                            <char>      <char>
+ 1:                   Normal_Tumor         ALL
+ 2:                          T1_T2         ALL
+ 3:                  MP10_low_high         ALL
+ 4:                MP10_continuous         ALL
+ 5: MP10_stage_complete_unadjusted         ALL
+ 6:            MP10_stage_adjusted         ALL
+ 7:                      T_overall         ALL
+ 8:            Normal_Tumor_paired         ALL
+ 9:                   Normal_Tumor  CNP0000460
+10:                          T1_T2  CNP0000460
+11:                  MP10_low_high  CNP0000460
+12:                MP10_continuous  CNP0000460
+13: MP10_stage_complete_unadjusted  CNP0000460
+14:            MP10_stage_adjusted  CNP0000460
+15:                      T_overall  CNP0000460
+16:            Normal_Tumor_paired  CNP0000460
+17:                   Normal_Tumor   GSE326225
+18:                          T1_T2   GSE326225
+19:                  MP10_low_high   GSE326225
+20:                MP10_continuous   GSE326225
+21: MP10_stage_complete_unadjusted   GSE326225
+22:            MP10_stage_adjusted   GSE326225
+23:                      T_overall   GSE326225
+24:            Normal_Tumor_paired   GSE326225
+25:                   Normal_Tumor   HRA003620
+26:                          T1_T2   HRA003620
+27:                  MP10_low_high   HRA003620
+28:                MP10_continuous   HRA003620
+29: MP10_stage_complete_unadjusted   HRA003620
+30:            MP10_stage_adjusted   HRA003620
+31:                      T_overall   HRA003620
+32:            Normal_Tumor_paired   HRA003620
+33:                   Normal_Tumor InhouseData
+34:                          T1_T2 InhouseData
+35:                  MP10_low_high InhouseData
+36:                MP10_continuous InhouseData
+37: MP10_stage_complete_unadjusted InhouseData
+38:            MP10_stage_adjusted InhouseData
+39:                      T_overall InhouseData
+40:            Normal_Tumor_paired InhouseData
+41:                   Normal_Tumor PRJNA662018
+42:                          T1_T2 PRJNA662018
+43:                  MP10_low_high PRJNA662018
+44:                MP10_continuous PRJNA662018
+45: MP10_stage_complete_unadjusted PRJNA662018
+46:            MP10_stage_adjusted PRJNA662018
+47:                      T_overall PRJNA662018
+48:            Normal_Tumor_paired PRJNA662018
+49:            Normal_Tumor_paired         ALL
+50:                   Normal_Tumor  CNP0000460
+51:                          T1_T2  CNP0000460
+52:                  MP10_low_high  CNP0000460
+53:                MP10_continuous  CNP0000460
+54: MP10_stage_complete_unadjusted  CNP0000460
+55:            MP10_stage_adjusted  CNP0000460
+56:                      T_overall  CNP0000460
+57:            Normal_Tumor_paired  CNP0000460
+58:                   Normal_Tumor   HRA003620
+59:                          T1_T2   HRA003620
+60:                  MP10_low_high   HRA003620
+61:                MP10_continuous   HRA003620
+62: MP10_stage_complete_unadjusted   HRA003620
+63:            MP10_stage_adjusted   HRA003620
+64:                      T_overall   HRA003620
+65:            Normal_Tumor_paired   HRA003620
+66:                   Normal_Tumor PRJNA662018
+67:                  MP10_low_high PRJNA662018
+68:                MP10_continuous PRJNA662018
+69:            Normal_Tumor_paired PRJNA662018
+70:                   Normal_Tumor         ALL
+71:                          T1_T2         ALL
+72:                  MP10_low_high         ALL
+73:                MP10_continuous         ALL
+74: MP10_stage_complete_unadjusted         ALL
+75:            MP10_stage_adjusted         ALL
+76:                      T_overall         ALL
+77:                   Normal_Tumor   GSE326225
+78:                  MP10_low_high   GSE326225
+79:                MP10_continuous   GSE326225
+80:                   Normal_Tumor InhouseData
+81:                          T1_T2 InhouseData
+82:                  MP10_low_high InhouseData
+83:                MP10_continuous InhouseData
+84: MP10_stage_complete_unadjusted InhouseData
+85:            MP10_stage_adjusted InhouseData
+86:                      T_overall InhouseData
+                        comparison       scope
+                            <char>      <char>
+                                 status     N
+                                 <char> <int>
+ 1:                           estimated   103
+ 2:                           estimated   103
+ 3:                           estimated   103
+ 4:                           estimated   103
+ 5:                           estimated   103
+ 6:                           estimated   103
+ 7:                           estimated   103
+ 8:                           estimated    97
+ 9:                           estimated    95
+10:                           estimated    95
+11:                           estimated    95
+12:                           estimated    95
+13:                           estimated    95
+14:                           estimated    95
+15:                           estimated    95
+16:                           estimated    95
+17:      one_condition_or_constant_MP10   103
+18: constant_or_unavailable_composition   105
+19:                           estimated   103
+20:                           estimated   103
+21: constant_or_unavailable_composition   105
+22: constant_or_unavailable_composition   105
+23: constant_or_unavailable_composition   105
+24: constant_or_unavailable_composition   105
+25:                           estimated    95
+26:              fewer_than_4_specimens    81
+27:                           estimated    87
+28:                           estimated    87
+29:                           estimated    87
+30:            fewer_than_2_residual_df    87
+31:                           estimated    91
+32:                           estimated    95
+33:      one_condition_or_constant_MP10   103
+34:      one_condition_or_constant_MP10   103
+35:                           estimated   103
+36:                           estimated   103
+37:                           estimated   103
+38:                           estimated   103
+39:                           estimated   103
+40: constant_or_unavailable_composition   105
+41:                           estimated    95
+42: constant_or_unavailable_composition   105
+43:              fewer_than_4_specimens    89
+44:              fewer_than_4_specimens    89
+45: constant_or_unavailable_composition   105
+46: constant_or_unavailable_composition   105
+47: constant_or_unavailable_composition   105
+48:                           estimated    95
+49: constant_or_unavailable_composition     8
+50: constant_or_unavailable_composition    10
+51: constant_or_unavailable_composition    10
+52: constant_or_unavailable_composition    10
+53: constant_or_unavailable_composition    10
+54: constant_or_unavailable_composition    10
+55: constant_or_unavailable_composition    10
+56: constant_or_unavailable_composition    10
+57: constant_or_unavailable_composition    10
+58: constant_or_unavailable_composition    10
+59: constant_or_unavailable_composition    24
+60: constant_or_unavailable_composition    18
+61: constant_or_unavailable_composition    18
+62: constant_or_unavailable_composition    18
+63: constant_or_unavailable_composition    18
+64: constant_or_unavailable_composition    14
+65: constant_or_unavailable_composition    10
+66: constant_or_unavailable_composition    10
+67: constant_or_unavailable_composition    16
+68: constant_or_unavailable_composition    16
+69: constant_or_unavailable_composition    10
+70: constant_or_unavailable_composition     2
+71: constant_or_unavailable_composition     2
+72: constant_or_unavailable_composition     2
+73: constant_or_unavailable_composition     2
+74: constant_or_unavailable_composition     2
+75: constant_or_unavailable_composition     2
+76: constant_or_unavailable_composition     2
+77: constant_or_unavailable_composition     2
+78: constant_or_unavailable_composition     2
+79: constant_or_unavailable_composition     2
+80: constant_or_unavailable_composition     2
+81: constant_or_unavailable_composition     2
+82: constant_or_unavailable_composition     2
+83: constant_or_unavailable_composition     2
+84: constant_or_unavailable_composition     2
+85: constant_or_unavailable_composition     2
+86: constant_or_unavailable_composition     2
+                                 status     N
+                                 <char> <int>
+PRIMARY MP10
+                          subtype coefficient      CI_low    CI_high          P
+                           <char>       <num>       <num>      <num>      <num>
+ 1:                     iCAF-like -4.75711447  -9.2938869 -0.2203421 0.04024943
+ 2:                      Pericyte  4.80293732  -0.1107360  9.7166106 0.05517905
+ 3:          dataset_bias_myeloid  3.54033660  -0.1299708  7.2106440 0.05822486
+ 4:                        Plasma -6.72340071 -13.7941622  0.3473608 0.06180842
+ 5:                       Naive B  2.77180042  -0.8915281  6.4351289 0.13159073
+ 6:              excluded_myeloid -2.83722950  -6.9964658  1.3220068 0.17474729
+ 7:                   Endothelial  4.51054306  -2.3220890 11.3431751 0.19001046
+ 8:              IFN-stimulated B  4.71527485  -2.6435595 12.0741092 0.19867518
+ 9:                          rCAF  2.93302604  -1.8188606  7.6849127 0.22066179
+10:                            NK  2.23512704  -1.4881589  5.9584129 0.23145880
+11:       CD4 Helper/Conventional -2.13750999  -6.2621826  1.9871626 0.30040028
+12:                          iCAF -2.52960633  -7.5138525  2.4546398 0.31268310
+13:                             B -3.61082840 -11.1133457  3.8916889 0.33703974
+14:                      SPP1 TAM  1.70221032  -1.9049688  5.3093894 0.34491312
+15:               Cycling stromal  2.56329124  -2.9923278  8.1189103 0.35826370
+16:                     FOLR2 TAM  1.62712827  -2.1193564  5.3736129 0.38424562
+17:                  Lymphatic EC -3.49925689 -12.0428109  5.0442972 0.40718075
+18:            dataset_bias_fibro -2.14313870  -7.3006046  3.0143272 0.40762582
+19:         CD4 Naive/Memory-like -1.99975990  -7.0419066  3.0423868 0.42583021
+20:                           SMC  2.04431085  -3.1396523  7.2282739 0.43178889
+21:                      Memory B -1.92426279  -7.1865961  3.3380705 0.45807580
+22:                    Neutrophil -1.71728284  -6.5105995  3.0760338 0.47166303
+23:              dataset_bias_TNK -1.77556938  -6.7849861  3.2338474 0.47623962
+24:                          vCAF  1.52337351  -3.1529272  6.1996742 0.51564771
+25:       CD8 T-like / unresolved -1.24430757  -5.2652402  2.7766251 0.53437203
+26:                    Cycling EC  1.25020390  -2.8581828  5.3585906 0.53676443
+27:                       Myeloid  1.80465461  -4.2590982  7.8684074 0.55139139
+28:                           pDC -1.39285767  -6.1025122  3.3167969 0.55191803
+29:                   Arterial EC -0.91894862  -4.0631214  2.2252242 0.55287468
+30:                          cDC1 -1.05226810  -4.6763035  2.5717673 0.55961027
+31:             T-cell unresolved -1.22853020  -5.4687833  3.0117229 0.56061509
+32:                 CD8 Exhausted -1.54835123  -6.9373009  3.8405985 0.56312915
+33:                        Tip EC -1.07907639  -4.9389782  2.7808254 0.57015723
+34:        Cycling TAM/macrophage -1.21083549  -5.6958408  3.2741698 0.58693317
+35:               Tfh/CXCL13-like -1.41812976  -6.7597509  3.9234914 0.59302495
+36:                      C1QC TAM  0.80119732  -2.3296770  3.9320716 0.60692912
+37: CD8 GZMK/Effector-memory-like -1.01810771  -5.0609157  3.0247003 0.61278821
+38:                          Mast  1.42377248  -5.2162629  8.0638078 0.66748271
+39:                      LAMP3 DC -0.91562528  -5.3675068  3.5362562 0.67868171
+40:                          GC B  1.36393822  -5.8586206  8.5864970 0.70037299
+41:                Classical Mono  0.57531454  -2.7213814  3.8720105 0.72544835
+42:                    Matrix_CAF -0.77254880  -5.5558493  4.0107517 0.74682277
+43:                  Capillary EC  0.77026806  -4.8191001  6.3596363 0.77902437
+44:                          Treg  0.47979856  -3.2173902  4.1769873 0.79398328
+45:     NK / gamma-delta-boundary  0.64146989  -4.4062100  5.6891497 0.79775625
+46:                    Fibroblast  0.97193374  -7.6283104  9.5721778 0.82073039
+47:                     Venous EC -0.31507431  -4.2346344  3.6044858 0.86992383
+48:              unresolved_fibro -0.32728520  -4.4016642  3.7470938 0.87247558
+49:                          T/NK  0.42081239  -5.9668223  6.8084471 0.89488635
+50:                          cDC2  0.09581684  -4.2027986  4.3944323 0.96414486
+51:                          Mast          NA          NA         NA         NA
+52:                        Plasma          NA          NA         NA         NA
+                          subtype coefficient      CI_low    CI_high          P
+                           <char>       <num>       <num>      <num>      <num>
+            q n_specimens                              status
+        <num>       <int>                              <char>
+ 1: 0.7984816          26                           estimated
+ 2: 0.7984816          26                           estimated
+ 3: 0.7984816          27                           estimated
+ 4: 0.4326589          27                           estimated
+ 5: 0.7984816          26                           estimated
+ 6: 0.7984816          27                           estimated
+ 7: 0.6650366          27                           estimated
+ 8: 0.7984816          26                           estimated
+ 9: 0.7984816          26                           estimated
+10: 0.7984816          27                           estimated
+11: 0.7984816          27                           estimated
+12: 0.7984816          26                           estimated
+13: 0.7864261          27                           estimated
+14: 0.7984816          27                           estimated
+15: 0.7984816          26                           estimated
+16: 0.7984816          27                           estimated
+17: 0.7984816          27                           estimated
+18: 0.7984816          26                           estimated
+19: 0.7984816          27                           estimated
+20: 0.7984816          26                           estimated
+21: 0.7984816          26                           estimated
+22: 0.7984816          27                           estimated
+23: 0.7984816          27                           estimated
+24: 0.7984816          26                           estimated
+25: 0.7984816          27                           estimated
+26: 0.7984816          27                           estimated
+27: 0.8948863          27                           estimated
+28: 0.7984816          27                           estimated
+29: 0.7984816          27                           estimated
+30: 0.7984816          27                           estimated
+31: 0.7984816          27                           estimated
+32: 0.7984816          27                           estimated
+33: 0.7984816          27                           estimated
+34: 0.7984816          27                           estimated
+35: 0.7984816          27                           estimated
+36: 0.7984816          27                           estimated
+37: 0.7984816          27                           estimated
+38: 0.8948863          27                           estimated
+39: 0.8575880          27                           estimated
+40: 0.8575880          26                           estimated
+41: 0.8575880          27                           estimated
+42: 0.8575880          26                           estimated
+43: 0.8575880          27                           estimated
+44: 0.8575880          27                           estimated
+45: 0.8575880          27                           estimated
+46: 0.8948863          27                           estimated
+47: 0.8932488          27                           estimated
+48: 0.8932488          26                           estimated
+49: 0.8948863          27                           estimated
+50: 0.9641449          27                           estimated
+51:        NA          27 constant_or_unavailable_composition
+52:        NA          26 constant_or_unavailable_composition
+            q n_specimens                              status
+        <num>       <int>                              <char>

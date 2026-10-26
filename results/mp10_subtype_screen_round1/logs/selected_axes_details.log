@@ -1,0 +1,36 @@
+
+ Treg NECTIN2_TIGIT priority_exploratory
+    dataset  network_difference  low_n_evaluable  high_n_evaluable  low_n_supported_patient_ids  high_n_supported_patient_ids  expression_product_difference  leave_one_recorded_patient_out_same_expression_direction_fraction
+ CNP0000460            0.042010                3                 2                            3                             2                       0.805127                                                                1.0
+  GSE326225            0.010114                2                 2                            2                             2                       0.641876                                                                1.0
+  HRA003620            0.028070                3                 1                            3                             1                      -0.085439                                                                1.0
+InhouseData            0.014251                5                 4                            4                             4                       0.384252                                                                1.0
+PRJNA662018                 NaN                0                 1                            0                             1                            NaN                                                                NaN
+   comparison  strength0  strength1  difference                   status0  status1
+ Normal_Tumor        NaN   0.010628         NaN source_or_target_below_30 detected
+        T1_T2   0.028909   0.011214   -0.017695                  detected detected
+MP10_low_high   0.008875   0.031679    0.022804                  detected detected
+
+ FOLR2 TAM MIF_CD74_CD44 priority_exploratory
+    dataset  network_difference  low_n_evaluable  high_n_evaluable  low_n_supported_patient_ids  high_n_supported_patient_ids  expression_product_difference  leave_one_recorded_patient_out_same_expression_direction_fraction
+ CNP0000460            0.029261                2                 2                            2                             2                       0.637746                                                              0.800
+  GSE326225            0.000752                1                 2                            1                             2                      -0.365011                                                              1.000
+  HRA003620            0.044873                3                 2                            3                             2                       0.671899                                                              1.000
+InhouseData            0.059175                3                 4                            3                             4                       0.877981                                                              0.875
+PRJNA662018                 NaN                0                 1                            0                             1                            NaN                                                                NaN
+   comparison  strength0  strength1  difference                   status0  status1
+ Normal_Tumor        NaN   0.110348         NaN source_or_target_below_30 detected
+        T1_T2   0.072740   0.144307    0.071567                  detected detected
+MP10_low_high   0.099946   0.152394    0.052448                  detected detected
+
+ C1QC TAM HBEGF_EGFR_ERBB2 secondary_exploratory_discordant_expression
+    dataset  network_difference  low_n_evaluable  high_n_evaluable  low_n_supported_patient_ids  high_n_supported_patient_ids  expression_product_difference  leave_one_recorded_patient_out_same_expression_direction_fraction
+ CNP0000460            0.004465                2                 2                            2                             2                       0.142465                                                                1.0
+  GSE326225            0.002857                1                 2                            1                             2                       0.063914                                                                1.0
+  HRA003620            0.000329                3                 2                            3                             2                      -0.070171                                                                1.0
+InhouseData            0.003005                5                 4                            3                             4                       0.086782                                                                1.0
+PRJNA662018                 NaN                0                 1                            0                             1                            NaN                                                                NaN
+   comparison  strength0  strength1  difference                   status0  status1
+ Normal_Tumor        NaN   0.001862         NaN source_or_target_below_30 detected
+        T1_T2   0.003078   0.001345   -0.001733                  detected detected
+MP10_low_high   0.001807   0.002626    0.000819                  detected detected

@@ -1,0 +1,9 @@
+START InhouseData__T1_T2__T2 2026-10-26 17:25:05 15543 cells 41 types
+[1] "Create a CellChat object from a data matrix"
+Set cell identities for the new CellChat object 
+The cell groups used for CellChat analysis are  Arterial EC C1QC TAM Capillary EC CD4 Helper/Conventional CD4 Naive/Memory-like CD8 Exhausted CD8 GZMK/Effector-memory-like CD8 T-like / unresolved cDC1 cDC2 Classical Mono Cycling stromal Cycling TAM/macrophage dataset_bias_fibro dataset_bias_myeloid dataset_bias_TNK excluded_myeloid FOLR2 TAM iCAF iCAF-like IFN-stimulated B LAMP3 DC Lymphatic EC Malignant_like_epithelial Mast Matrix_CAF Neutrophil NK NK / gamma-delta-boundary Other_epithelial_unresolved pDC Pericyte Plasma rCAF SMC SPP1 TAM Tfh/CXCL13-like Tip EC Treg unresolved_fibro vCAF 
+triMean is used for calculating the average gene expression per cell group. 
+[1] ">>> Run CellChat on sc/snRNA-seq data <<< [2026-10-26 17:27:58.051675]"
+[1] ">>> CellChat inference is done. Parameter values are stored in `object@options$parameter` <<< [2026-10-26 17:29:47.646435]"
+DONE 2026-10-26 17:29:55 
+ERROR some columns are not in the data.table: [InhouseData__T1_T2__T2] 

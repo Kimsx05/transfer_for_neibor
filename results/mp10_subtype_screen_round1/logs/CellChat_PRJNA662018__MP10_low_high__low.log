@@ -1,0 +1,9 @@
+START PRJNA662018__MP10_low_high__low 2026-10-26 17:29:55 274 cells 4 types
+[1] "Create a CellChat object from a data matrix"
+Set cell identities for the new CellChat object 
+The cell groups used for CellChat analysis are  cDC2 iCAF Malignant_like_epithelial Pericyte 
+triMean is used for calculating the average gene expression per cell group. 
+[1] ">>> Run CellChat on sc/snRNA-seq data <<< [2026-10-26 17:29:56.58797]"
+[1] ">>> CellChat inference is done. Parameter values are stored in `object@options$parameter` <<< [2026-10-26 17:30:23.712312]"
+DONE 2026-10-26 17:30:23 
+ERROR some columns are not in the data.table: [PRJNA662018__MP10_low_high__low] 

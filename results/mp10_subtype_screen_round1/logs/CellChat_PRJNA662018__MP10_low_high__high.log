@@ -1,0 +1,9 @@
+START PRJNA662018__MP10_low_high__high 2026-10-26 17:30:23 1470 cells 20 types
+[1] "Create a CellChat object from a data matrix"
+Set cell identities for the new CellChat object 
+The cell groups used for CellChat analysis are  C1QC TAM Capillary EC CD4 Helper/Conventional CD4 Naive/Memory-like CD8 Exhausted CD8 GZMK/Effector-memory-like CD8 T-like / unresolved cDC2 Classical Mono FOLR2 TAM iCAF Malignant_like_epithelial Mast NK Other_epithelial_unresolved Pericyte Plasma T-cell unresolved Treg unresolved_fibro 
+triMean is used for calculating the average gene expression per cell group. 
+[1] ">>> Run CellChat on sc/snRNA-seq data <<< [2026-10-26 17:30:32.963328]"
+[1] ">>> CellChat inference is done. Parameter values are stored in `object@options$parameter` <<< [2026-10-26 17:31:06.220138]"
+DONE 2026-10-26 17:31:07 
+ERROR some columns are not in the data.table: [PRJNA662018__MP10_low_high__high] 

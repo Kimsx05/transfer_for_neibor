@@ -1,0 +1,9 @@
+START HRA003620__Normal_Tumor__Normal 2026-10-26 17:21:14 12193 cells 33 types
+[1] "Create a CellChat object from a data matrix"
+Set cell identities for the new CellChat object 
+The cell groups used for CellChat analysis are  Arterial EC C1QC TAM CD4 Helper/Conventional CD4 Naive/Memory-like CD8 Exhausted CD8 GZMK/Effector-memory-like CD8 T-like / unresolved cDC1 cDC2 Classical Mono Cycling TAM/macrophage excluded_myeloid FOLR2 TAM GC B iCAF iCAF-like LAMP3 DC Lymphatic EC Mast Memory B Naive B NK NK / gamma-delta-boundary Normal_epithelial pDC Plasma SMC SPP1 TAM T-cell unresolved Tfh/CXCL13-like Treg unresolved_fibro Venous EC 
+triMean is used for calculating the average gene expression per cell group. 
+[1] ">>> Run CellChat on sc/snRNA-seq data <<< [2026-10-26 17:23:12.065818]"
+[1] ">>> CellChat inference is done. Parameter values are stored in `object@options$parameter` <<< [2026-10-26 17:25:03.500716]"
+DONE 2026-10-26 17:25:09 
+ERROR some columns are not in the data.table: [HRA003620__Normal_Tumor__Normal] 

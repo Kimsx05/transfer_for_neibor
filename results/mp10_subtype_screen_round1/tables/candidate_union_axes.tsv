@@ -1,0 +1,139 @@
+candidate_subtype	source	target	LR_ID	pathway	ligand	receptor	category	LR_display	priority_interpretable	n_dataset_evaluable	n_dataset_up	n_dataset_down	median_abs_network_difference	max_direction_agreement
+Arterial EC	Malignant_like_epithelial	Arterial EC	ADM_CALCRL	CALCR	ADM	CALCRL	Secreted Signaling	ADM - CALCRL	TRUE	0	0	0		0
+Arterial EC	Malignant_like_epithelial	Arterial EC	AGRN_DAG1	AGRN	AGRN	DAG1	ECM-Receptor	AGRN - DAG1	TRUE	0	0	0		0
+Arterial EC	Malignant_like_epithelial	Arterial EC	ANGPTL4_CDH5	ANGPTL	ANGPTL4	CDH5	Secreted Signaling	ANGPTL4 - CDH5	TRUE	0	0	0		0
+C1QC TAM	Malignant_like_epithelial	C1QC TAM	MIF_CD74_CD44	MIF	MIF	CD74_CD44	Secreted Signaling	MIF - (CD74+CD44)	TRUE	4	4	0	0.0429740698695791	4
+C1QC TAM	C1QC TAM	Malignant_like_epithelial	SPP1_CD44	SPP1	SPP1	CD44	Secreted Signaling	SPP1 - CD44	TRUE	4	0	4	0.00309493667867782	4
+C1QC TAM	C1QC TAM	Malignant_like_epithelial	HBEGF_EGFR_ERBB2	EGF	HBEGF	EGFR_ERBB2	Secreted Signaling	HBEGF - (EGFR+ERBB2)	TRUE	4	4	0	0.0029311667429259	4
+CD4 Helper/Conventional	Malignant_like_epithelial	CD4 Helper/Conventional	MIF_CD74_CD44	MIF	MIF	CD74_CD44	Secreted Signaling	MIF - (CD74+CD44)	TRUE	3	3	0	0.0227879328174184	3
+CD4 Helper/Conventional	Malignant_like_epithelial	CD4 Helper/Conventional	MIF_CD74_CXCR4	MIF	MIF	CD74_CXCR4	Secreted Signaling	MIF - (CD74+CXCR4)	TRUE	3	3	0	0.0214400627916912	3
+CD4 Helper/Conventional	Malignant_like_epithelial	CD4 Helper/Conventional	LAMB3_CD44	LAMININ	LAMB3	CD44	ECM-Receptor	LAMB3 - CD44	TRUE	3	3	0	0.017236077119865	3
+CD4 Naive/Memory-like	Malignant_like_epithelial	CD4 Naive/Memory-like	LAMB3_CD44	LAMININ	LAMB3	CD44	ECM-Receptor	LAMB3 - CD44	TRUE	3	2	0	0.0165969139551735	2
+CD4 Naive/Memory-like	Malignant_like_epithelial	CD4 Naive/Memory-like	MIF_CD74_CD44	MIF	MIF	CD74_CD44	Secreted Signaling	MIF - (CD74+CD44)	TRUE	3	2	0	0.0156994780744949	2
+CD4 Naive/Memory-like	Malignant_like_epithelial	CD4 Naive/Memory-like	LGALS9_CD45	GALECTIN	LGALS9	PTPRC	Secreted Signaling	LGALS9 - CD45	TRUE	3	0	2	0.0129599168623362	2
+CD8 Exhausted	CD8 Exhausted	Malignant_like_epithelial	GZMA_PARD3	PARs	GZMA	PARD3	Secreted Signaling	GZMA - PARD3	TRUE	4	4	0	0.0312683054809988	4
+CD8 Exhausted	Malignant_like_epithelial	CD8 Exhausted	MDK_ITGA4_ITGB1	MK	MDK	ITGA4_ITGB1	Secreted Signaling	MDK - (ITGA4+ITGB1)	TRUE	4	3	1	0.0354328478749004	3
+CD8 Exhausted	Malignant_like_epithelial	CD8 Exhausted	HLA-A_CD8A	MHC-I	HLA-A	CD8A	Cell-Cell Contact	HLA-A - CD8A	TRUE	4	1	3	0.0320073140991091	3
+CD8 GZMK/Effector-memory-like	Malignant_like_epithelial	CD8 GZMK/Effector-memory-like	MIF_CD74_CXCR4	MIF	MIF	CD74_CXCR4	Secreted Signaling	MIF - (CD74+CXCR4)	TRUE	4	4	0	0.0429994465158818	4
+CD8 GZMK/Effector-memory-like	CD8 GZMK/Effector-memory-like	Malignant_like_epithelial	GZMA_PARD3	PARs	GZMA	PARD3	Secreted Signaling	GZMA - PARD3	TRUE	4	4	0	0.0333336914285697	4
+CD8 GZMK/Effector-memory-like	Malignant_like_epithelial	CD8 GZMK/Effector-memory-like	MIF_CD74_CD44	MIF	MIF	CD74_CD44	Secreted Signaling	MIF - (CD74+CD44)	TRUE	4	4	0	0.0171973769173019	4
+CD8 T-like / unresolved	CD8 T-like / unresolved	Malignant_like_epithelial	GZMA_PARD3	PARs	GZMA	PARD3	Secreted Signaling	GZMA - PARD3	FALSE	4	4	0	0.0232193782843322	4
+CD8 T-like / unresolved	Malignant_like_epithelial	CD8 T-like / unresolved	HLA-E_CD8B	MHC-I	HLA-E	CD8B	Cell-Cell Contact	HLA-E - CD8B	FALSE	4	4	0	0.0159862985266343	4
+CD8 T-like / unresolved	Malignant_like_epithelial	CD8 T-like / unresolved	HLA-E_CD8A	MHC-I	HLA-E	CD8A	Cell-Cell Contact	HLA-E - CD8A	FALSE	4	4	0	0.0110712408237547	4
+Capillary EC	Capillary EC	Malignant_like_epithelial	COL4A1_SDC1	COLLAGEN	COL4A1	SDC1	ECM-Receptor	COL4A1 - SDC1	TRUE	1	0	1	0.0679174983766182	1
+Capillary EC	Capillary EC	Malignant_like_epithelial	COL4A2_SDC1	COLLAGEN	COL4A2	SDC1	ECM-Receptor	COL4A2 - SDC1	TRUE	1	0	1	0.0624787344433336	1
+Capillary EC	Malignant_like_epithelial	Capillary EC	CDH1_ITGA1_ITGB1	CDH1	CDH1	ITGA2_ITGB1	Cell-Cell Contact	CDH1 - (ITGA1+ITGB1)	TRUE	1	1	0	0.0617122872415432	1
+Classical Mono	Malignant_like_epithelial	Classical Mono	MIF_CD74_CD44	MIF	MIF	CD74_CD44	Secreted Signaling	MIF - (CD74+CD44)	TRUE	4	4	0	0.0405236712290365	4
+Classical Mono	Malignant_like_epithelial	Classical Mono	MIF_CD74_CXCR4	MIF	MIF	CD74_CXCR4	Secreted Signaling	MIF - (CD74+CXCR4)	TRUE	4	4	0	0.00970628387840492	4
+Classical Mono	Malignant_like_epithelial	Classical Mono	APP_CD74	APP	APP	CD74	Cell-Cell Contact	APP - CD74	TRUE	4	1	3	0.0433991229845997	3
+Cycling TAM/macrophage	Malignant_like_epithelial	Cycling TAM/macrophage	MIF_CD74_CXCR4	MIF	MIF	CD74_CXCR4	Secreted Signaling	MIF - (CD74+CXCR4)	TRUE	2	2	0	0.0781943703600053	2
+Cycling TAM/macrophage	Malignant_like_epithelial	Cycling TAM/macrophage	MIF_CD74_CD44	MIF	MIF	CD74_CD44	Secreted Signaling	MIF - (CD74+CD44)	TRUE	2	2	0	0.0745410037013678	2
+Cycling TAM/macrophage	Cycling TAM/macrophage	Malignant_like_epithelial	SPP1_ITGAV_ITGB1	SPP1	SPP1	ITGAV_ITGB1	Secreted Signaling	SPP1 - (ITGAV+ITGB1)	TRUE	2	2	0	0.0290850574711567	2
+Cycling stromal	Malignant_like_epithelial	Cycling stromal	ANGPTL4_CDH11	ANGPTL	ANGPTL4	CDH11	Secreted Signaling	ANGPTL4 - CDH11	TRUE	0	0	0		0
+Cycling stromal	Malignant_like_epithelial	Cycling stromal	ANGPTL4_ITGA5_ITGB1	ANGPTL	ANGPTL4	ITGA5_ITGB1	Secreted Signaling	ANGPTL4 - (ITGA5+ITGB1)	TRUE	0	0	0		0
+Cycling stromal	Malignant_like_epithelial	Cycling stromal	ANGPTL4_SDC2	ANGPTL	ANGPTL4	SDC2	Secreted Signaling	ANGPTL4 - SDC2	TRUE	0	0	0		0
+FOLR2 TAM	Malignant_like_epithelial	FOLR2 TAM	MIF_CD74_CXCR4	MIF	MIF	CD74_CXCR4	Secreted Signaling	MIF - (CD74+CXCR4)	TRUE	4	4	0	0.0515702106494031	4
+FOLR2 TAM	Malignant_like_epithelial	FOLR2 TAM	MIF_CD74_CD44	MIF	MIF	CD74_CD44	Secreted Signaling	MIF - (CD74+CD44)	TRUE	4	4	0	0.0370671660464126	4
+FOLR2 TAM	Malignant_like_epithelial	FOLR2 TAM	SEMA3C_NRP1_NRP2	SEMA3	SEMA3C	NRP1_NRP2	Secreted Signaling	SEMA3C - (NRP1+NRP2)	TRUE	4	4	0	0.0104828646526712	4
+GC B	Malignant_like_epithelial	GC B	APP_CD74	APP	APP	CD74	Cell-Cell Contact	APP - CD74	TRUE	0	0	0		0
+GC B	Malignant_like_epithelial	GC B	C3_CR2	COMPLEMENT	C3	CR2	Secreted Signaling	C3 - CR2	TRUE	0	0	0		0
+GC B	Malignant_like_epithelial	GC B	CDH1_KLRG1	CDH1	CDH1	KLRG1	Cell-Cell Contact	CDH1 - KLRG1	TRUE	0	0	0		0
+IFN-stimulated B	Malignant_like_epithelial	IFN-stimulated B	MIF_CD74_CXCR4	MIF	MIF	CD74_CXCR4	Secreted Signaling	MIF - (CD74+CXCR4)	TRUE	1	1	0	0.0509096049993965	1
+IFN-stimulated B	Malignant_like_epithelial	IFN-stimulated B	APP_CD74	APP	APP	CD74	Cell-Cell Contact	APP - CD74	TRUE	1	1	0	0.0472402197684357	1
+IFN-stimulated B	Malignant_like_epithelial	IFN-stimulated B	MDK_NCL	MK	MDK	NCL	Secreted Signaling	MDK - NCL	TRUE	1	1	0	0.0403336223351587	1
+LAMP3 DC	Malignant_like_epithelial	LAMP3 DC	MIF_CD74_CXCR4	MIF	MIF	CD74_CXCR4	Secreted Signaling	MIF - (CD74+CXCR4)	TRUE	1	1	0	0.0744533230251304	1
+LAMP3 DC	Malignant_like_epithelial	LAMP3 DC	MIF_CD74_CD44	MIF	MIF	CD74_CD44	Secreted Signaling	MIF - (CD74+CD44)	TRUE	1	1	0	0.0604915656974671	1
+LAMP3 DC	Malignant_like_epithelial	LAMP3 DC	APP_CD74	APP	APP	CD74	Cell-Cell Contact	APP - CD74	TRUE	1	1	0	0.0533116718322981	1
+Lymphatic EC	Malignant_like_epithelial	Lymphatic EC	ADM_CALCRL	CALCR	ADM	CALCRL	Secreted Signaling	ADM - CALCRL	TRUE	0	0	0		0
+Lymphatic EC	Malignant_like_epithelial	Lymphatic EC	ANGPTL4_CDH5	ANGPTL	ANGPTL4	CDH5	Secreted Signaling	ANGPTL4 - CDH5	TRUE	0	0	0		0
+Lymphatic EC	Malignant_like_epithelial	Lymphatic EC	ANGPTL4_ITGA5_ITGB1	ANGPTL	ANGPTL4	ITGA5_ITGB1	Secreted Signaling	ANGPTL4 - (ITGA5+ITGB1)	TRUE	0	0	0		0
+Malignant_like_epithelial	Malignant_like_epithelial	Malignant_like_epithelial	CDH1_CDH1	CDH	CDH1	CDH1	Cell-Cell Contact	CDH1 - CDH1	FALSE	5	4	1	0.025653503528429	4
+Malignant_like_epithelial	Malignant_like_epithelial	Malignant_like_epithelial	MDK_NCL	MK	MDK	NCL	Secreted Signaling	MDK - NCL	FALSE	5	4	1	0.0204264493806643	4
+Malignant_like_epithelial	Malignant_like_epithelial	Malignant_like_epithelial	MDK_ITGA6_ITGB1	MK	MDK	ITGA6_ITGB1	Secreted Signaling	MDK - (ITGA6+ITGB1)	FALSE	5	4	1	0.0170155832190577	4
+Mast	Malignant_like_epithelial	Mast	MDK_NCL	MK	MDK	NCL	Secreted Signaling	MDK - NCL	TRUE	3	3	0	0.0298373214255971	3
+Mast	Mast	Malignant_like_epithelial	AREG_EGFR_ERBB2	EGF	AREG	EGFR_ERBB2	Secreted Signaling	AREG - (EGFR+ERBB2)	TRUE	3	3	0	0.0183934751728616	3
+Mast	Mast	Malignant_like_epithelial	CTSG_PARD3	PARs	CTSG	PARD3	Secreted Signaling	CTSG - PARD3	TRUE	3	3	0	0.00494338369142423	3
+Matrix_CAF	Malignant_like_epithelial	Matrix_CAF	MDK_LRP1	MK	MDK	LRP1	Secreted Signaling	MDK - LRP1	TRUE	1	1	0	0.0616481378429204	1
+Matrix_CAF	Matrix_CAF	Malignant_like_epithelial	COL1A1_SDC4	COLLAGEN	COL1A1	SDC4	ECM-Receptor	COL1A1 - SDC4	TRUE	1	1	0	0.0572583516573516	1
+Matrix_CAF	Matrix_CAF	Malignant_like_epithelial	COL1A2_SDC4	COLLAGEN	COL1A2	SDC4	ECM-Receptor	COL1A2 - SDC4	TRUE	1	1	0	0.0569622283047667	1
+Memory B	Memory B	Malignant_like_epithelial	ADGRE5_CD55	ADGRE5	ADGRE5	CD55	Cell-Cell Contact	ADGRE5 - CD55	TRUE	0	0	0		0
+Memory B	Malignant_like_epithelial	Memory B	APP_CD74	APP	APP	CD74	Cell-Cell Contact	APP - CD74	TRUE	0	0	0		0
+Memory B	Malignant_like_epithelial	Memory B	C3_CR2	COMPLEMENT	C3	CR2	Secreted Signaling	C3 - CR2	TRUE	0	0	0		0
+NK	Malignant_like_epithelial	NK	MIF_CD74_CXCR4	MIF	MIF	CD74_CXCR4	Secreted Signaling	MIF - (CD74+CXCR4)	TRUE	4	4	0	0.0218028477375742	4
+NK	Malignant_like_epithelial	NK	JAM1_ITGAL_ITGB2	JAM	F11R	ITGAL_ITGB2	Cell-Cell Contact	JAM1 - (ITGAL+ITGB2)	TRUE	4	4	0	0.0101146051481674	4
+NK	NK	Malignant_like_epithelial	GZMA_PARD3	PARs	GZMA	PARD3	Secreted Signaling	GZMA - PARD3	TRUE	4	3	1	0.0266584589009763	3
+NK / gamma-delta-boundary	Malignant_like_epithelial	NK / gamma-delta-boundary	LAMB3_ITGA1_ITGB1	LAMININ	LAMB3	ITGA1_ITGB1	ECM-Receptor	LAMB3 - (ITGA1+ITGB1)	FALSE	3	3	0	0.0383245301547192	3
+NK / gamma-delta-boundary	Malignant_like_epithelial	NK / gamma-delta-boundary	LAMB3_CD44	LAMININ	LAMB3	CD44	ECM-Receptor	LAMB3 - CD44	FALSE	3	3	0	0.0113910131126784	3
+NK / gamma-delta-boundary	Malignant_like_epithelial	NK / gamma-delta-boundary	HLA-E_CD94:NKG2A	MHC-I	HLA-E	CD94:NKG2A	Cell-Cell Contact	HLA-E - CD94:NKG2A	FALSE	3	3	0	0.00693892358332254	3
+Naive B	Naive B	Malignant_like_epithelial	ADGRE5_CD55	ADGRE5	ADGRE5	CD55	Cell-Cell Contact	ADGRE5 - CD55	TRUE	0	0	0		0
+Naive B	Malignant_like_epithelial	Naive B	APP_CD74	APP	APP	CD74	Cell-Cell Contact	APP - CD74	TRUE	0	0	0		0
+Naive B	Malignant_like_epithelial	Naive B	C3_CR2	COMPLEMENT	C3	CR2	Secreted Signaling	C3 - CR2	TRUE	0	0	0		0
+Neutrophil	Malignant_like_epithelial	Neutrophil	MIF_CD74_CXCR4	MIF	MIF	CD74_CXCR4	Secreted Signaling	MIF - (CD74+CXCR4)	TRUE	1	0	1	0.107584410726351	1
+Neutrophil	Malignant_like_epithelial	Neutrophil	ANXA1_FPR1	ANNEXIN	ANXA1	FPR1	Secreted Signaling	ANXA1 - FPR1	TRUE	1	1	0	0.0140831348632009	1
+Neutrophil	Malignant_like_epithelial	Neutrophil	LAMB3_CD44	LAMININ	LAMB3	CD44	ECM-Receptor	LAMB3 - CD44	TRUE	1	1	0	0.00850186838582627	1
+Other_epithelial_unresolved	Malignant_like_epithelial	Other_epithelial_unresolved	APP_CD74	APP	APP	CD74	Cell-Cell Contact	APP - CD74	FALSE	4	1	3	0.0417878123066396	3
+Other_epithelial_unresolved	Malignant_like_epithelial	Other_epithelial_unresolved	MIF_CD74_CD44	MIF	MIF	CD74_CD44	Secreted Signaling	MIF - (CD74+CD44)	FALSE	4	1	3	0.0349863840449275	3
+Other_epithelial_unresolved	Malignant_like_epithelial	Other_epithelial_unresolved	PTPRM_PTPRM	PTPRM	PTPRM	PTPRM	Cell-Cell Contact	PTPRM - PTPRM	FALSE	4	0	3	0.0197480969559425	3
+Pericyte	Pericyte	Malignant_like_epithelial	COL6A2_SDC4	COLLAGEN	COL6A2	SDC4	ECM-Receptor	COL6A2 - SDC4	TRUE	4	4	0	0.0249254728706981	4
+Pericyte	Pericyte	Malignant_like_epithelial	COL4A2_SDC4	COLLAGEN	COL4A2	SDC4	ECM-Receptor	COL4A2 - SDC4	TRUE	4	4	0	0.0190102720978527	4
+Pericyte	Pericyte	Malignant_like_epithelial	COL4A1_SDC4	COLLAGEN	COL4A1	SDC4	ECM-Receptor	COL4A1 - SDC4	TRUE	4	4	0	0.0178927536905302	4
+Plasma	Malignant_like_epithelial	Plasma	MDK_NCL	MK	MDK	NCL	Secreted Signaling	MDK - NCL	TRUE	3	3	0	0.0226557807352843	3
+Plasma	Malignant_like_epithelial	Plasma	MDK_ITGA6_ITGB1	MK	MDK	ITGA6_ITGB1	Secreted Signaling	MDK - (ITGA6+ITGB1)	TRUE	3	3	0	0.0120971424638364	3
+Plasma	Malignant_like_epithelial	Plasma	MIF_CD74_CXCR4	MIF	MIF	CD74_CXCR4	Secreted Signaling	MIF - (CD74+CXCR4)	TRUE	3	2	1	0.0613914399942426	2
+SMC	SMC	Malignant_like_epithelial	COL4A2_SDC4	COLLAGEN	COL4A2	SDC4	ECM-Receptor	COL4A2 - SDC4	TRUE	1	1	0	0.0296348768476835	1
+SMC	SMC	Malignant_like_epithelial	COL4A1_SDC4	COLLAGEN	COL4A1	SDC4	ECM-Receptor	COL4A1 - SDC4	TRUE	1	1	0	0.0274289157933267	1
+SMC	SMC	Malignant_like_epithelial	APP_CD74	APP	APP	CD74	Cell-Cell Contact	APP - CD74	TRUE	1	1	0	0.0269147691767596	1
+SPP1 TAM	SPP1 TAM	Malignant_like_epithelial	SPP1_ITGAV_ITGB1	SPP1	SPP1	ITGAV_ITGB1	Secreted Signaling	SPP1 - (ITGAV+ITGB1)	TRUE	3	3	0	0.0403155926303781	3
+SPP1 TAM	Malignant_like_epithelial	SPP1 TAM	MIF_CD74_CD44	MIF	MIF	CD74_CD44	Secreted Signaling	MIF - (CD74+CD44)	TRUE	3	3	0	0.0359246542377312	3
+SPP1 TAM	Malignant_like_epithelial	SPP1 TAM	SEMA3C_NRP1_NRP2	SEMA3	SEMA3C	NRP1_NRP2	Secreted Signaling	SEMA3C - (NRP1+NRP2)	TRUE	3	3	0	0.0227594856350647	3
+T-cell unresolved	T-cell unresolved	Malignant_like_epithelial	GZMA_PARD3	PARs	GZMA	PARD3	Secreted Signaling	GZMA - PARD3	FALSE	2	2	0	0.0295777971894884	2
+T-cell unresolved	T-cell unresolved	Malignant_like_epithelial	CD96_NECTIN1	CD96	CD96	NECTIN1	Cell-Cell Contact	CD96 - NECTIN1	FALSE	2	2	0	0.0194170489117997	2
+T-cell unresolved	Malignant_like_epithelial	T-cell unresolved	NECTIN1_CD96	NECTIN	NECTIN1	CD96	Cell-Cell Contact	NECTIN1 - CD96	FALSE	2	2	0	0.0194170489117997	2
+Tfh/CXCL13-like	Malignant_like_epithelial	Tfh/CXCL13-like	MIF_CD74_CXCR4	MIF	MIF	CD74_CXCR4	Secreted Signaling	MIF - (CD74+CXCR4)	TRUE	4	4	0	0.0356263130515472	4
+Tfh/CXCL13-like	Malignant_like_epithelial	Tfh/CXCL13-like	GDF15_TGFBR2	GDF	GDF15	TGFBR2	Secreted Signaling	GDF15 - TGFBR2	TRUE	4	4	0	0.0124785267646665	4
+Tfh/CXCL13-like	Malignant_like_epithelial	Tfh/CXCL13-like	MIF_CD74_CD44	MIF	MIF	CD74_CD44	Secreted Signaling	MIF - (CD74+CD44)	TRUE	4	3	1	0.0428250662208542	3
+Tip EC	Malignant_like_epithelial	Tip EC	NAMPT_INSR	VISFATIN	NAMPT	INSR	Secreted Signaling	NAMPT - INSR	TRUE	1	1	0	0.0622744436199895	1
+Tip EC	Tip EC	Malignant_like_epithelial	APP_CD74	APP	APP	CD74	Cell-Cell Contact	APP - CD74	TRUE	1	1	0	0.0529062994514036	1
+Tip EC	Malignant_like_epithelial	Tip EC	MDK_ITGA6_ITGB1	MK	MDK	ITGA6_ITGB1	Secreted Signaling	MDK - (ITGA6+ITGB1)	TRUE	1	1	0	0.0484328113217068	1
+Treg	Malignant_like_epithelial	Treg	MIF_CD74_CD44	MIF	MIF	CD74_CD44	Secreted Signaling	MIF - (CD74+CD44)	TRUE	4	4	0	0.0288034823022246	4
+Treg	Malignant_like_epithelial	Treg	MDK_NCL	MK	MDK	NCL	Secreted Signaling	MDK - NCL	TRUE	4	4	0	0.0281536925527398	4
+Treg	Malignant_like_epithelial	Treg	NECTIN2_TIGIT	NECTIN	NECTIN2	TIGIT	Cell-Cell Contact	NECTIN2 - TIGIT	TRUE	4	4	0	0.0211602745989458	4
+Venous EC	Malignant_like_epithelial	Venous EC	ADM_CALCRL	CALCR	ADM	CALCRL	Secreted Signaling	ADM - CALCRL	TRUE	0	0	0		0
+Venous EC	Malignant_like_epithelial	Venous EC	ANGPTL1_ITGA1_ITGB1	ANGPTL	ANGPTL1	ITGA1_ITGB1	Secreted Signaling	ANGPTL1 - (ITGA1+ITGB1)	TRUE	0	0	0		0
+Venous EC	Malignant_like_epithelial	Venous EC	ANGPTL4_CDH5	ANGPTL	ANGPTL4	CDH5	Secreted Signaling	ANGPTL4 - CDH5	TRUE	0	0	0		0
+cDC1	Malignant_like_epithelial	cDC1	MIF_CD74_CXCR4	MIF	MIF	CD74_CXCR4	Secreted Signaling	MIF - (CD74+CXCR4)	TRUE	1	1	0	0.0659978906330661	1
+cDC1	Malignant_like_epithelial	cDC1	APP_CD74	APP	APP	CD74	Cell-Cell Contact	APP - CD74	TRUE	1	1	0	0.0572524961547297	1
+cDC1	Malignant_like_epithelial	cDC1	MDK_NCL	MK	MDK	NCL	Secreted Signaling	MDK - NCL	TRUE	1	1	0	0.0249931881457619	1
+cDC2	Malignant_like_epithelial	cDC2	MIF_CD74_CD44	MIF	MIF	CD74_CD44	Secreted Signaling	MIF - (CD74+CD44)	TRUE	4	4	0	0.0302357516301701	4
+cDC2	Malignant_like_epithelial	cDC2	MIF_CD74_CXCR4	MIF	MIF	CD74_CXCR4	Secreted Signaling	MIF - (CD74+CXCR4)	TRUE	4	4	0	0.0201469562443398	4
+cDC2	Malignant_like_epithelial	cDC2	LAMB3_CD44	LAMININ	LAMB3	CD44	ECM-Receptor	LAMB3 - CD44	TRUE	4	4	0	0.00835693878016837	4
+dataset_bias_TNK	Malignant_like_epithelial	dataset_bias_TNK	MIF_CD74_CXCR4	MIF	MIF	CD74_CXCR4	Secreted Signaling	MIF - (CD74+CXCR4)	FALSE	1	1	0	0.063448363847295	1
+dataset_bias_TNK	Malignant_like_epithelial	dataset_bias_TNK	MIF_CD74_CD44	MIF	MIF	CD74_CD44	Secreted Signaling	MIF - (CD74+CD44)	FALSE	1	1	0	0.0456296103358821	1
+dataset_bias_TNK	Malignant_like_epithelial	dataset_bias_TNK	MDK_NCL	MK	MDK	NCL	Secreted Signaling	MDK - NCL	FALSE	1	1	0	0.0393691217729275	1
+dataset_bias_fibro	Malignant_like_epithelial	dataset_bias_fibro	MIF_CD74_CD44	MIF	MIF	CD74_CD44	Secreted Signaling	MIF - (CD74+CD44)	FALSE	1	1	0	0.106670064829125	1
+dataset_bias_fibro	Malignant_like_epithelial	dataset_bias_fibro	MDK_LRP1	MK	MDK	LRP1	Secreted Signaling	MDK - LRP1	FALSE	1	1	0	0.0723976617113887	1
+dataset_bias_fibro	dataset_bias_fibro	Malignant_like_epithelial	COL1A2_SDC4	COLLAGEN	COL1A2	SDC4	ECM-Receptor	COL1A2 - SDC4	FALSE	1	1	0	0.0606060348274514	1
+dataset_bias_myeloid	Malignant_like_epithelial	dataset_bias_myeloid	MIF_CD74_CD44	MIF	MIF	CD74_CD44	Secreted Signaling	MIF - (CD74+CD44)	FALSE	1	1	0	0.0538029539518707	1
+dataset_bias_myeloid	Malignant_like_epithelial	dataset_bias_myeloid	APP_CD74	APP	APP	CD74	Cell-Cell Contact	APP - CD74	FALSE	1	1	0	0.0456883220263381	1
+dataset_bias_myeloid	Malignant_like_epithelial	dataset_bias_myeloid	MIF_CD74_CXCR4	MIF	MIF	CD74_CXCR4	Secreted Signaling	MIF - (CD74+CXCR4)	FALSE	1	1	0	0.0331393648690952	1
+excluded_myeloid	Malignant_like_epithelial	excluded_myeloid	MIF_CD74_CD44	MIF	MIF	CD74_CD44	Secreted Signaling	MIF - (CD74+CD44)	FALSE	1	1	0	0.142326643260068	1
+excluded_myeloid	Malignant_like_epithelial	excluded_myeloid	APP_CD74	APP	APP	CD74	Cell-Cell Contact	APP - CD74	FALSE	1	1	0	0.0665583813291981	1
+excluded_myeloid	Malignant_like_epithelial	excluded_myeloid	NAMPT_INSR	VISFATIN	NAMPT	INSR	Secreted Signaling	NAMPT - INSR	FALSE	1	1	0	0.0399202996473152	1
+iCAF	Malignant_like_epithelial	iCAF	MIF_ACKR3	MIF	MIF	ACKR3	Secreted Signaling	MIF - ACKR3	TRUE	3	3	0	0.0393172175150881	3
+iCAF	iCAF	Malignant_like_epithelial	COL6A2_SDC4	COLLAGEN	COL6A2	SDC4	ECM-Receptor	COL6A2 - SDC4	TRUE	3	3	0	0.032582164165904	3
+iCAF	iCAF	Malignant_like_epithelial	COL6A1_SDC4	COLLAGEN	COL6A1	SDC4	ECM-Receptor	COL6A1 - SDC4	TRUE	3	3	0	0.032506568856865	3
+iCAF-like	Malignant_like_epithelial	iCAF-like	ANGPTL4_CDH11	ANGPTL	ANGPTL4	CDH11	Secreted Signaling	ANGPTL4 - CDH11	TRUE	0	0	0		0
+iCAF-like	Malignant_like_epithelial	iCAF-like	ANGPTL4_ITGA5_ITGB1	ANGPTL	ANGPTL4	ITGA5_ITGB1	Secreted Signaling	ANGPTL4 - (ITGA5+ITGB1)	TRUE	0	0	0		0
+iCAF-like	Malignant_like_epithelial	iCAF-like	ANGPTL4_SDC2	ANGPTL	ANGPTL4	SDC2	Secreted Signaling	ANGPTL4 - SDC2	TRUE	0	0	0		0
+pDC	pDC	Malignant_like_epithelial	ADGRE5_CD55	ADGRE5	ADGRE5	CD55	Cell-Cell Contact	ADGRE5 - CD55	TRUE	0	0	0		0
+pDC	Malignant_like_epithelial	pDC	ADM_CALCRL	CALCR	ADM	CALCRL	Secreted Signaling	ADM - CALCRL	TRUE	0	0	0		0
+pDC	Malignant_like_epithelial	pDC	APP_CD74	APP	APP	CD74	Cell-Cell Contact	APP - CD74	TRUE	0	0	0		0
+rCAF	rCAF	Malignant_like_epithelial	ADGRE5_CD55	ADGRE5	ADGRE5	CD55	Cell-Cell Contact	ADGRE5 - CD55	TRUE	0	0	0		0
+rCAF	Malignant_like_epithelial	rCAF	ANGPTL4_CDH11	ANGPTL	ANGPTL4	CDH11	Secreted Signaling	ANGPTL4 - CDH11	TRUE	0	0	0		0
+rCAF	Malignant_like_epithelial	rCAF	ANGPTL4_SDC2	ANGPTL	ANGPTL4	SDC2	Secreted Signaling	ANGPTL4 - SDC2	TRUE	0	0	0		0
+unresolved_fibro	unresolved_fibro	Malignant_like_epithelial	MDK_NCL	MK	MDK	NCL	Secreted Signaling	MDK - NCL	FALSE	1	1	0	0.071105653094024	1
+unresolved_fibro	Malignant_like_epithelial	unresolved_fibro	MDK_LRP1	MK	MDK	LRP1	Secreted Signaling	MDK - LRP1	FALSE	1	1	0	0.0704457451949971	1
+unresolved_fibro	unresolved_fibro	Malignant_like_epithelial	COL1A2_SDC4	COLLAGEN	COL1A2	SDC4	ECM-Receptor	COL1A2 - SDC4	FALSE	1	1	0	0.0593039254615582	1
+vCAF	vCAF	Malignant_like_epithelial	APP_CD74	APP	APP	CD74	Cell-Cell Contact	APP - CD74	TRUE	1	1	0	0.0415810509971998	1
+vCAF	vCAF	Malignant_like_epithelial	COL1A2_SDC4	COLLAGEN	COL1A2	SDC4	ECM-Receptor	COL1A2 - SDC4	TRUE	1	1	0	0.0402101677591322	1
+vCAF	vCAF	Malignant_like_epithelial	COL4A1_SDC4	COLLAGEN	COL4A1	SDC4	ECM-Receptor	COL4A1 - SDC4	TRUE	1	1	0	0.0379901469509317	1

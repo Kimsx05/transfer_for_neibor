@@ -1,0 +1,62 @@
+Loading required package: dplyr
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: igraph
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:dplyr’:
+
+    as_data_frame, groups, union
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+Loading required package: ggplot2
+    }
+    else {
+        igraph::E(g)$width <- 0.3 + edge.width.max * igraph::E(g)$weight
+    }
+    igraph::E(g)$arrow.width <- arrow.width
+    igraph::E(g)$arrow.size <- arrow.size
+    igraph::E(g)$label.color <- edge.label.color
+    igraph::E(g)$label.cex <- edge.label.cex
+    igraph::E(g)$color <- grDevices::adjustcolor(igraph::V(g)$color[edge.start[, 
+        1]], alpha.edge)
+    igraph::E(g)$loop.angle <- rep(0, length(igraph::E(g)))
+    if (sum(edge.start[, 2] == edge.start[, 1]) != 0) {
+        igraph::E(g)$loop.angle[which(edge.start[, 2] == edge.start[, 
+            1])] <- loop.angle[edge.start[which(edge.start[, 
+            2] == edge.start[, 1]), 1]]
+    }
+    radian.rescale <- function(x, start = 0, direction = 1) {
+        c.rotate <- function(x) (x + start)%%(2 * pi) * direction
+        c.rotate(scales::rescale(x, c(0, 2 * pi), range(x)))
+    }
+    label.locs <- radian.rescale(x = 1:length(igraph::V(g)), 
+        direction = -1, start = 0)
+    label.dist <- vertex.weight/max(vertex.weight) + 2
+    plot(g, edge.curved = edge.curved, vertex.shape = shape, 
+        layout = coords_scale, margin = margin, vertex.label.dist = label.dist, 
+        vertex.label.degree = label.locs, vertex.label.family = "Helvetica", 
+        edge.label.family = "Helvetica")
+    if (!is.null(title.name)) {
+        text(0, 1.5, title.name, cex = 1.1)
+    }
+    gg <- recordPlot()
+    return(gg)
+}

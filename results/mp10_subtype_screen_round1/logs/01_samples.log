@@ -1,0 +1,164 @@
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.5.3 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_subtype_screen_round1/scripts/01_samples.py", line 5, in <module>
+    import pandas as pd
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/pandas/__init__.py", line 46, in <module>
+    from pandas.core.api import (
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/pandas/core/api.py", line 27, in <module>
+    from pandas.core.arrays import Categorical
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/pandas/core/arrays/__init__.py", line 1, in <module>
+    from pandas.core.arrays.arrow import ArrowExtensionArray
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/pandas/core/arrays/arrow/__init__.py", line 5, in <module>
+    from pandas.core.arrays.arrow.array import ArrowExtensionArray
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/pandas/core/arrays/arrow/array.py", line 64, in <module>
+    from pandas.core import (
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/pandas/core/ops/__init__.py", line 9, in <module>
+    from pandas.core.ops.array_ops import (
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/pandas/core/ops/array_ops.py", line 55, in <module>
+    from pandas.core.computation import expressions
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/pandas/core/computation/expressions.py", line 23, in <module>
+    from pandas.core.computation.check import NUMEXPR_INSTALLED
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/pandas/core/computation/check.py", line 5, in <module>
+    ne = import_optional_dependency("numexpr", errors="warn")
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/pandas/compat/_optional.py", line 158, in import_optional_dependency
+    module = importlib.import_module(name)
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/usr/lib/python3/dist-packages/numexpr/__init__.py", line 24, in <module>
+    from numexpr.interpreter import MAX_THREADS, use_vml, __BLOCK_SIZE1__
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/numpy/core/_multiarray_umath.py", line 46, in __getattr__
+    raise ImportError(msg)
+ImportError: 
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.5.3 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.5.3 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_subtype_screen_round1/scripts/01_samples.py", line 5, in <module>
+    import pandas as pd
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/pandas/__init__.py", line 46, in <module>
+    from pandas.core.api import (
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/pandas/core/api.py", line 27, in <module>
+    from pandas.core.arrays import Categorical
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/pandas/core/arrays/__init__.py", line 1, in <module>
+    from pandas.core.arrays.arrow import ArrowExtensionArray
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/pandas/core/arrays/arrow/__init__.py", line 5, in <module>
+    from pandas.core.arrays.arrow.array import ArrowExtensionArray
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/pandas/core/arrays/arrow/array.py", line 78, in <module>
+    from pandas.core.arrays.masked import BaseMaskedArray
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/pandas/core/arrays/masked.py", line 56, in <module>
+    from pandas.core import (
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/pandas/core/nanops.py", line 54, in <module>
+    bn = import_optional_dependency("bottleneck", errors="warn")
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/pandas/compat/_optional.py", line 158, in import_optional_dependency
+    module = importlib.import_module(name)
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/usr/lib/python3/dist-packages/bottleneck/__init__.py", line 7, in <module>
+    from .move import (move_argmax, move_argmin, move_max, move_mean, move_median,
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/numpy/core/_multiarray_umath.py", line 46, in __getattr__
+    raise ImportError(msg)
+ImportError: 
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.5.3 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+
+    dataset                   orig.ident  n_malignant  n_MP10_scored
+ CNP0000460              CNP0000460_P01N            0              0
+ CNP0000460              CNP0000460_P02N            0              0
+ CNP0000460              CNP0000460_P03N            0              0
+ CNP0000460              CNP0000460_P05N            0              0
+ CNP0000460              CNP0000460_P07N            0              0
+ CNP0000460              CNP0000460_P01T         8698           8697
+ CNP0000460              CNP0000460_P02T            0              0
+ CNP0000460              CNP0000460_P03T          652            652
+ CNP0000460              CNP0000460_P04T            2              2
+ CNP0000460              CNP0000460_P05T         7829           7829
+ CNP0000460              CNP0000460_P06T         4171           4171
+ CNP0000460              CNP0000460_P07T         2850           2850
+  GSE326225                GSE326225_BC1          220            220
+  GSE326225                GSE326225_BC2         1746           1746
+  GSE326225                GSE326225_BC3         3510           3510
+  GSE326225                GSE326225_BC4          538            538
+  GSE326225                GSE326225_BC5           21             21
+  GSE326225                GSE326225_BC6          105            105
+  GSE326225                GSE326225_BC7            9              9
+  GSE326225                GSE326225_BC8          124            124
+  HRA003620              HRA003620_BC-01            2              2
+  HRA003620              HRA003620_BC-04         2261           2261
+  HRA003620              HRA003620_BC-05         3714           3710
+  HRA003620              HRA003620_BC-11            2              2
+  HRA003620              HRA003620_BC-24           36             36
+  HRA003620              HRA003620_BC-27           77             77
+  HRA003620              HRA003620_BC-30         2268           2268
+  HRA003620              HRA003620_NC-01            0              0
+  HRA003620              HRA003620_NC-04            0              0
+  HRA003620              HRA003620_NC-05            0              0
+  HRA003620              HRA003620_NC-11            0              0
+  HRA003620              HRA003620_NC-24            0              0
+  HRA003620              HRA003620_NC-27            0              0
+  HRA003620              HRA003620_NC-30            0              0
+InhouseData                     T4380845           42             42
+InhouseData                     T4091568           39             39
+InhouseData                     T4295396          497            497
+InhouseData                     T4398343           14             14
+InhouseData                     T4450398            0              0
+InhouseData                    T4463209a           31             31
+InhouseData                    T4463209b           71             71
+InhouseData                     T4466585            5              5
+InhouseData                     T4469479          313            313
+InhouseData                     T4471438            9              9
+InhouseData                     T8009218          702            702
+InhouseData                     T4465935          285            285
+InhouseData                     T4465219         9292           9292
+PRJNA662018 PRJNA662018_PRJNA662018_P1N1            0              0
+PRJNA662018 PRJNA662018_PRJNA662018_P1T1           25             25
+PRJNA662018 PRJNA662018_PRJNA662018_P2T2            5              5
+PRJNA662018 PRJNA662018_PRJNA662018_P3N3            0              0
+PRJNA662018 PRJNA662018_PRJNA662018_P3T3            3              3
+PRJNA662018 PRJNA662018_PRJNA662018_P4T4            1              1
+PRJNA662018 PRJNA662018_PRJNA662018_P5T5           10             10
+PRJNA662018 PRJNA662018_PRJNA662018_P6N2            0              0
+PRJNA662018 PRJNA662018_PRJNA662018_P6T6            0              0
+PRJNA662018 PRJNA662018_PRJNA662018_P7T7         8385           8385
+PRJNA662018 PRJNA662018_PRJNA662018_P8T8         8281           8281
+Coverage quantiles {0.0: 0.0, 0.1: 2.0, 0.25: 9.0, 0.5: 77.0, 0.75: 2003.5, 0.9: 7097.400000000016, 1.0: 9292.0}
+samples 58 recorded patients 42 cells 374329 MP10 eligible 27
+             specimens  patients_recorded  MP10_eligible
+dataset                                                 
+CNP0000460          12                  7              5
+GSE326225            8                  8              6
+HRA003620           14                  7              5
+InhouseData         13                 12              9
+PRJNA662018         11                  8              2

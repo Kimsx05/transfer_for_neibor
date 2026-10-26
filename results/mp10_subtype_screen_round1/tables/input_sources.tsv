@@ -1,0 +1,8 @@
+role	path	fields
+final_annotation	/home/data/t070721/codex_workspace/Bladder Metabolism/subtype/v2/final_annotation_pre_reference/final_annotation_v2_pre_reference.qs	RNA:data; major_celltype; subtype_v2
+annotation_map	/home/data/t070721/codex_workspace/Bladder Metabolism/subtype/v2/final_annotation_pre_reference/frozen_annotation_barcode_mapping_v2.csv	barcode; orig.ident; dataset; annotation_status_v2
+clinical_patient_map	/home/data/t070721/codex_workspace/Bladder Metabolism/cellchat/sample_by_clinical_group.csv	specimen_id; patient_uid; patient_id_status; clinical_group; fine_stage
+malignant_cell_assignment	/home/data/t070721/Metabolistic_scRNA/Multi2/3.3 recognize malignant/rough_cluster_infercnv_score_cell_metadata.csv	cell; rough_cluster
+malignant_frozen_definition	/home/data/t070721/Metabolistic_scRNA/Multi2/3.4 malignant cell process/NMF1/rough_cluster_malignant_like_status_summary.csv	rough_cluster; malignant_like_status
+stored_MP10	/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_calibration_v5/01_score_fidelity/cell_level_fidelity.parquet	cell_id; Top20_score
+frozen_MP10_genes	/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_mp10_calibration_v5/01_score_fidelity/top20.txt	unchanged 20 genes
