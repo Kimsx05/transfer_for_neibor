@@ -1,0 +1,38 @@
+{
+  "n_sections": 63,
+  "n_datasets": 7,
+  "n_positions": 265002,
+  "unique_composite_keys": true,
+  "region_mask_equal_candidate": true,
+  "position_interface_key_match": true,
+  "all_distance_boundary_ids_valid": true,
+  "all_region_geometries_valid": true,
+  "area_matches_cell_grid": true,
+  "source_position_order_independent": true,
+  "n_regions": 1916,
+  "n_valid_interface_segments": 57146,
+  "n_signed_distance": 256788,
+  "n_primary_evaluable": 217538,
+  "n_unavailable": 8214,
+  "n_verified_patients": 29,
+  "n_sections_with_verified_patient": 30,
+  "n_figures": 26,
+  "max_grid_fit_error_dNN": 0.2678506384130076,
+  "threads": 1,
+  "independent_checks": {
+    "n_positions": 265002,
+    "source_xy_unchanged": true,
+    "source_raw_MP10_unchanged": true,
+    "frozen_epi_gate_unchanged": true,
+    "independent_shapely_distance_check_positions": 744,
+    "max_distance_error": 6.838973831690964e-13
+  },
+  "figure_pairs_verified": 26,
+  "all_PNG_RGBA_300dpi": true,
+  "visual_review": [
+    "CanDis_2026_Sample1 overlay",
+    "Inhousedata_T4384654 overlay",
+    "paired effects outer minus inner"
+  ],
+  "review_status": "complete_with_explicit_evidence_limits"
+}

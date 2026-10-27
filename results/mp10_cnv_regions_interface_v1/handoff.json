@@ -1,0 +1,27 @@
+{
+  "status": "complete_with_explicit_evidence_limits",
+  "read_only_consumption": true,
+  "primary_key": [
+    "dataset_id",
+    "section_id",
+    "position_id"
+  ],
+  "position_region_table": "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_cnv_regions_interface_v1/regions/position_regions.tsv.gz",
+  "position_interface_table": "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_cnv_regions_interface_v1/interfaces/position_interface_distances.tsv.gz",
+  "position_features": "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_cnv_regions_interface_v1/input_review/position_features.tsv.gz",
+  "boundary_table": "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_cnv_regions_interface_v1/interfaces/boundary_summary.tsv.gz",
+  "mask_directory": "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_cnv_regions_interface_v1/regions/masks",
+  "primary_filter": "evaluation_status == 'evaluable'",
+  "distance_field": "signed_distance",
+  "absolute_distance_field": "distance_to_boundary",
+  "unit": "per-section original lowres_image_pixel; no unverified micron conversion",
+  "normalized_distance": "distance_dNN",
+  "sign_convention": "inside negative, outside positive",
+  "region_id_in_interface": "reference region of matched interface",
+  "position_region_id": "region containing the position, or Outside",
+  "region_evidence": "Epi-rich composition-only; not pathology tumor; CNV native diagnostics retained separately",
+  "missingness": "NA is not zero; 4881 positions in GSE238145_B13 have no Epi-rich region",
+  "patient_policy": "only patient_id with verified source identity counts as patient; record_id is separate",
+  "methods": "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_cnv_regions_interface_v1/methods.md",
+  "interface_dictionary": "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_cnv_regions_interface_v1/interfaces/INTERFACE_README.md"
+}

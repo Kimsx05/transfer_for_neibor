@@ -1,0 +1,1 @@
+所有空间图使用原图像像素，黑线为Epi-rich有效界面，不是病理肿瘤边界。Overview中region二元码0=outside，1=Epi-rich；MP10状态0=non-anchor、1=relative low、2=ties、3=relative high。Niche显示数字码按各片display_codes表解释。Diagnostics中CNV码0=diploid、1=aneuploid、2=undefined；profile/eligible码0=no、1=yes。meta-niche永远是candidate。Fine目标全17类均为c2l模拟估计比例。

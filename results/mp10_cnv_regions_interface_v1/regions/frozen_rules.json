@@ -1,0 +1,23 @@
+{
+  "version": "1.0",
+  "primary_region": "Epi-rich region",
+  "epi_threshold": 0.25,
+  "epi_source": "frozen c2l mean Epithelial / sum all 30 modeled types",
+  "cnv_role": "diagnostic annotation only; no externally validated baseline or transferable threshold",
+  "connectivity": "six true lattice neighbors AND actual distance <=1.35*d_NN",
+  "mask_geometry": "affine fitted hexagonal lattice Voronoi cells; no hull",
+  "max_fit_error_tolerance_dNN": 0.35,
+  "small_components": "retain including singletons",
+  "holes": "retain all; no smoothing or filling",
+  "bandwidth": "per-section median nearest-neighbor distance in recorded image pixels",
+  "signed_convention": "inside negative; outside positive",
+  "primary_exclusion": "distance to any unsupported tissue/grid edge <=w; signed distance retained but not used in primary contrasts",
+  "distance": "exact Euclidean point-to-segment distance, within tissue connected component; inner uses own region",
+  "far_tissue": "only when distance to support edge >w",
+  "high_low": "new section-relative Epi-anchor median; >median high, <median low, ==median tied_unclassified; not frozen original state",
+  "statistics": "descriptive section paired contrasts; average repeated sections within verified patient; no spot-level inferential P",
+  "representatives": "one per dataset, lexicographically first section with image, coordinates, composition; selected before response analysis",
+  "sensitivity": "2w for representatives only",
+  "physical_area": "not available; image-pixel grid area only",
+  "threads": 1
+}
