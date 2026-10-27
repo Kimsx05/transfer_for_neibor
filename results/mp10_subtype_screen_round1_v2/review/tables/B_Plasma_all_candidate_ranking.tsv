@@ -1,0 +1,330 @@
+network_level	TME_type	direction	LR_id	n_datasets_evaluable	n_datasets_expression_supported	n_concordant_positive_datasets	n_concordant_negative_datasets	n_datasets_same_direction	consensus_direction	n_supported_patients	n_patients_total	n_direction_stable_datasets	support_datasets	median_abs_paired_difference	evidence_tier	ligand	receptor	ligand_genes	receptor_genes	MP10_gene_overlap
+major	B	epi_to_TME	APP_CD74	5	5	4	1	4	1	24	24	4	CNP0000460;GSE326225;InhouseData;PRJNA662018	0.328156489406119	multi_dataset_coverage_descriptive	APP	CD74	APP	CD74	False
+fine	Plasma	epi_to_TME	APP_CD74	5	5	4	1	4	1	26	27	3	CNP0000460;GSE326225;InhouseData;PRJNA662018	0.08341581774020465	multi_dataset_coverage_descriptive	APP	CD74	APP	CD74	False
+major	Plasma	epi_to_TME	APP_CD74	5	5	4	1	4	1	26	27	3	CNP0000460;GSE326225;InhouseData;PRJNA662018	0.08341581774020465	multi_dataset_coverage_descriptive	APP	CD74	APP	CD74	False
+fine	Plasma	epi_to_TME	LAMB3_CD44	5	5	4	0	4	1	25	27	1	CNP0000460;GSE326225;InhouseData;PRJNA662018	0.0100191831803975	multi_dataset_coverage_descriptive	LAMB3	CD44	LAMB3	CD44	False
+major	Plasma	epi_to_TME	LAMB3_CD44	5	5	4	0	4	1	25	27	1	CNP0000460;GSE326225;InhouseData;PRJNA662018	0.0100191831803975	multi_dataset_coverage_descriptive	LAMB3	CD44	LAMB3	CD44	False
+fine	Plasma	epi_to_TME	NAMPT_INSR	5	5	3	0	3	1	26	27	3	CNP0000460;HRA003620;InhouseData	0.08131162879304266	multi_dataset_coverage_descriptive	NAMPT	INSR	NAMPT	INSR	False
+major	B	epi_to_TME	MIF_CD74_CXCR4	5	5	2	3	3	-1	24	24	3	GSE326225;HRA003620;InhouseData	0.269577009379321	multi_dataset_coverage_descriptive	MIF	CD74_CXCR4	MIF	CD74;CXCR4	False
+major	B	epi_to_TME	MIF_CD74_CD44	5	5	2	3	3	-1	24	24	3	GSE326225;HRA003620;InhouseData	0.263541385967353	multi_dataset_coverage_descriptive	MIF	CD74_CD44	MIF	CD74;CD44	False
+major	B	TME_to_epi	ADGRE5_CD55	5	5	3	0	3	1	23	24	3	CNP0000460;HRA003620;InhouseData	0.0713114068486714	multi_dataset_coverage_descriptive	ADGRE5	CD55	ADGRE5	CD55	False
+fine	Memory B	epi_to_TME	APP_CD74	4	4	3	1	3	1	14	14	3	CNP0000460;GSE326225;PRJNA662018	0.3043443346372392	multi_dataset_coverage_descriptive	APP	CD74	APP	CD74	False
+fine	Naive B	epi_to_TME	APP_CD74	3	3	3	0	3	1	7	7	3	CNP0000460;GSE326225;PRJNA662018	0.32387848444244327	multi_dataset_coverage_descriptive	APP	CD74	APP	CD74	False
+fine	Plasma	epi_to_TME	ANGPTL4_SDC1	5	4	3	0	3	1	23	27	2	CNP0000460;HRA003620;PRJNA662018	0.0442100541455575	multi_dataset_coverage_descriptive	ANGPTL4	SDC1	ANGPTL4	SDC1	False
+major	Plasma	epi_to_TME	ANGPTL4_SDC1	5	4	3	0	3	1	23	27	2	CNP0000460;HRA003620;PRJNA662018	0.0442100541455575	multi_dataset_coverage_descriptive	ANGPTL4	SDC1	ANGPTL4	SDC1	False
+major	B	epi_to_TME	MDK_NCL	5	5	3	1	3	1	22	24	2	CNP0000460;GSE326225;PRJNA662018	0.0763484906471326	multi_dataset_coverage_descriptive	MDK	NCL	MDK	NCL	False
+fine	Memory B	epi_to_TME	MDK_NCL	4	4	3	1	3	1	13	14	2	CNP0000460;GSE326225;PRJNA662018	0.087908316577679	multi_dataset_coverage_descriptive	MDK	NCL	MDK	NCL	False
+fine	Plasma	epi_to_TME	LAMB3_ITGA6_ITGB1	5	5	3	0	3	1	25	27	1	CNP0000460;GSE326225;InhouseData	0.0060239031971365	multi_dataset_coverage_descriptive	LAMB3	ITGA6_ITGB1	LAMB3	ITGA6;ITGB1	False
+major	Plasma	epi_to_TME	LAMB3_ITGA6_ITGB1	5	5	3	0	3	1	25	27	1	CNP0000460;GSE326225;InhouseData	0.0060239031971365	multi_dataset_coverage_descriptive	LAMB3	ITGA6_ITGB1	LAMB3	ITGA6;ITGB1	False
+fine	Naive B	epi_to_TME	MDK_NCL	3	3	3	0	3	1	6	7	1	CNP0000460;GSE326225;PRJNA662018	0.0803462527381442	multi_dataset_coverage_descriptive	MDK	NCL	MDK	NCL	False
+fine	Plasma	epi_to_TME	MIF_CD74_CD44	5	5	2	1	2	1	27	27	2	CNP0000460;PRJNA662018	0.063447943753578	multi_dataset_coverage_descriptive	MIF	CD74_CD44	MIF	CD74;CD44	False
+major	Plasma	epi_to_TME	MIF_CD74_CD44	5	5	2	0	2	1	27	27	2	CNP0000460;PRJNA662018	0.063447943753578	multi_dataset_coverage_descriptive	MIF	CD74_CD44	MIF	CD74;CD44	False
+major	Plasma	epi_to_TME	NAMPT_INSR	5	5	2	0	2	1	26	27	2	CNP0000460;HRA003620	0.08131162879304266	multi_dataset_coverage_descriptive	NAMPT	INSR	NAMPT	INSR	False
+fine	Plasma	epi_to_TME	MIF_CD74_CXCR4	5	5	2	0	2	1	25	27	2	CNP0000460;PRJNA662018	0.10126317417792854	multi_dataset_coverage_descriptive	MIF	CD74_CXCR4	MIF	CD74;CXCR4	False
+fine	Plasma	epi_to_TME	MDK_SDC1	5	5	2	1	2	1	25	27	2	CNP0000460;PRJNA662018	0.0531411202801538	multi_dataset_coverage_descriptive	MDK	SDC1	MDK	SDC1	False
+fine	Plasma	epi_to_TME	MDK_NCL	5	5	2	1	2	1	25	27	2	CNP0000460;PRJNA662018	0.041594275588781	multi_dataset_coverage_descriptive	MDK	NCL	MDK	NCL	False
+fine	Plasma	epi_to_TME	LAMA5_CD44	5	5	2	1	2	1	25	27	2	GSE326225;PRJNA662018	0.01668350367113795	multi_dataset_coverage_descriptive	LAMA5	CD44	LAMA5	CD44	False
+major	Plasma	epi_to_TME	LAMA5_CD44	5	5	2	0	2	1	25	27	2	GSE326225;PRJNA662018	0.01668350367113795	multi_dataset_coverage_descriptive	LAMA5	CD44	LAMA5	CD44	False
+major	Plasma	epi_to_TME	LAMA5_ITGA6_ITGB1	5	5	2	0	2	1	25	27	2	GSE326225;PRJNA662018	0.0102763892252589	multi_dataset_coverage_descriptive	LAMA5	ITGA6_ITGB1	LAMA5	ITGA6;ITGB1	False
+major	B	epi_to_TME	ADGRE5_CD55	5	4	2	0	2	1	23	24	2	CNP0000460;InhouseData	0.0863429231929014	multi_dataset_coverage_descriptive	ADGRE5	CD55	ADGRE5	CD55	False
+fine	Plasma	TME_to_epi	CD46_JAG1	5	5	2	1	2	1	23	27	2	CNP0000460;PRJNA662018	0.0062230438251393	multi_dataset_coverage_descriptive	CD46	JAG1	CD46	JAG1	False
+major	Plasma	TME_to_epi	CD46_JAG1	5	5	2	1	2	1	23	27	2	CNP0000460;PRJNA662018	0.0062230438251393	multi_dataset_coverage_descriptive	CD46	JAG1	CD46	JAG1	False
+major	Plasma	TME_to_epi	COL4A4_CD44	5	5	2	0	2	1	20	27	2	HRA003620;InhouseData	0.0048578208268831	multi_dataset_coverage_descriptive	COL4A4	CD44	COL4A4	CD44	False
+major	B	epi_to_TME	GDF15_TGFBR2	5	4	2	0	2	1	17	24	2	HRA003620;InhouseData	0.0792318744559736	multi_dataset_coverage_descriptive	GDF15	TGFBR2	GDF15	TGFBR2	False
+fine	Memory B	TME_to_epi	ADGRE5_CD55	4	4	2	0	2	1	14	14	2	CNP0000460;HRA003620	0.06060064653541608	multi_dataset_coverage_descriptive	ADGRE5	CD55	ADGRE5	CD55	False
+fine	Naive B	epi_to_TME	MIF_CD74_CXCR4	3	3	2	1	2	1	7	7	2	CNP0000460;PRJNA662018	0.530277764803762	multi_dataset_coverage_descriptive	MIF	CD74_CXCR4	MIF	CD74;CXCR4	False
+fine	Naive B	epi_to_TME	MIF_CD74_CD44	3	3	2	1	2	1	7	7	2	CNP0000460;PRJNA662018	0.379078621066666	multi_dataset_coverage_descriptive	MIF	CD74_CD44	MIF	CD74;CD44	False
+major	Plasma	epi_to_TME	MIF_CD74_CXCR4	5	5	1	2	2	-1	25	27	1	GSE326225;InhouseData	0.10126317417792854	multi_dataset_coverage_descriptive	MIF	CD74_CXCR4	MIF	CD74;CXCR4	False
+major	Plasma	epi_to_TME	MDK_ITGA4_ITGB1	5	5	0	2	2	-1	25	27	1	HRA003620;InhouseData	0.0389925296103909	multi_dataset_coverage_descriptive	MDK	ITGA4_ITGB1	MDK	ITGA4;ITGB1	False
+fine	Plasma	epi_to_TME	LAMC1_CD44	5	5	1	2	2	-1	25	27	1	CNP0000460;HRA003620	0.00835977518605485	multi_dataset_coverage_descriptive	LAMC1	CD44	LAMC1	CD44	False
+major	B	TME_to_epi	COL4A3_CD44	5	3	2	0	2	1	20	24	1	HRA003620;InhouseData	0.0347761380117059	multi_dataset_coverage_descriptive	COL4A3	CD44	COL4A3	CD44	False
+fine	Plasma	TME_to_epi	BMP6_BMPR1A_BMPR2	5	5	2	0	2	1	20	27	1	HRA003620;InhouseData	0.0093655442979103	multi_dataset_coverage_descriptive	BMP6	BMPR1A_BMPR2	BMP6	BMPR1A;BMPR2	False
+major	Plasma	TME_to_epi	BMP6_BMPR1A_BMPR2	5	5	2	0	2	1	20	27	1	HRA003620;InhouseData	0.0093655442979103	multi_dataset_coverage_descriptive	BMP6	BMPR1A_BMPR2	BMP6	BMPR1A;BMPR2	False
+fine	Plasma	TME_to_epi	COL4A4_ITGA2_ITGB1	5	5	2	0	2	1	18	27	1	HRA003620;InhouseData	0.0074972066406511	multi_dataset_coverage_descriptive	COL4A4	ITGA2_ITGB1	COL4A4	ITGA2;ITGB1	False
+major	B	TME_to_epi	CD22_PTPRC	5	3	2	0	2	1	16	24	1	HRA003620;InhouseData	0.0647248864317551	multi_dataset_coverage_descriptive	CD22	PTPRC	CD22	PTPRC	False
+major	B	epi_to_TME	PTPRC_CD22	5	3	2	0	2	1	16	24	1	HRA003620;InhouseData	0.0647248864317551	multi_dataset_coverage_descriptive	PTPRC	CD22	PTPRC	CD22	False
+fine	Memory B	epi_to_TME	LAMC1_CD44	4	4	1	2	2	-1	13	14	1	CNP0000460;HRA003620	0.042842921064731504	multi_dataset_coverage_descriptive	LAMC1	CD44	LAMC1	CD44	False
+fine	Memory B	epi_to_TME	MDK_ITGA4_ITGB1	4	4	2	1	2	1	12	14	1	GSE326225;PRJNA662018	0.10730409627636325	multi_dataset_coverage_descriptive	MDK	ITGA4_ITGB1	MDK	ITGA4;ITGB1	False
+major	Plasma	epi_to_TME	MDK_SDC1	5	5	2	2	2	0	25	27	0		0.0531411202801538	multi_dataset_coverage_descriptive	MDK	SDC1	MDK	SDC1	False
+major	Plasma	epi_to_TME	MDK_NCL	5	5	2	2	2	0	25	27	0		0.041594275588781	multi_dataset_coverage_descriptive	MDK	NCL	MDK	NCL	False
+major	Plasma	epi_to_TME	MDK_ITGA6_ITGB1	5	5	2	2	2	0	25	27	0		0.0397425486525837	multi_dataset_coverage_descriptive	MDK	ITGA6_ITGB1	MDK	ITGA6;ITGB1	False
+fine	Plasma	TME_to_epi	SEMA4D_PLXNB2	5	5	2	1	2	1	24	27	0	GSE326225;InhouseData	0.0083871099872375	multi_dataset_coverage_descriptive	SEMA4D	PLXNB2	SEMA4D	PLXNB2	False
+major	Plasma	TME_to_epi	SEMA4D_PLXNB2	5	5	2	1	2	1	24	27	0	GSE326225;InhouseData	0.0083871099872375	multi_dataset_coverage_descriptive	SEMA4D	PLXNB2	SEMA4D	PLXNB2	False
+major	B	epi_to_TME	MDK_ITGA4_ITGB1	5	5	2	2	2	0	20	24	0		0.0792496978262001	multi_dataset_coverage_descriptive	MDK	ITGA4_ITGB1	MDK	ITGA4;ITGB1	False
+fine	Memory B	epi_to_TME	MIF_CD74_CXCR4	4	4	2	2	2	0	14	14	0		0.4841815063576552	multi_dataset_coverage_descriptive	MIF	CD74_CXCR4	MIF	CD74;CXCR4	False
+fine	Memory B	epi_to_TME	MIF_CD74_CD44	4	4	2	2	2	0	14	14	0		0.42310066238898025	multi_dataset_coverage_descriptive	MIF	CD74_CD44	MIF	CD74;CD44	False
+fine	Naive B	epi_to_TME	LAMC1_CD44	3	3	1	2	2	-1	7	7	0	CNP0000460;PRJNA662018	0.08299440356693966	multi_dataset_coverage_descriptive	LAMC1	CD44	LAMC1	CD44	False
+fine	Plasma	epi_to_TME	MDK_ITGA4_ITGB1	5	5	0	1	1	-1	25	27	1	HRA003620	0.0389925296103909	single_dataset_or_discordant_descriptive	MDK	ITGA4_ITGB1	MDK	ITGA4;ITGB1	False
+major	Plasma	epi_to_TME	LAMC1_CD44	5	5	0	1	1	-1	25	27	1	HRA003620	0.00835977518605485	single_dataset_or_discordant_descriptive	LAMC1	CD44	LAMC1	CD44	False
+fine	Plasma	epi_to_TME	LAMC2_CD44	5	5	0	1	1	-1	24	27	1	CNP0000460	0.0124669916529672	single_dataset_or_discordant_descriptive	LAMC2	CD44	LAMC2	CD44	False
+major	Plasma	epi_to_TME	LAMC2_CD44	5	5	0	1	1	-1	24	27	1	CNP0000460	0.0124669916529672	single_dataset_or_discordant_descriptive	LAMC2	CD44	LAMC2	CD44	False
+fine	Plasma	epi_to_TME	LAMC2_ITGA6_ITGB1	5	5	0	1	1	-1	24	27	1	CNP0000460	0.0082684856835334	single_dataset_or_discordant_descriptive	LAMC2	ITGA6_ITGB1	LAMC2	ITGA6;ITGB1	False
+major	Plasma	epi_to_TME	LAMC2_ITGA6_ITGB1	5	5	0	1	1	-1	24	27	1	CNP0000460	0.0082684856835334	single_dataset_or_discordant_descriptive	LAMC2	ITGA6_ITGB1	LAMC2	ITGA6;ITGB1	False
+fine	Plasma	TME_to_epi	WNT5B_FZD6	5	5	1	0	1	1	24	27	1	InhouseData	0.0074704852908047	single_dataset_or_discordant_descriptive	WNT5B	FZD6	WNT5B	FZD6	False
+major	Plasma	TME_to_epi	WNT5B_FZD6	5	5	1	0	1	1	24	27	1	InhouseData	0.0074704852908047	single_dataset_or_discordant_descriptive	WNT5B	FZD6	WNT5B	FZD6	False
+major	Plasma	TME_to_epi	ADGRE5_CD55	5	5	1	0	1	1	23	27	1	PRJNA662018	0.0299658284874688	single_dataset_or_discordant_descriptive	ADGRE5	CD55	ADGRE5	CD55	False
+fine	Plasma	TME_to_epi	SEMA4A_PLXNB2	5	5	0	1	1	-1	23	27	1	HRA003620	0.0054593505452808	single_dataset_or_discordant_descriptive	SEMA4A	PLXNB2	SEMA4A	PLXNB2	False
+major	Plasma	TME_to_epi	SEMA4A_PLXNB2	5	5	0	1	1	-1	23	27	1	HRA003620	0.0054593505452808	single_dataset_or_discordant_descriptive	SEMA4A	PLXNB2	SEMA4A	PLXNB2	False
+fine	Plasma	epi_to_TME	COL4A5_CD44	5	5	0	1	1	-1	22	27	1	HRA003620	0.0375033452521264	single_dataset_or_discordant_descriptive	COL4A5	CD44	COL4A5	CD44	False
+major	Plasma	epi_to_TME	COL4A5_CD44	5	5	0	1	1	-1	22	27	1	HRA003620	0.0375033452521264	single_dataset_or_discordant_descriptive	COL4A5	CD44	COL4A5	CD44	False
+fine	Plasma	epi_to_TME	COL4A5_SDC1	5	5	0	1	1	-1	22	27	1	HRA003620	0.0150001006974139	single_dataset_or_discordant_descriptive	COL4A5	SDC1	COL4A5	SDC1	False
+major	Plasma	epi_to_TME	COL4A5_SDC1	5	5	0	1	1	-1	22	27	1	HRA003620	0.0150001006974139	single_dataset_or_discordant_descriptive	COL4A5	SDC1	COL4A5	SDC1	False
+fine	Plasma	epi_to_TME	THBS1_SDC1	5	5	1	0	1	1	22	27	1	PRJNA662018	0.0108946345394067	single_dataset_or_discordant_descriptive	THBS1	SDC1	THBS1	SDC1	False
+major	Plasma	epi_to_TME	THBS1_SDC1	5	5	1	0	1	1	22	27	1	PRJNA662018	0.0108946345394067	single_dataset_or_discordant_descriptive	THBS1	SDC1	THBS1	SDC1	False
+fine	Plasma	epi_to_TME	THBS1_CD47	5	5	1	0	1	1	22	27	1	PRJNA662018	0.0080629386720447	single_dataset_or_discordant_descriptive	THBS1	CD47	THBS1	CD47	False
+major	Plasma	epi_to_TME	THBS1_CD47	5	5	1	0	1	1	22	27	1	PRJNA662018	0.0080629386720447	single_dataset_or_discordant_descriptive	THBS1	CD47	THBS1	CD47	False
+fine	Plasma	TME_to_epi	MPZL1_MPZL1	5	5	1	0	1	1	22	27	1	InhouseData	0.004668673989108651	single_dataset_or_discordant_descriptive	MPZL1	MPZL1	MPZL1	MPZL1	False
+fine	Plasma	epi_to_TME	MPZL1_MPZL1	5	5	1	0	1	1	22	27	1	InhouseData	0.004668673989108651	single_dataset_or_discordant_descriptive	MPZL1	MPZL1	MPZL1	MPZL1	False
+major	Plasma	TME_to_epi	MPZL1_MPZL1	5	5	1	0	1	1	22	27	1	InhouseData	0.004668673989108651	single_dataset_or_discordant_descriptive	MPZL1	MPZL1	MPZL1	MPZL1	False
+major	Plasma	epi_to_TME	MPZL1_MPZL1	5	5	1	0	1	1	22	27	1	InhouseData	0.004668673989108651	single_dataset_or_discordant_descriptive	MPZL1	MPZL1	MPZL1	MPZL1	False
+major	B	epi_to_TME	LAMA5_CD44	5	4	1	0	1	1	21	24	1	PRJNA662018	0.0422904749442091	single_dataset_or_discordant_descriptive	LAMA5	CD44	LAMA5	CD44	False
+major	B	epi_to_TME	LAMC1_CD44	5	5	0	1	1	-1	21	24	1	HRA003620	0.0265895821607768	single_dataset_or_discordant_descriptive	LAMC1	CD44	LAMC1	CD44	False
+fine	Plasma	epi_to_TME	LGALS9_CD44	5	5	0	1	1	-1	21	27	1	HRA003620	0.017932943947120653	single_dataset_or_discordant_descriptive	LGALS9	CD44	LGALS9	CD44	False
+fine	Plasma	TME_to_epi	MDK_SDC4	5	5	1	0	1	1	21	27	1	PRJNA662018	0.0161593122876483	single_dataset_or_discordant_descriptive	MDK	SDC4	MDK	SDC4	False
+major	Plasma	TME_to_epi	MDK_SDC4	5	5	1	0	1	1	21	27	1	InhouseData	0.0161593122876483	single_dataset_or_discordant_descriptive	MDK	SDC4	MDK	SDC4	False
+fine	Plasma	TME_to_epi	MDK_NCL	5	5	1	0	1	1	21	27	1	PRJNA662018	0.015165199428641099	single_dataset_or_discordant_descriptive	MDK	NCL	MDK	NCL	False
+fine	Plasma	epi_to_TME	LGALS9_CD45	5	5	0	1	1	-1	21	27	1	HRA003620	0.014797293479891001	single_dataset_or_discordant_descriptive	LGALS9	PTPRC	LGALS9	PTPRC	False
+fine	Plasma	TME_to_epi	AREG_EGFR_ERBB2	5	5	1	0	1	1	21	27	1	CNP0000460	0.01020355698575795	single_dataset_or_discordant_descriptive	AREG	EGFR_ERBB2	AREG	EGFR;ERBB2	False
+major	Plasma	TME_to_epi	AREG_EGFR_ERBB2	5	5	1	0	1	1	21	27	1	CNP0000460	0.01020355698575795	single_dataset_or_discordant_descriptive	AREG	EGFR_ERBB2	AREG	EGFR;ERBB2	False
+major	Plasma	TME_to_epi	MDK_ITGA6_ITGB1	5	5	1	0	1	1	21	27	1	InhouseData	0.0082145130786931	single_dataset_or_discordant_descriptive	MDK	ITGA6_ITGB1	MDK	ITGA6;ITGB1	False
+major	B	TME_to_epi	COL4A4_SDC4	5	5	0	1	1	-1	20	24	1	HRA003620	0.0296952023455333	single_dataset_or_discordant_descriptive	COL4A4	SDC4	COL4A4	SDC4	False
+fine	Plasma	TME_to_epi	COL4A4_CD44	5	5	1	0	1	1	20	27	1	InhouseData	0.0048578208268831	single_dataset_or_discordant_descriptive	COL4A4	CD44	COL4A4	CD44	False
+fine	Plasma	epi_to_TME	LAMB1_ITGA6_ITGB1	5	5	0	1	1	-1	20	27	1	HRA003620	0.0034453159382535495	single_dataset_or_discordant_descriptive	LAMB1	ITGA6_ITGB1	LAMB1	ITGA6;ITGB1	False
+major	B	epi_to_TME	LAMC2_CD44	5	4	0	1	1	-1	19	24	1	CNP0000460	0.0960579984713762	single_dataset_or_discordant_descriptive	LAMC2	CD44	LAMC2	CD44	False
+major	B	TME_to_epi	COL4A4_CD44	5	4	1	0	1	1	19	24	1	HRA003620	0.04409835976598115	single_dataset_or_discordant_descriptive	COL4A4	CD44	COL4A4	CD44	False
+major	B	epi_to_TME	LAMB3_CD44	5	4	1	0	1	1	19	24	1	InhouseData	0.0374611987178933	single_dataset_or_discordant_descriptive	LAMB3	CD44	LAMB3	CD44	False
+fine	Plasma	TME_to_epi	MDK_SDC1	5	5	1	0	1	1	19	27	1	PRJNA662018	0.0306735616171072	single_dataset_or_discordant_descriptive	MDK	SDC1	MDK	SDC1	False
+major	Plasma	TME_to_epi	MDK_SDC1	5	5	1	0	1	1	19	27	1	InhouseData	0.0306735616171072	single_dataset_or_discordant_descriptive	MDK	SDC1	MDK	SDC1	False
+fine	Plasma	TME_to_epi	SEMA4D_PLXNB1	5	4	0	1	1	-1	19	27	1	HRA003620	0.00426171381389765	single_dataset_or_discordant_descriptive	SEMA4D	PLXNB1	SEMA4D	PLXNB1	False
+major	Plasma	TME_to_epi	SEMA4D_PLXNB1	5	4	0	1	1	-1	19	27	1	HRA003620	0.00426171381389765	single_dataset_or_discordant_descriptive	SEMA4D	PLXNB1	SEMA4D	PLXNB1	False
+fine	Plasma	TME_to_epi	SEMA4A_PLXNB1	5	3	0	1	1	-1	19	27	1	HRA003620	0.0025231792160159	single_dataset_or_discordant_descriptive	SEMA4A	PLXNB1	SEMA4A	PLXNB1	False
+major	Plasma	TME_to_epi	SEMA4A_PLXNB1	5	3	0	1	1	-1	19	27	1	HRA003620	0.0025231792160159	single_dataset_or_discordant_descriptive	SEMA4A	PLXNB1	SEMA4A	PLXNB1	False
+major	B	epi_to_TME	COL4A5_CD44	5	4	0	1	1	-1	18	24	1	HRA003620	0.06346653965166794	single_dataset_or_discordant_descriptive	COL4A5	CD44	COL4A5	CD44	False
+major	B	TME_to_epi	COL4A4_SDC1	5	5	0	1	1	-1	18	24	1	HRA003620	0.0349084481311008	single_dataset_or_discordant_descriptive	COL4A4	SDC1	COL4A4	SDC1	False
+major	B	TME_to_epi	TGFB1_ACVR1B_TGFBR2	5	4	0	1	1	-1	18	24	1	HRA003620	0.0172821599393912	single_dataset_or_discordant_descriptive	TGFB1	ACVR1B_TGFbR2	TGFB1	ACVR1B;TGFBR2	False
+major	B	TME_to_epi	CD96_NECTIN1	5	4	0	1	1	-1	18	24	1	HRA003620	0.0152197322054309	single_dataset_or_discordant_descriptive	CD96	NECTIN1	CD96	NECTIN1	False
+major	B	epi_to_TME	NECTIN1_CD96	5	4	0	1	1	-1	18	24	1	HRA003620	0.0152197322054309	single_dataset_or_discordant_descriptive	NECTIN1	CD96	NECTIN1	CD96	False
+major	B	TME_to_epi	CD46_JAG1	5	4	0	1	1	-1	18	24	1	HRA003620	0.01018493921340855	single_dataset_or_discordant_descriptive	CD46	JAG1	CD46	JAG1	False
+fine	Plasma	epi_to_TME	HLA-F_LILRB1	5	5	1	0	1	1	18	27	1	HRA003620	0.009862510422336	single_dataset_or_discordant_descriptive	HLA-F	LILRB1	HLA-F	LILRB1	False
+major	Plasma	epi_to_TME	HLA-F_LILRB1	5	5	1	0	1	1	18	27	1	HRA003620	0.009862510422336	single_dataset_or_discordant_descriptive	HLA-F	LILRB1	HLA-F	LILRB1	False
+fine	Plasma	TME_to_epi	TGFB1_ACVR1_TGFBR1	5	4	1	0	1	1	18	27	1	HRA003620	0.009176429021371975	single_dataset_or_discordant_descriptive	TGFB1	ACVR1_TGFbR	TGFB1	ACVR1;TGFBR1;TGFBR2	False
+major	Plasma	TME_to_epi	COL4A4_ITGA2_ITGB1	5	5	1	0	1	1	18	27	1	InhouseData	0.0074972066406511	single_dataset_or_discordant_descriptive	COL4A4	ITGA2_ITGB1	COL4A4	ITGA2;ITGB1	False
+major	B	epi_to_TME	THBS1_CD47	5	4	1	0	1	1	17	24	1	PRJNA662018	0.03295322950466883	single_dataset_or_discordant_descriptive	THBS1	CD47	THBS1	CD47	False
+major	B	epi_to_TME	HLA-F_LILRB1	5	3	1	0	1	1	17	24	1	HRA003620	0.0272036226312019	single_dataset_or_discordant_descriptive	HLA-F	LILRB1	HLA-F	LILRB1	False
+major	B	TME_to_epi	COL4A3_ITGA2_ITGB1	5	3	1	0	1	1	17	24	1	InhouseData	0.0250735052722443	single_dataset_or_discordant_descriptive	COL4A3	ITGA2_ITGB1	COL4A3	ITGA2;ITGB1	False
+major	B	TME_to_epi	TNF_TNFRSF1A	5	4	0	1	1	-1	17	24	1	HRA003620	0.0034914634358343	single_dataset_or_discordant_descriptive	TNF	TNFRSF1A	TNF	TNFRSF1A	False
+major	B	epi_to_TME	EFNA5_EPHA4	5	4	0	1	1	-1	16	24	1	HRA003620	0.0316628282797968	single_dataset_or_discordant_descriptive	EFNA5	EPHA4	EFNA5	EPHA4	False
+fine	Plasma	TME_to_epi	COL4A4_ITGA3_ITGB1	5	5	0	1	1	-1	16	27	1	HRA003620	0.0146128615214758	single_dataset_or_discordant_descriptive	COL4A4	ITGA3_ITGB1	COL4A4	ITGA3;ITGB1	False
+major	Plasma	TME_to_epi	COL4A4_ITGA3_ITGB1	5	5	0	1	1	-1	16	27	1	HRA003620	0.0146128615214758	single_dataset_or_discordant_descriptive	COL4A4	ITGA3_ITGB1	COL4A4	ITGA3;ITGB1	False
+major	B	TME_to_epi	SEMA4D_PLXNB1	5	3	0	1	1	-1	16	24	1	HRA003620	0.0094594531874219	single_dataset_or_discordant_descriptive	SEMA4D	PLXNB1	SEMA4D	PLXNB1	False
+fine	Plasma	TME_to_epi	GRN_SORT1	5	3	0	1	1	-1	15	27	1	HRA003620	0.0103400821177149	single_dataset_or_discordant_descriptive	GRN	SORT1	GRN	SORT1	False
+major	Plasma	TME_to_epi	GRN_SORT1	5	3	0	1	1	-1	15	27	1	HRA003620	0.0103400821177149	single_dataset_or_discordant_descriptive	GRN	SORT1	GRN	SORT1	False
+major	Plasma	TME_to_epi	COL9A3_CD44	5	4	1	0	1	1	15	27	1	HRA003620	0.0094837095617335	single_dataset_or_discordant_descriptive	COL9A3	CD44	COL9A3	CD44	False
+major	B	TME_to_epi	COL4A4_ITGA3_ITGB1	5	4	0	1	1	-1	14	24	1	HRA003620	0.00994314613119495	single_dataset_or_discordant_descriptive	COL4A4	ITGA3_ITGB1	COL4A4	ITGA3;ITGB1	False
+fine	Memory B	epi_to_TME	LAMC2_CD44	4	3	0	1	1	-1	13	14	1	CNP0000460	0.08574292353013994	single_dataset_or_discordant_descriptive	LAMC2	CD44	LAMC2	CD44	False
+fine	Memory B	epi_to_TME	ADGRE5_CD55	4	3	1	0	1	1	13	14	1	HRA003620	0.07230145376851124	single_dataset_or_discordant_descriptive	ADGRE5	CD55	ADGRE5	CD55	False
+fine	Plasma	TME_to_epi	COL9A3_SDC1	5	4	0	1	1	-1	13	27	1	HRA003620	0.0112335766782527	single_dataset_or_discordant_descriptive	COL9A3	SDC1	COL9A3	SDC1	False
+major	Plasma	TME_to_epi	COL9A3_SDC1	5	4	0	1	1	-1	13	27	1	HRA003620	0.0112335766782527	single_dataset_or_discordant_descriptive	COL9A3	SDC1	COL9A3	SDC1	False
+fine	Plasma	TME_to_epi	GDF15_TGFBR2	5	3	1	0	1	1	13	27	1	CNP0000460	0.007827436055544099	single_dataset_or_discordant_descriptive	GDF15	TGFBR2	GDF15	TGFBR2	False
+major	Plasma	TME_to_epi	GDF15_TGFBR2	5	3	1	0	1	1	13	27	1	CNP0000460	0.007827436055544099	single_dataset_or_discordant_descriptive	GDF15	TGFBR2	GDF15	TGFBR2	False
+fine	Memory B	TME_to_epi	COL4A4_SDC1	4	4	0	1	1	-1	12	14	1	HRA003620	0.057912357250361375	single_dataset_or_discordant_descriptive	COL4A4	SDC1	COL4A4	SDC1	False
+fine	Memory B	TME_to_epi	COL4A3_SDC1	4	4	0	1	1	-1	12	14	1	HRA003620	0.053687364932164076	single_dataset_or_discordant_descriptive	COL4A3	SDC1	COL4A3	SDC1	False
+fine	Plasma	TME_to_epi	CDH1_CDH1	5	2	1	0	1	1	12	27	1	CNP0000460	0.0531702401489767	single_dataset_or_discordant_descriptive	CDH1	CDH1	CDH1	CDH1	False
+fine	Plasma	epi_to_TME	CDH1_CDH1	5	2	1	0	1	1	12	27	1	CNP0000460	0.0531702401489767	single_dataset_or_discordant_descriptive	CDH1	CDH1	CDH1	CDH1	False
+major	Plasma	TME_to_epi	CDH1_CDH1	5	2	1	0	1	1	12	27	1	CNP0000460	0.0531702401489767	single_dataset_or_discordant_descriptive	CDH1	CDH1	CDH1	CDH1	False
+major	Plasma	epi_to_TME	CDH1_CDH1	5	2	1	0	1	1	12	27	1	CNP0000460	0.0531702401489767	single_dataset_or_discordant_descriptive	CDH1	CDH1	CDH1	CDH1	False
+fine	Memory B	TME_to_epi	COL4A4_SDC4	4	4	0	1	1	-1	12	14	1	HRA003620	0.04722587308194237	single_dataset_or_discordant_descriptive	COL4A4	SDC4	COL4A4	SDC4	False
+fine	Memory B	TME_to_epi	COL4A3_SDC4	4	4	0	1	1	-1	12	14	1	HRA003620	0.04032197194225935	single_dataset_or_discordant_descriptive	COL4A3	SDC4	COL4A3	SDC4	False
+fine	Memory B	epi_to_TME	EFNA5_EPHA4	4	4	0	1	1	-1	12	14	1	HRA003620	0.0338170444528053	single_dataset_or_discordant_descriptive	EFNA5	EPHA4	EFNA5	EPHA4	False
+fine	Memory B	epi_to_TME	THBS1_CD47	4	3	1	0	1	1	12	14	1	PRJNA662018	0.03312929211172775	single_dataset_or_discordant_descriptive	THBS1	CD47	THBS1	CD47	False
+fine	Memory B	TME_to_epi	CD96_NECTIN1	4	4	0	1	1	-1	12	14	1	HRA003620	0.02384980032340825	single_dataset_or_discordant_descriptive	CD96	NECTIN1	CD96	NECTIN1	False
+fine	Memory B	epi_to_TME	NECTIN1_CD96	4	4	0	1	1	-1	12	14	1	HRA003620	0.02384980032340825	single_dataset_or_discordant_descriptive	NECTIN1	CD96	NECTIN1	CD96	False
+fine	Memory B	epi_to_TME	COL4A5_CD44	4	3	0	1	1	-1	11	14	1	HRA003620	0.06866336269500076	single_dataset_or_discordant_descriptive	COL4A5	CD44	COL4A5	CD44	False
+fine	Memory B	epi_to_TME	LGALS9_CD45	4	3	0	1	1	-1	11	14	1	HRA003620	0.048963384783265146	single_dataset_or_discordant_descriptive	LGALS9	PTPRC	LGALS9	PTPRC	False
+fine	Memory B	epi_to_TME	LGALS9_CD44	4	3	0	1	1	-1	11	14	1	HRA003620	0.04627471576033715	single_dataset_or_discordant_descriptive	LGALS9	CD44	LGALS9	CD44	False
+fine	Memory B	TME_to_epi	COL4A4_ITGA2_ITGB1	4	3	1	0	1	1	11	14	1	HRA003620	0.0362201543934947	single_dataset_or_discordant_descriptive	COL4A4	ITGA2_ITGB1	COL4A4	ITGA2;ITGB1	False
+fine	Plasma	TME_to_epi	COL1A2_SDC4	5	3	1	0	1	1	11	27	1	GSE326225	0.0318451927034364	single_dataset_or_discordant_descriptive	COL1A2	SDC4	COL1A2	SDC4	False
+major	Plasma	TME_to_epi	COL1A2_SDC4	5	3	1	0	1	1	11	27	1	GSE326225	0.0318451927034364	single_dataset_or_discordant_descriptive	COL1A2	SDC4	COL1A2	SDC4	False
+fine	Plasma	TME_to_epi	COL1A2_CD44	5	3	1	0	1	1	11	27	1	GSE326225	0.018739122683352	single_dataset_or_discordant_descriptive	COL1A2	CD44	COL1A2	CD44	False
+major	Plasma	TME_to_epi	COL1A2_CD44	5	3	1	0	1	1	11	27	1	GSE326225	0.018739122683352	single_dataset_or_discordant_descriptive	COL1A2	CD44	COL1A2	CD44	False
+fine	Memory B	TME_to_epi	CD46_JAG1	4	3	0	1	1	-1	11	14	1	HRA003620	0.01635866103620045	single_dataset_or_discordant_descriptive	CD46	JAG1	CD46	JAG1	False
+fine	Memory B	epi_to_TME	GDF15_TGFBR2	4	3	1	0	1	1	10	14	1	HRA003620	0.0418818836077617	single_dataset_or_discordant_descriptive	GDF15	TGFBR2	GDF15	TGFBR2	False
+fine	Memory B	TME_to_epi	COL4A4_ITGA3_ITGB1	4	3	0	1	1	-1	10	14	1	HRA003620	0.0319811511567253	single_dataset_or_discordant_descriptive	COL4A4	ITGA3_ITGB1	COL4A4	ITGA3;ITGB1	False
+fine	Memory B	epi_to_TME	EFNB1_EPHA4	4	4	0	1	1	-1	10	14	1	HRA003620	0.020943919108307153	single_dataset_or_discordant_descriptive	EFNB1	EPHA4	EFNB1	EPHA4	False
+major	B	epi_to_TME	EFNB1_EPHA4	5	4	0	1	1	-1	10	24	1	HRA003620	0.01558951558714765	single_dataset_or_discordant_descriptive	EFNB1	EPHA4	EFNB1	EPHA4	False
+fine	Memory B	epi_to_TME	EFNB2_EPHA4	4	3	1	0	1	1	10	14	1	HRA003620	0.0123235037423775	single_dataset_or_discordant_descriptive	EFNB2	EPHA4	EFNB2	EPHA4	False
+fine	Memory B	TME_to_epi	TGFB1_ACVR1_TGFBR1	4	2	1	0	1	1	10	14	1	HRA003620	0.00731038687029265	single_dataset_or_discordant_descriptive	TGFB1	ACVR1_TGFbR	TGFB1	ACVR1;TGFBR1;TGFBR2	False
+fine	IFN-stimulated B	epi_to_TME	APP_CD74	1	1	1	0	1	1	9	9	1	InhouseData	0.368525718765199	single_dataset_or_discordant_descriptive	APP	CD74	APP	CD74	False
+fine	IFN-stimulated B	epi_to_TME	MIF_CD74_CXCR4	1	1	0	1	1	-1	9	9	1	InhouseData	0.096023150421615	single_dataset_or_discordant_descriptive	MIF	CD74_CXCR4	MIF	CD74;CXCR4	False
+fine	IFN-stimulated B	epi_to_TME	ADGRE5_CD55	1	1	1	0	1	1	9	9	1	InhouseData	0.0863429231929014	single_dataset_or_discordant_descriptive	ADGRE5	CD55	ADGRE5	CD55	False
+fine	IFN-stimulated B	epi_to_TME	MIF_CD74_CD44	1	1	0	1	1	-1	9	9	1	InhouseData	0.0702364291688194	single_dataset_or_discordant_descriptive	MIF	CD74_CD44	MIF	CD74;CD44	False
+fine	Plasma	TME_to_epi	COL1A2_ITGA3_ITGB1	5	3	1	0	1	1	9	27	1	GSE326225	0.0327142013197581	single_dataset_or_discordant_descriptive	COL1A2	ITGA3_ITGB1	COL1A2	ITGA3;ITGB1	False
+major	Plasma	TME_to_epi	COL1A2_ITGA3_ITGB1	5	3	1	0	1	1	9	27	1	GSE326225	0.0327142013197581	single_dataset_or_discordant_descriptive	COL1A2	ITGA3_ITGB1	COL1A2	ITGA3;ITGB1	False
+fine	Memory B	epi_to_TME	HLA-F_LILRB1	4	2	1	0	1	1	9	14	1	HRA003620	0.029361941831210152	single_dataset_or_discordant_descriptive	HLA-F	LILRB1	HLA-F	LILRB1	False
+fine	IFN-stimulated B	TME_to_epi	COL4A3_SDC4	1	1	1	0	1	1	9	9	1	InhouseData	0.02455361890908465	single_dataset_or_discordant_descriptive	COL4A3	SDC4	COL4A3	SDC4	False
+fine	Memory B	epi_to_TME	JAG1_NOTCH2	4	3	0	1	1	-1	9	14	1	HRA003620	0.014447732106828799	single_dataset_or_discordant_descriptive	JAG1	NOTCH2	JAG1	NOTCH2	False
+fine	Memory B	TME_to_epi	SEMA4D_PLXNB1	4	2	0	1	1	-1	9	14	1	HRA003620	0.011525082551338349	single_dataset_or_discordant_descriptive	SEMA4D	PLXNB1	SEMA4D	PLXNB1	False
+fine	IFN-stimulated B	TME_to_epi	ADGRE5_CD55	1	1	1	0	1	1	8	9	1	InhouseData	0.1748443808488785	single_dataset_or_discordant_descriptive	ADGRE5	CD55	ADGRE5	CD55	False
+fine	IFN-stimulated B	TME_to_epi	COL4A4_SDC4	1	1	1	0	1	1	8	9	1	InhouseData	0.0248037641031764	single_dataset_or_discordant_descriptive	COL4A4	SDC4	COL4A4	SDC4	False
+fine	Memory B	TME_to_epi	CD22_PTPRC	4	2	1	0	1	1	7	14	1	HRA003620	0.172440370477153	single_dataset_or_discordant_descriptive	CD22	PTPRC	CD22	PTPRC	False
+fine	Memory B	epi_to_TME	PTPRC_CD22	4	2	1	0	1	1	7	14	1	HRA003620	0.172440370477153	single_dataset_or_discordant_descriptive	PTPRC	CD22	PTPRC	CD22	False
+fine	IFN-stimulated B	TME_to_epi	NAMPT_INSR	1	1	1	0	1	1	7	9	1	InhouseData	0.0729670959146528	single_dataset_or_discordant_descriptive	NAMPT	INSR	NAMPT	INSR	False
+fine	Naive B	TME_to_epi	ADGRE5_CD55	3	3	1	0	1	1	7	7	1	CNP0000460	0.051939839146097046	single_dataset_or_discordant_descriptive	ADGRE5	CD55	ADGRE5	CD55	False
+fine	IFN-stimulated B	TME_to_epi	COL4A3_SDC1	1	1	1	0	1	1	7	9	1	InhouseData	0.0062315926449429005	single_dataset_or_discordant_descriptive	COL4A3	SDC1	COL4A3	SDC1	False
+fine	Naive B	epi_to_TME	LAMC2_CD44	3	2	0	1	1	-1	6	7	1	CNP0000460	0.242918038741536	single_dataset_or_discordant_descriptive	LAMC2	CD44	LAMC2	CD44	False
+fine	IFN-stimulated B	epi_to_TME	GDF15_TGFBR2	1	1	1	0	1	1	6	9	1	InhouseData	0.1620192334866	single_dataset_or_discordant_descriptive	GDF15	TGFBR2	GDF15	TGFBR2	False
+fine	Naive B	epi_to_TME	ADGRE5_CD55	3	2	1	0	1	1	6	7	1	CNP0000460	0.0809498766693482	single_dataset_or_discordant_descriptive	ADGRE5	CD55	ADGRE5	CD55	False
+fine	Naive B	epi_to_TME	LAMA5_CD44	3	2	1	0	1	1	6	7	1	PRJNA662018	0.0460938771454007	single_dataset_or_discordant_descriptive	LAMA5	CD44	LAMA5	CD44	False
+fine	IFN-stimulated B	TME_to_epi	COL4A3_ITGA2_ITGB1	1	1	1	0	1	1	6	9	1	InhouseData	0.025597050905938425	single_dataset_or_discordant_descriptive	COL4A3	ITGA2_ITGB1	COL4A3	ITGA2;ITGB1	False
+fine	IFN-stimulated B	epi_to_TME	LAMB3_CD44	1	1	1	0	1	1	5	9	1	InhouseData	0.20233051443529285	single_dataset_or_discordant_descriptive	LAMB3	CD44	LAMB3	CD44	False
+fine	IFN-stimulated B	TME_to_epi	COL4A4_ITGA2_ITGB1	1	1	1	0	1	1	5	9	1	InhouseData	0.0253569355843339	single_dataset_or_discordant_descriptive	COL4A4	ITGA2_ITGB1	COL4A4	ITGA2;ITGB1	False
+major	B	TME_to_epi	GDF15_TGFBR2	5	1	1	0	1	1	5	24	1	CNP0000460	0.0102523836851743	single_dataset_or_discordant_descriptive	GDF15	TGFBR2	GDF15	TGFBR2	False
+fine	Memory B	TME_to_epi	GDF15_TGFBR2	4	1	1	0	1	1	4	14	1	CNP0000460	0.01229273655569615	single_dataset_or_discordant_descriptive	GDF15	TGFBR2	GDF15	TGFBR2	False
+fine	Memory B	epi_to_TME	LAMA4_CD44	4	1	1	0	1	1	3	14	1	CNP0000460	0.06428069085197312	single_dataset_or_discordant_descriptive	LAMA4	CD44	LAMA4	CD44	False
+fine	Plasma	epi_to_TME	MDK_ITGA6_ITGB1	5	5	1	1	1	0	25	27	0		0.0397425486525837	single_dataset_or_discordant_descriptive	MDK	ITGA6_ITGB1	MDK	ITGA6;ITGB1	False
+fine	Plasma	epi_to_TME	LAMA5_ITGA6_ITGB1	5	5	1	1	1	0	25	27	0		0.0102763892252589	single_dataset_or_discordant_descriptive	LAMA5	ITGA6_ITGB1	LAMA5	ITGA6;ITGB1	False
+fine	Plasma	epi_to_TME	LAMC1_ITGA6_ITGB1	5	5	1	1	1	0	25	27	0		0.0060276983087700995	single_dataset_or_discordant_descriptive	LAMC1	ITGA6_ITGB1	LAMC1	ITGA6;ITGB1	False
+major	Plasma	epi_to_TME	LAMC1_ITGA6_ITGB1	5	5	1	1	1	0	25	27	0		0.0060276983087700995	single_dataset_or_discordant_descriptive	LAMC1	ITGA6_ITGB1	LAMC1	ITGA6;ITGB1	False
+fine	Plasma	TME_to_epi	NAMPT_INSR	5	4	1	1	1	0	23	27	0		0.0199991937516911	single_dataset_or_discordant_descriptive	NAMPT	INSR	NAMPT	INSR	False
+major	B	TME_to_epi	SEMA4D_PLXNB2	5	5	1	1	1	0	22	24	0		0.0180643353846195	single_dataset_or_discordant_descriptive	SEMA4D	PLXNB2	SEMA4D	PLXNB2	False
+major	B	TME_to_epi	COL4A3_SDC4	5	4	1	1	1	0	21	24	0		0.02643959466336985	single_dataset_or_discordant_descriptive	COL4A3	SDC4	COL4A3	SDC4	False
+major	Plasma	epi_to_TME	LGALS9_CD44	5	5	1	1	1	0	21	27	0		0.017932943947120653	single_dataset_or_discordant_descriptive	LGALS9	CD44	LGALS9	CD44	False
+major	Plasma	epi_to_TME	LGALS9_CD45	5	5	1	1	1	0	21	27	0		0.014797293479891001	single_dataset_or_discordant_descriptive	LGALS9	PTPRC	LGALS9	PTPRC	False
+fine	Plasma	TME_to_epi	MDK_ITGA6_ITGB1	5	5	1	0	1	1	21	27	0	PRJNA662018	0.0082145130786931	single_dataset_or_discordant_descriptive	MDK	ITGA6_ITGB1	MDK	ITGA6;ITGB1	False
+fine	Plasma	TME_to_epi	IGF1_IGF1R	5	5	1	0	1	1	21	27	0	InhouseData	0.00560621827124995	single_dataset_or_discordant_descriptive	IGF1	IGF1R	IGF1	IGF1R	False
+fine	Plasma	TME_to_epi	COL4A4_SDC4	5	5	1	1	1	0	20	27	0		0.015209985710343	single_dataset_or_discordant_descriptive	COL4A4	SDC4	COL4A4	SDC4	False
+major	Plasma	TME_to_epi	COL4A4_SDC4	5	5	1	1	1	0	20	27	0		0.015209985710343	single_dataset_or_discordant_descriptive	COL4A4	SDC4	COL4A4	SDC4	False
+fine	Plasma	epi_to_TME	LAMB1_CD44	5	5	1	1	1	0	20	27	0		0.0114780252499679	single_dataset_or_discordant_descriptive	LAMB1	CD44	LAMB1	CD44	False
+major	Plasma	epi_to_TME	LAMB1_CD44	5	5	1	1	1	0	20	27	0		0.0114780252499679	single_dataset_or_discordant_descriptive	LAMB1	CD44	LAMB1	CD44	False
+major	Plasma	epi_to_TME	LAMB1_ITGA6_ITGB1	5	5	1	1	1	0	20	27	0		0.0034453159382535495	single_dataset_or_discordant_descriptive	LAMB1	ITGA6_ITGB1	LAMB1	ITGA6;ITGB1	False
+major	B	TME_to_epi	COL4A3_SDC1	5	4	1	1	1	0	19	24	0		0.0356666627129396	single_dataset_or_discordant_descriptive	COL4A3	SDC1	COL4A3	SDC1	False
+major	B	epi_to_TME	LGALS9_CD45	5	4	1	1	1	0	18	24	0		0.038355477770448704	single_dataset_or_discordant_descriptive	LGALS9	PTPRC	LGALS9	PTPRC	False
+major	B	epi_to_TME	LGALS9_CD44	5	4	1	1	1	0	18	24	0		0.0344215075923544	single_dataset_or_discordant_descriptive	LGALS9	CD44	LGALS9	CD44	False
+fine	Plasma	TME_to_epi	COL4A4_SDC1	5	5	1	1	1	0	18	27	0		0.0231823265391904	single_dataset_or_discordant_descriptive	COL4A4	SDC1	COL4A4	SDC1	False
+major	Plasma	TME_to_epi	COL4A4_SDC1	5	5	1	1	1	0	18	27	0		0.0231823265391904	single_dataset_or_discordant_descriptive	COL4A4	SDC1	COL4A4	SDC1	False
+major	B	epi_to_TME	EFNB2_EPHA4	5	4	1	0	1	1	18	24	0	HRA003620	0.0130633510563028	single_dataset_or_discordant_descriptive	EFNB2	EPHA4	EFNB2	EPHA4	False
+major	B	epi_to_TME	LAMB1_CD44	5	4	1	1	1	0	17	24	0		0.024095288148266503	single_dataset_or_discordant_descriptive	LAMB1	CD44	LAMB1	CD44	False
+fine	Plasma	TME_to_epi	BMP6_ACVR1_BMPR2	5	4	1	0	1	1	16	27	0	HRA003620	0.009111254548001574	single_dataset_or_discordant_descriptive	BMP6	ACVR1_BMPR2	BMP6	ACVR1;BMPR2	False
+fine	Plasma	TME_to_epi	COL9A3_SDC4	5	4	0	1	1	-1	15	27	0	HRA003620	0.014433674691951299	single_dataset_or_discordant_descriptive	COL9A3	SDC4	COL9A3	SDC4	False
+major	Plasma	TME_to_epi	COL9A3_SDC4	5	4	0	1	1	-1	15	27	0	HRA003620	0.014433674691951299	single_dataset_or_discordant_descriptive	COL9A3	SDC4	COL9A3	SDC4	False
+major	B	TME_to_epi	COL4A3_ITGA3_ITGB1	5	3	0	1	1	-1	14	24	0	HRA003620	0.01438178872273915	single_dataset_or_discordant_descriptive	COL4A3	ITGA3_ITGB1	COL4A3	ITGA3;ITGB1	False
+fine	Memory B	epi_to_TME	LAMA5_CD44	4	3	1	1	1	0	13	14	0		0.047299945341813796	single_dataset_or_discordant_descriptive	LAMA5	CD44	LAMA5	CD44	False
+fine	Memory B	epi_to_TME	LAMB3_CD44	4	3	1	0	1	1	13	14	0	CNP0000460	0.03573209011630385	single_dataset_or_discordant_descriptive	LAMB3	CD44	LAMB3	CD44	False
+fine	Memory B	TME_to_epi	SEMA4D_PLXNB2	4	4	1	1	1	0	13	14	0		0.0221996061826845	single_dataset_or_discordant_descriptive	SEMA4D	PLXNB2	SEMA4D	PLXNB2	False
+fine	Plasma	TME_to_epi	COL9A3_ITGA2_ITGB1	5	4	1	0	1	1	13	27	0	HRA003620	0.009291872507821299	single_dataset_or_discordant_descriptive	COL9A3	ITGA2_ITGB1	COL9A3	ITGA2;ITGB1	False
+fine	Plasma	TME_to_epi	BMP6_ACVR1_ACVR2A	5	3	1	0	1	1	13	27	0	HRA003620	0.00502274176508495	single_dataset_or_discordant_descriptive	BMP6	ACVR1_ACVR2A	BMP6	ACVR1;ACVR2A	False
+fine	Memory B	TME_to_epi	COL4A3_ITGA2_ITGB1	4	3	1	0	1	1	11	14	0	HRA003620	0.037362629729158874	single_dataset_or_discordant_descriptive	COL4A3	ITGA2_ITGB1	COL4A3	ITGA2;ITGB1	False
+fine	Memory B	TME_to_epi	NAMPT_INSR	4	3	0	1	1	-1	11	14	0	HRA003620	0.0293673668809433	single_dataset_or_discordant_descriptive	NAMPT	INSR	NAMPT	INSR	False
+fine	Memory B	epi_to_TME	LAMB1_CD44	4	3	1	1	1	0	10	14	0		0.03768496422107867	single_dataset_or_discordant_descriptive	LAMB1	CD44	LAMB1	CD44	False
+fine	Memory B	TME_to_epi	COL4A3_ITGA3_ITGB1	4	3	0	1	1	-1	10	14	0	HRA003620	0.029217013334447275	single_dataset_or_discordant_descriptive	COL4A3	ITGA3_ITGB1	COL4A3	ITGA3;ITGB1	False
+fine	IFN-stimulated B	TME_to_epi	CD22_PTPRC	1	1	1	0	1	1	9	9	0	InhouseData	0.0647248864317551	single_dataset_or_discordant_descriptive	CD22	PTPRC	CD22	PTPRC	False
+fine	IFN-stimulated B	epi_to_TME	PTPRC_CD22	1	1	1	0	1	1	9	9	0	InhouseData	0.0647248864317551	single_dataset_or_discordant_descriptive	PTPRC	CD22	PTPRC	CD22	False
+fine	IFN-stimulated B	TME_to_epi	COL4A3_CD44	1	1	1	0	1	1	9	9	0	InhouseData	0.0353408280201808	single_dataset_or_discordant_descriptive	COL4A3	CD44	COL4A3	CD44	False
+fine	IFN-stimulated B	TME_to_epi	SEMA4D_PLXNB2	1	1	1	0	1	1	9	9	0	InhouseData	0.0180643353846195	single_dataset_or_discordant_descriptive	SEMA4D	PLXNB2	SEMA4D	PLXNB2	False
+fine	IFN-stimulated B	TME_to_epi	COL4A4_CD44	1	1	1	0	1	1	8	9	0	InhouseData	0.044290761790836505	single_dataset_or_discordant_descriptive	COL4A4	CD44	COL4A4	CD44	False
+fine	IFN-stimulated B	epi_to_TME	MDK_NCL	1	1	1	0	1	1	8	9	0	InhouseData	0.00011043598224529973	single_dataset_or_discordant_descriptive	MDK	NCL	MDK	NCL	False
+fine	Naive B	epi_to_TME	THBS1_CD47	3	2	1	0	1	1	6	7	0	PRJNA662018	0.019305665052025203	single_dataset_or_discordant_descriptive	THBS1	CD47	THBS1	CD47	False
+fine	Naive B	TME_to_epi	AREG_EGFR_ERBB2	3	2	1	0	1	1	6	7	0	PRJNA662018	0.0087408804158651	single_dataset_or_discordant_descriptive	AREG	EGFR_ERBB2	AREG	EGFR;ERBB2	False
+fine	Naive B	epi_to_TME	COL4A5_CD44	3	2	0	1	1	-1	5	7	0	PRJNA662018	0.0688880842983475	single_dataset_or_discordant_descriptive	COL4A5	CD44	COL4A5	CD44	False
+fine	Naive B	epi_to_TME	MDK_ITGA4_ITGB1	3	2	1	0	1	1	4	7	0	GSE326225	0.08110293386007712	single_dataset_or_discordant_descriptive	MDK	ITGA4_ITGB1	MDK	ITGA4;ITGB1	False
+fine	Plasma	TME_to_epi	AREG_EGFR	5	5	0	0	0	0	21	27	0		0.0060357044871138	single_dataset_or_discordant_descriptive	AREG	EGFR	AREG	EGFR	False
+major	Plasma	TME_to_epi	AREG_EGFR	5	5	0	0	0	0	21	27	0		0.0060357044871138	single_dataset_or_discordant_descriptive	AREG	EGFR	AREG	EGFR	False
+fine	Plasma	TME_to_epi	CADM1_CADM1	5	5	0	0	0	0	20	27	0		0.01473234413505775	single_dataset_or_discordant_descriptive	CADM1	CADM1	CADM1	CADM1	False
+fine	Plasma	epi_to_TME	CADM1_CADM1	5	5	0	0	0	0	20	27	0		0.01473234413505775	single_dataset_or_discordant_descriptive	CADM1	CADM1	CADM1	CADM1	False
+major	Plasma	TME_to_epi	CADM1_CADM1	5	5	0	0	0	0	20	27	0		0.01473234413505775	single_dataset_or_discordant_descriptive	CADM1	CADM1	CADM1	CADM1	False
+major	Plasma	epi_to_TME	CADM1_CADM1	5	5	0	0	0	0	20	27	0		0.01473234413505775	single_dataset_or_discordant_descriptive	CADM1	CADM1	CADM1	CADM1	False
+major	Plasma	TME_to_epi	TGFB1_ACVR1B_TGFBR2	5	5	0	0	0	0	20	27	0		0.002332579269597101	single_dataset_or_discordant_descriptive	TGFB1	ACVR1B_TGFbR2	TGFB1	ACVR1B;TGFBR2	False
+major	B	epi_to_TME	EFNA1_EPHA4	5	4	0	0	0	0	17	24	0		0.0162246945053325	single_dataset_or_discordant_descriptive	EFNA1	EPHA4	EFNA1	EPHA4	False
+major	B	TME_to_epi	COL4A4_ITGA2_ITGB1	5	4	0	0	0	0	16	24	0		0.0252582312641673	single_dataset_or_discordant_descriptive	COL4A4	ITGA2_ITGB1	COL4A4	ITGA2;ITGB1	False
+fine	Plasma	TME_to_epi	BMP6_BMPR1A_ACVR2A	5	4	0	0	0	0	15	27	0		0.01058112533854855	single_dataset_or_discordant_descriptive	BMP6	BMPR1A_ACVR2A	BMP6	BMPR1A;ACVR2A	False
+major	Plasma	TME_to_epi	BMP6_BMPR1A_ACVR2A	5	4	0	0	0	0	15	27	0		0.01058112533854855	single_dataset_or_discordant_descriptive	BMP6	BMPR1A_ACVR2A	BMP6	BMPR1A;ACVR2A	False
+fine	Plasma	TME_to_epi	COL9A3_CD44	5	4	0	0	0	0	15	27	0		0.0094837095617335	single_dataset_or_discordant_descriptive	COL9A3	CD44	COL9A3	CD44	False
+major	Plasma	TME_to_epi	COL9A3_ITGA2_ITGB1	5	4	0	0	0	0	13	27	0		0.009291872507821299	single_dataset_or_discordant_descriptive	COL9A3	ITGA2_ITGB1	COL9A3	ITGA2;ITGB1	False
+fine	Memory B	epi_to_TME	EFNA1_EPHA4	4	4	0	0	0	0	12	14	0		0.03929181021477447	single_dataset_or_discordant_descriptive	EFNA1	EPHA4	EFNA1	EPHA4	False
+fine	Memory B	TME_to_epi	COL4A4_CD44	4	3	0	0	0	0	11	14	0		0.04333933274608475	single_dataset_or_discordant_descriptive	COL4A4	CD44	COL4A4	CD44	False
+fine	Memory B	TME_to_epi	COL4A3_CD44	4	3	0	0	0	0	11	14	0		0.041235569140751174	single_dataset_or_discordant_descriptive	COL4A3	CD44	COL4A3	CD44	False
+fine	Plasma	TME_to_epi	COL1A2_SDC1	5	3	0	0	0	0	11	27	0		0.0191682280187654	single_dataset_or_discordant_descriptive	COL1A2	SDC1	COL1A2	SDC1	False
+major	Plasma	TME_to_epi	COL1A2_SDC1	5	3	0	0	0	0	11	27	0		0.0191682280187654	single_dataset_or_discordant_descriptive	COL1A2	SDC1	COL1A2	SDC1	False
+fine	Plasma	TME_to_epi	CDH1_ITGA1_ITGB1	5	2	0	0	0	0	11	27	0		0.01826578042063415	single_dataset_or_discordant_descriptive	CDH1	ITGA2_ITGB1	CDH1	ITGA2;ITGB1	False
+major	Plasma	TME_to_epi	CDH1_ITGA1_ITGB1	5	2	0	0	0	0	11	27	0		0.01826578042063415	single_dataset_or_discordant_descriptive	CDH1	ITGA2_ITGB1	CDH1	ITGA2;ITGB1	False
+fine	Plasma	TME_to_epi	COL9A3_ITGA3_ITGB1	5	4	0	0	0	0	11	27	0		0.00930138693342675	single_dataset_or_discordant_descriptive	COL9A3	ITGA3_ITGB1	COL9A3	ITGA3;ITGB1	False
+major	Plasma	TME_to_epi	COL9A3_ITGA3_ITGB1	5	4	0	0	0	0	11	27	0		0.00930138693342675	single_dataset_or_discordant_descriptive	COL9A3	ITGA3_ITGB1	COL9A3	ITGA3;ITGB1	False
+fine	Memory B	TME_to_epi	TNF_TNFRSF1A	4	2	0	0	0	0	9	14	0		0.0170355840769961	single_dataset_or_discordant_descriptive	TNF	TNFRSF1A	TNF	TNFRSF1A	False
+fine	IFN-stimulated B	TME_to_epi	COL4A3_ITGAV_ITGB8	1	1	0	0	0	0	8	9	0		0.02955143477607125	single_dataset_or_discordant_descriptive	COL4A3	ITGAV_ITGB8	COL4A3	ITGAV;ITGB8	False
+fine	IFN-stimulated B	epi_to_TME	MDK_ITGA4_ITGB1	1	1	0	0	0	0	8	9	0		0.0006465777733361501	single_dataset_or_discordant_descriptive	MDK	ITGA4_ITGB1	MDK	ITGA4;ITGB1	False
+fine	Plasma	TME_to_epi	COL1A1_CD44	5	2	0	0	0	0	7	27	0		0.09500537895284665	single_dataset_or_discordant_descriptive	COL1A1	CD44	COL1A1	CD44	False
+major	Plasma	TME_to_epi	COL1A1_CD44	5	2	0	0	0	0	7	27	0		0.09500537895284665	single_dataset_or_discordant_descriptive	COL1A1	CD44	COL1A1	CD44	False
+fine	Plasma	TME_to_epi	COL1A1_SDC4	5	2	0	0	0	0	7	27	0		0.078730550190087	single_dataset_or_discordant_descriptive	COL1A1	SDC4	COL1A1	SDC4	False
+major	Plasma	TME_to_epi	COL1A1_SDC4	5	2	0	0	0	0	7	27	0		0.078730550190087	single_dataset_or_discordant_descriptive	COL1A1	SDC4	COL1A1	SDC4	False
+fine	Plasma	TME_to_epi	COL1A1_SDC1	5	2	0	0	0	0	7	27	0		0.0456433211428356	single_dataset_or_discordant_descriptive	COL1A1	SDC1	COL1A1	SDC1	False
+major	Plasma	TME_to_epi	COL1A1_SDC1	5	2	0	0	0	0	7	27	0		0.0456433211428356	single_dataset_or_discordant_descriptive	COL1A1	SDC1	COL1A1	SDC1	False
+fine	IFN-stimulated B	epi_to_TME	LAMA5_CD44	1	1	0	0	0	0	7	9	0		0.0224909836298424	single_dataset_or_discordant_descriptive	LAMA5	CD44	LAMA5	CD44	False
+fine	IFN-stimulated B	epi_to_TME	LAMC1_CD44	1	1	0	0	0	0	7	9	0		0.0091121961436588	single_dataset_or_discordant_descriptive	LAMC1	CD44	LAMC1	CD44	False
+fine	Naive B	epi_to_TME	LAMB3_CD44	3	2	0	0	0	0	6	7	0		0.04497333994530445	single_dataset_or_discordant_descriptive	LAMB3	CD44	LAMB3	CD44	False
+fine	IFN-stimulated B	epi_to_TME	COL4A5_CD44	1	1	0	0	0	0	6	9	0		0.0441816030877988	single_dataset_or_discordant_descriptive	COL4A5	CD44	COL4A5	CD44	False
+fine	Naive B	TME_to_epi	AREG_EGFR	3	2	0	0	0	0	6	7	0		0.0162028835156449	single_dataset_or_discordant_descriptive	AREG	EGFR	AREG	EGFR	False
+fine	IFN-stimulated B	TME_to_epi	CD46_JAG1	1	1	0	0	0	0	6	9	0		0.010201524505276699	single_dataset_or_discordant_descriptive	CD46	JAG1	CD46	JAG1	False
+fine	IFN-stimulated B	epi_to_TME	JAG1_NOTCH2	1	1	0	0	0	0	6	9	0		0.010087493255583	single_dataset_or_discordant_descriptive	JAG1	NOTCH2	JAG1	NOTCH2	False
+fine	IFN-stimulated B	TME_to_epi	COL4A4_SDC1	1	1	0	0	0	0	6	9	0		0.0018986013625332254	single_dataset_or_discordant_descriptive	COL4A4	SDC1	COL4A4	SDC1	False
+fine	Plasma	TME_to_epi	COL1A1_ITGA3_ITGB1	5	2	0	0	0	0	5	27	0		0.0645111778387406	single_dataset_or_discordant_descriptive	COL1A1	ITGA3_ITGB1	COL1A1	ITGA3;ITGB1	False
+major	Plasma	TME_to_epi	COL1A1_ITGA3_ITGB1	5	2	0	0	0	0	5	27	0		0.0645111778387406	single_dataset_or_discordant_descriptive	COL1A1	ITGA3_ITGB1	COL1A1	ITGA3;ITGB1	False
+fine	Naive B	epi_to_TME	GDF15_TGFBR2	3	2	0	0	0	0	5	7	0		0.05746662778857495	single_dataset_or_discordant_descriptive	GDF15	TGFBR2	GDF15	TGFBR2	False
+fine	Naive B	epi_to_TME	LAMB1_CD44	3	2	0	0	0	0	5	7	0		0.05507166545549235	single_dataset_or_discordant_descriptive	LAMB1	CD44	LAMB1	CD44	False
+fine	Plasma	epi_to_TME	LAMA4_CD44	5	1	0	0	0	0	5	27	0		0.0251642878622992	single_dataset_or_discordant_descriptive	LAMA4	CD44	LAMA4	CD44	False
+fine	Plasma	epi_to_TME	LAMA4_ITGA6_ITGB1	5	1	0	0	0	0	5	27	0		0.0178106931695713	single_dataset_or_discordant_descriptive	LAMA4	ITGA6_ITGB1	LAMA4	ITGA6;ITGB1	False
+fine	IFN-stimulated B	TME_to_epi	COL4A3_ITGA3_ITGB1	1	1	0	0	0	0	5	9	0		0.0085556136212685	single_dataset_or_discordant_descriptive	COL4A3	ITGA3_ITGB1	COL4A3	ITGA3;ITGB1	False
+fine	Naive B	TME_to_epi	CD46_JAG1	3	2	0	0	0	0	5	7	0		0.0044463165987717	single_dataset_or_discordant_descriptive	CD46	JAG1	CD46	JAG1	False
+fine	Naive B	TME_to_epi	NAMPT_INSR	3	2	0	0	0	0	4	7	0		0.03775089718832445	single_dataset_or_discordant_descriptive	NAMPT	INSR	NAMPT	INSR	False
+fine	Naive B	epi_to_TME	LGALS9_CD45	3	1	0	0	0	0	4	7	0		0.025311272464436	single_dataset_or_discordant_descriptive	LGALS9	PTPRC	LGALS9	PTPRC	False
+fine	Naive B	epi_to_TME	LGALS9_CD44	3	1	0	0	0	0	4	7	0		0.0248165743134615	single_dataset_or_discordant_descriptive	LGALS9	CD44	LGALS9	CD44	False
+fine	Naive B	TME_to_epi	TGFB1_ACVR1_TGFBR1	3	1	0	0	0	0	4	7	0		0.0066639876563742	single_dataset_or_discordant_descriptive	TGFB1	ACVR1_TGFbR	TGFB1	ACVR1;TGFBR1;TGFBR2	False
+fine	GC B	epi_to_TME	APP_CD74	0	0	0	0	0	0	2	2	0		0.402153057542573	cannot_rank_no_dataset_with_two_patients	APP	CD74	APP	CD74	False
+fine	GC B	epi_to_TME	MIF_CD74_CXCR4	0	0	0	0	0	0	2	2	0		0.3170828394090048	cannot_rank_no_dataset_with_two_patients	MIF	CD74_CXCR4	MIF	CD74;CXCR4	False
+fine	Naive B	TME_to_epi	CD22_PTPRC	3	0	0	0	0	0	2	7	0		0.19633004298002746	single_dataset_or_discordant_descriptive	CD22	PTPRC	CD22	PTPRC	False
+fine	Naive B	epi_to_TME	PTPRC_CD22	3	0	0	0	0	0	2	7	0		0.19633004298002746	single_dataset_or_discordant_descriptive	PTPRC	CD22	PTPRC	CD22	False
+fine	GC B	epi_to_TME	MIF_CD74_CD44	0	0	0	0	0	0	2	2	0		0.1067971607273289	cannot_rank_no_dataset_with_two_patients	MIF	CD74_CD44	MIF	CD74;CD44	False
+fine	GC B	epi_to_TME	MDK_NCL	0	0	0	0	0	0	2	2	0		0.10428095538154569	cannot_rank_no_dataset_with_two_patients	MDK	NCL	MDK	NCL	False
+fine	GC B	epi_to_TME	LGALS9_CD45	0	0	0	0	0	0	2	2	0		0.08368765960460134	cannot_rank_no_dataset_with_two_patients	LGALS9	PTPRC	LGALS9	PTPRC	False
+fine	Naive B	epi_to_TME	SEMA4D_CD72	3	0	0	0	0	0	2	7	0		0.07996375905497745	single_dataset_or_discordant_descriptive	SEMA4D	CD72	SEMA4D	CD72	False
+fine	GC B	TME_to_epi	NAMPT_INSR	0	0	0	0	0	0	2	2	0		0.05606534716733975	cannot_rank_no_dataset_with_two_patients	NAMPT	INSR	NAMPT	INSR	False
+fine	GC B	epi_to_TME	GDF15_TGFBR2	0	0	0	0	0	0	2	2	0		0.0530100134314317	cannot_rank_no_dataset_with_two_patients	GDF15	TGFBR2	GDF15	TGFBR2	False
+fine	GC B	epi_to_TME	THBS1_CD47	0	0	0	0	0	0	2	2	0		0.0418258899132062	cannot_rank_no_dataset_with_two_patients	THBS1	CD47	THBS1	CD47	False
+fine	GC B	epi_to_TME	JAM1_ITGAL_ITGB2	0	0	0	0	0	0	2	2	0		0.039327073084015604	cannot_rank_no_dataset_with_two_patients	F11R	ITGAL_ITGB2	F11R	ITGAL;ITGB2	False
+fine	GC B	TME_to_epi	TNF_TNFRSF1A	0	0	0	0	0	0	2	2	0		0.03551642199378505	cannot_rank_no_dataset_with_two_patients	TNF	TNFRSF1A	TNF	TNFRSF1A	False
+fine	GC B	TME_to_epi	ADGRE5_CD55	0	0	0	0	0	0	2	2	0		0.03286149173378825	cannot_rank_no_dataset_with_two_patients	ADGRE5	CD55	ADGRE5	CD55	False
+fine	GC B	epi_to_TME	SEMA4D_CD72	0	0	0	0	0	0	2	2	0		0.0323069781237713	cannot_rank_no_dataset_with_two_patients	SEMA4D	CD72	SEMA4D	CD72	False
+fine	GC B	TME_to_epi	COL9A3_SDC1	0	0	0	0	0	0	2	2	0		0.03098274079155885	cannot_rank_no_dataset_with_two_patients	COL9A3	SDC1	COL9A3	SDC1	False
+fine	GC B	epi_to_TME	HLA-F_LILRB1	0	0	0	0	0	0	2	2	0		0.03089252021848965	cannot_rank_no_dataset_with_two_patients	HLA-F	LILRB1	HLA-F	LILRB1	False
+fine	GC B	TME_to_epi	MPZL1_MPZL1	0	0	0	0	0	0	2	2	0		0.0276526353920229	cannot_rank_no_dataset_with_two_patients	MPZL1	MPZL1	MPZL1	MPZL1	False
+fine	GC B	epi_to_TME	MPZL1_MPZL1	0	0	0	0	0	0	2	2	0		0.0276526353920229	cannot_rank_no_dataset_with_two_patients	MPZL1	MPZL1	MPZL1	MPZL1	False
+fine	GC B	TME_to_epi	LGALS9_CD44	0	0	0	0	0	0	2	2	0		0.0256494377874933	cannot_rank_no_dataset_with_two_patients	LGALS9	CD44	LGALS9	CD44	False
+fine	GC B	TME_to_epi	SEMA4D_PLXNB2	0	0	0	0	0	0	2	2	0		0.0203893322613252	cannot_rank_no_dataset_with_two_patients	SEMA4D	PLXNB2	SEMA4D	PLXNB2	False
+fine	GC B	TME_to_epi	SEMA4A_PLXNB2	0	0	0	0	0	0	2	2	0		0.01895024112197575	cannot_rank_no_dataset_with_two_patients	SEMA4A	PLXNB2	SEMA4A	PLXNB2	False
+fine	Naive B	TME_to_epi	TNF_TNFRSF1A	3	0	0	0	0	0	2	7	0		0.0181721280179016	single_dataset_or_discordant_descriptive	TNF	TNFRSF1A	TNF	TNFRSF1A	False
+fine	GC B	TME_to_epi	CD46_JAG1	0	0	0	0	0	0	2	2	0		0.01708486014293735	cannot_rank_no_dataset_with_two_patients	CD46	JAG1	CD46	JAG1	False
+fine	GC B	TME_to_epi	COL9A3_SDC4	0	0	0	0	0	0	2	2	0		0.0165823407294334	cannot_rank_no_dataset_with_two_patients	COL9A3	SDC4	COL9A3	SDC4	False
+fine	GC B	TME_to_epi	AREG_EGFR_ERBB2	0	0	0	0	0	0	2	2	0		0.014924950562976949	cannot_rank_no_dataset_with_two_patients	AREG	EGFR_ERBB2	AREG	EGFR;ERBB2	False
+fine	GC B	TME_to_epi	GRN_SORT1	0	0	0	0	0	0	2	2	0		0.01474392126976075	cannot_rank_no_dataset_with_two_patients	GRN	SORT1	GRN	SORT1	False
+fine	Naive B	epi_to_TME	JAG1_NOTCH2	3	0	0	0	0	0	2	7	0		0.0141582027211101	single_dataset_or_discordant_descriptive	JAG1	NOTCH2	JAG1	NOTCH2	False
+fine	GC B	epi_to_TME	TGFB1_TGFBR1_TGFBR2	0	0	0	0	0	0	2	2	0		0.0130581449320031	cannot_rank_no_dataset_with_two_patients	TGFB1	TGFbR1_R2	TGFB1	TGFBR1;TGFBR2	False
+fine	GC B	TME_to_epi	TGFB1_ACVR1_TGFBR1	0	0	0	0	0	0	2	2	0		0.012912096182518951	cannot_rank_no_dataset_with_two_patients	TGFB1	ACVR1_TGFbR	TGFB1	ACVR1;TGFBR1;TGFBR2	False
+fine	GC B	TME_to_epi	COL9A3_CD44	0	0	0	0	0	0	2	2	0		0.01288525627384335	cannot_rank_no_dataset_with_two_patients	COL9A3	CD44	COL9A3	CD44	False
+fine	GC B	TME_to_epi	SEMA4D_PLXNB1	0	0	0	0	0	0	2	2	0		0.01070785822050865	cannot_rank_no_dataset_with_two_patients	SEMA4D	PLXNB1	SEMA4D	PLXNB1	False
+fine	GC B	epi_to_TME	COL4A5_CD44	0	0	0	0	0	0	2	2	0		0.00904659080599865	cannot_rank_no_dataset_with_two_patients	COL4A5	CD44	COL4A5	CD44	False
+fine	GC B	TME_to_epi	SEMA4A_PLXNB1	0	0	0	0	0	0	2	2	0		0.008837625956028699	cannot_rank_no_dataset_with_two_patients	SEMA4A	PLXNB1	SEMA4A	PLXNB1	False
+fine	GC B	epi_to_TME	LAMC2_CD44	0	0	0	0	0	0	2	2	0		0.007585706864082499	cannot_rank_no_dataset_with_two_patients	LAMC2	CD44	LAMC2	CD44	False
+fine	GC B	epi_to_TME	LAMB3_CD44	0	0	0	0	0	0	2	2	0		0.0074249706181405495	cannot_rank_no_dataset_with_two_patients	LAMB3	CD44	LAMB3	CD44	False
+fine	GC B	TME_to_epi	COL9A3_ITGA2_ITGB1	0	0	0	0	0	0	2	2	0		0.00720045872944475	cannot_rank_no_dataset_with_two_patients	COL9A3	ITGA2_ITGB1	COL9A3	ITGA2;ITGB1	False
+fine	GC B	epi_to_TME	LAMC1_CD44	0	0	0	0	0	0	2	2	0		0.0070211314276113004	cannot_rank_no_dataset_with_two_patients	LAMC1	CD44	LAMC1	CD44	False
+fine	GC B	TME_to_epi	COL9A3_ITGA3_ITGB1	0	0	0	0	0	0	2	2	0		0.0057614128075501	cannot_rank_no_dataset_with_two_patients	COL9A3	ITGA3_ITGB1	COL9A3	ITGA3;ITGB1	False
+fine	GC B	TME_to_epi	AREG_EGFR	0	0	0	0	0	0	2	2	0		0.0048306278156311005	cannot_rank_no_dataset_with_two_patients	AREG	EGFR	AREG	EGFR	False
+fine	Naive B	epi_to_TME	LAMA4_CD44	3	0	0	0	0	0	1	7	0		0.0655874770957995	single_dataset_or_discordant_descriptive	LAMA4	CD44	LAMA4	CD44	False
+fine	GC B	epi_to_TME	MDK_ITGA4_ITGB1	0	0	0	0	0	0	1	2	0		0.0494822006019453	cannot_rank_no_dataset_with_two_patients	MDK	ITGA4_ITGB1	MDK	ITGA4;ITGB1	False
+fine	GC B	epi_to_TME	CDH1_KLRG1	0	0	0	0	0	0	1	2	0		0.005286517653416	cannot_rank_no_dataset_with_two_patients	CDH1	KLRG1	CDH1	KLRG1	False
+fine	GC B	TME_to_epi	CD22_PTPRC	0	0	0	0	0	0	0	2	0		NA	cannot_rank_no_dataset_with_two_patients	CD22	PTPRC	CD22	PTPRC	False
+fine	GC B	TME_to_epi	CDH1_CDH1	0	0	0	0	0	0	0	2	0		NA	cannot_rank_no_dataset_with_two_patients	CDH1	CDH1	CDH1	CDH1	False
+fine	GC B	TME_to_epi	CDH1_ITGA1_ITGB1	0	0	0	0	0	0	0	2	0		NA	cannot_rank_no_dataset_with_two_patients	CDH1	ITGA2_ITGB1	CDH1	ITGA2;ITGB1	False
+fine	GC B	TME_to_epi	GDF15_TGFBR2	0	0	0	0	0	0	0	2	0		NA	cannot_rank_no_dataset_with_two_patients	GDF15	TGFBR2	GDF15	TGFBR2	False
+fine	GC B	epi_to_TME	CDH1_CDH1	0	0	0	0	0	0	0	2	0		NA	cannot_rank_no_dataset_with_two_patients	CDH1	CDH1	CDH1	CDH1	False
+fine	GC B	epi_to_TME	LAMA4_CD44	0	0	0	0	0	0	0	2	0		NA	cannot_rank_no_dataset_with_two_patients	LAMA4	CD44	LAMA4	CD44	False
+fine	GC B	epi_to_TME	PTPRC_CD22	0	0	0	0	0	0	0	2	0		NA	cannot_rank_no_dataset_with_two_patients	PTPRC	CD22	PTPRC	CD22	False

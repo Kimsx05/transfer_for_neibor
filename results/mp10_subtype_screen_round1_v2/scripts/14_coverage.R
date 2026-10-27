@@ -1,0 +1,4 @@
+.libPaths(unique(c('/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.5','/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4',.libPaths())))
+suppressPackageStartupMessages({library(data.table);library(qs);library(Matrix)})
+root<-'/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_subtype_screen_round1_v2';tt<-file.path(root,'tables');m<-fread(file.path(tt,'cells_v2.tsv.gz'));x<-qread(file.path(dirname(root),'mp10_subtype_screen_round1/objects/signaling_RNA_data.qs'));rows<-list()
+for(ds in unique(m$dataset)){bc<-m[dataset==ds,barcode];xx<-x[,bc];n<-Matrix::rowSums(xx>0);rows[[ds]]<-data.table(dataset=ds,gene=rownames(x),feature_present_in_frozen_RNA=TRUE,n_cells_nonzero=n,observed_in_dataset=n>0,dataset_original_feature_manifest='not_available; observed positive establishes measurement, all-zero does not establish absence')};fwrite(rbindlist(rows),file.path(tt,'signaling_gene_dataset_coverage.tsv'),sep='\t')

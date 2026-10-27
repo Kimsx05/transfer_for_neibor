@@ -1,0 +1,11 @@
+network_level	TME_type	direction	LR_id	n_datasets_evaluable	n_datasets_expression_supported	n_concordant_positive_datasets	n_concordant_negative_datasets	n_datasets_same_direction	consensus_direction	n_supported_patients	n_patients_total	n_direction_stable_datasets	support_datasets	median_abs_paired_difference	evidence_tier	ligand	receptor	ligand_genes	receptor_genes	MP10_gene_overlap	axis_id
+major	B	epi_to_TME	APP_CD74	5	5	4	1	4	1	24	24	4	CNP0000460;GSE326225;InhouseData;PRJNA662018	0.328156489406119	multi_dataset_coverage_descriptive	APP	CD74	APP	CD74	False	AX01
+major	B	TME_to_epi	ADGRE5_CD55	5	5	3	0	3	1	23	24	3	CNP0000460;HRA003620;InhouseData	0.0713114068486714	multi_dataset_coverage_descriptive	ADGRE5	CD55	ADGRE5	CD55	False	AX02
+major	Plasma	epi_to_TME	APP_CD74	5	5	4	1	4	1	26	27	3	CNP0000460;GSE326225;InhouseData;PRJNA662018	0.0834158177402046	multi_dataset_coverage_descriptive	APP	CD74	APP	CD74	False	AX03
+major	Plasma	TME_to_epi	CD46_JAG1	5	5	2	1	2	1	23	27	2	CNP0000460;PRJNA662018	0.0062230438251393	multi_dataset_coverage_descriptive	CD46	JAG1	CD46	JAG1	False	AX04
+fine	Memory B	epi_to_TME	APP_CD74	4	4	3	1	3	1	14	14	3	CNP0000460;GSE326225;PRJNA662018	0.3043443346372392	multi_dataset_coverage_descriptive	APP	CD74	APP	CD74	False	AX05
+fine	Memory B	TME_to_epi	ADGRE5_CD55	4	4	2	0	2	1	14	14	2	CNP0000460;HRA003620	0.060600646535416	multi_dataset_coverage_descriptive	ADGRE5	CD55	ADGRE5	CD55	False	AX06
+fine	Naive B	epi_to_TME	APP_CD74	3	3	3	0	3	1	7	7	3	CNP0000460;GSE326225;PRJNA662018	0.3238784844424432	multi_dataset_coverage_descriptive	APP	CD74	APP	CD74	False	AX07
+fine	Naive B	TME_to_epi	ADGRE5_CD55	3	3	1	0	1	1	7	7	1	CNP0000460	0.051939839146097	single_dataset_or_discordant_descriptive	ADGRE5	CD55	ADGRE5	CD55	False	AX08
+fine	IFN-stimulated B	epi_to_TME	APP_CD74	1	1	1	0	1	1	9	9	1	InhouseData	0.368525718765199	single_dataset_or_discordant_descriptive	APP	CD74	APP	CD74	False	AX09
+fine	IFN-stimulated B	TME_to_epi	COL4A3_SDC4	1	1	1	0	1	1	9	9	1	InhouseData	0.0245536189090846	single_dataset_or_discordant_descriptive	COL4A3	SDC4	COL4A3	SDC4	False	AX10

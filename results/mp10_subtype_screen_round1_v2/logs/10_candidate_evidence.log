@@ -1,0 +1,13 @@
+/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_subtype_screen_round1_v2/scripts/10_candidate_evidence.py:13: RuntimeWarning: All-NaN slice encountered
+  rows.append(dict(zip(keys,kk))|dict(n_datasets_evaluable=int(z.n_patients.ge(2).sum()),n_datasets_expression_supported=int(z.n_supported_patients.ge(2).sum()),n_concordant_positive_datasets=len(pos),n_concordant_negative_datasets=len(neg),n_datasets_same_direction=max(len(pos),len(neg)),consensus_direction=direction,n_supported_patients=int(z.n_supported_patients.sum()),n_patients_total=int(z.n_patients.sum()),n_direction_stable_datasets=int(best.leave_one_patient_direction_stable.sum()),support_datasets=';'.join(best.dataset),median_abs_paired_difference=float(np.nanmedian(abs(z.supported_median_delta))),evidence_tier='cannot_rank_no_dataset_with_two_patients' if not z.n_patients.ge(2).any() else 'multi_dataset_coverage_descriptive' if max(len(pos),len(neg))>=2 else 'single_dataset_or_discordant_descriptive'))
+axis_id network_level         TME_type  direction       LR_id  n_datasets_same_direction  n_supported_patients                             support_datasets
+   AX01         major                B epi_to_TME    APP_CD74                          4                    24 CNP0000460;GSE326225;InhouseData;PRJNA662018
+   AX02         major                B TME_to_epi ADGRE5_CD55                          3                    23             CNP0000460;HRA003620;InhouseData
+   AX03         major           Plasma epi_to_TME    APP_CD74                          4                    26 CNP0000460;GSE326225;InhouseData;PRJNA662018
+   AX04         major           Plasma TME_to_epi   CD46_JAG1                          2                    23                       CNP0000460;PRJNA662018
+   AX05          fine         Memory B epi_to_TME    APP_CD74                          3                    14             CNP0000460;GSE326225;PRJNA662018
+   AX06          fine         Memory B TME_to_epi ADGRE5_CD55                          2                    14                         CNP0000460;HRA003620
+   AX07          fine          Naive B epi_to_TME    APP_CD74                          3                     7             CNP0000460;GSE326225;PRJNA662018
+   AX08          fine          Naive B TME_to_epi ADGRE5_CD55                          1                     7                                   CNP0000460
+   AX09          fine IFN-stimulated B epi_to_TME    APP_CD74                          1                     9                                  InhouseData
+   AX10          fine IFN-stimulated B TME_to_epi COL4A3_SDC4                          1                     9                                  InhouseData
