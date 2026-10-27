@@ -1,0 +1,36 @@
+/home/data/t070721/codex_workspace/Bladder Metabolism/cell2location_setup_v1/cell2location_env/lib/python3.12/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_spatial_communication_v1/scripts/commot_run.py:12: DeprecationWarning: The default value for `spmatrix` is changing to `False` in v1.20.
+             That means the default return type will be a sparse array.
+             Unless you use * instead of @, ** for matrix power, or you depend
+             on 2D shapes from e.g. `A.sum(axis=0)` it may not matter to you.
+             See the spmatrix to sparray migration guide for details.
+             https://docs.scipy.org/doc/scipy/reference/sparse.migration_to_sparray.html
+             
+  counts=sparse.csr_matrix(io.mmread(inp/'counts.mtx.gz').T,dtype=float);assert counts.shape==(len(meta),len(genes));assert counts.data.min()>=0
+START {'method': 'COMMOT', 'version': '0.0.3', 'commit': 'd117445bc07eaa19109c7609e97d9e35b26e99ca', 'section': 'Inhousedata_T4469479', 'variant': 'primary2dNN', 'n_spots': 3917, 'n_measured_genes': 18061, 'n_lr': 1212, 'database': 'bundled CellChatDB human', 'categories': ['Secreted Signaling', 'ECM-Receptor', 'Cell-Cell Contact'], 'dNN_um': 100.0, 'numeric_boundary_tolerance_um': 1e-06, 'ranges_um': {'Secreted Signaling': 200.000001, 'ECM-Receptor': 200.000001, 'Cell-Cell Contact': 105.000001}, 'normalization': 'log1p(counts / spot library * 10000)', 'heteromeric': True, 'heteromeric_rule': 'min', 'min_subunit_spot_detection': 0.05, 'cot_nitermax': 10000, 'cot_eps_p': 0.1, 'cot_rho': 10, 'cot_weights': [0.25, 0.25, 0.25, 0.25], 'smooth': False, 'group_permutation': False, 'position_diagonal': 'retained during native inference; removed only for primary aggregation', 'primary_metric': 'abundance_weighted_mean_cross_spot_strength', 'solver_convergence_status': 'official API does not expose stopping diagnostics; finite/nonnegative output checked'}
+COT_STAGE_START cot_sparse
+Command terminated by signal 15
+	Command being timed: "/usr/bin/python3 mp10_spatial_communication_v1/scripts/commot_run.py Inhousedata_T4469479"
+	User time (seconds): 319.41
+	System time (seconds): 82.73
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 6:40.06
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2116960
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 6328445
+	Voluntary context switches: 1872
+	Involuntary context switches: 1529
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 512
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

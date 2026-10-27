@@ -1,0 +1,35 @@
+Package: MERINGUE
+Title: Characterizing spatial gene expression heterogeneity in spatially resolved single-cell transcriptomics data with non-uniform cellular densities
+Version: 1.0
+Authors@R: person("Jean", "Fan", 
+	email = "jeanfan@jhu.edu", role = c("aut", "cre"),
+	comment = c(ORCID = "0000-0002-0212-5451"))
+Description: MERINGUE is a computational framework based on spatial auto-correlation and cross-correlation analysis to identify genes with spatially heterogeneous expression patterns, derive putative cell-cell communication, and perform spatially informed cell clustering in 2D and 3D in a density-agnostic manner using spatially resolved transcriptomics data. 
+Depends: R (>= 3.0.0)
+License: GPL-3 + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports:
+    RANN,
+    Matrix,
+    akima,
+    Rcpp,
+    dynamicTreeCut,
+    geometry,
+    DT,
+    igraph,
+    mgcv,
+    clue
+LinkingTo: Rcpp, RcppArmadillo, RcppProgress
+RoxygenNote: 7.1.1
+Suggests: 
+    knitr,
+    markdown,
+    rmarkdown,
+    testthat,
+    rcmdcheck,
+    shiny,
+    Rtsne,
+    uwot,
+    rgl
+VignetteBuilder: knitr

@@ -1,0 +1,21 @@
+section_id	parameter	value	unit	source
+GSE171351_A1	nominal_spot_diameter	55.0	um	standard Visium manufacturer platform specification; not inferred from invalid spot scale_factor
+GSE171351_A1	nominal_center_pitch	100.0	um	actual recovered ordinary Visium lattice + manufacturer platform specification
+GSE171351_A1	secreted_range	200.0	um	predeclared 2 x measured d_NN
+GSE171351_A1	contact_range	105.0	um	predeclared nearest-neighbor d_NN + 5% tolerance; does not prove membrane contact
+GSE171351_A1	ecm_range	200.0	um	predeclared 2 x d_NN; SpatialCellChat native ECM shares interaction.range with secreted; fixed before first inference results
+GSE171351_A1	first_section_secreted_sensitivity	300.0	um	3 x d_NN, first selected section only; SpatialCellChat changes ECM and secreted together by native API; COMMOT changes secreted only
+GSE171351_A1	expression_normalization_target	10000.0	counts per spot	full measured gene library normalization once; log1p
+GSE171351_A1	epi_anchor_threshold	0.25	fraction	frozen accepted c2l mean epithelial / total mean
+GSE171351_A1	MP10_HL_threshold	0.03444344434443444	frozen AUCell	new per-section anchors-only strict median; no overwritten original score
+GSE171351_A1	spot_weight_threshold	0.0	Q	none: all positive posterior means preserved; no 0.1 cutoff
+Inhousedata_T4469479	nominal_spot_diameter	55.0	um	standard Visium manufacturer platform specification; not inferred from invalid spot scale_factor
+Inhousedata_T4469479	nominal_center_pitch	100.0	um	actual recovered ordinary Visium lattice + manufacturer platform specification
+Inhousedata_T4469479	secreted_range	200.0	um	predeclared 2 x measured d_NN
+Inhousedata_T4469479	contact_range	105.0	um	predeclared nearest-neighbor d_NN + 5% tolerance; does not prove membrane contact
+Inhousedata_T4469479	ecm_range	200.0	um	predeclared 2 x d_NN; SpatialCellChat native ECM shares interaction.range with secreted; fixed before first inference results
+Inhousedata_T4469479	first_section_secreted_sensitivity	300.0	um	3 x d_NN, first selected section only; SpatialCellChat changes ECM and secreted together by native API; COMMOT changes secreted only
+Inhousedata_T4469479	expression_normalization_target	10000.0	counts per spot	full measured gene library normalization once; log1p
+Inhousedata_T4469479	epi_anchor_threshold	0.25	fraction	frozen accepted c2l mean epithelial / total mean
+Inhousedata_T4469479	MP10_HL_threshold	0.07418858421936206	frozen AUCell	new per-section anchors-only strict median; no overwritten original score
+Inhousedata_T4469479	spot_weight_threshold	0.0	Q	none: all positive posterior means preserved; no 0.1 cutoff

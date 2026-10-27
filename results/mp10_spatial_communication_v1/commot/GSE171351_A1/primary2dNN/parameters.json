@@ -1,0 +1,41 @@
+{
+  "method": "COMMOT",
+  "version": "0.0.3",
+  "commit": "d117445bc07eaa19109c7609e97d9e35b26e99ca",
+  "section": "GSE171351_A1",
+  "variant": "primary2dNN",
+  "n_spots": 768,
+  "n_measured_genes": 33538,
+  "n_lr": 675,
+  "database": "bundled CellChatDB human",
+  "categories": [
+    "Secreted Signaling",
+    "ECM-Receptor",
+    "Cell-Cell Contact"
+  ],
+  "dNN_um": 100.0,
+  "numeric_boundary_tolerance_um": 1e-06,
+  "ranges_um": {
+    "Secreted Signaling": 200.000001,
+    "ECM-Receptor": 200.000001,
+    "Cell-Cell Contact": 105.000001
+  },
+  "normalization": "log1p(counts / spot library * 10000)",
+  "heteromeric": true,
+  "heteromeric_rule": "min",
+  "min_subunit_spot_detection": 0.05,
+  "cot_nitermax": 10000,
+  "cot_eps_p": 0.1,
+  "cot_rho": 10,
+  "cot_weights": [
+    0.25,
+    0.25,
+    0.25,
+    0.25
+  ],
+  "smooth": false,
+  "group_permutation": false,
+  "position_diagonal": "retained during native inference; removed only for primary aggregation",
+  "primary_metric": "abundance_weighted_mean_cross_spot_strength",
+  "solver_convergence_status": "official API does not expose stopping diagnostics; finite/nonnegative output checked"
+}

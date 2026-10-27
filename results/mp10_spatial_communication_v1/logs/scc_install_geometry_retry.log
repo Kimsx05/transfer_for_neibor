@@ -1,0 +1,95 @@
+also installing the dependency ‘magic’
+
+trying URL 'https://cran.rstudio.com/src/contrib/magic_1.6-1-1.tar.gz'
+trying URL 'https://cran.rstudio.com/src/contrib/linprog_0.9-6.tar.gz'
+trying URL 'https://cran.rstudio.com/src/contrib/geometry_0.5.2.tar.gz'
+begin installing package ‘magic’
+begin installing package ‘linprog’
+* installing *source* package ‘linprog’ ...
+** this is package ‘linprog’ version ‘0.9-6’
+** package ‘linprog’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (linprog)
+* installing *source* package ‘magic’ ...
+** this is package ‘magic’ version ‘1.6-1-1’
+** package ‘magic’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (magic)
+begin installing package ‘geometry’
+make: *** [Makefile:14: geometry.ts] Error 1
+make: Target 'all' not remade because of errors.
+* installing *source* package ‘geometry’ ...
+** this is package ‘geometry’ version ‘0.5.2’
+** package ‘geometry’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0’
+using C++ compiler: ‘g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0’
+make[1]: Entering directory '/home/data/t070721/tmpdir/RtmpSUKVqQ/R.INSTALL1db28a4b587870/geometry/src'
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/refdir/Rlib/RcppProgress/include' -I/usr/local/include    -fpic  -g -O2   -c QuadTree.cpp -o QuadTree.o
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/refdir/Rlib/RcppProgress/include' -I/usr/local/include   -include Rgeometry.h -fpic  -g -O2  -c Rconvhulln.c -o Rconvhulln.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/refdir/Rlib/RcppProgress/include' -I/usr/local/include    -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/refdir/Rlib/RcppProgress/include' -I/usr/local/include   -include Rgeometry.h -fpic  -g -O2  -c Rdelaunayn.c -o Rdelaunayn.o
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/refdir/Rlib/RcppProgress/include' -I/usr/local/include   -include Rgeometry.h -fpic  -g -O2  -c Rgeometry.c -o Rgeometry.o
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/refdir/Rlib/RcppProgress/include' -I/usr/local/include   -include Rgeometry.h -fpic  -g -O2  -c Rhalfspacen.c -o Rhalfspacen.o
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/refdir/Rlib/RcppProgress/include' -I/usr/local/include   -include Rgeometry.h -fpic  -g -O2  -c Rinhulln.c -o Rinhulln.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/refdir/Rlib/RcppProgress/include' -I/usr/local/include    -fpic  -g -O2   -c Rtsearch.cpp -o Rtsearch.o
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/refdir/Rlib/RcppProgress/include' -I/usr/local/include   -include Rgeometry.h -fpic  -g -O2  -c Rtsearch_orig.c -o Rtsearch_orig.o
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/refdir/Rlib/RcppProgress/include' -I/usr/local/include   -include Rgeometry.h -fpic  -g -O2  -c Rtsearchn.c -o Rtsearchn.o
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/refdir/Rlib/RcppProgress/include' -I/usr/local/include   -include Rgeometry.h -fpic  -g -O2  -c geom2_r.c -o geom2_r.o
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/refdir/Rlib/RcppProgress/include' -I/usr/local/include   -include Rgeometry.h -fpic  -g -O2  -c geom_r.c -o geom_r.o
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/refdir/Rlib/RcppProgress/include' -I/usr/local/include   -include Rgeometry.h -fpic  -g -O2  -c geometry_init.c -o geometry_init.o
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/refdir/Rlib/RcppProgress/include' -I/usr/local/include   -include Rgeometry.h -fpic  -g -O2  -c global_r.c -o global_r.o
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/refdir/Rlib/RcppProgress/include' -I/usr/local/include   -include Rgeometry.h -fpic  -g -O2  -c io_r.c -o io_r.o
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/refdir/Rlib/RcppProgress/include' -I/usr/local/include   -include Rgeometry.h -fpic  -g -O2  -c libqhull_r.c -o libqhull_r.o
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/refdir/Rlib/RcppProgress/include' -I/usr/local/include   -include Rgeometry.h -fpic  -g -O2  -c mem_r.c -o mem_r.o
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/refdir/Rlib/RcppProgress/include' -I/usr/local/include   -include Rgeometry.h -fpic  -g -O2  -c merge_r.c -o merge_r.o
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/refdir/Rlib/RcppProgress/include' -I/usr/local/include   -include Rgeometry.h -fpic  -g -O2  -c poly2_r.c -o poly2_r.o
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/refdir/Rlib/RcppProgress/include' -I/usr/local/include   -include Rgeometry.h -fpic  -g -O2  -c poly_r.c -o poly_r.o
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/refdir/Rlib/RcppProgress/include' -I/usr/local/include   -include Rgeometry.h -fpic  -g -O2  -c qset_r.c -o qset_r.o
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/refdir/Rlib/RcppProgress/include' -I/usr/local/include   -include Rgeometry.h -fpic  -g -O2  -c random_r.c -o random_r.o
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/refdir/Rlib/RcppProgress/include' -I/usr/local/include   -include Rgeometry.h -fpic  -g -O2  -c rboxlib_r.c -o rboxlib_r.o
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/refdir/Rlib/RcppProgress/include' -I/usr/local/include   -include Rgeometry.h -fpic  -g -O2  -c stat_r.c -o stat_r.o
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/refdir/Rlib/RcppProgress/include' -I/usr/local/include   -include Rgeometry.h -fpic  -g -O2  -c user_r.c -o user_r.o
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/refdir/Rlib/RcppProgress/include' -I/usr/local/include   -include Rgeometry.h -fpic  -g -O2  -c usermem_r.c -o usermem_r.o
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/refdir/Rlib/RcppProgress/include' -I/usr/local/include   -include Rgeometry.h -fpic  -g -O2  -c userprintf_r.c -o userprintf_r.o
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I'/refdir/Rlib/RcppProgress/include' -I/usr/local/include   -include Rgeometry.h -fpic  -g -O2  -c userprintf_rbox_r.c -o userprintf_rbox_r.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o geometry.so QuadTree.o Rconvhulln.o RcppExports.o Rdelaunayn.o Rgeometry.o Rhalfspacen.o Rinhulln.o Rtsearch.o Rtsearch_orig.o Rtsearchn.o geom2_r.o geom_r.o geometry_init.o global_r.o io_r.o libqhull_r.o mem_r.o merge_r.o poly2_r.o poly_r.o qset_r.o random_r.o rboxlib_r.o stat_r.o user_r.o usermem_r.o userprintf_r.o userprintf_rbox_r.o -L/usr/local/lib/R/lib -lR
+make[1]: Leaving directory '/home/data/t070721/tmpdir/RtmpSUKVqQ/R.INSTALL1db28a4b587870/geometry/src'
+installing to /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_spatial_communication_v1/Rlib/00LOCK-geometry/00new/geometry/libs
+** R
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+Error in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]) : 
+  there is no package called ‘magic’
+Calls: <Anonymous> ... loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
+Execution halted
+ERROR: lazy loading failed for package ‘geometry’
+* removing ‘/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_spatial_communication_v1/Rlib/geometry’
+
+The downloaded source packages are in
+	‘/home/data/t070721/tmpdir/Rtmp9MmEZN/downloaded_packages’
+Warning message:
+In install.packages(c("linprog", "geometry"), lib = "mp10_spatial_communication_v1/Rlib",  :
+  installation of package ‘geometry’ failed

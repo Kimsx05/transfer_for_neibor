@@ -1,0 +1,4 @@
+section	run	wall_seconds	user_seconds	system_seconds	max_process_rss_kib	future_workers	BLAS_OMP_threads	logs	resource_note
+GSE171351_A1	main	412.34999999999997	1176.44	30.61	949144.0	4	1	mp10_spatial_communication_v1/logs/scc_GSE171351_A1_main.log;mp10_spatial_communication_v1/logs/scc_GSE171351_A1_aggregation.log	max GNU-time process RSS; shared worker RSS must not be naively summed
+GSE171351_A1	range3dNN	335.3	1210.72	30.4	1110780.0	6	1	mp10_spatial_communication_v1/logs/scc_GSE171351_A1_range3dNN_parallel.log	max GNU-time process RSS; shared worker RSS must not be naively summed
+Inhousedata_T4469479	main	1554.36	3686.9	552.18	2057668.0	8	1	mp10_spatial_communication_v1/logs/scc_Inhousedata_T4469479_main.log	max GNU-time process RSS; shared worker RSS must not be naively summed

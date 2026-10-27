@@ -1,0 +1,25 @@
+also installing the dependencies ‘magic’, ‘linprog’
+
+trying URL 'https://cloud.r-project.org/src/contrib/magic_1.6-1-1.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/linprog_0.9-6.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/geometry_0.5.2.tar.gz'
+Warning in download.packages(pkgs, destdir = tmpd, available = available,  :
+  download of package ‘magic’ failed
+Warning in download.packages(pkgs, destdir = tmpd, available = available,  :
+  download of package ‘linprog’ failed
+ERROR: dependencies ‘magic’, ‘linprog’ are not available for package ‘geometry’
+Perhaps try a variation of:
+install.packages(c('magic', 'linprog'))
+* removing ‘/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_spatial_communication_v1/Rlib/geometry’
+
+The downloaded source packages are in
+	‘/home/data/t070721/tmpdir/RtmplWwiMK/downloaded_packages’
+Warning messages:
+1: In download.file(urls, destfiles, "libcurl", mode = "wb", ...) :
+  URL 'https://cloud.r-project.org/src/contrib/magic_1.6-1-1.tar.gz': status was 'SSL connect error'
+2: In download.file(urls, destfiles, "libcurl", mode = "wb", ...) :
+  URL 'https://cloud.r-project.org/src/contrib/linprog_0.9-6.tar.gz': status was 'SSL connect error'
+3: In download.file(urls, destfiles, "libcurl", mode = "wb", ...) :
+  some files were not downloaded
+4: In install.packages("geometry", lib = "mp10_spatial_communication_v1/Rlib",  :
+  installation of package ‘geometry’ had non-zero exit status

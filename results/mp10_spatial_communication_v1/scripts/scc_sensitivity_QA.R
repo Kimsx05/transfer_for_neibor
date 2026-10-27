@@ -1,0 +1,10 @@
+REQUESTED_R_LIBS<-c('/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.5','/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4')
+.libPaths(unique(c('mp10_spatial_communication_v1/Rlib',REQUESTED_R_LIBS,.libPaths())))
+suppressPackageStartupMessages({library(data.table);library(Matrix)})
+B<-'mp10_spatial_communication_v1/spatialcellchat/GSE171351_A1'
+a<-readRDS(file.path(B,'main/position_network_native.rds'));b<-readRDS(file.path(B,'range3dNN/position_network_native.rds'))
+stopifnot(identical(a$spot_id,b$spot_id),identical(names(a$prob_cell),names(b$prob_cell)))
+z<-rbindlist(lapply(names(a$prob_cell),function(lr){x<-a$prob_cell[[lr]];y<-b$prob_cell[[lr]];diag(x)<-0;diag(y)<-0;x<-drop0(x);y<-drop0(y);d<-drop0(x-y);data.table(interaction=lr,category=a$LR[lr,'annotation'],nlinks_2dNN=length(x@x),nlinks_3dNN=length(y@x),flow_2dNN=sum(x),flow_3dNN=sum(y),max_abs_probability_change=if(length(d@x))max(abs(d@x)) else 0)}))
+stopifnot(all(z[category=='Cell-Cell Contact',max_abs_probability_change]==0))
+fwrite(z,file.path(B,'position_LR_sensitivity.tsv'),sep='\t')
+fwrite(data.table(check=c('LR_names_order_equal','spot_order_equal','contact_position_matrices_unchanged'),status='PASS'),file.path(B,'sensitivity_checks.tsv'),sep='\t')

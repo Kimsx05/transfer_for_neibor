@@ -1,0 +1,49 @@
+{
+  "method": "COMMOT",
+  "version": "0.0.3",
+  "commit": "d117445bc07eaa19109c7609e97d9e35b26e99ca",
+  "section": "Inhousedata_T4469479",
+  "variant": "primary2dNN",
+  "n_spots": 3917,
+  "n_measured_genes": 18061,
+  "n_lr": 1212,
+  "database": "bundled CellChatDB human",
+  "categories": [
+    "Secreted Signaling",
+    "ECM-Receptor",
+    "Cell-Cell Contact"
+  ],
+  "dNN_um": 100.0,
+  "numeric_boundary_tolerance_um": 1e-06,
+  "ranges_um": {
+    "Secreted Signaling": 200.000001,
+    "ECM-Receptor": 200.000001,
+    "Cell-Cell Contact": 105.000001
+  },
+  "normalization": "log1p(counts / spot library * 10000)",
+  "heteromeric": true,
+  "heteromeric_rule": "min",
+  "min_subunit_spot_detection": 0.05,
+  "cot_nitermax": 10000,
+  "cot_eps_p": 0.1,
+  "cot_rho": 10,
+  "cot_weights": [
+    0.25,
+    0.25,
+    0.25,
+    0.25
+  ],
+  "component_scheduling": "4 complete native components in parallel; identical full LR inputs; original weighted sum order",
+  "n_component_workers": 4,
+  "smooth": false,
+  "group_permutation": false,
+  "position_diagonal": "retained during native inference; removed only for primary aggregation",
+  "primary_metric": "abundance_weighted_mean_cross_spot_strength",
+  "solver_convergence_status": "official API does not expose stopping diagnostics; finite/nonnegative output checked",
+  "elapsed_seconds": 2729.8828353881836,
+  "peak_rss_GiB": 1.9588890075683594,
+  "total_flow_including_same_spot": 251399.06460389824,
+  "same_spot_flow": 155784.18166871095,
+  "cross_spot_flow": 95614.88293518731,
+  "status": "complete"
+}

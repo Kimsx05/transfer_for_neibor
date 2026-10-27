@@ -1,0 +1,62 @@
+'as(<dgTMatrix>, "dgCMatrix")' is deprecated.
+Use 'as(., "CsparseMatrix")' instead.
+See help("Deprecated") and help("Matrix-deprecated").
+ℹ Create a SpatialCellChat object from a data matrixCreate a SpatialCellChat object from spatial imaging data... 
+Set cell identities for the new SpatialCellChat object 
+The cell groups used for SpatialCellChat analysis are  whole_slice 
+           used (Mb) gc trigger  (Mb)  max used  (Mb)
+Ncells  6121447  327   10692895 571.1   8488942 453.4
+Vcells 36428672  278  102294712 780.5 127367416 971.8
+>>>  Choose spatially variable features using 'MERINGUE' method... 
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+>>>  The number of highly variable features is 580 
+ℹ Future strategy in use: `parallel with 8 workers`
+>>>  The number of highly variable ligand-receptor pairs used for signaling inference is 1829 
+>>>  Analyzing spatial transcriptomic data and preferring to infer interactions between individual cells...
+>>>  Apply a predefined spatial distance threshold based on the interaction length(=200um)...
+>>> Contact range is set as 105um, to restrict the contact-dependent signaling.
+>>> Run CellChat on spatial transcriptomic data using distances as constraints <<< [2026-10-27 19:29:33.893034]
+>>>  The input L-R pairs have both secreted signaling and contact-dependent signaling. Run CellChat in a contact-dependent manner for `Cell-Cell Contact` signaling, and in a diffusion manner based on the `interaction.range` for other L-R pairs. 
+ℹ Future strategy in use: `parallel with 8 workers`
+>>>  The number of cells and L-R pairs in Dim(Prob.cell): 3917 3917 1829 
+✔ CellChat inference is done. Parameter values are stored in `object@options$parameter` <<< [2026-10-27 19:38:18.236927]
+>>> Filter out non-significant communication with a probability quantile being 0.95 for each L-R pair... 
+ℹ Future strategy in use: `parallel with 8 workers`
+✔ Filtering is done.
+Filter individual cell-level communication...
+
+>>>  Filter communication according to min.links...
+The cell-cell communication related with # 17 L-R pairs are excluded due to the few number of interactions. 
+  |                                                                                        |                                                                                |   0%  |                                                                                        |=====                                                                           |   6%  |                                                                                        |=========                                                                       |  12%  |                                                                                        |==============                                                                  |  18%  |                                                                                        |===================                                                             |  24%  |                                                                                        |========================                                                        |  29%  |                                                                                        |============================                                                    |  35%  |                                                                                        |=================================                                               |  41%  |                                                                                        |======================================                                          |  47%  |                                                                                        |==========================================                                      |  53%  |                                                                                        |===============================================                                 |  59%  |                                                                                        |====================================================                            |  65%  |                                                                                        |========================================================                        |  71%  |                                                                                        |=============================================================                   |  76%  |                                                                                        |==================================================================              |  82%  |                                                                                        |=======================================================================         |  88%  |                                                                                        |===========================================================================     |  94%  |                                                                                        |================================================================================| 100%
+>>>  Filter communication according to min.cell.sr... 
+The cell-cell communication related with # 10 L-R pairs are excluded due to the few number of sending/receiving cells. 
+  |                                                                                        |                                                                                |   0%  |                                                                                        |========                                                                        |  10%  |                                                                                        |================                                                                |  20%  |                                                                                        |========================                                                        |  30%  |                                                                                        |================================                                                |  40%  |                                                                                        |========================================                                        |  50%  |                                                                                        |================================================                                |  60%  |                                                                                        |========================================================                        |  70%  |                                                                                        |================================================================                |  80%  |                                                                                        |========================================================================        |  90%  |                                                                                        |================================================================================| 100%
+✔Filtering cell-cell communication is done.<<< [2026-10-27 19:40:32.349894]
+           used  (Mb) gc trigger  (Mb)  max used  (Mb)
+Ncells  6314667 337.3   10692895 571.1  10692895 571.1
+Vcells 20534878 156.7   98266924 749.8 127367416 971.8
+	Command being timed: "/usr/local/bin/Rscript mp10_spatial_communication_v1/scripts/scc_run.R Inhousedata_T4469479 2"
+	User time (seconds): 3686.90
+	System time (seconds): 552.18
+	Percent of CPU this job got: 272%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 25:54.36
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2057668
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 188741388
+	Voluntary context switches: 165967
+	Involuntary context switches: 8065
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 182936
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -1,0 +1,22 @@
+'as(<dgTMatrix>, "dgCMatrix")' is deprecated.
+Use 'as(., "CsparseMatrix")' instead.
+See help("Deprecated") and help("Matrix-deprecated").
+ℹ Create a SpatialCellChat object from a data matrixCreate a SpatialCellChat object from spatial imaging data... 
+Set cell identities for the new SpatialCellChat object 
+The cell groups used for SpatialCellChat analysis are  whole_slice 
+           used  (Mb) gc trigger  (Mb) max used  (Mb)
+Ncells  6129027 327.4   10692895 571.1  8488942 453.4
+Vcells 16052361 122.5   37804823 288.5 37187123 283.8
+>>>  Choose spatially variable features using 'MERINGUE' method... 
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+>>>  The number of highly variable features is 226 
+ℹ Future strategy in use: `parallel with 4 workers`
+>>>  The number of highly variable ligand-receptor pairs used for signaling inference is 1037 
+>>>  Analyzing spatial transcriptomic data and preferring to infer interactions between individual cells...
+>>>  Apply a predefined spatial distance threshold based on the interaction length(=200um)...
+>>> Contact range is set as 105um, to restrict the contact-dependent signaling.
+>>> Run CellChat on spatial transcriptomic data using distances as constraints <<< [2026-10-27 19:08:26.102706]
+>>>  The input L-R pairs have both secreted signaling and contact-dependent signaling. Run CellChat in a contact-dependent manner for `Cell-Cell Contact` signaling, and in a diffusion manner based on the `interaction.range` for other L-R pairs. 
+ℹ Future strategy in use: `parallel with 4 workers`

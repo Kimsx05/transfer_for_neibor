@@ -1,0 +1,113 @@
+method	section_id	parameter	value
+COMMOT	GSE171351_A1	method	COMMOT
+COMMOT	GSE171351_A1	version	0.0.3
+COMMOT	GSE171351_A1	commit	d117445bc07eaa19109c7609e97d9e35b26e99ca
+COMMOT	GSE171351_A1	section	GSE171351_A1
+COMMOT	GSE171351_A1	variant	primary2dNN
+COMMOT	GSE171351_A1	n_spots	768
+COMMOT	GSE171351_A1	n_measured_genes	33538
+COMMOT	GSE171351_A1	n_lr	675
+COMMOT	GSE171351_A1	database	bundled CellChatDB human
+COMMOT	GSE171351_A1	categories	"[""Secreted Signaling"", ""ECM-Receptor"", ""Cell-Cell Contact""]"
+COMMOT	GSE171351_A1	dNN_um	100.0
+COMMOT	GSE171351_A1	numeric_boundary_tolerance_um	1e-06
+COMMOT	GSE171351_A1	ranges_um	"{""Secreted Signaling"": 200.000001, ""ECM-Receptor"": 200.000001, ""Cell-Cell Contact"": 105.000001}"
+COMMOT	GSE171351_A1	normalization	log1p(counts / spot library * 10000)
+COMMOT	GSE171351_A1	heteromeric	True
+COMMOT	GSE171351_A1	heteromeric_rule	min
+COMMOT	GSE171351_A1	min_subunit_spot_detection	0.05
+COMMOT	GSE171351_A1	cot_nitermax	10000
+COMMOT	GSE171351_A1	cot_eps_p	0.1
+COMMOT	GSE171351_A1	cot_rho	10
+COMMOT	GSE171351_A1	cot_weights	[0.25, 0.25, 0.25, 0.25]
+COMMOT	GSE171351_A1	smooth	False
+COMMOT	GSE171351_A1	group_permutation	False
+COMMOT	GSE171351_A1	position_diagonal	retained during native inference; removed only for primary aggregation
+COMMOT	GSE171351_A1	primary_metric	abundance_weighted_mean_cross_spot_strength
+COMMOT	GSE171351_A1	solver_convergence_status	official API does not expose stopping diagnostics; finite/nonnegative output checked
+COMMOT	Inhousedata_T4469479	method	COMMOT
+COMMOT	Inhousedata_T4469479	version	0.0.3
+COMMOT	Inhousedata_T4469479	commit	d117445bc07eaa19109c7609e97d9e35b26e99ca
+COMMOT	Inhousedata_T4469479	section	Inhousedata_T4469479
+COMMOT	Inhousedata_T4469479	variant	primary2dNN
+COMMOT	Inhousedata_T4469479	n_spots	3917
+COMMOT	Inhousedata_T4469479	n_measured_genes	18061
+COMMOT	Inhousedata_T4469479	n_lr	1212
+COMMOT	Inhousedata_T4469479	database	bundled CellChatDB human
+COMMOT	Inhousedata_T4469479	categories	"[""Secreted Signaling"", ""ECM-Receptor"", ""Cell-Cell Contact""]"
+COMMOT	Inhousedata_T4469479	dNN_um	100.0
+COMMOT	Inhousedata_T4469479	numeric_boundary_tolerance_um	1e-06
+COMMOT	Inhousedata_T4469479	ranges_um	"{""Secreted Signaling"": 200.000001, ""ECM-Receptor"": 200.000001, ""Cell-Cell Contact"": 105.000001}"
+COMMOT	Inhousedata_T4469479	normalization	log1p(counts / spot library * 10000)
+COMMOT	Inhousedata_T4469479	heteromeric	True
+COMMOT	Inhousedata_T4469479	heteromeric_rule	min
+COMMOT	Inhousedata_T4469479	min_subunit_spot_detection	0.05
+COMMOT	Inhousedata_T4469479	cot_nitermax	10000
+COMMOT	Inhousedata_T4469479	cot_eps_p	0.1
+COMMOT	Inhousedata_T4469479	cot_rho	10
+COMMOT	Inhousedata_T4469479	cot_weights	[0.25, 0.25, 0.25, 0.25]
+COMMOT	Inhousedata_T4469479	component_scheduling	4 complete native components in parallel; identical full LR inputs; original weighted sum order
+COMMOT	Inhousedata_T4469479	n_component_workers	4
+COMMOT	Inhousedata_T4469479	smooth	False
+COMMOT	Inhousedata_T4469479	group_permutation	False
+COMMOT	Inhousedata_T4469479	position_diagonal	retained during native inference; removed only for primary aggregation
+COMMOT	Inhousedata_T4469479	primary_metric	abundance_weighted_mean_cross_spot_strength
+COMMOT	Inhousedata_T4469479	solver_convergence_status	official API does not expose stopping diagnostics; finite/nonnegative output checked
+SpatialCellChat	GSE171351_A1	method	SpatialCellChat
+SpatialCellChat	GSE171351_A1	package_version	0.1.0
+SpatialCellChat	GSE171351_A1	commit	be88f300464cf970b36a6165ea7d2e41a47a7511
+SpatialCellChat	GSE171351_A1	database	CellChatDB.human bundled
+SpatialCellChat	GSE171351_A1	categories	Secreted Signaling;ECM-Receptor;Cell-Cell Contact
+SpatialCellChat	GSE171351_A1	expression	log1p library-normalized counts 10000
+SpatialCellChat	GSE171351_A1	ALRA	not applied; measured expression retained
+SpatialCellChat	GSE171351_A1	feature_selection	MERINGUE
+SpatialCellChat	GSE171351_A1	feature_adjP	0.05
+SpatialCellChat	GSE171351_A1	variable_both	FALSE
+SpatialCellChat	GSE171351_A1	position_filter	native filterProbability sampled observed probability quantile; NOT permutation patient P
+SpatialCellChat	GSE171351_A1	position_nboot	100
+SpatialCellChat	GSE171351_A1	position_seed	666
+SpatialCellChat	GSE171351_A1	position_quantile	0.95
+SpatialCellChat	GSE171351_A1	min_links	10
+SpatialCellChat	GSE171351_A1	min_source_positions	10
+SpatialCellChat	GSE171351_A1	min_target_positions	10
+SpatialCellChat	GSE171351_A1	group_P	not computed or used
+SpatialCellChat	GSE171351_A1	dNN_um	100
+SpatialCellChat	GSE171351_A1	interaction_range_um	200
+SpatialCellChat	GSE171351_A1	contact_range_um	105
+SpatialCellChat	GSE171351_A1	tol_um	1e-06
+SpatialCellChat	GSE171351_A1	scale_distance	0.0101
+SpatialCellChat	GSE171351_A1	Kh	0.5
+SpatialCellChat	GSE171351_A1	Hill_n	1
+SpatialCellChat	GSE171351_A1	use_AGAN	TRUE
+SpatialCellChat	GSE171351_A1	group_aggregation	official Visium Avg helper sum per-LR B; cross-position only
+SpatialCellChat	GSE171351_A1	background	complete slice; Q full model proportions
+SpatialCellChat	GSE171351_A1	threads	4
+SpatialCellChat	Inhousedata_T4469479	method	SpatialCellChat
+SpatialCellChat	Inhousedata_T4469479	package_version	0.1.0
+SpatialCellChat	Inhousedata_T4469479	commit	be88f300464cf970b36a6165ea7d2e41a47a7511
+SpatialCellChat	Inhousedata_T4469479	database	CellChatDB.human bundled
+SpatialCellChat	Inhousedata_T4469479	categories	Secreted Signaling;ECM-Receptor;Cell-Cell Contact
+SpatialCellChat	Inhousedata_T4469479	expression	log1p library-normalized counts 10000
+SpatialCellChat	Inhousedata_T4469479	ALRA	not applied; measured expression retained
+SpatialCellChat	Inhousedata_T4469479	feature_selection	MERINGUE
+SpatialCellChat	Inhousedata_T4469479	feature_adjP	0.05
+SpatialCellChat	Inhousedata_T4469479	variable_both	FALSE
+SpatialCellChat	Inhousedata_T4469479	position_filter	native filterProbability sampled observed probability quantile; NOT permutation patient P
+SpatialCellChat	Inhousedata_T4469479	position_nboot	100
+SpatialCellChat	Inhousedata_T4469479	position_seed	666
+SpatialCellChat	Inhousedata_T4469479	position_quantile	0.95
+SpatialCellChat	Inhousedata_T4469479	min_links	10
+SpatialCellChat	Inhousedata_T4469479	min_source_positions	10
+SpatialCellChat	Inhousedata_T4469479	min_target_positions	10
+SpatialCellChat	Inhousedata_T4469479	group_P	not computed or used
+SpatialCellChat	Inhousedata_T4469479	dNN_um	100
+SpatialCellChat	Inhousedata_T4469479	interaction_range_um	200
+SpatialCellChat	Inhousedata_T4469479	contact_range_um	105
+SpatialCellChat	Inhousedata_T4469479	tol_um	1e-06
+SpatialCellChat	Inhousedata_T4469479	scale_distance	0.0101
+SpatialCellChat	Inhousedata_T4469479	Kh	0.5
+SpatialCellChat	Inhousedata_T4469479	Hill_n	1
+SpatialCellChat	Inhousedata_T4469479	use_AGAN	TRUE
+SpatialCellChat	Inhousedata_T4469479	group_aggregation	official Visium Avg helper sum per-LR B; cross-position only
+SpatialCellChat	Inhousedata_T4469479	background	complete slice; Q full model proportions
+SpatialCellChat	Inhousedata_T4469479	threads	8

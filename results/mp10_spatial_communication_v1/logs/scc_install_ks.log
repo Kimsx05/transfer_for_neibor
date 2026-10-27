@@ -1,0 +1,56 @@
+also installing the dependency ‘multicool’
+
+trying URL 'https://cloud.r-project.org/src/contrib/multicool_1.0.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ks_1.15.3.tar.gz'
+begin installing package ‘multicool’
+* installing *source* package ‘multicool’ ...
+** this is package ‘multicool’ version ‘1.0.2’
+** package ‘multicool’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0’
+make[1]: Entering directory '/home/data/t070721/tmpdir/RtmpgDos44/R.INSTALL1d91b25bc37419/multicool/src'
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c compositions.cpp -o compositions.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c multicool.cpp -o multicool.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o multicool.so RcppExports.o compositions.o multicool.o -pthread -L/usr/local/lib/R/lib -lR
+make[1]: Leaving directory '/home/data/t070721/tmpdir/RtmpgDos44/R.INSTALL1d91b25bc37419/multicool/src'
+installing to /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_spatial_communication_v1/Rlib/00LOCK-multicool/00new/multicool/libs
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (multicool)
+begin installing package ‘ks’
+* installing *source* package ‘ks’ ...
+** this is package ‘ks’ version ‘1.15.3’
+** package ‘ks’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0’
+make[1]: Entering directory '/home/data/t070721/tmpdir/RtmpwhZeRA/R.INSTALL1d936e6023e82a/ks/src'
+gcc -std=gnu2x -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c ks.c -o ks.o
+gcc -std=gnu2x -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o ks.so ks.o -L/usr/local/lib/R/lib -lR
+make[1]: Leaving directory '/home/data/t070721/tmpdir/RtmpwhZeRA/R.INSTALL1d936e6023e82a/ks/src'
+installing to /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_spatial_communication_v1/Rlib/00LOCK-ks/00new/ks/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (ks)
+
+The downloaded source packages are in
+	‘/home/data/t070721/tmpdir/RtmpOU8ABm/downloaded_packages’

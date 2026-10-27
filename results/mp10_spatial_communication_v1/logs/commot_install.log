@@ -1,0 +1,13 @@
+Looking in indexes: https://mirrors.aliyun.com/pypi/simple/, https://pypi.mirrors.ustc.edu.cn/simple/
+WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProxyError('Cannot connect to proxy.', TimeoutError('_ssl.c:983: The handshake operation timed out'))': /pypi/simple/pot/
+Collecting POT
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/11/41/68abb350d0c6aa1c39cfe38f2d3df2c95fef9097c94691008190355686b1/pot-0.9.7.post1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (32.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 32.9/32.9 MB 11.9 MB/s eta 0:00:00
+Collecting plotly
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/e5/7d/905a3a3d51087515719058c94cfbda2ff0fc14417c20d557ae3e82d8b250/plotly-7.1.0-py3-none-any.whl (9.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 77.0 MB/s eta 0:00:00
+Collecting narwhals
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/d1/89/5d4c86da1130d9059681e5b6cd7645df5c10279a6a079c5c37dcb2cc6f3f/narwhals-2.27.1-py3-none-any.whl (483 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 483.2/483.2 kB 63.2 MB/s eta 0:00:00
+Installing collected packages: POT, plotly, narwhals
+Successfully installed POT-0.9.7.post1 narwhals-2.27.1 plotly-7.1.0
