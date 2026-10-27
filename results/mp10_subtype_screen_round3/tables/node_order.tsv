@@ -1,0 +1,57 @@
+network_level	node	parent	node_order	color	is_epi
+"major"	"Epi_MP10_low"	"Epithelial"	1	"#4575b4"	TRUE
+"major"	"Epi_MP10_high"	"Epithelial"	2	"#d73027"	TRUE
+"major"	"B"	"B"	3	"#984ea3"	FALSE
+"major"	"Plasma"	"Plasma"	4	"#8ca252"	FALSE
+"major"	"T/NK"	"T/NK"	5	"#377eb8"	FALSE
+"major"	"Myeloid"	"Myeloid"	6	"#CAB2D6"	FALSE
+"major"	"Fibroblast"	"Fibroblast"	7	"#66C2A5"	FALSE
+"major"	"Endothelial"	"Endothelial"	8	"#c49c94"	FALSE
+"major"	"Mast"	"Mast"	9	"#17becf"	FALSE
+"fine"	"Epi_MP10_low"	"Epithelial"	1	"#4575b4"	TRUE
+"fine"	"Epi_MP10_high"	"Epithelial"	2	"#d73027"	TRUE
+"fine"	"GC B"	"B"	3	"#7f7f7f"	FALSE
+"fine"	"IFN-stimulated B"	"B"	4	"#c7c7c7"	FALSE
+"fine"	"Memory B"	"B"	5	"#393b79"	FALSE
+"fine"	"Naive B"	"B"	6	"#6b6ecf"	FALSE
+"fine"	"Plasma"	"Plasma"	7	"#8ca252"	FALSE
+"fine"	"CD4 Helper/Conventional"	"T/NK"	8	"#ff7f0e"	FALSE
+"fine"	"CD4 Naive/Memory-like"	"T/NK"	9	"#ffbb78"	FALSE
+"fine"	"CD8 Exhausted"	"T/NK"	10	"#2ca02c"	FALSE
+"fine"	"CD8 GZMK/Effector-memory-like"	"T/NK"	11	"#98df8a"	FALSE
+"fine"	"CD8 T-like / unresolved"	"T/NK"	12	"#d62728"	FALSE
+"fine"	"dataset_bias_TNK"	"T/NK"	13	"#e7cb94"	FALSE
+"fine"	"NK"	"T/NK"	14	"#000000"	FALSE
+"fine"	"NK / gamma-delta-boundary"	"T/NK"	15	"#5254a3"	FALSE
+"fine"	"T-cell unresolved"	"T/NK"	16	"#8c6d31"	FALSE
+"fine"	"Tfh/CXCL13-like"	"T/NK"	17	"#e7ba52"	FALSE
+"fine"	"Treg"	"T/NK"	18	"#984EA3"	FALSE
+"fine"	"C1QC TAM"	"Myeloid"	19	"#6a3d9a"	FALSE
+"fine"	"cDC1"	"Myeloid"	20	"#0072B2"	FALSE
+"fine"	"cDC2"	"Myeloid"	21	"#1F78B4"	FALSE
+"fine"	"Classical Mono"	"Myeloid"	22	"#ff7f00"	FALSE
+"fine"	"Cycling TAM/macrophage"	"Myeloid"	23	"#c5b0d5"	FALSE
+"fine"	"dataset_bias_myeloid"	"Myeloid"	24	"#ad494a"	FALSE
+"fine"	"excluded_myeloid"	"Myeloid"	25	"#d6616b"	FALSE
+"fine"	"FOLR2 TAM"	"Myeloid"	26	"#1b9e77"	FALSE
+"fine"	"LAMP3 DC"	"Myeloid"	27	"#bcbd22"	FALSE
+"fine"	"Neutrophil"	"Myeloid"	28	"#B2DF8A"	FALSE
+"fine"	"pDC"	"Myeloid"	29	"#984EA3"	FALSE
+"fine"	"SPP1 TAM"	"Myeloid"	30	"#e31a1c"	FALSE
+"fine"	"Cycling stromal"	"Fibroblast"	31	"#8c564b"	FALSE
+"fine"	"dataset_bias_fibro"	"Fibroblast"	32	"#843c39"	FALSE
+"fine"	"iCAF"	"Fibroblast"	33	"#e6ab02"	FALSE
+"fine"	"iCAF-like"	"Fibroblast"	34	"#7b4173"	FALSE
+"fine"	"Matrix_CAF"	"Fibroblast"	35	"#d95f02"	FALSE
+"fine"	"Pericyte"	"Fibroblast"	36	"#7570B3"	FALSE
+"fine"	"rCAF"	"Fibroblast"	37	"#a6761d"	FALSE
+"fine"	"SMC"	"Fibroblast"	38	"#b5cf6b"	FALSE
+"fine"	"unresolved_fibro"	"Fibroblast"	39	"#ce6dbd"	FALSE
+"fine"	"vCAF"	"Fibroblast"	40	"#e7298a"	FALSE
+"fine"	"Arterial EC"	"Endothelial"	41	"#E31A1C"	FALSE
+"fine"	"Capillary EC"	"Endothelial"	42	"#33A02C"	FALSE
+"fine"	"Cycling EC"	"Endothelial"	43	"#9467bd"	FALSE
+"fine"	"Lymphatic EC"	"Endothelial"	44	"#6A3D9A"	FALSE
+"fine"	"Tip EC"	"Endothelial"	45	"#FF7F00"	FALSE
+"fine"	"Venous EC"	"Endothelial"	46	"#1F78B4"	FALSE
+"fine"	"Mast"	"Mast"	47	"#17becf"	FALSE

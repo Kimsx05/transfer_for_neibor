@@ -1,0 +1,19 @@
+path	scope	network_level	question	measure	self_loops	data_source
+figures/overall/Treg_reading_panel.pdf	ALL	fine	E_Treg_global_vs_epi_share	W / C / share	explicit in panels	treg_total_summary.tsv; treg_partner_categories.tsv; node_coverage.tsv
+figures/overall/Treg_all_partners.pdf	ALL	fine	Treg_partner_breakdown	W / C / share	explicit in panels	treg_partner_breakdown.tsv
+figures/overall/Treg_LR_contributions.pdf	ALL	fine	Treg_all_LR_decomposition	W / C / share	explicit in panels	treg_LR_contribution_decomposition.tsv.gz
+figures/by_dataset/CNP0000460/Treg_reading_panel.pdf	CNP0000460	fine	E_Treg_global_vs_epi_share	W / C / share	explicit in panels	treg_total_summary.tsv; treg_partner_categories.tsv; node_coverage.tsv
+figures/by_dataset/CNP0000460/Treg_all_partners.pdf	CNP0000460	fine	Treg_partner_breakdown	W / C / share	explicit in panels	treg_partner_breakdown.tsv
+figures/by_dataset/CNP0000460/Treg_LR_contributions.pdf	CNP0000460	fine	Treg_all_LR_decomposition	W / C / share	explicit in panels	treg_LR_contribution_decomposition.tsv.gz
+figures/by_dataset/GSE326225/Treg_reading_panel.pdf	GSE326225	fine	E_Treg_global_vs_epi_share	W / C / share	explicit in panels	treg_total_summary.tsv; treg_partner_categories.tsv; node_coverage.tsv
+figures/by_dataset/GSE326225/Treg_all_partners.pdf	GSE326225	fine	Treg_partner_breakdown	W / C / share	explicit in panels	treg_partner_breakdown.tsv
+figures/by_dataset/GSE326225/Treg_LR_contributions.pdf	GSE326225	fine	Treg_all_LR_decomposition	W / C / share	explicit in panels	treg_LR_contribution_decomposition.tsv.gz
+figures/by_dataset/HRA003620/Treg_reading_panel.pdf	HRA003620	fine	E_Treg_global_vs_epi_share	W / C / share	explicit in panels	treg_total_summary.tsv; treg_partner_categories.tsv; node_coverage.tsv
+figures/by_dataset/HRA003620/Treg_all_partners.pdf	HRA003620	fine	Treg_partner_breakdown	W / C / share	explicit in panels	treg_partner_breakdown.tsv
+figures/by_dataset/HRA003620/Treg_LR_contributions.pdf	HRA003620	fine	Treg_all_LR_decomposition	W / C / share	explicit in panels	treg_LR_contribution_decomposition.tsv.gz
+figures/by_dataset/InhouseData/Treg_reading_panel.pdf	InhouseData	fine	E_Treg_global_vs_epi_share	W / C / share	explicit in panels	treg_total_summary.tsv; treg_partner_categories.tsv; node_coverage.tsv
+figures/by_dataset/InhouseData/Treg_all_partners.pdf	InhouseData	fine	Treg_partner_breakdown	W / C / share	explicit in panels	treg_partner_breakdown.tsv
+figures/by_dataset/InhouseData/Treg_LR_contributions.pdf	InhouseData	fine	Treg_all_LR_decomposition	W / C / share	explicit in panels	treg_LR_contribution_decomposition.tsv.gz
+figures/by_dataset/PRJNA662018/Treg_reading_panel.pdf	PRJNA662018	fine	E_Treg_global_vs_epi_share	W / C / share	explicit in panels	treg_total_summary.tsv; treg_partner_categories.tsv; node_coverage.tsv
+figures/by_dataset/PRJNA662018/Treg_all_partners.pdf	PRJNA662018	fine	Treg_partner_breakdown	W / C / share	explicit in panels	treg_partner_breakdown.tsv
+figures/by_dataset/PRJNA662018/Treg_LR_contributions.pdf	PRJNA662018	fine	Treg_all_LR_decomposition	W / C / share	explicit in panels	treg_LR_contribution_decomposition.tsv.gz

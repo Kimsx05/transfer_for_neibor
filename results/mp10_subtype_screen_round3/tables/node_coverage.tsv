@@ -1,0 +1,337 @@
+object_id	scope	network_level	node	computed	status	n_raw_cells	n_sampled_cells	n_contributing_specimens	n_contributing_recorded_IDs	n_matched_specimens	n_matched_recorded_IDs	n_state_specimens	n_state_recorded_IDs	n_computable_partners	parent	node_order
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"Epi_MP10_low"	TRUE	"computed"	58232	3938	40	39	NA	NA	40	39	47	"Epithelial"	1
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"Epi_MP10_high"	TRUE	"computed"	58216	3938	40	39	NA	NA	40	39	47	"Epithelial"	2
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"GC B"	TRUE	"computed"	172	172	19	18	2	2	40	39	47	"B"	3
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"IFN-stimulated B"	TRUE	"computed"	2636	923	15	14	10	9	40	39	47	"B"	4
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"Memory B"	TRUE	"computed"	1795	1300	26	26	14	14	40	39	47	"B"	5
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"Naive B"	TRUE	"computed"	1339	802	28	28	7	7	40	39	47	"B"	6
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"Plasma"	TRUE	"computed"	10831	2554	39	38	28	27	40	39	47	"Plasma"	7
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"CD4 Helper/Conventional"	TRUE	"computed"	4935	2258	37	36	26	26	40	39	47	"T/NK"	8
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"CD4 Naive/Memory-like"	TRUE	"computed"	2735	1794	35	34	18	18	40	39	47	"T/NK"	9
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"CD8 Exhausted"	TRUE	"computed"	13310	2840	38	37	30	29	40	39	47	"T/NK"	10
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"CD8 GZMK/Effector-memory-like"	TRUE	"computed"	8089	2873	37	36	33	32	40	39	47	"T/NK"	11
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"CD8 T-like / unresolved"	TRUE	"computed"	8602	2879	40	39	32	31	40	39	47	"T/NK"	12
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"dataset_bias_TNK"	TRUE	"computed"	25489	1310	26	25	13	12	40	39	47	"T/NK"	13
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"NK"	TRUE	"computed"	3403	2463	37	36	31	30	40	39	47	"T/NK"	14
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"NK / gamma-delta-boundary"	TRUE	"computed"	4981	2610	39	38	29	28	40	39	47	"T/NK"	15
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"T-cell unresolved"	TRUE	"computed"	5795	1801	33	33	19	19	40	39	47	"T/NK"	16
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"Tfh/CXCL13-like"	TRUE	"computed"	4927	2440	34	33	26	25	40	39	47	"T/NK"	17
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"Treg"	TRUE	"computed"	13204	3301	40	39	34	33	40	39	47	"T/NK"	18
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"C1QC TAM"	TRUE	"computed"	3447	2522	40	39	33	32	40	39	47	"Myeloid"	19
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"cDC1"	TRUE	"computed"	427	427	38	37	3	3	40	39	47	"Myeloid"	20
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"cDC2"	TRUE	"computed"	1777	1565	39	38	24	24	40	39	47	"Myeloid"	21
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"Classical Mono"	TRUE	"computed"	4115	2311	39	38	26	26	40	39	47	"Myeloid"	22
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"Cycling TAM/macrophage"	TRUE	"computed"	703	703	38	37	8	8	40	39	47	"Myeloid"	23
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"dataset_bias_myeloid"	TRUE	"computed"	1804	1022	15	14	12	11	40	39	47	"Myeloid"	24
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"excluded_myeloid"	TRUE	"computed"	456	450	32	31	5	5	40	39	47	"Myeloid"	25
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"FOLR2 TAM"	TRUE	"computed"	3655	2357	40	39	30	29	40	39	47	"Myeloid"	26
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"LAMP3 DC"	TRUE	"computed"	781	776	38	37	7	7	40	39	47	"Myeloid"	27
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"Neutrophil"	TRUE	"computed"	1442	608	27	26	7	7	40	39	47	"Myeloid"	28
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"pDC"	TRUE	"computed"	224	224	34	33	1	1	40	39	47	"Myeloid"	29
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"SPP1 TAM"	TRUE	"computed"	1632	1395	39	38	19	19	40	39	47	"Myeloid"	30
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"Cycling stromal"	TRUE	"computed"	188	188	20	20	1	1	40	39	47	"Fibroblast"	31
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"dataset_bias_fibro"	TRUE	"computed"	495	341	12	11	3	3	40	39	47	"Fibroblast"	32
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"iCAF"	TRUE	"computed"	2580	1658	36	35	18	18	40	39	47	"Fibroblast"	33
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"iCAF-like"	TRUE	"computed"	314	300	29	28	3	3	40	39	47	"Fibroblast"	34
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"Matrix_CAF"	TRUE	"computed"	1355	885	33	32	11	11	40	39	47	"Fibroblast"	35
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"Pericyte"	TRUE	"computed"	2141	1413	33	32	16	15	40	39	47	"Fibroblast"	36
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"rCAF"	TRUE	"computed"	402	342	25	24	3	3	40	39	47	"Fibroblast"	37
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"SMC"	TRUE	"computed"	1130	713	28	27	8	8	40	39	47	"Fibroblast"	38
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"unresolved_fibro"	TRUE	"computed"	633	633	32	31	8	8	40	39	47	"Fibroblast"	39
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"vCAF"	TRUE	"computed"	308	308	28	27	2	2	40	39	47	"Fibroblast"	40
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"Arterial EC"	TRUE	"computed"	695	578	32	31	5	5	40	39	47	"Endothelial"	41
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"Capillary EC"	TRUE	"computed"	3905	1310	35	34	14	14	40	39	47	"Endothelial"	42
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"Cycling EC"	TRUE	"computed"	174	174	17	16	2	2	40	39	47	"Endothelial"	43
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"Lymphatic EC"	TRUE	"computed"	271	241	17	16	1	1	40	39	47	"Endothelial"	44
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"Tip EC"	TRUE	"computed"	1647	774	14	13	9	8	40	39	47	"Endothelial"	45
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"Venous EC"	TRUE	"computed"	2505	612	29	29	7	7	40	39	47	"Endothelial"	46
+"fine__ALL__epi_state_within_specimen__shared"	"ALL"	"fine"	"Mast"	TRUE	"computed"	3608	2008	39	38	23	22	40	39	47	"Mast"	47
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"Epi_MP10_low"	TRUE	"computed"	19705	700	7	7	NA	NA	7	7	34	"Epithelial"	1
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"Epi_MP10_high"	TRUE	"computed"	19699	700	7	7	NA	NA	7	7	34	"Epithelial"	2
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"GC B"	TRUE	"computed"	34	34	4	4	0	0	7	7	34	"B"	3
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"IFN-stimulated B"	FALSE	"node_absent"	0	0	0	0	0	0	7	7	0	"B"	4
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"Memory B"	TRUE	"computed"	403	396	7	7	4	4	7	7	34	"B"	5
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"Naive B"	TRUE	"computed"	268	267	7	7	3	3	7	7	34	"B"	6
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"Plasma"	TRUE	"computed"	1923	379	7	7	4	4	7	7	34	"Plasma"	7
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"CD4 Helper/Conventional"	TRUE	"computed"	1128	514	7	7	6	6	7	7	34	"T/NK"	8
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"CD4 Naive/Memory-like"	TRUE	"computed"	733	499	7	7	6	6	7	7	34	"T/NK"	9
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"CD8 Exhausted"	TRUE	"computed"	1436	532	7	7	6	6	7	7	34	"T/NK"	10
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"CD8 GZMK/Effector-memory-like"	TRUE	"computed"	1248	550	7	7	7	7	7	7	34	"T/NK"	11
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"CD8 T-like / unresolved"	TRUE	"computed"	1561	685	7	7	7	7	7	7	34	"T/NK"	12
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"dataset_bias_TNK"	FALSE	"node_below_min_cells"	8	8	3	3	0	0	7	7	0	"T/NK"	13
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"NK"	TRUE	"computed"	330	314	7	7	5	5	7	7	34	"T/NK"	14
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"NK / gamma-delta-boundary"	TRUE	"computed"	431	407	7	7	6	6	7	7	34	"T/NK"	15
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"T-cell unresolved"	TRUE	"computed"	1049	540	7	7	6	6	7	7	34	"T/NK"	16
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"Tfh/CXCL13-like"	TRUE	"computed"	493	342	7	7	3	3	7	7	34	"T/NK"	17
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"Treg"	TRUE	"computed"	2361	671	7	7	7	7	7	7	34	"T/NK"	18
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"C1QC TAM"	TRUE	"computed"	726	506	7	7	6	6	7	7	34	"Myeloid"	19
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"cDC1"	TRUE	"computed"	89	89	7	7	0	0	7	7	34	"Myeloid"	20
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"cDC2"	TRUE	"computed"	541	394	7	7	5	5	7	7	34	"Myeloid"	21
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"Classical Mono"	TRUE	"computed"	1153	644	7	7	7	7	7	7	34	"Myeloid"	22
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"Cycling TAM/macrophage"	TRUE	"computed"	201	201	7	7	3	3	7	7	34	"Myeloid"	23
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"dataset_bias_myeloid"	FALSE	"node_absent"	0	0	0	0	0	0	7	7	0	"Myeloid"	24
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"excluded_myeloid"	FALSE	"node_below_min_cells"	5	5	2	2	0	0	7	7	0	"Myeloid"	25
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"FOLR2 TAM"	TRUE	"computed"	536	433	7	7	5	5	7	7	34	"Myeloid"	26
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"LAMP3 DC"	TRUE	"computed"	214	214	7	7	3	3	7	7	34	"Myeloid"	27
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"Neutrophil"	FALSE	"node_below_min_cells"	6	6	3	3	0	0	7	7	0	"Myeloid"	28
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"pDC"	TRUE	"computed"	38	38	7	7	0	0	7	7	34	"Myeloid"	29
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"SPP1 TAM"	TRUE	"computed"	302	302	7	7	6	6	7	7	34	"Myeloid"	30
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"Cycling stromal"	FALSE	"node_below_min_cells"	12	12	3	3	0	0	7	7	0	"Fibroblast"	31
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"dataset_bias_fibro"	FALSE	"node_absent"	0	0	0	0	0	0	7	7	0	"Fibroblast"	32
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"iCAF"	TRUE	"computed"	278	278	7	7	4	4	7	7	34	"Fibroblast"	33
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"iCAF-like"	FALSE	"node_below_min_cells"	16	16	6	6	0	0	7	7	0	"Fibroblast"	34
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"Matrix_CAF"	FALSE	"node_below_min_cells"	29	29	6	6	0	0	7	7	0	"Fibroblast"	35
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"Pericyte"	TRUE	"computed"	285	246	6	6	3	3	7	7	34	"Fibroblast"	36
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"rCAF"	TRUE	"computed"	30	30	6	6	0	0	7	7	34	"Fibroblast"	37
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"SMC"	TRUE	"computed"	58	58	7	7	1	1	7	7	34	"Fibroblast"	38
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"unresolved_fibro"	TRUE	"computed"	67	67	7	7	0	0	7	7	34	"Fibroblast"	39
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"vCAF"	FALSE	"node_below_min_cells"	20	20	5	5	0	0	7	7	0	"Fibroblast"	40
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"Arterial EC"	TRUE	"computed"	50	50	7	7	0	0	7	7	34	"Endothelial"	41
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"Capillary EC"	TRUE	"computed"	379	342	6	6	5	5	7	7	34	"Endothelial"	42
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"Cycling EC"	FALSE	"node_below_min_cells"	9	9	3	3	0	0	7	7	0	"Endothelial"	43
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"Lymphatic EC"	FALSE	"node_below_min_cells"	10	10	1	1	0	0	7	7	0	"Endothelial"	44
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"Tip EC"	FALSE	"node_absent"	0	0	0	0	0	0	7	7	0	"Endothelial"	45
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"Venous EC"	TRUE	"computed"	70	70	7	7	1	1	7	7	34	"Endothelial"	46
+"fine__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"fine"	"Mast"	TRUE	"computed"	320	320	7	7	4	4	7	7	34	"Mast"	47
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"Epi_MP10_low"	TRUE	"computed"	3432	538	6	6	NA	NA	6	6	32	"Epithelial"	1
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"Epi_MP10_high"	TRUE	"computed"	3432	538	6	6	NA	NA	6	6	32	"Epithelial"	2
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"GC B"	FALSE	"node_below_min_cells"	2	2	1	1	0	0	6	6	0	"B"	3
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"IFN-stimulated B"	FALSE	"node_below_min_cells"	1	1	1	1	0	0	6	6	0	"B"	4
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"Memory B"	TRUE	"computed"	232	158	4	4	2	2	6	6	32	"B"	5
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"Naive B"	TRUE	"computed"	606	199	6	6	2	2	6	6	32	"B"	6
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"Plasma"	TRUE	"computed"	590	304	5	5	3	3	6	6	32	"Plasma"	7
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"CD4 Helper/Conventional"	TRUE	"computed"	139	139	4	4	2	2	6	6	32	"T/NK"	8
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"CD4 Naive/Memory-like"	TRUE	"computed"	104	104	4	4	1	1	6	6	32	"T/NK"	9
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"CD8 Exhausted"	TRUE	"computed"	687	196	6	6	2	2	6	6	32	"T/NK"	10
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"CD8 GZMK/Effector-memory-like"	TRUE	"computed"	293	191	4	4	3	3	6	6	32	"T/NK"	11
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"CD8 T-like / unresolved"	TRUE	"computed"	1511	411	6	6	4	4	6	6	32	"T/NK"	12
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"dataset_bias_TNK"	FALSE	"node_below_min_cells"	12	12	3	3	0	0	6	6	0	"T/NK"	13
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"NK"	TRUE	"computed"	177	177	5	5	3	3	6	6	32	"T/NK"	14
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"NK / gamma-delta-boundary"	TRUE	"computed"	249	151	6	6	1	1	6	6	32	"T/NK"	15
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"T-cell unresolved"	TRUE	"computed"	121	121	4	4	1	1	6	6	32	"T/NK"	16
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"Tfh/CXCL13-like"	TRUE	"computed"	113	113	2	2	2	2	6	6	32	"T/NK"	17
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"Treg"	TRUE	"computed"	583	291	6	6	4	4	6	6	32	"T/NK"	18
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"C1QC TAM"	TRUE	"computed"	211	211	6	6	3	3	6	6	32	"Myeloid"	19
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"cDC1"	FALSE	"node_below_min_cells"	13	13	4	4	0	0	6	6	0	"Myeloid"	20
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"cDC2"	TRUE	"computed"	79	79	5	5	1	1	6	6	32	"Myeloid"	21
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"Classical Mono"	TRUE	"computed"	250	190	6	6	2	2	6	6	32	"Myeloid"	22
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"Cycling TAM/macrophage"	TRUE	"computed"	35	35	4	4	0	0	6	6	32	"Myeloid"	23
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"dataset_bias_myeloid"	TRUE	"computed"	38	38	3	3	0	0	6	6	32	"Myeloid"	24
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"excluded_myeloid"	TRUE	"computed"	42	42	6	6	0	0	6	6	32	"Myeloid"	25
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"FOLR2 TAM"	TRUE	"computed"	161	161	6	6	3	3	6	6	32	"Myeloid"	26
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"LAMP3 DC"	TRUE	"computed"	32	32	5	5	0	0	6	6	32	"Myeloid"	27
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"Neutrophil"	FALSE	"node_below_min_cells"	14	14	3	3	0	0	6	6	0	"Myeloid"	28
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"pDC"	FALSE	"node_below_min_cells"	18	18	5	5	0	0	6	6	0	"Myeloid"	29
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"SPP1 TAM"	TRUE	"computed"	107	107	5	5	1	1	6	6	32	"Myeloid"	30
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"Cycling stromal"	TRUE	"computed"	31	31	3	3	0	0	6	6	32	"Fibroblast"	31
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"dataset_bias_fibro"	FALSE	"node_below_min_cells"	6	6	1	1	0	0	6	6	0	"Fibroblast"	32
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"iCAF"	TRUE	"computed"	115	115	5	5	1	1	6	6	32	"Fibroblast"	33
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"iCAF-like"	FALSE	"node_below_min_cells"	8	8	3	3	0	0	6	6	0	"Fibroblast"	34
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"Matrix_CAF"	TRUE	"computed"	99	99	5	5	1	1	6	6	32	"Fibroblast"	35
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"Pericyte"	TRUE	"computed"	100	100	6	6	1	1	6	6	32	"Fibroblast"	36
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"rCAF"	FALSE	"node_below_min_cells"	3	3	2	2	0	0	6	6	0	"Fibroblast"	37
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"SMC"	FALSE	"node_below_min_cells"	5	5	1	1	0	0	6	6	0	"Fibroblast"	38
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"unresolved_fibro"	TRUE	"computed"	48	48	5	5	0	0	6	6	32	"Fibroblast"	39
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"vCAF"	FALSE	"node_below_min_cells"	12	12	5	5	0	0	6	6	0	"Fibroblast"	40
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"Arterial EC"	FALSE	"node_below_min_cells"	26	26	2	2	0	0	6	6	0	"Endothelial"	41
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"Capillary EC"	TRUE	"computed"	88	88	6	6	1	1	6	6	32	"Endothelial"	42
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"Cycling EC"	FALSE	"node_below_min_cells"	6	6	2	2	0	0	6	6	0	"Endothelial"	43
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"Lymphatic EC"	FALSE	"node_below_min_cells"	1	1	1	1	0	0	6	6	0	"Endothelial"	44
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"Tip EC"	FALSE	"node_below_min_cells"	21	21	2	2	0	0	6	6	0	"Endothelial"	45
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"Venous EC"	TRUE	"computed"	31	31	4	4	0	0	6	6	32	"Endothelial"	46
+"fine__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"fine"	"Mast"	TRUE	"computed"	247	205	6	6	2	2	6	6	32	"Mast"	47
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"Epi_MP10_low"	TRUE	"computed"	7546	700	7	7	NA	NA	7	7	30	"Epithelial"	1
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"Epi_MP10_high"	TRUE	"computed"	7544	700	7	7	NA	NA	7	7	30	"Epithelial"	2
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"GC B"	TRUE	"computed"	60	60	5	5	1	1	7	7	30	"B"	3
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"IFN-stimulated B"	FALSE	"node_below_min_cells"	2	2	2	2	0	0	7	7	0	"B"	4
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"Memory B"	TRUE	"computed"	643	418	7	7	5	5	7	7	30	"B"	5
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"Naive B"	TRUE	"computed"	95	95	7	7	0	0	7	7	30	"B"	6
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"Plasma"	TRUE	"computed"	937	449	7	7	5	5	7	7	30	"Plasma"	7
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"CD4 Helper/Conventional"	TRUE	"computed"	2140	623	7	7	6	6	7	7	30	"T/NK"	8
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"CD4 Naive/Memory-like"	TRUE	"computed"	934	590	7	7	6	6	7	7	30	"T/NK"	9
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"CD8 Exhausted"	TRUE	"computed"	7076	603	7	7	6	6	7	7	30	"T/NK"	10
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"CD8 GZMK/Effector-memory-like"	TRUE	"computed"	3151	611	7	7	6	6	7	7	30	"T/NK"	11
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"CD8 T-like / unresolved"	TRUE	"computed"	2888	605	7	7	6	6	7	7	30	"T/NK"	12
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"dataset_bias_TNK"	TRUE	"computed"	87	87	5	5	1	1	7	7	30	"T/NK"	13
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"NK"	TRUE	"computed"	766	571	7	7	6	6	7	7	30	"T/NK"	14
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"NK / gamma-delta-boundary"	TRUE	"computed"	1087	555	7	7	6	6	7	7	30	"T/NK"	15
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"T-cell unresolved"	TRUE	"computed"	2966	638	7	7	7	7	7	7	30	"T/NK"	16
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"Tfh/CXCL13-like"	TRUE	"computed"	1218	517	6	6	6	6	7	7	30	"T/NK"	17
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"Treg"	TRUE	"computed"	3160	628	7	7	6	6	7	7	30	"T/NK"	18
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"C1QC TAM"	TRUE	"computed"	864	577	7	7	7	7	7	7	30	"Myeloid"	19
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"cDC1"	TRUE	"computed"	76	76	7	7	0	0	7	7	30	"Myeloid"	20
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"cDC2"	TRUE	"computed"	363	312	7	7	5	5	7	7	30	"Myeloid"	21
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"Classical Mono"	TRUE	"computed"	1520	654	7	7	7	7	7	7	30	"Myeloid"	22
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"Cycling TAM/macrophage"	TRUE	"computed"	163	163	7	7	2	2	7	7	30	"Myeloid"	23
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"dataset_bias_myeloid"	FALSE	"node_absent"	0	0	0	0	0	0	7	7	0	"Myeloid"	24
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"excluded_myeloid"	TRUE	"computed"	60	60	6	6	1	1	7	7	30	"Myeloid"	25
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"FOLR2 TAM"	TRUE	"computed"	875	479	7	7	7	7	7	7	30	"Myeloid"	26
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"LAMP3 DC"	TRUE	"computed"	110	110	7	7	1	1	7	7	30	"Myeloid"	27
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"Neutrophil"	FALSE	"node_below_min_cells"	9	9	4	4	0	0	7	7	0	"Myeloid"	28
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"pDC"	TRUE	"computed"	34	34	5	5	0	0	7	7	30	"Myeloid"	29
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"SPP1 TAM"	TRUE	"computed"	415	276	7	7	4	4	7	7	30	"Myeloid"	30
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"Cycling stromal"	FALSE	"node_absent"	0	0	0	0	0	0	7	7	0	"Fibroblast"	31
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"dataset_bias_fibro"	FALSE	"node_absent"	0	0	0	0	0	0	7	7	0	"Fibroblast"	32
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"iCAF"	TRUE	"computed"	56	56	5	5	0	0	7	7	30	"Fibroblast"	33
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"iCAF-like"	FALSE	"node_below_min_cells"	2	2	2	2	0	0	7	7	0	"Fibroblast"	34
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"Matrix_CAF"	FALSE	"node_below_min_cells"	8	8	2	2	0	0	7	7	0	"Fibroblast"	35
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"Pericyte"	FALSE	"node_below_min_cells"	3	3	1	1	0	0	7	7	0	"Fibroblast"	36
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"rCAF"	FALSE	"node_absent"	0	0	0	0	0	0	7	7	0	"Fibroblast"	37
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"SMC"	FALSE	"node_below_min_cells"	4	4	2	2	0	0	7	7	0	"Fibroblast"	38
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"unresolved_fibro"	FALSE	"node_below_min_cells"	1	1	1	1	0	0	7	7	0	"Fibroblast"	39
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"vCAF"	FALSE	"node_absent"	0	0	0	0	0	0	7	7	0	"Fibroblast"	40
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"Arterial EC"	FALSE	"node_below_min_cells"	16	16	4	4	0	0	7	7	0	"Endothelial"	41
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"Capillary EC"	FALSE	"node_below_min_cells"	19	19	6	6	0	0	7	7	0	"Endothelial"	42
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"Cycling EC"	FALSE	"node_below_min_cells"	1	1	1	1	0	0	7	7	0	"Endothelial"	43
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"Lymphatic EC"	FALSE	"node_below_min_cells"	21	21	4	4	0	0	7	7	0	"Endothelial"	44
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"Tip EC"	FALSE	"node_absent"	0	0	0	0	0	0	7	7	0	"Endothelial"	45
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"Venous EC"	TRUE	"computed"	41	41	6	6	0	0	7	7	30	"Endothelial"	46
+"fine__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"fine"	"Mast"	TRUE	"computed"	112	112	7	7	1	1	7	7	30	"Mast"	47
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"Epi_MP10_low"	TRUE	"computed"	9002	1200	12	11	NA	NA	12	11	41	"Epithelial"	1
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"Epi_MP10_high"	TRUE	"computed"	8996	1200	12	11	NA	NA	12	11	41	"Epithelial"	2
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"GC B"	FALSE	"node_below_min_cells"	24	24	5	4	0	0	12	11	0	"B"	3
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"IFN-stimulated B"	TRUE	"computed"	2633	920	12	11	10	9	12	11	41	"B"	4
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"Memory B"	FALSE	"node_below_min_cells"	3	3	2	2	0	0	12	11	0	"B"	5
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"Naive B"	FALSE	"node_below_min_cells"	5	5	2	2	0	0	12	11	0	"B"	6
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"Plasma"	TRUE	"computed"	3440	821	12	11	10	9	12	11	41	"Plasma"	7
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"CD4 Helper/Conventional"	TRUE	"computed"	481	469	12	11	7	7	12	11	41	"T/NK"	8
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"CD4 Naive/Memory-like"	TRUE	"computed"	94	94	10	9	0	0	12	11	41	"T/NK"	9
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"CD8 Exhausted"	TRUE	"computed"	2922	1075	12	11	11	10	12	11	41	"T/NK"	10
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"CD8 GZMK/Effector-memory-like"	TRUE	"computed"	1711	1012	12	11	12	11	12	11	41	"T/NK"	11
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"CD8 T-like / unresolved"	TRUE	"computed"	710	571	12	11	9	8	12	11	41	"T/NK"	12
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"dataset_bias_TNK"	TRUE	"computed"	25379	1200	12	11	12	11	12	11	41	"T/NK"	13
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"NK"	TRUE	"computed"	1609	1007	12	11	12	11	12	11	41	"T/NK"	14
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"NK / gamma-delta-boundary"	TRUE	"computed"	2425	1096	12	11	12	11	12	11	41	"T/NK"	15
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"T-cell unresolved"	FALSE	"node_below_min_cells"	20	20	8	8	0	0	12	11	0	"T/NK"	16
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"Tfh/CXCL13-like"	TRUE	"computed"	2532	1040	12	11	11	10	12	11	41	"T/NK"	17
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"Treg"	TRUE	"computed"	4912	1196	12	11	12	11	12	11	41	"T/NK"	18
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"C1QC TAM"	TRUE	"computed"	1054	819	12	11	12	11	12	11	41	"Myeloid"	19
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"cDC1"	TRUE	"computed"	111	111	12	11	1	1	12	11	41	"Myeloid"	20
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"cDC2"	TRUE	"computed"	471	457	12	11	7	7	12	11	41	"Myeloid"	21
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"Classical Mono"	TRUE	"computed"	576	401	12	11	5	5	12	11	41	"Myeloid"	22
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"Cycling TAM/macrophage"	TRUE	"computed"	123	123	12	11	1	1	12	11	41	"Myeloid"	23
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"dataset_bias_myeloid"	TRUE	"computed"	1766	984	12	11	12	11	12	11	41	"Myeloid"	24
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"excluded_myeloid"	TRUE	"computed"	329	323	12	11	4	4	12	11	41	"Myeloid"	25
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"FOLR2 TAM"	TRUE	"computed"	1395	875	12	11	10	9	12	11	41	"Myeloid"	26
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"LAMP3 DC"	TRUE	"computed"	275	270	12	11	2	2	12	11	41	"Myeloid"	27
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"Neutrophil"	TRUE	"computed"	1333	499	12	11	6	6	12	11	41	"Myeloid"	28
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"pDC"	TRUE	"computed"	108	108	12	11	1	1	12	11	41	"Myeloid"	29
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"SPP1 TAM"	TRUE	"computed"	660	562	12	11	7	7	12	11	41	"Myeloid"	30
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"Cycling stromal"	TRUE	"computed"	30	30	7	7	0	0	12	11	41	"Fibroblast"	31
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"dataset_bias_fibro"	TRUE	"computed"	489	335	11	10	3	3	12	11	41	"Fibroblast"	32
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"iCAF"	TRUE	"computed"	657	497	11	10	5	5	12	11	41	"Fibroblast"	33
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"iCAF-like"	TRUE	"computed"	167	153	10	9	1	1	12	11	41	"Fibroblast"	34
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"Matrix_CAF"	TRUE	"computed"	754	514	12	11	8	8	12	11	41	"Fibroblast"	35
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"Pericyte"	TRUE	"computed"	423	423	12	11	5	4	12	11	41	"Fibroblast"	36
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"rCAF"	TRUE	"computed"	59	59	9	8	0	0	12	11	41	"Fibroblast"	37
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"SMC"	TRUE	"computed"	226	226	11	10	3	3	12	11	41	"Fibroblast"	38
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"unresolved_fibro"	TRUE	"computed"	183	183	11	10	2	2	12	11	41	"Fibroblast"	39
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"vCAF"	TRUE	"computed"	205	205	12	11	2	2	12	11	41	"Fibroblast"	40
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"Arterial EC"	TRUE	"computed"	85	85	11	10	1	1	12	11	41	"Endothelial"	41
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"Capillary EC"	TRUE	"computed"	134	134	9	8	1	1	12	11	41	"Endothelial"	42
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"Cycling EC"	FALSE	"node_below_min_cells"	13	13	4	3	0	0	12	11	0	"Endothelial"	43
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"Lymphatic EC"	TRUE	"computed"	93	93	7	6	0	0	12	11	41	"Endothelial"	44
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"Tip EC"	TRUE	"computed"	1626	753	12	11	9	8	12	11	41	"Endothelial"	45
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"Venous EC"	FALSE	"node_below_min_cells"	16	16	4	4	0	0	12	11	0	"Endothelial"	46
+"fine__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"fine"	"Mast"	TRUE	"computed"	1607	857	12	11	10	9	12	11	41	"Mast"	47
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"Epi_MP10_low"	TRUE	"computed"	18547	800	8	8	NA	NA	8	8	40	"Epithelial"	1
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"Epi_MP10_high"	TRUE	"computed"	18545	800	8	8	NA	NA	8	8	40	"Epithelial"	2
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"GC B"	TRUE	"computed"	52	52	4	4	1	1	8	8	40	"B"	3
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"IFN-stimulated B"	FALSE	"node_absent"	0	0	0	0	0	0	8	8	0	"B"	4
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"Memory B"	TRUE	"computed"	514	325	6	6	3	3	8	8	40	"B"	5
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"Naive B"	TRUE	"computed"	365	236	6	6	2	2	8	8	40	"B"	6
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"Plasma"	TRUE	"computed"	3941	601	8	8	6	6	8	8	40	"Plasma"	7
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"CD4 Helper/Conventional"	TRUE	"computed"	1047	513	7	7	5	5	8	8	40	"T/NK"	8
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"CD4 Naive/Memory-like"	TRUE	"computed"	870	507	7	7	5	5	8	8	40	"T/NK"	9
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"CD8 Exhausted"	TRUE	"computed"	1189	434	6	6	5	5	8	8	40	"T/NK"	10
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"CD8 GZMK/Effector-memory-like"	TRUE	"computed"	1686	509	7	7	5	5	8	8	40	"T/NK"	11
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"CD8 T-like / unresolved"	TRUE	"computed"	1932	607	8	8	6	6	8	8	40	"T/NK"	12
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"dataset_bias_TNK"	FALSE	"node_below_min_cells"	3	3	3	3	0	0	8	8	0	"T/NK"	13
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"NK"	TRUE	"computed"	521	394	6	6	5	5	8	8	40	"T/NK"	14
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"NK / gamma-delta-boundary"	TRUE	"computed"	789	401	7	7	4	4	8	8	40	"T/NK"	15
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"T-cell unresolved"	TRUE	"computed"	1639	482	7	7	5	5	8	8	40	"T/NK"	16
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"Tfh/CXCL13-like"	TRUE	"computed"	571	428	7	7	4	4	8	8	40	"T/NK"	17
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"Treg"	TRUE	"computed"	2188	515	8	8	5	5	8	8	40	"T/NK"	18
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"C1QC TAM"	TRUE	"computed"	592	409	8	8	5	5	8	8	40	"Myeloid"	19
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"cDC1"	TRUE	"computed"	138	138	8	8	2	2	8	8	40	"Myeloid"	20
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"cDC2"	TRUE	"computed"	323	323	8	8	6	6	8	8	40	"Myeloid"	21
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"Classical Mono"	TRUE	"computed"	616	422	7	7	5	5	8	8	40	"Myeloid"	22
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"Cycling TAM/macrophage"	TRUE	"computed"	181	181	8	8	2	2	8	8	40	"Myeloid"	23
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"dataset_bias_myeloid"	FALSE	"node_absent"	0	0	0	0	0	0	8	8	0	"Myeloid"	24
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"excluded_myeloid"	FALSE	"node_below_min_cells"	20	20	6	6	0	0	8	8	0	"Myeloid"	25
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"FOLR2 TAM"	TRUE	"computed"	688	409	8	8	5	5	8	8	40	"Myeloid"	26
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"LAMP3 DC"	TRUE	"computed"	150	150	7	7	1	1	8	8	40	"Myeloid"	27
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"Neutrophil"	TRUE	"computed"	80	80	5	5	1	1	8	8	40	"Myeloid"	28
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"pDC"	FALSE	"node_below_min_cells"	26	26	5	5	0	0	8	8	0	"Myeloid"	29
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"SPP1 TAM"	TRUE	"computed"	148	148	8	8	1	1	8	8	40	"Myeloid"	30
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"Cycling stromal"	TRUE	"computed"	115	115	7	7	1	1	8	8	40	"Fibroblast"	31
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"dataset_bias_fibro"	FALSE	"node_absent"	0	0	0	0	0	0	8	8	0	"Fibroblast"	32
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"iCAF"	TRUE	"computed"	1474	712	8	8	8	8	8	8	40	"Fibroblast"	33
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"iCAF-like"	TRUE	"computed"	121	121	8	8	2	2	8	8	40	"Fibroblast"	34
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"Matrix_CAF"	TRUE	"computed"	465	235	8	8	2	2	8	8	40	"Fibroblast"	35
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"Pericyte"	TRUE	"computed"	1330	641	8	8	7	7	8	8	40	"Fibroblast"	36
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"rCAF"	TRUE	"computed"	310	250	8	8	3	3	8	8	40	"Fibroblast"	37
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"SMC"	TRUE	"computed"	837	420	7	7	4	4	8	8	40	"Fibroblast"	38
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"unresolved_fibro"	TRUE	"computed"	334	334	8	8	6	6	8	8	40	"Fibroblast"	39
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"vCAF"	TRUE	"computed"	71	71	6	6	0	0	8	8	40	"Fibroblast"	40
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"Arterial EC"	TRUE	"computed"	518	401	8	8	4	4	8	8	40	"Endothelial"	41
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"Capillary EC"	TRUE	"computed"	3285	727	8	8	7	7	8	8	40	"Endothelial"	42
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"Cycling EC"	TRUE	"computed"	145	145	7	7	2	2	8	8	40	"Endothelial"	43
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"Lymphatic EC"	TRUE	"computed"	146	116	4	4	1	1	8	8	40	"Endothelial"	44
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"Tip EC"	FALSE	"node_absent"	0	0	0	0	0	0	8	8	0	"Endothelial"	45
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"Venous EC"	TRUE	"computed"	2347	454	8	8	6	6	8	8	40	"Endothelial"	46
+"fine__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"fine"	"Mast"	TRUE	"computed"	1322	514	7	7	6	6	8	8	40	"Mast"	47
+"major__ALL__epi_state_within_specimen__shared"	"ALL"	"major"	"Epi_MP10_low"	TRUE	"computed"	58232	3938	40	39	NA	NA	40	39	9	"Epithelial"	1
+"major__ALL__epi_state_within_specimen__shared"	"ALL"	"major"	"Epi_MP10_high"	TRUE	"computed"	58216	3938	40	39	NA	NA	40	39	9	"Epithelial"	2
+"major__ALL__epi_state_within_specimen__shared"	"ALL"	"major"	"B"	TRUE	"computed"	5942	2418	38	37	25	24	40	39	9	"B"	3
+"major__ALL__epi_state_within_specimen__shared"	"ALL"	"major"	"Plasma"	TRUE	"computed"	10831	2554	39	38	28	27	40	39	9	"Plasma"	4
+"major__ALL__epi_state_within_specimen__shared"	"ALL"	"major"	"T/NK"	TRUE	"computed"	95470	3706	40	39	37	36	40	39	9	"T/NK"	5
+"major__ALL__epi_state_within_specimen__shared"	"ALL"	"major"	"Myeloid"	TRUE	"computed"	20463	3758	40	39	39	38	40	39	9	"Myeloid"	6
+"major__ALL__epi_state_within_specimen__shared"	"ALL"	"major"	"Fibroblast"	TRUE	"computed"	9546	2645	39	38	30	29	40	39	9	"Fibroblast"	7
+"major__ALL__epi_state_within_specimen__shared"	"ALL"	"major"	"Endothelial"	TRUE	"computed"	9197	2275	40	39	25	24	40	39	9	"Endothelial"	8
+"major__ALL__epi_state_within_specimen__shared"	"ALL"	"major"	"Mast"	TRUE	"computed"	3608	2008	39	38	23	22	40	39	9	"Mast"	9
+"major__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"major"	"Epi_MP10_low"	TRUE	"computed"	19705	700	7	7	NA	NA	7	7	9	"Epithelial"	1
+"major__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"major"	"Epi_MP10_high"	TRUE	"computed"	19699	700	7	7	NA	NA	7	7	9	"Epithelial"	2
+"major__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"major"	"B"	TRUE	"computed"	705	472	7	7	5	5	7	7	9	"B"	3
+"major__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"major"	"Plasma"	TRUE	"computed"	1923	379	7	7	4	4	7	7	9	"Plasma"	4
+"major__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"major"	"T/NK"	TRUE	"computed"	10778	700	7	7	7	7	7	7	9	"T/NK"	5
+"major__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"major"	"Myeloid"	TRUE	"computed"	3811	700	7	7	7	7	7	7	9	"Myeloid"	6
+"major__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"major"	"Fibroblast"	TRUE	"computed"	795	469	7	7	6	6	7	7	9	"Fibroblast"	7
+"major__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"major"	"Endothelial"	TRUE	"computed"	518	422	7	7	5	5	7	7	9	"Endothelial"	8
+"major__CNP0000460__epi_state_within_specimen__shared"	"CNP0000460"	"major"	"Mast"	TRUE	"computed"	320	320	7	7	4	4	7	7	9	"Mast"	9
+"major__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"major"	"Epi_MP10_low"	TRUE	"computed"	3432	538	6	6	NA	NA	6	6	9	"Epithelial"	1
+"major__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"major"	"Epi_MP10_high"	TRUE	"computed"	3432	538	6	6	NA	NA	6	6	9	"Epithelial"	2
+"major__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"major"	"B"	TRUE	"computed"	841	228	6	6	2	2	6	6	9	"B"	3
+"major__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"major"	"Plasma"	TRUE	"computed"	590	304	5	5	3	3	6	6	9	"Plasma"	4
+"major__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"major"	"T/NK"	TRUE	"computed"	3989	456	6	6	5	5	6	6	9	"T/NK"	5
+"major__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"major"	"Myeloid"	TRUE	"computed"	1000	410	6	6	5	5	6	6	9	"Myeloid"	6
+"major__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"major"	"Fibroblast"	TRUE	"computed"	427	299	6	6	4	4	6	6	9	"Fibroblast"	7
+"major__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"major"	"Endothelial"	TRUE	"computed"	173	140	6	6	1	1	6	6	9	"Endothelial"	8
+"major__GSE326225__epi_state_within_specimen__shared"	"GSE326225"	"major"	"Mast"	TRUE	"computed"	247	205	6	6	2	2	6	6	9	"Mast"	9
+"major__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"major"	"Epi_MP10_low"	TRUE	"computed"	7546	700	7	7	NA	NA	7	7	9	"Epithelial"	1
+"major__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"major"	"Epi_MP10_high"	TRUE	"computed"	7544	700	7	7	NA	NA	7	7	9	"Epithelial"	2
+"major__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"major"	"B"	TRUE	"computed"	800	444	7	7	5	5	7	7	9	"B"	3
+"major__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"major"	"Plasma"	TRUE	"computed"	937	449	7	7	5	5	7	7	9	"Plasma"	4
+"major__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"major"	"T/NK"	TRUE	"computed"	25473	700	7	7	7	7	7	7	9	"T/NK"	5
+"major__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"major"	"Myeloid"	TRUE	"computed"	4489	700	7	7	7	7	7	7	9	"Myeloid"	6
+"major__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"major"	"Fibroblast"	TRUE	"computed"	74	74	6	6	1	1	7	7	9	"Fibroblast"	7
+"major__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"major"	"Endothelial"	TRUE	"computed"	98	98	7	7	2	2	7	7	9	"Endothelial"	8
+"major__HRA003620__epi_state_within_specimen__shared"	"HRA003620"	"major"	"Mast"	TRUE	"computed"	112	112	7	7	1	1	7	7	9	"Mast"	9
+"major__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"major"	"Epi_MP10_low"	TRUE	"computed"	9002	1200	12	11	NA	NA	12	11	9	"Epithelial"	1
+"major__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"major"	"Epi_MP10_high"	TRUE	"computed"	8996	1200	12	11	NA	NA	12	11	9	"Epithelial"	2
+"major__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"major"	"B"	TRUE	"computed"	2665	921	12	11	10	9	12	11	9	"B"	3
+"major__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"major"	"Plasma"	TRUE	"computed"	3440	821	12	11	10	9	12	11	9	"Plasma"	4
+"major__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"major"	"T/NK"	TRUE	"computed"	42795	1200	12	11	12	11	12	11	9	"T/NK"	5
+"major__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"major"	"Myeloid"	TRUE	"computed"	8201	1200	12	11	12	11	12	11	9	"Myeloid"	6
+"major__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"major"	"Fibroblast"	TRUE	"computed"	3193	1003	12	11	11	10	12	11	9	"Fibroblast"	7
+"major__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"major"	"Endothelial"	TRUE	"computed"	1967	859	12	11	9	8	12	11	9	"Endothelial"	8
+"major__InhouseData__epi_state_within_specimen__shared"	"InhouseData"	"major"	"Mast"	TRUE	"computed"	1607	857	12	11	10	9	12	11	9	"Mast"	9
+"major__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"major"	"Epi_MP10_low"	TRUE	"computed"	18547	800	8	8	NA	NA	8	8	9	"Epithelial"	1
+"major__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"major"	"Epi_MP10_high"	TRUE	"computed"	18545	800	8	8	NA	NA	8	8	9	"Epithelial"	2
+"major__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"major"	"B"	TRUE	"computed"	931	353	6	6	3	3	8	8	9	"B"	3
+"major__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"major"	"Plasma"	TRUE	"computed"	3941	601	8	8	6	6	8	8	9	"Plasma"	4
+"major__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"major"	"T/NK"	TRUE	"computed"	12435	650	8	8	6	6	8	8	9	"T/NK"	5
+"major__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"major"	"Myeloid"	TRUE	"computed"	2962	748	8	8	8	8	8	8	9	"Myeloid"	6
+"major__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"major"	"Fibroblast"	TRUE	"computed"	5057	800	8	8	8	8	8	8	9	"Fibroblast"	7
+"major__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"major"	"Endothelial"	TRUE	"computed"	6441	756	8	8	8	8	8	8	9	"Endothelial"	8
+"major__PRJNA662018__epi_state_within_specimen__shared"	"PRJNA662018"	"major"	"Mast"	TRUE	"computed"	1322	514	7	7	6	6	8	8	9	"Mast"	9
