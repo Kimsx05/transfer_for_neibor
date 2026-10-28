@@ -1,0 +1,58 @@
+2026-10-27 21:03:15 reading original counts CanDis_2026_Sample8 
+Removing spots with less than 100 expressed genes.
+0 spots are removed.
+11958 spots are kept.
+Stage 1. Infer malignant cell fraction.
+Stage 1 - Step 1. Clustering.
+Stage 1 - Step 2. Find tumor clusters.
+                  > Use CNA signature: BLCA.
+Stage 1 - Step 3. Infer malignant cells.
+ 
+Stage 2. Hierarchically deconvolve non-malignant cell fraction.
+Stage 2 - Level 1. Estimate the major lineage.
+Stage 2 - Level 2. Estimate the sub lineage.
+                  > B cell:
+                  > T CD4:
+                  > T CD8:
+                  > cDC:
+                  > Macrophage:
+           used  (Mb) gc trigger    (Mb)   max used    (Mb)
+Ncells  8713092 465.4   13635214   728.2   13635214   728.2
+Vcells 90495904 690.5 1696385300 12942.4 2076428947 15841.9
+Warning messages:
+1: In asMethod(object) :
+  sparse->dense coercion: allocating vector of size 1.6 GiB
+2: In asMethod(object) :
+  sparse->dense coercion: allocating vector of size 1.6 GiB
+3: In asMethod(object) :
+  sparse->dense coercion: allocating vector of size 1.6 GiB
+4: In asMethod(object) :
+  sparse->dense coercion: allocating vector of size 1.6 GiB
+5: In asMethod(object) :
+  sparse->dense coercion: allocating vector of size 1.5 GiB
+Error: unexpected ';' in "norm=xm%*%Diagonal(x=1e4/Matrix::colSums(xe4/Matrix::colSums(xm));"
+Execution halted
+Command exited with non-zero status 1
+	Command being timed: "/usr/local/bin/Rscript --vanilla /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_pathology_regions_v2/scripts/run_section.R CanDis_2026_Sample8 2"
+	User time (seconds): 2756.82
+	System time (seconds): 154.33
+	Percent of CPU this job got: 184%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 26:14.48
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 17567772
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 46282859
+	Voluntary context switches: 29047
+	Involuntary context switches: 4700
+	Swaps: 0
+	File system inputs: 1816
+	File system outputs: 16368
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

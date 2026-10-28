@@ -1,0 +1,40 @@
+* installing *source* package ‘SpaCET’ ...
+** this is package ‘SpaCET’ version ‘1.4.0’
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (SpaCET)
+* installing *source* package ‘Banksy’ ...
+** this is package ‘Banksy’ version ‘1.9.5’
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0’
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -g -O2   -c banksy_lazy.cpp -o banksy_lazy.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o Banksy.so RcppExports.o banksy_lazy.o -fopenmp -L/usr/local/lib/R/lib -lR
+installing to /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_pathology_regions_v2/Rlib/00LOCK-Banksy/00new/Banksy/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (Banksy)
+SpaCET 1.4.0 
+Banksy 1.9.5 

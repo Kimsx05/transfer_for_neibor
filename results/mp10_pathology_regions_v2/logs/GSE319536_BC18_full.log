@@ -1,0 +1,57 @@
+2026-10-27 23:17:25 reading original counts GSE319536_BC18 
+Removing spots with less than 100 expressed genes.
+0 spots are removed.
+2847 spots are kept.
+Stage 1. Infer malignant cell fraction.
+Stage 1 - Step 1. Clustering.
+Stage 1 - Step 2. Find tumor clusters.
+                  > Use CNA signature: BLCA.
+Stage 1 - Step 3. Infer malignant cells.
+ 
+Stage 2. Hierarchically deconvolve non-malignant cell fraction.
+Stage 2 - Level 1. Estimate the major lineage.
+Stage 2 - Level 2. Estimate the sub lineage.
+                  > B cell:
+                  > T CD4:
+                  > T CD8:
+                  > cDC:
+                  > Macrophage:
+           used  (Mb) gc trigger   (Mb)  max used   (Mb)
+Ncells  8694740 464.4   13634112  728.2  13634112  728.2
+Vcells 26999956 206.0  388081219 2960.9 485099243 3701.1
+Computing harmonic m = 0 with 16.6 neighbors
+Processing in 3 chunks of max 1317 genes
+Done
+Computing harmonic m = 1 with 16.6 neighbors
+Processing in 3 chunks of max 1317 genes
+Centering
+Done
+Using seed=20261027
+Using seed=20261027
+           used  (Mb) gc trigger   (Mb)  max used   (Mb)
+Ncells  9314442 497.5   13634112  728.2  13634112  728.2
+Vcells 46541571 355.1  310472751 2368.8 485099243 3701.1
+2026-10-27 23:20:30 section algorithms finished GSE319536_BC18 
+	Command being timed: "/usr/local/bin/Rscript --vanilla /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_pathology_regions_v2/scripts/run_section_two.R GSE319536_BC18 6"
+	User time (seconds): 690.88
+	System time (seconds): 81.39
+	Percent of CPU this job got: 400%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:12.71
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 5086860
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 20035710
+	Voluntary context switches: 59173
+	Involuntary context switches: 1390
+	Swaps: 0
+	File system inputs: 54464
+	File system outputs: 8560
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

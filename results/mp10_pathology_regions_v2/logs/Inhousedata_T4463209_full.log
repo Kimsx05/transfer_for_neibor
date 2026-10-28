@@ -1,0 +1,57 @@
+2026-10-27 22:39:41 reading original counts Inhousedata_T4463209 
+Removing spots with less than 100 expressed genes.
+0 spots are removed.
+4441 spots are kept.
+Stage 1. Infer malignant cell fraction.
+Stage 1 - Step 1. Clustering.
+Stage 1 - Step 2. Find tumor clusters.
+                  > Use CNA signature: BLCA.
+Stage 1 - Step 3. Infer malignant cells.
+ 
+Stage 2. Hierarchically deconvolve non-malignant cell fraction.
+Stage 2 - Level 1. Estimate the major lineage.
+Stage 2 - Level 2. Estimate the sub lineage.
+                  > B cell:
+                  > T CD4:
+                  > T CD8:
+                  > cDC:
+                  > Macrophage:
+           used  (Mb) gc trigger   (Mb)  max used   (Mb)
+Ncells  8698052 464.6   13634120  728.2  13634120  728.2
+Vcells 52151953 397.9  454611955 3468.5 591560899 4513.3
+Computing harmonic m = 0 with 17.1 neighbors
+Processing in 4 chunks of max 844 genes
+Done
+Computing harmonic m = 1 with 17.1 neighbors
+Processing in 4 chunks of max 844 genes
+Centering
+Done
+Using seed=20261027
+Using seed=20261027
+            used  (Mb) gc trigger   (Mb)  max used   (Mb)
+Ncells   9318571 497.7   13634120  728.2  13634120  728.2
+Vcells 110468683 842.9  363689564 2774.8 591560899 4513.3
+2026-10-27 22:45:17 section algorithms finished Inhousedata_T4463209 
+	Command being timed: "/usr/local/bin/Rscript --vanilla /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_pathology_regions_v2/scripts/run_section_two.R Inhousedata_T4463209 6"
+	User time (seconds): 1285.16
+	System time (seconds): 120.66
+	Percent of CPU this job got: 408%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:44.07
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6390584
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 32451311
+	Voluntary context switches: 229564
+	Involuntary context switches: 2453
+	Swaps: 0
+	File system inputs: 168848
+	File system outputs: 14520
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

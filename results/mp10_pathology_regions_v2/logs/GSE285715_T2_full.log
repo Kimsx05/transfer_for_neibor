@@ -1,0 +1,57 @@
+2026-10-27 22:51:13 reading original counts GSE285715_T2 
+Removing spots with less than 100 expressed genes.
+0 spots are removed.
+3987 spots are kept.
+Stage 1. Infer malignant cell fraction.
+Stage 1 - Step 1. Clustering.
+Stage 1 - Step 2. Find tumor clusters.
+                  > Use CNA signature: BLCA.
+Stage 1 - Step 3. Infer malignant cells.
+ 
+Stage 2. Hierarchically deconvolve non-malignant cell fraction.
+Stage 2 - Level 1. Estimate the major lineage.
+Stage 2 - Level 2. Estimate the sub lineage.
+                  > B cell:
+                  > T CD4:
+                  > T CD8:
+                  > cDC:
+                  > Macrophage:
+           used  (Mb) gc trigger   (Mb)  max used   (Mb)
+Ncells  8695025 464.4   13634141  728.2  13634141  728.2
+Vcells 61600289 470.0  533335161 4069.1 665485091 5077.3
+Computing harmonic m = 0 with 17 neighbors
+Processing in 4 chunks of max 940 genes
+Done
+Computing harmonic m = 1 with 17 neighbors
+Processing in 4 chunks of max 940 genes
+Centering
+Done
+Using seed=20261027
+Using seed=20261027
+            used   (Mb) gc trigger   (Mb)  max used   (Mb)
+Ncells   9315090  497.5   13634141  728.2  13634141  728.2
+Vcells 136832191 1044.0  426668129 3255.3 665485091 5077.3
+2026-10-27 22:55:47 section algorithms finished GSE285715_T2 
+	Command being timed: "/usr/local/bin/Rscript --vanilla /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_pathology_regions_v2/scripts/run_section_two.R GSE285715_T2 6"
+	User time (seconds): 994.14
+	System time (seconds): 96.97
+	Percent of CPU this job got: 386%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:42.13
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6495984
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 27017206
+	Voluntary context switches: 316772
+	Involuntary context switches: 1652
+	Swaps: 0
+	File system inputs: 230656
+	File system outputs: 12720
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

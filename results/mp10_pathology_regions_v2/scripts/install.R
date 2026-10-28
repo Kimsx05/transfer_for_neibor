@@ -1,0 +1,6 @@
+.libPaths(unique(c('mp10_pathology_regions_v2/Rlib','/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.5','/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4','/refdir/Rlib',.libPaths())))
+options(repos=c(CRAN='https://cloud.r-project.org'),timeout=600,Ncpus=2)
+needed=c('aricode','leidenAlg','RcppHungarian')
+install.packages(needed[!vapply(needed,requireNamespace,logical(1),quietly=TRUE)],lib='mp10_pathology_regions_v2/Rlib')
+if(!requireNamespace('BiRewire',quietly=TRUE)) BiocManager::install('BiRewire',lib='mp10_pathology_regions_v2/Rlib',ask=FALSE,update=FALSE,Ncpus=2)
+if(!requireNamespace('MUDAN',quietly=TRUE)) remotes::install_github('JEFworks/MUDAN',lib='mp10_pathology_regions_v2/Rlib',upgrade='never',dependencies=NA)
