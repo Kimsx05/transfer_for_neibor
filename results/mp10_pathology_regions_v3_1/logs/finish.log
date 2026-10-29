@@ -1,0 +1,17 @@
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_pathology_regions_v3_1/scripts/finish.py:16: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  s=pd.DataFrame(S);s.to_csv(OUT/'tables/section_summary.tsv',sep='\t',index=False);pd.concat(D,ignore_index=True).to_parquet(OUT/'tables/all_spot_labels_v3_1.parquet',index=False);pd.concat(D,ignore_index=True).to_csv(OUT/'tables/all_spot_labels_v3_1.tsv.gz',sep='\t',index=False);pd.concat(small,ignore_index=True).to_csv(OUT/'tables/small_ROI_review.tsv',sep='\t',index=False);pd.concat(gaps,ignore_index=True).to_csv(OUT/'tables/internal_gap_assessment.tsv.gz',sep='\t',index=False);pd.DataFrame(checks).to_csv(OUT/'tables/checks.tsv',sep='\t',index=False)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_pathology_regions_v3_1/scripts/finish.py:29: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  b=s.set_index('section_id').loc['GSE238145_B16'];sm=pd.concat(small);corr=audit[audit.old_rows>1]
+n_spots                     265002
+technical_geometry_cells      1574
+exact_v3                    152739
+exact_v3_1                  111325
+exact_restored                2956
+exact_newly_censored         44370
+exact_unestimated           153677
+band_200_determined         203602
+band_200_unresolved          55772
+band_only_restored           62496
+ROI_changed_spots                0
+dataset_id analysis_unit_uid                 contrast  old_rows  n_sections  identity_status_conflict                                                    analysis_unit_type_metadata             source_sections  new_rows source_region_version
+ GSE238145     GSE238145::P1 inner_minus_outer_margin         2           2                      True SOURCE_VERIFIED_PATIENT; SOURCE_VERIFIED_PATIENT_WITH_RECORDED_SOURCE_CONFLICT GSE238145_B18; GSE238145_B5         1   v3_original_regions
