@@ -1,0 +1,43 @@
+{
+  "seed": 20261029,
+  "spot_pitch_um": 100,
+  "main_half_width_um": 200,
+  "sensitivity_half_widths_um": [
+    100,
+    200,
+    300
+  ],
+  "domain_score_weights": {
+    "SpaCET_mean": 0.65,
+    "CNA_pattern_mean": 0.2,
+    "epithelial_program": 0.15,
+    "contractile_penalty": -0.45
+  },
+  "tumor_related_domain_score": 0.42,
+  "interface_related_domain_score": 0.22,
+  "tiny_domain_component_n": 5,
+  "pilot_sections": [
+    "Inhousedata_T4413900",
+    "Inhousedata_T4463209",
+    "CanDis_2026_Sample8",
+    "GSE319536_BC01",
+    "GSE285715_N1",
+    "GSE285715_N2",
+    "GSE285715_T3",
+    "GSE238145_B13"
+  ],
+  "cottrazm_sections": [
+    "Inhousedata_T4413900",
+    "GSE319536_BC01",
+    "GSE285715_T3"
+  ],
+  "normal_source_context": {
+    "GSE285715_N1": "no_supported_lesion",
+    "GSE285715_N2": "no_supported_lesion_with_residual_candidates",
+    "GSE285715_N3": "unresolved_lesion_presence"
+  },
+  "rule_status": "frozen_after_8_section_structural_pilot_review_before_MP10_summaries",
+  "roi_review_status": "computational_candidate_no_documented_pathologist_confirmation",
+  "parallel_sections": 2,
+  "MP10_source_column": "EpiMP10_Top20_AUCell"
+}
