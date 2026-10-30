@@ -1,0 +1,62 @@
+{
+  "recorded_at": "2026-10-28T20:20:44.776335+08:00",
+  "fix": "explicit full NC x NC sparse distance dimensions; keep every spot",
+  "script_sha256": "45f10e8a7e0ab6411023996d312c773214e5e5638e53400c76f3c1a8175e9ffd",
+  "qa": {
+    "distance_parity.tsv": [
+      {
+        "section": "GSE171351_A1",
+        "full_spots": "768",
+        "native_dimension": "768",
+        "patched_dimension": "768",
+        "distance_submatrix_error": "0",
+        "contact_submatrix_error": "0",
+        "triggered": "FALSE"
+      },
+      {
+        "section": "Inhousedata_T4469479",
+        "full_spots": "3917",
+        "native_dimension": "3917",
+        "patched_dimension": "3917",
+        "distance_submatrix_error": "0",
+        "contact_submatrix_error": "0",
+        "triggered": "FALSE"
+      },
+      {
+        "section": "CanDis_2026_Sample2",
+        "full_spots": "10062",
+        "native_dimension": "10061",
+        "patched_dimension": "10062",
+        "distance_submatrix_error": "0",
+        "contact_submatrix_error": "0",
+        "triggered": "TRUE"
+      }
+    ],
+    "checkpoint_validation.tsv": [
+      {
+        "section": "CanDis_2026_Sample2",
+        "features": "604",
+        "LR": "1841",
+        "checkpoint_bytes": "270497",
+        "LR_replay_exact": "TRUE",
+        "checkpoint_restore_exact": "TRUE"
+      }
+    ],
+    "native_probability_equivalence.tsv": [
+      {
+        "interaction": "BMP2_BMPR1A_ACVR2A",
+        "full_probability_permutation_equivalence_error": "0",
+        "n_spots": "4"
+      },
+      {
+        "interaction": "JAG1_NOTCH1",
+        "full_probability_permutation_equivalence_error": "0",
+        "n_spots": "4"
+      }
+    ]
+  },
+  "original_failure_attempts": 2,
+  "recovery_status": "requeued under sole scheduler after verified checkpoint and compatibility QA",
+  "preserved_running_worker_pids": true,
+  "no_spots_or_LR_removed": true
+}

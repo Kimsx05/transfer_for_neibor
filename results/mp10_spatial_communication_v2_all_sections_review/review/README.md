@@ -1,0 +1,7 @@
+# 轻量审查包
+
+根目录中文报告明示当前是partial还是final；不能从zip存在推断全量完成。
+
+包含数值表、方法、参数、脚本、全部汇总PDF，以及每dataset按可用完整评分且H/L有效切片的中位组织规模选代表：major三联和所有fine的Both图。完整High/Low/Both和300dpiPNG仍在服务器，见根figure_index及review/figure_index_review.tsv；included_in_light_review标出包内PDF。不含巨大原生位置网络/RNA，review/native_cache_inventory列其路径。
+
+代表图不依效应方向/显著性选择。脚本引用服务器绝对缓存路径，本包便于阅读和审查而不是脱离原输入独立重算所有网络。

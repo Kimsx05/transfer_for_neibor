@@ -1,0 +1,10 @@
+{
+  "n_samples": 68,
+  "max_rss_gib": 1.9591445922851562,
+  "max_process_hwm_gib": 1.9591445922851562,
+  "max_threads": 260,
+  "sampling": "5s /proc process records; BLAS/OpenMP=1; peak HWM includes pre-monitor process history",
+  "prepared_sections": 63,
+  "peak_5sec_cpu_core_equivalents": 3.692307692307744,
+  "threadpool_audit": "SciPy fast MatrixMarket spawned up to 260 total threads despite BLAS/OpenMP=1; runtime cpu sample stayed below shown peak. Final restore script explicitly sets fast MatrixMarket PARALLELISM=1 and threadpool_limits(1); no scientific inputs changed."
+}

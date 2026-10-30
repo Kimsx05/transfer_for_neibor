@@ -1,0 +1,17 @@
+{
+  "status": "complete_available",
+  "n_requested_sections": 63,
+  "n_completed_native_jobs": 126,
+  "n_strata": 18,
+  "n_failures": 0,
+  "n_not_complete": 0,
+  "native_inference_refitted": false,
+  "stratum_fields": [
+    "dataset",
+    "tissue_condition",
+    "treatment_status",
+    "score_coverage_status"
+  ],
+  "empty_intersection": "NE; no artificial zero",
+  "resume": "rerun exact command; changed cohort or retained set recomputes small aggregate only"
+}

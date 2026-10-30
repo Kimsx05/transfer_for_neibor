@@ -1,0 +1,60 @@
+{
+  "user_confirmation": "2026-10-27: MP10 19/20 coverage and unverified tissue/patient records remain included; explicitly annotate, no exclusion on these grounds",
+  "cohort_sections": 63,
+  "algorithm_tasks": 126,
+  "expected_reuse": 4,
+  "initial_new_jobs": [
+    {
+      "method": "COMMOT",
+      "section": "CanDis_2026_Sample11",
+      "spots": 577
+    },
+    {
+      "method": "SpatialCellChat",
+      "section": "GSE238145_B10",
+      "spots": 7399
+    }
+  ],
+  "initial_concurrency": 2,
+  "automatic_max_concurrency": 5,
+  "session_cpu_budget": 24,
+  "session_memory_GiB": 128,
+  "status_source": "logs/task_status.tsv",
+  "resource_source": "logs/process_tree_resources.jsonl",
+  "finalization": [
+    "scripts/common_lr.py",
+    "scripts/summarize.py",
+    "scripts/report.py"
+  ],
+  "completion_rule": "all 126 task statuses terminal, all successful or reused applicable postprocessing complete; any failed/blocked explicitly reported; never claim full inference success for failed/blocked tasks",
+  "new_spatialcellchat_workers": 3,
+  "model_task_cpu_reservation_limit": 21,
+  "session_shared_cpu_affinity_limit": 22,
+  "orchestration_review_reserved_cpu": 2,
+  "large_section_early_admission": true,
+  "project_resource_admission": "measure other project CPU/PSS; <=48CPU/200GiB combined; reserve <=80GiB for models, account quota minus running task reserves and 8GiB buffer",
+  "upgrade_reason": "User requested increased parallelism; inference inputs/parameters unchanged",
+  "preserved_existing_workers": true,
+  "model_memory_reservation_limit_GiB": 80,
+  "memory_stop_new_admission_observed_GiB": 64,
+  "disk_account_quota_guard": true,
+  "disk_safety_margin_GiB": 8,
+  "disk_task_reservation_rule": "max(0.5 GiB, spots * 0.0002 GiB)",
+  "large_model_completion_observed": {
+    "method": "SpatialCellChat",
+    "section": "GSE238145_B10",
+    "n_spots": 7399,
+    "peak_process_tree_pss_GiB": 7.2491,
+    "cache_disk_approximately_MiB": 100
+  },
+  "storage_estimate": {
+    "v2_current_GiB": 7.2,
+    "v2_final_range_GiB": [
+      20,
+      40
+    ],
+    "basis": "measured completed sparse model caches and 265002 total spots; larger unmeasured sections add uncertainty",
+    "not_a_guarantee": true
+  },
+  "user_storage_preference": "Increase account quota or free space; do not automatically delete existing files; retain quota admission guard"
+}
