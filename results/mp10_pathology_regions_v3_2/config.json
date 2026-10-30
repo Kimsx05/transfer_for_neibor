@@ -1,0 +1,29 @@
+{
+  "version": "v3.2",
+  "seed": 20261030,
+  "pilot": [
+    "GSE319536_BC18",
+    "GSE285715_T3",
+    "GSE238145_B16",
+    "GSE319536_BC01",
+    "GSE285715_N1",
+    "GSE238145_B15"
+  ],
+  "author_tumour_stroma_context": [
+    "GSE319536_BC18"
+  ],
+  "author_context_basis": "S1 same-section qualitative Tumor Cell/Tumor Stroma coexistence; no barcode transfer; others unresolved",
+  "local_score_cutoff": 0.42,
+  "local_support": "local unborrowed v3 score>=0.42 seeds inside candidates (not macro outside); seq_depth excluded; existing connected ROI body/observed internal compartments retained only if same ROI has local support",
+  "positive_outside": "connected smooth-muscle domain: SMC>=0.5, smooth genes detected mean>=3, EPI<0.8, malignant<0.2, strong CNA fraction<0.1; or inherited adjacent-sample context adjudication",
+  "macro_outer": "direct observed lesion/non-lesion-supported contact; outside component reaches external unobserved grid NOT in original full-tissue set; QC missing channel cannot establish external connection",
+  "technical_geometry": "v3.1 conservative model re-evaluated under new labels; original tissue + foreground>=0.65 + unique surrounding location/component/ROI",
+  "widths_um": [
+    100,
+    200,
+    300
+  ],
+  "pitch_um": 100,
+  "parallel_sections": 2,
+  "new_biological_analysis": false
+}
