@@ -1,0 +1,15 @@
+{
+  "version": "3.4 final",
+  "reference_dataset": "GSE319536",
+  "minimum_parent_neighborhood_fraction": 0.15,
+  "prior_weight": 1.0,
+  "parent_weight": 6.0,
+  "molecular_weight": 0.2,
+  "within_domain_edge_cost": 1.35,
+  "between_domain_edge_cost": 0.60,
+  "hard_constraint_cost": 100,
+  "enclosure_single_parent_fraction_exclusive": 0.5,
+  "transition_observed_rings": 1,
+  "widths_um": [100, 200, 300],
+  "parallel_sections": 2
+}
