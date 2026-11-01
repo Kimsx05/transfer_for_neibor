@@ -1,0 +1,45 @@
+{
+  "status": "reliable_coarse_HE_registration",
+  "n_matches": 532,
+  "n_inliers": 503,
+  "inlier_fraction": 0.9454887218045113,
+  "inlier_error_p95_author_px": 0.874888877910986,
+  "inlier_spatial_coverage": 0.8029567758592226,
+  "HE_gray_correlation": 0.9537618187493043,
+  "source_to_author_HE_affine": [
+    [
+      0.26241959310421586,
+      0.0005883100986524064,
+      0.6670016678960917
+    ],
+    [
+      -0.0005883100986524064,
+      0.26241959310421586,
+      -1.2940829378125491
+    ]
+  ],
+  "rotation_degrees": -0.1284493616800692,
+  "scale_author_px_per_source_px": 0.2624202525601909,
+  "reflection": "not detected by similarity model; unreliable fits not transferred",
+  "registration_basis": "H&E features only; spatial labels not used",
+  "section_id": "GSE319536_BC08",
+  "author_sample": "BC08",
+  "source": "SpatialBC S1; figshare file 69527807",
+  "annotation_crop": [
+    90,
+    461,
+    155,
+    155
+  ],
+  "HE_crop": [
+    247,
+    461,
+    155,
+    155
+  ],
+  "reference_form": "author-figure-derived COARSE regional reference, not original barcode truth",
+  "exclusion_buffer_author_px": 4.0,
+  "minimum_same_class_patch_author_px": 60,
+  "n_coarse_inside": 122,
+  "n_coarse_outside": 0
+}

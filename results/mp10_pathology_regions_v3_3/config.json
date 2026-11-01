@@ -1,0 +1,38 @@
+{
+  "version": "v3.3",
+  "seed": 20261030,
+  "pilot": [
+    "GSE238145_B16",
+    "GSE319536_BC01",
+    "GSE319536_BC13",
+    "GSE319536_BC18",
+    "GSE285715_T3",
+    "GSE285715_N1",
+    "GSE238145_B15"
+  ],
+  "baseline": "v3.1 candidates; both colours have the same computational epistemic status",
+  "small_roi": "57 previously identified weak borrowed ROIs: relabel to outside only with complete observed unanimous external outside and local max score<0.42; otherwise retain candidate and flag instability",
+  "author_reference": "H&E similarity registration, no label-driven fit; only buffered coarse tumour/stroma and normal stroma/urothelium interiors calibrate both sides; Others and nonbinary classes never transferred",
+  "reference_thresholds": {
+    "ratio_test": 0.75,
+    "RANSAC_author_px": 2,
+    "min_inliers": 8,
+    "min_inlier_fraction": 0.35,
+    "min_spatial_coverage": 0.12,
+    "min_HE_correlation": 0.5,
+    "min_uncertainty_radius_author_px": 4,
+    "neighborhood_same_macro_fraction": 0.7,
+    "max_opposite_macro_fraction": 0.02,
+    "min_palette_component_px": 60,
+    "uncertainty_exclusion": "distance to complement of coarse consensus >= max(4, 2*p95_HE_registration_error+2) author pixels; exact centre must retain original author macro colour"
+  },
+  "distance": "Euclidean to observable current candidate outer; biological support recorded separately, not an edge filter",
+  "widths_um": [
+    100,
+    200,
+    300
+  ],
+  "pitch_um": 100,
+  "parallel_sections": 2,
+  "new_biological_analysis": false
+}
