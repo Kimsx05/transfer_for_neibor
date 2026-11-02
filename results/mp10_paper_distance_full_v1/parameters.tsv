@@ -1,0 +1,26 @@
+parameter	value
+section_universe	frozen input manifest; section_id + full barcode
+main_score	EpiMP10_Top20_AUCell; mixed spot
+query	analysis_eligible_legacy AND MP10 available AND lesion_location != quality_excluded
+target_denominator	sum over 30 v2_30type posterior means
+CAF	Matrix_CAF + iCAF + rCAF + vCAF
+TAM	C1QC TAM + SPP1 TAM
+Treg	Treg
+conditions	P80_all; P80_all_positive; P90_all; P80_margin
+distance	center-to-center Euclidean in x_um/y_um, within section and tissue_component_id
+margin	target P80 in existing inner_margin or outer_margin
+distance_bins_um	0|(0,200]|(200,500]|(500,1000]|>1000
+minimum_pairs_correlation	3 and both variables varying
+minimum_pairs_stratified	20
+minimum_query_MP10_niche_median	5
+adjusted_pearson	complete-case same-position residual correlation: intercept, Epithelial/all30, log1p(nCount), lesion_location
+matched_model_layers	same queries, finite spot and epi, epi_score_valid
+unit_weight	equal slices on Fisher-z scale
+dataset_weight	equal contributing datasets; Fisher-z means
+gene_members	frozen pilot members, MSigDB 2026.1.Hs; 50 H, 3 C2 CP:REACTOME, 2 C7 IMMUNESIGDB
+UCell	2.14.0; maxRank 1500; average ties; chunk.size 50; ncores 1
+AddModuleScore	reused first two pilot reference sections only
+plot_font	Arial 12 pt
+plot_output	vector PDF and 300 dpi PNG white; full/panel/legend PDF where applicable
+resources	six section R workers; UCell ncores=1; BLAS/OMP=1; core plots 8 workers, program plots up to 10
+

@@ -1,0 +1,74 @@
+CanDis_2026_Sample1
+GSE171351_A1
+GSE238145_B10
+GSE285715_N1
+GSE319536_BC01
+Inhousedata_T4384654
+NPJ_sample1
+CanDis_2026_Sample10
+CanDis_2026_Sample11
+CanDis_2026_Sample12
+CanDis_2026_Sample13
+CanDis_2026_Sample2
+CanDis_2026_Sample3
+CanDis_2026_Sample4
+CanDis_2026_Sample5
+CanDis_2026_Sample6
+CanDis_2026_Sample7
+CanDis_2026_Sample8
+CanDis_2026_Sample9
+GSE171351_B1
+GSE171351_C1
+concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/concurrent/futures/process.py", line 263, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/process.py", line 212, in _process_chunk
+    return [fn(*args) for args in chunk]
+            ^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_paper_distance_full_v1/scripts/render.py", line 22, in render
+    if args.phase=="core":core(s)
+                          ^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_paper_distance_full_v1/scripts/figures.py", line 89, in core
+    catmap(a[2],l[2],d,"accepted_label",P,"Accepted R12 (original 0–8)")
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_paper_distance_full_v1/scripts/figures.py", line 76, in catmap
+    category(lg,{str(k):v for k,v in pal.items() if (d[col]==k).any()})
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_paper_distance_full_v1/scripts/figures.py", line 61, in category
+    ax.legend(handles=[Patch(facecolor=c,label=k) for k,c in pal.items()],loc="center",ncol=min(5,len(pal)),frameon=False,columnspacing=.7,handlelength=1)
+  File "/usr/lib/python3/dist-packages/matplotlib/axes/_axes.py", line 313, in legend
+    self.legend_ = mlegend.Legend(self, handles, labels, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/matplotlib/_api/deprecation.py", line 454, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/matplotlib/legend.py", line 517, in __init__
+    self._init_legend_box(handles, labels, markerfirst)
+  File "/usr/lib/python3/dist-packages/matplotlib/legend.py", line 792, in _init_legend_box
+    len, np.array_split(handles_and_labels, self._ncols)):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/numpy/lib/shape_base.py", line 770, in array_split
+    raise ValueError('number sections must be larger than 0.') from None
+ValueError: number sections must be larger than 0.
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_paper_distance_full_v1/scripts/render.py", line 28, in <module>
+    for sec in pool.map(render,args.sections or secs):print(sec,flush=True)
+  File "/usr/lib/python3.12/concurrent/futures/process.py", line 642, in _chain_from_iterable_of_lists
+    for element in iterable:
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+ValueError: number sections must be larger than 0.
