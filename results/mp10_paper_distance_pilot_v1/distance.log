@@ -1,0 +1,4 @@
+/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_paper_distance_pilot_v1/scripts/distance.py:19: DtypeWarning: Columns (41) have mixed types. Specify dtype option on import or set low_memory=False.
+  return pd.concat([g[g.section_id.isin(sections)] for g in pd.read_csv(path,sep="\t",chunksize=20000)],ignore_index=True)
+/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_paper_distance_pilot_v1/scripts/distance.py:19: DtypeWarning: Columns (41) have mixed types. Specify dtype option on import or set low_memory=False.
+  return pd.concat([g[g.section_id.isin(sections)] for g in pd.read_csv(path,sep="\t",chunksize=20000)],ignore_index=True)
