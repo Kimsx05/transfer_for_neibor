@@ -1,0 +1,51 @@
+{
+  "seed": 20261103,
+  "max_workers": 6,
+  "BLAS_threads": 1,
+  "main_score": "EpiMP10_Top20_AUCell",
+  "UCell_version": "2.14.0",
+  "maxRank": 1500,
+  "ties_method": "average",
+  "chunk_size": 50,
+  "n_main_programs": 57,
+  "n_sensitivity_programs": 23,
+  "P95": 0.95,
+  "pEMT_active_percentile": 0.75,
+  "front_band": [
+    -200,
+    0
+  ],
+  "near_inner_band": [
+    -500,
+    -200
+  ],
+  "ring_groups": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      6,
+      10
+    ]
+  ],
+  "spatial_block_um_front": 500,
+  "spatial_block_um_neighborhood": 2000,
+  "min_spatial_blocks": 8,
+  "hierarchical_bootstrap": 1999,
+  "front_match_caliper_um": 200,
+  "distance_unit": "nominal Visium 100 um pitch",
+  "sc_sample_subtype_cap": 60
+}

@@ -1,0 +1,11 @@
+input	path_or_manifest_pattern	fields	version
+frozen_spots	/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_paper_distance_full_v1/spots/<section_id>.parquet	section_id + full barcode; query; EpiMP10_Top20_AUCell; 55 UCell; posterior mean	full_v1
+manifest	/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_paper_distance_full_v1/tables/input_manifest.tsv	63 sections, raw RNA paths, images and identities	full_v1
+front	/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_pathology_regions_v3_4_final/final_spot_labels.tsv.gz	signed_distance_um, lesion_location, exact_distance_status	v3.4_final
+niche	/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_ring_harmony_v3/03_main/SAMPLE_R12_LEIDEN/labels.parquet	spot_uid, accepted_label 0–8; missing NA in full_v1	SAMPLE_R12_LEIDEN
+niche_R1_R2_profile	/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_paper_distance_full_v1/tables/source_R12_profiles.tsv	existing ring profile, not center mean	SAMPLE_R12_LEIDEN
+niche_palette	/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_niche_visualization_v1/data_tables/niche_palette.tsv	accepted_label, niche(+1 display), color	accepted
+original_graph	/home/data/t070721/codex_workspace/Bladder Metabolism/neighborhood_spottedpy_v8/01_geometry/<section_id>/R1.npz	nodes barcode ordering; observed hex adjacency	v8
+patient_crosswalk	/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_cnv_regions_interface_v1/input_review/section_identity_crosswalk.tsv	analysis_unit_uid, patient_uid, eligibility statuses	full_v1 inherited
+gene_sets	/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_paper_distance_full_v1/tables/gene_sets.tsv.gz	gs_name, gene_symbol, db_version	MSigDB 2026.1.Hs
+single_cell	/home/data/t070721/codex_workspace/Bladder Metabolism/subtype/v2/reference_training_v2/04_gene_harmonization/reference_v2_raw_counts_minimally_harmonized.h5ad	raw sparse X; reference_celltype_v2; orig.ident; dataset	reference_v2
