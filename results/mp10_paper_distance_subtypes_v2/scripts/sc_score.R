@@ -1,0 +1,13 @@
+.libPaths(c(file.path(Sys.getenv("HOME"),"R/x86_64-pc-linux-gnu-library/4.5"),.libPaths()))
+library(Matrix)
+library(data.table)
+setDTthreads(2)
+o="mp10_paper_distance_subtypes_v2"
+x=as(readMM(file.path(o,"sc_counts.mtx")),"CsparseMatrix")
+rownames(x)=readLines(file.path(o,"sc_genes.txt"))
+m=fread(file.path(o,"tables/sc_cells.tsv"));colnames(x)=m$cell
+gs=fread("mp10_paper_distance_full_v1/tables/gene_sets.tsv.gz")
+sets=lapply(split(gs$gene_symbol,gs$gs_name),function(z)intersect(unique(z),rownames(x)))
+u=UCell::ScoreSignatures_UCell(x,features=sets,name=NULL,ncores=1,chunk.size=50,maxRank=1500)
+z=cbind(m,as.data.table(u[m$cell,]))
+fwrite(z[,lapply(.SD,median),by=.(sample,type,dataset),.SDcols=names(sets)],file.path(o,"tables/sc_sample_programs.tsv"),sep="\t")
