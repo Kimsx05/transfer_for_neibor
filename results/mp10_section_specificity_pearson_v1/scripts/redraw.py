@@ -1,0 +1,15 @@
+from report import *
+import argparse
+p=argparse.ArgumentParser();p.add_argument('--section',required=True,choices=M.section_id.tolist());p.add_argument('--candidate',required=True,choices=CAND);p.add_argument('--program',required=True,choices=P);p.add_argument('--method',choices=['AddModuleScore_SCT_data','UCell_RNA'],default='AddModuleScore_SCT_data');p.add_argument('--range',choices=['full_range','common_support','common_support_0_1000'],default='common_support');v=p.parse_args();d=pd.read_parquet(O/'spots'/f'{v.section}.parquet');ap=O/'tables'/f'{v.section}_pearson_q.parquet';a=pd.read_parquet(ap if ap.exists() else O/'tables'/f'{v.section}_pearson.parquet');normal=M.set_index('section_id').loc[v.section,'source_context']=='adjacent_normal_source';rr='full_range' if normal else v.range
+z=a[a.candidate_type.eq(v.candidate)&a.program.eq(v.program)&a.score_method.eq(v.method)&a.range_type.eq(rr)];x=d['d_candidate__'+v.candidate].to_numpy();y=d['AMS_SCT__'+v.program if v.method=='AddModuleScore_SCT_data' else v.program].to_numpy();valid=np.isfinite(d['AMS_SCT__'+v.program])&np.isfinite(d[v.program])&np.isfinite(x);groups=[('normal_Epi',d['query'])] if normal else [('P95',d.MP10_P95),('nonP95',d.tumor_epi&~d.MP10_P95)]
+if not normal and rr!='full_range':
+ dp=O/'tables'/f'{v.section}_delta_q.parquet';de=pd.read_parquet(dp if dp.exists() else O/'tables'/f'{v.section}_delta.parquet');de=de[de.candidate_type.eq(v.candidate)&de.program.eq(v.program)&de.score_method.eq(v.method)&de.range_type.eq(rr)];dr=de.iloc[0];valid&=(x>=dr.common_min_um)&(x<=dr.common_max_um)
+fig,axs=plt.subplots(1,len(groups),figsize=(8*len(groups),6),squeeze=False,sharex=True,sharey=True);key=[]
+for j,(pop,mask) in enumerate(groups):
+ ax=axs[0,j];ok=valid&mask;ax.scatter(x[ok],y[ok],s=18,c=np.where(x[ok]==0,'#ff9900',COL[j]),alpha=.65,linewidths=0)
+ if ok.sum()>=2 and np.std(x[ok])>0:
+  xx=np.array([x[ok].min(),x[ok].max()]);ax.plot(xx,np.polyval(np.polyfit(x[ok],y[ok],1),xx),color='black',lw=1.2)
+ row=z[z.population.eq(pop)].iloc[0];ax.set_title(pop+f' | r={row.pearson_r:.3f}, P={row.p_pearson:.3g}, n={row.n_spots}\n95% spatial CI [{row.spatial_ci_low:.3f}, {row.spatial_ci_high:.3f}]');ax.set_xlabel('Nearest candidate P95 core (μm)');ax.set_ylabel(v.method)
+if not normal and rr!='full_range':
+ fig.text(.5,.11,f'delta r={dr.delta_r:.3f} | spatial CI [{dr.spatial_ci_low:.3f}, {dr.spatial_ci_high:.3f}] | spatial P={dr.p_spatial_fisher_z:.3g} | q={getattr(dr,"q_spatial_across_sections",np.nan):.3g}\nCommon support {dr.common_min_um:.1f}–{dr.common_max_um:.1f} μm; ordinary Pearson P above does not adjust spatial dependence',ha='center',va='center',fontsize=11)
+fig.suptitle(v.section+' / '+v.candidate+' / '+short(v.program)+'\n'+rr+'; no display clipping');fig.subplots_adjust(top=.78,bottom=.28);leg=fig.add_axes([.3,.01,.4,.05]);leg.axis('off');leg.legend(handles=[Patch(color='#ff9900',label='distance 0')]+[Patch(color=COL[j],label=p) for j,(p,m) in enumerate(groups)],ncol=3,frameon=False);name='redrawn/'+v.section+'__'+v.candidate.replace('/','-')+'__'+v.program+'__'+v.method+'__'+rr;print(export(fig,name,[leg]))

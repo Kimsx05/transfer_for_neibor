@@ -1,0 +1,40 @@
+pearson 2691780
+delta 887400
+closeness 1740
+MP10_candidate 1827
+/usr/lib/python3/dist-packages/numpy/lib/nanfunctions.py:1879: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_p95_front_programs_v1/scripts/analyze.py:17: RuntimeWarning: Mean of empty slice
+  a=np.asarray(a,float);sd=np.nanstd(a,axis=0);return (a-np.nanmean(a,axis=0))/np.where(sd>1e-12,sd,1)
+/usr/lib/python3/dist-packages/numpy/lib/nanfunctions.py:1879: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_p95_front_programs_v1/scripts/analyze.py:17: RuntimeWarning: Mean of empty slice
+  a=np.asarray(a,float);sd=np.nanstd(a,axis=0);return (a-np.nanmean(a,axis=0))/np.where(sd>1e-12,sd,1)
+/usr/lib/python3/dist-packages/numpy/lib/nanfunctions.py:1879: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_p95_front_programs_v1/scripts/analyze.py:17: RuntimeWarning: Mean of empty slice
+  a=np.asarray(a,float);sd=np.nanstd(a,axis=0);return (a-np.nanmean(a,axis=0))/np.where(sd>1e-12,sd,1)
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_section_specificity_pearson_v1/scripts/aggregate.py", line 100, in <module>
+    a=combine('pearson');de=combine('delta');combine('closeness');combine('MP10_candidate');adjusted_delta(a,de);heterogeneity(a,de);del a,de;context_tables();coverage();print('AGGREGATION COMPLETE',flush=True)
+                                                                                                                                              ^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_section_specificity_pearson_v1/scripts/aggregate.py", line 74, in context_tables
+    v=pd.concat([pd.read_csv(O/'tables'/f'{s}_{name}.tsv.gz',sep='\t') for s in M.section_id],ignore_index=True)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/pandas/io/parsers/readers.py", line 948, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/pandas/io/parsers/readers.py", line 611, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/pandas/io/parsers/readers.py", line 1448, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/pandas/io/parsers/readers.py", line 1723, in _make_engine
+    return mapping[engine](f, **self.options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/pandas/io/parsers/c_parser_wrapper.py", line 93, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/parsers.pyx", line 586, in pandas._libs.parsers.TextReader.__cinit__
+pandas.errors.EmptyDataError: No columns to parse from file
