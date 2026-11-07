@@ -1,0 +1,8 @@
+source(file.path(commandArgs(TRUE)[1],'code/common.R'))
+if(file.exists(file.path(root,'reference/blca_trained.rds')))quit(save='no')
+r<-readRDS(file.path(old,'reference/reference.rds'));meta<-fread(file.path(old,'reference/model_cells.tsv.gz'));stopifnot(ncol(r)==44896,identical(colnames(r[['RNA']]),meta$cell_id),all(r$major==meta$major))
+ref<-LayerData(r,assay='RNA',layer='data');labels<-r$major;mapping<-as.data.table(r[[]])[,.(n=.N),by=.(reference_celltype_v2,major_original,major)];fwrite(mapping,file.path(root,'reference/blca_label_mapping.tsv'),sep='\t');fwrite(data.table(major=labels)[,.(reference_cells=.N),by=major],file.path(root,'reference/blca_class_counts.tsv'),sep='\t')
+writeLines(rownames(ref),file.path(root,'reference/blca_genes.txt'));rm(r);gc()
+trained<-trainSingleR(ref,labels=labels,test.genes=rownames(ref),de.method='wilcox',de.n=50,aggr.ref=TRUE,num.threads=4,BPPARAM=SerialParam())
+saveRDS(trained,file.path(root,'reference/blca_trained.rds'));writeLines(capture.output(str(trained,max.level=2)),file.path(root,'reference/blca_model_structure.txt'));write_json(list(reference_cells=44896,genes=nrow(ref),labels=sort(unique(labels)),de.method='wilcox',de.n=50,aggr.ref=TRUE,seed=123,query='all original qc_keep_analysis cells, not clusters or sketch',source='../hd_major_annotation_v1/reference/reference.rds'),file.path(root,'reference/blca_manifest.json'),auto_unbox=TRUE,pretty=TRUE)
+writeLines(capture.output(sessionInfo()),file.path(root,'reference/sessionInfo.txt'));cat('BLCA_TRAINED\n')

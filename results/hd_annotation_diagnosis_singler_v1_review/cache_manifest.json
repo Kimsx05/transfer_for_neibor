@@ -1,0 +1,82 @@
+{
+  "input_files": {
+    "hd_major_annotation_v1/reference/reference.rds": {
+      "bytes": 549968851,
+      "mtime_ns": 1793974422720528522
+    },
+    "hd_major_annotation_v1/reference/marker_panels.rds": {
+      "bytes": 528,
+      "mtime_ns": 1793975585851937896
+    },
+    "hd_major_annotation_v1/Cervilla/seurat.rds": {
+      "bytes": 486494147,
+      "mtime_ns": 1793976806424045427
+    },
+    "hd_major_annotation_v1/Cervilla/tables/analysis_metadata.tsv.gz": {
+      "bytes": 27045010,
+      "mtime_ns": 1793976710131430564
+    },
+    "hd_major_annotation_v1/Cervilla/tables/marker_evidence.tsv.gz": {
+      "bytes": 4801083,
+      "mtime_ns": 1793975577843761140
+    },
+    "hd_major_annotation_v1/Cervilla/tables/annotations.tsv.gz": {
+      "bytes": 3663846,
+      "mtime_ns": 1793976472130624026
+    },
+    "hd_major_annotation_v1/Cervilla/tables/confidence_support_bands.tsv": {
+      "bytes": 550,
+      "mtime_ns": 1793976467166620642
+    },
+    "hd_major_annotation_v1/Cervilla/tables/gene_identity.tsv": {
+      "bytes": 405475,
+      "mtime_ns": 1793975566043500210
+    },
+    "hd_major_annotation_v1/D1_Johnson/seurat.rds": {
+      "bytes": 867012939,
+      "mtime_ns": 1793976892060697731
+    },
+    "hd_major_annotation_v1/D1_Johnson/tables/analysis_metadata.tsv.gz": {
+      "bytes": 55752499,
+      "mtime_ns": 1793976717065470146
+    },
+    "hd_major_annotation_v1/D1_Johnson/tables/marker_evidence.tsv.gz": {
+      "bytes": 11782394,
+      "mtime_ns": 1793975609427456775
+    },
+    "hd_major_annotation_v1/D1_Johnson/tables/annotations.tsv.gz": {
+      "bytes": 9238494,
+      "mtime_ns": 1793976484508635219
+    },
+    "hd_major_annotation_v1/D1_Johnson/tables/confidence_support_bands.tsv": {
+      "bytes": 565,
+      "mtime_ns": 1793976473853625350
+    },
+    "hd_major_annotation_v1/D1_Johnson/tables/gene_identity.tsv": {
+      "bytes": 405475,
+      "mtime_ns": 1793975585850937874
+    }
+  },
+  "core_scripts": {
+    "diagnose_rules.py": "b7a09aac0f0a9377f08a627a45469dabf8ea4a4776dfa19e9991a93a2fa6bb42",
+    "train_blca.R": "8fc0d3f12a0b73b4bce38afe3f08c8a81981da4f9d593b5833289942c19063c7",
+    "train_hpca.R": "cd2be89d52ac9fa559ed9b181ad05a79914746a10d5cb9fae91c6908d56979db",
+    "predict_section.R": "990905a3af73d4e12ab2f0ce31424d09d7e6a6a35480dbf51c5150b80dc6277a",
+    "compare.py": "355b87c4e9e21d1fbfb51225505ecb566b28b6ed90ca22c81956318f240bfc6c",
+    "marker_summary.R": "412bb6e3cfde3208aa36e2cc0fb8e25e0676443426e457cd7d787ec8d0253a5d",
+    "plots.R": "756e00411a519e733f66bd336f09ffbe6827d5422c16e46c10ea813f4a21ad3d",
+    "validate.R": "700661ff5e5b95b5bcb5b50856949f5ea0a6155e2a75096bc2b06ad5d11cd610",
+    "focused_evidence.R": "9d91bb27088ebefd612b966f05c960a13dbf37d1d91d823100bf99b3c946997f",
+    "review_evidence.py": "f5519a24c621d2d1608628ebabb0d6bf972de78e565a9204123b15ce96593aee"
+  },
+  "parameters": {
+    "seed": 123,
+    "threads": 4,
+    "chunk_size": 5000,
+    "BLCA_wilcox_de_n": 50,
+    "BLCA_aggr_ref": true,
+    "HPCA_classic": true,
+    "prune_after_whole_section_merge": true,
+    "prune": "nmads=3,min.diff.med=-Inf,min.diff.next=0"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "section": "Cervilla",
+  "n": 93593,
+  "UMI": 60670091,
+  "original_labels_counts_QC_clusters_UMAP_unchanged": true,
+  "attach_by_ID_verified": true,
+  "checks": {
+    "blca": {
+      "n": 93593,
+      "evaluated": 93528,
+      "pruning_reproduced": true,
+      "score_columns": ["B", "Endothelial", "Epithelial", "Fibroblast", "Mast", "Mural", "Myeloid", "Plasma", "T/NK"]
+    },
+    "hpca": {
+      "n": 93593,
+      "evaluated": 93106,
+      "pruning_reproduced": true,
+      "score_columns": ["B", "Endothelial", "Epithelial", "Fibroblast", "Myeloid", "T/NK"]
+    }
+  }
+}

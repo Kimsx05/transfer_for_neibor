@@ -1,0 +1,21 @@
+{
+  "section": "D1_Johnson",
+  "n": 188237,
+  "UMI": 127719635,
+  "original_labels_counts_QC_clusters_UMAP_unchanged": true,
+  "attach_by_ID_verified": true,
+  "checks": {
+    "blca": {
+      "n": 188237,
+      "evaluated": 187903,
+      "pruning_reproduced": true,
+      "score_columns": ["B", "Endothelial", "Epithelial", "Fibroblast", "Mast", "Mural", "Myeloid", "Plasma", "T/NK"]
+    },
+    "hpca": {
+      "n": 188237,
+      "evaluated": 186971,
+      "pruning_reproduced": true,
+      "score_columns": ["B", "Endothelial", "Epithelial", "Fibroblast", "Myeloid", "T/NK"]
+    }
+  }
+}
