@@ -1,0 +1,9 @@
+module	path	columns
+A/B	/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_section_specificity_pearson_v1/tables/context85_effects.parquet	analysis,origin,r,partial_r,n,blocks; old beta P/CI not reused
+C1	/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_section_specificity_pearson_v1/tables/pearson_all.parquet	pearson_r,spatial_fisher_z_se,n_spots,partial_r_epi_depth,range_type,source q; q_pearson_within_section, q_pearson_across_sections retained at source
+C2	/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_section_specificity_pearson_v1/tables/delta_all.parquet	r_P95,r_nonP95,delta_r,joint spatial CI,source spatial q; q_spatial_within_section, q_spatial_across_sections retained at source
+C3	/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_section_specificity_pearson_v1/tables/closeness_all.tsv.gz	mean/median/zero/matched differences; matched source descriptive
+C4	/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_section_specificity_pearson_v1/tables/MP10_candidate_all.tsv.gz	all frozen Epi Pearson and partial r
+niche	/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_section_specificity_pearson_v1/tables/niche_counts_all.tsv.gz	scope,population,n_labelled,n_unlabelled,n_niche,fraction
+state	/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_p95_front_programs_v1/tables/<section>_rings.tsv.gz	R0 Epi P95/control means; new5_reference_rings appended
+composition	/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_paper_distance_full_v1/tables/region_composition.tsv	disjoint lesion_location region mean fractions weighted by n_valid

@@ -1,0 +1,6 @@
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_dataset_distance_heterogeneity_v1/scripts/search.py:16: RuntimeWarning: invalid value encountered in divide
+  mus=mu[valid][:,ix];vv=va[valid][:,ix];nn=n[valid][:,ix];missing=mi[valid][:,ix].sum(1);mean=mus.mean(1);cs=(vv/nn).sum(1)/k**2;df=(vv/nn).sum(1)**2/np.sum((vv/nn)**2/(nn-1),axis=1);se=np.sqrt(cs);eligible=(missing==0)&(nn>=2).all(1)&~descriptive[valid]&np.isfinite(se)&(se>0)
+search threshold 0 endpoints 1033 rows 131191
+search threshold 10 endpoints 18386 rows 2466213
+search threshold 30 endpoints 9628 rows 3582729
+search complete 3582729
