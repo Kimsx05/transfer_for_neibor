@@ -1,0 +1,26 @@
+{
+  "section": "D1_Johnson",
+  "version": "2.2.1",
+  "mode": "doublet",
+  "model_limit": "fits one or two dominant types; not a maximum true cell count",
+  "reference_input": 44896,
+  "reference_retained": 44896,
+  "ROI_bins": 4460,
+  "ROI_UMI": 786929,
+  "ROI_QC_bins": 4250,
+  "fitted_bins": 2532,
+  "fitted_UMI": 730470,
+  "UMI_min": 100,
+  "counts_MIN": 10,
+  "UMI_min_sigma": 300,
+  "statuses": {
+    "below_UMI_min100": 1718,
+    "doublet_certain": 376,
+    "doublet_uncertain": 275,
+    "not_in_bin_QC": 210,
+    "reject": 291,
+    "singlet": 1590
+  },
+  "ROI_outside": "not_tested",
+  "projected": false
+}

@@ -1,0 +1,134 @@
+            used   (Mb) gc trigger   (Mb)  max used   (Mb)
+Ncells   9034955  482.6   16581322  885.6  16581322  885.6
+Vcells 197721944 1508.5  607561180 4635.4 740793681 5651.9
+Normalizing layer: counts
+Performing log-normalization
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Finding variable features for layer counts
+Calculating gene variances
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Calculating feature variances of standardized and clipped values
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Calcuating Leverage Score
+Running LeverageScore for layer data
+No variable features were found in data. Falling back to variable features from counts
+sampling 5000 cells for random sketching
+Performing QR decomposition
+Performing random projection
+Attempting to cast layer counts to dgCMatrix
+Attempting to cast layer data to dgCMatrix
+Finding variable features for layer counts
+Calculating gene variances
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Calculating feature variances of standardized and clipped values
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Centering and scaling data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |=======================                                               |  33%  |                                                                              |===============================================                       |  67%  |                                                                              |======================================================================| 100%
+PCsketch_ 1 
+Positive:  ENSG00000168542, ENSG00000211592, ENSG00000108821, ENSG00000011465, ENSG00000113140, ENSG00000164692, ENSG00000211896, ENSG00000139329, ENSG00000107317, ENSG00000163359 
+	   ENSG00000142173, ENSG00000211899, ENSG00000087245, ENSG00000130635, ENSG00000211895, ENSG00000106624, ENSG00000125730, ENSG00000038427, ENSG00000133048, ENSG00000142156 
+	   ENSG00000211897, ENSG00000121966, ENSG00000143387, ENSG00000133110, ENSG00000145423, ENSG00000175899, ENSG00000187498, ENSG00000227507, ENSG00000132465, ENSG00000275385 
+Negative:  ENSG00000163220, ENSG00000163993, ENSG00000163435, ENSG00000129353, ENSG00000127616, ENSG00000137699, ENSG00000204616, ENSG00000143546, ENSG00000110492, ENSG00000143320 
+	   ENSG00000153292, ENSG00000135480, ENSG00000121858, ENSG00000213983, ENSG00000262406, ENSG00000102554, ENSG00000165140, ENSG00000132170, ENSG00000079999, ENSG00000142453 
+	   ENSG00000162545, ENSG00000137648, ENSG00000103811, ENSG00000130816, ENSG00000133135, ENSG00000079805, ENSG00000105281, ENSG00000132746, ENSG00000101443, ENSG00000019186 
+PCsketch_ 2 
+Positive:  ENSG00000205420, ENSG00000186081, ENSG00000186847, ENSG00000196754, ENSG00000128422, ENSG00000197747, ENSG00000126709, ENSG00000065618, ENSG00000185479, ENSG00000096696 
+	   ENSG00000120708, ENSG00000164924, ENSG00000137975, ENSG00000058085, ENSG00000114270, ENSG00000117525, ENSG00000165949, ENSG00000164086, ENSG00000062038, ENSG00000135046 
+	   ENSG00000186832, ENSG00000150687, ENSG00000125148, ENSG00000019549, ENSG00000283992, ENSG00000187608, ENSG00000149948, ENSG00000041982, ENSG00000053747, ENSG00000196878 
+Negative:  ENSG00000135480, ENSG00000204616, ENSG00000153292, ENSG00000163435, ENSG00000262406, ENSG00000165140, ENSG00000163993, ENSG00000148671, ENSG00000132170, ENSG00000151715 
+	   ENSG00000137709, ENSG00000100867, ENSG00000139998, ENSG00000213983, ENSG00000184254, ENSG00000137648, ENSG00000101443, ENSG00000185432, ENSG00000089057, ENSG00000118849 
+	   ENSG00000125257, ENSG00000164120, ENSG00000112902, ENSG00000178935, ENSG00000133321, ENSG00000088386, ENSG00000143653, ENSG00000144908, ENSG00000167653, ENSG00000158786 
+PCsketch_ 3 
+Positive:  ENSG00000188508, ENSG00000186832, ENSG00000143546, ENSG00000189001, ENSG00000185479, ENSG00000169469, ENSG00000167656, ENSG00000124102, ENSG00000121742, ENSG00000283992 
+	   ENSG00000096696, ENSG00000165474, ENSG00000057149, ENSG00000164687, ENSG00000134757, ENSG00000163220, ENSG00000148346, ENSG00000181458, ENSG00000272398, ENSG00000130487 
+	   ENSG00000121552, ENSG00000167757, ENSG00000124107, ENSG00000161249, ENSG00000081277, ENSG00000137959, ENSG00000162366, ENSG00000137975, ENSG00000185499, ENSG00000143320 
+Negative:  ENSG00000164692, ENSG00000108821, ENSG00000168542, ENSG00000113140, ENSG00000139329, ENSG00000011465, ENSG00000130635, ENSG00000087245, ENSG00000163359, ENSG00000142173 
+	   ENSG00000038427, ENSG00000106624, ENSG00000142156, ENSG00000186340, ENSG00000115414, ENSG00000149591, ENSG00000133110, ENSG00000099953, ENSG00000143387, ENSG00000163453 
+	   ENSG00000182492, ENSG00000187498, ENSG00000204262, ENSG00000102265, ENSG00000154096, ENSG00000101335, ENSG00000137573, ENSG00000145423, ENSG00000087116, ENSG00000134871 
+PCsketch_ 4 
+Positive:  ENSG00000106366, ENSG00000058085, ENSG00000196878, ENSG00000005884, ENSG00000196754, ENSG00000161888, ENSG00000053747, ENSG00000135318, ENSG00000262406, ENSG00000137801 
+	   ENSG00000149948, ENSG00000065618, ENSG00000019186, ENSG00000188153, ENSG00000186847, ENSG00000041982, ENSG00000114270, ENSG00000105974, ENSG00000105971, ENSG00000117525 
+	   ENSG00000184357, ENSG00000198910, ENSG00000120708, ENSG00000197565, ENSG00000142453, ENSG00000115221, ENSG00000197256, ENSG00000184254, ENSG00000150630, ENSG00000130816 
+Negative:  ENSG00000188508, ENSG00000164266, ENSG00000169469, ENSG00000105668, ENSG00000189001, ENSG00000143546, ENSG00000148346, ENSG00000124102, ENSG00000167653, ENSG00000143412 
+	   ENSG00000173267, ENSG00000118849, ENSG00000130203, ENSG00000142973, ENSG00000165474, ENSG00000162366, ENSG00000162896, ENSG00000163220, ENSG00000118785, ENSG00000185499 
+	   ENSG00000163221, ENSG00000129538, ENSG00000121742, ENSG00000090382, ENSG00000159189, ENSG00000173372, ENSG00000137959, ENSG00000164120, ENSG00000140519, ENSG00000143217 
+PCsketch_ 5 
+Positive:  ENSG00000163220, ENSG00000143546, ENSG00000130203, ENSG00000188508, ENSG00000169469, ENSG00000211592, ENSG00000173372, ENSG00000211899, ENSG00000159189, ENSG00000275385 
+	   ENSG00000090382, ENSG00000173369, ENSG00000189001, ENSG00000163221, ENSG00000277734, ENSG00000100979, ENSG00000102879, ENSG00000130592, ENSG00000057149, ENSG00000185811 
+	   ENSG00000211772, ENSG00000107317, ENSG00000104894, ENSG00000169245, ENSG00000133048, ENSG00000118785, ENSG00000140968, ENSG00000186832, ENSG00000169442, ENSG00000129538 
+Negative:  ENSG00000164266, ENSG00000105668, ENSG00000143412, ENSG00000167653, ENSG00000173267, ENSG00000145692, ENSG00000134240, ENSG00000171431, ENSG00000131771, ENSG00000164120 
+	   ENSG00000196542, ENSG00000162896, ENSG00000148671, ENSG00000134398, ENSG00000109084, ENSG00000187498, ENSG00000110799, ENSG00000143248, ENSG00000146674, ENSG00000141736 
+	   ENSG00000130300, ENSG00000124429, ENSG00000186526, ENSG00000122035, ENSG00000138413, ENSG00000164379, ENSG00000121068, ENSG00000172889, ENSG00000134871, ENSG00000001084 
+Computing nearest neighbor graph
+Computing SNN
+Modularity Optimizer version 1.3.0 by Ludo Waltman and Nees Jan van Eck
+
+Number of nodes: 50000
+Number of edges: 1629983
+
+Running Louvain algorithm...
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Maximum modularity in 10 random starts: 0.8705
+Number of communities: 16
+Elapsed time: 17 seconds
+Warning: The following arguments are not used: n.threads
+Warning: The default method for RunUMAP has changed from calling Python UMAP via reticulate to the R-native UWOT using the cosine metric
+To use Python UMAP via reticulate, set umap.method to 'umap-learn' and metric to 'correlation'
+This message will be shown once per session
+UMAP will return its model
+14:03:07 UMAP embedding parameters a = 0.9922 b = 1.112
+14:03:07 Read 50000 rows and found 30 numeric columns
+14:03:07 Using Annoy for neighbor search, n_neighbors = 30
+14:03:07 Building Annoy index with metric = cosine, n_trees = 50
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+14:03:17 Writing NN index file to temp file /home/data/t070721/tmpdir/RtmpJkNAJ3/file2c0faa2ec57bb8
+14:03:17 Searching Annoy index using 1 thread, search_k = 3000
+14:03:38 Annoy recall = 91.47%
+14:03:39 Commencing smooth kNN distance calibration using 1 thread with target n_neighbors = 30
+14:03:39 258 smooth knn distance failures
+14:03:41 Initializing from normalized Laplacian + noise (using RSpectra)
+14:03:44 Commencing optimization for 200 epochs, with 2430986 positive edges
+14:03:44 Using rng type: pcg
+Using method 'umap'
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+14:04:07 Optimization finished
+pca.full is not in the object. Data from all cells will be projected to pca.sketch
+Projecting cell embeddings
+Finding sketch neighbors
+Finding sketch weight matrix
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Transfering refdata from sketch
+Projection to sketch umap
+Running UMAP projection
+14:07:26 Read 364805 rows
+14:07:26 Processing block 1 of 1
+14:07:27 Commencing smooth kNN distance calibration using 1 thread with target n_neighbors = 30
+14:07:29 8520 smooth knn distance failures
+14:07:30 Initializing by weighted average of neighbor coordinates using 1 thread
+14:07:35 Commencing optimization for 67 epochs, with 10924586 positive edges
+Using method 'umap'
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+14:08:08 Finished
+Warning message:
+Keys should be one or more alphanumeric characters followed by an underscore, setting key from full.umap.sketch to fullumapsketch_ 
+STRUCTURE_COMPLETE D1_Johnson 364805 

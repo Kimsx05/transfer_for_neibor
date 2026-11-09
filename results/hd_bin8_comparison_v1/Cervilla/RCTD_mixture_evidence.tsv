@@ -1,0 +1,16 @@
+roi	subset	n	fitted	epi_fib_pair	epi_fib_doublet_certain	epi_fib_doublet_uncertain
+dense	all	1024	1023	168	28	18
+dense	epi_fib_reference_disagreement	40	40	27	9	6
+dense	epi_fib_ge2	159	159	90	18	13
+edge	all	836	0	0	0	0
+edge	epi_fib_reference_disagreement	43	0	0	0	0
+edge	epi_fib_ge2	2	0	0	0	0
+far_UMI_hotspot	all	1024	1018	534	201	83
+far_UMI_hotspot	epi_fib_reference_disagreement	81	81	71	44	14
+far_UMI_hotspot	epi_fib_ge2	648	648	445	190	80
+small_nuclei	all	661	67	27	0	1
+small_nuclei	epi_fib_reference_disagreement	51	9	8	0	0
+small_nuclei	epi_fib_ge2	9	7	7	0	0
+stroma	all	1024	163	118	3	5
+stroma	epi_fib_reference_disagreement	83	22	21	1	0
+stroma	epi_fib_ge2	76	50	43	3	1

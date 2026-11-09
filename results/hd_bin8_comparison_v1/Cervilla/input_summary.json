@@ -1,0 +1,35 @@
+{
+  "section": "Cervilla",
+  "input_kind": "native_square_008um",
+  "matrix_path": "analysis/hd_bin8_comparison_v1/Cervilla/native8/filtered_feature_bc_matrix.h5",
+  "genes": 18085,
+  "before_bins": 297675,
+  "before_UMI": 64528669,
+  "QC_bins": 268924,
+  "QC_UMI": 64443819,
+  "supplied2_UMI": 64431796,
+  "shared_grid_2um_UMI": 64431796,
+  "supplied2_outside_8grid_UMI": 0,
+  "native8_shared_grid_UMI": 64528669,
+  "native8_only_grid_UMI": 0,
+  "native_minus_supplied_mask_UMI": 96873,
+  "QC_common2_UMI": 64348326,
+  "QC_cell_unassigned_UMI": 3707867,
+  "QC_cell_analysis_UMI": 60626009,
+  "partial_coverage_bins": 4937,
+  "grid_center_max_error_pixels": 0.022879334801473306,
+  "per_gene_2um_aggregation_conserved": true,
+  "grid_origin": [
+    0,
+    0
+  ],
+  "physical_mpp": 0.8636122748145504,
+  "normalization": "not yet; raw counts only",
+  "fixed_roi_names": [
+    "dense",
+    "stroma",
+    "edge",
+    "small_nuclei",
+    "far_UMI_hotspot"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "gene_cutoff": 0.000125,
+  "fc_cutoff": 0.5,
+  "gene_cutoff_reg": 0.0002,
+  "fc_cutoff_reg": 0.75,
+  "UMI_min": 100,
+  "UMI_min_sigma": 300,
+  "max_cores": 4,
+  "N_epoch": 8,
+  "N_X": 50000,
+  "K_val": 100,
+  "N_fit": 1000,
+  "N_epoch_bulk": 30,
+  "MIN_CHANGE_BULK": 0.0001,
+  "MIN_CHANGE_REG": 0.001,
+  "UMI_max": 20000000,
+  "counts_MIN": 10,
+  "MIN_OBS": 3,
+  "MAX_MULTI_TYPES": 4,
+  "CONFIDENCE_THRESHOLD": 5,
+  "DOUBLET_THRESHOLD": 20
+}

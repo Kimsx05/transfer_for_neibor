@@ -1,0 +1,197 @@
+calc_Q_par 
+{
+    out_file = "logs/calc_Q_log.txt"
+    if (file.exists(out_file)) 
+        file.remove(out_file)
+    numCores = parallel::detectCores()
+    MAX_CORES = 8
+    if (parallel::detectCores() > MAX_CORES) 
+        numCores <- MAX_CORES
+    cl <- parallel::makeCluster(numCores, outfile = "")
+    doParallel::registerDoParallel(cl)
+    environ = c("calc_Q_mat_one", "get_Q", "ht_pdf", "ht_pdf_norm")
+    results <- foreach::foreach(i = 1:(K + 3), .export = environ) %dopar% 
+        {
+            cat(paste0("calc_Q: Finished i: ", i, "\n"), file = out_file, 
+                append = TRUE)
+            k = i - 1
+            result = calc_Q_mat_one(sigma, X_vals, k, batch = 100, 
+                big_params = big_params)
+        }
+    parallel::stopCluster(cl)
+    return(results)
+}
+decompose_batch 
+{
+    if (max_cores > 1) {
+        numCores = parallel::detectCores()
+        if (parallel::detectCores() > max_cores) 
+            numCores <- max_cores
+        cl <- parallel::makeCluster(numCores, setup_strategy = "sequential", 
+            outfile = "")
+        doParallel::registerDoParallel(cl)
+        environ = c("decompose_full", "solveIRWLS.weights", "solveOLS", 
+            "solveWLS", "Q_mat", "K_val", "X_vals", "SQ_mat")
+        weights <- foreach::foreach(i = 1:(dim(beads)[1]), .packages = c("quadprog"), 
+            .export = environ) %dopar% {
+            assign("Q_mat", Q_mat, envir = globalenv())
+            assign("X_vals", X_vals, envir = globalenv())
+            assign("K_val", K_val, envir = globalenv())
+            assign("SQ_mat", SQ_mat, envir = globalenv())
+            decompose_full(data.matrix(cell_type_means[gene_list, 
+                ] * nUMI[i]), nUMI[i], beads[i, ], constrain = constrain, 
+                OLS = OLS, MIN_CHANGE = MIN.CHANGE)
+        }
+        parallel::stopCluster(cl)
+    }
+    else {
+        weights <- list()
+        for (i in 1:(dim(beads)[1])) {
+            weights[[i]] <- decompose_full(data.matrix(cell_type_means[gene_list, 
+                ] * nUMI[i]), nUMI[i], beads[i, ], constrain = constrain, 
+                OLS = OLS, MIN_CHANGE = MIN.CHANGE)
+        }
+    }
+    return(weights)
+}
+fit_de_genes 
+{
+    results_list <- list()
+    if (numCores == 1) {
+        for (i in 1:length(gene_list)) {
+            message(i)
+            gene <- gene_list[i]
+            Y <- puck@counts[gene, barcodes]
+            results_list[[i]] <- estimate_gene_wrapper(Y, X1, 
+                X2, my_beta, nUMI, sigma_init, test_mode, verbose = F, 
+                n.iter = 200, MIN_CHANGE = 0.001, sigma_gene = sigma_gene, 
+                PRECISION.THRESHOLD = PRECISION.THRESHOLD)
+        }
+    }
+    else {
+        cl <- parallel::makeCluster(numCores, setup_strategy = "sequential", 
+            outfile = "")
+        doParallel::registerDoParallel(cl)
+        environ = c("estimate_effects_trust", "solveIRWLS.effects_trust", 
+            "K_val", "X_vals", "calc_log_l_vec", "get_d1_d2", 
+            "calc_Q_all", "psd", "construct_hess_fast", "choose_sigma_gene", 
+            "estimate_gene_wrapper", "check_converged_vec", "calc_log_l_vec_fast")
+        if (sigma_gene) 
+            environ <- c(environ, "Q_mat_all", "SQ_mat_all")
+        else environ <- c(environ, "Q_mat", "SQ_mat")
+        if (logs) {
+            out_file = "logs/de_log.txt"
+            if (!dir.exists("logs")) 
+                dir.create("logs")
+            if (file.exists(out_file)) 
+                file.remove(out_file)
+        }
+        results_list <- foreach::foreach(i = 1:length(gene_list), 
+            .packages = c("quadprog", "spacexr", "Rfast"), .export = environ) %dopar% 
+            {
+                if (logs) {
+                  if (i%%1 == 0) {
+                    cat(paste0("Testing sample: ", i, " gene ", 
+                      gene_list[i], "\n"), file = out_file, append = TRUE)
+                  }
+                }
+                assign("X_vals", X_vals, envir = globalenv())
+                assign("K_val", K_val, envir = globalenv())
+                if (sigma_gene) {
+                  assign("Q_mat_all", Q_mat_all, envir = globalenv())
+                  assign("SQ_mat_all", SQ_mat_all, envir = globalenv())
+                }
+                else {
+                  assign("Q_mat", Q_mat, envir = globalenv())
+                  assign("SQ_mat", SQ_mat, envir = globalenv())
+                }
+                gene <- gene_list[i]
+                Y <- puck@counts[gene, barcodes]
+                res <- estimate_gene_wrapper(Y, X1, X2, my_beta, 
+                  nUMI, sigma_init, test_mode, verbose = F, n.iter = 200, 
+                  MIN_CHANGE = 0.001, sigma_gene = sigma_gene)
+            }
+        parallel::stopCluster(cl)
+    }
+    return(results_list)
+}
+process_beads_batch 
+{
+    beads = t(as.matrix(puck@counts[gene_list, ]))
+    if (MAX_CORES > 1) {
+        numCores = parallel::detectCores()
+        if (parallel::detectCores() > MAX_CORES) 
+            numCores <- MAX_CORES
+        cl <- parallel::makeCluster(numCores, setup_strategy = "sequential", 
+            outfile = "")
+        doParallel::registerDoParallel(cl)
+        environ = c("decompose_full", "decompose_sparse", "solveIRWLS.weights", 
+            "solveOLS", "solveWLS", "Q_mat", "X_vals", "K_val", 
+            "SQ_mat")
+        results <- foreach::foreach(i = 1:(dim(beads)[1]), .export = environ) %dopar% 
+            {
+                assign("Q_mat", Q_mat, envir = globalenv())
+                assign("X_vals", X_vals, envir = globalenv())
+                assign("K_val", K_val, envir = globalenv())
+                assign("SQ_mat", SQ_mat, envir = globalenv())
+                result = process_bead_doublet(cell_type_info, 
+                  gene_list, puck@nUMI[i], beads[i, ], class_df = class_df, 
+                  constrain = constrain, MIN.CHANGE = MIN.CHANGE, 
+                  CONFIDENCE_THRESHOLD = CONFIDENCE_THRESHOLD, 
+                  DOUBLET_THRESHOLD = DOUBLET_THRESHOLD)
+                result
+            }
+        parallel::stopCluster(cl)
+    }
+    else {
+        results <- list()
+        for (i in 1:(dim(beads)[1])) {
+            results[[i]] <- process_bead_doublet(cell_type_info, 
+                gene_list, puck@nUMI[i], beads[i, ], class_df = class_df, 
+                constrain = constrain, MIN.CHANGE = MIN.CHANGE, 
+                CONFIDENCE_THRESHOLD = CONFIDENCE_THRESHOLD, 
+                DOUBLET_THRESHOLD = DOUBLET_THRESHOLD)
+        }
+    }
+    return(results)
+}
+process_beads_multi 
+{
+    beads = t(as.matrix(puck@counts[gene_list, ]))
+    if (MAX_CORES > 1) {
+        numCores = parallel::detectCores()
+        if (parallel::detectCores() > MAX_CORES) 
+            numCores <- MAX_CORES
+        cl <- parallel::makeCluster(numCores, setup_strategy = "sequential", 
+            outfile = "")
+        doParallel::registerDoParallel(cl)
+        environ = c("decompose_full", "decompose_sparse", "solveIRWLS.weights", 
+            "solveOLS", "solveWLS", "Q_mat", "X_vals", "K_val", 
+            "SQ_mat")
+        results <- foreach::foreach(i = 1:(dim(beads)[1]), .export = environ) %dopar% 
+            {
+                assign("Q_mat", Q_mat, envir = globalenv())
+                assign("X_vals", X_vals, envir = globalenv())
+                assign("K_val", K_val, envir = globalenv())
+                assign("SQ_mat", SQ_mat, envir = globalenv())
+                result = process_bead_multi(cell_type_info, gene_list, 
+                  puck@nUMI[i], beads[i, ], class_df = class_df, 
+                  constrain = constrain, MIN.CHANGE = MIN.CHANGE, 
+                  MAX.TYPES = MAX.TYPES, CONFIDENCE_THRESHOLD = CONFIDENCE_THRESHOLD, 
+                  DOUBLET_THRESHOLD = DOUBLET_THRESHOLD)
+                result
+            }
+        parallel::stopCluster(cl)
+    }
+    else {
+        results <- list()
+        for (i in 1:(dim(beads)[1])) {
+            results[[i]] <- process_bead_multi(cell_type_info, 
+                gene_list, puck@nUMI[i], beads[i, ], class_df = class_df, 
+                constrain = constrain, MIN.CHANGE = MIN.CHANGE, 
+                MAX.TYPES = MAX.TYPES, CONFIDENCE_THRESHOLD = CONFIDENCE_THRESHOLD, 
+                DOUBLET_THRESHOLD = DOUBLET_THRESHOLD)
+        }
+    }
+    return(results)
+}

@@ -1,0 +1,26 @@
+{
+  "section": "Cervilla",
+  "version": "2.2.1",
+  "mode": "doublet",
+  "model_limit": "fits one or two dominant types; not a maximum true cell count",
+  "reference_input": 44896,
+  "reference_retained": 44896,
+  "ROI_bins": 4569,
+  "ROI_UMI": 1059406,
+  "ROI_QC_bins": 4533,
+  "fitted_bins": 2271,
+  "fitted_UMI": 981476,
+  "UMI_min": 100,
+  "counts_MIN": 10,
+  "UMI_min_sigma": 300,
+  "statuses": {
+    "below_UMI_min100": 2262,
+    "doublet_certain": 382,
+    "doublet_uncertain": 228,
+    "not_in_bin_QC": 36,
+    "reject": 99,
+    "singlet": 1562
+  },
+  "ROI_outside": "not_tested",
+  "projected": false
+}

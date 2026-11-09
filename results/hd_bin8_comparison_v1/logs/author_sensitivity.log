@@ -1,0 +1,42 @@
+see ?celldex and browseVignettes('celldex') for documentation
+loading from cache
+see ?celldex and browseVignettes('celldex') for documentation
+loading from cache
+Normalizing layer: counts
+Performing log-normalization
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Running SCTransform on assay: RNA
+vst.flavor='v2' set. Using model with fixed slope and excluding poisson genes.
+`vst.flavor` is set to 'v2' but could not find glmGamPoi installed.
+Please install the glmGamPoi package for much faster estimation.
+--------------------------------------------
+install.packages('BiocManager')
+BiocManager::install('glmGamPoi')
+--------------------------------------------
+Falling back to native (slower) implementation.
+
+Calculating cell attributes from input UMI matrix: log_umi
+Variance stabilizing transformation of count matrix of size 11878 by 4968
+Model formula is y ~ log_umi
+Get Negative Binomial regression parameters per gene
+Using 2000 genes, 4968 cells
+Found 79 outliers - those will be ignored in fitting/regularization step
+
+Skip calculation of full residual matrix
+Will not return corrected UMI because residual type is not set to 'pearson'
+Calculating gene attributes
+Wall clock passed: Time difference of 8.936988 mins
+Setting min_variance based on median UMI:  0.04
+Calculating variance for residuals of type pearson for 11878 genes
+Determine variable features
+Setting min_variance based on median UMI:  0.04
+Calculating residuals of type pearson for 3000 genes
+  |                                                                              |                                                                      |   0%  |                                                                              |======                                                                |   8%  |                                                                              |============                                                          |  17%  |                                                                              |==================                                                    |  25%  |                                                                              |=======================                                               |  33%  |                                                                              |=============================                                         |  42%  |                                                                              |===================================                                   |  50%  |                                                                              |=========================================                             |  58%  |                                                                              |===============================================                       |  67%  |                                                                              |====================================================                  |  75%  |                                                                              |==========================================================            |  83%  |                                                                              |================================================================      |  92%  |                                                                              |======================================================================| 100%
+Computing corrected UMI count matrix
+Centering data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |==================                                                    |  25%  |                                                                              |===================================                                   |  50%  |                                                                              |====================================================                  |  75%  |                                                                              |======================================================================| 100%
+Place corrected count matrix in counts slot
+Set default assay to SCT
+AUTHOR_SENSITIVITY_COMPLETE

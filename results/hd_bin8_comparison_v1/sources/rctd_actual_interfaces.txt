@@ -1,0 +1,113 @@
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_bin8_comparison_v1/Rlib/pals 
+function (counts, cell_types, nUMI = NULL, require_int = TRUE, 
+    n_max_cells = 10000, min_UMI = 100) 
+{
+    counts <- check_counts(counts, "Reference", require_2d = T, 
+        require_int = require_int)
+    if (is.null(nUMI)) {
+        nUMI = colSums(counts)
+        names(nUMI) <- colnames(counts)
+    }
+    else {
+        check_UMI(nUMI, "Reference", require_2d = T, require_int = require_int, 
+            min_UMI = min_UMI)
+    }
+    check_cell_types(cell_types)
+    barcodes <- intersect(intersect(names(nUMI), names(cell_types)), 
+        colnames(counts))
+    if (length(barcodes) == 0) 
+        stop("Reference: cell_types, counts, and nUMI do not share any barcode names. Please ensure that names(cell_types) matches colnames(counts) and names(nUMI)")
+    if (length(barcodes) < max(length(nUMI), length(cell_types), 
+        dim(counts)[2])) 
+        warning("Reference: some barcodes in nUMI, cell_types, or counts were not mutually shared. Such barcodes were removed.")
+    barcodes <- names(which(nUMI[barcodes] >= min_UMI))
+    if (length(barcodes) < 1) 
+        stop("Reference: no barcodes were included with nUMI at least min_UMI. Please lower the parameter min_UMI or ensure that cells have sufficient UMI counts.")
+    if (sum(nUMI[barcodes] != colSums(counts[, barcodes])) > 
+        0) 
+        warning("Reference: nUMI does not match colSums of counts. If this is unintended, please correct this discrepancy. If this is intended, there is no problem.")
+    missing_cell_types <- names(which(table(cell_types[barcodes]) == 
+        0))
+    if (length(missing_cell_types) > 0) 
+        warning(paste("Reference: missing cell types with no occurences: ", 
+            paste(missing_cell_types, collapse = ", ")))
+    reference <- new("Reference", cell_types = cell_types[barcodes], 
+        counts = counts[, barcodes], nUMI = nUMI[barcodes])
+    cur_count <- max(table(reference@cell_types))
+    if (cur_count > n_max_cells) {
+        warning(paste0("Reference: number of cells per cell type is ", 
+            cur_count, ", larger than maximum allowable of ", 
+            n_max_cells, ". Downsampling number of cells to: ", 
+            n_max_cells))
+        reference <- create_downsampled_data(reference, n_samples = n_max_cells)
+    }
+    return(reference)
+}
+<bytecode: 0x5f4598b100a8>
+<environment: namespace:spacexr>
+function (spatialRNA, reference, max_cores = 4, test_mode = FALSE, 
+    gene_cutoff = 0.000125, fc_cutoff = 0.5, gene_cutoff_reg = 2e-04, 
+    fc_cutoff_reg = 0.75, UMI_min = 100, UMI_max = 2e+07, counts_MIN = 10, 
+    UMI_min_sigma = 300, class_df = NULL, CELL_MIN_INSTANCE = 25, 
+    cell_type_names = NULL, MAX_MULTI_TYPES = 4, keep_reference = F, 
+    cell_type_profiles = NULL, CONFIDENCE_THRESHOLD = 5, DOUBLET_THRESHOLD = 20) 
+{
+    config <- list(gene_cutoff = gene_cutoff, fc_cutoff = fc_cutoff, 
+        gene_cutoff_reg = gene_cutoff_reg, fc_cutoff_reg = fc_cutoff_reg, 
+        UMI_min = UMI_min, UMI_min_sigma = UMI_min_sigma, max_cores = max_cores, 
+        N_epoch = 8, N_X = 50000, K_val = 100, N_fit = 1000, 
+        N_epoch_bulk = 30, MIN_CHANGE_BULK = 1e-04, MIN_CHANGE_REG = 0.001, 
+        UMI_max = UMI_max, counts_MIN = counts_MIN, MIN_OBS = 3, 
+        MAX_MULTI_TYPES = MAX_MULTI_TYPES, CONFIDENCE_THRESHOLD = CONFIDENCE_THRESHOLD, 
+        DOUBLET_THRESHOLD = DOUBLET_THRESHOLD)
+    if (test_mode) 
+        config <- list(gene_cutoff = 0.00125, fc_cutoff = 0.5, 
+            gene_cutoff_reg = 0.002, fc_cutoff_reg = 0.75, UMI_min = 1000, 
+            N_epoch = 1, N_X = 50000, K_val = 100, N_fit = 50, 
+            N_epoch_bulk = 4, MIN_CHANGE_BULK = 1, MIN_CHANGE_REG = 0.001, 
+            UMI_max = 2e+05, MIN_OBS = 3, max_cores = 1, counts_MIN = 5, 
+            UMI_min_sigma = 300, MAX_MULTI_TYPES = MAX_MULTI_TYPES, 
+            CONFIDENCE_THRESHOLD = CONFIDENCE_THRESHOLD, DOUBLET_THRESHOLD = DOUBLET_THRESHOLD)
+    if (is.null(cell_type_profiles)) {
+        if (is.null(cell_type_names)) 
+            cell_type_names <- levels(reference@cell_types)
+        cell_type_info <- list(info = process_cell_type_info(reference, 
+            cell_type_names = cell_type_names, CELL_MIN = CELL_MIN_INSTANCE), 
+            renorm = NULL)
+    }
+    else {
+        cell_type_names <- colnames(cell_type_profiles)
+        cell_type_info <- list(info = list(cell_type_profiles, 
+            cell_type_names, length(cell_type_names)), renorm = NULL)
+    }
+    if (!keep_reference) 
+        reference <- create_downsampled_data(reference, n_samples = 5)
+    puck.original = restrict_counts(spatialRNA, rownames(spatialRNA@counts), 
+        UMI_thresh = config$UMI_min, UMI_max = config$UMI_max, 
+        counts_thresh = config$counts_MIN)
+    message("create.RCTD: getting regression differentially expressed genes: ")
+    gene_list_reg = get_de_genes(cell_type_info$info, puck.original, 
+        fc_thresh = config$fc_cutoff_reg, expr_thresh = config$gene_cutoff_reg, 
+        MIN_OBS = config$MIN_OBS)
+    if (length(gene_list_reg) < 10) 
+        stop("create.RCTD: Error: fewer than 10 regression differentially expressed genes found")
+    message("create.RCTD: getting platform effect normalization differentially expressed genes: ")
+    gene_list_bulk = get_de_genes(cell_type_info$info, puck.original, 
+        fc_thresh = config$fc_cutoff, expr_thresh = config$gene_cutoff, 
+        MIN_OBS = config$MIN_OBS)
+    if (length(gene_list_bulk) < 10) 
+        stop("create.RCTD: Error: fewer than 10 bulk differentially expressed genes found")
+    puck = restrict_counts(puck.original, gene_list_bulk, UMI_thresh = config$UMI_min, 
+        UMI_max = config$UMI_max, counts_thresh = config$counts_MIN)
+    puck = restrict_puck(puck, colnames(puck@counts))
+    if (is.null(class_df)) 
+        class_df <- data.frame(cell_type_info$info[[2]], row.names = cell_type_info$info[[2]])
+    colnames(class_df)[1] = "class"
+    internal_vars <- list(gene_list_reg = gene_list_reg, gene_list_bulk = gene_list_bulk, 
+        proportions = NULL, class_df = class_df, cell_types_assigned = F)
+    new("RCTD", spatialRNA = puck, originalSpatialRNA = puck.original, 
+        reference = reference, config = config, cell_type_info = cell_type_info, 
+        internal_vars = internal_vars)
+}
+<bytecode: 0x5f4599053f18>
+<environment: namespace:spacexr>
