@@ -1,0 +1,16 @@
+file_field	loaded_field	meaning
+bin_id	original RNA column ID	Unique original bin ID, join key within section
+x_um/y_um	original x_um/y_um	Physical fullres coordinates, y downward; checked but not overwritten
+coarse_blca_raw/coarse_hpca_raw	same	Independent coarse mapping of raw SingleR labels
+coarse_blca/coarse_hpca	same	Independent coarse mapping of pruned candidate labels, missing to Unknown; not calibrated confidence
+banksy_information_band	same	Original nFeature strata <20 / 20-99 / 100-499 / >=500; no filtering
+reference_conflict_group	banksy_reference_conflict_group	Original reference candidate comparison; no forced consensus
+spatial_component	banksy_spatial_component	8-connected supplied in-tissue native-grid component before count QC
+native_edge_distance_um	banksy_native_edge_distance_um	Distance to supplied native-grid boundary, not an independently annotated histological boundary
+neighbor_n	banksy_neighbor_n	Actual number of spatial neighbors, at most 50
+neighbor_max_um	banksy_neighbor_max_um	Actual furthest included spatial neighbor in physical microns
+banksy_l00_cluster / banksy_l02_cluster / banksy_l08_cluster	same	Full-bin matched Louvain cluster IDs; same number across branches has no shared biological meaning
+banksy_l00_region / banksy_l02_region / banksy_l08_region	same	Descriptive original-expression interpretation of each cluster; not per-bin cell identity
+l00/l02/l08_embeddings.rds	banksy_l00/l02/l08_pca and banksy_l00/l02/l08_umap	Full-bin embeddings, separate from old pca.full/umap.full
+original SingleR labels/scores/marker evidence	unchanged fields in input object	Preserved by incremental loader, not duplicated or replaced
+original RNA counts/data	unchanged RNA assay layers	Original full-gene integer counts / LogNormalize expression; not BANKSY features

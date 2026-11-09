@@ -1,0 +1,158 @@
+MODEL_START D1_Johnson l00 2026-11-09 20:23:04 
+Building sparse weight matrix
+Computing scaling parameters for own expression
+Computing clipping excess for own expression
+Computing scaling params and clipping for H0
+H0 genes requiring clipping: 2021 / 3000
+Clipping corrections: own=1414634 H0=976798 entries
+Using seed=123
+Computing BANKSY PCA (30 PCs) via C++ irlba (work=37)
+  iter=1  mprod=74  sv[30]=3.0909e+02  t=10s
+  iter=2  mprod=88  sv[30]=4.6377e+02  t=12s
+  iter=5  mprod=130  sv[30]=6.0695e+02  t=18s
+  iter=10  mprod=200  sv[30]=6.4399e+02  t=28s
+  iter=13  mprod=242  sv[30]=6.4404e+02  t=33s
+  Converged: iter=13, mprod=242
+Computing nearest neighbor graph
+Computing SNN
+Modularity Optimizer version 1.3.0 by Ludo Waltman and Nees Jan van Eck
+
+Number of nodes: 364805
+Number of edges: 8372591
+
+Running Louvain algorithm...
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Maximum modularity in 10 random starts: 0.9420
+Number of communities: 158
+Elapsed time: 272 seconds
+57 singletons identified. 101 final clusters.
+Warning: The following arguments are not used: n.threads
+Warning: The default method for RunUMAP has changed from calling Python UMAP via reticulate to the R-native UWOT using the cosine metric
+To use Python UMAP via reticulate, set umap.method to 'umap-learn' and metric to 'correlation'
+This message will be shown once per session
+20:37:21 UMAP embedding parameters a = 0.9922 b = 1.112
+20:37:21 Read 364805 rows and found 30 numeric columns
+20:37:21 Using Annoy for neighbor search, n_neighbors = 30
+20:37:21 Building Annoy index with metric = cosine, n_trees = 50
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+20:39:17 Writing NN index file to temp file /home/data/t070721/tmpdir/RtmpNAg5SY/file44750258840bf
+20:39:17 Searching Annoy index using 8 threads, search_k = 3000
+20:39:46 Annoy recall = 57.63%
+20:39:47 Commencing smooth kNN distance calibration using 8 threads with target n_neighbors = 30
+20:39:48 10455 smooth knn distance failures
+20:39:56 Initializing from normalized Laplacian + noise (using RSpectra)
+20:40:30 Commencing optimization for 200 epochs, with 19319372 positive edges
+20:40:30 Using rng type: pcg
+Using method 'umap'
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+20:43:55 Optimization finished
+MODEL_COMPLETE D1_Johnson l00 2026-11-09 20:44:00 
+MODEL_START D1_Johnson l02 2026-11-09 20:44:00 
+Building sparse weight matrix
+Computing scaling parameters for own expression
+Computing clipping excess for own expression
+Computing scaling params and clipping for H0
+H0 genes requiring clipping: 2021 / 3000
+Clipping corrections: own=1414634 H0=976798 entries
+Using seed=123
+Computing BANKSY PCA (30 PCs) via C++ irlba (work=37)
+  iter=1  mprod=74  sv[30]=3.5903e+02  t=10s
+  iter=2  mprod=88  sv[30]=5.1519e+02  t=12s
+  iter=5  mprod=130  sv[30]=6.3979e+02  t=19s
+  iter=7  mprod=158  sv[30]=6.5053e+02  t=23s
+  Converged: iter=7, mprod=158
+Computing nearest neighbor graph
+Computing SNN
+Modularity Optimizer version 1.3.0 by Ludo Waltman and Nees Jan van Eck
+
+Number of nodes: 364805
+Number of edges: 10288741
+
+Running Louvain algorithm...
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Maximum modularity in 10 random starts: 0.9236
+Number of communities: 38
+Elapsed time: 316 seconds
+7 singletons identified. 31 final clusters.
+Warning: The following arguments are not used: n.threads
+20:54:28 UMAP embedding parameters a = 0.9922 b = 1.112
+20:54:28 Read 364805 rows and found 30 numeric columns
+20:54:28 Using Annoy for neighbor search, n_neighbors = 30
+20:54:28 Building Annoy index with metric = cosine, n_trees = 50
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+20:56:11 Writing NN index file to temp file /home/data/t070721/tmpdir/RtmpNAg5SY/file4475055d7c1ae
+20:56:11 Searching Annoy index using 8 threads, search_k = 3000
+20:56:37 Annoy recall = 67.03%
+20:56:38 Commencing smooth kNN distance calibration using 8 threads with target n_neighbors = 30
+20:56:48 Initializing from normalized Laplacian + noise (using RSpectra)
+20:58:16 Commencing optimization for 200 epochs, with 17938118 positive edges
+20:58:16 Using rng type: pcg
+Using method 'umap'
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+21:01:06 Optimization finished
+MODEL_COMPLETE D1_Johnson l02 2026-11-09 21:01:11 
+MODEL_START D1_Johnson l08 2026-11-09 21:01:11 
+Building sparse weight matrix
+Computing scaling parameters for own expression
+Computing clipping excess for own expression
+Computing scaling params and clipping for H0
+H0 genes requiring clipping: 2021 / 3000
+Clipping corrections: own=1414634 H0=976798 entries
+Using seed=123
+Computing BANKSY PCA (30 PCs) via C++ irlba (work=37)
+  iter=1  mprod=74  sv[30]=5.2616e+02  t=9s
+  iter=2  mprod=88  sv[30]=7.5890e+02  t=11s
+  iter=5  mprod=130  sv[30]=8.8734e+02  t=17s
+  iter=9  mprod=186  sv[30]=8.9137e+02  t=24s
+  Converged: iter=9, mprod=186
+Computing nearest neighbor graph
+Computing SNN
+Modularity Optimizer version 1.3.0 by Ludo Waltman and Nees Jan van Eck
+
+Number of nodes: 364805
+Number of edges: 8886110
+
+Running Louvain algorithm...
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Maximum modularity in 10 random starts: 0.9441
+Number of communities: 40
+Elapsed time: 86 seconds
+Warning: The following arguments are not used: n.threads
+21:07:25 UMAP embedding parameters a = 0.9922 b = 1.112
+21:07:25 Read 364805 rows and found 30 numeric columns
+21:07:25 Using Annoy for neighbor search, n_neighbors = 30
+21:07:25 Building Annoy index with metric = cosine, n_trees = 50
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+21:09:10 Writing NN index file to temp file /home/data/t070721/tmpdir/RtmpNAg5SY/file44750af32952
+21:09:10 Searching Annoy index using 8 threads, search_k = 3000
+21:09:35 Annoy recall = 68.97%
+21:09:36 Commencing smooth kNN distance calibration using 8 threads with target n_neighbors = 30
+21:09:45 Initializing from normalized Laplacian + noise (using RSpectra)
+21:12:17 Commencing optimization for 200 epochs, with 15644916 positive edges
+21:12:17 Using rng type: pcg
+Using method 'umap'
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+21:15:16 Optimization finished
+MODEL_COMPLETE D1_Johnson l08 2026-11-09 21:15:21 
+Warning messages:
+1: No assay specified, setting assay as RNA by default. 
+2: No assay specified, setting assay as RNA by default. 
+3: No assay specified, setting assay as RNA by default. 

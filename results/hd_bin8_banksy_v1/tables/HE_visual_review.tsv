@@ -1,0 +1,12 @@
+section	ROI	image_observation	interpretation_limit
+Cervilla	dense	Densely packed large nuclei in epithelial-like nests with narrow intervening stromal spaces	Morphology supports an epithelial-rich context, not a malignant/normal determination
+Cervilla	stroma	Elongated nuclei and fibrous material with small embedded cellular islands	Use original epithelial/collagen signals to distinguish islands from surrounding stroma
+Cervilla	small_nuclei	Tissue edge with an epithelial-like rim and a small dense-nuclear focus in fibrous tissue	Small nuclei alone do not establish an immune subtype; original markers are required
+Cervilla	edge	Thin tissue strands surrounding several large gaps/lumina	kNN may bridge internal gaps within one connected component; lambda 0.8 boundaries need caution
+Cervilla	far_UMI_hotspot	Epithelial-like cellular islands interleaved with fibrous material	Mixed epithelial/collagen signal is plausible; do not assign all hotspot bins a pure cell identity
+D1_Johnson	dense	Dense small-nuclear cellular tissue around vessel-like profiles	Existing immune markers/RCTD provide support; H&E alone does not establish lineage
+D1_Johnson	stroma	Fibrous bands between larger epithelial-like cellular structures	A plausible epithelial-stromal interface; original expression and fixed-bin mixing remain relevant
+D1_Johnson	small_nuclei	Dense small-nuclear aggregate surrounding a prominent vessel-like profile	Assess preservation of small immune/vascular structure without imposing a type from spatial proximity
+D1_Johnson	edge	Irregular tissue boundary with narrow strands and gaps	Input edge and morphology both affect neighborhoods; do not treat smoothed continuity as accuracy
+D1_Johnson	far_UMI_hotspot	Epithelial-like fragments bordering large luminal/empty spaces; locally weak nuclear detail	Signal in poorly supported gaps is not evidence for a newly resolved cell
+D1_Johnson	conflict_focus	Large epithelial-like cells and continuous cellular structures with small lumina; not solely a thin stromal boundary	High-information collagen plus epithelial signal cannot distinguish bin mixing from intrinsic ECM-related expression or reference mismatch

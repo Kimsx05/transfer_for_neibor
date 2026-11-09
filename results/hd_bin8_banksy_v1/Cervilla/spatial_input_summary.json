@@ -1,0 +1,19 @@
+{
+  "n": 268924,
+  "component_count": 24,
+  "small_component_bins": 211,
+  "singleton_bins": 0,
+  "unrestricted_cross_component_edges": 5991,
+  "unrestricted_total_edges": 13446200,
+  "bins_with_cross_component_edges": 330,
+  "distance50_quantiles_um": [
+    32.980713526405815,
+    32.98095065060063,
+    35.77292273370392,
+    40.788086454467255,
+    58.235358519517725,
+    1495.3326895031944
+  ],
+  "rule": "8-connected components of all supplied native8 in_tissue bins before count QC; neighborhood search within component; global scaling",
+  "grouping_uses_reference_labels": false
+}

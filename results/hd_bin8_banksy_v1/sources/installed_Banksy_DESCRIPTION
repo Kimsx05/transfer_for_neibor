@@ -1,0 +1,46 @@
+Package: Banksy
+Title: Spatial transcriptomic clustering
+Version: 1.9.5
+Authors@R: c(
+    person(given = "Vipul",
+           family = "Singhal",
+           role = c("aut")),
+    person(given = "Joseph",
+           family = "Lee",
+           role = c("aut", "cre"),
+           email = "joseph.lee@u.nus.edu",
+           comment = c(ORCID="0000-0002-4983-4714"))
+           )
+Description: Banksy is an R package that incorporates spatial information to 
+    cluster cells in a feature space (e.g. gene expression). To incorporate 
+    spatial information, BANKSY computes the mean neighborhood expression and 
+    azimuthal Gabor filters that capture gene expression gradients. These 
+    features are combined with the cell's own expression to embed cells in a 
+    neighbor-augmented product space which can then be clustered, allowing for
+    accurate and spatially-aware cell typing and tissue domain segmentation. 
+Depends: R (>= 4.4.0)
+Imports: aricode, BiocParallel, data.table, dbscan, Rcpp,
+        SpatialExperiment, SingleCellExperiment, SummarizedExperiment,
+        S4Vectors, stats, Matrix, MatrixGenerics, methods, mclust,
+        igraph, irlba, parallel, leidenAlg (>= 1.1.0), utils, uwot,
+        RcppHungarian, GenomeInfoDb
+LinkingTo: Rcpp
+License: file LICENSE
+Encoding: UTF-8
+URL: https://github.com/prabhakarlab/Banksy,
+        https://prabhakarlab.github.io/Banksy
+BugReports: https://github.com/prabhakarlab/Banksy/issues
+RoxygenNote: 7.3.2
+Suggests: knitr, rmarkdown, sessioninfo, pals, scuttle, scater, scran,
+        cowplot, ggplot2, testthat (>= 3.0.0), harmony, Seurat,
+        ExperimentHub, spatialLIBD, BiocStyle
+VignetteBuilder: knitr
+Config/testthat/edition: 3
+Collate: 'RcppExports.R' 'lazy.R' 'Banksy-package.R' 'cluster.R'
+        'computation.R' 'data.R' 'misc.R' 'reduction.R' 'zzz.R'
+biocViews: Clustering, Spatial, SingleCell, GeneExpression,
+        DimensionReduction
+Author: Vipul Singhal [aut],
+  Joseph Lee [aut, cre] (ORCID: <https://orcid.org/0000-0002-4983-4714>)
+Maintainer: Joseph Lee <joseph.lee@u.nus.edu>
+Built: R 4.5.3; x86_64-pc-linux-gnu; 2026-10-27 12:59:28 UTC; unix
