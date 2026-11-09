@@ -1,0 +1,8 @@
+'select()' returned 1:many mapping between keys and columns
+[1] "V1" "V2" "V3" "V4" "V5" "V6"
+Warning message:
+In storage.mode(x) = "double" : NAs introduced by coercion
+Error in map_score(x, d[[1]], d[[1]], "GSE169455", FALSE) : 
+  all(is.finite(x)) is not TRUE
+Calls: map_score -> stopifnot
+Execution halted

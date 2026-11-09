@@ -1,0 +1,2 @@
+.libPaths(c('/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.5','/refdir/Rlib',.libPaths()))
+B='/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_resistance_validation_v1';p=file.path(B,'00_audit/sources/mmc9.xlsx');x=readxl::read_excel(p,sheet='Table S6A',col_names=FALSE,.name_repair='minimal');stopifnot(ncol(x)==72,grepl('Cases',as.character(x[[43]][8])));data.table::fwrite(as.data.frame(x),file.path(B,'00_audit/sources/AMC_S6A_raw.tsv'),sep='\t',col.names=FALSE)

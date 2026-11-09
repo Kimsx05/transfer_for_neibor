@@ -1,0 +1,10 @@
+AMC regimen {'GP_cisplatin': 30, 'ddMVAC_cisplatin': 5, 'GCb_carboplatin': 4} matched 39 label conflicts 0
+ resistance    state
+        Cis     CisR
+        Gem     GemR
+Gem_and_Cis  GemCisR
+   Parental parental
+Epi (123699, 44) fidelity (123699, 53) cycle []
+fidelity columns ['orig.ident', 'nCount_RNA', 'nFeature_RNA', 'percent.mt', 'doublet.class', 'pANN', 'dataset', 'sample_id', 'qc_low_feature', 'qc_high_feature', 'qc_low_count', 'qc_high_count', 'qc_high_mt', 'discard_qc', 'RNA_snn_res.0.2', 'RNA_snn_res.0.3', 'RNA_snn_res.0.4', 'RNA_snn_res.0.5', 'RNA_snn_res.0.6', 'seurat_clusters', 'clean_seurat_clusters', 'final_seurat_clusters', 'major_celltype_before_removal', 'remove_final', 'major_celltype', 'T_stage', 'N_stage', 'M_stage', 'Type', 'major_celltype_before_merge', 'epi_rough_cluster', 'score_Epithelial', 'score_T_NK', 'score_Myeloid', 'score_Fibroblast', 'score_Endothelial', 'score_Plasma', 'score_Mast', 'score_Cycling', 'epi_allgene_snn_res.0.4', 'epi_allgene_cluster', 'remove_small_cluster', 'epi_allgene_cluster_before_small_removal', 'cell_id', 'MP10_usage', 'Top20_score', 'nCount', 'nFeature', 'n_signature_detected', 'usage_type', 'analysis_unit', 'identity_scope', 'malignant_status']
+patient {'derived': 37, 'provisional': 20}
+all preparation finished

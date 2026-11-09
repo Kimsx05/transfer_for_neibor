@@ -1,0 +1,19 @@
+cohort	scope	endpoint	adjustment	primary	n_enrolled	n	events	missing	OR	CI_low	CI_high	P	method	converged	reason	FDR
+"GSE169455"	"NAC_regimen_unverified_sensitivity"	"nonresponse"	"none"	FALSE	125	112	63	13	0.839736469875747	0.578117073794457	1.21974833611313	0.359122283438088	"glm_logit_Wald"	TRUE	"OK"	NA
+"GSE169455"	"NAC_regimen_unverified_sensitivity"	"nonresponse"	"cT"	FALSE	125	112	63	13	0.899029639291955	0.604876873507204	1.33622945053097	0.598593624066551	"glm_logit_Wald"	TRUE	"OK"	NA
+"GSE169455"	"NAC_regimen_unverified_sensitivity"	"nonresponse"	"subtype"	FALSE	125	112	63	13	0.848397625272632	0.567140167818414	1.26913692841925	0.423660156664713	"glm_logit_Wald"	TRUE	"OK"	NA
+"GSE169455"	"NAC_regimen_unverified_sensitivity"	"non_pCR"	"none"	FALSE	125	112	70	13	0.784515855549196	0.533388846188357	1.1538770111266	0.217624619593382	"glm_logit_Wald"	TRUE	"OK"	NA
+"GSE169455"	"NAC_regimen_unverified_sensitivity"	"non_pCR"	"cT"	FALSE	125	112	70	13	0.843666411568016	0.55249891905591	1.28827946889798	0.431214671246558	"glm_logit_Wald"	TRUE	"OK"	NA
+"GSE169455"	"NAC_regimen_unverified_sensitivity"	"non_pCR"	"subtype"	FALSE	125	112	70	13	0.818767120741165	0.540928014763778	1.23931388227236	0.344424308662577	"glm_logit_Wald"	TRUE	"OK"	NA
+"GSE169455"	"induction_separate_descriptive"	"nonresponse"	"none"	FALSE	24	21	15	3	0.965777010268086	0.317205010128868	2.94044924821154	0.951120296819961	"glm_logit_Wald"	TRUE	"OK"	NA
+"GSE169455"	"induction_separate_descriptive"	"non_pCR"	"none"	FALSE	24	21	15	3	0.965777010268086	0.317205010128868	2.94044924821154	0.951120296819961	"glm_logit_Wald"	TRUE	"OK"	NA
+"GSE212810"	"strict_cisplatin_NAC"	"nonresponse"	"none"	TRUE	35	28	15	7	0.575601250538	0.21718576587102	1.52549960303415	0.266693272562457	"glm_logit_Wald"	TRUE	"OK"	0.533386545124913
+"GSE212810"	"strict_cisplatin_NAC"	"nonresponse"	"cT"	FALSE	35	28	15	7	0.507524062552341	0.154441571533326	1.66781956122514	0.263871092740932	"glm_logit_Wald"	TRUE	"OK"	NA
+"GSE212810"	"all_NAC_including_GCb_sensitivity"	"nonresponse"	"none"	FALSE	39	32	18	7	0.688528286086335	0.300129297341053	1.57955656092538	0.378367262579805	"glm_logit_Wald"	TRUE	"OK"	NA
+"GSE212810"	"strict_cisplatin_cycles_ge3_sensitivity"	"nonresponse"	"none"	FALSE	33	26	13	7	0.560016290143318	0.207420034567288	1.51199591630647	0.252572409987577	"glm_logit_Wald"	TRUE	"OK"	NA
+"GSE212810"	"strict_cisplatin_NAC"	"non_pCR"	"none"	FALSE	35	29	18	6	0.52976536272954	0.176963656708921	1.58592642561399	0.256111557924513	"glm_logit_Wald"	TRUE	"OK"	0.512223115849027
+"GSE212810"	"strict_cisplatin_NAC"	"non_pCR"	"cT"	FALSE	35	29	18	6	NA	NA	NA	NA	"NA_Firth_required"	FALSE	"separation_or_instability; Firth_required_package_unavailable"	NA
+"GSE212810"	"all_NAC_including_GCb_sensitivity"	"non_pCR"	"none"	FALSE	39	33	22	6	0.648430806444817	0.253527388644906	1.65845005146793	0.365924866222375	"glm_logit_Wald"	TRUE	"OK"	NA
+"GSE212810"	"strict_cisplatin_cycles_ge3_sensitivity"	"non_pCR"	"none"	FALSE	33	27	16	6	0.523344674621399	0.172197926365845	1.59055137442645	0.253579776886561	"glm_logit_Wald"	TRUE	"OK"	NA
+"GSE212810"	"author_NAC_labels_supplementary"	"author_nonresponse"	"none"	FALSE	39	39	18	0	0.561623381775858	0.247583799666898	1.27399621211776	0.167430257367243	"glm_logit_Wald"	TRUE	"OK"	NA
+"GSE169455"	"strict_cisplatin_NAC"	"nonresponse"	"none"	TRUE	0	0	NA	125	NA	NA	NA	NA	"BLOCKED"	FALSE	"individual regimen unavailable; NAC unknown-regimen sensitivity reported separately"	NA

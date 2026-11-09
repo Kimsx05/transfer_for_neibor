@@ -1,0 +1,94 @@
+   comparison n_lines n_positive n_negative n_zero  mean_delta median_delta
+       <fctr>   <int>      <int>      <int>  <int>       <num>        <num>
+1:       CisR       5          2          3      0  0.04332513  -0.03448575
+2:    GemCisR       5          2          3      0  0.06481677  -0.09833345
+3:       GemR       5          1          4      0 -0.04128260  -0.13741136
+       CI_low   CI_high     P FDR_3_comparisons
+        <num>     <num> <num>             <num>
+1: -0.2082683 0.2949185 1.000                 1
+2: -0.1325478 0.3466946 1.000                 1
+3: -0.1736513 0.1513924 0.375                 1
+       cohort                                   scope           endpoint
+       <char>                                  <char>             <char>
+ 1: GSE169455      NAC_regimen_unverified_sensitivity        nonresponse
+ 2: GSE169455      NAC_regimen_unverified_sensitivity        nonresponse
+ 3: GSE169455      NAC_regimen_unverified_sensitivity        nonresponse
+ 4: GSE169455      NAC_regimen_unverified_sensitivity            non_pCR
+ 5: GSE169455      NAC_regimen_unverified_sensitivity            non_pCR
+ 6: GSE169455      NAC_regimen_unverified_sensitivity            non_pCR
+ 7: GSE169455          induction_separate_descriptive        nonresponse
+ 8: GSE169455          induction_separate_descriptive            non_pCR
+ 9: GSE212810                    strict_cisplatin_NAC        nonresponse
+10: GSE212810                    strict_cisplatin_NAC        nonresponse
+11: GSE212810       all_NAC_including_GCb_sensitivity        nonresponse
+12: GSE212810 strict_cisplatin_cycles_ge3_sensitivity        nonresponse
+13: GSE212810                    strict_cisplatin_NAC            non_pCR
+14: GSE212810                    strict_cisplatin_NAC            non_pCR
+15: GSE212810       all_NAC_including_GCb_sensitivity            non_pCR
+16: GSE212810 strict_cisplatin_cycles_ge3_sensitivity            non_pCR
+17: GSE212810         author_NAC_labels_supplementary author_nonresponse
+18: GSE169455                    strict_cisplatin_NAC        nonresponse
+    adjustment     n events        OR    CI_low  CI_high         P
+        <char> <num>  <int>     <num>     <num>    <num>     <num>
+ 1:       none   125     71 0.7674419 0.5334807 1.104008 0.1536799
+ 2:         cT   125     71 0.8114306 0.5526985 1.191282 0.2861675
+ 3:    subtype   125     71 0.8012000 0.5416998 1.185013 0.2670398
+ 4:       none   125     83 0.7761852 0.5310682 1.134437 0.1906967
+ 5:         cT   125     83 0.8292961 0.5494353 1.251707 0.3728646
+ 6:    subtype   125     83 0.8393055 0.5585894 1.261094 0.3990754
+ 7:       none    23     16 1.1330094 0.4263315 3.011061 0.8022699
+ 8:       none    24     18 0.7428767 0.2593028 2.128268 0.5799385
+ 9:       none    28     15 0.5756013 0.2171858 1.525500 0.2666933
+10:         cT    28     15 0.5075241 0.1544416 1.667820 0.2638711
+11:       none    32     18 0.6885283 0.3001293 1.579557 0.3783673
+12:       none    26     13 0.5600163 0.2074200 1.511996 0.2525724
+13:       none    29     18 0.5297654 0.1769637 1.585926 0.2561116
+14:         cT    29     18 0.6869225 0.1865989 1.446880 0.3711181
+15:       none    33     22 0.6484308 0.2535274 1.658450 0.3659249
+16:       none    27     16 0.5233447 0.1721979 1.590551 0.2535798
+17:       none    39     18 0.5616234 0.2475838 1.273996 0.1674303
+18:       none     0     NA        NA        NA       NA        NA
+                                                                                 reason
+                                                                                 <char>
+ 1:                                                                                  OK
+ 2:                                                                                  OK
+ 3:                                                                                  OK
+ 4:                                                                                  OK
+ 5:                                                                                  OK
+ 6:                                                                                  OK
+ 7:                                                                                  OK
+ 8:                                                                                  OK
+ 9:                                                                                  OK
+10:                                                                                  OK
+11:                                                                                  OK
+12:                                                                                  OK
+13:                                                                                  OK
+14:                            separation_or_instability_triggered_prespecified_penalty
+15:                                                                                  OK
+16:                                                                                  OK
+17:                                                                                  OK
+18: individual regimen unavailable; NAC unknown-regimen sensitivity reported separately
+MODELS COMPLETE
+	Command being timed: "Rscript scripts/05_models.R"
+	User time (seconds): 11.49
+	System time (seconds): 3.52
+	Percent of CPU this job got: 118%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:12.63
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1014160
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 549805
+	Voluntary context switches: 87
+	Involuntary context switches: 47
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 1224
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

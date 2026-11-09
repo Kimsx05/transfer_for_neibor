@@ -1,0 +1,653 @@
+ 
+
+
+
+  
+
+
+
+
+
+
+<!-- Copyright (c) 2013-2021 Broad Institute, Inc., Massachusetts Institute of Technology, and Regents of the University of California.  All rights reserved. -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <base href="/gsea/" />
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="verify-v1" content="/23Jlayki9tnRqU7DcCYrbFI7zPmHJ3HfeZltM6mK5Q=" />
+    <title>TSUNODA_CISPLATIN_RESISTANCE_UP</title>
+    <link href='css/style.css' rel="stylesheet" type="text/css" />
+    <link href="images/icon_32x32.png" rel="icon" />
+</head>
+<body>
+  <div id="logo"><a href="index.jsp" target="_parent"><img src="images/GSEA-logo.gif" border="0" /></a></div>
+  <div id="wrapper">
+    <div id="breadcrumbs">
+      
+      
+      <a href="login.jsp" target="_parent">login</a><br/><a href="register.jsp" target="_parent">register</a>
+    </div>
+    <div id="search"> </div>
+    <div id="topnavs"> <!-- top horizontal nav bar -->
+      <ul>
+        <li><a href="index.jsp" rel="nofollow"  target="_parent">GSEA Home</a></li>
+        <li><a href="downloads.jsp" rel="nofollow"  target="_parent">Downloads</a></li>
+        <li><a href="msigdb/index.jsp" class="on" target="_parent">Molecular Signatures Database</a></li>
+        <li><a href="https://docs.gsea-msigdb.org/#" target="_blank">Documentation</a></li>
+        <li><a href="https://docs.gsea-msigdb.org/#Contact" target="_blank">Contact</a></li>
+        <li><a href="team.jsp" rel="nofollow"  target="_parent">Team</a></li>
+        
+      </ul>
+    </div>
+<div id="contentwrapper">
+  <div id="content_navs"  >
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td class="navs">
+          <div class="nav navCtl">
+            <ul>
+              <li><a href="msigdb/index.jsp" class="navHead">MSigDB Home</a></li>
+            </ul>
+          </div>
+          <div class="nav human">
+            <ul>
+              <li><span class="navHead">Human Collections</span></li>
+              <li><a href="msigdb/human/collections.jsp" class="navItem">About</a></li>
+              <li><a href="msigdb/human/genesets.jsp" class="navItem on">Browse</a></li>
+              <li><a href="msigdb/human/search.jsp" class="navItem">Search</a></li>
+              <li><a href="msigdb/human/annotate.jsp" class="navItem">Investigate</a></li>
+              <li><a href="msigdb/human/gene_families.jsp" class="navItem">Gene Families</a></li>
+            </ul>
+          </div>
+          <div class="nav mouse">
+            <ul>
+              <li><span class="navHead">Mouse Collections</span></li>
+              <li><a href="msigdb/mouse/collections.jsp" class="navItem">About</a></li>
+              <li><a href="msigdb/mouse/genesets.jsp" class="navItem">Browse</a></li>
+              <li><a href="msigdb/mouse/search.jsp" class="navItem">Search</a></li>
+              <li><a href="msigdb/mouse/annotate.jsp" class="navItem">Investigate</a></li>
+            </ul>
+          </div>
+          <div class="nav navCtl">
+            <ul>
+              <li><a href="msigdb/help.jsp" class="navHead">Help</a></li>
+            </ul>
+          </div>
+          
+            <p><br /><br /><br /><br />
+              <img src="images/UCSDlogo.png" width="146" height="33" border="0" style="padding-left: 3px;" /><br /><br />
+              <img src="images/BroadLogo.png" width="131" height="33" border="0" style="padding-left: 3px;" />
+            </p>
+          
+        </td>
+        <td class="margin"><img src="images/spacer.gif" width="34" height="1" /></td>
+        <td class="body">
+          
+            
+            
+              <h1 class="human">Human Gene Set: TSUNODA_CISPLATIN_RESISTANCE_UP
+                
+              </h1>
+            
+          
+<link rel="stylesheet" type="text/css" href="yui/build/container/assets/container.css"> 
+<script type="text/javascript" src="yui/build/yahoo-dom-event/yahoo-dom-event.js"></script> 
+<script type="text/javascript" src="yui/build/animation/animation-min.js"></script> 
+<script type="text/javascript" src="yui/build/dragdrop/dragdrop-min.js"></script>
+<script type="text/javascript" src="yui/build/container/container-min.js"></script> 
+<script type="text/javascript" src="yui/build/dom/dom-min.js"></script> 
+<script type="text/javascript">
+  var contextIds = [];
+  var myTooltip;
+  var initFunction = function () {
+    myTooltip = new YAHOO.widget.Tooltip("myToolTipId", { 
+      context: contextIds,
+      showDelay: 100,
+      autodismissdelay: 20000 
+    });
+  };
+  YAHOO.util.Event.onDOMReady(initFunction);
+</script>
+<script type="text/javascript">
+  var q = 0;
+
+  function toggle(id) {
+    var element = document.getElementById(id);
+    element.style.display = element.style.display == 'none' ? '' : 'none';
+  }
+  
+  function toggleWithShowHide(tableId, showHideId) {
+    toggle(tableId);
+    var showHideSpan = document.getElementById(showHideId);
+    showHideSpan.innerHTML = showHideSpan.innerHTML == 'show' ? 'hide' : 'show';
+  }
+
+  function exportFounderGeneSets(fileType) {
+    document.exportForm.fileType.value = fileType;
+    document.exportForm.submit();
+  }
+</script>
+
+
+<br />
+
+
+<table class="lists4 human" width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr class="toprow">
+    <th>Standard name</th>
+    <td>TSUNODA_CISPLATIN_RESISTANCE_UP</td>
+  </tr>
+  <tr>
+    <th>Systematic name</th>
+    <td>M10202</td>
+  </tr>
+  <tr>
+    <th>Brief description</th>
+    <td>Genes up-regulated in bladder cancer cells resistant to cisplatin <a href='http://pubchem.ncbi.nlm.nih.gov/summary/summary.cgi?cid=2767'>[PubChem=2767]</a> compared to the parental cells sensitive to the drug.</td>
+  </tr>
+  <tr>
+    <th>Full description or abstract</th>
+    <td>
+    To investigate the molecules that regulate the acquisition of cis-diamminedichloroplatinum (II) (cisplatin) resistance, we performed cDNA microarrays using two pairs of parental and cisplatin-resistant bladder cancer cell lines. We found a markedly reduced expression of inositol 1,4,5-trisphosphate (IP3) receptor type1 (IP3R1), endoplasmic reticulum membrane protein, in cisplatin-resistant cells. The suppression of IP3R1 expression using small interfering RNA in parental cells prevented apoptosis and resulted in decreased sensitivity to cisplatin. Contrarily, overexpression of IP3R1 in resistant cells induced apoptosis and increased sensitivity to cisplatin. These results suggest that cisplatin-induced downregulation of IP3R1 expression was closely associated with the acquisition of cisplatin resistance in bladder cancer cells.
+    </td>
+  </tr>
+  <tr>
+    <th>Collection</th>
+    <td>C2: Curated<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CGP: Chemical and Genetic Perturbations</td>
+  </tr>
+  <tr>
+    <th>Source publication</th>
+    <td><a target='_blank' href='https://pubmed.ncbi.nlm.nih.gov/15608674'>Pubmed 15608674</a>&nbsp;&nbsp;&nbsp;Authors: Tsunoda T,Koga H,Yokomizo A,Tatsugami K,Eto M,Inokuchi J,Hirata A,Masuda K,Okumura K,Naito S</td>
+  </tr>
+  <tr>
+    <th>Exact source</th>
+    <td>Table 1, 2: Downregulated genes</td>
+  </tr>
+  <tr>
+    <th>Related gene sets</th>
+    <td>
+      
+        
+        
+          
+            <a href="javascript:toggleWithShowHide('relatedByPubMedId', 'showHideByPubMedId')">
+              (<span id="showHideByPubMedId">show</span> 1 additional gene sets from the source publication)
+            </a>
+            <br/>
+            <div id="relatedByPubMedId" style="display: none;">
+              <br/>
+              
+                
+                <a href="msigdb/human/geneset/TSUNODA_CISPLATIN_RESISTANCE_DN.html?ex=1">TSUNODA_CISPLATIN_RESISTANCE_DN</a>
+              
+            </div>
+          
+          
+            <br/>
+            <a href="javascript:javascript:toggleWithShowHide('relatedByAuthors', 'showHideByAuthors')">
+              (<span id="showHideByAuthors">show</span> 3 gene sets from any of these authors)
+            </a>
+            <br/>
+            <div id="relatedByAuthors" style="display: none;">
+              <br/>
+              
+                
+                <a href="msigdb/human/geneset/ABDELMOHSEN_ELAVL4_TARGETS.html?ex=1">ABDELMOHSEN_ELAVL4_TARGETS</a>
+              
+                <br/>
+                <a href="msigdb/human/geneset/ABE_INNER_EAR.html?ex=1">ABE_INNER_EAR</a>
+              
+                <br/>
+                <a href="msigdb/human/geneset/LIN_APC_TARGETS.html?ex=1">LIN_APC_TARGETS</a>
+              
+            </div>
+          
+          
+        
+      
+    </td>
+  </tr>
+  <tr>
+    <th>External links</th>
+    <td><a target='_blank' href=''></a></td>
+  </tr>
+  <tr>
+    <th>Filtered by similarity <a href="msigdb/help_annotations.jsp#filteredBySimilarity"><span class="info_icon human" id="filteredBySimilarityHelp"
+      title="Gene set candidates that were excluded from MSigDB as highly similar to this selected set."
+      >?</span></a>
+      </th>
+    <script type="text/javascript">
+      contextIds[q++] = "filteredBySimilarityHelp";
+    </script>
+    <td>
+        
+    </td>
+  </tr>
+  <tr>
+    <th>Source species</th>
+    <td>Homo sapiens</td>
+  </tr>
+  <tr>
+    <th>Contributed by</th>
+    <td>Leona Saunders (MSigDB Team)</td>
+  </tr>
+  <tr>
+    <th>Source platform or<br/>identifier namespace</th>
+    <td>HUMAN_SEQ_ACCESSION</td>
+  </tr>
+  <tr>
+    <th>Dataset references</th>
+    <td>
+      &nbsp;
+      
+      
+      
+    </td>
+  </tr>
+  <tr>
+    <th>Download gene set</th>
+    <td>format: <a href="msigdb/human/download_geneset.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&fileType=grp">grp</a> | <a href="msigdb/human/download_geneset.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&fileType=gmt">gmt</a> | <a href="msigdb/human/download_geneset.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&fileType=xml">xml</a> | <a href="msigdb/human/download_geneset.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&fileType=json">json</a> | <a href="msigdb/human/download_geneset.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&fileType=TSV">TSV metadata</a></td></td>
+  </tr>
+  <tr>
+    <th>Compute overlaps <a href="msigdb/help_annotations.jsp#overlap"><span class="info_icon human" id="overlapHelp" 
+      title="Computes overlaps with gene sets in the selected MSigDB gene set collection"
+      >?</span></a></th>
+    <script type="text/javascript">
+      contextIds[q++] = "overlapHelp";
+    </script>
+    <td>
+      
+      <a href="javascript:toggleWithShowHide('overlapCollections', 'showHideOverlapCollections')">
+        (<span id="showHideOverlapCollections">show</span> collections to investigate for overlap with this gene set)
+      </a>
+      <br/>
+      <div id="overlapCollections" style="display:none;">
+        
+          
+          <a href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=H&ex=1"><nobr>H: Hallmark</nobr></a>
+          
+        
+          <br/>
+          <a href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=C1&ex=1"><nobr>C1: Positional</nobr></a>
+          
+        
+          <br/>
+          <a href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=C2&ex=1"><nobr>C2: Curated</nobr></a>
+          
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="spanLink" 
+              href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=CGP&ex=1"><nobr>CGP: Chemical and Genetic Perturbations</nobr></a>
+            
+          
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="spanLink" 
+              href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=CP&ex=1"><nobr>CP: Canonical Pathways</nobr></a>
+            
+              <br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="spanLink"
+                href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=CP:BIOCARTA&ex=1"><nobr>CP:BIOCARTA: BioCarta Pathways</nobr></a>
+            
+              <br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="spanLink"
+                href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=CP:KEGG_MEDICUS&ex=1"><nobr>CP:KEGG_MEDICUS: KEGG Medicus Pathways</nobr></a>
+            
+              <br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="spanLink"
+                href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=CP:PID&ex=1"><nobr>CP:PID: PID Pathways</nobr></a>
+            
+              <br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="spanLink"
+                href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=CP:REACTOME&ex=1"><nobr>CP:REACTOME: Reactome Pathways</nobr></a>
+            
+              <br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="spanLink"
+                href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=CP:WIKIPATHWAYS&ex=1"><nobr>CP:WIKIPATHWAYS: WikiPathways</nobr></a>
+            
+              <br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="spanLink"
+                href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=CP:KEGG_LEGACY&ex=1"><nobr>CP:KEGG_LEGACY: KEGG Legacy Pathways</nobr></a>
+            
+          
+        
+          <br/>
+          <a href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=C3&ex=1"><nobr>C3: Regulatory Target</nobr></a>
+          
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="spanLink" 
+              href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=MIR&ex=1"><nobr>MIR: microRNA Targets</nobr></a>
+            
+              <br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="spanLink"
+                href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=MIR:MIRDB&ex=1"><nobr>MIR:MIRDB: miRDB</nobr></a>
+            
+              <br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="spanLink"
+                href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=MIR:MIR_LEGACY&ex=1"><nobr>MIR:MIR_LEGACY: MIR_Legacy</nobr></a>
+            
+          
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="spanLink" 
+              href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=TFT&ex=1"><nobr>TFT: Transcription Factor Targets</nobr></a>
+            
+              <br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="spanLink"
+                href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=TFT:GTRD&ex=1"><nobr>TFT:GTRD: GTRD</nobr></a>
+            
+              <br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="spanLink"
+                href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=TFT:TFT_LEGACY&ex=1"><nobr>TFT:TFT_LEGACY: TFT_Legacy</nobr></a>
+            
+          
+        
+          <br/>
+          <a href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=C4&ex=1"><nobr>C4: Computational</nobr></a>
+          
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="spanLink" 
+              href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=3CA&ex=1"><nobr>3CA: Curated Cancer Cell Atlas gene sets </nobr></a>
+            
+          
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="spanLink" 
+              href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=CGN&ex=1"><nobr>CGN: Cancer Gene Neighborhoods</nobr></a>
+            
+          
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="spanLink" 
+              href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=CM&ex=1"><nobr>CM: Cancer Modules</nobr></a>
+            
+          
+        
+          <br/>
+          <a href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=C5&ex=1"><nobr>C5: Ontology</nobr></a>
+          
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="spanLink" 
+              href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=GO&ex=1"><nobr>GO: Gene Ontology</nobr></a>
+            
+              <br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="spanLink"
+                href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=GO:BP&ex=1"><nobr>GO:BP: GO Biological Process</nobr></a>
+            
+              <br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="spanLink"
+                href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=GO:CC&ex=1"><nobr>GO:CC: GO Cellular Component</nobr></a>
+            
+              <br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="spanLink"
+                href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=GO:MF&ex=1"><nobr>GO:MF: GO Molecular Function</nobr></a>
+            
+          
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="spanLink" 
+              href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=HPO&ex=1"><nobr>HPO: Human Phenotype Ontology</nobr></a>
+            
+          
+        
+          <br/>
+          <a href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=C6&ex=1"><nobr>C6: Oncogenic Signature</nobr></a>
+          
+        
+          <br/>
+          <a href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=C7&ex=1"><nobr>C7: Immunologic Signature</nobr></a>
+          
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="spanLink" 
+              href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=IMMUNESIGDB&ex=1"><nobr>IMMUNESIGDB: ImmuneSigDB</nobr></a>
+            
+          
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="spanLink" 
+              href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=VAX&ex=1"><nobr>VAX: HIPC Vaccine Response</nobr></a>
+            
+          
+        
+          <br/>
+          <a href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=C8&ex=1"><nobr>C8: Cell Type Signature</nobr></a>
+          
+        
+          <br/>
+          <a href="msigdb/human/compute_overlaps.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&collection=C9&ex=1"><nobr>C9: Computational Perturbation Signature</nobr></a>
+          
+        
+      </div>
+      
+    </td>
+  </tr>
+  <tr>
+    <th>Compendia expression profiles <a href="msigdb/help_annotations.jsp#compendia"><span class="info_icon human" id="compendiaHelp"
+      title="Displays this gene set's expression profile based on the selected compendium of expression data.">?</span></a></th>
+    <script type="text/javascript">
+      contextIds[q++] = "compendiaHelp";
+    </script>
+    <td>
+      
+      NG-CHM interactive heatmaps<br />
+      (<i>Please note that clustering takes a few seconds</i>)<br />
+      <a class="ext_link" href="msigdb/human/ngchmCompendium.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&compendiumId=gtex&ex=1" target="_blank">
+        <nobr>GTEx compendium</nobr>
+      </a><br/>
+      <a class="ext_link" href="msigdb/human/ngchmCompendium.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&compendiumId=novartisHuman&ex=1" target="_blank">
+        <nobr>Human tissue compendium (Novartis)</nobr>
+      </a><br/>
+      <a class="ext_link" href="msigdb/human/ngchmCompendium.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&compendiumId=cancerTissues&ex=1" target="_blank">
+        <nobr>Global Cancer Map (Broad Institute)</nobr>
+      </a><br/>
+      <a class="ext_link" href="msigdb/human/ngchmCompendium.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&compendiumId=cancerCellLines&ex=1" target="_blank">
+        <nobr>NCI-60 cell lines (National Cancer Institute)</nobr>
+      </a>
+      <br /><br />Legacy heatmaps (PNG)<br />
+      <a href="msigdb/human/compendium.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&compendiumId=gtex&ex=1">
+        <nobr>GTEx compendium</nobr>
+      </a><br/>
+      <a href="msigdb/human/compendium.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&compendiumId=novartisHuman&ex=1">
+        <nobr>Human tissue compendium (Novartis)</nobr>
+      </a><br/>
+      <a href="msigdb/human/compendium.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&compendiumId=cancerTissues&ex=1">
+        <nobr>Global Cancer Map (Broad Institute)</nobr>
+      </a><br/>
+      <a href="msigdb/human/compendium.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&compendiumId=cancerCellLines&ex=1">
+        <nobr>NCI-60 cell lines (National Cancer Institute)</nobr>
+      </a>
+      
+      
+    </td>
+  </tr>
+  <tr>
+    <th>Advanced query</th>
+    <td>
+      
+      <a href="msigdb/human/annotate.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP">Further investigate</a> 
+        these 15 genes
+      
+    </td>
+  </tr>
+  
+  <tr>
+    <th>Gene families <a href="msigdb/help_annotations.jsp#families"><span class="info_icon human" id="geneFamiliesHelp"
+      title="Categorizes members of this gene set by gene families."
+      >?</span></a></th>
+    <script type="text/javascript">
+      contextIds[q++] = "geneFamiliesHelp";
+    </script>
+    <td>
+      
+      <a href="msigdb/human/gene_families.jsp?geneSetName=TSUNODA_CISPLATIN_RESISTANCE_UP&ex=1">Categorize</a> these 
+      15 genes by gene family
+      
+    </td>
+  </tr>
+  
+  <tr>
+    <th>Show members</th>
+    <td>
+      <a href="javascript:toggleWithShowHide('geneListing', 'showHideMembers')">
+        (<span id="showHideMembers">show</span> 15 source identifiers mapped to 15 genes)
+      </a>
+      <br/>
+      <div id="geneListing" style="display: none;">
+        <br/>
+        <table border="0" cellpadding="0" cellspacing="0" align="left">
+          <tr>
+            <th valign="top" title="original member source identifier">Source<br/>Id</th>
+            <th valign="top" title="entrez gene id">NCBI&nbsp;(Entrez)<br/>Gene&nbsp;Id</th>
+            <th valign="top" title="human gene symbol equivalent">Gene<br/>Symbol</th>
+            <th valign="top" width="100%" title="description of the human gene">Gene<br/>Description</th>
+          </tr>
+          
+            <tr >
+              <td valign="top">AA410508</td>
+              <td valign="top"><a target='_blank' href='http://view.ncbi.nlm.nih.gov/gene/652995' title='view NCBI entry for Entrez gene id'>652995</a></td>
+              <td valign="top"><a target='_blank' href='http://ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=UCA1' title='view Ensembl entry for gene symbol'>UCA1</a></td>
+              <td valign="top" width="100%">urothelial cancer associated 1 [Source:H...</td>
+            </tr>
+          
+            <tr >
+              <td valign="top">AA451928</td>
+              <td valign="top"><a target='_blank' href='http://view.ncbi.nlm.nih.gov/gene/7431' title='view NCBI entry for Entrez gene id'>7431</a></td>
+              <td valign="top"><a target='_blank' href='http://ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=VIM' title='view Ensembl entry for gene symbol'>VIM</a></td>
+              <td valign="top" width="100%">vimentin [Source:HGNC Symbol;Acc:HGNC:12...</td>
+            </tr>
+          
+            <tr >
+              <td valign="top">AF003594</td>
+              <td valign="top"><a target='_blank' href='http://view.ncbi.nlm.nih.gov/gene/3491' title='view NCBI entry for Entrez gene id'>3491</a></td>
+              <td valign="top"><a target='_blank' href='http://ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=CCN1' title='view Ensembl entry for gene symbol'>CCN1</a></td>
+              <td valign="top" width="100%">cellular communication network factor 1 ...</td>
+            </tr>
+          
+            <tr >
+              <td valign="top">AF007144</td>
+              <td valign="top"><a target='_blank' href='http://view.ncbi.nlm.nih.gov/gene/1734' title='view NCBI entry for Entrez gene id'>1734</a></td>
+              <td valign="top"><a target='_blank' href='http://ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=DIO2' title='view Ensembl entry for gene symbol'>DIO2</a></td>
+              <td valign="top" width="100%">iodothyronine deiodinase 2 [Source:HGNC ...</td>
+            </tr>
+          
+            <tr >
+              <td valign="top">AV705672</td>
+              <td valign="top"><a target='_blank' href='http://view.ncbi.nlm.nih.gov/gene/3429' title='view NCBI entry for Entrez gene id'>3429</a></td>
+              <td valign="top"><a target='_blank' href='http://ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=IFI27' title='view Ensembl entry for gene symbol'>IFI27</a></td>
+              <td valign="top" width="100%">interferon alpha inducible protein 27 [S...</td>
+            </tr>
+          
+            <tr >
+              <td valign="top">AW072424</td>
+              <td valign="top"><a target='_blank' href='http://view.ncbi.nlm.nih.gov/gene/4907' title='view NCBI entry for Entrez gene id'>4907</a></td>
+              <td valign="top"><a target='_blank' href='http://ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=NT5E' title='view Ensembl entry for gene symbol'>NT5E</a></td>
+              <td valign="top" width="100%">5'-nucleotidase ecto [Source:HGNC Symbol...</td>
+            </tr>
+          
+            <tr >
+              <td valign="top">AW663903</td>
+              <td valign="top"><a target='_blank' href='http://view.ncbi.nlm.nih.gov/gene/3638' title='view NCBI entry for Entrez gene id'>3638</a></td>
+              <td valign="top"><a target='_blank' href='http://ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=INSIG1' title='view Ensembl entry for gene symbol'>INSIG1</a></td>
+              <td valign="top" width="100%">insulin induced gene 1 [Source:HGNC Symb...</td>
+            </tr>
+          
+            <tr >
+              <td valign="top">BE877317</td>
+              <td valign="top"><a target='_blank' href='http://view.ncbi.nlm.nih.gov/gene/50486' title='view NCBI entry for Entrez gene id'>50486</a></td>
+              <td valign="top"><a target='_blank' href='http://ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=G0S2' title='view Ensembl entry for gene symbol'>G0S2</a></td>
+              <td valign="top" width="100%">G0/G1 switch 2 [Source:HGNC Symbol;Acc:H...</td>
+            </tr>
+          
+            <tr >
+              <td valign="top">L20688</td>
+              <td valign="top"><a target='_blank' href='http://view.ncbi.nlm.nih.gov/gene/397' title='view NCBI entry for Entrez gene id'>397</a></td>
+              <td valign="top"><a target='_blank' href='http://ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=ARHGDIB' title='view Ensembl entry for gene symbol'>ARHGDIB</a></td>
+              <td valign="top" width="100%">Rho GDP dissociation inhibitor beta [Sou...</td>
+            </tr>
+          
+            <tr >
+              <td valign="top">M15476</td>
+              <td valign="top"><a target='_blank' href='http://view.ncbi.nlm.nih.gov/gene/5328' title='view NCBI entry for Entrez gene id'>5328</a></td>
+              <td valign="top"><a target='_blank' href='http://ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=PLAU' title='view Ensembl entry for gene symbol'>PLAU</a></td>
+              <td valign="top" width="100%">plasminogen activator, urokinase [Source...</td>
+            </tr>
+          
+            <tr >
+              <td valign="top">M18767</td>
+              <td valign="top"><a target='_blank' href='http://view.ncbi.nlm.nih.gov/gene/716' title='view NCBI entry for Entrez gene id'>716</a></td>
+              <td valign="top"><a target='_blank' href='http://ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=C1S' title='view Ensembl entry for gene symbol'>C1S</a></td>
+              <td valign="top" width="100%">complement C1s [Source:HGNC Symbol;Acc:H...</td>
+            </tr>
+          
+            <tr >
+              <td valign="top">NM_006113</td>
+              <td valign="top"><a target='_blank' href='http://view.ncbi.nlm.nih.gov/gene/10451' title='view NCBI entry for Entrez gene id'>10451</a></td>
+              <td valign="top"><a target='_blank' href='http://ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=VAV3' title='view Ensembl entry for gene symbol'>VAV3</a></td>
+              <td valign="top" width="100%">vav guanine nucleotide exchange factor 3...</td>
+            </tr>
+          
+            <tr >
+              <td valign="top">NM_006768</td>
+              <td valign="top"><a target='_blank' href='http://view.ncbi.nlm.nih.gov/gene/8315' title='view NCBI entry for Entrez gene id'>8315</a></td>
+              <td valign="top"><a target='_blank' href='http://ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=BRAP' title='view Ensembl entry for gene symbol'>BRAP</a></td>
+              <td valign="top" width="100%">BRCA1 associated protein [Source:HGNC Sy...</td>
+            </tr>
+          
+            <tr >
+              <td valign="top">U03877</td>
+              <td valign="top"><a target='_blank' href='http://view.ncbi.nlm.nih.gov/gene/2202' title='view NCBI entry for Entrez gene id'>2202</a></td>
+              <td valign="top"><a target='_blank' href='http://ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=EFEMP1' title='view Ensembl entry for gene symbol'>EFEMP1</a></td>
+              <td valign="top" width="100%">EGF containing fibulin extracellular mat...</td>
+            </tr>
+          
+            <tr >
+              <td valign="top">X78947</td>
+              <td valign="top"><a target='_blank' href='http://view.ncbi.nlm.nih.gov/gene/1490' title='view NCBI entry for Entrez gene id'>1490</a></td>
+              <td valign="top"><a target='_blank' href='http://ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=CCN2' title='view Ensembl entry for gene symbol'>CCN2</a></td>
+              <td valign="top" width="100%">cellular communication network factor 2 ...</td>
+            </tr>
+          
+        </table>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <th>Version history</th>
+    <td>
+      
+        &nbsp;
+        
+        
+      
+            
+      
+    </td>
+  </tr>
+</table>
+
+</div>
+<br />
+<br />
+
+<h2>Creative Commons Attribution 4.0 International License (CC-BY-4.0)</h2>
+
+The contents of this gene set are protected by copyright (c) 2004-2026 Broad Institute, Inc., Massachusetts Institute of Technology, 
+and Regents of the University of California, subject to the terms and conditions of the 
+<a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. 
+
+
+
+
+
+<br />
+<br /><p>
+See <a href="msigdb_license_terms.jsp">the full MSigDB license terms here</a>.</p>
+
+
+        </td> <!-- body -->
+      </tr>
+    </table>
+  </div> <!--  content_navs -->
+  
+</div> <!-- contentwrapper -->
+  <div align="left" id="footer" style="padding-right: 5%; padding-left:5%;">
+    Copyright (c) 2004-2026 Broad Institute, Inc., Massachusetts Institute of Technology, and Regents of the University of California.  All rights reserved.
+  </div>
+</div>  <!--wrapper ends here -->
+</body>
+</html>

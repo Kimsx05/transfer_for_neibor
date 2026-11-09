@@ -1,0 +1,11 @@
+item	finding
+Tsunoda_version	Official MSigDB snapshot retrieved 2026-11-09, M10202/M5014; no explicit release asserted; hashes lock contents. UP15 sources->15 genes; DN53 source IDs->50 mapped symbols.
+Tsunoda_direction	Nature Table1 T24 vs T24/DDP10 and Table2 KK47 vs KK47/DDP20 checked. Web Exact source reversed; names/membership retained. C1S opposite across models; INSIG1 shared with MP10.
+replicate_design	PMC11094426: RNA collected from three separate passages per derivative, not three independently evolved lines. GSM explicitly several passages without antibiotics/gemcitabine/cisplatin; untreated harvest. Sequencing batch not independently recorded.
+GSE212810_label_conflicts	Author labels match S6A labels; NR text says ypN0 despite lymph node metastasis, inconsistent; reconstructed with positive node criterion. Seven N999 author-R cases kept unknown for good response. S6A two 2-cycle patients kept despite GEO >=3-cycle summary.
+GSE212810_regimens	Author S6A codes:1 GP,2 GCb,3 DDMVAC. GP interpreted as gemcitabine/cisplatin in cisplatin-based study context; GCb explicitly kept separate. Raw codes preserved for review. No independently recorded dose data.
+independence	Three external GSE accessions absent from five local NMF discovery datasets; no NMF rerun or signature alteration. Cannot audit undocumented historical selection decisions.
+AGENTS	No applicable AGENTS.md found in project/ancestors or Metabolistic_scRNA; original NMF README and prior result conventions read. Attached prompt treated as reference; explicit chat request governs.
+resource_window	User supplied23:00-07:00 Asia/Shanghai rule respected for large tasks. No large task needed: memory-mapped stream, no Seurat/ranking matrices; full replay small,serial,12GiB virtual cap. No scheduler job submitted.
+scoring_name	Stored Epi score is deterministic average-tie AUCell-like, not official randomized AUCell. Same algorithm/background used for new sets; max reproduction error3.33e-16. Original official AUCell comparison showed differences; not described as package-identical.
+invalid_download	tsunoda.pdf contains HTML, not valid PDF; never used as PDF evidence. Valid Nature table HTML is the direction source.

@@ -1,0 +1,12 @@
+[
+  {
+    "timestamp": "2026-11-09T22:40:51.596879",
+    "type": "implementation_correction",
+    "reason": "GSE169455 stage parser initially omitted uppercase IS/CIS and suffix b. Corrected parser and added explicit tests; diagnostic outputs archived, not scientific results. Frozen endpoint unchanged."
+  },
+  {
+    "timestamp": "2026-11-09T22:40:51.596888",
+    "type": "prespecified_penalty_implementation",
+    "reason": "GSE212810 cT-adjusted pCR had sparse-category separation. Implement Jeffreys Firth profile likelihood locally, validate known separated 2x2 OR=441; no choice based on P, no environment upgrade."
+  }
+]
