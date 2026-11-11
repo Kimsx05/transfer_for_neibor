@@ -1,0 +1,28 @@
+{
+  "section": "MPBC2",
+  "lambda": 0.8,
+  "n": 422741,
+  "clusters": 41,
+  "npcs": 30,
+  "all_bins_direct": true,
+  "normalization": "existing RNA LogNormalize10000",
+  "HVG": 3000,
+  "scale_max": 10,
+  "use_agf": false,
+  "split_scale": false,
+  "graph_name": "banksy_l08_snn",
+  "cluster_column": "banksy_l08_cluster",
+  "pca_reduction": "banksy_l08_pca",
+  "umap_reduction": "banksy_l08_umap",
+  "resolution": 0.5,
+  "algorithm": "Louvain",
+  "k_param": 20,
+  "prune_SNN": 0.0666666666666667,
+  "UMAP": {
+    "n_neighbors": 30,
+    "metric": "cosine",
+    "min_dist": 0.3,
+    "epochs": 200,
+    "seed": 123
+  }
+}

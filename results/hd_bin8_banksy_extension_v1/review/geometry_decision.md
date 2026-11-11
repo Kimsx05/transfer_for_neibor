@@ -1,0 +1,5 @@
+# Geometry decision before expression models
+
+UC_SCC has one supplied in-tissue component; unrestricted k50 maximum64.49um, median32.98um. MPBC1 has one supplied-input component; maximum160um,99%43.08um. MPBC2 has38 supplied-input components, including258 QC bins in small components and2 singleton bins; unrestricted k50 maximum299.87um,99%80um. The unrestricted graph would cross supplied-input components in11,199 directed edges affecting744 bins.
+
+Use the already established component-restricted native kNN rule. It removes cross-component edges without reference-label information or extra expression filtering. Do not add an arbitrary radial cutoff simply because a distance tail exists. Final per-bin closest/median/farthest distances and fallback states are delivered by neighbors.R. Long within-component edges remain review flags; the MPBC components are not proven tissue fragments. Two isolated MPBC2 bins have zero external neighbors and a self-only kernel fallback; their neighborhood term is not independent spatial evidence. No bin is dropped for this reason. This decision can be revisited only if actual maps demonstrate a specific large-gap problem.

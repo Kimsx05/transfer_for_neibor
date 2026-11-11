@@ -1,0 +1,36 @@
+{
+  "coordinate_type": "native fullres pixel centers times declared microns_per_pixel",
+  "units": "um",
+  "y_direction": "down image",
+  "microns_per_pixel": 0.3779763963998723,
+  "scalefactors": {
+    "spot_diameter_fullres": 21.16534279970373,
+    "bin_size_um": 8.0,
+    "microns_per_pixel": 0.3779763963998723,
+    "tissue_lowres_scalef": 0.030693676,
+    "fiducial_diameter_fullres": 873.0703904877789,
+    "tissue_hires_scalef": 0.30693677,
+    "regist_target_img_scalef": 0.30693677
+  },
+  "hires_path": "../../../data/GSE299573/GSM9040999/square_008um/spatial/tissue_hires_image.png",
+  "in_tissue": "original barcode-aligned spatial table",
+  "array_to_physical_affine": [
+    [
+      7.998381861009178,
+      -0.09128799458828897
+    ],
+    [
+      0.0913424816573929,
+      7.998392443991534
+    ],
+    [
+      563.7419037784888,
+      739.3293690689322
+    ]
+  ],
+  "affine_max_residual_um": 0.06836397957137957,
+  "step_col_row_um": [
+    7.998902793038342,
+    7.998913997353403
+  ]
+}

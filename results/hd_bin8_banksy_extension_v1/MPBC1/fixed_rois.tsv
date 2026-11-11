@@ -1,0 +1,5 @@
+roi	x	y	X	Y	selection	n_preselection	median_nf_preselection
+low_information	4608	3328	4864	3584	256um grid window closest to section window median nFeature quantile 0.1; >=128 QC bins; before reference/BANKSY	926	28.5
+typical_information	1536	5376	1792	5632	256um grid window closest to section window median nFeature quantile 0.5; >=128 QC bins; before reference/BANKSY	1024	124.0
+high_information	0	2048	256	2304	256um grid window closest to section window median nFeature quantile 0.9; >=128 QC bins; before reference/BANKSY	1024	223.5
+sparse_input_edge	6656	1024	6912	1280	Lowest occupied 256um window with >=128 QC bins; input/expression support edge, not established tissue edge	141	11.0

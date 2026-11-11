@@ -1,0 +1,17 @@
+Loading required package: SeuratObject
+Loading required package: sp
+‘SeuratObject’ was built with package ‘Matrix’ 1.7.5 but the current
+version is 1.7.6; it is recomended that you reinstall ‘SeuratObject’ as
+the ABI for ‘Matrix’ may have changed
+
+Attaching package: ‘SeuratObject’
+
+The following objects are masked from ‘package:base’:
+
+    intersect, t
+
+Error in value[[3L]](cond) : 
+  Package ‘data.table’ version 1.18.6.1 cannot be unloaded:
+ Error in unloadNamespace(package) : namespace ‘data.table’ is imported by ‘plotly’ so cannot be unloaded
+Calls: library ... tryCatch -> tryCatchList -> tryCatchOne -> <Anonymous>
+Execution halted

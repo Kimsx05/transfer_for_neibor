@@ -1,0 +1,10 @@
+{
+  "section": "MPBC2",
+  "n": 422741,
+  "genes": 18085,
+  "marker_source": "all-gene original RNA counts and LogNormalize data; all QC bins",
+  "cluster_SingleR": "sum of original LogNormalize expression, equivalent to SingleR clusters interface; BLCA Ensembl; HPCA duplicate symbol counts merged then LogNormalize",
+  "references_relative": "../hd_annotation_diagnosis_singler_v1/reference",
+  "marker_ranking": "descriptive log2(mean normalized+1) in/out and detection difference; no P values",
+  "seed": 123
+}

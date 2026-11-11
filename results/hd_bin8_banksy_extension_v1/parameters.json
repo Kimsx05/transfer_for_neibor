@@ -1,0 +1,56 @@
+{
+  "version": "hd_bin8_banksy_extension_v1_fixed",
+  "sections": [
+    "UC_SCC",
+    "MPBC1",
+    "MPBC2"
+  ],
+  "seed": 123,
+  "QC": "UC_SCC: supplied & original in_tissue & nCount>5; MPBC: supplied & nCount>5; in_tissue remains NA",
+  "assay": "RNA",
+  "layer": "data",
+  "normalization": "LogNormalize 10000",
+  "HVG": "vst 3000 once per section",
+  "lambda": [
+    0,
+    0.2,
+    0.8
+  ],
+  "k_geom": 50,
+  "spatial_mode": "kNN_median",
+  "use_agf": false,
+  "split_scale": false,
+  "scale_max": 10,
+  "PCA": 30,
+  "dims": [
+    1,
+    30
+  ],
+  "k_param": 20,
+  "nn_method": "annoy",
+  "annoy_trees": 50,
+  "SNN_prune": 0.06666666666666667,
+  "algorithm": 1,
+  "resolution": 0.5,
+  "n_start": 10,
+  "n_iter": 10,
+  "UMAP": {
+    "neighbors": 30,
+    "min_dist": 0.3,
+    "spread": 1,
+    "metric": "cosine",
+    "epochs": 200,
+    "workers": 8
+  },
+  "threads": 8,
+  "BLAS_threads": 1,
+  "memory_virtual_limit_GiB": 180,
+  "region_labels": "descriptive interpretation, not bin identity",
+  "type_labels": "both references retained independently",
+  "reuse_only": [
+    "Cervilla",
+    "D1_Johnson"
+  ],
+  "heavy_window": "Asia/Shanghai 23:00-07:00",
+  "source_code": "../hd_bin8_banksy_v1/code"
+}

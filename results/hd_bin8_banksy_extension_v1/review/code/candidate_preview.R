@@ -1,0 +1,3 @@
+source(file.path(commandArgs(TRUE)[1],'code/plot_common.R'))
+d<-fread(file.path(out,'analysis_metadata.tsv.gz'));t<-fread(file.path(out,'type_metadata.tsv.gz'));stopifnot(identical(d$bin_id,t$bin_id));for(k in setdiff(names(t),names(d)))d[[k]]<-t[[k]]
+typ<-rbindlist(lapply(c('blca','hpca'),function(k)d[,.(x_um,y_um,candidate=get(paste0('coarse_',k)),reference=toupper(k))]));p<-spfinish(ggplot(typ,aes(x_um,-y_um,color=candidate))+geom_point_rast(size=.09,raster.dpi=300)+facet_wrap(~reference,nrow=1)+scale_color_manual(values=coarse,name='Coarse candidate')+guides(color=guide_legend(override.aes=list(size=3))));export(p,'spatial_coarse_references',14,7,12)

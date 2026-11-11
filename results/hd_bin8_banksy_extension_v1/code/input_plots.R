@@ -1,0 +1,5 @@
+source(file.path(commandArgs(TRUE)[1],'code/plot_common.R'))
+all<-fread(file.path(out,'bin_metadata.tsv.gz'));v<-rbindlist(list(all[,.(x_um,y_um,value=log10(1+nCount_RNA),metric='log10(1+nCount)')],all[,.(x_um,y_um,value=log10(1+nFeature_RNA),metric='log10(1+nFeature)')]));p<-spfinish(ggplot(v,aes(x_um,-y_um,color=value))+geom_point_rast(size=.08,raster.dpi=300)+facet_wrap(~metric,nrow=1)+scale_color_viridis_c(name='Supplied-bin\ninformation'));export(p,'input_information_all_supplied',13,7,11)
+all[,state:=fifelse(qc_keep,'Expression QC kept',qc_reason)];p<-spfinish(ggplot(all,aes(x_um,-y_um,color=state))+geom_point_rast(size=.08,raster.dpi=300)+scale_color_manual(values=c('Expression QC kept'='#57c1b5',nCount_le5='#bdbdbd',outside_original_tissue='#f5b264'),name=if(grepl('MPBC',s))'Input/QC (tissue unknown)' else 'Input/QC'));export(p,'input_QC_coverage',10,7,8)
+if(grepl('MPBC',s)){p<-spfinish(ggplot(all,aes(x_um,-y_um,color=supplied_2um_n))+geom_point_rast(size=.08,raster.dpi=300)+scale_color_viridis_c(limits=c(1,16),name='Supplied 2um bins\n(nominal 4x4)'));export(p,'input_supplied_2um_coverage',10,7,8)}
+cat('INPUT_PLOTS_COMPLETE',s,'\n')

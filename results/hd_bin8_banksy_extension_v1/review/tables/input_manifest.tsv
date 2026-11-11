@@ -1,0 +1,9 @@
+section	role	path_relative_to_HD	input_resolution_um	tissue_mask_known	software
+UC_SCC	original raw counts	data/GSE299573/GSM9040999/square_008um/filtered_feature_bc_matrix.h5	8	True	spaceranger-3.1.1
+UC_SCC	analysis counts loader source	data/GSE299573/GSM9040999/square_008um/filtered_feature_bc_matrix.h5	8	True	native8um
+MPBC1	original raw counts	data/GSE318916/GSM9505917_mpbc4423filtered_feature_bc_matrix.h5	2	False	spaceranger-3.0.0
+MPBC1	analysis counts loader source	analysis/hd_bin8_banksy_extension_v1/MPBC1/counts8.h5	8	False	fixed original grid raw sum
+MPBC2	original raw counts	data/GSE318916/GSM9505918_mpbc4538filtered_feature_bc_matrix.h5	2	False	spaceranger-4.0.1
+MPBC2	analysis counts loader source	analysis/hd_bin8_banksy_extension_v1/MPBC2/counts8.h5	8	False	fixed original grid raw sum
+Cervilla	unchanged main bin object + BANKSY increments	analysis/hd_bin8_comparison_v1/Cervilla; analysis/hd_bin8_banksy_v1/Cervilla	8	True	reuse; no model rerun
+D1_Johnson	unchanged main bin object + BANKSY increments	analysis/hd_bin8_comparison_v1/D1_Johnson; analysis/hd_bin8_banksy_v1/D1_Johnson	8	True	reuse; no model rerun
