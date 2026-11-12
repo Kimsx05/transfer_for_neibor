@@ -1,0 +1,11 @@
+{
+  "A_max_distance": 0.7990979387136672,
+  "B_max_distance": 0.08196969827322816,
+  "B_vote_strictly_above": 0.5,
+  "projection_representation": {
+    "A": "sqrt(P)",
+    "B": "P"
+  },
+  "tie_rule": "lexical among maximum vote labels; all exact-profile training ties when present; otherwise k15",
+  "native_labels_never_replaced": true
+}

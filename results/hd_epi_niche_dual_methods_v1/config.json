@@ -1,0 +1,44 @@
+{
+  "seed": 123,
+  "seeds": [
+    123,
+    456,
+    789
+  ],
+  "radii_um": [
+    50,
+    200
+  ],
+  "minimum_known": 10,
+  "quality_reason": "At least ten equal known votes limits individual-bin share to <=10%; no known-fraction or non-Epi minimum. Edge/coverage retained as continuous caveats.",
+  "block_um": 400,
+  "training_cap_per_section": 20000,
+  "training_sections": [
+    "Cervilla",
+    "D1_Johnson",
+    "UC_SCC",
+    "MPBC1"
+  ],
+  "projection_only": [
+    "MPBC2"
+  ],
+  "K": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "resolutions": [
+    0.1,
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "selection_score": "0.5 seed ARI + 0.3 physical-block stability ARI + 0.2 fixed-subset silhouette; exploratory if weak",
+  "threads": 4
+}
