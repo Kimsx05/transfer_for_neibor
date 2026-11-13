@@ -1,0 +1,32 @@
+Seed set to 123
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (5) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+`Trainer.fit` stopped: `max_epochs=2` reached.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:321: The number of training batches (1) is smaller than the logging interval Trainer(log_every_n_steps=10). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:538: Found 42 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+`Trainer.fit` stopped: `max_epochs=1` reached.
+2026-11-12 21:05:25,150 - harmonypy - INFO - Running Harmony
+2026-11-12 21:05:25,150 - harmonypy - INFO -   Parameters:
+2026-11-12 21:05:25,150 - harmonypy - INFO -     max_iter_harmony: 2
+2026-11-12 21:05:25,150 - harmonypy - INFO -     max_iter_kmeans: 4
+2026-11-12 21:05:25,150 - harmonypy - INFO -     epsilon_cluster: 0.001
+2026-11-12 21:05:25,150 - harmonypy - INFO -     epsilon_harmony: 0.01
+2026-11-12 21:05:25,150 - harmonypy - INFO -     nclust: 10
+2026-11-12 21:05:25,150 - harmonypy - INFO -     block_size: 0.05
+2026-11-12 21:05:25,150 - harmonypy - INFO -     lamb: [5. 5.]
+2026-11-12 21:05:25,150 - harmonypy - INFO -     theta: [1. 1.]
+2026-11-12 21:05:25,150 - harmonypy - INFO -     sigma: [0.1 0.1 0.1 0.1 0.1]...
+2026-11-12 21:05:25,150 - harmonypy - INFO -     verbose: True
+2026-11-12 21:05:25,150 - harmonypy - INFO -     random_state: 123
+2026-11-12 21:05:25,150 - harmonypy - INFO -   Data: 10 PCs × 1200 cells
+2026-11-12 21:05:25,150 - harmonypy - INFO -   Batch variables: ['section']
+2026-11-12 21:05:25,151 - harmonypy - INFO - Computing initial centroids...
+2026-11-12 21:05:25,154 - harmonypy - INFO - Initialization complete.
+2026-11-12 21:05:25,154 - harmonypy - INFO - Iteration 1 of 2
+2026-11-12 21:05:25,156 - harmonypy - INFO - Converged after 1 iteration
+EXPRESSION_PILOT_PASSED

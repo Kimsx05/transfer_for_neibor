@@ -1,0 +1,6 @@
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_multimethod_v2/code/summarize.py:44: RuntimeWarning: Mean of empty slice
+  known=cs[mask,ring].sum(1);den=qc[mask,ring];props=np.divide(cs[mask,ring],known[:,None],out=np.full(cs[mask,ring].shape,np.nan),where=known[:,None]>0);row=dict(tag=o.name,label=int(lab),ring=ring,inner_um=ring*25,outer_um=(ring+1)*25,mean_QC=float(den.mean()),mean_known=float(known.mean()),mean_Unknown=float((den-known).mean()),empty_known_fraction=float((known==0).mean()));row.update(dict(zip(TYPES[ref],np.nanmean(props,axis=0))));ringsum.append(row)
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_multimethod_v2/code/summarize.py:44: RuntimeWarning: Mean of empty slice
+  known=cs[mask,ring].sum(1);den=qc[mask,ring];props=np.divide(cs[mask,ring],known[:,None],out=np.full(cs[mask,ring].shape,np.nan),where=known[:,None]>0);row=dict(tag=o.name,label=int(lab),ring=ring,inner_um=ring*25,outer_um=(ring+1)*25,mean_QC=float(den.mean()),mean_known=float(known.mean()),mean_Unknown=float((den-known).mean()),empty_known_fraction=float((known==0).mean()));row.update(dict(zip(TYPES[ref],np.nanmean(props,axis=0))));ringsum.append(row)
+SUMMARY_COMPLETE 25
+EXTENDED_DIAGNOSTICS_COMPLETE

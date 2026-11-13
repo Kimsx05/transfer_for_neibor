@@ -1,0 +1,35 @@
+COMPLETE hellinger_kmeans_blca_r50_NONE
+2026-11-12 23:05:02.585979: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+COMPLETE adapted_leiden_blca_r50_NONE
+2026-11-12 23:19:34,328 - harmonypy - INFO - Running Harmony
+2026-11-12 23:19:34,328 - harmonypy - INFO -   Parameters:
+2026-11-12 23:19:34,328 - harmonypy - INFO -     max_iter_harmony: 10
+2026-11-12 23:19:34,328 - harmonypy - INFO -     max_iter_kmeans: 4
+2026-11-12 23:19:34,328 - harmonypy - INFO -     epsilon_cluster: 0.001
+2026-11-12 23:19:34,328 - harmonypy - INFO -     epsilon_harmony: 0.01
+2026-11-12 23:19:34,328 - harmonypy - INFO -     nclust: 50
+2026-11-12 23:19:34,328 - harmonypy - INFO -     block_size: 0.05
+2026-11-12 23:19:34,328 - harmonypy - INFO -     lamb: [5. 5. 5. 5. 5.]
+2026-11-12 23:19:34,328 - harmonypy - INFO -     theta: [1. 1. 1. 1. 1.]
+2026-11-12 23:19:34,328 - harmonypy - INFO -     sigma: [0.1 0.1 0.1 0.1 0.1]...
+2026-11-12 23:19:34,328 - harmonypy - INFO -     verbose: True
+2026-11-12 23:19:34,328 - harmonypy - INFO -     random_state: 123
+2026-11-12 23:19:34,328 - harmonypy - INFO -   Data: 9 PCs × 525551 cells
+2026-11-12 23:19:34,328 - harmonypy - INFO -   Batch variables: ['section']
+2026-11-12 23:19:34,369 - harmonypy - INFO - Computing initial centroids...
+2026-11-12 23:19:34,945 - harmonypy - INFO - Initialization complete.
+2026-11-12 23:19:34,945 - harmonypy - INFO - Iteration 1 of 10
+2026-11-12 23:19:35,387 - harmonypy - INFO - Iteration 2 of 10
+2026-11-12 23:19:35,881 - harmonypy - INFO - Iteration 3 of 10
+2026-11-12 23:19:36,374 - harmonypy - INFO - Iteration 4 of 10
+2026-11-12 23:19:36,865 - harmonypy - INFO - Iteration 5 of 10
+2026-11-12 23:19:37,354 - harmonypy - INFO - Iteration 6 of 10
+2026-11-12 23:19:37,842 - harmonypy - INFO - Iteration 7 of 10
+2026-11-12 23:19:38,330 - harmonypy - INFO - Iteration 8 of 10
+2026-11-12 23:19:38,819 - harmonypy - INFO - Iteration 9 of 10
+2026-11-12 23:19:39,309 - harmonypy - INFO - Iteration 10 of 10
+2026-11-12 23:19:39,794 - harmonypy - INFO - Stopped before convergence
+COMPLETE hellinger_kmeans_blca_r50_WEAK
+COMPLETE adapted_leiden_blca_r50_WEAK
+CACHE hellinger_kmeans_blca_r200_NONE

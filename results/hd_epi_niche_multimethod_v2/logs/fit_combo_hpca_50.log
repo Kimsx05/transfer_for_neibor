@@ -1,0 +1,79 @@
+CANDIDATE hellinger_kmeans_hpca_r50_NONE 2 {'parameter': 2, 'n_clusters': 2, 'seed_ARI': np.float64(0.9700596773295679), 'seed_ARI_456': 0.9760920749006593, 'seed_ARI_789': 0.9640272797584765, 'silhouette': 0.4758648819947675, 'converged_iterations': 1}
+CANDIDATE hellinger_kmeans_hpca_r50_NONE 3 {'parameter': 3, 'n_clusters': 3, 'seed_ARI': np.float64(0.843015450170453), 'seed_ARI_456': 0.87545586018595, 'seed_ARI_789': 0.8105750401549559, 'silhouette': 0.377454923160052, 'converged_iterations': 1}
+CANDIDATE hellinger_kmeans_hpca_r50_NONE 4 {'parameter': 4, 'n_clusters': 4, 'seed_ARI': np.float64(0.5728296209731731), 'seed_ARI_456': 0.5160430237859422, 'seed_ARI_789': 0.6296162181604039, 'silhouette': 0.32491470689359975, 'converged_iterations': 1}
+CANDIDATE hellinger_kmeans_hpca_r50_NONE 5 {'parameter': 5, 'n_clusters': 5, 'seed_ARI': np.float64(0.6679799634187042), 'seed_ARI_456': 0.5142410881534495, 'seed_ARI_789': 0.821718838683959, 'silhouette': 0.33497353314816974, 'converged_iterations': 1}
+CANDIDATE hellinger_kmeans_hpca_r50_NONE 6 {'parameter': 6, 'n_clusters': 6, 'seed_ARI': np.float64(0.6560933151843114), 'seed_ARI_456': 0.7214571752256331, 'seed_ARI_789': 0.5907294551429897, 'silhouette': 0.36014675962786935, 'converged_iterations': 2}
+CANDIDATE hellinger_kmeans_hpca_r50_NONE 7 {'parameter': 7, 'n_clusters': 7, 'seed_ARI': np.float64(0.511674941547356), 'seed_ARI_456': 0.5110367402890718, 'seed_ARI_789': 0.5123131428056402, 'silhouette': 0.3354014594705251, 'converged_iterations': 2}
+CANDIDATE hellinger_kmeans_hpca_r50_NONE 8 {'parameter': 8, 'n_clusters': 8, 'seed_ARI': np.float64(0.627430251677699), 'seed_ARI_456': 0.5801012169495355, 'seed_ARI_789': 0.6747592864058624, 'silhouette': 0.33340697395245017, 'converged_iterations': 2}
+CANDIDATE hellinger_kmeans_hpca_r50_NONE 9 {'parameter': 9, 'n_clusters': 9, 'seed_ARI': np.float64(0.5845276635563346), 'seed_ARI_456': 0.6109659789063577, 'seed_ARI_789': 0.5580893482063114, 'silhouette': 0.3268461695392237, 'converged_iterations': 2}
+CANDIDATE hellinger_kmeans_hpca_r50_NONE 10 {'parameter': 10, 'n_clusters': 10, 'seed_ARI': np.float64(0.5226096914391389), 'seed_ARI_456': 0.47095533113757504, 'seed_ARI_789': 0.5742640517407028, 'silhouette': 0.30797627425586965, 'converged_iterations': 2}
+COMPLETE hellinger_kmeans_hpca_r50_NONE
+2026-11-12 23:41:05.291113: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+CANDIDATE adapted_leiden_hpca_r50_NONE 0.005 {'parameter': 0.005, 'n_clusters': 553, 'seed_ARI': np.float64(0.9707378660971004), 'seed_ARI_456': 0.9749867461751884, 'seed_ARI_789': 0.9664889860190126, 'silhouette': 0.15160706930577034, 'converged_iterations': -1}
+CANDIDATE adapted_leiden_hpca_r50_NONE 0.01 {'parameter': 0.01, 'n_clusters': 570, 'seed_ARI': np.float64(0.9720468069464931), 'seed_ARI_456': 0.9635101541539822, 'seed_ARI_789': 0.9805834597390041, 'silhouette': 0.16989184617359285, 'converged_iterations': -1}
+CANDIDATE adapted_leiden_hpca_r50_NONE 0.02 {'parameter': 0.02, 'n_clusters': 583, 'seed_ARI': np.float64(0.8704656792886205), 'seed_ARI_456': 0.9408490350131952, 'seed_ARI_789': 0.8000823235640457, 'silhouette': 0.1822714585206715, 'converged_iterations': -1}
+CANDIDATE adapted_leiden_hpca_r50_NONE 0.05 {'parameter': 0.05, 'n_clusters': 607, 'seed_ARI': np.float64(0.74548014329672), 'seed_ARI_456': 0.739444859448361, 'seed_ARI_789': 0.7515154271450788, 'silhouette': 0.19419893949356423, 'converged_iterations': -1}
+CANDIDATE adapted_leiden_hpca_r50_NONE 0.1 {'parameter': 0.1, 'n_clusters': 626, 'seed_ARI': np.float64(0.8117984354496646), 'seed_ARI_456': 0.8096643707935096, 'seed_ARI_789': 0.8139325001058194, 'silhouette': 0.21476950433236225, 'converged_iterations': -1}
+CANDIDATE adapted_leiden_hpca_r50_NONE 0.2 {'parameter': 0.2, 'n_clusters': 651, 'seed_ARI': np.float64(0.8837708105127602), 'seed_ARI_456': 0.9179351980440873, 'seed_ARI_789': 0.8496064229814332, 'silhouette': 0.2445026918209674, 'converged_iterations': -1}
+CANDIDATE adapted_leiden_hpca_r50_NONE 0.4 {'parameter': 0.4, 'n_clusters': 692, 'seed_ARI': np.float64(0.9370054733966955), 'seed_ARI_456': 0.9089678417766924, 'seed_ARI_789': 0.9650431050166984, 'silhouette': 0.27489915876991344, 'converged_iterations': -1}
+COMPLETE adapted_leiden_hpca_r50_NONE
+2026-11-12 23:44:46,895 - harmonypy - INFO - Running Harmony
+2026-11-12 23:44:46,895 - harmonypy - INFO -   Parameters:
+2026-11-12 23:44:46,895 - harmonypy - INFO -     max_iter_harmony: 10
+2026-11-12 23:44:46,895 - harmonypy - INFO -     max_iter_kmeans: 4
+2026-11-12 23:44:46,895 - harmonypy - INFO -     epsilon_cluster: 0.001
+2026-11-12 23:44:46,895 - harmonypy - INFO -     epsilon_harmony: 0.01
+2026-11-12 23:44:46,895 - harmonypy - INFO -     nclust: 50
+2026-11-12 23:44:46,895 - harmonypy - INFO -     block_size: 0.05
+2026-11-12 23:44:46,895 - harmonypy - INFO -     lamb: [5. 5. 5. 5. 5.]
+2026-11-12 23:44:46,896 - harmonypy - INFO -     theta: [1. 1. 1. 1. 1.]
+2026-11-12 23:44:46,896 - harmonypy - INFO -     sigma: [0.1 0.1 0.1 0.1 0.1]...
+2026-11-12 23:44:46,896 - harmonypy - INFO -     verbose: True
+2026-11-12 23:44:46,896 - harmonypy - INFO -     random_state: 123
+2026-11-12 23:44:46,896 - harmonypy - INFO -   Data: 6 PCs × 525550 cells
+2026-11-12 23:44:46,896 - harmonypy - INFO -   Batch variables: ['section']
+2026-11-12 23:44:46,929 - harmonypy - INFO - Computing initial centroids...
+2026-11-12 23:44:47,451 - harmonypy - INFO - Initialization complete.
+2026-11-12 23:44:47,451 - harmonypy - INFO - Iteration 1 of 10
+2026-11-12 23:44:47,886 - harmonypy - INFO - Iteration 2 of 10
+2026-11-12 23:44:48,361 - harmonypy - INFO - Iteration 3 of 10
+2026-11-12 23:44:48,852 - harmonypy - INFO - Iteration 4 of 10
+2026-11-12 23:44:49,333 - harmonypy - INFO - Iteration 5 of 10
+2026-11-12 23:44:49,809 - harmonypy - INFO - Iteration 6 of 10
+2026-11-12 23:44:50,285 - harmonypy - INFO - Iteration 7 of 10
+2026-11-12 23:44:50,762 - harmonypy - INFO - Iteration 8 of 10
+2026-11-12 23:44:51,239 - harmonypy - INFO - Iteration 9 of 10
+2026-11-12 23:44:51,716 - harmonypy - INFO - Iteration 10 of 10
+2026-11-12 23:44:52,199 - harmonypy - INFO - Stopped before convergence
+CANDIDATE hellinger_kmeans_hpca_r50_WEAK 2 {'parameter': 2, 'n_clusters': 2, 'seed_ARI': np.float64(0.9891341688670576), 'seed_ARI_456': 0.9847580321703227, 'seed_ARI_789': 0.9935103055637927, 'silhouette': 0.47577746958193823, 'converged_iterations': 1}
+CANDIDATE hellinger_kmeans_hpca_r50_WEAK 3 {'parameter': 3, 'n_clusters': 3, 'seed_ARI': np.float64(0.8315681568876296), 'seed_ARI_456': 0.8712890120097396, 'seed_ARI_789': 0.7918473017655198, 'silhouette': 0.37430586487456646, 'converged_iterations': 1}
+CANDIDATE hellinger_kmeans_hpca_r50_WEAK 4 {'parameter': 4, 'n_clusters': 4, 'seed_ARI': np.float64(0.5901601575310786), 'seed_ARI_456': 0.611774471109183, 'seed_ARI_789': 0.5685458439529744, 'silhouette': 0.3671533692844708, 'converged_iterations': 1}
+CANDIDATE hellinger_kmeans_hpca_r50_WEAK 5 {'parameter': 5, 'n_clusters': 5, 'seed_ARI': np.float64(0.6168119100170084), 'seed_ARI_456': 0.5469202670101011, 'seed_ARI_789': 0.6867035530239157, 'silhouette': 0.35458318252023335, 'converged_iterations': 2}
+CANDIDATE hellinger_kmeans_hpca_r50_WEAK 6 {'parameter': 6, 'n_clusters': 6, 'seed_ARI': np.float64(0.6349639303585524), 'seed_ARI_456': 0.6335813082511427, 'seed_ARI_789': 0.636346552465962, 'silhouette': 0.2939061126280668, 'converged_iterations': 2}
+CANDIDATE hellinger_kmeans_hpca_r50_WEAK 7 {'parameter': 7, 'n_clusters': 7, 'seed_ARI': np.float64(0.6878701213760205), 'seed_ARI_456': 0.6003586866605906, 'seed_ARI_789': 0.7753815560914505, 'silhouette': 0.2789236130976047, 'converged_iterations': 2}
+CANDIDATE hellinger_kmeans_hpca_r50_WEAK 8 {'parameter': 8, 'n_clusters': 8, 'seed_ARI': np.float64(0.5789438336706791), 'seed_ARI_456': 0.5665748883736987, 'seed_ARI_789': 0.5913127789676595, 'silhouette': 0.2848041948345578, 'converged_iterations': 2}
+CANDIDATE hellinger_kmeans_hpca_r50_WEAK 9 {'parameter': 9, 'n_clusters': 9, 'seed_ARI': np.float64(0.650139638614003), 'seed_ARI_456': 0.6398364464467294, 'seed_ARI_789': 0.6604428307812766, 'silhouette': 0.291429724713263, 'converged_iterations': 2}
+CANDIDATE hellinger_kmeans_hpca_r50_WEAK 10 {'parameter': 10, 'n_clusters': 10, 'seed_ARI': np.float64(0.6227145178268769), 'seed_ARI_456': 0.6125227898041018, 'seed_ARI_789': 0.6329062458496519, 'silhouette': 0.2639005253091731, 'converged_iterations': 2}
+COMPLETE hellinger_kmeans_hpca_r50_WEAK
+CANDIDATE adapted_leiden_hpca_r50_WEAK 0.005 {'parameter': 0.005, 'n_clusters': 1638, 'seed_ARI': np.float64(0.9657228489018366), 'seed_ARI_456': 0.9708007544816747, 'seed_ARI_789': 0.9606449433219985, 'silhouette': -0.0915623957131719, 'converged_iterations': -1}
+CANDIDATE adapted_leiden_hpca_r50_WEAK 0.01 {'parameter': 0.01, 'n_clusters': 1667, 'seed_ARI': np.float64(0.950879702674382), 'seed_ARI_456': 0.9481582096878627, 'seed_ARI_789': 0.9536011956609013, 'silhouette': -0.08806191762845615, 'converged_iterations': -1}
+CANDIDATE adapted_leiden_hpca_r50_WEAK 0.02 {'parameter': 0.02, 'n_clusters': 1673, 'seed_ARI': np.float64(0.8985227455711049), 'seed_ARI_456': 0.9105594313414428, 'seed_ARI_789': 0.8864860598007669, 'silhouette': -0.06813988608105508, 'converged_iterations': -1}
+CANDIDATE adapted_leiden_hpca_r50_WEAK 0.05 {'parameter': 0.05, 'n_clusters': 1701, 'seed_ARI': np.float64(0.8637807322367561), 'seed_ARI_456': 0.8020382200985176, 'seed_ARI_789': 0.9255232443749947, 'silhouette': -0.06551994903982326, 'converged_iterations': -1}
+CANDIDATE adapted_leiden_hpca_r50_WEAK 0.1 {'parameter': 0.1, 'n_clusters': 1718, 'seed_ARI': np.float64(0.7663010279490399), 'seed_ARI_456': 0.8131079440646082, 'seed_ARI_789': 0.7194941118334715, 'silhouette': -0.037459799378812456, 'converged_iterations': -1}
+CANDIDATE adapted_leiden_hpca_r50_WEAK 0.2 {'parameter': 0.2, 'n_clusters': 1750, 'seed_ARI': np.float64(0.7303912177753998), 'seed_ARI_456': 0.7264859494276487, 'seed_ARI_789': 0.734296486123151, 'silhouette': -0.019035607153019645, 'converged_iterations': -1}
+CANDIDATE adapted_leiden_hpca_r50_WEAK 0.4 {'parameter': 0.4, 'n_clusters': 1781, 'seed_ARI': np.float64(0.6923820786079722), 'seed_ARI_456': 0.6966255473722129, 'seed_ARI_789': 0.6881386098437314, 'silhouette': 0.016554925463852496, 'converged_iterations': -1}
+COMPLETE adapted_leiden_hpca_r50_WEAK
+CANDIDATE MENDER_adapted_hpca_r50_ring_counts 0.005 {'parameter': 0.005, 'n_clusters': 160, 'seed_ARI': np.float64(0.8850751036428526), 'seed_ARI_456': 0.868207915614991, 'seed_ARI_789': 0.9019422916707143, 'silhouette': -0.15791717837328306, 'converged_iterations': -1}
+CANDIDATE MENDER_adapted_hpca_r50_ring_counts 0.01 {'parameter': 0.01, 'n_clusters': 170, 'seed_ARI': np.float64(0.8818529229881148), 'seed_ARI_456': 0.8856356128913446, 'seed_ARI_789': 0.878070233084885, 'silhouette': -0.11935678800804453, 'converged_iterations': -1}
+CANDIDATE MENDER_adapted_hpca_r50_ring_counts 0.02 {'parameter': 0.02, 'n_clusters': 186, 'seed_ARI': np.float64(0.7482425688379756), 'seed_ARI_456': 0.7555979917589039, 'seed_ARI_789': 0.7408871459170473, 'silhouette': -0.07973051179754082, 'converged_iterations': -1}
+CANDIDATE MENDER_adapted_hpca_r50_ring_counts 0.05 {'parameter': 0.05, 'n_clusters': 206, 'seed_ARI': np.float64(0.8866914548653496), 'seed_ARI_456': 0.8374061493372925, 'seed_ARI_789': 0.9359767603934067, 'silhouette': -0.06754663802453917, 'converged_iterations': -1}
+CANDIDATE MENDER_adapted_hpca_r50_ring_counts 0.1 {'parameter': 0.1, 'n_clusters': 227, 'seed_ARI': np.float64(0.8595940001014586), 'seed_ARI_456': 0.9194119630476687, 'seed_ARI_789': 0.7997760371552484, 'silhouette': -0.014985977702608212, 'converged_iterations': -1}
+CANDIDATE MENDER_adapted_hpca_r50_ring_counts 0.2 {'parameter': 0.2, 'n_clusters': 258, 'seed_ARI': np.float64(0.6555284333223332), 'seed_ARI_456': 0.631573992482568, 'seed_ARI_789': 0.6794828741620985, 'silhouette': 0.03962162667080722, 'converged_iterations': -1}
+CANDIDATE MENDER_adapted_hpca_r50_ring_counts 0.4 {'parameter': 0.4, 'n_clusters': 286, 'seed_ARI': np.float64(0.5994741792350265), 'seed_ARI_456': 0.5966195522942098, 'seed_ARI_789': 0.6023288061758433, 'silhouette': 0.07719031693466002, 'converged_iterations': -1}
+COMPLETE MENDER_adapted_hpca_r50_ring_counts
+CACHE hellinger_kmeans_hpca_r50_NONE
+CACHE adapted_leiden_hpca_r50_NONE
+CACHE hellinger_kmeans_hpca_r50_WEAK
+CACHE adapted_leiden_hpca_r50_WEAK
+CACHE MENDER_adapted_hpca_r50_ring_counts

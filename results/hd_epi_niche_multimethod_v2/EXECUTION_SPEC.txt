@@ -1,0 +1,354 @@
+你现在在 metabolism / Bladder Metabolism 项目中工作。请直接执行本轮 Visium HD 上皮相关 niche 四方法比较，直到完成全量结果、复核和交付。下面的分析范围已经确认，不要在小 ROI 或 pilot 通过后再次询问是否继续。
+
+本轮目标：保留现有可解释的粗结构，修复组成图聚类的已知问题，增加 MENDER 与 CellCharter，比较不同环境表示和弱批次校正的作用。最终推荐有证据支持的工作方案；不要为了得到更多群或更漂亮的空间图而调参。本轮止于 niche 方法比较，MP10 关联、NicheNet、CellChat、配体受体和其他下游分析另做。
+
+一、定位输入并冻结来源
+
+项目根目录优先检查：
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD
+
+本轮主要输入：
+analysis/hd_epi_niche_dual_methods_v1
+analysis/hd_bin8_banksy_extension_v1
+
+上游必要时追溯：
+analysis/hd_bin8_banksy_v1
+analysis/hd_bin8_comparison_v1
+
+建议新输出目录：
+analysis/hd_epi_niche_multimethod_v2
+
+审阅快照：
+https://github.com/Kimsx05/transfer_for_neibor/tree/beb4932e2df149890f3cd581f01dd6be44ffe365/results/hd_epi_niche_dual_methods_v1
+
+如果服务器目录结构不同，根据已有 REPORT、METHODS、manifest、load_result.R 和项目内 rg 搜索定位真实完整输入，不要把 GitHub review 包误认为完整表达矩阵。读取项目 AGENTS.md 和相关执行规则。
+
+保留上游结果只读。新代码、配置、日志和结果放入新目录；若新目录已有内容，核对配置和缓存指纹后续跑，不覆盖来源不明的结果。
+
+本轮使用五片：Cervilla、D1_Johnson、UC_SCC、MPBC1、MPBC2。
+前四片用于 niche 模型训练和参数选择。MPBC2 不参与 niche 聚类拟合、K/resolution 选择或模型优劣选择。其表示学习/映射范围按第六、八节明确记录。
+
+先核对上一版：
+- 共同 Epi anchors 为 525,552；四组 ref × radius 的可评价集合略有不同。
+- 每组原训练 anchors 为 80,000，前四片各 20,000。
+- A 在 K=2–8 中均选 K=2。
+- B 原生簇数：BLCA50=182，BLCA200=67，HPCA50=716，HPCA200=75。
+- 已知异常：BLCA50 的 4,608 个完全相同纯 Epi 训练向量分为 89 个标签；HPCA50 的 11,424 个同类向量分为 245 个标签。
+这些数字用于输入版本和实现核对，不是要求新模型复现的生物学目标。若不同，先解释差异，不静默换输入。
+
+注意纠正旧文档：实际 prepare.py 使用 singler_blca_pruned_labels / singler_hpca_pruned_labels；上游确实执行 pruneScores 并保存 NA。METHODS 中 unpruned 的文字与代码不一致。本轮以冻结实际字段、代码和数据为准，统一写为“剪枝后标签 + marker 支持”。
+
+二、共同的生物学与几何定义
+
+1. 分析单位为 8 μm bins / Epi anchors，不能称为细胞数或单细胞 niche。
+2. 冻结上一版共同 Epi anchor ID，不重新根据本轮分群或 MP10 改选中心。现有定义为原 analysis QC、至少一个参考的 pruned 标签为 Epi、至少两个既定上皮/尿路上皮 marker 检出。
+3. 邻居池为每片原始 analysis-QC bins，包含周围 Epi 与全部 TME。不要先只取 Epi 再建邻居。
+4. 使用继承并核实单位的物理坐标。每片、每个原有组织连通区域内分别查询，禁止跨片连边。
+5. 半径为真实欧氏距离 50 μm、200 μm，均排除中心自身。200 μm 是完整累计圆，包含 50 μm 内邻居，不得悄悄改成 50–200 μm 外环。
+6. 组成输入包括 Epi + 全部参考类别；禁止改成 TME-only、重新对非上皮归一化，或要求最低 TME 数/最低类型数。
+7. 保持 BLCA9、HPCA6 的冻结类别定义和顺序。HPCA 缺失的 Mast/Plasma/Mural 不是生物学零值；跨参考比较采用预先固定的共同粗类别映射。
+8. 组成法的 Unknown/NA 不进入类别 numerator 或 denominator，单独保存覆盖信息。纯 Epi 且支持充分的环境有效。
+9. 组成主集合沿用 n_known >= 10；不新增苛刻 QC、最低 known fraction 或 purity 门槛。每环缺失情况只做诊断，不凭结果删点。
+10. 缺 supplied bins、无组织 mask、未通过 QC、标签 Unknown、niche unresolved 和非 anchor 背景要分别记录。MPBC 无可靠 tissue mask 的部分保持未知，不制造 H&E 或组织边界。
+
+复用并核对上一版 C/P；记录精确边界规则和浮点容差。所有新方法同时保留原始累计 50/200 μm 组成，供统一解释。
+
+三、统一训练名单，区分表示学习与 niche 拟合
+
+先检查旧四组训练 ID 是否完全相同。本轮正式比较必须有一份固定的共同 niche 训练名单 T_v2。
+
+- 优先采用旧 BLCA50 的 80,000 训练 ID。
+- 若个别 ID 不在四组共同可评价集合，按同切片、优先同 400 μm 空间 block、固定 seed=123 的确定性规则补齐。
+- 前四片各 20,000；若真实可用量不足，如实记录，不重复抽样伪造对象。
+- 保存 T_v2、与旧各 T 的重叠和替换原因。
+- 本轮 A、B、MENDER、CellCharter 的正式 niche 拟合均使用 T_v2；必要时在新目录重拟合。旧 v1 标签保留为历史基线，不声称训练名单变化前后是完全单因素比较。
+- 各方法完整邻域在原邻居池中计算，不能只用抽样训练点计算邻域。
+- 不同分支如确有不可评价点，保存原因和适用集合；不得隐去失败点后声称完全同样本比较。
+
+CellCharter 的表达模型训练名单 T_expr 另行保存，必须覆盖全部主要类型及表达 QC 合格的 Unknown bins，不能只用 T_v2 的上皮中心训练表达表示。
+
+四、冻结有限运行表
+
+先写 config.yaml / run_matrix.tsv，再执行。主要范围：
+
+A. 组成基线：
+- Hellinger MiniBatchKMeans，保留原 K=2 粗层及本轮候选结果。
+- 相同组成表示的 PCA-only 与同一 PCA + WEAK Harmony。
+
+B. 组成图聚类：
+- 旧原生 Squidpy raw-P 结果作为只读基线。
+- 完成重复向量与图诊断。
+- 构建有明确说明、通过验证的 adapted Leiden 对照，与 A 使用相同 Hellinger/PCA 表示。
+- 该对照也比较 NONE 与 WEAK。
+
+C. MENDER：
+- BLCA、HPCA 分别做 50/200 μm 外半径的多环计数表示。
+- 先完成默认计数主链的 HD 适配。
+- 每环归一化或额外 Harmony 仅在具体诊断支持时增加一个有限敏感性，不做全因子网格。
+
+D. CellCharter：
+- 一套共同表达表示，分别聚合 50/200 μm 中心外邻居。
+- GMM / ClusterAutoK。
+- 每半径一套模型，再用两套参考解释，不重复制造“BLCA CellCharter”和“HPCA CellCharter”两份相同表达结果。
+- 另做预先规定的去除 MP10 Top20 发现特征的敏感性，详见第八节。
+
+K-means、CellCharter 主候选 K=2–10，保留 K=2，不能把 K=2/4 从正式候选中排除后再声称自然发现更多 niche。图方法先用有限 resolution 网格 [0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.4]；保存实际群数，不为得到旧 Visium 的 9 群反复搜索。
+随机种子固定 123、456、789。CellCharter 可用原生 AutoK 的有限重复与提前停止机制，记录实际运行次数。
+
+小 ROI 的接口和数值核对通过后，自动继续全量。若某分支确实失败，保存证据和状态，完成其他可执行分支；不要把未运行、排队或 pilot 写成全量完成。
+
+五、先诊断并处理 Squidpy 的拆分问题
+
+读取锁定版本的 Squidpy/Scanpy/Leiden 实现，重建与旧 B 对应的训练组成图，检查：
+- 精确重复与近重复的完整输入向量；
+- 零距离并列近邻的数量和处理；
+- 图的连通分量、孤立点、度/边权分布；
+- 原生簇大小及重复向量跨标签分裂；
+- n_neighbors、特征变换与 resolution 的作用。
+
+先用 NONE 检查，不靠 Harmony 掩盖原生构图问题。
+区分组织物理邻居图和组成相似图；Leiden 对后者的连通性不等于切片上连续。
+
+修复原则：
+- 原生 B 标签保留，修复结果另存并标为 adapted。
+- 不使用随机 jitter 创造不存在的差异。
+- 不通过空间多数票填满标签。
+- 不通过事后删除小群或简单合并颜色宣称修复。
+- 如收缩完全相同 profiles，必须保留频数及相关权重，说明图/目标函数如何处理；未经权重处理的简单去重不是无损操作。
+- 仅合并完整实际输入完全相同的点，不把“旧累计 P 相同但新增径向/表达特征不同”混为同一输入。
+- 在小型可核查图上验证修复逻辑；本轮 corrected NONE 分支应消除相同完整输入的任意拆分。
+- 有限比较 n_neighbors=15/30/50；其含义是组成空间近邻，不是微米半径。
+- 若有限修复仍不成立，明确 B 细分不适用，完整交付诊断，继续 A/MENDER/CellCharter。
+
+对外部标签投影：
+完全相同输入应使用全部相同训练 profiles 的标签/权重，不能任取 15 个零距离点。保留候选标签、支持度、距离、最终标签及 unresolved 原因；原生与投影结果分开。支持度不是生物学准确率。
+
+六、组成分支的弱 Harmony 配对对照
+
+对 A 与修复后的 B：
+- 原始 P 仅用于真实组成解释，保持不变。
+- 构建 H=sqrt(P)，使用居中、不 whitening、不额外逐列 z-score 的共同 PCA。
+- 由于只有 6/9 类，优先保留全部数值上非零 PCs，记录秩，避免 95% 截断先丢掉弱免疫差异。
+- PCA 在 T_v2 上拟合，同一 PCA 用于 NONE 与 WEAK。
+- WEAK 固定 theta=1、lambda=5，batch 为真实 section ID；使用实际支持该参数的锁定 Harmony 版本，记录其余参数、收敛和迭代。不要把 patient、病理亚型或 BLCA/HPCA 参考身份当成希望消除的 batch。
+- 不做强校正参数网格，不以跨片混合最大为目标。
+
+为获得五片共同表示，本轮明确允许 WEAK 敏感性分支在全部可评价 anchors 上共同进行无监督 Harmony；但 niche 聚类、K/resolution 选择始终限于前四片 T_v2。
+必须标记 representation_fit_scope=all_five_sections_transductive，说明 MPBC2 仅未参与 niche 拟合，不是完全独立的端到端外推。
+NONE 分支的 PCA/模型仍仅由前四片训练，提供可直接 transform/predict 的参照。
+不得把 transductive 分支的稳定性描述为独立样本外准确率。
+
+评价 Harmony 时同时看来源混合与原始组成/径向关系保留。不得要求各切片具有同样 niche 比例，也不能将校正坐标当成新的细胞类型比例。
+MENDER 如增加组成 PCA 后的 Harmony，须明确这是本项目适配，而非原论文默认步骤。
+
+七、MENDER 的具体执行
+
+先阅读原论文、官方教程、实际安装的源码，固定版本/commit。
+直接使用已有 pruned 类型注释，跳过上游 cell-group 重建。
+
+预先固定：
+- 物理 radius 模式。
+- 25 μm 环宽。
+- 50 μm 分支为 0–25、25–50 μm 两环。
+- 200 μm 分支为 0–25、25–50……175–200 μm 八环。
+- 中心自身排除，每片/原连通区域独立计算。
+- 保留所有邻居 Epi 与 TME 类别。
+
+上述环只是圆内部的新增特征；累计 50/200 μm 圆仍保留用于共同比较。25 μm 是本项目预先设定的 HD 适配，不冒充官方最佳值。
+
+主分支保留官方多环计数拼接及其 normalize_total/log1p/PCA/图聚类逻辑，逐项以实际版本源码核实。
+官方可能默认 include_self=True，必须明确关闭。
+不要把 run_clustering_normal 的正数 target_k 设为 9，再将逼近九群称为发现。
+
+Unknown 与缺测：
+- 完整空间支持不因标签未知而被删除。
+- 在计数时显式忽略 Unknown，或计数后在任何模型预处理前移除 Unknown 特征列。
+- 已知类别计数等价于 Unknown 行为全零的 one-hot。
+- 保存每环 supplied/QC/known/unknown 数量、覆盖信息和空环原因。
+- 零计数不能直接解释成该区域生物学上没有这些类别。
+- 不额外要求每环必须有 TME 或多种类型。
+
+资源适配：
+- 按片/连通域分块计算固定 anchors 的精确环计数。
+- 小 ROI 与官方已知标签实现核对每类、每环计数，明确边界规则。
+- 保存紧凑 anchors × types × rings 矩阵，不持久化全量大半径邻接图。
+- 不照抄教程的 200 进程。
+- 原生 MENDER 如无可用 predict 接口，使用明确标注的外部投影，冻结模型预处理并验证，不能伪称官方原生预测。
+- 检查完整多环向量的重复拆分。若沿用图修复规则，仍标为 adapted。
+- 若分群明显受环支持量/缺测驱动，才增加一次每环归一化敏感性；不无限细分环宽或换范围找好看结果。
+
+八、CellCharter 的具体执行
+
+1. 表达输入
+复用原始稀疏 counts、基因 ID 和 QC。原 counts 不被删除、平滑、替换。
+不要把类型比例送入 scVI；不要把各片独立 PCA 坐标直接拼接；不要直接再次聚合已有 BANKSY 空间增强表示。
+基因 ID、共同基因集和缺失基因处理须来自真实输入，不把未测基因随意补成生物学零值。
+
+2. 表达训练与 MPBC2
+用前四片的全类型 QC bins 建立代表性 T_expr，按片平衡，覆盖 Epi、免疫、间质、内皮及 Unknown，记录抽样。
+可先每片最多 50,000、合计最多 200,000 作为表达模型训练，之后分块编码全部邻居；不因此删掉其余 bins。
+HVG/特征选择只基于前四片，建议固定 3,000 HVG、scVI latent 10 维，有限训练并记录收敛/early stopping。正式参数写入配置，不按空间图反复调 latent 维数。
+按官方 raw counts + section batch 路线训练 scVI reference，模型初始化须支持新 batch 的参考映射。
+
+本轮明确允许 MPBC2 使用官方 scArches / load_query_data 式 query adaptation：
+- 使用冻结参考的基因顺序和模型。
+- 不使用 MPBC2 的 niche 标签、MP10 或后续关联。
+- MPBC2 不参与 GMM/niche 拟合和 K 选择。
+- 记录 query 适配步骤与范围，不称为完全没有使用 MPBC2 的纯外推。
+- 不通过把新 batch 冒充已有 section 来强行编码。
+- 不把五片联合 scVI 拟合偷偷替代为“reference/query”；如果实现受阻，报告实际障碍，不能虚构已完成。
+- 对四片参考表示保持情况做合理数值核对。
+
+先测量小样本资源消耗，再按夜间窗口完成。无 GPU 不等于直接放弃；先评估 CPU 可行性。若确实无法完成 scVI，可交付明确标记的共同 PCA + CellCharter 辅助分支及阻塞证据，但必须将原计划 scVI 分支标为未完成，不能冒充官方表达路线已执行。
+
+3. 物理环境聚合
+每片全部原表达 QC bins 获得共同 latent 后，分别计算精确 50/200 μm 圆内、排除中心的邻居 latent 均值。
+采用官方 aggregate_neighbors 支持的 n_layers=[1]、mean 和正确的 section/sample_key；图的一跳就是该物理半径。
+如果分块直接计算均值，先在 ROI 与官方输出逐项核对。
+不把 Delaunay 三跳或网格若干跳自动称为 50/200 μm。
+不要把中心自身表达拼入主分支。
+标签 Unknown 但表达 QC 合格的邻居可贡献 latent；Unknown 不作为类别特征，也不根据 niche 反向填满原注释。
+聚合后再取固定 Epi anchors。GMM 在 T_v2 拟合，通过官方 predict/predict_proba 给其他 anchors 赋值。
+每半径只拟合一套表达型模型，再分别用 BLCA/HPCA 解释。
+模型后验概率只是模型归属度，不是细胞注释正确率；记录不确定性和外推距离，不为降低灰色面积强制高置信标签。
+
+4. MP10 特征敏感性
+允许读取冻结的 MP10 Top20 基因清单，但不读取或使用现成 MP10 score、high/low、结局来选模。
+主分支按预定常规 HVG 学习表达；同时预先指定一次去除 Top20 发现特征的敏感性：
+- 只从模型输入特征中排除，原始 counts 不变。
+- 保持主分支 T_expr、其他参数与已选工作 K，不再为敏感性重新遍历全部 K。
+- 重拟合相应表达模型和环境表示后，必须在新的表示空间中用同一 T_v2、已选工作 K 重新拟合 GMM，再预测全量并比较主要分区；不得把旧 GMM 直接应用到重新训练的 scVI 坐标。
+- 若 Top20 本来没有进入模型特征，核实后报告该敏感性与主分支相同，无需重复计算。
+- 不计算 MP10–niche 关联来判断哪个版本更好。
+- 不声称去掉这些基因后证据就完全独立。
+scVI 已处理 batch 的主分支不再默认叠加 Harmony。
+
+九、模型选择、稳定性和公平比较
+
+旧 .5 seedARI + .3 blockARI + .2 silhouette 可以保留为历史描述；不能继续仅凭最高小数分数决定复杂模型，也不能跨不同特征空间直接排名 silhouette。
+
+每个分支完整保存候选指标，并输出：
+- K=2 粗层（适用时）。
+- 证据最充分的一个工作粒度；若确有两个合理粒度，最多保留两个并解释用途。
+- 无合理细分证据时允许结论仍为粗结构，不硬命名免疫/血管 niche。
+- 多指标差异接近时优先简单、可解释、稳定的候选，不因得分差 0.001 增加几十群。
+- CellCharter 原生 AutoK 的稳定性峰值作为候选依据，再结合原始证据。
+
+共同评价：
+1) 簇数、训练及全量簇大小、收敛、投影覆盖、未分配原因。
+2) 各方法完整实际输入的重复向量拆分，而非只检查旧累计 P。
+3) 每群原始 50/200 μm 全类型组成及组内差异。
+4) MENDER 的径向差异、CellCharter 的原始分子证据。新方法可以在旧 P 相似时合理细分，但必须展示新增依据。
+5) 预先固定的上皮、胶原、髓系、T/NK、内皮等 marker 支持。标明与上游标签或表达特征相关，不能当独立真值。
+6) known fraction、nCount/nFeature、低信息邻居、边缘覆盖、切片来源等关联。
+7) 随机种子和空间块稳定性；共同 K 与各自工作粒度分开比较。
+8) 跨参考、跨尺度、跨方法匹配与组成质心，不能只看 ARI；双方共同有标签的结果须同时报告其覆盖率。
+
+空间块稳定性：
+沿用可追溯的 400 μm blocks，但注明相邻 blocks 的邻域可能重叠。
+增加一个有限、预先冻结的带 buffer 空间留出检查，训练与测试中心之间距离 >2R，或采用等价隔离方式；保存实际距离和保留数。
+重型 latent/Harmony 固定时，称为固定表示下的条件稳定性；不要描述为端到端独立验证。
+如果评估数据也参与了参数选择，称为验证，不称独立测试。
+不把数十万相互重叠 anchors 当作独立患者。
+
+十、结果解释与图
+
+优先读取并遵循项目已定稿的绘图 skill 和现有配色/字体约定。
+至少提供：
+- 每片的四方法 × 两尺度空间对照。
+- NONE/WEAK 的配对图和原始组成保留对照。
+- 各工作 niche 的原始组成热图、大小、切片分布、marker 支持。
+- MENDER 分环组成热图。
+- CellCharter 表达/marker 支持及 Top20 特征敏感性对照。
+- K/resolution 稳定性、完整输入重复拆分、技术因素关联和投影覆盖图。
+- 沿用上一版预先固定的 ROI，重点展示纯 Epi 区、上皮—间质界面、低信息/边缘及有无 H&E 的代表情形；某 ROI 没有 anchors 就如实显示，不临时换成漂亮区域。
+
+图中区分 annotation Unknown、niche unresolved、非 anchor 背景和无 supplied 区域；空白不是生物学零值。
+簇 ID 不跨方法直接对应。只有证据支持的语义对应才统一颜色/名称。
+数百原生 B 标签只作诊断图，完整表保留；不能靠删群或合并图例掩盖模型结果。
+
+白底 PNG 300 dpi + PDF；统计图和文字优先矢量，密集全片点层若需栅格化，保持足够分辨率并如实标注。
+有图例的主图按既有 skill 提供总图、主体、独立图例。遵循既有约 12 pt 字号、清晰标尺和线宽，不伪称不存在的字体已使用。
+
+十一、资源、环境和磁盘
+
+- 重计算限定 Asia/Shanghai 23:00–07:00；白天可做轻量盘点、读文档、准备代码和小型接口检查。
+- 数值线程默认 4，总资源不超过已授权的 48 CPU / 200 GB；多进程与 BLAS 线程合计控制，避免隐性过度并行。
+- 新依赖使用隔离环境，锁版本；复用原环境时不直接升级破坏已有流程。
+- 大矩阵保持稀疏；按片/块处理，不一次复制五片完整 counts 多份。
+- 不持久化全量大半径邻接图，不为每个模型复制一套 RDS/h5ad。
+- 共同 latent、难以复算的模型和紧凑表示各保存一份；缓存须核对输入/代码/配置指纹。
+- 仅清理本任务自行生成且确认可复算的临时文件，不删除既有项目结果。
+- 任务跨夜间窗口时保留可复跑检查点，如实区分已完成、运行中、排队和阻塞。不得为赶时间编造完成状态。
+
+十二、交付
+
+新目录至少包含：
+REPORT.md
+METHODS.md
+config.yaml
+run_matrix.tsv
+input_manifest.tsv
+versions.json
+code/
+logs/
+tables/
+figures/
+models/
+rerun.sh
+code/load_result.R
+code/load_result.py
+review.zip
+
+重点表：
+- frozen_anchors 与 T_v2/T_expr 名单及旧新差异；
+- all_anchor_assignments（section/bin_id/reference/radius/method/representation/label/source/confidence/reason）；
+- candidate_metrics、selected_models；
+- identical_input_diagnostics、graph_diagnostics；
+- 原始累计组成、MENDER 分环组成/覆盖、marker 支持；
+- integration_scope 与 MPBC2 映射范围；
+- 各种稳定性、跨方法/参考/尺度对照；
+- 技术因素和投影诊断。
+
+主交付以按 ID 附加的轻量结果表、必要模型和 loader 为主。实际在五片原 Seurat/AnnData 对象上验证挂载、ID、坐标、counts 与原 QC 不变；非 anchors 保持 niche=NA。不必另存每种方法的完整大对象。
+review.zip 包含可审阅的报告、配置、代码、关键图表和必要小型诊断，不打包原 counts、巨大缓存或全量图。
+不要自动上传或发布到外部仓库；交付可供我上传的轻量 review 包。
+
+REPORT 必须清楚回答：
+1. 四方法各做了什么，实际完成哪些全量分支？
+2. Squidpy 的相同输入拆分是否解决，证据是什么？
+3. 新的细分来自径向信息、表达信息、聚类器还是批次校正？
+4. K=2 是否仍是最稳的粗层，哪些细分有额外依据？
+5. Harmony 改善了什么、代价是什么；MPBC2 每个分支是否参与表示学习？
+6. 是否存在由质量、缺测、参考偏差或来源驱动的群？
+7. 哪些结果可作为工作 niche，哪些只保留探索意义？
+8. 后续与普通 Visium 可比较到哪一层，有哪些统计对象和尺度差异？
+
+末尾提供 concise completion_summary.json 和中文完成摘要，列出实际模型数、每片覆盖、工作群数、关键问题和文件路径。没有真值时不宣称准确率提高。
+
+十三、官方参考
+
+执行前核对当前实际安装版本的文档/API；如接口不同，以可读源码和小型数值验证为准，并写明偏差。
+
+MENDER：
+https://www.nature.com/articles/s41467-023-44367-9
+https://github.com/yuanzhiyuan/MENDER
+https://mender-tutorial.readthedocs.io/en/latest/MERSCOPE.html
+
+CellCharter：
+https://www.nature.com/articles/s41588-023-01588-4
+https://cellcharter.readthedocs.io/en/stable/notebooks/cosmx_human_nsclc.html
+https://cellcharter.readthedocs.io/en/stable/generated/cellcharter.gr.aggregate_neighbors.html
+https://cellcharter.readthedocs.io/en/stable/generated/cellcharter.tl.ClusterAutoK.html
+
+scVI reference/query：
+https://docs.scvi-tools.org/en/stable/tutorials/notebooks/multimodal/scarches_scvi_tools.html
+
+Squidpy：
+https://squidpy.readthedocs.io/en/stable/api/squidpy.gr.calculate_niche_neighborhood.html
+
+Harmony：
+https://www.nature.com/articles/s41592-019-0619-0
+
+请现在先完成输入与版本核对、写出有限运行矩阵，再按已授权范围执行到全量交付。可自行解决常规兼容性和实现问题；只有真正缺失且无法从项目定位的必要输入才列为阻塞。不要停在“方案已写好”，也不要用 pilot 代替完成。
+

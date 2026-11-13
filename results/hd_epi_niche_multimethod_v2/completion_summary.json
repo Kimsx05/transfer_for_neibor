@@ -1,0 +1,99 @@
+{
+  "updated": "2026-11-13T11:43:20.215900+08:00",
+  "all_requested_branches_complete": true,
+  "predefined_branches": 24,
+  "conditional_branches": 1,
+  "selected_result_branches": 25,
+  "branch_count_note": "Selected full-assignment results; auxiliary K2/candidate fits are not additional biological branches",
+  "counts_and_QC_reloaded": true,
+  "section_coverage": [
+    {
+      "section": "Cervilla",
+      "anchors": 72171,
+      "niche_train": 20000,
+      "evaluable_min": 72171,
+      "evaluable_max": 72171,
+      "A_NONE_assigned_min": 72171,
+      "A_NONE_assigned_max": 72171,
+      "CC50_assigned": 72155,
+      "CC50_unresolved": 16,
+      "CC200_assigned": 72057,
+      "CC200_unresolved": 114
+    },
+    {
+      "section": "D1_Johnson",
+      "anchors": 97858,
+      "niche_train": 20000,
+      "evaluable_min": 97857,
+      "evaluable_max": 97858,
+      "A_NONE_assigned_min": 97857,
+      "A_NONE_assigned_max": 97858,
+      "CC50_assigned": 97732,
+      "CC50_unresolved": 126,
+      "CC200_assigned": 97803,
+      "CC200_unresolved": 55
+    },
+    {
+      "section": "UC_SCC",
+      "anchors": 263581,
+      "niche_train": 20000,
+      "evaluable_min": 263581,
+      "evaluable_max": 263581,
+      "A_NONE_assigned_min": 263575,
+      "A_NONE_assigned_max": 263581,
+      "CC50_assigned": 263510,
+      "CC50_unresolved": 71,
+      "CC200_assigned": 262054,
+      "CC200_unresolved": 1527
+    },
+    {
+      "section": "MPBC1",
+      "anchors": 77767,
+      "niche_train": 20000,
+      "evaluable_min": 77767,
+      "evaluable_max": 77767,
+      "A_NONE_assigned_min": 77767,
+      "A_NONE_assigned_max": 77767,
+      "CC50_assigned": 77746,
+      "CC50_unresolved": 21,
+      "CC200_assigned": 77735,
+      "CC200_unresolved": 32
+    },
+    {
+      "section": "MPBC2",
+      "anchors": 14175,
+      "niche_train": 0,
+      "evaluable_min": 14174,
+      "evaluable_max": 14174,
+      "A_NONE_assigned_min": 14174,
+      "A_NONE_assigned_max": 14174,
+      "CC50_assigned": 14082,
+      "CC50_unresolved": 93,
+      "CC200_assigned": 13939,
+      "CC200_unresolved": 236
+    }
+  ],
+  "coverage_detail": "tables/coverage_wide.tsv",
+  "selected_models": "tables/selected_models.tsv",
+  "recommendations": "tables/model_recommendations.tsv",
+  "working_coarse": "A NONE K2 with continuous P and both references",
+  "exploratory_molecular_K": {
+    "50um": 5,
+    "200um": 9
+  },
+  "identical_full_inputs_split": 0,
+  "MPBC2": "never niche fitting; WEAK transductive; CellCharter official query adaptation",
+  "unfinished": [],
+  "remaining_limitations": [
+    "reference dependence",
+    "MPBC tissue masks unknown",
+    "fine graph partitions not biologically endorsed",
+    "MENDER200 selected partitions degenerate",
+    "Harmony iteration cap",
+    "CellCharter feature and source sensitivity"
+  ],
+  "output_root": "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_multimethod_v2",
+  "MP10_association_executed": false,
+  "allocated_GiB": 6.791,
+  "review_MiB": 55.9
+}

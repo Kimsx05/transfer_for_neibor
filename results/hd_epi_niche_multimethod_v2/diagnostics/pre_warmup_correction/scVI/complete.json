@@ -1,0 +1,11 @@
+{
+  "variant": "scVI",
+  "device": "gpu",
+  "reference_train": 200000,
+  "features": 3000,
+  "query_adaptation_n": 50000,
+  "query_encoded_n": 422741,
+  "reference_model_unchanged_max_abs": 0.0,
+  "adapted_model_reference_max_abs": 0.0,
+  "scope": "four-section reference T_expr; 50000 MPBC2 query adaptation; all QC neighbor bins encoded"
+}

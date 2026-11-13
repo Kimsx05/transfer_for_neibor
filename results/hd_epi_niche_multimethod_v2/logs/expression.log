@@ -1,0 +1,140 @@
+Seed set to 123
+EXPRESSION_TRAINING_INPUT_COMPLETE
+Seed set to 123
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=3` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=3` in the `DataLoader` to improve performance.
+`Trainer.fit` stopped: `max_epochs=100` reached.
+INFO     AnnData object appears to be a copy. Attempting to transfer setup.     
+INFO     Input AnnData not setup with scvi-tools. attempting to transfer AnnData
+         setup                                                                  
+ENCODED scVI Cervilla
+INFO     Input AnnData not setup with scvi-tools. attempting to transfer AnnData
+         setup                                                                  
+ENCODED scVI D1_Johnson
+INFO     Input AnnData not setup with scvi-tools. attempting to transfer AnnData
+         setup                                                                  
+ENCODED scVI UC_SCC
+INFO     Input AnnData not setup with scvi-tools. attempting to transfer AnnData
+         setup                                                                  
+ENCODED scVI MPBC1
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=3` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:538: Found 42 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+`Trainer.fit` stopped: `max_epochs=50` reached.
+INFO     AnnData object appears to be a copy. Attempting to transfer setup.     
+INFO     Input AnnData not setup with scvi-tools. attempting to transfer AnnData
+         setup                                                                  
+INFO     Input AnnData not setup with scvi-tools. attempting to transfer AnnData
+         setup                                                                  
+SCVI_COMPLETE scVI
+Seed set to 123
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=3` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=3` in the `DataLoader` to improve performance.
+`Trainer.fit` stopped: `max_epochs=100` reached.
+INFO     AnnData object appears to be a copy. Attempting to transfer setup.     
+INFO     Input AnnData not setup with scvi-tools. attempting to transfer AnnData
+         setup                                                                  
+ENCODED scVI_without_Top20 Cervilla
+INFO     Input AnnData not setup with scvi-tools. attempting to transfer AnnData
+         setup                                                                  
+ENCODED scVI_without_Top20 D1_Johnson
+INFO     Input AnnData not setup with scvi-tools. attempting to transfer AnnData
+         setup                                                                  
+ENCODED scVI_without_Top20 UC_SCC
+INFO     Input AnnData not setup with scvi-tools. attempting to transfer AnnData
+         setup                                                                  
+ENCODED scVI_without_Top20 MPBC1
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=3` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:538: Found 42 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+`Trainer.fit` stopped: `max_epochs=50` reached.
+INFO     AnnData object appears to be a copy. Attempting to transfer setup.     
+INFO     Input AnnData not setup with scvi-tools. attempting to transfer AnnData
+         setup                                                                  
+INFO     Input AnnData not setup with scvi-tools. attempting to transfer AnnData
+         setup                                                                  
+SCVI_COMPLETE scVI_without_Top20
+Seed set to 123
+Seed set to 123
+Seed set to 123
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=3` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=3` in the `DataLoader` to improve performance.
+`Trainer.fit` stopped: `max_epochs=100` reached.
+INFO     AnnData object appears to be a copy. Attempting to transfer setup.     
+INFO     Input AnnData not setup with scvi-tools. attempting to transfer AnnData
+         setup                                                                  
+ENCODED scVI Cervilla
+INFO     Input AnnData not setup with scvi-tools. attempting to transfer AnnData
+         setup                                                                  
+ENCODED scVI D1_Johnson
+INFO     Input AnnData not setup with scvi-tools. attempting to transfer AnnData
+         setup                                                                  
+ENCODED scVI UC_SCC
+INFO     Input AnnData not setup with scvi-tools. attempting to transfer AnnData
+         setup                                                                  
+ENCODED scVI MPBC1
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=3` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:538: Found 42 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+`Trainer.fit` stopped: `max_epochs=50` reached.
+INFO     AnnData object appears to be a copy. Attempting to transfer setup.     
+INFO     Input AnnData not setup with scvi-tools. attempting to transfer AnnData
+         setup                                                                  
+INFO     Input AnnData not setup with scvi-tools. attempting to transfer AnnData
+         setup                                                                  
+SCVI_COMPLETE scVI
+Seed set to 123
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=3` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=3` in the `DataLoader` to improve performance.
+`Trainer.fit` stopped: `max_epochs=100` reached.
+INFO     AnnData object appears to be a copy. Attempting to transfer setup.     
+INFO     Input AnnData not setup with scvi-tools. attempting to transfer AnnData
+         setup                                                                  
+ENCODED scVI_without_Top20 Cervilla
+INFO     Input AnnData not setup with scvi-tools. attempting to transfer AnnData
+         setup                                                                  
+ENCODED scVI_without_Top20 D1_Johnson
+INFO     Input AnnData not setup with scvi-tools. attempting to transfer AnnData
+         setup                                                                  
+ENCODED scVI_without_Top20 UC_SCC
+INFO     Input AnnData not setup with scvi-tools. attempting to transfer AnnData
+         setup                                                                  
+ENCODED scVI_without_Top20 MPBC1
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=3` in the `DataLoader` to improve performance.
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/cell_annotation_freeze_v1/.venv/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:538: Found 42 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+`Trainer.fit` stopped: `max_epochs=50` reached.
+INFO     AnnData object appears to be a copy. Attempting to transfer setup.     
+INFO     Input AnnData not setup with scvi-tools. attempting to transfer AnnData
+         setup                                                                  
+INFO     Input AnnData not setup with scvi-tools. attempting to transfer AnnData
+         setup                                                                  
+SCVI_COMPLETE scVI_without_Top20

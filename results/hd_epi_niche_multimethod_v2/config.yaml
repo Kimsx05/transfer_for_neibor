@@ -1,0 +1,94 @@
+seed: 123
+seeds:
+- 123
+- 456
+- 789
+sections:
+- Cervilla
+- D1_Johnson
+- UC_SCC
+- MPBC1
+- MPBC2
+training_sections:
+- Cervilla
+- D1_Johnson
+- UC_SCC
+- MPBC1
+radii_um:
+- 50
+- 200
+radius_tolerance_um: 1.0e-07
+exclude_center: true
+minimum_known: 10
+threads: 4
+night_window: 23:00-07:00 Asia/Shanghai
+training_source: v1 BLCA50; deterministic common-S replacement
+block_um: 400
+K:
+- 2
+- 3
+- 4
+- 5
+- 6
+- 7
+- 8
+- 9
+- 10
+resolutions:
+- 0.005
+- 0.01
+- 0.02
+- 0.05
+- 0.1
+- 0.2
+- 0.4
+knn_candidates:
+- 15
+- 30
+- 50
+composition_PCA: sqrt(P), centered, all numerical nonzero PCs, no whitening/no zscore
+Harmony:
+  theta: 1
+  lamb: 5
+  max_iter_harmony: 10
+  nclust: 50
+  fit_scope: all_five_sections_transductive
+MENDER:
+  ring_width_um: 25
+  include_self: false
+  normalization: native normalize_total then log1p
+  neighbor_graph: frequency-weighted identical-profile contraction adaptation
+  conditional_sensitivity:
+    reference: blca
+    radius: 50
+    preprocessing: known proportions per ring then native normalize_total/log1p/PCA
+    resolution: fixed main selected .005; no grid
+    trigger: several pure-Epi main labels differ in ring/input support
+CellCharter:
+  T_expr_per_reference_section: 50000
+  HVG: 3000
+  latent: 10
+  max_epochs: 100
+  early_stopping_patience: 10
+  batch_size: 1024
+  query_epochs: 50
+  query_adaptation: SCVI.load_query_data MPBC2
+  GMM_K:
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  AutoK_max_runs: 3
+  reference_kl_warmup_epochs: 20
+  query_kl_warmup_epochs: 10
+selection: simplest stable interpretable candidate; retain K2; no scalar cross-method
+  score
+buffer: test spatial blocks hash mod 7=0; remove training centers within 2R + tolerance;
+  fixed representation conditional validation
+graph_contraction: Original full-training Scanpy connectivities; Q=G.T A G; diagonal
+  Qii/2 self loops; exact constrained weighted quotient

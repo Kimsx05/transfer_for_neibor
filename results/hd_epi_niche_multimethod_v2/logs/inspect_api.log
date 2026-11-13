@@ -1,0 +1,26 @@
+/home/data/t070721/codex_singularity/python-envs/bladder-spatial-py312/lib/python3.12/functools.py:912: ImplicitModificationWarning: Transforming to str index.
+  return dispatch(args[0].__class__)(*args, **kw)
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_multimethod_v2/.venv/lib/python3.12/site-packages/MENDER/MENDER.py:230: FutureWarning: Calling `spatial_neighbors` is deprecated and will be removed in squidpy v1.9.0. Use `spatial_neighbors_knn`, `spatial_neighbors_radius`, `spatial_neighbors_delaunay`, `spatial_neighbors_grid`, or `spatial_neighbors_from_builder` instead.
+  sq.gr.spatial_neighbors(self.adata,coord_type='generic',radius=self.nn_para*(cur_scale+1),set_diag=self.include_self)
+INFO     Creating graph using `[3mNone[0m` transform and `[1m1[0m` libraries.               
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_multimethod_v2/.venv/lib/python3.12/site-packages/MENDER/MENDER.py:230: FutureWarning: Calling `spatial_neighbors` is deprecated and will be removed in squidpy v1.9.0. Use `spatial_neighbors_knn`, `spatial_neighbors_radius`, `spatial_neighbors_delaunay`, `spatial_neighbors_grid`, or `spatial_neighbors_from_builder` instead.
+  sq.gr.spatial_neighbors(self.adata,coord_type='generic',radius=self.nn_para*(cur_scale+1),set_diag=self.include_self)
+scale 0, median #cells per radius (r=25): 22.0
+INFO     Creating graph using `[3mNone[0m` transform and `[1m1[0m` libraries.               
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_multimethod_v2/code/inspect_api.py:11: DeprecationWarning: `distance_matrix` is deprecated in favor of `scipy.spatial.distance.cdist` as of SciPy 1.18.0 and will be removed in SciPy 1.20.0.
+  d=distance_matrix(xy,xy);prev=np.zeros((len(xy),3));types=list(m.ct_unique)
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_multimethod_v2/code/inspect_api.py:11: DeprecationWarning: `minkowski_distance` is deprecated in favor of `scipy.spatial.distance.minkowski` as of SciPy 1.18.0 and will be removed in SciPy 1.20.0.
+  d=distance_matrix(xy,xy);prev=np.zeros((len(xy),3));types=list(m.ct_unique)
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_multimethod_v2/code/inspect_api.py:11: DeprecationWarning: `minkowski_distance_p` is deprecated in favor of `scipy.spatial.distance.minkowski` as of SciPy 1.18.0 and will be removed in SciPy 1.20.0.
+  d=distance_matrix(xy,xy);prev=np.zeros((len(xy),3));types=list(m.ct_unique)
+scale 1, median #cells per radius (r=25): 47.0
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 3410.00it/s]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/scipy/sparse/_index.py:216: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil and dok are more efficient.
+  self._set_arrayXarray(i, j, x)
+2026-11-12 22:44:57.288921: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/scipy/sparse/_index.py:216: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil and dok are more efficient.
+  self._set_arrayXarray(i, j, x)
+INTERFACE_CHECKS_PASSED
+MENDER_FEATURE_NAMES ['ct0scale0' 'ct0scale1' 'ct1scale0' 'ct1scale1' 'ct2scale0' 'ct2scale1']
+PREPROCESS_AND_EXACT_TRANSFER_PASSED

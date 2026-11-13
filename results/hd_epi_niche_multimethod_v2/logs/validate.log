@@ -1,0 +1,36 @@
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_multimethod_v2/code/validate.py", line 12, in <module>
+    n=pd.read_parquet(V/s/'nodes.parquet');n=n[n.analysis_qc].set_index('bin_id');obj=ad.AnnData(csr_matrix((len(n),1)),obs=n[['x_um','y_um','analysis_qc']].copy());prior=obj.obs.copy();obj=attach_niches(obj,R,s);assert obj.obs[prior.columns].equals(prior);assert obj.obs.loc[~obj.obs.niche_v2_anchor,obj.obs.columns.str.endswith('_label')].isna().all().all()
+                                                                                                                                                                                                                                                                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/indexing.py", line 1335, in __getitem__
+    return self._getitem_tuple(key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/indexing.py", line 1871, in _getitem_tuple
+    return self._getitem_lowerdim(tup)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/indexing.py", line 1252, in _getitem_lowerdim
+    return getattr(section, self.name)[new_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/indexing.py", line 1335, in __getitem__
+    return self._getitem_tuple(key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/indexing.py", line 1871, in _getitem_tuple
+    return self._getitem_lowerdim(tup)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/indexing.py", line 1228, in _getitem_lowerdim
+    section = self._getitem_axis(key, axis=i)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/indexing.py", line 1923, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/indexing.py", line 1863, in _getitem_iterable
+    keyarr, indexer = self._get_listlike_indexer(key, axis)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/indexing.py", line 2093, in _get_listlike_indexer
+    keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 6557, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 6606, in _raise_if_missing
+    raise KeyError(f"None of [{key}] are in the [{axis_name}]")
+KeyError: "None of [Index([-2, -1, -1, -1, -1, -2, -2, -1, -1, -1,\n       ...\n       -2, -1, -1, -1, -1, -2, -2, -1, -1, -1],\n      dtype='object', name='bin_id', length=268924)] are in the [index]"

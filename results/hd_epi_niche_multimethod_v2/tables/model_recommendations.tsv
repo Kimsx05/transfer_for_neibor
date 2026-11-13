@@ -1,0 +1,26 @@
+tag	n_clusters	recommendation	reason
+CellCharter_both_r200_scVI	9	exploratory_molecular_environment	Raw neighbor molecular support; feature/source sensitivity prevents validated fine identity claim
+CellCharter_both_r200_scVI_without_Top20	9	feature_sensitivity_only	Raw neighbor molecular support; feature/source sensitivity prevents validated fine identity claim
+CellCharter_both_r50_scVI	5	exploratory_molecular_environment	Raw neighbor molecular support; feature/source sensitivity prevents validated fine identity claim
+CellCharter_both_r50_scVI_without_Top20	5	feature_sensitivity_only	Raw neighbor molecular support; feature/source sensitivity prevents validated fine identity claim
+MENDER_adapted_blca_r200_ring_counts	2	exploratory_radial_representation_not_endorsed_partition	Support-driven pure-Epi splitting; selected 200um model is near-singleton partition
+MENDER_adapted_blca_r50_per_ring_normalized	27	radial_support_sensitivity	Support-driven pure-Epi splitting; selected 200um model is near-singleton partition
+MENDER_adapted_blca_r50_ring_counts	32	exploratory_radial_representation_not_endorsed_partition	Support-driven pure-Epi splitting; selected 200um model is near-singleton partition
+MENDER_adapted_hpca_r200_ring_counts	2	exploratory_radial_representation_not_endorsed_partition	Support-driven pure-Epi splitting; selected 200um model is near-singleton partition
+MENDER_adapted_hpca_r50_ring_counts	227	exploratory_radial_representation_not_endorsed_partition	Support-driven pure-Epi splitting; selected 200um model is near-singleton partition
+adapted_leiden_blca_r200_NONE	6	diagnostic_not_endorsed_fine_niche	Exact duplicate split fixed; fragmentation/source dependence or degenerate selected partition remains
+adapted_leiden_blca_r200_WEAK	2	diagnostic_not_endorsed_fine_niche	Exact duplicate split fixed; fragmentation/source dependence or degenerate selected partition remains
+adapted_leiden_blca_r50_NONE	171	diagnostic_not_endorsed_fine_niche	Exact duplicate split fixed; fragmentation/source dependence or degenerate selected partition remains
+adapted_leiden_blca_r50_WEAK	371	diagnostic_not_endorsed_fine_niche	Exact duplicate split fixed; fragmentation/source dependence or degenerate selected partition remains
+adapted_leiden_hpca_r200_NONE	6	diagnostic_not_endorsed_fine_niche	Exact duplicate split fixed; fragmentation/source dependence or degenerate selected partition remains
+adapted_leiden_hpca_r200_WEAK	20	diagnostic_not_endorsed_fine_niche	Exact duplicate split fixed; fragmentation/source dependence or degenerate selected partition remains
+adapted_leiden_hpca_r50_NONE	651	diagnostic_not_endorsed_fine_niche	Exact duplicate split fixed; fragmentation/source dependence or degenerate selected partition remains
+adapted_leiden_hpca_r50_WEAK	1638	diagnostic_not_endorsed_fine_niche	Exact duplicate split fixed; fragmentation/source dependence or degenerate selected partition remains
+hellinger_kmeans_blca_r200_NONE	2	working_coarse_with_reference_sensitivity	K2 composition axis; preserve continuous P and paired references/scales
+hellinger_kmeans_blca_r200_WEAK	2	sensitivity_only	Transductive; lower source association changes partition; iteration cap reached
+hellinger_kmeans_blca_r50_NONE	2	working_coarse_with_reference_sensitivity	K2 composition axis; preserve continuous P and paired references/scales
+hellinger_kmeans_blca_r50_WEAK	2	sensitivity_only	Transductive; lower source association changes partition; iteration cap reached
+hellinger_kmeans_hpca_r200_NONE	2	working_coarse_with_reference_sensitivity	K2 composition axis; preserve continuous P and paired references/scales
+hellinger_kmeans_hpca_r200_WEAK	2	sensitivity_only	Transductive; lower source association changes partition; iteration cap reached
+hellinger_kmeans_hpca_r50_NONE	2	working_coarse_with_reference_sensitivity	K2 composition axis; preserve continuous P and paired references/scales
+hellinger_kmeans_hpca_r50_WEAK	2	sensitivity_only	Transductive; lower source association changes partition; iteration cap reached

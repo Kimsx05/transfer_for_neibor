@@ -1,0 +1,29 @@
+{
+  "scope": "Targeted visual review of final labels against frozen ROI and unsmoothed upstream RNA evidence; no ground-truth accuracy claim",
+  "reviewed": [
+    "Cervilla_blca_four_methods.png",
+    "UC_SCC_blca_four_methods.png",
+    "D1_Johnson_blca_four_methods.png",
+    "Cervilla_ROI_far_UMI_hotspot.png",
+    "D1_Johnson_ROI_conflict_focus.png",
+    "MPBC1_ROI_typical_information.png",
+    "MPBC2_ROI_high_information.png",
+    "Cervilla_raw_evidence_far_UMI_hotspot.png",
+    "D1_Johnson_raw_evidence_conflict_focus.png",
+    "D1_Johnson_raw_evidence_HE_conflict_focus.png",
+    "UC_SCC_raw_evidence_typical_information.png",
+    "MPBC1_raw_evidence_typical_information.png",
+    "MPBC2_raw_evidence_high_information.png",
+    "CellCharter_both_r50_scVI_raw_neighbor_markers.png",
+    "CellCharter_both_r200_scVI_raw_neighbor_markers.png"
+  ],
+  "findings": [
+    "Coarse A composition axis remains interpretable; graph fine colors not automatically biological",
+    "MENDER200 maps near-single partition; must inspect actual group sizes",
+    "CellCharter molecular differences coexist with strong section and feature sensitivity",
+    "Fixed empty ROI retained; MPBC coordinates do not imply validated tissue boundary",
+    "Full-map key corrected to include all groups for <=12 groups and four largest per panel otherwise; all labels remain plotted"
+  ],
+  "interpretation": "INTERPRETATION.md",
+  "unchanged_analysis": "Figure key correction did not rerun fitting or alter any assignments"
+}

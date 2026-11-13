@@ -1,0 +1,3 @@
+variant	device	reference_train	features	reference_kl_warmup_epochs	query_kl_warmup_epochs	reference_final_KL_weight	query_final_KL_weight	query_adaptation_n	query_encoded_n	reference_model_unchanged_max_abs	adapted_model_reference_max_abs	scope	reference_validation_ELBO_final	reference_validation_ELBO_last10_relative_change	reference_epochs
+scVI	gpu	200000	3000	20	10	1.0	1.0	50000	422741	0.0	0.0	four-section reference T_expr; 50000 MPBC2 query adaptation; all QC neighbor bins encoded	95.75157928466797	2.8924330445574928e-05	100
+scVI_without_Top20	gpu	200000	2997	20	10	1.0	1.0	50000	422741	0.0	0.0	four-section reference T_expr; 50000 MPBC2 query adaptation; all QC neighbor bins encoded	95.59036254882812	-0.00023986161756099834	100
