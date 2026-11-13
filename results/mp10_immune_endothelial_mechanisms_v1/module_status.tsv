@@ -1,0 +1,55 @@
+module	status	actual_scope	reason	n_recorded_patient_units	n_datasets
+input_and_pseudobulk	completed	40 original specimens; 39 recorded patient units; full counts and original normalized RNA; exact final-reference membership		39.0	5.0
+DE_H50	completed	M0001; n_cells >=50; own eligible sample set		39.0	5.0
+DE_H10	completed	M0016; n_cells >=50; own eligible sample set		33.0	5.0
+DE_H05	completed	M0031; n_cells >=50; own eligible sample set		24.0	5.0
+DE_Treg	completed	M0046; n_cells >=50; own eligible sample set		32.0	5.0
+DE_Tfh/CXCL13-like	completed	M0055; n_cells >=50; own eligible sample set		23.0	5.0
+DE_Arterial EC	not_evaluable	M0064; n_cells >=50; own eligible sample set	residual_df_below_frozen_3	4.0	1.0
+DE_Capillary EC	completed	M0073; n_cells >=50; own eligible sample set		12.0	4.0
+DE_prespecified_sensitivity	completed	68 completed and 13 explicitly NE models of 81 planned; all legal settings evaluated			
+Hallmark_Reactome	completed	Main and applicable prespecified sensitivities; full positive/negative results retained			
+PROGENy_CollecTRI_DoRothEA	completed	Main and applicable prespecified sensitivities; full positive/negative results retained			
+abundance	completed	Main and applicable prespecified sensitivities; full positive/negative results retained			
+Epi_composition_quality	completed	Main and applicable prespecified sensitivities; full positive/negative results retained			
+NicheNet_Epi_M0001_Full_negative	completed	TME_to_Epi; 293.0 targets / 19562.0 testable background; native and focused ranks		39.0	5.0
+NicheNet_Epi_M0001_Full_positive	completed	TME_to_Epi; 1551.0 targets / 19562.0 testable background; native and focused ranks		39.0	5.0
+NicheNet_Epi_M0001_Full_union	completed	TME_to_Epi; 1844.0 targets / 19562.0 testable background; native and focused ranks		39.0	5.0
+NicheNet_Epi_M0001_M20-masked_negative	completed	TME_to_Epi; 293.0 targets / 19542.0 testable background; native and focused ranks		39.0	5.0
+NicheNet_Epi_M0001_M20-masked_positive	completed	TME_to_Epi; 1531.0 targets / 19542.0 testable background; native and focused ranks		39.0	5.0
+NicheNet_Epi_M0001_M20-masked_union	completed	TME_to_Epi; 1824.0 targets / 19542.0 testable background; native and focused ranks		39.0	5.0
+NicheNet_Epi_M0016_Full_negative	completed	TME_to_Epi; 2794.0 targets / 18424.0 testable background; native and focused ranks		33.0	5.0
+NicheNet_Epi_M0016_Full_positive	completed	TME_to_Epi; 936.0 targets / 18424.0 testable background; native and focused ranks		33.0	5.0
+NicheNet_Epi_M0016_Full_union	completed	TME_to_Epi; 3730.0 targets / 18424.0 testable background; native and focused ranks		33.0	5.0
+NicheNet_Epi_M0016_M20-masked_negative	completed	TME_to_Epi; 2794.0 targets / 18404.0 testable background; native and focused ranks		33.0	5.0
+NicheNet_Epi_M0016_M20-masked_positive	completed	TME_to_Epi; 916.0 targets / 18404.0 testable background; native and focused ranks		33.0	5.0
+NicheNet_Epi_M0016_M20-masked_union	completed	TME_to_Epi; 3710.0 targets / 18404.0 testable background; native and focused ranks		33.0	5.0
+NicheNet_Epi_M0031_Full_negative	completed	TME_to_Epi; 4144.0 targets / 18006.0 testable background; native and focused ranks		24.0	5.0
+NicheNet_Epi_M0031_Full_positive	completed	TME_to_Epi; 547.0 targets / 18006.0 testable background; native and focused ranks		24.0	5.0
+NicheNet_Epi_M0031_Full_union	completed	TME_to_Epi; 4691.0 targets / 18006.0 testable background; native and focused ranks		24.0	5.0
+NicheNet_Epi_M0031_M20-masked_negative	completed	TME_to_Epi; 4144.0 targets / 17986.0 testable background; native and focused ranks		24.0	5.0
+NicheNet_Epi_M0031_M20-masked_positive	completed	TME_to_Epi; 527.0 targets / 17986.0 testable background; native and focused ranks		24.0	5.0
+NicheNet_Epi_M0031_M20-masked_union	completed	TME_to_Epi; 4671.0 targets / 17986.0 testable background; native and focused ranks		24.0	5.0
+NicheNet_Treg_M0046_Full_negative	completed	Epi_to_TME; 2.0 targets / 11245.0 testable background; native and focused ranks	low_information_fewer_than_10_targets	32.0	5.0
+NicheNet_Treg_M0046_Full_positive	not_evaluable	Epi_to_TME; 0.0 targets / 11245.0 testable background; native and focused ranks	insufficient_target_signal	32.0	5.0
+NicheNet_Treg_M0046_Full_union	completed	Epi_to_TME; 2.0 targets / 11245.0 testable background; native and focused ranks	low_information_fewer_than_10_targets	32.0	5.0
+NicheNet_Tfh/CXCL13-like_M0055_Full_negative	not_evaluable	Epi_to_TME; 0.0 targets / 10402.0 testable background; native and focused ranks	insufficient_target_signal	23.0	5.0
+NicheNet_Tfh/CXCL13-like_M0055_Full_positive	not_evaluable	Epi_to_TME; 0.0 targets / 10402.0 testable background; native and focused ranks	insufficient_target_signal	23.0	5.0
+NicheNet_Tfh/CXCL13-like_M0055_Full_union	not_evaluable	Epi_to_TME; 0.0 targets / 10402.0 testable background; native and focused ranks	insufficient_target_signal	23.0	5.0
+NicheNet_Arterial EC_M0064_Full_negative	not_evaluable	Epi_to_TME; nan targets / nan testable background; native and focused ranks	residual_df_below_frozen_3		1.0
+NicheNet_Arterial EC_M0064_Full_positive	not_evaluable	Epi_to_TME; nan targets / nan testable background; native and focused ranks	residual_df_below_frozen_3		1.0
+NicheNet_Arterial EC_M0064_Full_union	not_evaluable	Epi_to_TME; nan targets / nan testable background; native and focused ranks	residual_df_below_frozen_3		1.0
+NicheNet_Capillary EC_M0073_Full_negative	not_evaluable	Epi_to_TME; 0.0 targets / 10865.0 testable background; native and focused ranks	insufficient_target_signal	12.0	4.0
+NicheNet_Capillary EC_M0073_Full_positive	not_evaluable	Epi_to_TME; 0.0 targets / 10865.0 testable background; native and focused ranks	insufficient_target_signal	12.0	4.0
+NicheNet_Capillary EC_M0073_Full_union	not_evaluable	Epi_to_TME; 0.0 targets / 10865.0 testable background; native and focused ranks	insufficient_target_signal	12.0	4.0
+NicheNet_sensitivity	completed	Full/M20-masked, 10%/5% detection, positive/negative/union and legal patient/dataset/threshold/exposure models; sparse targets flagged			
+pySCENIC_Epi	completed	4000 training cells; 116448 full scored cells; 166 motif-pruned regulons; seed456 key-connection check	Second seed is not a second full network/AUCell experiment		
+pySCENIC_T_lineage	completed	3485 training cells; 44448 full scored cells; 236 motif-pruned regulons; seed456 key-connection check	Second seed is not a second full network/AUCell experiment		
+pySCENIC_Endothelial	completed	1681 training cells; 7376 full scored cells; 196 motif-pruned regulons; seed456 key-connection check	Second seed is not a second full network/AUCell experiment		
+pySCENIC_key_connection_stability_Endothelial	not_evaluable	0 comparable non-self GRN edges in prespecified TFs; individual TF coverage retained	Preselected TFs lack motif-pruned regulons		
+pySCENIC_key_connection_stability_Epi	completed	36 comparable non-self GRN edges in prespecified TFs; individual TF coverage retained	Key connections only; not a full second network		
+pySCENIC_key_connection_stability_T_lineage	not_evaluable	0 comparable non-self GRN edges in prespecified TFs; individual TF coverage retained	Preselected TFs lack motif-pruned regulons		
+pySCENIC_Epi_M20_mask	completed	Frozen network with Top20 removed only from downstream regulon/scoring universe			
+matched_scRNA_CNV_sensitivity	not_evaluable	No new CNV inferred	No verified matched existing per-cell CNV used in this task; optional sensitivity unavailable		
+resource_runtime_audit	completed	Runtime thread configuration audited and corrected	Early global Rprofile override violated requested cap; see incident log		
+evidence_integration_and_rendering	completed	Full unweighted candidate table, direct plotting data, all figure parts and render audit			

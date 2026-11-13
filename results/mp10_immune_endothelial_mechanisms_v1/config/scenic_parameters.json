@@ -1,0 +1,38 @@
+{
+  "GRNBoost2_regressor_kwargs": {
+    "learning_rate": 0.01,
+    "n_estimators": 5000,
+    "max_features": 0.1,
+    "subsample": 0.9
+  },
+  "early_stop_window_length": 25,
+  "AUCell_signature": "(exp_mtx: pandas.core.frame.DataFrame, signatures: Sequence[Type[ctxcore.genesig.GeneSignature]], auc_threshold: float = 0.05, noweights: bool = False, normalize: bool = False, seed=None, num_workers: int = 256) -> pandas.core.frame.DataFrame",
+  "AUCell_seed": 123,
+  "AUCell_auc_threshold": 0.05,
+  "AUCell_normalize": false,
+  "AUCell_noweights": false,
+  "activity_min_covered_targets": 5,
+  "motif_rank_threshold": 5000,
+  "motif_auc_threshold": 0.05,
+  "motif_NES_threshold": 3,
+  "minimum_motif_module_mapping_fraction": 0.8,
+  "modules_min_genes": 20,
+  "module_thresholds": [
+    0.75,
+    0.9
+  ],
+  "top_n_targets": [
+    50
+  ],
+  "top_n_regulators": [
+    5,
+    10,
+    50
+  ],
+  "rho_threshold": 0.03,
+  "rho_mask_dropouts": false,
+  "keep_only_activating": true,
+  "cell_gene_filter": ">=1% and >=3 training cells",
+  "training_cap_per_specimen": 100,
+  "worker_policy": "one BLAS/OMP thread each; at most2 workers per lineage and4 total"
+}

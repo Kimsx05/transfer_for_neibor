@@ -1,0 +1,80 @@
+function (prediction, response, iregulon = TRUE) 
+{
+    if ((sd(response) == 0 & sd(prediction) == 0) | is.null(prediction) | 
+        is.null(response)) {
+        return(dplyr::tibble(auroc = NA, aupr = NA, aupr_corrected = NA, 
+            sensitivity_roc = NA, specificity_roc = NA, mean_rank_GST_log_pval = NA, 
+            auc_iregulon = NA, auc_iregulon_corrected = NA, pearson = NA, 
+            spearman = NA))
+    }
+    if (any(is.infinite(prediction))) {
+        message("Warning: Inf values detected in prediction vector. Replacing with max value + 1e-1.")
+        max_value <- max(prediction[is.finite(prediction)], na.rm = TRUE)
+        prediction[is.infinite(prediction)] <- max_value + 0.1
+    }
+    prediction_ROCR = ROCR::prediction(prediction, response)
+    performance1 = ROCR::performance(prediction_ROCR, measure = "tpr", 
+        x.measure = "fpr")
+    performance2 = ROCR::performance(prediction_ROCR, measure = "prec", 
+        x.measure = "rec")
+    performance = tibble(tpr = performance1@y.values[[1]], fpr = performance1@x.values[[1]], 
+        precision = performance2@y.values[[1]], recall = performance2@x.values[[1]])
+    performance = performance %>% replace_na(list(recall = 0, 
+        precision = 1))
+    aupr = caTools::trapz(performance$recall, performance$precision)
+    pos_class = sum(response)
+    total = length(response)
+    aupr_random = pos_class/total
+    metrics = get_split_auroc(prediction, response)
+    sensitivity = metrics$auroc_sensitivity
+    specificity = metrics$auroc_specificity
+    auroc = metrics$auroc
+    cor_p = cor(prediction, response)
+    cor_s = cor(prediction, response, method = "s")
+    cor_p_pval = suppressWarnings(cor.test(as.numeric(prediction), 
+        as.numeric(response))) %>% .$p.value
+    cor_s_pval = suppressWarnings(cor.test(as.numeric(prediction), 
+        as.numeric(response), method = "s")) %>% .$p.value
+    min_pval <- .Machine$double.xmin
+    if (!is.na(cor_p_pval)) {
+        if (cor_p_pval < min_pval) {
+            message("Warning: Pearson p-value was below ", min_pval, 
+                " and has been capped at this value to avoid Inf values when taking the log10.")
+            cor_p_pval <- min_pval
+        }
+    }
+    if (!is.na(cor_s_pval)) {
+        if (cor_s_pval < min_pval) {
+            message("Warning: Spearman p-value was below ", min_pval, 
+                " and has been capped at this value to avoid Inf values when taking the log10.")
+            cor_s_pval <- min_pval
+        }
+    }
+    mean_rank_GST = ifelse(rlang::is_installed("limma"), limma::wilcoxGST(response, 
+        prediction), NA)
+    min_mean_rank_GST <- .Machine$double.xmin
+    if (!is.na(mean_rank_GST)) {
+        if (mean_rank_GST < min_mean_rank_GST) {
+            message("Warning: mean_rank_GST p-value was below ", 
+                min_mean_rank_GST, " and has been capped at this value to avoid Inf values when taking the log.")
+            mean_rank_GST <- min_mean_rank_GST
+        }
+    }
+    output_iregulon = list()
+    if (iregulon) {
+        output_iregulon = calculate_auc_iregulon(prediction, 
+            response)
+    }
+    tbl_perf = tibble(auroc = auroc, aupr = aupr, aupr_corrected = aupr - 
+        aupr_random, sensitivity_roc = sensitivity, specificity_roc = specificity, 
+        mean_rank_GST_log_pval = -log(mean_rank_GST), auc_iregulon = output_iregulon$auc_iregulon, 
+        auc_iregulon_corrected = output_iregulon$auc_iregulon_corrected, 
+        pearson_log_pval = -log10(cor_p_pval), spearman_log_pval = -log10(cor_s_pval), 
+        pearson = cor_p, spearman = cor_s)
+    if (!rlang::is_installed("limma")) {
+        tbl_perf = tbl_perf %>% select(-mean_rank_GST_log_pval)
+    }
+    return(tbl_perf)
+}
+<bytecode: 0x5acadd017080>
+<environment: namespace:nichenetr>

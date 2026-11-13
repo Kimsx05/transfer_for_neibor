@@ -1,0 +1,18 @@
+{
+  "edge_interpretation": "self-target signature members excluded from GRN recovery denominator",
+  "lineage": "Endothelial",
+  "seed": 456,
+  "num_workers": 1,
+  "input_hash": "763e6c85dcd63dda306348c278fc9fc997832227fca489e017a2d9ba3deb8ffd",
+  "adjacency_sha256": "f85b6894af7bca64cda1aff6fccf7ede37663dece6b58c4b8bda5788c9bcc67d",
+  "n_targets": 28,
+  "key_TFs": [
+    "AHR",
+    "AIRE",
+    "AP1",
+    "ATF1",
+    "ATF2"
+  ],
+  "rule": "top5 CollecTRI q ranks per primary model, independent of significance; union of their motif-pruned targets and named candidates/Top20",
+  "target_hash": "73b9e40b848c59053637ccfe2028fa4ee1df8833c5ac3ba5ff38b30014b0e45a"
+}

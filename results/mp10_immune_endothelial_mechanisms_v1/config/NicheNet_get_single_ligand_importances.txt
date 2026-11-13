@@ -1,0 +1,20 @@
+function (setting, ligand_target_matrix, ligands_position = "cols", 
+    known = TRUE) 
+{
+    if (!is.logical(known) | length(known) > 1) 
+        stop("known should be a logical vector: TRUE or FALSE")
+    requireNamespace("dplyr")
+    metrics = evaluate_target_prediction(setting, ligand_target_matrix, 
+        ligands_position)
+    metrics = metrics %>% rename(test_ligand = ligand)
+    if (known == TRUE) {
+        true_ligand = setting$ligand
+        metrics_meta = metrics %>% select(setting, test_ligand) %>% 
+            bind_cols(tibble(ligand = true_ligand))
+        metrics = inner_join(metrics_meta, metrics, by = c("setting", 
+            "test_ligand"))
+    }
+    return(metrics)
+}
+<bytecode: 0x5b7b3b05da08>
+<environment: namespace:nichenetr>

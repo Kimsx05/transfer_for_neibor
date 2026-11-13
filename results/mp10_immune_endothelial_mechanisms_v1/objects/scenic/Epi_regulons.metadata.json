@@ -1,0 +1,36 @@
+{
+  "lineage": "Epi",
+  "seed": 123,
+  "rho_threshold": 0.03,
+  "rho_mask_dropouts": false,
+  "min_genes": 20,
+  "rank_threshold": 5000,
+  "auc_threshold": 0.05,
+  "nes_threshold": 3.0,
+  "num_workers": 2,
+  "mode": "custom_multiprocessing",
+  "module_thresholds": [
+    0.75,
+    0.9
+  ],
+  "top_n_targets": [
+    50
+  ],
+  "top_n_regulators": [
+    5,
+    10,
+    50
+  ],
+  "rho_dichotomize": true,
+  "keep_only_activating": true,
+  "motif_similarity_fdr": 0.001,
+  "orthologuous_identity_threshold": 0.0,
+  "training_sha256": "08955a14d7a38295bd1743b4627aed970d243303248d62d1d6399e37cbf47b0a",
+  "adjacency_sha256": "324c343b21ad855054f12b0245db711a08d3e7659c46053e88c37dd26053372b",
+  "db_sha256": "0dc054d76c283afe79da655563e943d17b0e69e0ed2dd9e5852fa6bf3677273a",
+  "motif_sha256": "9e085e8e6ecd6f73a47fe435ed50d583b92bf7814d1bf38ae358e73c6207da2b",
+  "method": "pyscenic0.12.1_GRNBoost2_ctx",
+  "input_hash": "23b0106856f509bda082ea635d5a777c4fcb03ba4a7c6972f58a58bb75473e61",
+  "n_modules": 8577,
+  "n_regulons": 166
+}

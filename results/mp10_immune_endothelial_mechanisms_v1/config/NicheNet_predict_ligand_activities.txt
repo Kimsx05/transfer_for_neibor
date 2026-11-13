@@ -1,0 +1,24 @@
+function (geneset, background_expressed_genes, ligand_target_matrix, 
+    potential_ligands, single = TRUE, ...) 
+{
+    setting = list(geneset) %>% lapply(convert_gene_list_settings_evaluation, 
+        name = "gene set", ligands_oi = potential_ligands, background = background_expressed_genes)
+    if (single == TRUE) {
+        settings_ligand_prediction = setting %>% convert_settings_ligand_prediction(all_ligands = potential_ligands, 
+            validation = FALSE, single = TRUE)
+        ligand_importances = settings_ligand_prediction %>% lapply(get_single_ligand_importances, 
+            ligand_target_matrix = ligand_target_matrix, known = FALSE) %>% 
+            bind_rows()
+    }
+    else {
+        settings_ligand_prediction = setting %>% convert_settings_ligand_prediction(all_ligands = potential_ligands, 
+            validation = FALSE, single = FALSE)
+        ligand_importances = settings_ligand_prediction %>% lapply(get_multi_ligand_importances, 
+            ligand_target_matrix = ligand_target_matrix, known = FALSE, 
+            ...) %>% bind_rows()
+    }
+    return(ligand_importances %>% select(test_ligand, auroc, 
+        aupr, aupr_corrected, pearson))
+}
+<bytecode: 0x5d57f0119480>
+<environment: namespace:nichenetr>

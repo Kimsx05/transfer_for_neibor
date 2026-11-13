@@ -1,0 +1,29 @@
+
+2026-11-12 22:58:17,466 - pyscenic.cli.pyscenic - INFO - Loading expression matrix.
+
+2026-11-12 22:58:26,744 - pyscenic.cli.pyscenic - INFO - Inferring regulatory networks.
+/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages/distributed/node.py:182: UserWarning: Port 8787 is already in use.
+Perhaps you already have a cluster running?
+Hosting the HTTP server on port 33773 instead
+  warnings.warn(
+/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages/distributed/worker.py:3031: UserWarning: Large object of size 1.13 MiB detected in task graph: 
+  (["('from-delayed-75535ba87b455b57f735c440ff31d8fa ... fa', 20215)"],)
+Consider scattering large objects ahead of time
+with client.scatter to reduce scheduler burden and 
+keep data on workers
+
+    future = client.submit(func, big_data)    # bad
+
+    big_future = client.scatter(big_data)     # good
+    future = client.submit(func, big_future)  # good
+  warnings.warn(
+2026-11-13 06:26:26,047 - distributed.nanny - WARNING - Worker process still alive after 3.199994049072266 seconds, killing
+
+2026-11-13 06:26:26,321 - pyscenic.cli.pyscenic - INFO - Writing results to file.
+preparing dask client
+parsing input
+creating dask graph
+1 partitions
+computing dask graph
+not shutting down client, client was created externally
+finished

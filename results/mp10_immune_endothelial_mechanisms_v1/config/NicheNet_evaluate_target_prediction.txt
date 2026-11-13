@@ -1,0 +1,48 @@
+function (setting, ligand_target_matrix, ligands_position = "cols") 
+{
+    if (!is.list(setting)) 
+        stop("setting must be a list")
+    if (!is.character(setting$from) | !is.character(setting$name)) 
+        stop("setting$from and setting$name should be character vectors")
+    if (!is.logical(setting$response) | is.null(names(setting$response))) 
+        stop("setting$response should be named logical vector containing class labels of the response that needs to be predicted ")
+    if (!is.matrix(ligand_target_matrix)) 
+        stop("ligand_target_matrix should be a matrix")
+    if (!is.double(ligand_target_matrix) & !is.logical(ligand_target_matrix)) 
+        stop("ligand_target matrix should be of type double if it contains numeric probabilities as predictions; or of type logical when it contains categorical target predictions (TRUE or FALSE)")
+    if (ligands_position != "cols" & ligands_position != "rows") 
+        stop("ligands_position must be 'cols' or 'rows'")
+    requireNamespace("dplyr")
+    if (length(setting$from) == 1) {
+        ligand_oi = setting$from
+    }
+    else {
+        ligand_oi = paste0(setting$from, collapse = "-")
+    }
+    if (ligands_position == "cols") {
+        if ((ligand_oi %in% colnames(ligand_target_matrix)) == 
+            FALSE) 
+            stop("ligand should be in ligand_target_matrix")
+        prediction_vector = ligand_target_matrix[, ligand_oi]
+        names(prediction_vector) = rownames(ligand_target_matrix)
+    }
+    else if (ligands_position == "rows") {
+        if ((ligand_oi %in% rownames(ligand_target_matrix)) == 
+            FALSE) 
+            stop("ligand should be in ligand_target_matrix")
+        prediction_vector = ligand_target_matrix[ligand_oi, ]
+        names(prediction_vector) = colnames(ligand_target_matrix)
+    }
+    response_vector = setting$response
+    if (sd(prediction_vector) == 0) 
+        warning("all target gene probability score predictions have same value")
+    if (sd(response_vector) == 0) 
+        stop("all genes have same response")
+    performance = evaluate_target_prediction_strict(response_vector, 
+        prediction_vector, is.double(prediction_vector))
+    output = bind_cols(tibble(setting = setting$name, ligand = ligand_oi), 
+        performance)
+    return(output)
+}
+<bytecode: 0x5b7b3b087508>
+<environment: namespace:nichenetr>

@@ -1,0 +1,82 @@
+model_id	kind	target	min_cells	patient	exposure	subset	omit_dataset	only_dataset	primary	omission_changes_main_membership	n_profiles_added_vs_main	n_profiles_removed_vs_main	identical_profiles_to_main	exposure_changed_vs_main
+"M0001"	"Epi"	"H50"	50	"main"	"Q50"	"own"	"none"	"ALL"	TRUE	NA	0	0	TRUE	FALSE
+"M0002"	"Epi"	"H50"	30	"main"	"Q50"	"own"	"none"	"ALL"	FALSE	NA	0	0	TRUE	FALSE
+"M0003"	"Epi"	"H50"	50	"replacement"	"Q50"	"own"	"none"	"ALL"	FALSE	NA	2	2	FALSE	FALSE
+"M0004"	"Epi"	"H50"	50	"main"	"Q50"	"common"	"none"	"ALL"	FALSE	NA	0	30	FALSE	FALSE
+"M0005"	"Epi"	"H50"	30	"main"	"Q50"	"common"	"none"	"ALL"	FALSE	NA	0	18	FALSE	FALSE
+"M0006"	"Epi"	"H50"	50	"main"	"Q50"	"own"	"CNP0000460"	"ALL"	FALSE	TRUE	0	14	FALSE	FALSE
+"M0007"	"Epi"	"H50"	50	"main"	"Q50"	"own"	"none"	"CNP0000460"	FALSE	NA	0	64	FALSE	FALSE
+"M0008"	"Epi"	"H50"	50	"main"	"Q50"	"own"	"GSE326225"	"ALL"	FALSE	TRUE	0	12	FALSE	FALSE
+"M0009"	"Epi"	"H50"	50	"main"	"Q50"	"own"	"none"	"GSE326225"	FALSE	NA	0	66	FALSE	FALSE
+"M0010"	"Epi"	"H50"	50	"main"	"Q50"	"own"	"HRA003620"	"ALL"	FALSE	TRUE	0	14	FALSE	FALSE
+"M0011"	"Epi"	"H50"	50	"main"	"Q50"	"own"	"none"	"HRA003620"	FALSE	NA	0	64	FALSE	FALSE
+"M0012"	"Epi"	"H50"	50	"main"	"Q50"	"own"	"InhouseData"	"ALL"	FALSE	TRUE	0	22	FALSE	FALSE
+"M0013"	"Epi"	"H50"	50	"main"	"Q50"	"own"	"none"	"InhouseData"	FALSE	NA	0	56	FALSE	FALSE
+"M0014"	"Epi"	"H50"	50	"main"	"Q50"	"own"	"PRJNA662018"	"ALL"	FALSE	TRUE	0	16	FALSE	FALSE
+"M0015"	"Epi"	"H50"	50	"main"	"Q50"	"own"	"none"	"PRJNA662018"	FALSE	NA	0	62	FALSE	FALSE
+"M0016"	"Epi"	"H10"	50	"main"	"Q50"	"own"	"none"	"ALL"	TRUE	NA	0	0	TRUE	FALSE
+"M0017"	"Epi"	"H10"	30	"main"	"Q50"	"own"	"none"	"ALL"	FALSE	NA	6	0	FALSE	FALSE
+"M0018"	"Epi"	"H10"	50	"replacement"	"Q50"	"own"	"none"	"ALL"	FALSE	NA	0	2	FALSE	FALSE
+"M0019"	"Epi"	"H10"	50	"main"	"Q50"	"common"	"none"	"ALL"	FALSE	NA	0	18	FALSE	FALSE
+"M0020"	"Epi"	"H10"	30	"main"	"Q50"	"common"	"none"	"ALL"	FALSE	NA	0	6	FALSE	FALSE
+"M0021"	"Epi"	"H10"	50	"main"	"Q50"	"own"	"CNP0000460"	"ALL"	FALSE	TRUE	0	14	FALSE	FALSE
+"M0022"	"Epi"	"H10"	50	"main"	"Q50"	"own"	"none"	"CNP0000460"	FALSE	NA	0	52	FALSE	FALSE
+"M0023"	"Epi"	"H10"	50	"main"	"Q50"	"own"	"GSE326225"	"ALL"	FALSE	TRUE	0	6	FALSE	FALSE
+"M0024"	"Epi"	"H10"	50	"main"	"Q50"	"own"	"none"	"GSE326225"	FALSE	NA	0	60	FALSE	FALSE
+"M0025"	"Epi"	"H10"	50	"main"	"Q50"	"own"	"HRA003620"	"ALL"	FALSE	TRUE	0	10	FALSE	FALSE
+"M0026"	"Epi"	"H10"	50	"main"	"Q50"	"own"	"none"	"HRA003620"	FALSE	NA	0	56	FALSE	FALSE
+"M0027"	"Epi"	"H10"	50	"main"	"Q50"	"own"	"InhouseData"	"ALL"	FALSE	TRUE	0	20	FALSE	FALSE
+"M0028"	"Epi"	"H10"	50	"main"	"Q50"	"own"	"none"	"InhouseData"	FALSE	NA	0	46	FALSE	FALSE
+"M0029"	"Epi"	"H10"	50	"main"	"Q50"	"own"	"PRJNA662018"	"ALL"	FALSE	TRUE	0	16	FALSE	FALSE
+"M0030"	"Epi"	"H10"	50	"main"	"Q50"	"own"	"none"	"PRJNA662018"	FALSE	NA	0	50	FALSE	FALSE
+"M0031"	"Epi"	"H05"	50	"main"	"Q50"	"own"	"none"	"ALL"	TRUE	NA	0	0	TRUE	FALSE
+"M0032"	"Epi"	"H05"	30	"main"	"Q50"	"own"	"none"	"ALL"	FALSE	NA	12	0	FALSE	FALSE
+"M0033"	"Epi"	"H05"	50	"replacement"	"Q50"	"own"	"none"	"ALL"	FALSE	NA	0	0	TRUE	FALSE
+"M0034"	"Epi"	"H05"	50	"main"	"Q50"	"common"	"none"	"ALL"	FALSE	NA	0	0	TRUE	FALSE
+"M0035"	"Epi"	"H05"	30	"main"	"Q50"	"common"	"none"	"ALL"	FALSE	NA	12	0	FALSE	FALSE
+"M0036"	"Epi"	"H05"	50	"main"	"Q50"	"own"	"CNP0000460"	"ALL"	FALSE	TRUE	0	14	FALSE	FALSE
+"M0037"	"Epi"	"H05"	50	"main"	"Q50"	"own"	"none"	"CNP0000460"	FALSE	NA	0	34	FALSE	FALSE
+"M0038"	"Epi"	"H05"	50	"main"	"Q50"	"own"	"GSE326225"	"ALL"	FALSE	TRUE	0	6	FALSE	FALSE
+"M0039"	"Epi"	"H05"	50	"main"	"Q50"	"own"	"none"	"GSE326225"	FALSE	NA	0	42	FALSE	FALSE
+"M0040"	"Epi"	"H05"	50	"main"	"Q50"	"own"	"HRA003620"	"ALL"	FALSE	TRUE	0	10	FALSE	FALSE
+"M0041"	"Epi"	"H05"	50	"main"	"Q50"	"own"	"none"	"HRA003620"	FALSE	NA	0	38	FALSE	FALSE
+"M0042"	"Epi"	"H05"	50	"main"	"Q50"	"own"	"InhouseData"	"ALL"	FALSE	TRUE	0	4	FALSE	FALSE
+"M0043"	"Epi"	"H05"	50	"main"	"Q50"	"own"	"none"	"InhouseData"	FALSE	NA	0	44	FALSE	FALSE
+"M0044"	"Epi"	"H05"	50	"main"	"Q50"	"own"	"PRJNA662018"	"ALL"	FALSE	TRUE	0	14	FALSE	FALSE
+"M0045"	"Epi"	"H05"	50	"main"	"Q50"	"own"	"none"	"PRJNA662018"	FALSE	NA	0	34	FALSE	FALSE
+"M0046"	"receiver"	"Treg"	50	"main"	"Q50"	"own"	"none"	"ALL"	TRUE	NA	0	0	TRUE	FALSE
+"M0047"	"receiver"	"Treg"	30	"main"	"Q50"	"own"	"none"	"ALL"	FALSE	NA	1	0	FALSE	FALSE
+"M0048"	"receiver"	"Treg"	50	"main"	"Q95"	"own"	"none"	"ALL"	FALSE	NA	0	0	TRUE	TRUE
+"M0049"	"receiver"	"Treg"	50	"replacement"	"Q50"	"own"	"none"	"ALL"	FALSE	NA	1	1	FALSE	FALSE
+"M0050"	"receiver"	"Treg"	50	"main"	"Q50"	"own"	"CNP0000460"	"ALL"	FALSE	TRUE	0	7	FALSE	FALSE
+"M0051"	"receiver"	"Treg"	50	"main"	"Q50"	"own"	"GSE326225"	"ALL"	FALSE	TRUE	0	3	FALSE	FALSE
+"M0052"	"receiver"	"Treg"	50	"main"	"Q50"	"own"	"HRA003620"	"ALL"	FALSE	TRUE	0	6	FALSE	FALSE
+"M0053"	"receiver"	"Treg"	50	"main"	"Q50"	"own"	"InhouseData"	"ALL"	FALSE	TRUE	0	11	FALSE	FALSE
+"M0054"	"receiver"	"Treg"	50	"main"	"Q50"	"own"	"PRJNA662018"	"ALL"	FALSE	TRUE	0	5	FALSE	FALSE
+"M0055"	"receiver"	"Tfh/CXCL13-like"	50	"main"	"Q50"	"own"	"none"	"ALL"	TRUE	NA	0	0	TRUE	FALSE
+"M0056"	"receiver"	"Tfh/CXCL13-like"	30	"main"	"Q50"	"own"	"none"	"ALL"	FALSE	NA	2	0	FALSE	FALSE
+"M0057"	"receiver"	"Tfh/CXCL13-like"	50	"main"	"Q95"	"own"	"none"	"ALL"	FALSE	NA	0	0	TRUE	TRUE
+"M0058"	"receiver"	"Tfh/CXCL13-like"	50	"replacement"	"Q50"	"own"	"none"	"ALL"	FALSE	NA	1	1	FALSE	FALSE
+"M0059"	"receiver"	"Tfh/CXCL13-like"	50	"main"	"Q50"	"own"	"CNP0000460"	"ALL"	FALSE	TRUE	0	3	FALSE	FALSE
+"M0060"	"receiver"	"Tfh/CXCL13-like"	50	"main"	"Q50"	"own"	"GSE326225"	"ALL"	FALSE	TRUE	0	1	FALSE	FALSE
+"M0061"	"receiver"	"Tfh/CXCL13-like"	50	"main"	"Q50"	"own"	"HRA003620"	"ALL"	FALSE	TRUE	0	5	FALSE	FALSE
+"M0062"	"receiver"	"Tfh/CXCL13-like"	50	"main"	"Q50"	"own"	"InhouseData"	"ALL"	FALSE	TRUE	0	10	FALSE	FALSE
+"M0063"	"receiver"	"Tfh/CXCL13-like"	50	"main"	"Q50"	"own"	"PRJNA662018"	"ALL"	FALSE	TRUE	0	4	FALSE	FALSE
+"M0064"	"receiver"	"Arterial EC"	50	"main"	"Q50"	"own"	"none"	"ALL"	TRUE	NA	0	0	TRUE	FALSE
+"M0065"	"receiver"	"Arterial EC"	30	"main"	"Q50"	"own"	"none"	"ALL"	FALSE	NA	1	0	FALSE	FALSE
+"M0066"	"receiver"	"Arterial EC"	50	"main"	"Q95"	"own"	"none"	"ALL"	FALSE	NA	0	0	TRUE	TRUE
+"M0067"	"receiver"	"Arterial EC"	50	"replacement"	"Q50"	"own"	"none"	"ALL"	FALSE	NA	0	0	TRUE	FALSE
+"M0068"	"receiver"	"Arterial EC"	50	"main"	"Q50"	"own"	"CNP0000460"	"ALL"	FALSE	FALSE	0	0	TRUE	FALSE
+"M0069"	"receiver"	"Arterial EC"	50	"main"	"Q50"	"own"	"GSE326225"	"ALL"	FALSE	FALSE	0	0	TRUE	FALSE
+"M0070"	"receiver"	"Arterial EC"	50	"main"	"Q50"	"own"	"HRA003620"	"ALL"	FALSE	FALSE	0	0	TRUE	FALSE
+"M0071"	"receiver"	"Arterial EC"	50	"main"	"Q50"	"own"	"InhouseData"	"ALL"	FALSE	FALSE	0	0	TRUE	FALSE
+"M0072"	"receiver"	"Arterial EC"	50	"main"	"Q50"	"own"	"PRJNA662018"	"ALL"	FALSE	TRUE	NA	NA	NA	FALSE
+"M0073"	"receiver"	"Capillary EC"	50	"main"	"Q50"	"own"	"none"	"ALL"	TRUE	NA	0	0	TRUE	FALSE
+"M0074"	"receiver"	"Capillary EC"	30	"main"	"Q50"	"own"	"none"	"ALL"	FALSE	NA	2	0	FALSE	FALSE
+"M0075"	"receiver"	"Capillary EC"	50	"main"	"Q95"	"own"	"none"	"ALL"	FALSE	NA	0	0	TRUE	TRUE
+"M0076"	"receiver"	"Capillary EC"	50	"replacement"	"Q50"	"own"	"none"	"ALL"	FALSE	NA	0	0	TRUE	FALSE
+"M0077"	"receiver"	"Capillary EC"	50	"main"	"Q50"	"own"	"CNP0000460"	"ALL"	FALSE	TRUE	0	3	FALSE	FALSE
+"M0078"	"receiver"	"Capillary EC"	50	"main"	"Q50"	"own"	"GSE326225"	"ALL"	FALSE	TRUE	0	1	FALSE	FALSE
+"M0079"	"receiver"	"Capillary EC"	50	"main"	"Q50"	"own"	"HRA003620"	"ALL"	FALSE	FALSE	0	0	TRUE	FALSE
+"M0080"	"receiver"	"Capillary EC"	50	"main"	"Q50"	"own"	"InhouseData"	"ALL"	FALSE	TRUE	0	1	FALSE	FALSE
+"M0081"	"receiver"	"Capillary EC"	50	"main"	"Q50"	"own"	"PRJNA662018"	"ALL"	FALSE	TRUE	0	7	FALSE	FALSE

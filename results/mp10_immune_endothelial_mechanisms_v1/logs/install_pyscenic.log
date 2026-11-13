@@ -1,0 +1,220 @@
+Looking in indexes: https://mirrors.aliyun.com/pypi/simple/, https://pypi.mirrors.ustc.edu.cn/simple/
+Collecting pyscenic==0.12.1
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/5c/e3/6a0eaf46a897da829c896f0a034fce82133fce72f95d314bea81287c4279/pyscenic-0.12.1-py3-none-any.whl (7.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 4.5 MB/s eta 0:00:00
+Collecting numpy<1.24
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/e4/f3/679b3a042a127de0d7c84874913c3e23bb84646eb3bc6ecab3f8c872edc9/numpy-1.23.5-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 17.1/17.1 MB 7.8 MB/s eta 0:00:00
+Collecting pandas<2
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/49/e2/79e46612dc25ebc7603dc11c560baa7266c90f9e48537ecf1a02a0dd6bff/pandas-1.5.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.1/12.1 MB 13.4 MB/s eta 0:00:00
+Collecting dask[dataframe,distributed]==2023.3.2
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/c9/7b/2994fdf6e5bf66417caf5fe57c5a453fe54ec4f686c633e8216de7c50a20/dask-2023.3.2-py3-none-any.whl (1.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 3.4 MB/s eta 0:00:00
+Requirement already satisfied: setuptools in ./mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages (from pyscenic==0.12.1) (79.0.1)
+Collecting boltons
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/d2/ac/1f8e4f4855e382a67392ca3bba329cb93aba1e3039289c52a86bf337f7a2/boltons-26.2.0-py3-none-any.whl (199 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 199.5/199.5 kB 35.4 MB/s eta 0:00:00
+Collecting aiohttp
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/5d/38/01f5fc732d5373d6c099db0343279cd4e6607287d336bab6ff6ae9085a0d/aiohttp-3.14.5-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 64.4 MB/s eta 0:00:00
+Collecting tqdm
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/a7/03/921a3d3c75785aca9ebfbfcabfbc3a1be12e2ab5265deb026d55a5a3f83e/tqdm-4.70.1-py3-none-any.whl (80 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.2/80.2 kB 28.4 MB/s eta 0:00:00
+Collecting llvmlite
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/36/05/e24c01d88f671081ebf4ecfeee61b10ec7e2b9e5ab2c544ce6b57143420b/llvmlite-0.50.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (59.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.7/59.7 MB 10.5 MB/s eta 0:00:00
+Collecting multiprocessing-on-dill
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/86/4d/4b135e2e5cd0194eb29f2ed36e9a77a07596787a9a8ac2279bd4445398f2/multiprocessing_on_dill-3.5.0a4.tar.gz (53 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.3/53.3 kB 13.4 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting cytoolz
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/54/56/3efe7e0fcec39dc8436f676b1adeb63680bffe70772952196a8fdb7c4121/cytoolz-1.2.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 60.0 MB/s eta 0:00:00
+Collecting umap-learn
+  Downloading https://mirrors.aliyun.com/pypi/packages/c8/8b/1f0f17e6515c70940974e5ca962fffdc2ea9da0093344611f9841145e6cb/umap_learn-0.6.0-py3-none-any.whl (136 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 137.0/137.0 kB 628.6 kB/s eta 0:00:00
+Collecting frozendict
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/ae/90/820372922efa381c45f7eb695457f831759459ec86430ab69073262b8637/frozendict-2.5.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (123 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 123.4/123.4 kB 36.1 MB/s eta 0:00:00
+Collecting requests
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/a0/f4/c67b0b3f1b9245e8d266f0f112c500d50e5b4e83cb6f3b71b6528104182a/requests-2.34.2-py3-none-any.whl (73 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.1/73.1 kB 29.2 MB/s eta 0:00:00
+Collecting ctxcore>=0.2.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/57/be/b60e62d10d80c80c5492739d6f2833ca2973bbc4088fcecf7053b5719da7/ctxcore-0.2.0-py3-none-any.whl (5.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.8/5.8 MB 9.2 MB/s eta 0:00:00
+Collecting networkx
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/b9/54/dd730b32ea14ea797530a4479b2ed46a6fb250f682a9cfb997e968bf0261/networkx-3.4.2-py3-none-any.whl (1.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 48.1 MB/s eta 0:00:00
+Collecting numba>=0.51.2
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/21/3e/c504316120ed3f75b3b81708500a788190f5860e4d98639f09701a8b7107/numba-0.68.1-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (3.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 59.7 MB/s eta 0:00:00
+Collecting attrs
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/64/b4/17d4b0b2a2dc85a6df63d1157e028ed19f90d4cd97c36717afef2bc2f395/attrs-26.1.0-py3-none-any.whl (67 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.5/67.5 kB 18.4 MB/s eta 0:00:00
+Collecting numexpr
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/34/d4/d1a410901c620f7a6a3c5c2b1fc9dab22170be05a89d2c02ae699e27bd3f/numexpr-2.14.1-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (440 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 440.2/440.2 kB 69.3 MB/s eta 0:00:00
+Collecting cloudpickle
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/88/39/799be3f2f0f38cc727ee3b4f1445fe6d5e4133064ec2e4115069418a5bb6/cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+Collecting loompy
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/c0/41/6d499b9b63406b204dd551002712c088abf0e130686721f403aa105736ba/loompy-3.0.8.tar.gz (49 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.6/49.6 kB 14.2 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting fsspec
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/6c/c0/a98505f18594f1bce828bb159cec0fcf9860562f1a2c85913409fc8f3d9e/fsspec-2026.9.0-py3-none-any.whl (221 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 221.7/221.7 kB 58.7 MB/s eta 0:00:00
+Collecting distributed
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/28/d4/017e2d39d797eaa38a52b4459c8bea875d5e0ada335a62aafe98193041a6/distributed-2026.8.0-py3-none-any.whl (1.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 75.2 MB/s eta 0:00:00
+Collecting scikit-learn>=0.22.2
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/58/0e/8c2a03d518fb6bd0b6b0d4b114c63d5f1db01ff0f9925d8eb10960d01c01/scikit_learn-1.7.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 6.7 MB/s eta 0:00:00
+Collecting scipy
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/8e/6d/41991e503e51fc1134502694c5fa7a1671501a17ffa12716a4a9151af3df/scipy-1.15.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (37.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 37.7/37.7 MB 41.0 MB/s eta 0:00:00
+Collecting interlap
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/72/84/9f71369fc868dc963ddf51d1bfd8853a9793a37a21c9081a433f6e81d56a/interlap-0.2.7.tar.gz (6.1 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting pyyaml
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/7a/1e/7acc4f0e74c4b3d9531e24739e0ab832a5edf40e64fbae1a9c01941cabd7/pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (770 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 770.3/770.3 kB 57.4 MB/s eta 0:00:00
+Collecting dask
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/f8/3a/4fc99e788bcfa1b3b3f21abf57da45898d807d007e7f6fd1c7300904eb70/dask-2026.8.0-py3-none-any.whl (1.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 60.2 MB/s eta 0:00:00
+Collecting arboreto>=0.1.6
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/91/26/8c4a9191c2d31c4f30aecd4382bcc209b67629b827955fb164ce03c09e08/arboreto-0.1.6-py2.py3-none-any.whl (15 kB)
+Collecting click>=7.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/31/7d/164b7ffc8624fe9efb4221bf9af485d5c1e41b9ae118045d2b6dc5457d8b/click-8.5.1-py3-none-any.whl (126 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 126.2/126.2 kB 43.4 MB/s eta 0:00:00
+Collecting partd>=1.2.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/71/e7/40fb618334dcdf7c5a316c0e7343c5cd82d3d866edc100d98e29bc945ecd/partd-1.4.2-py3-none-any.whl (18 kB)
+Collecting importlib-metadata>=4.13.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/b3/55/ecca97ae19075f1fac62def77731e7f535e6c1fb8f92ff08160c5e6dade8/importlib_metadata-9.0.1-py3-none-any.whl (27 kB)
+Collecting toolz>=0.8.2
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/db/17/4c8beb6c8c4176c6bf143bfd7e1e4dd6719b00ced90738c7ac471b71c1df/toolz-1.2.0-py3-none-any.whl (60 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.8/60.8 kB 12.6 MB/s eta 0:00:00
+Collecting packaging>=20.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/63/34/ba1c580383c9eada3711951fef0795c80b829a078d72188184bcab9dd527/packaging-26.3-py3-none-any.whl (129 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 130.0/130.0 kB 39.6 MB/s eta 0:00:00
+Collecting distributed
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/b4/a8/e9f19d80467b731c7ba592736846fc114342166d75d449985e1128de1ef2/distributed-2023.3.2-py3-none-any.whl (956 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 956.9/956.9 kB 21.9 MB/s eta 0:00:00
+Collecting jinja2>=2.10.3
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/62/a1/3d680cbfd5f4b8f15abc1d571870c5fc3e594bb582bc3b64ea099db13e56/jinja2-3.1.6-py3-none-any.whl (134 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 36.1 MB/s eta 0:00:00
+Collecting tornado>=6.0.3
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/60/33/df6d7d04854a58619f8349a51e3edb138324130a7562b0bb21f115bb940f/tornado-6.5.10-cp39-abi3-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (467 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 467.1/467.1 kB 71.9 MB/s eta 0:00:00
+Collecting psutil>=5.7.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/b5/70/5d8df3b09e25bce090399cf48e452d25c935ab72dad19406c77f4e828045/psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.6/155.6 kB 49.2 MB/s eta 0:00:00
+Collecting tblib>=1.6.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/02/be/5d2d47b1fb58943194fb59dcf222f7c4e35122ec0ffe8c36e18b5d728f0b/tblib-3.2.2-py3-none-any.whl (12 kB)
+Collecting msgpack>=1.0.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/a8/f3/d215252efd2befcac420b01889bb17a816194a2c59501a15f7b1136f6591/msgpack-1.2.4-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (461 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 461.8/461.8 kB 63.2 MB/s eta 0:00:00
+Collecting zict>=2.1.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/80/ab/11a76c1e2126084fde2639514f24e6111b789b0bfa4fc6264a8975c7e1f1/zict-3.0.0-py2.py3-none-any.whl (43 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.3/43.3 kB 11.0 MB/s eta 0:00:00
+Collecting locket>=1.0.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/db/bc/83e112abc66cd466c6b83f99118035867cecd41802f8d044638aa78a106e/locket-1.0.0-py2.py3-none-any.whl (4.4 kB)
+Collecting sortedcontainers>=2.0.5
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/32/46/9cb0e58b2deb7f82b84065f37f3bffeb12413f947f9388e4cac22c4621ce/sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+Collecting urllib3>=1.24.3
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/92/9d/c4e665119135114480843e7ab388fa94d8480650450e6f8e26b70d323a4c/urllib3-2.8.0-py3-none-any.whl (135 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 135.7/135.7 kB 48.6 MB/s eta 0:00:00
+Collecting pytz>=2020.1
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/b6/25/564f3fc5b70c1398d706c51f2b1470d0ea0b1b2f96fee67877b6f5bdf3b6/pytz-2026.6-py2.py3-none-any.whl (506 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 506.3/506.3 kB 67.2 MB/s eta 0:00:00
+Collecting python-dateutil>=2.8.1
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/5a/17/cebee01d1c0c1441174cf0456ddc91b280d79acb65340c05e41d77866ee8/python_dateutil-3.0.0-py2.py3-none-any.whl (94 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 94.7/94.7 kB 24.6 MB/s eta 0:00:00
+Collecting pyarrow>=8.0.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/57/5c/f8fc0eb2de03464a557d5a4d0c15e972d73362414696618833b771f7eddd/pyarrow-25.0.1-cp310-cp310-manylinux_2_28_x86_64.whl (50.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 MB 9.5 MB/s eta 0:00:00
+Collecting zipp>=3.20
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/b8/44/7bd2007260da11cccca29ba2d4c345f1287aa663db38ee7cefeabf6386a5/zipp-4.1.2-py3-none-any.whl (10 kB)
+Collecting tzdata
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/0a/66/9a06c2227fedfd4919f0eaaa8b94377d9730882a7e4f95823c9a331ab5e1/tzdata-2026.6-py2.py3-none-any.whl (348 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 348.2/348.2 kB 50.5 MB/s eta 0:00:00
+Collecting six>=1.6
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl (11 kB)
+Collecting threadpoolctl>=3.1.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/54/1b/831f2de4840a25db1dd7b1afea433ccafe6bb10aca07e13264f2079462d0/threadpoolctl-3.8.0-py3-none-any.whl (32 kB)
+Collecting joblib>=1.2.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/18/53/84099323c2ec4be98d935f63c033ac4151ee83836ca1050ede3b3aadf155/joblib-1.6.0-py3-none-any.whl (306 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 306.1/306.1 kB 70.0 MB/s eta 0:00:00
+Collecting aiohappyeyeballs>=2.5.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/71/43/1947f06babed6b3f1d7f38b0c767f52df66bfb2bc10b468c4a7de9eceff2/aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)
+Collecting typing_extensions>=4.4
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/49/d3/b8441a820a491ddfc024b0b0cf0393375b75ea13866d9c66727e54c2fc80/typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.6/45.6 kB 15.4 MB/s eta 0:00:00
+Collecting yarl<2.0,>=1.25.1
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/28/b9/7818ac6dec7fbcd16be2d19495807c01e2c38834e57d41c63356a75e786b/yarl-1.25.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (118 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 37.1 MB/s eta 0:00:00
+Collecting async-timeout<6.0,>=4.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/fe/ba/e2081de779ca30d473f21f5b30e0e737c438205440784c7dfc81efc2b029/async_timeout-5.0.1-py3-none-any.whl (6.2 kB)
+Collecting propcache>=0.2.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/f0/51/5adee15e12a7e314cece4543fbf295b0fe1b504dc78b32dff4c8eb1e29b0/propcache-0.5.4-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (224 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.3/224.3 kB 65.3 MB/s eta 0:00:00
+Collecting multidict<8.0,>=4.5
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/5a/9c/598d765e98aa02ff7204b6f11cf790e5840f5e8252d7b1d955ed0043bb94/multidict-7.1.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (464 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 464.4/464.4 kB 51.6 MB/s eta 0:00:00
+Collecting aiosignal>=1.4.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/fb/76/641ae371508676492379f16e2fa48f4e2c11741bd63c48be4b12a6b09cba/aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+Collecting frozenlist>=1.1.1
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/5d/ed/c7895fd2fde7f3ee70d248175f9b6cdf792fb741ab92dc59cd9ef3bd241b/frozenlist-1.8.0-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (219 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 219.5/219.5 kB 59.4 MB/s eta 0:00:00
+Collecting h5py
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/cb/92/a8851d936547efe30cc0ce5245feac01f3ec6171f7899bc3f775c72030b3/h5py-3.16.0-cp310-cp310-manylinux_2_28_x86_64.whl (5.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.1/5.1 MB 14.0 MB/s eta 0:00:00
+Collecting numpy-groupies
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/80/89/d237eec45a244638be6fee00fb851779596ff0e94d1983d22a9c5d412f33/numpy_groupies-0.14.3-py3-none-any.whl (178 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 178.0/178.0 kB 30.6 MB/s eta 0:00:00
+Collecting dill
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/1e/77/dc8c558f7593132cf8fefec57c4f60c83b16941c574ac5f619abb3ae7933/dill-0.4.1-py3-none-any.whl (120 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 120.0/120.0 kB 24.9 MB/s eta 0:00:00
+Collecting certifi>=2023.5.7
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/32/d1/a3652fe2c19134d0d15922177821d863cbd7e842d53a21bbe7e8e3a1b5ac/certifi-2026.10.23-py3-none-any.whl (135 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 135.1/135.1 kB 42.8 MB/s eta 0:00:00
+Collecting charset_normalizer<4,>=2
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/c4/9f/9f52d2886d52645987d603425482c63c5045a3005db1354a7097e5ed1ae9/charset_normalizer-3.5.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (271 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 271.1/271.1 kB 58.1 MB/s eta 0:00:00
+Collecting idna<4,>=2.5
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/58/a2/bb081bab032533a855d44de1d56f8e8426114ff1ba5d1f07a438a0a654f8/idna-3.20-py3-none-any.whl (69 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.6/69.6 kB 20.2 MB/s eta 0:00:00
+Collecting umap-learn
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/1b/98/f63318ccbe75c810011fe9233884c5d348d94d90005de1b79e5f93bef9c0/umap_learn-0.5.12-py3-none-any.whl (91 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.8/91.8 kB 32.4 MB/s eta 0:00:00
+Collecting pynndescent>=0.5
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/e1/63/fe905ec765fcb92a8a235e5a77ba591f620316c192a960dda1ce07d028eb/pynndescent-0.7.0-py3-none-any.whl (112 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.6/112.6 kB 26.0 MB/s eta 0:00:00
+Collecting MarkupSafe>=2.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/00/26/c4708ed3b0f08e8e6d7cbce3314ac130cb5352d1f62951b6fef7878f2b1e/markupsafe-3.0.4-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (20 kB)
+Collecting bokeh<3,>=2.4.2
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/15/06/706a9c43436cd0c3e2f4b94e93ae837e74965e59565c596b727974a74169/bokeh-2.4.3-py3-none-any.whl (18.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.5/18.5 MB 13.0 MB/s eta 0:00:00
+Collecting lz4>=4.3.2
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/6d/34/7be9b09015e18510a09b8d76c304d505a7cbc66b775ec0b8f61442316818/lz4-4.4.5-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 78.2 MB/s eta 0:00:00
+Collecting pillow>=7.1.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/4e/89/36f4cd76cf4baf05c50ababb976249153f18c959171c7f6ba09a6f217260/pillow-12.3.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 69.6 MB/s eta 0:00:00
+Installing collected packages: sortedcontainers, pytz, interlap, zipp, zict, urllib3, tzdata, typing_extensions, tqdm, tornado, toolz, threadpoolctl, tblib, six, pyyaml, pyarrow, psutil, propcache, pillow, packaging, numpy, networkx, msgpack, MarkupSafe, lz4, locket, llvmlite, idna, fsspec, frozenlist, frozendict, dill, cloudpickle, click, charset_normalizer, certifi, boltons, attrs, async-timeout, aiohappyeyeballs, scipy, requests, python-dateutil, partd, numpy-groupies, numexpr, numba, multiprocessing-on-dill, multidict, joblib, jinja2, importlib-metadata, h5py, cytoolz, aiosignal, yarl, scikit-learn, pandas, loompy, dask, bokeh, pynndescent, distributed, ctxcore, aiohttp, umap-learn, arboreto, pyscenic
+  DEPRECATION: interlap is being installed using the legacy 'setup.py install' method, because it does not have a 'pyproject.toml' and the 'wheel' package is not installed. pip 23.1 will enforce this behaviour change. A possible replacement is to enable the '--use-pep517' option. Discussion can be found at https://github.com/pypa/pip/issues/8559
+  Running setup.py install for interlap: started
+  Running setup.py install for interlap: finished with status 'done'
+  DEPRECATION: multiprocessing-on-dill is being installed using the legacy 'setup.py install' method, because it does not have a 'pyproject.toml' and the 'wheel' package is not installed. pip 23.1 will enforce this behaviour change. A possible replacement is to enable the '--use-pep517' option. Discussion can be found at https://github.com/pypa/pip/issues/8559
+  Running setup.py install for multiprocessing-on-dill: started
+  Running setup.py install for multiprocessing-on-dill: finished with status 'done'
+  DEPRECATION: loompy is being installed using the legacy 'setup.py install' method, because it does not have a 'pyproject.toml' and the 'wheel' package is not installed. pip 23.1 will enforce this behaviour change. A possible replacement is to enable the '--use-pep517' option. Discussion can be found at https://github.com/pypa/pip/issues/8559
+  Running setup.py install for loompy: started
+  Running setup.py install for loompy: finished with status 'done'
+Successfully installed MarkupSafe-3.0.4 aiohappyeyeballs-2.7.1 aiohttp-3.14.5 aiosignal-1.4.0 arboreto-0.1.6 async-timeout-5.0.1 attrs-26.1.0 bokeh-2.4.3 boltons-26.2.0 certifi-2026.10.23 charset_normalizer-3.5.2 click-8.5.1 cloudpickle-3.1.2 ctxcore-0.2.0 cytoolz-1.2.0 dask-2023.3.2 dill-0.4.1 distributed-2023.3.2 frozendict-2.5.1 frozenlist-1.8.0 fsspec-2026.9.0 h5py-3.16.0 idna-3.20 importlib-metadata-9.0.1 interlap-0.2.7 jinja2-3.1.6 joblib-1.6.0 llvmlite-0.50.0 locket-1.0.0 loompy-3.0.8 lz4-4.4.5 msgpack-1.2.4 multidict-7.1.0 multiprocessing-on-dill-3.5.0a4 networkx-3.4.2 numba-0.68.1 numexpr-2.14.1 numpy-1.23.5 numpy-groupies-0.14.3 packaging-26.3 pandas-1.5.3 partd-1.4.2 pillow-12.3.0 propcache-0.5.4 psutil-7.2.2 pyarrow-25.0.1 pynndescent-0.7.0 pyscenic-0.12.1 python-dateutil-3.0.0 pytz-2026.6 pyyaml-6.0.3 requests-2.34.2 scikit-learn-1.7.2 scipy-1.15.3 six-1.17.0 sortedcontainers-2.4.0 tblib-3.2.2 threadpoolctl-3.8.0 toolz-1.2.0 tornado-6.5.10 tqdm-4.70.1 typing_extensions-4.16.0 tzdata-2026.6 umap-learn-0.5.12 urllib3-2.8.0 yarl-1.25.1 zict-3.0.0 zipp-4.1.2
+
+[notice] A new release of pip is available: 23.0.1 -> 26.3
+[notice] To update, run: /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/bin/python -m pip install --upgrade pip

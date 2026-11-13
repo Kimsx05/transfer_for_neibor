@@ -1,0 +1,8 @@
+source('mp10_immune_endothelial_mechanisms_v1/scripts/common.R')
+a<-rd('analysis_cell_metadata.tsv.gz');m<-rd('pseudobulk_membership.tsv.gz');md<-rd('source_cell_metadata.tsv.gz');genes<-rd('feature_universe.tsv.gz')
+z<-merge(m,a[,.(barcode,nCount_RNA,nFeature_RNA,percent.mt,subtype_v2)],by='barcode',allow.cartesian=TRUE)[,.(median_nCount=as.numeric(median(nCount_RNA)),median_nFeature=as.numeric(median(nFeature_RNA)),median_mt=as.numeric(median(percent.mt)),n_subtype_annotated=sum(!is.na(subtype_v2)),subtypes=paste(sort(unique(na.omit(subtype_v2))),collapse=';')),by=profile_id];put(z,'profile_quality.tsv')
+put(a[,.(n_cells=.N),by=.(sample_uid,dataset,analysis_major_c2l_final,analysis_celltype_c2l_final)],'full_celltype_counts.tsv')
+files<-c(objpath,file.path(BASE,'tables/analysis_cells.tsv.gz'),file.path(BASE,'tables/sample_metadata.tsv'),file.path(HDEF,'tables/specimen_quantiles_coverage.tsv'),file.path(P,'neighborhood_mp10_calibration_v5/01_score_fidelity/top20.txt'))
+put(rbindlist(lapply(files,function(f){fi<-file.info(f);data.table(path=normalizePath(f),bytes=fi$size,mtime=as.character(fi$mtime),sha256=digest(f,file=TRUE,algo='sha256'))})),'input_manifest.tsv')
+put(data.table(item=c('original_metadata_barcodes','genes','frozen_scores','pseudobulk_membership','config'),sha256=c(digest(md$barcode,algo='sha256'),digest(genes$gene,algo='sha256'),digest(a[analysis_major_c2l_final=='Epithelial',.(barcode,MP10_cell)],algo='sha256'),digest(m,algo='sha256'),digest(file.path(B,'config/run_config.json'),file=TRUE,algo='sha256'))),'input_content_hashes.tsv')
+writeLines(capture.output(sessionInfo()),file.path(B,'logs/sessionInfo_pseudobulk.txt'));cat('AUDIT COMPLETE\n')

@@ -1,0 +1,13 @@
+Warning: replacing previous import ‘e1071::element’ by ‘ggplot2::element’ when loading ‘nichenetr’
+   validation_case n_targets         metric n_ligands max_absolute_error   pass
+            <char>     <int>         <char>     <int>              <num> <lgcl>
+1:   sparse_target         2          auroc        23                  0   TRUE
+2:   sparse_target         2           aupr        23                  0   TRUE
+3:   sparse_target         2 aupr_corrected        23                  0   TRUE
+4:   sparse_target         2        pearson        23                  0   TRUE
+   native_seconds fast_seconds
+            <num>        <num>
+1:          2.028         0.52
+2:          2.028         0.52
+3:          2.028         0.52
+4:          2.028         0.52

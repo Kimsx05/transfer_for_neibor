@@ -1,0 +1,40 @@
+Registered S3 method overwritten by 'pROC':
+  method   from            
+  plot.roc spatstat.explore
+Warning: replacing previous import ‘e1071::element’ by ‘ggplot2::element’ when loading ‘nichenetr’
+    model_id       mask target_direction         metric n_ligands
+      <char>     <char>           <char>         <char>     <int>
+ 1:    M0001       Full         positive          auroc       671
+ 2:    M0001       Full         positive           aupr       671
+ 3:    M0001       Full         positive aupr_corrected       671
+ 4:    M0001       Full         positive        pearson       671
+ 5:    M0001       Full         negative          auroc       671
+ 6:    M0001       Full         negative           aupr       671
+ 7:    M0001       Full         negative aupr_corrected       671
+ 8:    M0001       Full         negative        pearson       671
+ 9:    M0001 M20-masked         positive          auroc       671
+10:    M0001 M20-masked         positive           aupr       671
+11:    M0001 M20-masked         positive aupr_corrected       671
+12:    M0001 M20-masked         positive        pearson       671
+13:    M0003       Full            union          auroc       672
+14:    M0003       Full            union           aupr       672
+15:    M0003       Full            union aupr_corrected       672
+16:    M0003       Full            union        pearson       672
+    max_absolute_error   pass elapsed_seconds
+                 <num> <lgcl>           <num>
+ 1:       5.551115e-16   TRUE          28.050
+ 2:       5.273559e-16   TRUE          28.050
+ 3:       5.551115e-17   TRUE          28.050
+ 4:       4.996004e-16   TRUE          28.050
+ 5:       5.551115e-16   TRUE          20.597
+ 6:       5.204170e-17   TRUE          20.597
+ 7:       4.857226e-17   TRUE          20.597
+ 8:       5.204170e-17   TRUE          20.597
+ 9:       5.551115e-16   TRUE          20.282
+10:       5.273559e-16   TRUE          20.282
+11:       5.551115e-17   TRUE          20.282
+12:       5.273559e-16   TRUE          20.282
+13:       5.551115e-16   TRUE          20.672
+14:       4.996004e-16   TRUE          20.672
+15:       5.551115e-17   TRUE          20.672
+16:       5.551115e-16   TRUE          20.672

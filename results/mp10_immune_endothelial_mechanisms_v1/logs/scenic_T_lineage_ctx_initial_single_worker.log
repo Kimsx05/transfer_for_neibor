@@ -1,0 +1,862 @@
+
+2026-11-13 09:34:56,097 - pyscenic.utils - INFO - Calculating Pearson correlations.
+
+2026-11-13 09:34:56,276 - pyscenic.utils - WARNING - Note on correlation calculation: the default behaviour for calculating the correlations has changed after pySCENIC verion 0.9.16. Previously, the default was to calculate the correlation between a TF and target gene using only cells with non-zero expression values (mask_dropouts=True). The current default is now to use all cells to match the behavior of the R verision of SCENIC. The original settings can be retained by setting 'rho_mask_dropouts=True' in the modules_from_adjacencies function, or '--mask_dropouts' from the CLI.
+	Dropout masking is currently set to [False].
+
+2026-11-13 09:35:24,062 - pyscenic.utils - INFO - Creating modules.
+T_lineage modules 6650
+
+2026-11-13 09:36:52,847 - pyscenic.prune - INFO - Using 1 workers.
+
+2026-11-13 09:36:52,847 - pyscenic.prune - INFO - Using 1 workers.
+
+2026-11-13 09:37:12,301 - pyscenic.prune - INFO - Worker hg38_refseq-r80_mc9nr_10kb(1): database loaded in memory.
+
+2026-11-13 09:37:12,301 - pyscenic.prune - INFO - Worker hg38_refseq-r80_mc9nr_10kb(1): database loaded in memory.
+
+2026-11-13 09:37:13,034 - pyscenic.prune - INFO - Worker hg38_refseq-r80_mc9nr_10kb(1): motif annotations loaded in memory.
+
+2026-11-13 09:37:13,034 - pyscenic.prune - INFO - Worker hg38_refseq-r80_mc9nr_10kb(1): motif annotations loaded in memory.
+
+2026-11-13 09:37:17,999 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ABL1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:37:18,182 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ADARB1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:37:18,294 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ADNP2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:37:18,605 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for AGMAT could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:37:18,744 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for AHR could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:37:18,799 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for AHRR could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:37:19,113 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for APEX2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:37:19,270 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ARID3A could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:37:19,324 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ARID3B could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:37:19,372 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ARID5A could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:37:30,156 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ARNTL could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:37:30,219 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ARNTL2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:37:30,267 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ASCC1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:37:30,316 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ASH2L could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:37:30,368 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ASPSCR1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:37:30,415 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ATF1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:37:30,474 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ATF2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:38:35,911 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ATF4 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:38:35,960 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ATF5 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:38:48,107 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ATF6B could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:39:31,365 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for BANP could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:39:40,633 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for BATF3 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:42:49,478 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for CBFB could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:42:49,600 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for CBX7 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:43:00,941 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for CERS4 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:43:25,728 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for CPTP could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:44:34,774 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for CREB3 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:44:54,491 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for CREB3L4 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:44:54,545 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for CREBL2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:45:10,471 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for CRTC2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:45:10,653 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for CTBP1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:45:34,065 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for DBP could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:45:43,636 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for DDX43 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:45:43,684 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for DEAF1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:45:43,736 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for DGCR8 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:45:44,211 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for DNTTIP1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:45:44,374 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for DUS3L could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:46:05,172 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for E2F4 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:46:25,698 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for EGR1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:46:46,605 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for EGR3 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:46:46,865 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ELF2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:47:19,404 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ELK3 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:47:53,342 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for EPAS1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:48:02,297 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ERF could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:48:02,352 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ESR1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:48:02,395 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ESR2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:48:25,810 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ETS2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:48:37,091 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ETV3 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:48:48,939 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for FAAP24 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:48:49,134 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for FEZ1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:48:49,316 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for FIZ1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:49:30,893 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for FOSL1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:49:41,895 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for FOXA1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:50:15,363 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for FOXK1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:50:15,475 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for FOXM1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:50:36,460 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for FOXO4 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:51:08,447 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for GAR1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:51:18,472 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for GATA2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:51:18,756 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for GLYCTK could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:51:30,021 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for GOT1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:51:30,131 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for GPANK1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:51:46,247 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for GRHL2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:51:46,303 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for GRHL3 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:51:46,544 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for GTF2B could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:52:00,899 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for GTF2IRD1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:52:12,133 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for GTPBP1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:52:12,254 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for GZF1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:52:12,380 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for H1FX could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:52:24,083 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for HCFC2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:52:33,213 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for HDAC2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:52:33,472 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for HDX could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:52:33,575 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for HES4 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:52:33,695 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for HHAT could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:52:42,623 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for HIC1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:52:42,940 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for HIST1H2BN could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:52:54,316 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for HLCS could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:52:54,548 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for HMG20A could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:52:55,582 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for HOXB3 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:52:55,851 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for HSF1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:53:05,252 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for HSF2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:53:05,315 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for HSPA1L could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:53:22,933 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for IKZF5 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:53:23,166 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ING3 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:53:23,216 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ING4 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:53:30,483 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for IRF1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:53:53,042 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for IRF5 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:54:23,234 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for IRF8 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:55:39,860 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for KDM7A could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:55:39,971 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for KLF10 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:55:49,227 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for KLF11 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:55:49,358 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for KLF12 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:55:58,648 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for KLF16 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:56:25,891 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for KLF5 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:56:36,859 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for KLRG1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:56:37,197 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for LAS1L could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:56:48,515 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for LUZP1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:56:48,571 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for LYL1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:57:07,502 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for MAFF could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:57:21,479 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for MAFG could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:57:29,922 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for MAGEF1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:57:30,040 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for MAP4K2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:57:51,790 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for MBD1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:57:52,110 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for MBTPS2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:57:52,401 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for MECP2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:57:59,507 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for MIEF1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:57:59,556 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for MIOS could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:57:59,787 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for MORN1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:57:59,845 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for MRPL1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:58:13,639 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for MTERF1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:58:23,282 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for MXI1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:58:31,584 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for MYC could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:58:31,733 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for MYPOP could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:58:32,146 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for NCBP2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:58:56,427 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for NFE2L3 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:58:56,482 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for NFIA could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:58:56,545 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for NFIB could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:59:22,013 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for NMRAL1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:59:22,133 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for NOC2L could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:59:22,358 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for NR1D1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:59:26,409 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for NR2C1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:59:48,105 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for NR3C2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:59:48,424 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for NR6A1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:59:48,534 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for NRL could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:59:48,590 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for NUAK2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:59:48,648 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for NUCB1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:59:48,934 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for OVOL1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:59:48,991 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for OVOL2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:59:49,210 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for PATZ1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:59:52,547 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for PAX8 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 09:59:52,709 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for PBX2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:00:05,492 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for PHLDA2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:00:05,537 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for PHTF1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:00:05,925 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for PLAG1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:00:06,176 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for POLD2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:00:24,845 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for POU2AF1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:00:25,079 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for POU6F1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:00:28,803 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for PPARA could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:00:28,854 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for PPARD could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:00:31,606 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for PPARG could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:00:31,730 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for PPP2R3B could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:00:31,834 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for PQBP1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:00:36,526 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for PRDM11 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:00:36,579 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for PRDM15 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:00:36,690 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for PRDM5 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:00:37,616 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for RAB18 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:00:49,924 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for RARG could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:00:49,979 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for RB1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:00:54,306 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for RBBP5 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:00:54,364 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for RBBP9 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:01:04,409 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for RCOR1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:01:40,935 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for RFX1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:01:42,751 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for RFX2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:01:42,811 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for RFX3 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:01:46,388 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for RFX5 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:01:46,660 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for RFXAP could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:01:46,952 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for RNF138 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:01:57,921 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for RORC could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:01:57,998 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for RPL35 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:01:58,082 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for RPL6 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:01:58,138 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for RPP25 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:01:58,215 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for RPS10 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:01:58,297 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for RPS4X could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:01:58,362 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for RPS6KA5 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:01:58,421 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for RREB1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:01:58,470 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for RTL8A could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:01:58,528 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for RUFY3 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:02:15,117 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for SEMA4A could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:02:29,168 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for SIRT6 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:02:29,218 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for SMAD1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:02:29,511 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for SMAD7 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:02:50,654 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for SMARCC2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:02:50,838 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for SNAI1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:02:50,884 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for SNAI3 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:02:50,933 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for SNAPC4 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:02:50,973 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for SNAPC5 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:02:58,489 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for SOX4 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:02:58,555 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for SOX5 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:03:13,724 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for SP2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:03:25,802 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for SPAG7 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:04:04,094 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for STAT6 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:04:24,880 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for TAF9 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:04:41,622 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for TBX19 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:04:58,603 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for TCF7 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:04:58,839 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for TERF1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:04:59,075 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for TFAP2E could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:04:59,134 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for TFAP4 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:05:10,526 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for TFEB could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:05:15,170 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for TGIF1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:05:24,372 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for THAP11 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:05:24,605 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for THRA could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:05:24,832 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for TIMM44 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:05:25,097 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for TP53 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:05:25,141 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for TP63 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:05:25,197 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for TP73 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:05:25,406 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for TRAF4 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:05:25,584 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for TRIM28 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:05:25,902 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for TRMO could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:05:26,289 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for U2AF1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:06:08,704 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for XPA could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:06:15,390 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for XRCC4 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:06:15,606 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for YOD1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:06:22,273 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZBTB16 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:06:22,658 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZBTB22 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:06:27,150 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZBTB34 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:06:27,209 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZBTB37 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:06:27,500 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZBTB43 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:06:27,618 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZBTB45 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:06:27,726 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZBTB48 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:06:43,391 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZBTB7C could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:06:46,683 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZC3H11A could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:06:46,805 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZCCHC14 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:06:55,042 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZFHX3 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:06:55,163 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZFP14 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:06:55,463 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZFP82 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:06:55,514 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZFP90 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:01,072 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZHX2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:01,250 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZKSCAN3 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:01,304 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZKSCAN4 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:01,368 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZKSCAN5 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:01,423 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZKSCAN8 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:15,107 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF10 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:15,220 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF101 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:15,341 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF117 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:15,499 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF124 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:15,610 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF133 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:15,830 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF14 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:15,888 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF140 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:15,938 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF141 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:21,738 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF146 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:21,896 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF155 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:21,950 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF16 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:22,057 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF165 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:22,111 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF169 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:22,280 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF175 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:22,616 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF189 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:22,722 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF197 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:22,775 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:22,937 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF202 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:23,071 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF208 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:23,184 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF212 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:31,026 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF253 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:31,081 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF254 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:31,186 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF26 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:31,234 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF260 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:31,470 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF267 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:37,937 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF275 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:37,993 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF276 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:38,168 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF281 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:38,412 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF287 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:38,461 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF296 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:38,506 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF3 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:38,667 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF316 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:38,711 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF317 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:38,776 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF319 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:38,889 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF320 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:39,007 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF324 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:43,896 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF335 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:43,946 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF337 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:44,045 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF33B could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:44,088 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF34 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:44,139 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF341 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:44,526 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF367 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:44,695 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF383 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:51,469 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF398 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:51,672 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF408 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:51,981 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF419 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:52,094 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF425 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:52,530 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF438 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:52,576 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF439 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:52,690 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF440 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:52,902 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF449 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:52,961 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF45 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:53,137 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF461 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:53,192 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF468 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:53,247 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF48 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:53,296 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF480 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:53,397 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF484 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:53,497 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF490 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:53,547 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF493 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:53,602 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF496 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:53,870 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF513 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:53,988 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF519 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:54,092 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF525 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:54,142 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF526 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:54,194 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF527 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:54,300 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF529 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:54,356 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF532 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:54,409 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF540 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:54,466 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF543 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:54,525 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF544 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:54,578 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF546 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:54,681 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF549 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:54,789 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF551 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:54,888 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF557 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:54,947 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF558 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:55,006 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF559 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:55,052 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF561 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:55,158 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF563 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:55,216 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF564 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:55,266 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF565 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:55,323 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF566 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:55,474 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF569 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:55,581 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF571 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:55,690 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF574 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:07:55,815 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF579 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:07,482 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF584 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:07,756 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF589 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:13,206 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF600 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:13,322 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF606 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:13,368 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF611 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:13,542 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF615 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:13,596 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF616 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:13,650 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF620 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:13,972 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF627 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:14,101 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF630 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:20,188 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF654 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:20,422 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF665 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:20,479 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF668 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:20,533 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF669 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:20,580 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF670 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:20,751 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF674 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:20,804 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF675 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:20,853 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF677 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:20,975 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF680 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:21,096 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF682 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:21,229 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF684 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:21,520 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF692 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:21,582 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF696 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:21,914 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF707 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:22,033 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF709 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:22,143 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF710 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:22,194 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF713 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:22,571 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF726 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:31,501 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF75D could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:31,556 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF76 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:31,612 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF761 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:31,724 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF765 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:31,835 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF77 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:31,885 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF770 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:31,942 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF771 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:32,000 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF773 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:32,176 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF777 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:32,475 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF785 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:32,526 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF786 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:32,629 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF789 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:32,681 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF79 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:32,778 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF791 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:32,882 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF793 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:33,187 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF805 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:33,355 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF813 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:33,412 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF814 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:33,510 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF821 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:33,561 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF823 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:33,625 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF829 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:34,107 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF845 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:34,159 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF846 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:34,270 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF880 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:34,326 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF891 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:34,552 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZNF93 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:34,598 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZRSR2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:34,654 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZSCAN12 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:34,705 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZSCAN16 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:34,758 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZSCAN18 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:34,925 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZSCAN25 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:35,043 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZSCAN29 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:35,330 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZXDA could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:47,786 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ZZZ3 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:47,873 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ABL1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:48,016 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ADARB1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:48,264 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for AGMAT could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:48,354 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for AHR could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:48,394 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for AHRR could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:48,636 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for APEX2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:48,680 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ARFGAP1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:48,722 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ARG2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:48,765 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ARID3A could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:48,816 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ARID3B could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:48,931 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ARNT could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:58,143 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ARNTL could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:58,189 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ARNTL2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:58,230 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ASH2L could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:08:58,273 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ASPSCR1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:09:38,009 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ATF6B could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:09:48,898 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for BARX2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:09:58,435 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for BATF3 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:09:58,629 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for BCL6 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:10:50,514 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for BRF2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:10:50,557 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for C19orf25 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:10:50,646 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for CARF could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:10:50,825 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for CBX7 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:11:00,121 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for CEBPG could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:11:00,210 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for CENPB could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:11:00,298 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for CERS4 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:11:00,646 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for CIC could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:11:00,894 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for CPTP could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:11:07,475 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for CREB3 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:11:17,915 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for CREB3L4 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:11:17,957 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for CREBL2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:11:29,229 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for CRTC2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:11:29,361 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for CTBP1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:11:40,304 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for CUX1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:11:40,526 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for DDX20 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:11:40,570 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for DDX43 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:11:40,613 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for DGCR8 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:11:40,907 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for DNTTIP1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:11:41,042 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for DUS3L could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:11:58,114 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for E2F4 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:12:18,118 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for EGR3 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:12:18,215 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for EIF5A2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:12:44,522 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ELK1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:12:44,569 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ELK3 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:13:09,799 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ERF could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:13:09,842 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ESR1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:13:13,517 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ESR2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:13:18,915 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ETS2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:13:36,251 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for ETV3 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:14:02,270 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for FAAP24 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:14:02,389 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for FBXL19 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:14:02,438 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for FEZ1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:14:02,486 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for FHL2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+
+2026-11-13 10:14:02,589 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for FIZ1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.

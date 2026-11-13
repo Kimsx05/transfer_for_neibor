@@ -1,0 +1,14 @@
+model_id	kind	target	min_cells	patient	exposure	subset	omit_dataset	only_dataset	primary	n_profiles	n_specimens	n_recorded_patient_units	n_datasets	datasets	status	reason	design_rank	design_columns	residual_df
+"M0001"	"Epi"	"H50"	50	"main"	"Q50"	"own"	"none"	"ALL"	TRUE	78	39	39	5	"CNP0000460;GSE326225;HRA003620;InhouseData;PRJNA662018"	"completed"	""	40	40	38
+"M0002"	"Epi"	"H50"	30	"main"	"Q50"	"own"	"none"	"ALL"	FALSE	78	39	39	5	"CNP0000460;GSE326225;HRA003620;InhouseData;PRJNA662018"	"completed"	""	40	40	38
+"M0003"	"Epi"	"H50"	50	"replacement"	"Q50"	"own"	"none"	"ALL"	FALSE	78	39	39	5	"CNP0000460;GSE326225;HRA003620;InhouseData;PRJNA662018"	"completed"	""	40	40	38
+"M0004"	"Epi"	"H50"	50	"main"	"Q50"	"common"	"none"	"ALL"	FALSE	48	24	24	5	"CNP0000460;GSE326225;HRA003620;InhouseData;PRJNA662018"	"completed"	""	25	25	23
+"M0005"	"Epi"	"H50"	30	"main"	"Q50"	"common"	"none"	"ALL"	FALSE	60	30	30	5	"CNP0000460;GSE326225;HRA003620;InhouseData;PRJNA662018"	"completed"	""	31	31	29
+"M0006"	"Epi"	"H50"	50	"main"	"Q50"	"own"	"CNP0000460"	"ALL"	FALSE	64	32	32	4	"GSE326225;HRA003620;InhouseData;PRJNA662018"	"completed"	""	33	33	31
+"M0007"	"Epi"	"H50"	50	"main"	"Q50"	"own"	"none"	"CNP0000460"	FALSE	14	7	7	1	"CNP0000460"	"completed"	""	8	8	6
+"M0008"	"Epi"	"H50"	50	"main"	"Q50"	"own"	"GSE326225"	"ALL"	FALSE	66	33	33	4	"CNP0000460;HRA003620;InhouseData;PRJNA662018"	"completed"	""	34	34	32
+"M0009"	"Epi"	"H50"	50	"main"	"Q50"	"own"	"none"	"GSE326225"	FALSE	12	6	6	1	"GSE326225"	"completed"	""	7	7	5
+"M0010"	"Epi"	"H50"	50	"main"	"Q50"	"own"	"HRA003620"	"ALL"	FALSE	64	32	32	4	"CNP0000460;GSE326225;InhouseData;PRJNA662018"	"completed"	""	33	33	31
+"M0011"	"Epi"	"H50"	50	"main"	"Q50"	"own"	"none"	"HRA003620"	FALSE	14	7	7	1	"HRA003620"	"completed"	""	8	8	6
+"M0012"	"Epi"	"H50"	50	"main"	"Q50"	"own"	"InhouseData"	"ALL"	FALSE	56	28	28	4	"CNP0000460;GSE326225;HRA003620;PRJNA662018"	"completed"	""	29	29	27
+"M0013"	"Epi"	"H50"	50	"main"	"Q50"	"own"	"none"	"InhouseData"	FALSE	22	11	11	1	"InhouseData"	"completed"	""	12	12	10

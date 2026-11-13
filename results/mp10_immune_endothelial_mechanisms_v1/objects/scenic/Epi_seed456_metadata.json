@@ -1,0 +1,19 @@
+{
+  "edge_interpretation": "self-target signature members excluded from GRN recovery denominator",
+  "lineage": "Epi",
+  "seed": 456,
+  "num_workers": 2,
+  "input_hash": "cad2fe9ada8a4ab76f44d87ddfcdad656f7ac0299db1793136db2360ff7f3727",
+  "adjacency_sha256": "5a3e7286e9377fef87afd237d79a0758d87b9025ebc7fc501fe4b6fd11c6bdf6",
+  "n_targets": 65,
+  "key_TFs": [
+    "CREBBP",
+    "KLF13",
+    "NFYA",
+    "NR1H3",
+    "SREBF1",
+    "SREBF2"
+  ],
+  "rule": "top5 CollecTRI q ranks per primary model, independent of significance; union of their motif-pruned targets and named candidates/Top20",
+  "target_hash": "6d9e04dd85e19ab625fc83055f762c2dc54cdc7b38e29a1a7d557202a6c331df"
+}

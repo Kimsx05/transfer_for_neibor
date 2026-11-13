@@ -1,0 +1,5 @@
+source('mp10_immune_endothelial_mechanisms_v1/scripts/common.R');lin<-commandArgs(TRUE)[1];plan<-rd('model_plan.tsv');sub<-if(lin=='Epi')plan[kind=='Epi']else if(lin=='T_lineage')plan[kind=='receiver'&target%in%c('Treg','Tfh/CXCL13-like')]else plan[kind=='receiver'&target%in%c('Arterial EC','Capillary EC')]
+# Predefined key TF selection: top 5 CollecTRI q ranks per primary model, irrespective of significance.
+act<-rd('activity_associations.tsv.gz');primary_ids<-sub[primary==TRUE,model_id];key<-act[resource=='CollecTRI'&mask=='Full'&model_id%in%primary_ids][order(sample_model_q,source),head(.SD,5),by=model_id];put(key,paste0('scenic_',lin,'_key_TF_selection.tsv'))
+edges<-rd(paste0('scenic_',lin,'_regulon_edges.tsv.gz'));keytargets<-sort(unique(c(edges[TF%in%key$source,target],c('NECTIN2','PVR','VEGFA','VEGFB','VEGFC','PGF','TIGIT','PVRIG','CD226','FLT1','KDR'),scan(file.path(P,'neighborhood_mp10_calibration_v5/01_score_fidelity/top20.txt'),what='character',quiet=TRUE))));put(data.table(gene=keytargets),paste0('scenic_',lin,'_seed456_targets.tsv'))
+cat('PREDEFINED SEED TARGETS PREPARED',lin,'\n')

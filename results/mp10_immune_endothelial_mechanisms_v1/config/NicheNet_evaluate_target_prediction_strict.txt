@@ -1,0 +1,29 @@
+function (response, prediction, continuous = TRUE, prediction_response_df = FALSE) 
+{
+    response_df = tibble(gene = names(response), response = response)
+    prediction_df = tibble(gene = names(prediction), prediction = prediction)
+    combined = inner_join(response_df, prediction_df, by = "gene")
+    if (nrow(combined) == 0) 
+        stop("Gene names in response don't accord to gene names in ligand-target matrix (did you consider differences human-mouse namings?)")
+    prediction_vector = combined$prediction
+    names(prediction_vector) = combined$gene
+    response_vector = combined$response
+    names(response_vector) = combined$gene
+    if (continuous == TRUE) {
+        performance = classification_evaluation_continuous_pred(prediction_vector, 
+            response_vector)
+    }
+    else {
+        performance = classification_evaluation_categorical_pred(prediction_vector, 
+            response_vector)
+    }
+    if (prediction_response_df == TRUE) {
+        output = list(performance = performance, prediction_response_df = combined)
+        return(output)
+    }
+    else {
+        return(performance)
+    }
+}
+<bytecode: 0x558bd0fdcb28>
+<environment: namespace:nichenetr>

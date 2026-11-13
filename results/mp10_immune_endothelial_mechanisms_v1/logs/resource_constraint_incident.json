@@ -1,0 +1,51 @@
+{
+  "time": "2026-11-13 00:12:47.741668",
+  "cause": "/usr/local/lib/R/etc/Rprofile.site resets thread environment, RhpcBLASctl and mc.cores to 24 after shell environment",
+  "observed_R_pid": 476554,
+  "observed_threads": 25,
+  "observed_cpu_percent": 2128,
+  "correction": "common.R explicitly resets BLAS/OMP and environment to 1; future R --vanilla; current task process families assigned single CPU affinity; NicheNet restarted from validated metric caches",
+  "affinities": [
+    [
+      602677,
+      220
+    ],
+    [
+      660725,
+      220
+    ],
+    [
+      3933950,
+      221
+    ],
+    [
+      3939694,
+      221
+    ],
+    [
+      3939692,
+      221
+    ],
+    [
+      208015,
+      222
+    ],
+    [
+      208775,
+      222
+    ],
+    [
+      208773,
+      222
+    ],
+    [
+      476553,
+      223
+    ],
+    [
+      476554,
+      223
+    ]
+  ],
+  "limitation": "Earlier R stages did not satisfy requested total thread cap despite shell settings; recorded transparently. Statistical definitions unchanged."
+}

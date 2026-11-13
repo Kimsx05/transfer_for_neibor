@@ -1,0 +1,19 @@
+{
+  "edge_interpretation": "self-target signature members excluded from GRN recovery denominator",
+  "lineage": "T_lineage",
+  "seed": 456,
+  "num_workers": 2,
+  "input_hash": "3f0efef126da94e77effc9635a334a82f9af9fe8cf3749a50a9848b44681baf4",
+  "adjacency_sha256": "a09d6d816fb12468dceb1e369eb1f1863de8ed7485b5e1055592db90cd176051",
+  "n_targets": 28,
+  "key_TFs": [
+    "ABL1",
+    "AHR",
+    "AIRE",
+    "AP1",
+    "APEX1",
+    "AR"
+  ],
+  "rule": "top5 CollecTRI q ranks per primary model, independent of significance; union of their motif-pruned targets and named candidates/Top20",
+  "target_hash": "12a48d8141610c7eb758603084b13a1736200f2d4ee551df955f59fb214dc808"
+}

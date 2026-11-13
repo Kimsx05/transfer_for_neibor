@@ -1,0 +1,17 @@
+model_id	mask	target_direction	metric	n_ligands	max_absolute_error	pass	elapsed_seconds
+"M0001"	"Full"	"positive"	"auroc"	671	5.55111512312578e-16	TRUE	28.05
+"M0001"	"Full"	"positive"	"aupr"	671	5.27355936696949e-16	TRUE	28.05
+"M0001"	"Full"	"positive"	"aupr_corrected"	671	5.55111512312578e-17	TRUE	28.05
+"M0001"	"Full"	"positive"	"pearson"	671	4.9960036108132e-16	TRUE	28.05
+"M0001"	"Full"	"negative"	"auroc"	671	5.55111512312578e-16	TRUE	20.597
+"M0001"	"Full"	"negative"	"aupr"	671	5.20417042793042e-17	TRUE	20.597
+"M0001"	"Full"	"negative"	"aupr_corrected"	671	4.85722573273506e-17	TRUE	20.597
+"M0001"	"Full"	"negative"	"pearson"	671	5.20417042793042e-17	TRUE	20.597
+"M0001"	"M20-masked"	"positive"	"auroc"	671	5.55111512312578e-16	TRUE	20.282
+"M0001"	"M20-masked"	"positive"	"aupr"	671	5.27355936696949e-16	TRUE	20.282
+"M0001"	"M20-masked"	"positive"	"aupr_corrected"	671	5.55111512312578e-17	TRUE	20.282
+"M0001"	"M20-masked"	"positive"	"pearson"	671	5.27355936696949e-16	TRUE	20.282
+"M0003"	"Full"	"union"	"auroc"	672	5.55111512312578e-16	TRUE	20.672
+"M0003"	"Full"	"union"	"aupr"	672	4.9960036108132e-16	TRUE	20.672
+"M0003"	"Full"	"union"	"aupr_corrected"	672	5.55111512312578e-17	TRUE	20.672
+"M0003"	"Full"	"union"	"pearson"	672	5.55111512312578e-16	TRUE	20.672

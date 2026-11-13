@@ -1,0 +1,52 @@
+{
+  "task": "mp10_immune_endothelial_mechanisms_v1",
+  "baseline": "c2lfinal_20261108T123140Z_0b5fd64f",
+  "seed": 123,
+  "seed_scenic_sensitivity": 456,
+  "threads_total": 4,
+  "threads_per_process": 1,
+  "min_cells": [50, 30],
+  "min_independent_units": 4,
+  "min_residual_df": 3,
+  "quantile_type": 7,
+  "main_patient_specimen": "T4463209a",
+  "replacement": "T4463209b",
+  "exposures": ["Q50", "Q95"],
+  "exposure_scale": "one SD across original main-a specimens, fixed for all models",
+  "epi_model": "~ specimen + state",
+  "receiver_model": "~ dataset + exposure",
+  "normalization": "edgeR TMM",
+  "DE": "edgeR robust quasi-likelihood",
+  "gene_filter": "edgeR filterByExpr with actual design",
+  "gsea": {
+    "primary": "Hallmark",
+    "secondary": "Reactome",
+    "minSize": 15,
+    "maxSize": 500
+  },
+  "progeny": {
+    "top": 500,
+    "min_targets": 10
+  },
+  "collectri": {
+    "method": "decoupleR ULM",
+    "min_targets": 5,
+    "split_complexes": false
+  },
+  "dorothea_confidence": ["A", "B"],
+  "nichenet": {
+    "target_fdr": 0.05,
+    "target_min_informative": 10,
+    "detection": [0.1, 0.05],
+    "detection_rule": "median of eligible specimen nonzero-cell fractions",
+    "target_sets": ["positive", "negative", "union"]
+  },
+  "scenic": {
+    "cap_per_specimen": 100,
+    "min_detection_fraction": 0.01,
+    "min_cells_gene": 3,
+    "aucell_auc_threshold": 0.05
+  },
+  "patient_identity_caveat": "recorded IDs are derived/provisional except confirmed repeated a/b relationship; not verified independent patients",
+  "frozen_before_effects": "2026-11-12 21:49:00.755514"
+}
