@@ -1,0 +1,3 @@
+stage	elapsed_seconds	CPU_user_seconds	CPU_system_seconds	parent_peak_RSS_KiB	workers	CPU_affinity	note
+bin8_RCTD_native_fit	1189.55	3943.93	93.95	3504480	4	0,1,2,3	Observed /usr/bin/time from completed fit before summary JSON repair; workers observed ~2.9-3.1 GB RSS each with fork shared pages; whole task remains bounded by same four CPUs
+initial_disk_quota	NA	NA	NA	NA	NA	NA	475 GiB used / 500 GiB soft / 505 GiB hard; filesystem available 11 TiB is not quota headroom

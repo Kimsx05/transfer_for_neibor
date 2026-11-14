@@ -1,0 +1,46 @@
+{
+  "50": {
+    "K": 4,
+    "n_anchor": 38027,
+    "n_eligible": 37897,
+    "n_training": 15102,
+    "types": [
+      "B",
+      "Endothelial",
+      "Epithelial",
+      "Fibroblast",
+      "Mast",
+      "Mural",
+      "Myeloid",
+      "Plasma",
+      "T_subtype_unresolved"
+    ],
+    "quality_rule": ">=5 known objects and >=25% observed circle area; no TME minimum",
+    "association_area_fraction": 0.5,
+    "feature": "sqrt full known-type relative composition, including Epi",
+    "selected_at": "2026-11-14T00:57:48.558254",
+    "selection_without_MP10": true
+  },
+  "200": {
+    "K": 4,
+    "n_anchor": 38027,
+    "n_eligible": 38027,
+    "n_training": 15221,
+    "types": [
+      "B",
+      "Endothelial",
+      "Epithelial",
+      "Fibroblast",
+      "Mast",
+      "Mural",
+      "Myeloid",
+      "Plasma",
+      "T_subtype_unresolved"
+    ],
+    "quality_rule": ">=5 known objects and >=25% observed circle area; no TME minimum",
+    "association_area_fraction": 0.5,
+    "feature": "sqrt full known-type relative composition, including Epi",
+    "selected_at": "2026-11-14T00:58:05.972044",
+    "selection_without_MP10": true
+  }
+}

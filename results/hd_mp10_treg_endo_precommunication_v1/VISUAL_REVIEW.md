@@ -1,0 +1,3 @@
+# Visual review
+
+Actually opened: raw T-focus/vascular/dense/far-UMI previews; registered mask/8μm/16μm/cell vascular ROI; full regional MP10 and r50 niche; D1 conflict H&E and raw Epi/T/Endo panels; target-group marker detection plot; final registered overview. Nuclei and inferred extensions are explicitly different boundaries. The vascular ROI label denotes a selected raw-panel hotspot, not confirmed vessel pathology. Raw T/Treg signals are sparse; supported EC group has PECAM1/VWF but mixed Epi/collagen evidence persists. D1 Epi pattern is organized and registration is plausible at this level; no subtype identity is inferred visually. Missing supplied areas remain unmeasured.

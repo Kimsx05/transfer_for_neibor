@@ -1,0 +1,314 @@
+List of 5
+ $ results_df     :'data.frame':	1658 obs. of  9 variables:
+  ..$ spot_class   : Factor w/ 4 levels "reject","singlet",..: 2 2 2 2 2 2 2 4 2 2 ...
+  ..$ first_type   : Factor w/ 30 levels "Arterial EC",..: 11 11 11 11 11 11 11 11 11 11 ...
+  ..$ second_type  : Factor w/ 30 levels "Arterial EC",..: 30 27 14 16 26 13 24 17 22 17 ...
+  ..$ first_class  : logi [1:1658] FALSE FALSE FALSE FALSE FALSE FALSE ...
+  ..$ second_class : logi [1:1658] FALSE FALSE FALSE FALSE FALSE FALSE ...
+  ..$ min_score    : num [1:1658] 176 147 179 151 165 ...
+  ..$ singlet_score: num [1:1658] 180 147 179 151 168 ...
+  ..$ conv_all     : logi [1:1658] TRUE TRUE TRUE TRUE TRUE TRUE ...
+  ..$ conv_doublet : logi [1:1658] TRUE TRUE TRUE TRUE TRUE TRUE ...
+ $ weights        :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+ $ weights_doublet:Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+ $ score_mat      :List of 1658
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..$ :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  .. [list output truncated]
+ $ singlet_scores :List of 1658
+  ..$ : Named num [1:4] 180 245 207 224
+  .. ..- attr(*, "names")= chr [1:4] "Epithelial" "pDC" "Pericyte" "Venous EC"
+  ..$ : Named num [1:2] 147 172
+  .. ..- attr(*, "names")= chr [1:2] "Epithelial" "Tfh_CXCL13-like"
+  ..$ : Named num [1:2] 179 215
+  .. ..- attr(*, "names")= chr [1:2] "Epithelial" "LAMP3 DC"
+  ..$ : Named num [1:2] 151 175
+  .. ..- attr(*, "names")= chr [1:2] "Epithelial" "Mast"
+  ..$ : Named num [1:5] 197 194 168 197 194
+  .. ..- attr(*, "names")= chr [1:5] "Arterial EC" "CD4 Naive_Memory-like" "Epithelial" "SMC" ...
+  ..$ : Named num [1:4] 212 173 198 202
+  .. ..- attr(*, "names")= chr [1:4] "C1QC TAM" "Epithelial" "iCAF" "vCAF"
+  ..$ : Named num [1:3] 222 175 214
+  .. ..- attr(*, "names")= chr [1:3] "cDC1" "Epithelial" "rCAF"
+  ..$ : Named num [1:8] 223 211 248 239 187 ...
+  .. ..- attr(*, "names")= chr [1:8] "C1QC TAM" "Capillary EC" "cDC1" "cDC2" ...
+  ..$ : Named num [1:3] 133 170 161
+  .. ..- attr(*, "names")= chr [1:3] "Epithelial" "Matrix_CAF" "Pericyte"
+  ..$ : Named num [1:5] 162 187 214 198 186
+  .. ..- attr(*, "names")= chr [1:5] "Epithelial" "Matrix_CAF" "pDC" "Plasma" ...
+  ..$ : Named num [1:2] 145 189
+  .. ..- attr(*, "names")= chr [1:2] "Epithelial" "Arterial EC"
+  ..$ : Named num [1:5] 235 231 191 227 234
+  .. ..- attr(*, "names")= chr [1:5] "Arterial EC" "CD8 GZMK_Effector-memory-like" "Epithelial" "iCAF" ...
+  ..$ : Named num [1:2] 150 186
+  .. ..- attr(*, "names")= chr [1:2] "Epithelial" "Neutrophil"
+  ..$ : Named num [1:2] 101 127
+  .. ..- attr(*, "names")= chr [1:2] "Epithelial" "pDC"
+  ..$ : Named num [1:5] 139 165 171 159 158
+  .. ..- attr(*, "names")= chr [1:5] "Epithelial" "Lymphatic EC" "Neutrophil" "rCAF" ...
+  ..$ : Named num [1:4] 181 183 142 173
+  .. ..- attr(*, "names")= chr [1:4] "C1QC TAM" "cDC1" "Epithelial" "vCAF"
+  ..$ : Named num [1:2] 157 183
+  .. ..- attr(*, "names")= chr [1:2] "Epithelial" "rCAF"
+  ..$ : Named num [1:3] 184 220 231
+  .. ..- attr(*, "names")= chr [1:3] "Epithelial" "Matrix_CAF" "SPP1 TAM"
+  ..$ : Named num [1:3] 177 214 224
+  .. ..- attr(*, "names")= chr [1:3] "Epithelial" "Matrix_CAF" "pDC"
+  ..$ : Named num [1:4] 273 219 259 265
+  .. ..- attr(*, "names")= chr [1:4] "C1QC TAM" "Epithelial" "iCAF" "Matrix_CAF"
+  ..$ : Named num [1:2] 223 169
+  .. ..- attr(*, "names")= chr [1:2] "cDC1" "Epithelial"
+  ..$ : Named num [1:3] 201 170 208
+  .. ..- attr(*, "names")= chr [1:3] "Arterial EC" "Epithelial" "Matrix_CAF"
+  ..$ : Named num [1:2] 182 138
+  .. ..- attr(*, "names")= chr [1:2] "cDC1" "Epithelial"
+  ..$ : Named num [1:5] 143 116 128 130 124
+  .. ..- attr(*, "names")= chr [1:5] "cDC1" "Epithelial" "iCAF" "Matrix_CAF" ...
+  ..$ : Named num [1:4] 199 196 172 190
+  .. ..- attr(*, "names")= chr [1:4] "C1QC TAM" "CD8 GZMK_Effector-memory-like" "Epithelial" "Matrix_CAF"
+  ..$ : Named num [1:2] 144 182
+  .. ..- attr(*, "names")= chr [1:2] "Epithelial" "Neutrophil"
+  ..$ : Named num [1:2] 195 165
+  .. ..- attr(*, "names")= chr [1:2] "CD4 Naive_Memory-like" "Epithelial"
+  ..$ : Named num [1:2] 105 112
+  .. ..- attr(*, "names")= chr [1:2] "Epithelial" "Mast"
+  ..$ : Named num [1:4] 148 174 180 173
+  .. ..- attr(*, "names")= chr [1:4] "Epithelial" "NK" "rCAF" "Treg"
+  ..$ : Named num [1:4] 206 219 183 196
+  .. ..- attr(*, "names")= chr [1:4] "Arterial EC" "Classical Mono" "Epithelial" "iCAF"
+  ..$ : Named num [1:4] 200 198 163 208
+  .. ..- attr(*, "names")= chr [1:4] "Capillary EC" "CD8 GZMK_Effector-memory-like" "Epithelial" "vCAF"
+  ..$ : Named num [1:3] 253 188 227
+  .. ..- attr(*, "names")= chr [1:3] "cDC1" "Epithelial" "Treg"
+  ..$ : Named num [1:3] 256 305 297
+  .. ..- attr(*, "names")= chr [1:3] "Epithelial" "iCAF" "Mast"
+  ..$ : Named num [1:3] 188 155 212
+  .. ..- attr(*, "names")= chr [1:3] "Capillary EC" "Epithelial" "GC B"
+  ..$ : Named num [1:4] 292 341 270 298
+  .. ..- attr(*, "names")= chr [1:4] "Capillary EC" "cDC1" "Epithelial" "vCAF"
+  ..$ : Named num [1:3] 217 174 215
+  .. ..- attr(*, "names")= chr [1:3] "cDC1" "Epithelial" "rCAF"
+  ..$ : Named num [1:2] 235 191
+  .. ..- attr(*, "names")= chr [1:2] "Arterial EC" "Epithelial"
+  ..$ : Named num [1:2] 176 212
+  .. ..- attr(*, "names")= chr [1:2] "Epithelial" "iCAF"
+  ..$ : Named num [1:6] 216 206 181 211 218 ...
+  .. ..- attr(*, "names")= chr [1:6] "cDC1" "cDC2" "Epithelial" "Matrix_CAF" ...
+  ..$ : Named num [1:3] 224 194 226
+  .. ..- attr(*, "names")= chr [1:3] "cDC1" "Epithelial" "Treg"
+  ..$ : Named num [1:8] 280 276 230 299 266 ...
+  .. ..- attr(*, "names")= chr [1:8] "cDC1" "cDC2" "Epithelial" "GC B" ...
+  ..$ : Named num [1:5] 232 190 232 241 240
+  .. ..- attr(*, "names")= chr [1:5] "C1QC TAM" "Epithelial" "Neutrophil" "pDC" ...
+  ..$ : Named num [1:4] 213 181 204 208
+  .. ..- attr(*, "names")= chr [1:4] "C1QC TAM" "Epithelial" "iCAF" "Pericyte"
+  ..$ : Named num [1:2] 211 285
+  .. ..- attr(*, "names")= chr [1:2] "Epithelial" "Arterial EC"
+  ..$ : Named num [1:4] 231 289 275 288
+  .. ..- attr(*, "names")= chr [1:4] "Epithelial" "Neutrophil" "SMC" "SPP1 TAM"
+  ..$ : Named num [1:3] 233 333 297
+  .. ..- attr(*, "names")= chr [1:3] "Epithelial" "GC B" "Naive_Memory B"
+  ..$ : Named num [1:5] 146 161 171 168 170
+  .. ..- attr(*, "names")= chr [1:5] "Epithelial" "Mast" "Matrix_CAF" "pDC" ...
+  ..$ : Named num [1:6] 258 227 255 252 259 ...
+  .. ..- attr(*, "names")= chr [1:6] "Arterial EC" "Epithelial" "LAMP3 DC" "Lymphatic EC" ...
+  ..$ : Named num [1:7] 251 226 235 265 250 ...
+  .. ..- attr(*, "names")= chr [1:7] "C1QC TAM" "Epithelial" "iCAF" "LAMP3 DC" ...
+  ..$ : Named num [1:4] 148 130 149 148
+  .. ..- attr(*, "names")= chr [1:4] "Capillary EC" "Epithelial" "GC B" "pDC"
+  ..$ : Named num [1:3] 229 176 226
+  .. ..- attr(*, "names")= chr [1:3] "cDC1" "Epithelial" "SPP1 TAM"
+  ..$ : Named num [1:2] 277 218
+  .. ..- attr(*, "names")= chr [1:2] "cDC1" "Epithelial"
+  ..$ : Named num [1:5] 264 253 205 270 267
+  .. ..- attr(*, "names")= chr [1:5] "C1QC TAM" "Capillary EC" "Epithelial" "GC B" ...
+  ..$ : Named num [1:5] 187 204 160 179 185
+  .. ..- attr(*, "names")= chr [1:5] "C1QC TAM" "cDC1" "Epithelial" "Mast" ...
+  ..$ : Named num [1:2] 170 218
+  .. ..- attr(*, "names")= chr [1:2] "Epithelial" "Venous EC"
+  ..$ : Named num [1:4] 238 253 193 251
+  .. ..- attr(*, "names")= chr [1:4] "Capillary EC" "cDC1" "Epithelial" "pDC"
+  ..$ : Named num [1:3] 299 238 289
+  .. ..- attr(*, "names")= chr [1:3] "Capillary EC" "Epithelial" "NK"
+  ..$ : Named num [1:3] 236 184 233
+  .. ..- attr(*, "names")= chr [1:3] "Arterial EC" "Epithelial" "Matrix_CAF"
+  ..$ : Named num [1:4] 197 163 186 179
+  .. ..- attr(*, "names")= chr [1:4] "C1QC TAM" "Epithelial" "Matrix_CAF" "vCAF"
+  ..$ : Named num [1:3] 238 214 272
+  .. ..- attr(*, "names")= chr [1:3] "Capillary EC" "Epithelial" "pDC"
+  ..$ : Named num [1:3] 168 134 160
+  .. ..- attr(*, "names")= chr [1:3] "C1QC TAM" "Epithelial" "Matrix_CAF"
+  ..$ : Named num [1:3] 158 206 206
+  .. ..- attr(*, "names")= chr [1:3] "Epithelial" "pDC" "vCAF"
+  ..$ : Named num [1:4] 304 293 230 289
+  .. ..- attr(*, "names")= chr [1:4] "cDC1" "Classical Mono" "Epithelial" "iCAF"
+  ..$ : Named num [1:2] 184 245
+  .. ..- attr(*, "names")= chr [1:2] "Epithelial" "pDC"
+  ..$ : Named num [1:2] 157 196
+  .. ..- attr(*, "names")= chr [1:2] "Epithelial" "SMC"
+  ..$ : Named num [1:5] 307 246 304 310 311
+  .. ..- attr(*, "names")= chr [1:5] "C1QC TAM" "Epithelial" "iCAF" "LAMP3 DC" ...
+  ..$ : Named num [1:4] 229 201 221 223
+  .. ..- attr(*, "names")= chr [1:4] "cDC2" "Epithelial" "iCAF" "Mast"
+  ..$ : Named num [1:2] 243 195
+  .. ..- attr(*, "names")= chr [1:2] "cDC1" "Epithelial"
+  ..$ : Named num [1:3] 208 251 256
+  .. ..- attr(*, "names")= chr [1:3] "Epithelial" "iCAF" "rCAF"
+  ..$ : Named num [1:3] 230 270 294
+  .. ..- attr(*, "names")= chr [1:3] "Epithelial" "Mast" "Neutrophil"
+  ..$ : Named num [1:4] 176 214 219 226
+  .. ..- attr(*, "names")= chr [1:4] "Epithelial" "iCAF" "Lymphatic EC" "SPP1 TAM"
+  ..$ : Named num [1:3] 247 309 303
+  .. ..- attr(*, "names")= chr [1:3] "Epithelial" "rCAF" "SPP1 TAM"
+  ..$ : Named num [1:3] 206 160 199
+  .. ..- attr(*, "names")= chr [1:3] "C1QC TAM" "Epithelial" "Matrix_CAF"
+  ..$ : Named num [1:5] 2239 2203 1808 1637 1754
+  .. ..- attr(*, "names")= chr [1:5] "CD4 Helper_Conventional" "CD8 GZMK_Effector-memory-like" "Epithelial" "Matrix_CAF" ...
+  ..$ : Named num [1:4] 1500 1749 1752 1807
+  .. ..- attr(*, "names")= chr [1:4] "Epithelial" "Matrix_CAF" "Pericyte" "vCAF"
+  ..$ : Named num [1:4] 1699 2063 2056 2205
+  .. ..- attr(*, "names")= chr [1:4] "Epithelial" "Matrix_CAF" "Pericyte" "Venous EC"
+  ..$ : Named num [1:8] 1827 1764 1368 1626 1795 ...
+  .. ..- attr(*, "names")= chr [1:8] "cDC1" "Classical Mono" "Epithelial" "iCAF" ...
+  ..$ : Named num [1:6] 1510 1474 1732 1194 1307 ...
+  .. ..- attr(*, "names")= chr [1:6] "Arterial EC" "Epithelial" "LAMP3 DC" "Matrix_CAF" ...
+  ..$ : Named num [1:3] 1245 1404 1404
+  .. ..- attr(*, "names")= chr [1:3] "Epithelial" "Matrix_CAF" "Pericyte"
+  ..$ : Named num [1:2] 1461 2033
+  .. ..- attr(*, "names")= chr [1:2] "Epithelial" "Arterial EC"
+  ..$ : Named num [1:7] 2209 2250 1770 2174 2043 ...
+  .. ..- attr(*, "names")= chr [1:7] "C1QC TAM" "cDC2" "Epithelial" "iCAF" ...
+  ..$ : Named num [1:8] 1339 1383 1246 1093 1147 ...
+  .. ..- attr(*, "names")= chr [1:8] "C1QC TAM" "cDC2" "Epithelial" "Matrix_CAF" ...
+  ..$ : Named num [1:7] 1511 1395 1648 1378 1163 ...
+  .. ..- attr(*, "names")= chr [1:7] "C1QC TAM" "Capillary EC" "CD4 Naive_Memory-like" "Epithelial" ...
+  ..$ : Named num [1:5] 1278 990 1119 1116 1141
+  .. ..- attr(*, "names")= chr [1:5] "cDC2" "Epithelial" "Matrix_CAF" "Pericyte" ...
+  ..$ : Named num [1:7] 1377 1707 1422 1747 1444 ...
+  .. ..- attr(*, "names")= chr [1:7] "Epithelial" "LAMP3 DC" "Matrix_CAF" "Neutrophil" ...
+  ..$ : Named num [1:7] 1710 1710 1434 1569 1580 ...
+  .. ..- attr(*, "names")= chr [1:7] "Arterial EC" "C1QC TAM" "Epithelial" "Matrix_CAF" ...
+  ..$ : Named num [1:5] 1398 1273 1184 1214 1403
+  .. ..- attr(*, "names")= chr [1:5] "C1QC TAM" "Epithelial" "Matrix_CAF" "Pericyte" ...
+  ..$ : Named num [1:4] 996 1180 1221 1317
+  .. ..- attr(*, "names")= chr [1:4] "Epithelial" "Matrix_CAF" "SMC" "SPP1 TAM"
+  ..$ : Named num [1:4] 1455 1170 1146 1210
+  .. ..- attr(*, "names")= chr [1:4] "Classical Mono" "Epithelial" "Matrix_CAF" "SMC"
+  ..$ : Named num [1:5] 1663 1651 1535 1121 1306
+  .. ..- attr(*, "names")= chr [1:5] "C1QC TAM" "Classical Mono" "Epithelial" "Matrix_CAF" ...
+  ..$ : Named num [1:5] 1824 1974 1792 1383 1612
+  .. ..- attr(*, "names")= chr [1:5] "Arterial EC" "C1QC TAM" "Epithelial" "Matrix_CAF" ...
+  ..$ : Named num [1:6] 1985 1983 1735 1422 1650 ...
+  .. ..- attr(*, "names")= chr [1:6] "C1QC TAM" "Classical Mono" "Epithelial" "Matrix_CAF" ...
+  ..$ : Named num [1:5] 1527 1568 1894 1600 1665
+  .. ..- attr(*, "names")= chr [1:5] "Epithelial" "Matrix_CAF" "NK" "Pericyte" ...
+  ..$ : Named num [1:3] 1779 1996 2084
+  .. ..- attr(*, "names")= chr [1:3] "Epithelial" "Matrix_CAF" "SMC"
+  ..$ : Named num [1:4] 1961 1574 1826 1909
+  .. ..- attr(*, "names")= chr [1:4] "Arterial EC" "Epithelial" "Matrix_CAF" "rCAF"
+  ..$ : Named num [1:4] 1654 1372 1569 1801
+  .. ..- attr(*, "names")= chr [1:4] "Epithelial" "Matrix_CAF" "rCAF" "SPP1 TAM"
+  ..$ : Named num [1:6] 1631 1357 1382 1470 1648 ...
+  .. ..- attr(*, "names")= chr [1:6] "C1QC TAM" "Epithelial" "Matrix_CAF" "rCAF" ...
+  ..$ : Named num [1:6] 1620 1661 1376 1426 1533 ...
+  .. ..- attr(*, "names")= chr [1:6] "Arterial EC" "Classical Mono" "Epithelial" "Matrix_CAF" ...
+  ..$ : Named num [1:3] 1381 1305 1616
+  .. ..- attr(*, "names")= chr [1:3] "Epithelial" "Matrix_CAF" "SPP1 TAM"
+  .. [list output truncated]

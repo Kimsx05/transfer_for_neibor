@@ -1,0 +1,50 @@
+# Figure index
+
+- **cell_supported_lineages**: Candidate lineage support, not validated cell identities; Unknown retained; missing supplied image area has no data
+- **MP10_epithelial_regions**: Original RNA evidence; gray = not scorable for MP10, white outside supplied support is unmeasured
+- **cell_detection**: Original RNA evidence; gray = not scorable for MP10, white outside supplied support is unmeasured
+- **cell_Endothelial_raw**: Original RNA evidence; gray = not scorable for MP10, white outside supplied support is unmeasured
+- **Treg_candidate_not_confirmed**: No reliable Treg population established; candidates cannot be interpreted as Treg abundance
+- **HE_ROI_registration**: Loupe-recovered H&E embedded as raster; image outside supplied footprint is unmeasured, not negative
+- **ROI_bin_cell_dense**: Same physical ROI; nucleus cyan and inferred extent yellow; raw T panel identical scale; original bin16 grid includes all supplied counts
+- **ROI_bin_cell_stroma**: Same physical ROI; nucleus cyan and inferred extent yellow; raw T panel identical scale; original bin16 grid includes all supplied counts
+- **ROI_bin_cell_edge**: Same physical ROI; nucleus cyan and inferred extent yellow; raw T panel identical scale; original bin16 grid includes all supplied counts
+- **ROI_bin_cell_small_nuclei**: Same physical ROI; nucleus cyan and inferred extent yellow; raw T panel identical scale; original bin16 grid includes all supplied counts
+- **ROI_bin_cell_far_UMI_hotspot**: Same physical ROI; nucleus cyan and inferred extent yellow; raw T panel identical scale; original bin16 grid includes all supplied counts
+- **ROI_bin_cell_T_lineage_focus**: Same physical ROI; nucleus cyan and inferred extent yellow; raw T panel identical scale; original bin16 grid includes all supplied counts
+- **ROI_bin_cell_vascular_focus**: Same physical ROI; nucleus cyan and inferred extent yellow; raw T panel identical scale; original bin16 grid includes all supplied counts
+- **ROI_bin_cell_nonimmune_control**: Same physical ROI; nucleus cyan and inferred extent yellow; raw T panel identical scale; original bin16 grid includes all supplied counts
+- **score_ties_cell**: Fixed detection-stratified measurement subset; not an association test
+- **score_ties_bin8**: Fixed detection-stratified measurement subset; not an association test
+- **score_ties_bin16**: Fixed detection-stratified measurement subset; not an association test
+- **niche_r50**: Labels only on Epi centers; 0 is unresolved; full known composition includes Epi
+- **niche_r50_known_fraction**: Quality field never used as clustering feature
+- **niche_r50_observed_area_fraction**: Quality field never used as clustering feature
+- **niche_composition_r50**: Neighbor object-count proportions; Unknown excluded from conditional denominator
+- **MP10_Endothelial_density_r50**: One point per fixed Epi-only region; no bin-level pseudoreplication; censoring retained in table
+- **MP10_Endothelial_distance_r50**: One point per fixed Epi-only region; no bin-level pseudoreplication; censoring retained in table
+- **niche_MP10_r50**: Region summary requires >=60% of its frozen Epi centers in one niche; mixed regions remain explicit
+- **niche_r200**: Labels only on Epi centers; 0 is unresolved; full known composition includes Epi
+- **niche_r200_known_fraction**: Quality field never used as clustering feature
+- **niche_r200_observed_area_fraction**: Quality field never used as clustering feature
+- **niche_composition_r200**: Neighbor object-count proportions; Unknown excluded from conditional denominator
+- **MP10_Endothelial_density_r200**: One point per fixed Epi-only region; no bin-level pseudoreplication; censoring retained in table
+- **MP10_Endothelial_distance_r200**: One point per fixed Epi-only region; no bin-level pseudoreplication; censoring retained in table
+- **niche_MP10_r200**: Region summary requires >=60% of its frozen Epi centers in one niche; mixed regions remain explicit
+- **association_effect_intervals**: 499 block bootstrap CI; BH q and restricted-null block-sign P in table; single section
+- **ROI_targets_MP10_far_UMI_hotspot**: Raw log1p summed panel UMI on fixed8um bins; Treg signal is not validated identity; MP10 only eligible Epi-only region, gray unscorable
+- **ROI_targets_MP10_T_lineage_focus**: Raw log1p summed panel UMI on fixed8um bins; Treg signal is not validated identity; MP10 only eligible Epi-only region, gray unscorable
+- **ROI_targets_MP10_vascular_focus**: Raw log1p summed panel UMI on fixed8um bins; Treg signal is not validated identity; MP10 only eligible Epi-only region, gray unscorable
+- **target_group_marker_support**: Dot area=detected fraction; candidate Treg group is not a validated identity; TIGIT excluded from reference fitting
+- **ROI_model_and_score_far_UMI_hotspot**: Rows bin8/bin16/cell; model contribution versus binary supported cell identity are distinct. Gray=not reliable/scorable; no fraction division; regional score is main, single-unit scores diagnostic
+- **ROI_model_and_score_T_lineage_focus**: Rows bin8/bin16/cell; model contribution versus binary supported cell identity are distinct. Gray=not reliable/scorable; no fraction division; regional score is main, single-unit scores diagnostic
+- **ROI_model_and_score_vascular_focus**: Rows bin8/bin16/cell; model contribution versus binary supported cell identity are distinct. Gray=not reliable/scorable; no fraction division; regional score is main, single-unit scores diagnostic
+- **D1_light_conflict_focus**: Existing D1 crop and physical coordinates preserved; raw panel evidence, not new fine labels or associations
+- **D1_light_reference_agree_control**: Existing D1 crop and physical coordinates preserved; raw panel evidence, not new fine labels or associations
+- **R_loader_readback_niche50**: Actual reread original Seurat counts plus ID-aligned new metadata; no new full expression object saved
+- **niche_stability**: Fixed seeds and one spatial-block refit; no MP10 selection
+- **MP10_historical_depth_sensitivity**: Fixed binomial thinning and historical mean-tie ranks; no target-association based score selection
+- **Cervilla_core_registered_overview**: Identical physical axes; supplied footprint display uniformly thinned 1/8 (analysis full); no-input right image regions remain unmeasured; gray MP10 region=not scorable; purple Treg candidate is not confirmed; H&E is raster
+- **Endo_primary_and_sensitivity**: Spatial-block intervals; main and sensitivity families have separate BH q; not independent biological replicates
+
+White Arial ~12pt, PNG300dpi, PDF vector text/legends; dense points/H&E raster. Core figures have full/body/legend PDFs. Plot data are the compact tables and linked original H&E/masks; no analysis is repeated by replot.sh.

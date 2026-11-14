@@ -1,0 +1,14 @@
+Index	section	target	analysis_bins	raw_supported_bins	status	reason	assessment_stage
+0.0	Cervilla	T_lineage	268924	419	partially_evaluable	two raw T-lineage panel genes; not a subtype identity	raw_input_screen
+1.0	Cervilla	Treg_multigene_raw	268924	10	partially_evaluable	raw marker co-detection only, not a final label	raw_input_screen
+2.0	Cervilla	Endothelial	268924	1039	partially_evaluable	multi-gene raw endothelial support	raw_input_screen
+3.0	Cervilla	Epi_MP10	268924	325	partially_evaluable	raw detectability; purity and depth must still be assessed	raw_input_screen
+4.0	D1_Johnson	T_lineage	364805	14443	partially_evaluable	two raw T-lineage panel genes; not a subtype identity; D1 light check only, no new full annotation or associations	raw_input_screen
+5.0	D1_Johnson	Treg_multigene_raw	364805	232	partially_evaluable	raw marker co-detection only, not a final label; D1 light check only, no new full annotation or associations	raw_input_screen
+6.0	D1_Johnson	Endothelial	364805	2993	partially_evaluable	multi-gene raw endothelial support; D1 light check only, no new full annotation or associations	raw_input_screen
+7.0	D1_Johnson	Epi_MP10	364805	3598	partially_evaluable	raw detectability; purity and depth must still be assessed; D1 light check only, no new full annotation or associations	raw_input_screen
+NA	Cervilla	Treg	268924	0	not_evaluable	144 fine-reference candidates but no joint multi-gene Treg/lineage support; bin8/bin16 and conservative4um ROI checks did not corroborate; not evidence of biological absence	final_selected_unit
+NA	Cervilla	Endothelial	268924	204	partially_evaluable	Fine reference plus >=2 raw endothelial genes; subtype not used; supported objects are an incomplete observed subset, not vessel census	final_selected_unit
+NA	Cervilla	Epi_MP10	268924	1209	partially_evaluable	Region-level historical Top20 rank-AUC on connected credible Epi only; >=5 Epi, >=5 Top20 and >=905 detected genes; depth sensitivity limits local rank precision	final_selected_unit
+NA	Cervilla	registration	268924	268924	evaluable	Inherited verified native pixel-to-micron transform and supplied footprint; larger image outside supplied coverage remains unmeasured	final_selected_unit
+NA	D1_Johnson	registration	364805	364805	evaluable	Existing verified crop origin (23764,35851) fullres pixels preserved; light ROI check only	light_final

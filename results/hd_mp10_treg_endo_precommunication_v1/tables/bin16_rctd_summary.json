@@ -1,0 +1,17 @@
+{
+  "unit": "bin16",
+  "n_input": 1910,
+  "n_fit": 1658,
+  "statuses": {
+    "below_UMI100": 247,
+    "doublet_certain": 611,
+    "doublet_uncertain": 301,
+    "excluded_algorithm_gene_count_gate": 5,
+    "reject": 55,
+    "singlet": 691
+  },
+  "weight_dim": [1658, 2],
+  "weight_columns": ["first_type", "second_type"],
+  "weight_row_sums": [1, 1, 1, 1, 1, 1],
+  "version": "2.2.1"
+}

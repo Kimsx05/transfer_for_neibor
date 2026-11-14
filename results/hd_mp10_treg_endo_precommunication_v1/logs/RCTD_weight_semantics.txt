@@ -1,0 +1,408 @@
+
+FUNCTION count_cell_types 
+function (myRCTD, barcodes, cell_types, cell_type_threshold = 125, 
+    doublet_mode = T, weight_threshold = NULL, cell_type_filter = NULL) 
+{
+    cell_type_info <- myRCTD@cell_type_info$info
+    if (doublet_mode) {
+        my_beta <- get_beta_doublet(barcodes, cell_type_info[[2]], 
+            myRCTD@results$results_df, myRCTD@results$weights_doublet)
+        thresh <- 0.999
+    }
+    else if (myRCTD@config$RCTDmode == "multi") {
+        my_beta <- get_beta_multi(barcodes, cell_type_info[[2]], 
+            myRCTD@results, myRCTD@spatialRNA@coords)
+        thresh <- 0.999
+    }
+    else {
+        my_beta <- as.matrix(sweep(myRCTD@results$weights, 1, 
+            rowSums(myRCTD@results$weights), "/"))
+        thresh <- 0.8
+    }
+    cell_types <- choose_cell_types(myRCTD, barcodes, doublet_mode, 
+        cell_type_threshold, cell_types, my_beta, thresh, cell_type_filter)
+    if (doublet_mode && myRCTD@config$RCTDmode != "doublet") 
+        stop("run.CSIDE.general: attempted to run CSIDE in doublet mode, but RCTD was not run in doublet mode. Please run CSIDE in full mode (doublet_mode = F) or run RCTD in doublet mode.")
+    cell_type_info <- myRCTD@cell_type_info$info
+    if (doublet_mode) {
+        my_beta <- get_beta_doublet(barcodes, cell_type_info[[2]], 
+            myRCTD@results$results_df, myRCTD@results$weights_doublet)
+        thresh = 0.999
+    }
+    else {
+        my_beta <- as.matrix(sweep(myRCTD@results$weights, 1, 
+            rowSums(myRCTD@results$weights), "/"))
+        thresh = 0.95
+    }
+    if (!is.null(weight_threshold)) 
+        thresh = weight_threshold
+    res <- filter_barcodes_cell_types(barcodes, cell_types, my_beta, 
+        thresh = thresh)
+    my_beta <- res$my_beta
+    return(colSums(my_beta))
+}
+
+FUNCTION create_RCTD_plots 
+function (myRCTD, datadir) 
+{
+    results <- myRCTD@results
+    norm_weights = sweep(results$weights, 1, rowSums(results$weights), 
+        "/")
+    cell_type_names <- myRCTD@cell_type_info$info[[2]]
+    spatialRNA <- myRCTD@spatialRNA
+    resultsdir <- file.path(datadir, "RCTD_Plots")
+    if (!dir.exists(resultsdir)) 
+        dir.create(resultsdir)
+    plot_weights(cell_type_names, spatialRNA, resultsdir, norm_weights)
+    plot_weights_unthreshold(cell_type_names, spatialRNA, resultsdir, 
+        norm_weights)
+    plot_weights_doublet(cell_type_names, spatialRNA, resultsdir, 
+        results$weights_doublet, results$results_df)
+    plot_cond_occur(cell_type_names, resultsdir, norm_weights, 
+        spatialRNA)
+    plot_all_cell_types(results$results_df, spatialRNA@coords, 
+        cell_type_names, resultsdir)
+}
+
+FUNCTION export.RCTD 
+function (RCTD, datadir) 
+{
+    doublet_mode <- myRCTD@config$RCTDmode
+    if (is.null(doublet_mode)) 
+        stop("RCTD@config$RCTDmode is NULL. Please set to one of 'doublet', 'multi', 'full'.")
+    if (!(doublet_mode %in% c("doublet", "multi", "full"))) 
+        stop(paste0("export.RCTD: RCTD@config$RCTDmode=", doublet_mode, 
+            " is not a valid choice. Please set doublet_mode=doublet, multi, or full."))
+    if (doublet_mode == "multi") 
+        stop("export.RCTD not implemented for RCTD@config$RCTDmode = 'multi'. Please contact the developers for assistance.")
+    write.csv(RCTD@results$weights, file.path(datadir, "weights.csv"))
+    if (doublet_mode == "doublet") {
+        write.csv(RCTD@results$weights_doublet, file.path(datadir, 
+            "weights_doublet.csv"))
+        write.csv(RCTD@results$results_df, file.path(datadir, 
+            "results_df.csv"))
+    }
+}
+
+FUNCTION exvar.celltocell.interactions 
+function (myRCTD, barcodes, cell_type, radius = 50) 
+{
+    doublet_df <- myRCTD@results$results_df
+    weights_doublet <- myRCTD@results$weights_doublet
+    puck <- myRCTD@spatialRNA
+    target_df = dplyr::filter(doublet_df, (rownames(doublet_df) %in% 
+        barcodes) & ((first_type == cell_type & (spot_class != 
+        "reject")) | ((second_type == cell_type) & (spot_class == 
+        "doublet_certain"))))
+    target_barcodes = rownames(target_df)
+    all_barcodes = barcodes
+    explanatory.variable = c(rep(0, length(all_barcodes)))
+    names(explanatory.variable) = all_barcodes
+    dist_matrix = fields::rdist(as.matrix(puck@coords))
+    rownames(dist_matrix) = rownames(puck@coords)
+    colnames(dist_matrix) = rownames(puck@coords)
+    exponent_mat = exp(-dist_matrix/radius)
+    weighted_nUMIs = c(rep(0, length(target_barcodes)))
+    names(weighted_nUMIs) = target_barcodes
+    for (i in 1:length(weighted_nUMIs)) {
+        barcode = target_barcodes[i]
+        nUMI = puck@nUMI[barcode]
+        spot_class = doublet_df[barcode, "spot_class"]
+        first_type = doublet_df[barcode, "first_type"]
+        second_type = doublet_df[barcode, "second_type"]
+        weight = 0
+        if (spot_class == "singlet") {
+            weight = if (first_type == cell_type) 
+                1
+            else 0
+        }
+        else {
+            weight = if (first_type == cell_type) 
+                weights_doublet[barcode, 1]
+            else weights_doublet[barcode, 2]
+        }
+        weighted_nUMI = nUMI * weight
+        weighted_nUMIs[i] = weighted_nUMI
+    }
+    for (i in 1:length(all_barcodes)) {
+        barcode = all_barcodes[i]
+        exp_dists = exponent_mat[barcode, target_barcodes]
+        proximity_score = weighted_nUMIs %*% exp_dists
+        explanatory.variable[i] = proximity_score
+    }
+    explanatory.variable = normalize_ev(explanatory.variable)
+}
+
+FUNCTION gather_results 
+function (RCTD, results) 
+{
+    cell_type_names = RCTD@cell_type_info$renorm[[2]]
+    barcodes <- colnames(RCTD@spatialRNA@counts)
+    N <- length(results)
+    weights = Matrix(0, nrow = N, ncol = length(cell_type_names))
+    weights_doublet = Matrix(0, nrow = N, ncol = 2)
+    rownames(weights) = barcodes
+    rownames(weights_doublet) = barcodes
+    colnames(weights) = cell_type_names
+    colnames(weights_doublet) = c("first_type", "second_type")
+    empty_cell_types = factor(character(N), levels = cell_type_names)
+    spot_levels <- c("reject", "singlet", "doublet_certain", 
+        "doublet_uncertain")
+    results_df <- data.frame(spot_class = factor(character(N), 
+        levels = spot_levels), first_type = empty_cell_types, 
+        second_type = empty_cell_types, first_class = logical(N), 
+        second_class = logical(N), min_score = numeric(N), singlet_score = numeric(N), 
+        conv_all = logical(N), conv_doublet = logical(N))
+    score_mat <- list()
+    singlet_scores <- list()
+    for (i in 1:N) {
+        if (i%%1000 == 0) 
+            print(paste("gather_results: finished", i))
+        weights_doublet[i, ] = results[[i]]$doublet_weights
+        weights[i, ] = results[[i]]$all_weights
+        results_df[i, "spot_class"] = results[[i]]$spot_class
+        results_df[i, "first_type"] = results[[i]]$first_type
+        results_df[i, "second_type"] = results[[i]]$second_type
+        results_df[i, "first_class"] = results[[i]]$first_class
+        results_df[i, "second_class"] = results[[i]]$second_class
+        results_df[i, "min_score"] = results[[i]]$min_score
+        results_df[i, "singlet_score"] = results[[i]]$singlet_score
+        results_df[i, "conv_all"] = results[[i]]$conv_all
+        results_df[i, "conv_doublet"] = results[[i]]$conv_doublet
+        score_mat[[i]] <- results[[i]]$score_mat
+        singlet_scores[[i]] <- results[[i]]$singlet_scores
+    }
+    rownames(results_df) = barcodes
+    RCTD@results <- list(results_df = results_df, weights = weights, 
+        weights_doublet = weights_doublet, score_mat = score_mat, 
+        singlet_scores = singlet_scores)
+    return(RCTD)
+}
+
+FUNCTION get_beta_doublet 
+function (barcodes, cell_type_names, results_df, weights_doublet) 
+{
+    my_beta <- matrix(0, nrow = length(barcodes), ncol = length(cell_type_names))
+    rownames(my_beta) <- barcodes
+    colnames(my_beta) <- cell_type_names
+    for (barcode in barcodes) {
+        if (results_df[barcode, "spot_class"] %in% c("singlet", 
+            "doublet_certain")) {
+            my_beta[barcode, results_df[barcode, "first_type"]] <- weights_doublet[barcode, 
+                1]
+            if (results_df[barcode, "spot_class"] == "doublet_certain") 
+                my_beta[barcode, results_df[barcode, "second_type"]] <- weights_doublet[barcode, 
+                  2]
+            else my_beta[barcode, results_df[barcode, "first_type"]] <- 1
+        }
+    }
+    return(my_beta)
+}
+
+FUNCTION get_decomposed_data 
+function (results_df, gene_list, puck, weights_doublet, cell_type_info) 
+{
+    warning("In the current RCTD version, get_decomposed_data is deprecated, and is no longer supported. For differential expression tasks, we instead recommend the RCTDE method.")
+    doublets <- results_df[results_df$spot_class == "doublet_certain", 
+        ]
+    first_DGE <- Matrix(0, nrow = dim(doublets)[1], ncol = length(gene_list))
+    second_DGE <- Matrix(0, nrow = dim(doublets)[1], ncol = length(gene_list))
+    rownames(first_DGE) = rownames(doublets)
+    rownames(second_DGE) = rownames(doublets)
+    colnames(first_DGE) = gene_list
+    colnames(second_DGE) = gene_list
+    for (ind in 1:dim(doublets)[1]) {
+        print(ind)
+        barcode = rownames(doublets)[ind]
+        doub_res <- decompose_doublet_fast(puck@counts[gene_list, 
+            barcode], weights_doublet[barcode, ], gene_list, 
+            cell_type_info, results_df[barcode, "first_type"], 
+            results_df[barcode, "second_type"])
+        first_DGE[barcode, ] <- doub_res$expect_1
+        second_DGE[barcode, ] <- doub_res$expect_2
+    }
+    singlet_id <- results_df$spot_class == "singlet"
+    all_DGE <- rbind(first_DGE, second_DGE, t(puck@counts[gene_list, 
+        singlet_id]))
+    cell_type_labels <- unlist(list(doublets$first_type, doublets$second_type, 
+        results_df[singlet_id, "first_type"]))
+    coords <- rbind(puck@coords[rownames(doublets), c("x", "y")], 
+        puck@coords[rownames(doublets), c("x", "y")], puck@coords[singlet_id, 
+            c("x", "y")])
+    nUMI <- c(weights_doublet[rownames(doublets), "first_type"] * 
+        puck@nUMI[rownames(first_DGE)], weights_doublet[rownames(doublets), 
+        "second_type"] * puck@nUMI[rownames(second_DGE)], puck@nUMI[singlet_id])
+    rownames(coords) = 1:dim(coords)[1]
+    names(nUMI) = 1:dim(coords)[1]
+    rownames(all_DGE) = 1:dim(coords)[1]
+    puck_d <- SpatialRNA(coords, t(all_DGE), nUMI, require_int = F)
+    return(puck_d)
+}
+
+FUNCTION get_doublet_weights 
+function (myRCTD) 
+{
+    barcodes <- rownames(myRCTD@results$results_df)
+    cell_type_names <- myRCTD@cell_type_info$info[[2]]
+    get_beta_doublet(barcodes, cell_type_names, myRCTD@results$results_df, 
+        myRCTD@results$weights_doublet)
+}
+
+FUNCTION plot_weights_doublet 
+function (cell_type_names, puck, resultsdir, weights_doublet, 
+    results_df, ylimit = c(0, 1), title = NULL, counter_barcodes = NULL, 
+    my_pal = NULL, xlim = NULL, ylim = NULL, size = 0.15, alpha = 1, 
+    small_point = F) 
+{
+    plots <- vector(mode = "list", length = length(cell_type_names))
+    for (i in 1:length(cell_type_names)) {
+        cell_type = cell_type_names[i]
+        all_weights <- weights_doublet[results_df$spot_class == 
+            "doublet_certain" & results_df$second_type == cell_type, 
+            2, drop = FALSE]
+        all_weights <- rbind(all_weights, weights_doublet[!(results_df$spot_class == 
+            "reject") & results_df$first_type == cell_type, 1, 
+            drop = FALSE])
+        all_weights_vec <- as.vector(all_weights)
+        names(all_weights_vec) <- rownames(all_weights)
+        if (length(all_weights) > 0) 
+            plots[[i]] <- plot_puck_continuous(puck, rownames(all_weights), 
+                all_weights_vec, title = cell_type, ylimit = c(0, 
+                  1), counter_barcodes = counter_barcodes, my_pal = my_pal, 
+                xlim = xlim, ylim = ylim, size = size, alpha = alpha, 
+                small_point = small_point)
+        else plots[[i]] <- NULL
+    }
+    pdf(file.path(resultsdir, "cell_type_weights_doublets.pdf"))
+    invisible(lapply(plots, print))
+    dev.off()
+}
+
+FUNCTION run.CSIDE.general 
+function (myRCTD, X1, X2, barcodes, cell_types = NULL, gene_threshold = 5e-05, 
+    cell_type_threshold = 125, doublet_mode = T, test_mode = "individual", 
+    weight_threshold = NULL, sigma_gene = T, PRECISION.THRESHOLD = 0.05, 
+    cell_types_present = NULL, test_genes_sig = T, fdr = 0.01, 
+    params_to_test = NULL, normalize_expr = F, logs = F, cell_type_filter = NULL, 
+    log_fc_thresh = 0.4, test_error = FALSE, fdr_method = "BH") 
+{
+    if (gene_threshold == 0.01 || fdr == 0.25 || cell_type_threshold <= 
+        10 || (!is.null(weight_threshold) && weight_threshold == 
+        0.1)) 
+        warning("run.CSIDE.general: some parameters are set to the CSIDE vignette values, which are intended for testing but not proper execution. For more accurate results, consider using the default parameters to this function.")
+    else if (weight_threshold < 0.75) 
+        warning("run.CSIDE.general: we recommend setting weight_threshold to at least 0.75 since otherwise cell types not included in the model will have large proportions.")
+    if (doublet_mode && myRCTD@config$RCTDmode != "doublet") 
+        stop("run.CSIDE.general: attempted to run CSIDE in doublet mode, but RCTD was not run in doublet mode. Please run CSIDE in full mode (doublet_mode = F) or run RCTD in doublet mode.")
+    if (!any("cell_types_assigned" %in% names(myRCTD@internal_vars)) || 
+        !myRCTD@internal_vars$cell_types_assigned) 
+        stop("run.CSIDE.general: cannot run CSIDE unless cell types have been assigned. If cell types have been assigned, you may run \"myRCTD <- set_cell_types_assigned(myRCTD)\".")
+    if ((myRCTD@config$RCTDmode != "multi") && (length(setdiff(barcodes, 
+        rownames(myRCTD@results$weights))) > 0)) {
+        warning("run.CSIDE.general: some elements of barcodes do not appear in myRCTD object (myRCTD@results$weights), but they are required to be a subset. Downsampling barcodes to the intersection of the two sets.")
+        barcodes <- intersect(barcodes, rownames(myRCTD@results$weights))
+    }
+    cell_type_info <- myRCTD@cell_type_info$info
+    if (doublet_mode) {
+        my_beta <- get_beta_doublet(barcodes, cell_type_info[[2]], 
+            myRCTD@results$results_df, myRCTD@results$weights_doublet)
+        thresh <- 0.999
+    }
+    else if (myRCTD@config$RCTDmode == "multi") {
+        my_beta <- get_beta_multi(barcodes, cell_type_info[[2]], 
+            myRCTD@results, myRCTD@spatialRNA@coords)
+        thresh <- 0.999
+    }
+    else {
+        my_beta <- as.matrix(sweep(myRCTD@results$weights, 1, 
+            rowSums(myRCTD@results$weights), "/"))
+        thresh <- 0.8
+    }
+    if (!is.null(weight_threshold)) 
+        thresh <- weight_threshold
+    cell_types <- choose_cell_types(myRCTD, barcodes, doublet_mode, 
+        cell_type_threshold, cell_types, my_beta, thresh, cell_type_filter)
+    if (length(cell_types) < 1) 
+        stop("run.CSIDE.general: zero cell types remain. Cannot run CSIDE with zero cell types.")
+    message(paste0("run.CSIDE.general: running CSIDE with cell types ", 
+        paste(cell_types, collapse = ", ")))
+    X1 <- check_designmatrix(X1, "run.CSIDE.general")
+    X2 <- check_designmatrix(X2, "run.CSIDE.general", require_2d = TRUE)
+    if (!(test_mode %in% c("individual", "categorical"))) 
+        stop(c("run.CSIDE.general: not valid test_mode = ", test_mode, 
+            ". Please set test_mode = \"categorical\" or \"individual\"."))
+    if (is.null(params_to_test)) 
+        if (test_mode == "individual") 
+            params_to_test <- min(2, dim(X2)[2])
+        else params_to_test <- 1:dim(X2)[2]
+    if (normalize_expr && (test_mode != "individual" || length(params_to_test) > 
+        1)) 
+        stop("run.CSIDE.general: Setting normalize_expr = TRUE is only valid for testing single parameters with test_mode = individual")
+    message(paste0("run.CSIDE.general: configure params_to_test = ", 
+        paste(paste0(params_to_test, ", ", collapse = ""))))
+    if (any(!(params_to_test %in% 1:dim(X2)[2]))) 
+        stop(c("run.CSIDE.general: params_to_test must be a vector of integers from 1 to dim(X2)[2] = ", 
+            dim(X2)[2], "please make sure that tested parameters are in the required range."))
+    if (test_mode == "categorical" && any(!(X2[, params_to_test] %in% 
+        c(0, 1)))) 
+        stop(c("run.CSIDE.general: for test_mode = categorical, colums params_to_test, ", 
+            params_to_test, ", must have values 0 or 1."))
+    if (is.null(cell_types_present)) 
+        cell_types_present <- cell_types
+    if (any(!(barcodes %in% rownames(X1))) || any(!(barcodes %in% 
+        rownames(X2)))) 
+        stop("run.CSIDE.general: some barcodes do not appear in the rownames of X1 or X2.")
+    puck = myRCTD@originalSpatialRNA
+    gene_list_tot <- filter_genes(puck, threshold = gene_threshold)
+    if (length(gene_list_tot) == 0) 
+        stop("run.CSIDE.general: no genes past threshold. Please consider lowering gene_threshold.")
+    if (length(intersect(gene_list_tot, rownames(cell_type_info[[1]]))) == 
+        0) 
+        stop("run.CSIDE.general: no genes that past threshold were contained in the single cell reference. Please lower gene threshold or ensure that there is agreement between the single cell reference genes and the SpatialRNA genes.")
+    nUMI <- puck@nUMI[barcodes]
+    res <- filter_barcodes_cell_types(barcodes, cell_types, my_beta, 
+        thresh = thresh)
+    if (test_error) 
+        return(myRCTD)
+    barcodes <- res$barcodes
+    my_beta <- res$my_beta
+    sigma_init <- as.character(100 * myRCTD@internal_vars$sigma)
+    if (sigma_gene) {
+        set_global_Q_all()
+        sigma_set <- sigma_init
+        set_likelihood_vars(Q_mat_all[[sigma_init]], X_vals, 
+            sigma = sigma_set)
+    }
+    else {
+        set_likelihood_vars_sigma(sigma_init)
+    }
+    gene_fits <- get_de_gene_fits(X1[barcodes, , drop = FALSE], 
+        X2[barcodes, , drop = FALSE], my_beta, nUMI[barcodes], 
+        gene_list_tot, cell_types, restrict_puck(puck, barcodes), 
+        barcodes, sigma_init, test_mode, numCores = myRCTD@config$max_cores, 
+        sigma_gene = sigma_gene, PRECISION.THRESHOLD = PRECISION.THRESHOLD, 
+        params_to_test = params_to_test, logs = logs)
+    if (normalize_expr) 
+        myRCTD <- normalize_de_estimates(myRCTD, normalize_expr = normalize_expr, 
+            param_position = params_to_test)
+    if (test_genes_sig) {
+        both_gene_list <- get_sig_genes(puck, myRCTD, gene_list_tot, 
+            cell_types, my_beta, barcodes, nUMI, gene_fits, cell_types_present, 
+            X2, test_mode, fdr = fdr, params_to_test = params_to_test, 
+            normalize_expr = normalize_expr, log_fc_thresh = log_fc_thresh, 
+            fdr_method = fdr_method)
+        sig_gene_list <- both_gene_list$sig_gene_list
+        all_gene_list <- both_gene_list$all_gene_list
+    }
+    else {
+        sig_gene_list <- NULL
+        all_gene_list <- NULL
+    }
+    myRCTD@internal_vars_de <- list(barcodes = barcodes, cell_types = cell_types, 
+        doublet_mode = doublet_mode, cell_types_present = cell_types_present, 
+        my_beta = my_beta, X1 = X1, X2 = X2, test_mode = test_mode, 
+        params_to_test = params_to_test)
+    myRCTD@de_results <- list(gene_fits = gene_fits, sig_gene_list = sig_gene_list, 
+        all_gene_list = all_gene_list)
+    return(myRCTD)
+}

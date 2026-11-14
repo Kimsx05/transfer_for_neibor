@@ -1,0 +1,213 @@
+Tracing function "makeCluster" in package "namespace:parallel"
+[1] "makeCluster"
+'as(<dgTMatrix>, "dgCMatrix")' is deprecated.
+Use 'as(., "CsparseMatrix")' instead.
+See help("Deprecated") and help("Matrix-deprecated").
+           used  (Mb) gc trigger   (Mb)  max used   (Mb)
+Ncells  8318728 444.3   14292600  763.4   9411163  502.7
+Vcells 65076956 496.5  183650067 1401.2 182886462 1395.4
+Begin: process_cell_type_info
+process_cell_type_info: number of cells in reference: 18289
+process_cell_type_info: number of genes in reference: 13960
+
+                  Arterial EC                      C1QC TAM 
+                          600                           600 
+                 Capillary EC       CD4 Helper_Conventional 
+                          600                           600 
+        CD4 Naive_Memory-like                 CD8 Exhausted 
+                          600                           600 
+CD8 GZMK_Effector-memory-like                          cDC1 
+                          600                           531 
+                         cDC2                Classical Mono 
+                          600                           600 
+                   Epithelial                          GC B 
+                         1800                           525 
+                         iCAF                      LAMP3 DC 
+                          600                           600 
+                 Lymphatic EC                          Mast 
+                          362                           600 
+                   Matrix_CAF                Naive_Memory B 
+                          600                           600 
+                   Neutrophil                            NK 
+                          600                           600 
+                          pDC                      Pericyte 
+                          377                           600 
+                       Plasma                          rCAF 
+                          600                           600 
+                          SMC                      SPP1 TAM 
+                          600                           600 
+              Tfh_CXCL13-like                          Treg 
+                          600                           600 
+                         vCAF                     Venous EC 
+                          294                           600 
+End: process_cell_type_info
+create.RCTD: getting regression differentially expressed genes: 
+get_de_genes: Arterial EC found DE genes: 320
+get_de_genes: C1QC TAM found DE genes: 258
+get_de_genes: Capillary EC found DE genes: 308
+get_de_genes: CD4 Helper_Conventional found DE genes: 171
+get_de_genes: CD4 Naive_Memory-like found DE genes: 205
+get_de_genes: CD8 Exhausted found DE genes: 221
+get_de_genes: CD8 GZMK_Effector-memory-like found DE genes: 200
+get_de_genes: cDC1 found DE genes: 224
+get_de_genes: cDC2 found DE genes: 203
+get_de_genes: Classical Mono found DE genes: 232
+get_de_genes: Epithelial found DE genes: 198
+get_de_genes: GC B found DE genes: 406
+get_de_genes: iCAF found DE genes: 294
+get_de_genes: LAMP3 DC found DE genes: 303
+get_de_genes: Lymphatic EC found DE genes: 287
+get_de_genes: Mast found DE genes: 197
+get_de_genes: Matrix_CAF found DE genes: 258
+get_de_genes: Naive_Memory B found DE genes: 212
+get_de_genes: Neutrophil found DE genes: 379
+get_de_genes: NK found DE genes: 223
+get_de_genes: pDC found DE genes: 367
+get_de_genes: Pericyte found DE genes: 279
+get_de_genes: Plasma found DE genes: 74
+get_de_genes: rCAF found DE genes: 257
+get_de_genes: SMC found DE genes: 285
+get_de_genes: SPP1 TAM found DE genes: 243
+get_de_genes: Tfh_CXCL13-like found DE genes: 214
+get_de_genes: Treg found DE genes: 228
+get_de_genes: vCAF found DE genes: 412
+get_de_genes: Venous EC found DE genes: 335
+get_de_genes: total DE genes: 3070
+create.RCTD: getting platform effect normalization differentially expressed genes: 
+get_de_genes: Arterial EC found DE genes: 626
+get_de_genes: C1QC TAM found DE genes: 483
+get_de_genes: Capillary EC found DE genes: 590
+get_de_genes: CD4 Helper_Conventional found DE genes: 481
+get_de_genes: CD4 Naive_Memory-like found DE genes: 512
+get_de_genes: CD8 Exhausted found DE genes: 546
+get_de_genes: CD8 GZMK_Effector-memory-like found DE genes: 478
+get_de_genes: cDC1 found DE genes: 438
+get_de_genes: cDC2 found DE genes: 435
+get_de_genes: Classical Mono found DE genes: 439
+get_de_genes: Epithelial found DE genes: 512
+get_de_genes: GC B found DE genes: 842
+get_de_genes: iCAF found DE genes: 549
+get_de_genes: LAMP3 DC found DE genes: 536
+get_de_genes: Lymphatic EC found DE genes: 579
+get_de_genes: Mast found DE genes: 401
+get_de_genes: Matrix_CAF found DE genes: 550
+get_de_genes: Naive_Memory B found DE genes: 534
+get_de_genes: Neutrophil found DE genes: 603
+get_de_genes: NK found DE genes: 490
+get_de_genes: pDC found DE genes: 623
+get_de_genes: Pericyte found DE genes: 557
+get_de_genes: Plasma found DE genes: 145
+get_de_genes: rCAF found DE genes: 509
+get_de_genes: SMC found DE genes: 508
+get_de_genes: SPP1 TAM found DE genes: 460
+get_de_genes: Tfh_CXCL13-like found DE genes: 508
+get_de_genes: Treg found DE genes: 518
+get_de_genes: vCAF found DE genes: 798
+get_de_genes: Venous EC found DE genes: 613
+get_de_genes: total DE genes: 4947
+FIT bin16 1658 
+fitBulk: decomposing bulk
+chooseSigma: using initial Q_mat with sigma =  1
+starting worker pid=1895221 on localhost:11227 at 00:34:17.227
+starting worker pid=1895251 on localhost:11227 at 00:34:17.280
+starting worker pid=1895279 on localhost:11227 at 00:34:17.332
+starting worker pid=1895308 on localhost:11227 at 00:34:17.386
+loaded spacexr and set parent environment
+loaded spacexr and set parent environment
+loaded spacexr and set parent environment
+loaded spacexr and set parent environment
+Likelihood value: 1163674.66266865
+Sigma value:  0.84
+starting worker pid=1907593 on localhost:11227 at 00:35:16.472
+starting worker pid=1907639 on localhost:11227 at 00:35:16.547
+starting worker pid=1907683 on localhost:11227 at 00:35:16.621
+starting worker pid=1907727 on localhost:11227 at 00:35:16.696
+loaded spacexr and set parent environment
+loaded spacexr and set parent environment
+loaded spacexr and set parent environment
+loaded spacexr and set parent environment
+Likelihood value: 1153998.64448989
+Sigma value:  0.69
+starting worker pid=1914736 on localhost:11227 at 00:36:13.750
+starting worker pid=1914783 on localhost:11227 at 00:36:13.830
+starting worker pid=1914824 on localhost:11227 at 00:36:13.909
+starting worker pid=1914899 on localhost:11227 at 00:36:13.987
+loaded spacexr and set parent environment
+loaded spacexr and set parent environment
+loaded spacexr and set parent environment
+loaded spacexr and set parent environment
+Likelihood value: 1147906.3005367
+Sigma value:  0.61
+starting worker pid=1926490 on localhost:11227 at 00:37:11.346
+starting worker pid=1926540 on localhost:11227 at 00:37:11.423
+starting worker pid=1926585 on localhost:11227 at 00:37:11.502
+starting worker pid=1926629 on localhost:11227 at 00:37:11.579
+loaded spacexr and set parent environment
+loaded spacexr and set parent environment
+loaded spacexr and set parent environment
+loaded spacexr and set parent environment
+Likelihood value: 1145965.99924018
+Sigma value:  0.55
+starting worker pid=1937042 on localhost:11227 at 00:38:09.328
+starting worker pid=1937095 on localhost:11227 at 00:38:09.409
+starting worker pid=1937138 on localhost:11227 at 00:38:09.488
+starting worker pid=1937193 on localhost:11227 at 00:38:09.567
+loaded spacexr and set parent environment
+loaded spacexr and set parent environment
+loaded spacexr and set parent environment
+loaded spacexr and set parent environment
+Likelihood value: 1145139.46584547
+Sigma value:  0.52
+starting worker pid=1947490 on localhost:11227 at 00:39:07.457
+starting worker pid=1947535 on localhost:11227 at 00:39:07.534
+starting worker pid=1947587 on localhost:11227 at 00:39:07.612
+starting worker pid=1947636 on localhost:11227 at 00:39:07.691
+loaded spacexr and set parent environment
+loaded spacexr and set parent environment
+loaded spacexr and set parent environment
+loaded spacexr and set parent environment
+Likelihood value: 1144930.65518862
+Sigma value:  0.5
+starting worker pid=1960238 on localhost:11227 at 00:40:05.048
+starting worker pid=1960295 on localhost:11227 at 00:40:05.133
+starting worker pid=1960353 on localhost:11227 at 00:40:05.220
+starting worker pid=1960409 on localhost:11227 at 00:40:05.305
+loaded spacexr and set parent environment
+loaded spacexr and set parent environment
+loaded spacexr and set parent environment
+loaded spacexr and set parent environment
+Likelihood value: 1144866.53074023
+Sigma value:  0.5
+starting worker pid=1972161 on localhost:11227 at 00:41:02.368
+starting worker pid=1972162 on localhost:11227 at 00:41:02.439
+starting worker pid=1972165 on localhost:11227 at 00:41:02.510
+starting worker pid=1972167 on localhost:11227 at 00:41:02.583
+loaded spacexr and set parent environment
+loaded spacexr and set parent environment
+loaded spacexr and set parent environment
+loaded spacexr and set parent environment
+[1] "gather_results: finished 1000"
+RCTD_COMPLETE
+	Command being timed: "taskset -c 0,1,2,3 nice -n 10 Rscript --vanilla /home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_mp10_treg_endo_precommunication_v1/code/03_rctd.R bin16"
+	User time (seconds): 1966.27
+	System time (seconds): 78.86
+	Percent of CPU this job got: 306%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 11:06.65
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3416740
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 23822873
+	Voluntary context switches: 15154
+	Involuntary context switches: 19134
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 1784
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

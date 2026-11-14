@@ -1,0 +1,24 @@
+{
+  "unit": "bin8",
+  "n_input": 7642,
+  "n_fit": 5263,
+  "statuses": {
+    "singlet": 3002,
+    "below_UMI100": 2332,
+    "doublet_certain": 933,
+    "doublet_uncertain": 923,
+    "reject": 405,
+    "not_expression_QC": 36,
+    "excluded_algorithm_gene_count_gate": 11
+  },
+  "weight_columns": [
+    "first_type",
+    "second_type"
+  ],
+  "weight_row_sum_range": [
+    0.9999999999999989,
+    1.000000000000001
+  ],
+  "version": "2.2.1",
+  "serialization_note": "native fit completed; summary reconstructed from saved exact result tables after JSON table-class serialization error; no repeat model fitting"
+}

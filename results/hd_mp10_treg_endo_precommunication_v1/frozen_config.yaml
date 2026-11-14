@@ -1,0 +1,88 @@
+version: 1
+created: '2026-11-13T23:43:37.079479'
+sections:
+  Cervilla: full
+  D1_Johnson: light_target_evaluability
+seed: 123
+validation_seeds:
+- 123
+- 124
+- 125
+threads: 4
+night_window: 23:00–07:00 Asia/Shanghai
+ROI_selection: 5 inherited; 256um squares centred on strongest unsmoothed T-panel
+  and endothelial-panel block, plus nonimmune measured control; no MP10 relationship
+reference: final30 exact membership, complete lineage background
+reference_cap_per_type: 600
+epi_reference_cap: 1800
+holdout: every fifth sorted orig.ident; sample not patient holdout
+rctd:
+  mode: doublet
+  UMI_min: 100
+  UMI_min_sigma: 300
+  counts_MIN: 10
+  max_cores: 4
+cell_annotation: SingleR wilcox aggregate reference, no TIGIT; all genes shared before
+  DE selection; lineage support and fine subtype uncertainty separate
+radii_um:
+- 50
+- 200
+niche_K:
+- 2
+- 4
+- 6
+- 8
+niche_seeds:
+- 123
+- 456
+- 789
+niche_selection: stable per-cluster match and interpretable composition; K2 retained;
+  choose smallest finer K with seedARI>=0.8 and blockARI>=0.6 and minimum matched-cluster
+  Jaccard>=0.4; otherwise coarse
+MP10:
+  genes:
+  - HMGCS1
+  - MSMO1
+  - INSIG1
+  - FDFT1
+  - SQLE
+  - FDPS
+  - IDI1
+  - ACSS2
+  - ELOVL5
+  - LDLR
+  - MVD
+  - SCD
+  - HMGCR
+  - ACAT2
+  - SLC20A1
+  - ACSL3
+  - ACSL1
+  - ADIPOR2
+  - MXD1
+  - NPC1
+  original_aucMaxRank_fraction: 0.05
+  zero_ties: random seed audit; keepZeroesAsNA sensitivity
+  quantile_type: 7
+  groups:
+  - L50
+  - H50
+  - H10
+  - H05
+  eligibility: credible Epi; >=5 detected Top20; rank/depth validation; if poor single-unit
+    precision use fixed Epi-only 64um grid pooled raw counts, >=5 credible Epi units,
+    not crossing input components
+  primary_tie_method: historical average rank, not native random zero ties
+  implementation_source: neighborhood_mp10_calibration_v5/code/common.py::auc_parts
+  implementation_correction_before_association: true
+association:
+  primary: continuous MP10
+  block_um: 400
+  bootstrap: 499
+  min_blocks: 12
+  continuous_BH_family: Treg support, Treg/CD4 or Treg/T, Treg distance, Endothelial
+    support and distance at 50/200; reverse comparison
+  niche_family: niche MP10 contrasts at both radii
+  conditions: log1p nCount, Epi support/purity, observed support; additional vessel
+    distance; no collinear nFeature together with nCount
+frozen_before_association: true
