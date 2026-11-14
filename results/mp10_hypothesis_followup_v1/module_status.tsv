@@ -1,0 +1,16 @@
+module	status	reason
+M0	completed	证据、8篇指定原文书目/摘要、假说、基因集及模型冻结；clinical addendum和cluster字段修复留档
+M1_input	completed	原40标本116448 Epi；原始冻结边界成员核验；Epi_all真实原计数；Treg分层raw counts；别名与背景审计
+M1_fgsea_numeric	completed	20个受影响model/library/mask组合的全部通路按数值诊断重估；旧值不覆盖，eps下界单列
+M2	completed	10项Epi_all主关联、Full/M20、2个TF资源、unique-target、原cluster及RNA敏感性；配对分支富集覆盖不足保留NE
+M3	completed	All/NC/CY 32/30/28个主覆盖单位；36个计数模型及Hallmark分解；统一评分尺度与共同样本对照
+M4	completed	18主+9NC全部可评价，均无主族q<0.05；总1473登记模型：924 completed，549 NE
+M5	completed	复用Tfh/内皮、丰度、受体、SCENIC/NicheNet背景；新分数主分析的覆盖/HC3限制逐项记录
+SREBF2_Epi_SCENIC	not_evaluable	既有motif-pruned regulon缺失；不借用SREBF1、不补零、不重跑
+forward_NicheNet_new_targets	not_evaluable	仅复用既有0–2个正target限制；未放宽、未重跑
+Treg_CY_primary_HC3	not_evaluable	28个profile但存在singleton dataset导致h=1，HC3不可定义；独立可估计的edgeR计数分支已完成
+parallel_primary_HC3	not_evaluable	Tfh/Capillary有singleton dataset或冻结signature覆盖不足；Arterial df不足；保留可运行敏感性和旧结果
+Treg_secondary_low_coverage	not_evaluable	FA合成、摄取/运输、prenylation未达冻结5基因且50%覆盖；另2程序照常完成
+new_HD_CellChat_SCENIC_NicheNet	not_evaluable	明确不在本轮重跑范围；HD仅登记pending问题，不作为阴性证据
+validation	completed	1563/1563 checks passed
+rendering	completed	70/70 render checks passed

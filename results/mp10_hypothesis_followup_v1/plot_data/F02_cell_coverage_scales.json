@@ -1,0 +1,25 @@
+{
+  "width": 15,
+  "height": 13,
+  "font": "Arial",
+  "font_pt": 12,
+  "line_mm": 0.4,
+  "dpi": 300,
+  "scales": [
+    {
+      "aesthetics": "fill",
+      "limits": [0, 4.001],
+      "class": "ScaleContinuous"
+    },
+    {
+      "aesthetics": ["x", "xmin", "xmax", "xend", "xintercept", "xmin_final", "xmax_final", "xlower", "xmiddle", "xupper", "x0"],
+      "limits": [0, 1],
+      "class": "ScaleDiscretePosition"
+    },
+    {
+      "aesthetics": ["y", "ymin", "ymax", "yend", "yintercept", "ymin_final", "ymax_final", "lower", "middle", "upper", "y0"],
+      "limits": [0, 1],
+      "class": "ScaleDiscretePosition"
+    }
+  ]
+}

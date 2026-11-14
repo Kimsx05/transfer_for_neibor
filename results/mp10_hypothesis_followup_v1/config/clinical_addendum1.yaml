@@ -1,0 +1,10 @@
+{
+  "frozen_utc": "2026-11-13T16:01:55.023098+00:00",
+  "type": "implementation of preplanned conditional clinical sensitivity after metadata coverage audit",
+  "original": "run only if reliable consistent source fields and dataset crossover",
+  "finding": "recorded Type MIBC/NMIBC is consistent within specimen and available in all 40; both classes occur within 3 datasets; T stage missing 14/40 and not imputed",
+  "covariate": "original recorded Type: MIBC=1 NMIBC=0, not re-derived from stage",
+  "model_count": 36,
+  "families": "bridge primary18; noncycling9; matched All9, separate sensitivity BH families",
+  "limitation": "recorded source clinical annotation, no new clinical verification or treatment inference; audit finished after primary results, no P-based field selection; original M0 files remain retained"
+}

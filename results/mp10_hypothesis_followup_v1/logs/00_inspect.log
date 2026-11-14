@@ -1,0 +1,102 @@
+PB counts detected_cells normalized_sum profiles feature_universe 
+ 90011 1174 
+Profile columns: sample_uid profile_id profile_type n_cells total_counts detected_genes counts_per_cell dataset specimen_id patient_uid_recorded main_patient replacement_patient Q50 Q95 Q50_z Q95_z eligible_50 eligible_30 
+                     profile_type n_profiles   n50   n30
+                           <char>      <int> <int> <int>
+ 1:                   Arterial EC         32     4     5
+ 2:                      C1QC TAM         40    31    35
+ 3:                  Capillary EC         35    12    14
+ 4:       CD4 Helper/Conventional         37    21    26
+ 5:         CD4 Naive/Memory-like         35    16    18
+ 6:                 CD8 Exhausted         38    29    30
+ 7: CD8 GZMK/Effector-memory-like         37    17    24
+ 8:                          cDC1         38     1     3
+ 9:                          cDC2         39    11    24
+10:                Classical Mono         39    20    26
+11:                       Epi_all         40    40    40
+12:                          GC B         19     0     2
+13:                           H05         40    24    30
+14:                           H10         40    33    37
+15:                           H50         40    40    40
+16:                          iCAF         36    15    18
+17:                           L50         40    40    40
+18:                      LAMP3 DC         38     4     7
+19:                          Mast         39    19    23
+20:                    Matrix_CAF         33     7    11
+21:                Naive/Memory B         29    14    15
+22:                            NK         37    23    31
+23:                           pDC         34     0     1
+24:                      Pericyte         33    11    16
+25:                        Plasma         39    24    28
+26:                          rCAF         25     2     3
+27:                           SMC         28     5     8
+28:                      SPP1 TAM         39    11    19
+29:               Tfh/CXCL13-like         34    24    26
+30:                          Treg         40    33    34
+31:                          vCAF         28     1     2
+32:                     Venous EC         29     4     7
+33:                    Neutrophil         27     4     7
+34:                  Lymphatic EC         17     1     1
+                     profile_type n_profiles   n50   n30
+                           <char>      <int> <int> <int>
+GSVA available TRUE 
+GSVA 2.4.9 
+$exprData
+
+
+$geneSets
+
+
+$assay
+[1] NA
+
+$annotation
+NULL
+
+$minSize
+[1] 1
+
+$maxSize
+[1] Inf
+
+$alpha
+[1] 0.25
+
+$normalize
+[1] TRUE
+
+$checkNA
+c("auto", "yes", "no")
+
+$use
+c("everything", "all.obs", "na.rm")
+
+$verbose
+[1] TRUE
+
+limma 3.66.0 edgeR 4.8.2 
+Cell fields barcode sample_uid dataset patient_uid_recorded analysis_celltype_c2l_final analysis_major_c2l_final MP10_cell nCount_RNA nFeature_RNA percent.mt subtype_v2 state_v2 source_lineage 
+Treg cells 13204 
+	Command being timed: "taskset -c 220 Rscript --vanilla mp10_hypothesis_followup_v1/scripts/00_inspect.R"
+	User time (seconds): 10.92
+	System time (seconds): 1.89
+	Percent of CPU this job got: 83%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:15.32
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1611440
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 9
+	Minor (reclaiming a frame) page faults: 570227
+	Voluntary context switches: 482
+	Involuntary context switches: 59
+	Swaps: 0
+	File system inputs: 31208
+	File system outputs: 142792
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

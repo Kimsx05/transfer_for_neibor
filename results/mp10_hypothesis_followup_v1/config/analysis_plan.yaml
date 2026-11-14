@@ -1,0 +1,55 @@
+{
+  "task": "mp10_hypothesis_followup_v1",
+  "frozen_utc": "2026-11-13T15:43:26.338147+00:00",
+  "nature": "retrospective directed internal follow-up; not prospective or independent validation",
+  "seed": 123,
+  "threads_total": 4,
+  "threads_per_process": 1,
+  "scoring": {
+    "method": "GSVA ssGSEA",
+    "version": "2.4.9",
+    "alpha": 0.25,
+    "normalize": false,
+    "min_genes": 5,
+    "min_fraction": 0.5,
+    "universe": "edgeR filterByExpr on original lineage profiles >=30, reference fixed",
+    "mask": "remove Top20 from downstream target AND ranking/scoring universe; no modification of counts or full-RNA normalization",
+    "TMM": "full RNA library sizes retained for new scores; fixed reference profile per lineage; no re-normalization after masking",
+    "centering": "gene means from main-a >=50 reference profiles; fixed for new TF ULM and all sensitivity",
+    "scale": "All-Treg main-a >=50 scores set receiver endpoint scale reused for NC/CY; Epi_all main-a reference SD; original MP10 SD retained"
+  },
+  "cycle": {
+    "method": "Seurat CellCycleScoring / cc.genes.updated.2019",
+    "pool": "all detected genes in all original Treg normalized RNA",
+    "seed": 123,
+    "nbin": 24,
+    "ctrl": "min(number of mapped S, mapped G2M)",
+    "validity": ">=20 and >=50% mapped genes in each list; finite scores; Phase S/G2M operational cycling; G1 non-cycling; no G0 claim"
+  },
+  "models": {
+    "continuous": "OLS HC3 t(df residual) for P and CI",
+    "proportion": "quasibinomial glm; Pearson dispersion; t(df residual) P and CI",
+    "eligibility": ">=4 recorded patient units, full rank, residual df>=3; n_cells>=50 main >=30 sensitivity",
+    "failed_ratio": "nonconvergence, nonfinite covariance, constant outcome, separation or coefficient SE>10 => NE",
+    "FDR": "BH fixed planned family n including NE as unobserved; NE P/q NA",
+    "clinical": "only reliable fields with crossed dataset coverage; otherwise NE; no invented staging",
+    "interaction": "descriptive cross-celltype comparison; no celltype specificity claim without comparable lineage score universe"
+  },
+  "gsea": {
+    "minSize": 15,
+    "maxSize": 500,
+    "scoreType": "std",
+    "eps": 1e-10,
+    "nPermSimple": [
+      10000,
+      100000
+    ],
+    "escalation": "all pathways of every affected model/library/mask; second budget if NA pval or nonfinite log2err with pval>eps; never based on candidate significance",
+    "family": "preserve old within model + original joint primary Full family; repaired values separate"
+  },
+  "source_result": "/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_immune_endothelial_mechanisms_v1",
+  "source_pb": "/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_immune_endothelial_mechanisms_v1/objects/pseudobulk.qs",
+  "source_pb_sha256": "cfbdd4b3de1dc75912f55b7d2e7e63eac95566baaae619629057698b72f04c47",
+  "registry_sha256": "2502764fc5120c174e9f1497fa849c265576fab6442a9dbdef2fbc09b095e459",
+  "signatures_sha256": "01955cfd574fb171c5ef9bd386a5290fa561063b33d1699b446c01c1d89fd910"
+}

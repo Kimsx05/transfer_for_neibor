@@ -1,0 +1,43 @@
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 3802, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 138, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 165, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5745, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5753, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'cycling_adjust'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_hypothesis_followup_v1/scripts/11_validate.py", line 51, in <module>
+    d=m[m.model_id.eq(row.model_id)].sort_values('sample_uid');n=len(d);X=np.column_stack([np.ones(n),pd.get_dummies(d.dataset,drop_first=True,dtype=float).to_numpy(), *([d[row.covariate].to_numpy()] if row.covariate!='none' else []),d.x.to_numpy()]);y=d.y.to_numpy();inv=np.linalg.inv(X.T@X);beta=inv@X.T@y;resid=y-X@beta;h=np.sum((X@inv)*X,axis=1);meat=sum(np.outer(X[i],X[i])*(resid[i]/(1-h[i]))**2 for i in range(n));se=np.sqrt((inv@meat@inv)[-1,-1]);df=n-X.shape[1];pv=2*t.sf(abs(beta[-1]/se),df)
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages/pandas/core/frame.py", line 3807, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 3804, in get_loc
+    raise KeyError(key) from err
+KeyError: 'cycling_adjust'
+Command exited with non-zero status 1
+	Command being timed: "taskset -c 220 mp10_immune_endothelial_mechanisms_v1/venv/bin/python mp10_hypothesis_followup_v1/scripts/11_validate.py"
+	User time (seconds): 2.69
+	System time (seconds): 0.28
+	Percent of CPU this job got: 89%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.34
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 217224
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4
+	Minor (reclaiming a frame) page faults: 74282
+	Voluntary context switches: 101
+	Involuntary context switches: 18
+	Swaps: 0
+	File system inputs: 17408
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

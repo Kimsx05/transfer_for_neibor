@@ -1,0 +1,29 @@
+SCORED Epi_all 13131 200 
+SCORED Treg 6998 117 
+SCORED Tfh/CXCL13-like 4471 34 
+SCORED Capillary EC 4015 35 
+SCORED Arterial EC 5562 32 
+SCORES COMPLETE
+	Command being timed: "taskset -c 220 Rscript --vanilla mp10_hypothesis_followup_v1/scripts/04_scores.R"
+	User time (seconds): 23.34
+	System time (seconds): 2.68
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:26.46
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2370888
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 1172331
+	Voluntary context switches: 130
+	Involuntary context switches: 79
+	Swaps: 0
+	File system inputs: 2360
+	File system outputs: 226848
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -1,0 +1,26 @@
+source('mp10_hypothesis_followup_v1/scripts/common.R')
+suppressPackageStartupMessages(library(Seurat));future::plan('sequential')
+stopifnot(file.exists(file.path(B,'config/M0_FROZEN.sha256')))
+f<-file.path(B,'objects/treg_strata.qs');sig<-digest(list(readLines(file.path(B,'config/M0_FROZEN.sha256')),digest(file.path(S,'02_cycle_pb.R'),file=TRUE),old('input_manifest.tsv')),algo='sha256')
+if(file.exists(f)&&file.exists(paste0(f,'.sha256'))&&readLines(paste0(f,'.sha256'))==sig){cat('Valid cache\n');quit(save='no')}
+a<-old('analysis_cell_metadata.tsv.gz');q<-old('specimen_exposure_eligibility.tsv');b<-qread(file.path(OLD,'objects/pseudobulk.qs'),nthreads=1)
+m<-old('pseudobulk_membership.tsv.gz');stopifnot(!anyDuplicated(a$barcode),!anyDuplicated(paste(m$profile_id,m$barcode)))
+orig_a<-fread(file.path(P,'mp10_sc_c2l_final_annotation_v1/tables/analysis_cells.tsv.gz')); orig_q<-fread(file.path(P,'mp10_cellchat_high_definition_sensitivity_v1/tables/specimen_quantiles_coverage.tsv')); e<-merge(orig_a[analysis_major_c2l_final=='Epithelial' & sample_uid %in% q$sample_uid],orig_q[,.(sample_uid,Q50,Q90,Q95)],by='sample_uid');put(data.table(check='use original frozen score and quantile exports to avoid re-export decimal rounding',status='audited'),'quantile_precision_audit.tsv')
+for(g in c('Epi_all','L50','H50','H10','H05')){expected<-switch(g,Epi_all=e$barcode,L50=e[MP10_cell<=Q50,barcode],H50=e[MP10_cell>Q50,barcode],H10=e[MP10_cell>Q90,barcode],H05=e[MP10_cell>Q95,barcode]);stopifnot(setequal(expected,m[profile_type==g,barcode]))}
+for(s in q$sample_uid)stopifnot(max(abs(b$counts[,paste0(s,'|Epi_all')]-b$counts[,paste0(s,'|H50')]-b$counts[,paste0(s,'|L50')]))==0)
+cat('Reading original RNA once\n');o<-qread(objpath,nthreads=1);tr<-a[analysis_celltype_c2l_final=='Treg'];ct<-LayerData(o,assay='RNA',layer='counts')[,tr$barcode,drop=FALSE];ex<-LayerData(o,assay='RNA',layer='data')[,tr$barcode,drop=FALSE];rm(o);gc()
+stopifnot(identical(colnames(ct),tr$barcode),identical(colnames(ex),tr$barcode),identical(rownames(ct),rownames(ex)),all(ct@x>=0),all(ct@x==round(ct@x)))
+cc<-Seurat::cc.genes.updated.2019;pool<-rownames(ex)[Matrix::rowSums(ex)>0];sg<-intersect(cc$s.genes,pool);gg<-intersect(cc$g2m.genes,pool)
+put(rbindlist(list(data.table(phase='S',gene=cc$s.genes,mapped=cc$s.genes%in%pool),data.table(phase='G2M',gene=cc$g2m.genes,mapped=cc$g2m.genes%in%pool))),'cycle_gene_coverage.tsv')
+stopifnot(length(sg)>=20,length(gg)>=20,length(sg)/length(cc$s.genes)>=.5,length(gg)/length(cc$g2m.genes)>=.5)
+x<-CreateSeuratObject(counts=ct[pool,,drop=FALSE]);LayerData(x,layer='data')<-ex[pool,,drop=FALSE];set.seed(123);x<-CellCycleScoring(x,s.features=sg,g2m.features=gg,pool=pool,nbin=24,seed=123,set.ident=FALSE)
+phase<-as.data.table(x@meta.data,keep.rownames='barcode')[,.(barcode,S.Score,G2M.Score,Phase)];tr<-merge(tr,phase,by='barcode',sort=FALSE);tr[,valid_phase:=is.finite(S.Score)&is.finite(G2M.Score)&Phase%in%c('S','G2M','G1')];tr[,stratum:=ifelse(valid_phase,ifelse(Phase=='G1','Treg_NC','Treg_CY'),'invalid')]
+for(g in c('MKI67','TOP2A','FOXP3','IL2RA','CTLA4','CD3D','NKG7','MS4A1'))if(g%in%rownames(ex))tr[,(paste0('RNA_',g)):=as.numeric(ex[g,match(barcode,colnames(ex))])]
+put(tr,'treg_cell_cycle_labels.tsv.gz');rm(x,ex);gc()
+comp<-tr[,.(n_Treg=.N,n_cycling=sum(stratum=='Treg_CY'),n_noncycling=sum(stratum=='Treg_NC'),n_invalid=sum(!valid_phase),median_nCount=as.numeric(median(nCount_RNA)),median_nFeature=as.numeric(median(nFeature_RNA)),median_mt=as.numeric(median(percent.mt))),by=sample_uid];comp[,cycling_fraction:=ifelse(n_invalid==0,n_cycling/n_Treg,NA_real_)];comp<-merge(comp,q,by='sample_uid');put(comp,'treg_cycle_composition.tsv')
+mm<-tr[valid_phase==TRUE,.(barcode,sample_uid,profile_type=stratum)];mm[,profile_id:=paste(sample_uid,profile_type,sep='|')];lev<-sort(unique(mm$profile_id));map<-sparseMatrix(i=match(mm$barcode,colnames(ct)),j=match(mm$profile_id,lev),x=1,dims=c(ncol(ct),length(lev)));pb<-ct%*%map;colnames(pb)<-lev
+pp<-mm[,.(n_cells=.N),by=.(sample_uid,profile_type,profile_id)][match(lev,profile_id)];pp[,`:=`(total_counts=Matrix::colSums(pb),detected_genes=Matrix::colSums(pb>0))];pp<-merge(pp,q[,.(sample_uid,dataset,patient_uid_recorded,main_patient,replacement_patient,Q50,Q95,Q50_z,Q95_z)],by='sample_uid');quality<-tr[valid_phase==TRUE,.(median_nCount=as.numeric(median(nCount_RNA)),median_log_nCount=median(log1p(nCount_RNA)),median_nFeature=as.numeric(median(nFeature_RNA)),median_mt=as.numeric(median(percent.mt))),by=.(sample_uid,profile_type=stratum)];pp<-merge(pp,quality,by=c('sample_uid','profile_type'))
+for(s in comp[n_invalid==0,sample_uid]){cols<-pp[sample_uid==s,profile_id];stopifnot(all(Matrix::rowSums(pb[,cols,drop=FALSE])==b$counts[,paste0(s,'|Treg')]))}
+put(mm,'treg_strata_membership.tsv.gz');qsave(list(counts=pb,profiles=pp,signature=sig),f,nthreads=1,preset='high');writeLines(sig,paste0(f,'.sha256'))
+put(tr[,.(n_cells=.N,median_MKI67=as.numeric(median(RNA_MKI67)),fraction_MKI67=mean(RNA_MKI67>0),median_TOP2A=as.numeric(median(RNA_TOP2A)),fraction_TOP2A=mean(RNA_TOP2A>0),median_FOXP3=as.numeric(median(RNA_FOXP3))),by=.(sample_uid,Phase)],'cycle_marker_checks.tsv')
+writeLines(capture.output(sessionInfo()),file.path(B,'logs/sessionInfo_cycle.txt'));thread_audit('cycle_complete');cat('CYCLE COMPLETE\n')

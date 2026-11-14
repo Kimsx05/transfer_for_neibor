@@ -1,0 +1,34 @@
+source('mp10_hypothesis_followup_v1/scripts/common.R');suppressPackageStartupMessages({library(edgeR);library(GSVA);library(decoupleR)})
+b<-qread(file.path(OLD,'objects/pseudobulk.qs'),nthreads=1);t<-qread(file.path(B,'objects/treg_strata.qs'),nthreads=1);q<-old('specimen_exposure_eligibility.tsv');sr<-rd('signature_registry.tsv');pr<-rbindlist(list(b$profiles,t$profiles),fill=TRUE)
+quality<-old('profile_quality.tsv');pr<-merge(pr,quality,by='profile_id',suffixes=c('','_old'),all.x=TRUE);for(n in c('median_nCount','median_nFeature','median_mt'))pr[is.na(get(n)),(n):=get(paste0(n,'_old'))]
+pr[,median_log_nCount:=log1p(median_nCount)];# exact per-cell median log is monotone except even interpolation; replace below
+cells<-old('analysis_cell_metadata.tsv.gz');mem<-old('pseudobulk_membership.tsv.gz');ql<-merge(mem[,.(barcode,profile_id)],cells[,.(barcode,nCount_RNA)],by='barcode',allow.cartesian=TRUE)[,.(median_log_nCount=median(log1p(nCount_RNA))),by=profile_id];pr[ql,on='profile_id',median_log_nCount:=i.median_log_nCount]
+put(pr,'coverage.tsv.gz');comp<-rd('treg_cycle_composition.tsv');out<-list();cov<-list();universe<-list();centers<-list();norms<-list();mats<-list();k<-0
+for(fam in c('Epi_all','Treg','Tfh/CXCL13-like','Capillary EC','Arterial EC')){
+ reference<-b$profiles[profile_type==fam & n_cells>=30];mainref<-reference[main_patient & n_cells>=50];if(nrow(reference)<2)next
+ allp<-if(fam=='Epi_all')pr[profile_type%in%c('Epi_all','L50','H50','H10','H05')]else if(fam=='Treg')pr[profile_type%in%c('Treg','Treg_NC','Treg_CY')]else pr[profile_type==fam];setorder(allp,profile_id)
+ refcount<-b$counts[,reference$profile_id,drop=FALSE];d<-DGEList(refcount);keep<-filterByExpr(d,group=rep(1,nrow(reference)));genes<-rownames(refcount)[keep];stopifnot(length(genes)>1000)
+ cc<-cbind(b$counts[,intersect(allp$profile_id,colnames(b$counts)),drop=FALSE],t$counts[,intersect(allp$profile_id,colnames(t$counts)),drop=FALSE]);cc<-cc[,allp$profile_id,drop=FALSE]
+ d<-DGEList(cc[genes,,drop=FALSE],lib.size=Matrix::colSums(cc));refid<-sort(mainref$profile_id)[1];if(is.na(refid))refid<-sort(reference$profile_id)[1];d<-calcNormFactors(d,refColumn=match(refid,colnames(d)));mat<-cpm(d,log=TRUE,prior.count=2);center<-rowMeans(mat[,mainref$profile_id,drop=FALSE]);universe[[fam]]<-data.table(family=fam,gene=genes);centers[[fam]]<-data.table(family=fam,gene=genes,center=center,n_reference=nrow(mainref),reference_ids=paste(sort(mainref$profile_id),collapse=';'));norms[[fam]]<-data.table(family=fam,profile_id=colnames(d),raw_RNA_library=d$samples$lib.size,TMM_factor=d$samples$norm.factors,reference_profile=refid)
+ mats[[fam]]<-list(logCPM=mat,center=center,profiles=allp,gene_universe=genes,reference_ids=mainref$profile_id)
+ for(mask in if(fam=='Epi_all')c('Full','M20')else'Full'){
+  mm<-mat[!rownames(mat)%in%if(mask=='M20')M20 else character(),,drop=FALSE]
+  # data.table variable shadowing avoided by explicit vector below
+  ix<-which(sr$mask==mask & sr$signature!='MP10');ss<-sr[ix];sets<-lapply(split(ss$gene,ss$signature),unique)
+  cv<-rbindlist(lapply(names(sets),function(n)data.table(family=fam,mask=mask,signature=n,n_expected=length(sets[[n]]),n_covered=length(intersect(sets[[n]],rownames(mm))),genes=paste(intersect(sets[[n]],rownames(mm)),collapse=';'))));cv[,evaluable:=n_covered>=5 & n_covered/n_expected>=.5];cov[[paste(fam,mask)]]<-cv
+  valid<-sets[cv[evaluable==TRUE,signature]];if(length(valid)){param<-ssgseaParam(mm,valid,minSize=5,alpha=.25,normalize=FALSE);res<-gsva(param,verbose=FALSE,BPPARAM=BiocParallel::SerialParam(progressbar=FALSE));z<-as.data.table(as.table(res));setnames(z,c('signature','profile_id','raw_score'));z[,`:=`(metric=paste0(signature,'_',mask),family=fam,method='ssGSEA',mask=mask)];out[[paste(fam,mask)]]<-z}
+  if(fam=='Epi_all')for(resource in c('CollecTRI','DoRothEA_AB')){
+   net<-fread(file.path(REF,if(resource=='CollecTRI')'collectri.tsv'else'dorothea_AB.tsv'));net<-net[source%in%c('SREBF1','SREBF2')];if(mask=='M20')net<-net[!target%in%M20]
+   for(variant in if(mask=='M20')c('standard','unique','noNECTIN2')else'standard'){
+    nn<-copy(net);if(variant=='unique'){shared<-nn[,.(n=uniqueN(source)),by=target][n>1,target];nn<-nn[!target%in%shared]};if(variant=='noNECTIN2')nn<-nn[!target%in%c('NECTIN2','PVRL2')]
+    cv2<-nn[,.(n_expected=uniqueN(target),n_covered=uniqueN(target[target%in%rownames(mm)]),genes=paste(sort(unique(target[target%in%rownames(mm)])),collapse=';')),by=source];cv2[,`:=`(family=fam,mask=mask,resource=resource,variant=variant,signature=source,evaluable=n_covered>=5)];cov[[paste(fam,mask,resource,variant)]]<-cv2
+    nn<-nn[source%in%cv2[evaluable==TRUE,source]];if(!nrow(nn))next
+    centered<-sweep(mm,1,center[rownames(mm)],'-');ac<-as.data.table(run_ulm(centered,nn,.source='source',.target='target',.mor='mor',minsize=5));setnames(ac,c('condition','score','p_value'),c('profile_id','raw_score','ulm_enrichment_p'));ac[,metric:=paste0(source,'_',mask,if(resource=='DoRothEA_AB')'_DoR'else'',if(variant=='standard')''else paste0('_',variant))];ac[,`:=`(family=fam,method='ULM',mask=mask,resource=resource,variant=variant)];out[[paste(mask,resource,variant)]]<-ac
+   }
+  }
+ }
+ if(fam=='Epi_all')for(g in c('NECTIN2','SREBF1','SREBF2','PVR')){gn<-if(g=='NECTIN2'&& !g%in%rownames(mat)&&'PVRL2'%in%rownames(mat))'PVRL2'else g;if(gn%in%rownames(mat))out[[paste(fam,g)]]<-data.table(family=fam,metric=if(g%in%c('SREBF1','SREBF2'))paste0(g,'_RNA')else g,profile_id=colnames(mat),raw_score=mat[gn,],method='TMM logCPM',mask='Full')}
+ cat('SCORED',fam,nrow(mat),ncol(mat),'\n')
+}
+z<-rbindlist(out,fill=TRUE);z<-merge(z,pr[,.(profile_id,sample_uid,profile_type,dataset,patient_uid_recorded,n_cells,main_patient,replacement_patient)],by='profile_id');sc<-z[main_patient & n_cells>=50 & profile_type==family,.(center=mean(raw_score),scale=sd(raw_score),reference_n=.N,reference_ids=paste(sort(profile_id),collapse=';')),by=.(family,metric)];z<-merge(z,sc,by=c('family','metric'),all.x=TRUE);z[,score:=ifelse(is.finite(scale)&scale>1e-10,(raw_score-center)/scale,NA_real_)];put(z,'sample_level_scores.tsv.gz');put(sc,'score_scaling_reference.tsv');put(rbindlist(cov,fill=TRUE),'signature_coverage.tsv');put(rbindlist(universe),'scoring_gene_universe.tsv.gz');put(rbindlist(centers),'gene_centering_reference.tsv.gz');put(rbindlist(norms),'normalization_reference.tsv.gz')
+sig<-digest(list(readLines(file.path(B,'config/M0_FROZEN.sha256')),readLines(file.path(B,'objects/treg_strata.qs.sha256')),digest(file.path(S,'04_scores.R'),file=TRUE)),algo='sha256');qsave(list(matrices=mats,signature=sig),file.path(B,'objects/scoring_matrices.qs'),nthreads=1,preset='high');writeLines(sig,file.path(B,'objects/scoring_matrices.qs.sha256'));writeLines(capture.output(sessionInfo()),file.path(B,'logs/sessionInfo_scores.txt'));thread_audit('scores_complete');cat('SCORES COMPLETE\n')

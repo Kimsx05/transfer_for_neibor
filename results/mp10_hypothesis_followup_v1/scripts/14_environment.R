@@ -1,0 +1,3 @@
+source('mp10_hypothesis_followup_v1/scripts/common.R')
+pkgs<-c('R','Matrix','data.table','qs','edgeR','limma','fgsea','GSVA','Seurat','SeuratObject','decoupleR','ggplot2','ragg','cowplot','jsonlite','RhpcBLASctl');d<-rbindlist(lapply(pkgs,function(p)data.table(package=p,version=if(p=='R')as.character(getRversion())else as.character(packageVersion(p)),library=if(p=='R')R.home()else find.package(p))))
+f<-file.path(B,'config/environment_manifest.tsv');if('check'%in%commandArgs(TRUE)){old<-fread(f);stopifnot(identical(d$package,old$package),identical(d$version,old$version),identical(d$library,old$library));cat('Environment versions match\n')}else{fwrite(d,f,sep='\t');writeLines(capture.output(sessionInfo()),file.path(B,'logs/sessionInfo_final.txt'));print(d)}

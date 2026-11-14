@@ -1,0 +1,5 @@
+context	mask	definition	normalization
+existing v1 TF	M20-masked	remove Top20 network targets and centered expression rows after original lineage filter/TMM; original gene centering preserved	v1 keep.lib.sizes=FALSE; preserved as historical method
+new Epi scores/ULM	M20	remove Top20 targets and scoring-universe rows after full RNA TMM/logCPM; never recount libraries	new frozen Epi_all reference; not claimed identical to v1 activities
+existing/repaired GSEA	M20-masked	remove Top20 from DE rank vector and pathway membership; DE unchanged	
+Treg endpoint	Full	full frozen All-Treg expression universe used for All/NC/CY; no M20 removal	

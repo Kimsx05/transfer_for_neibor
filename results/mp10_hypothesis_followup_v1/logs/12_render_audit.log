@@ -1,0 +1,25 @@
+Render 45 / 64 figures 18
+                          figure                                                                                         file  direct_data_exists  passed  pages  raster_images outside_text   fonts  width  height  dpi
+               F02_cell_coverage                            results/mp10_hypothesis_followup_v1/figures/F02_cell_coverage.pdf                True   False    1.0            1.0              ArialMT    NaN     NaN  NaN
+               F02_cell_coverage                results/mp10_hypothesis_followup_v1/figures/F02_cell_coverage_legend_only.pdf                True   False    1.0            1.0              ArialMT    NaN     NaN  NaN
+           F03_paired_enrichment                        results/mp10_hypothesis_followup_v1/figures/F03_paired_enrichment.pdf                True   False    1.0            1.0              ArialMT    NaN     NaN  NaN
+           F03_paired_enrichment            results/mp10_hypothesis_followup_v1/figures/F03_paired_enrichment_legend_only.pdf                True   False    1.0            1.0              ArialMT    NaN     NaN  NaN
+          F04_signature_coverage                       results/mp10_hypothesis_followup_v1/figures/F04_signature_coverage.pdf                True   False    1.0            1.0              ArialMT    NaN     NaN  NaN
+          F04_signature_coverage           results/mp10_hypothesis_followup_v1/figures/F04_signature_coverage_legend_only.pdf                True   False    1.0            1.0              ArialMT    NaN     NaN  NaN
+                F04_shared_genes                             results/mp10_hypothesis_followup_v1/figures/F04_shared_genes.pdf                True   False    1.0            1.0              ArialMT    NaN     NaN  NaN
+                F04_shared_genes                 results/mp10_hypothesis_followup_v1/figures/F04_shared_genes_legend_only.pdf                True   False    1.0            1.0              ArialMT    NaN     NaN  NaN
+               F06_bridge_OXPHOS                            results/mp10_hypothesis_followup_v1/figures/F06_bridge_OXPHOS.pdf                True   False    1.0            1.0              ArialMT    NaN     NaN  NaN
+               F06_bridge_OXPHOS                results/mp10_hypothesis_followup_v1/figures/F06_bridge_OXPHOS_legend_only.pdf                True   False    1.0            1.0              ArialMT    NaN     NaN  NaN
+                 F07_LODO_OXPHOS                              results/mp10_hypothesis_followup_v1/figures/F07_LODO_OXPHOS.pdf                True   False    1.0            1.0              ArialMT    NaN     NaN  NaN
+                 F07_LODO_OXPHOS                  results/mp10_hypothesis_followup_v1/figures/F07_LODO_OXPHOS_legend_only.pdf                True   False    1.0            1.0              ArialMT    NaN     NaN  NaN
+           F07_receiver_parallel                        results/mp10_hypothesis_followup_v1/figures/F07_receiver_parallel.pdf                True   False    1.0            0.0        0.050 ArialMT    NaN     NaN  NaN
+     F05_gene_rank_decomposition                  results/mp10_hypothesis_followup_v1/figures/F05_gene_rank_decomposition.pdf                True   False    1.0            1.0              ArialMT    NaN     NaN  NaN
+     F05_gene_rank_decomposition      results/mp10_hypothesis_followup_v1/figures/F05_gene_rank_decomposition_legend_only.pdf                True   False    1.0            1.0              ArialMT    NaN     NaN  NaN
+      F05_respiratory_components                   results/mp10_hypothesis_followup_v1/figures/F05_respiratory_components.pdf                True   False    1.0            1.0              ArialMT    NaN     NaN  NaN
+      F05_respiratory_components       results/mp10_hypothesis_followup_v1/figures/F05_respiratory_components_legend_only.pdf                True   False    1.0            1.0              ArialMT    NaN     NaN  NaN
+F07_historical_receiver_programs             results/mp10_hypothesis_followup_v1/figures/F07_historical_receiver_programs.pdf                True   False    1.0            1.0              ArialMT    NaN     NaN  NaN
+F07_historical_receiver_programs results/mp10_hypothesis_followup_v1/figures/F07_historical_receiver_programs_legend_only.pdf                True   False    1.0            1.0              ArialMT    NaN     NaN  NaN
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_hypothesis_followup_v1/scripts/12_render_audit.py", line 23, in <module>
+    x=pd.DataFrame(checks);x.to_csv(B/'qc/render_audit.tsv',sep='\t',index=False);print('Render',x.passed.sum(),'/',len(x), 'figures',len(fm));print(x[~x.passed].to_string(index=False));assert x.passed.all()
+AssertionError

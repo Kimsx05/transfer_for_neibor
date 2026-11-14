@@ -1,0 +1,12 @@
+relation	decision	evidence_ids	evidence_cn	next_test_cn
+Epi MP10 / SREBF2 (M20)	supported	F00002	CollecTRI主模型有支持，所有LODO同向；DoRothEA和独有靶集支持较弱，不能等同SREBF2蛋白活化。	测成熟核内SREBF2、SCAP加工及独立于Top20的靶基因。
+Epi MP10 / sterol synthesis (M20)	supported	F00006	去共享基因后关联仍存在，Q95、RNA质量、原cluster0组成与所有LODO方向一致。	测甾醇通量/胆固醇及甲羟戊酸分支产物，不把表达当脂质输出。
+Epi mTORC1 / independent upstream activation	limited	F00003;M0001;M0016;M0031	上皮配对mTORC1 M20排序富集强，Epi_all跨标本HC3证据较弱；两层问题不同。	测p-S6/p-4EBP1及干预后SREBP加工；不以signature等同激酶活性。
+SREBF activity / NECTIN2	limited	F00009;F00010	跨标本SREBF1/2与NECTIN2均未获得主FDR支持。	若做功能验证，分开检测SREBF干预对NECTIN2和脂质程序的影响。
+NECTIN2 / Treg state bridge	limited	F00047;F00048;F00049	保留旧上皮配对上调，但本轮NECTIN2与Treg OXPHOS/cycling关联未获FDR支持。	HD同切片局部接触与受体分支；共培养区分TIGIT/PVRIG/CD226，不能默认TIGIT主导。
+Non-cycling Treg OXPHOS gene ranks	supported	F00094	同一30标本的NC排序富集仍负向，多个核编码呼吸链环节同向；属于同数据的结构拆解。	同患者测呼吸/线粒体质量、核编码呼吸链蛋白和独立cycling标记。
+Epi / Treg OXPHOS sample-score bridge	limited	F00011;F00013;F00014	All、共同样本All、NC点估计接近但区间宽；去掉InhouseData时效应趋近零。	扩充有完整配对暴露和Treg覆盖的独立患者；同时测共同环境。
+Epi lipid programs / operational cycling	limited	F00039;F00066	mTORC1和甾醇的方向为正，但主q约0.080/0.102；标准Phase分类与实测增殖不同。	使用Ki67/EdU等独立增殖读出，不用Phase分类本身作为验证。
+Capillary EC metabolic / stress state	limited	historical receiver main	旧MYC/TNF等排序结果值得保留；12标本中PRJNA662018贡献7个，新的HC3或基因覆盖主模型多为NE。	在更多患者与数据集复核状态；结合KDR/FLT1和功能读出，不能写血管生成增强。
+Arterial EC association	not_evaluable	historical and new coverage	主4标本/1dataset，残差自由度不足；不降阈值补网络。	增加独立且覆盖充分的标本。
+Local contact / lipid transfer	not_evaluable	HD pending	本任务未提供新的局部空间、代谢物转移或受体占有率证据。	按HD_VALIDATION_PENDING.md做有区分力的局部检验。

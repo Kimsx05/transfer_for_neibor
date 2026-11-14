@@ -1,0 +1,25 @@
+{
+  "width": 8,
+  "height": 5.5,
+  "font": "Arial",
+  "font_pt": 12,
+  "line_mm": 0.4,
+  "dpi": 300,
+  "scales": [
+    {
+      "aesthetics": "colour",
+      "limits": ["CNP0000460", "GSE326225", "HRA003620", "InhouseData", "PRJNA662018"],
+      "class": "ScaleDiscrete"
+    },
+    {
+      "aesthetics": ["x", "xmin", "xmax", "xend", "xintercept", "xmin_final", "xmax_final", "xlower", "xmiddle", "xupper", "x0"],
+      "limits": [0, 1],
+      "class": "ScaleContinuousPosition"
+    },
+    {
+      "aesthetics": ["y", "ymin", "ymax", "yend", "yintercept", "ymin_final", "ymax_final", "lower", "middle", "upper", "y0"],
+      "limits": [0, 1],
+      "class": "ScaleContinuousPosition"
+    }
+  ]
+}

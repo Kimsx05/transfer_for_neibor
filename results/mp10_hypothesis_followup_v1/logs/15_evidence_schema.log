@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_hypothesis_followup_v1/scripts/15_evidence_schema.py", line 18, in <module>
+    d['variable']=coalesce(['variable','gene','source','TF','regulon']);d['effect']=coalesce(['effect','logFC','activity_effect','AUCell_effect','estimate']);d['P']=coalesce(['P','sample_model_p','PValue','p']);d['q']=coalesce(['q','sample_model_q','FDR']);d['sender']='Epi';d['receiver']=d.receiver.fillna(np.where(d.kind.eq('Epi'),'Epi',d.target));d['FDR_family']=d.FDR_family.fillna(np.where(d.evidence_type.eq('historical_candidate_DE'),'historical full-gene BH per model','historical per-model regulon or abundance design family; see source'))
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages/pandas/util/_decorators.py", line 331, in wrapper
+    return func(*args, **kwargs)
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages/pandas/core/series.py", line 5298, in fillna
+    return super().fillna(
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages/pandas/core/generic.py", line 6836, in fillna
+    raise TypeError(
+TypeError: "value" parameter must be a scalar, dict or Series, but you passed a "ndarray"

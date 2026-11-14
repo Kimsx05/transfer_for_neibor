@@ -1,0 +1,35 @@
+Reading original RNA once
+            used   (Mb) gc trigger    (Mb)   max used    (Mb)
+Ncells   4004869  213.9    6903557   368.7    5099464   272.4
+Vcells 164153243 1252.4 6317640040 48199.8 5979935139 45623.3
+            used  (Mb) gc trigger    (Mb)   max used    (Mb)
+Ncells   4044026 216.0    6903557   368.7    6903557   368.7
+Vcells 129941069 991.4 5054112032 38559.9 5979935139 45623.3
+Error in `[.data.table`(tr, , .(n_Treg = .N, n_cycling = sum(stratum ==  : 
+  Column 5 of result for group 2 is type 'double' but expecting type 'integer'. Column types must be consistent for each group.
+Calls: [ -> [.data.table
+Execution halted
+Command exited with non-zero status 1
+	Command being timed: "taskset -c 220 Rscript --vanilla mp10_hypothesis_followup_v1/scripts/02_cycle_pb.R"
+	User time (seconds): 70.91
+	System time (seconds): 64.24
+	Percent of CPU this job got: 96%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:20.28
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 43788216
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 24825325
+	Voluntary context switches: 786
+	Involuntary context switches: 247
+	Swaps: 0
+	File system inputs: 40360
+	File system outputs: 276400
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
