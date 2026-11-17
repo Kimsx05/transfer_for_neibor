@@ -1,0 +1,9 @@
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/code/09_native_validation.py:13: DeprecationWarning: The default value for `spmatrix` is changing to `False` in v1.20.
+             That means the default return type will be a sparse array.
+             Unless you use * instead of @, ** for matrix power, or you depend
+             on 2D shapes from e.g. `A.sum(axis=0)` it may not matter to you.
+             See the spmatrix to sparray migration guide for details.
+             https://docs.scipy.org/doc/scipy/reference/sparse.migration_to_sparray.html
+             
+  x=mmread(R/'temporary/native_UCell_check.mtx').T.toarray();genes=np.loadtxt(R/'temporary/native_UCell_genes.txt',dtype=str);ti=np.flatnonzero(np.isin(genes,TOP));ranks=rankdata(-x,axis=1,method='average');expected=np.maximum(905-ranks[:,ti],0).sum(1)/sum(905-np.arange(1,21));err=float(np.max(np.abs(expected-d.MP10)));assert err<1e-12;checks.append(dict(section='Cervilla',branch='T32',check='historical_MP10_dense_average_rank_exact',max_error=err,n=len(d),passed=True))
+NATIVE_CHECKS_OK

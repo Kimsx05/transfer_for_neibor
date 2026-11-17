@@ -1,0 +1,43 @@
+{
+  "section": "MPBC1",
+  "counts_path": "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_bin8_banksy_extension_v1/MPBC1/counts8.h5",
+  "counts_bytes": 225489910,
+  "counts_mtime_ns": 1794272925030385116,
+  "input_bins": 702244,
+  "input_genes": 18085,
+  "input_UMI": 107385169,
+  "original_tissue_mask": false,
+  "coordinates_source": "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/MPBC1/nodes.parquet",
+  "audit": [
+    {
+      "section": "MPBC1",
+      "branch": "T32",
+      "regions": 44100,
+      "input_UMI": 107385169,
+      "included_UMI": 107385169,
+      "excluded_UMI": 0,
+      "per_gene_conservation": true,
+      "raw_integer": true
+    },
+    {
+      "section": "MPBC1",
+      "branch": "T16",
+      "regions": 175561,
+      "input_UMI": 107385169,
+      "included_UMI": 107385169,
+      "excluded_UMI": 0,
+      "per_gene_conservation": true,
+      "raw_integer": true
+    },
+    {
+      "section": "MPBC1",
+      "branch": "Epi64",
+      "regions": 27922,
+      "input_UMI": 107385169,
+      "included_UMI": 24459745,
+      "excluded_UMI": 82925424,
+      "per_gene_conservation": true,
+      "raw_integer": true
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "reference": "/home/data/t070721/codex_workspace/Bladder Metabolism/subtype/v2/reference_training_v2/11_final_spatial_reference/reference_v2_final_30type_regression_input.h5ad",
+  "cells": 20446,
+  "train": 18289,
+  "heldout": 2157,
+  "validation_unit": "orig.ident sample, not patient",
+  "main_genes": [
+    "FOXP3",
+    "IL2RA",
+    "CTLA4",
+    "IKZF2",
+    "RTKN2",
+    "CCR8",
+    "TNFRSF18",
+    "TNFRSF4",
+    "ICOS",
+    "LAYN",
+    "MAGEH1"
+  ],
+  "literature_original_n": 309,
+  "literature_used_n": 283,
+  "selection_rule": "Treg detection>=.08; mean normalized >1.2*maximum competing T/NK class and >1.5*pooled nonT; candidates only; no HD associations"
+}

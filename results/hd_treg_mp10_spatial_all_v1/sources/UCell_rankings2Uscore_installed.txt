@@ -1,0 +1,35 @@
+function (ranks_matrix, features, chunk.size = 100, w_neg = 1, 
+    BPPARAM = NULL, ncores = 1, force.gc = FALSE, missing_genes = c("impute", 
+        "skip"), name = "_UCell") 
+{
+    if (is.null(w_neg)) {
+        w_neg <- 1
+    }
+    if (!is.numeric(w_neg) | w_neg < 0) {
+        stop("Weight on negative signatures (w_neg) must be >=0")
+    }
+    maxRank <- max(ranks_matrix) + 1
+    split.data <- split_data.matrix(matrix = ranks_matrix, chunk.size = chunk.size)
+    rm(ranks_matrix)
+    if (is.null(BPPARAM)) {
+        BPPARAM <- BiocParallel::MulticoreParam(workers = ncores)
+    }
+    meta.list <- BiocParallel::bplapply(X = split.data, BPPARAM = BPPARAM, 
+        FUN = function(x) {
+            dense <- as.matrix(x)
+            dense <- as.data.table(dense, keep.rownames = TRUE)
+            setkey(dense, "rn", physical = FALSE)
+            cells_U <- u_stat_signature_list(features, dense, 
+                maxRank = maxRank, sparse = TRUE, missing_genes = missing_genes, 
+                w_neg = w_neg)
+            colnames(cells_U) <- paste0(colnames(cells_U), name)
+            if (force.gc) {
+                dense <- NULL
+                gc()
+            }
+            return(list(cells_U = cells_U))
+        })
+    return(meta.list)
+}
+<bytecode: 0x582d94007b18>
+<environment: namespace:UCell>

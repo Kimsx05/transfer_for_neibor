@@ -1,0 +1,35 @@
+# Resource and delivery size
+
+- Total CPU affinity cap: 4 logical CPUs; BLAS/OpenMP/Numba threads1, R sequential. No shared environment upgrades.
+- Largest recorded single-process RSS: 5.09 GiB. Not a simultaneous aggregate RSS measurement.
+- Native all-region UCell:14:08.87 elapsed. Per-step wall/RSS: tables/resource_usage.tsv; original logs retained.
+- User explicitly authorized daytime continuation: runtime_authorization.json. No queued job claimed complete.
+- Result logical bytes including review directory+zip: 1,141,485,301 (1.063 GiB).
+- Allocated bytes at packaging: 1,142,837,248 (1.064 GiB).
+- review.zip: 59,939,693 bytes (57.16 MiB).
+- Approximately167 MiB regenerable UCell MatrixMarket intermediates removed after validation. Original large expression objects are referenced, not copied.
+- Size is a packaging-time snapshot; this small resource note and final log updates can change it slightly.
+
+	Command being timed: "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/../hd_epi_niche_multimethod_v2/.venv/bin/python /home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/code/16_package.py"
+	User time (seconds): 14.21
+	System time (seconds): 1.88
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:16.34
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2192436
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 161682
+	Voluntary context switches: 12621
+	Involuntary context switches: 90
+	Swaps: 0
+	File system inputs: 216
+	File system outputs: 376168
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

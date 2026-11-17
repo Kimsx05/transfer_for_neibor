@@ -1,0 +1,50 @@
+version: hd_treg_mp10_spatial_all_v1
+created: 2026-11-17 00:28:00+08:00
+phase: measurement_calibration_before_any_HD_association
+sections:
+- Cervilla
+- D1_Johnson
+- UC_SCC
+- MPBC1
+- MPBC2
+raw_counts: all_supplied_8um_before_count_QC
+T_regions_um:
+- 32
+- 16
+T_grouping: original_array_origin_floor_then_within_grid_8connected_support
+Epi_regions_um: 64
+Epi_support: raw_panel_detected_ge2_and_any_reference_Epi_OR_raw_panel_detected_ge3
+Epi_grouping: same_grid_connected_raw_supported_bins
+radii_um:
+- 50
+- 200
+center: equal_member_bin_geometric_centroid
+MP10: historical_average_ties_K905_full18085_genes
+signature_selection: reference_training_partition_only
+signature_excluded_readouts:
+- TIGIT
+- NECTIN2
+- CD96
+- NECTIN1
+- PVR
+- CD226
+reference_validation: existing_sample_holdout_membership_not_patient_holdout
+primary_family: main_signature_adjusted_32um_50and200_all_testable_sections
+shared_source_sensitivity: include_shared_bins_as_common_detection_diagnostic
+covariates:
+- T_lineage_score
+- log_T_UMI
+- log_mean_Epi_UMI
+- Epi_support_area
+- observed_circle_fraction
+- coarse_original_expression_background
+P_method: restricted_null_spatial_block_sign_wild_bootstrap
+CI_method: spatial_block_pairs_bootstrap
+resamples: 499
+seed: 123
+threads_total: 4
+night: 23:00-07:00 Asia/Shanghai
+no_Harmony: true
+no_communications_inference: true
+primary_source_rule: exclude_any_shared_original_bins
+geometry_freeze_at: '2026-11-17T00:25:47.860623+08:00'

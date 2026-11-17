@@ -1,0 +1,76 @@
+depth	comparison	signature	n	Treg_n	AUROC
+full	all_nonTreg	Treg_main	2157	91	0.9525520462112913
+full	all_nonTreg	Treg_literature	2157	91	0.9230396902226524
+full	T_competitors	Treg_main	552	91	0.8930657195299277
+full	T_competitors	Treg_literature	552	91	0.8816357178613144
+full	CD4 Helper/Conventional	Treg_main	187	91	0.8855311355311356
+full	CD4 Helper/Conventional	Treg_literature	187	91	0.890625
+full	CD4 Naive/Memory-like	Treg_main	182	91	0.8804492211085617
+full	CD4 Naive/Memory-like	Treg_literature	182	91	0.9337036589783844
+full	Tfh/CXCL13-like	Treg_main	182	91	0.8190435937688685
+full	Tfh/CXCL13-like	Treg_literature	182	91	0.776597029344282
+full	CD8 Exhausted	Treg_main	181	91	0.9291819291819292
+full	CD8 Exhausted	Treg_literature	181	91	0.8609279609279609
+full	NK	Treg_main	179	91	0.962912087912088
+full	NK	Treg_literature	179	91	0.938811188811189
+full	Epithelial	Treg_main	187	91	0.9525526556776557
+full	Epithelial	Treg_literature	187	91	0.9144917582417582
+full_leave_one_gene	all_nonTreg	minus_FOXP3	2157	91	0.9450948373988065
+full_leave_one_gene	all_nonTreg	minus_IL2RA	2157	91	0.9520015318660042
+full_leave_one_gene	all_nonTreg	minus_CTLA4	2157	91	0.9487729115028245
+full_leave_one_gene	all_nonTreg	minus_IKZF2	2157	91	0.9474936970096699
+full_leave_one_gene	all_nonTreg	minus_RTKN2	2157	91	0.944903354148272
+full_leave_one_gene	all_nonTreg	minus_CCR8	2157	91	0.9525892790655618
+full_leave_one_gene	all_nonTreg	minus_TNFRSF18	2157	91	0.9519084497303278
+full_leave_one_gene	all_nonTreg	minus_TNFRSF4	2157	91	0.9527062966075551
+full_leave_one_gene	all_nonTreg	minus_ICOS	2157	91	0.9370312649596289
+full_leave_one_gene	all_nonTreg	minus_LAYN	2157	91	0.9535466953182347
+full_leave_one_gene	all_nonTreg	minus_MAGEH1	2157	91	0.9460628916098424
+500	all_nonTreg	Treg_main	2157	91	0.8829399061732072
+500	all_nonTreg	Treg_literature	2157	91	0.8976069912662361
+500	T_competitors	Treg_main	552	91	0.8295392243331506
+500	T_competitors	Treg_literature	552	91	0.8368572858811469
+500	CD4 Helper/Conventional	Treg_main	187	91	0.8127861721611721
+500	CD4 Helper/Conventional	Treg_literature	187	91	0.846783424908425
+500	CD4 Naive/Memory-like	Treg_main	182	91	0.8178963893249609
+500	CD4 Naive/Memory-like	Treg_literature	182	91	0.919876826470233
+500	Tfh/CXCL13-like	Treg_main	182	91	0.7758724791691824
+500	Tfh/CXCL13-like	Treg_literature	182	91	0.6954474097331239
+500	CD8 Exhausted	Treg_main	181	91	0.8549450549450549
+500	CD8 Exhausted	Treg_literature	181	91	0.8113553113553114
+500	NK	Treg_main	179	91	0.8850524475524475
+500	NK	Treg_literature	179	91	0.8928571428571429
+500	Epithelial	Treg_main	187	91	0.8803228021978021
+500	Epithelial	Treg_literature	187	91	0.9005265567765567
+2000	all_nonTreg	Treg_main	2157	91	0.9458155590779018
+2000	all_nonTreg	Treg_literature	2157	91	0.9175425252385563
+2000	T_competitors	Treg_main	552	91	0.8944959595718813
+2000	T_competitors	Treg_literature	552	91	0.872279564253534
+2000	CD4 Helper/Conventional	Treg_main	187	91	0.8915407509157509
+2000	CD4 Helper/Conventional	Treg_literature	187	91	0.8826694139194139
+2000	CD4 Naive/Memory-like	Treg_main	182	91	0.8815360463712113
+2000	CD4 Naive/Memory-like	Treg_literature	182	91	0.925854365414805
+2000	Tfh/CXCL13-like	Treg_main	182	91	0.829126917039005
+2000	Tfh/CXCL13-like	Treg_literature	182	91	0.7705591112184519
+2000	CD8 Exhausted	Treg_main	181	91	0.9238095238095239
+2000	CD8 Exhausted	Treg_literature	181	91	0.8431013431013431
+2000	NK	Treg_main	179	91	0.9548576423576424
+2000	NK	Treg_literature	179	91	0.9274475524475526
+2000	Epithelial	Treg_main	187	91	0.9460851648351648
+2000	Epithelial	Treg_literature	187	91	0.9060210622710623
+5000	all_nonTreg	Treg_main	2157	91	0.9524935374402945
+5000	all_nonTreg	Treg_literature	2157	91	0.9328505473229578
+5000	T_competitors	Treg_main	552	91	0.891075302138209
+5000	T_competitors	Treg_literature	552	91	0.8876188887034874
+5000	CD4 Helper/Conventional	Treg_main	187	91	0.8832989926739927
+5000	CD4 Helper/Conventional	Treg_literature	187	91	0.8962339743589745
+5000	CD4 Naive/Memory-like	Treg_main	182	91	0.8775510204081634
+5000	CD4 Naive/Memory-like	Treg_literature	182	91	0.933462142253351
+5000	Tfh/CXCL13-like	Treg_main	182	91	0.8128849172805218
+5000	Tfh/CXCL13-like	Treg_literature	182	91	0.7867407317956769
+5000	CD8 Exhausted	Treg_main	181	91	0.9313797313797314
+5000	CD8 Exhausted	Treg_literature	181	91	0.8743589743589744
+5000	NK	Treg_main	179	91	0.962912087912088
+5000	NK	Treg_literature	179	91	0.940934065934066
+5000	Epithelial	Treg_main	187	91	0.9564445970695971
+5000	Epithelial	Treg_literature	187	91	0.9365842490842491

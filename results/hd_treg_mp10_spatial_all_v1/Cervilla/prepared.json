@@ -1,0 +1,43 @@
+{
+  "section": "Cervilla",
+  "counts_path": "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_bin8_comparison_v1/Cervilla/native8/filtered_feature_bc_matrix.h5",
+  "counts_bytes": 78635788,
+  "counts_mtime_ns": 1794031432398028577,
+  "input_bins": 297675,
+  "input_genes": 18085,
+  "input_UMI": 64528669,
+  "original_tissue_mask": true,
+  "coordinates_source": "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/Cervilla/nodes.parquet",
+  "audit": [
+    {
+      "section": "Cervilla",
+      "branch": "T32",
+      "regions": 19271,
+      "input_UMI": 64528669,
+      "included_UMI": 64528669,
+      "excluded_UMI": 0,
+      "per_gene_conservation": true,
+      "raw_integer": true
+    },
+    {
+      "section": "Cervilla",
+      "branch": "T16",
+      "regions": 75293,
+      "input_UMI": 64528669,
+      "included_UMI": 64528669,
+      "excluded_UMI": 0,
+      "per_gene_conservation": true,
+      "raw_integer": true
+    },
+    {
+      "section": "Cervilla",
+      "branch": "Epi64",
+      "regions": 8995,
+      "input_UMI": 64528669,
+      "included_UMI": 36525383,
+      "excluded_UMI": 28003286,
+      "per_gene_conservation": true,
+      "raw_integer": true
+    }
+  ]
+}

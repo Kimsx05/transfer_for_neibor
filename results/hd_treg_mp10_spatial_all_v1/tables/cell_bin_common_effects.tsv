@@ -1,0 +1,9 @@
+section	radius_um	unit	comparison	n	n_blocks	effect	low	high	P	status	block_um	covariates	BH_q
+Cervilla	50	bin_enriched	same_T_centers_same_covariates	7	7	-0.3268532072494371	NA	NA	NA	descriptive_insufficient_independent_support	400	T_lineage,T_nCount,Epi_nCount,T_background_balance	NA
+Cervilla	50	bin_enriched	same_T_centers_same_covariates	7	6	-0.3268532072494371	NA	NA	NA	descriptive_insufficient_independent_support	800	T_lineage,T_nCount,Epi_nCount,T_background_balance	NA
+Cervilla	50	cell_limited	same_T_centers_same_covariates	7	7	-0.24581046353826733	NA	NA	NA	descriptive_insufficient_independent_support	400	T_lineage,T_nCount,Epi_nCount,T_background_balance	NA
+Cervilla	50	cell_limited	same_T_centers_same_covariates	7	6	-0.24581046353826733	NA	NA	NA	descriptive_insufficient_independent_support	800	T_lineage,T_nCount,Epi_nCount,T_background_balance	NA
+Cervilla	200	bin_enriched	same_T_centers_same_covariates	247	46	0.07959010637610386	-0.06984227480619963	0.22058212664261706	0.31	within_section_exploratory_test	400	T_lineage,T_nCount,Epi_nCount,observed_circle_fraction,T_background_balance	0.31
+Cervilla	200	bin_enriched	same_T_centers_same_covariates	247	21	0.07959010637610386	-0.10642209624825745	0.23634836227296357	0.408	within_section_exploratory_test	800	T_lineage,T_nCount,Epi_nCount,observed_circle_fraction,T_background_balance	0.408
+Cervilla	200	cell_limited	same_T_centers_same_covariates	247	46	0.2102744790839771	0.0649722576489535	0.3348638609255458	0.018	within_section_exploratory_test	400	T_lineage,T_nCount,Epi_nCount,observed_circle_fraction,T_background_balance	0.036
+Cervilla	200	cell_limited	same_T_centers_same_covariates	247	21	0.2102744790839771	0.0307241756245543	0.3316119250626788	0.034	within_section_exploratory_test	800	T_lineage,T_nCount,Epi_nCount,observed_circle_fraction,T_background_balance	0.068
