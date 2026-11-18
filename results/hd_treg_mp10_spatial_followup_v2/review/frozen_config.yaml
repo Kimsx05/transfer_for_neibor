@@ -1,0 +1,103 @@
+version: hd_treg_mp10_spatial_followup_v2
+frozen_at: '2026-11-17T14:18:08.562947+08:00'
+status: post_v1_exploratory_followup_not_independent_validation
+sections:
+- Cervilla
+- D1_Johnson
+- UC_SCC
+- MPBC1
+- MPBC2
+seed: 123
+threads_total: 4
+new_primary_test: Cervilla200_common_design_delta_cell_minus_bin_zero
+radii_um:
+- 50
+- 200
+block_um:
+- 400
+- 800
+bootstrap_reps: 999
+rank_transform: average ranks, population standardization fixed before resampling
+paired_bootstrap: same block draws/indices both outcomes
+'null': restricted common-design model of zrank(cell)-zrank(bin); HC2 block Rademacher
+  wild bootstrap
+primary_covariates:
+- T_lineage
+- T_nCount
+- observed_circle_fraction
+- T_background_balance
+- depth_bin
+- depth_cell
+competition_extra:
+- Tfh
+- Activated_T
+missing: complete case jointly for both outcomes and common covariates
+collinearity: one frozen common design, ordered nuisance residual variance>.1; no
+  effect-driven deletion
+area: not comparable; omitted both; no unknown-to-zero
+hotspot_exclusion: T centroids inside union of original Cervilla candidate256um ROI
+  rectangles; keep remaining neighbor outcomes fixed
+no_new_5section_continuous_associations: true
+signature:
+- FOXP3
+- IL2RA
+- CTLA4
+- IKZF2
+- RTKN2
+- CCR8
+- TNFRSF18
+- TNFRSF4
+- ICOS
+- LAYN
+- MAGEH1
+maxRank: 1300
+old_threshold: 0.19955389201641047
+mixture:
+  partitions: original train versus heldout sample; never mix reference cell between
+    partitions
+  backgrounds:
+  - name: Epi40
+    Epi: 0.4
+    other: null
+    other_fraction: 0.0
+  - name: Epi70
+    Epi: 0.7
+    other: null
+    other_fraction: 0.0
+  - name: Epi90
+    Epi: 0.9
+    other: null
+    other_fraction: 0.0
+  - name: Epi40_Fib30
+    Epi: 0.4
+    other: Fibroblast
+    other_fraction: 0.3
+  - name: Epi40_Myeloid30
+    Epi: 0.4
+    other: Myeloid
+    other_fraction: 0.3
+  competitors:
+  - CD4 Helper/Conventional
+  - Tfh/CXCL13-like
+  - CD8 Exhausted
+  Treg_T_RNA_fractions:
+  - 0
+  - 0.1
+  - 0.3333333333333333
+  - 1.0
+  depths:
+  - 500
+  - 2000
+  - 5000
+  replicates: 60
+  cells_per_profile: 5
+  threshold: one pooled common threshold; maximum of background/competitor/depth train-negative95th
+    quantiles among multigene/core eligible negatives; old joint conditions retained
+  target_train_FPR_max_each_condition: 0.05
+  heldout_acceptance: all adequately sampled negative conditions empirical FPR<=.05
+    and Wilson upper<=.15; gain sensitivity>=.05 overall positives, no condition loss>.02;
+    no refit to holdout
+  applicability: 500-5000 total UMI; nFeature>=325; other old measurement and joint
+    conditions unchanged; out-of-range uncalibrated
+  uncertainty: Wilson intervals describe simulated mixtures conditional on finite
+    sample pools; not patients

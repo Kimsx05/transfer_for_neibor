@@ -1,0 +1,17 @@
+signature_a	signature_b	overlap_n	overlap_genes	score_rho
+Treg_main	Treg_main	11	CCR8;CTLA4;FOXP3;ICOS;IKZF2;IL2RA;LAYN;MAGEH1;RTKN2;TNFRSF18;TNFRSF4	1.0
+Treg_main	T_lineage	0		0.2697542415725917
+Treg_main	Tfh	0		0.1199250485694236
+Treg_main	Activated_T	0		0.029284733318866458
+T_lineage	Treg_main	0		0.2697542415725917
+T_lineage	T_lineage	5	CD2;CD3D;CD3E;CD3G;TRAC	1.0
+T_lineage	Tfh	0		0.08110065665176654
+T_lineage	Activated_T	0		-0.0710659650745398
+Tfh	Treg_main	0		0.1199250485694236
+Tfh	T_lineage	0		0.08110065665176654
+Tfh	Tfh	5	BCL6;CXCL13;IL21;MAF;PDCD1	0.9999999999999998
+Tfh	Activated_T	0		-0.06279417402493365
+Activated_T	Treg_main	0		0.029284733318866458
+Activated_T	T_lineage	0		-0.0710659650745398
+Activated_T	Tfh	0		-0.06279417402493365
+Activated_T	Activated_T	6	CD69;FOS;IFNG;IL2;JUN;TNF	1.0

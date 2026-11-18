@@ -1,0 +1,30 @@
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_followup_v2/code/02_mixtures.py:13: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  d['T_eligible']=(d.nFeature>=325)&(d.T_lineage_detected>=2)&(d.T_lineage_UMI>=3);d['multigene']=d.main_detected>=3;d['core']=d.core_detected>=1;d['high_old']=d.Treg_main>F['old_threshold'];d['joint_old']=d.T_eligible&d.multigene&d.core&d.high_old;d['score_zero']=d.Treg_main==0;d['zero_reason']=np.where(~d.score_zero,'nonzero',np.where(d.main_detected==0,'no_main_gene_detected','detected_genes_all_average_rank_at_or_beyond1300'));d['within_rank_main']=(ranks[SIG]<1300).sum(1).to_numpy();return d
+MIXTURE_PARTITION train 10800
+MIXTURE_PARTITION sample_holdout 21600
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_followup_v2/code/02_mixtures.py:13: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  d['T_eligible']=(d.nFeature>=325)&(d.T_lineage_detected>=2)&(d.T_lineage_UMI>=3);d['multigene']=d.main_detected>=3;d['core']=d.core_detected>=1;d['high_old']=d.Treg_main>F['old_threshold'];d['joint_old']=d.T_eligible&d.multigene&d.core&d.high_old;d['score_zero']=d.Treg_main==0;d['zero_reason']=np.where(~d.score_zero,'nonzero',np.where(d.main_detected==0,'no_main_gene_detected','detected_genes_all_average_rank_at_or_beyond1300'));d['within_rank_main']=(ranks[SIG]<1300).sum(1).to_numpy();return d
+MIXTURE_DONE 21600
+	Command being timed: "highres_VisiumHD/analysis/hd_epi_niche_multimethod_v2/.venv/bin/python highres_VisiumHD/analysis/hd_treg_mp10_spatial_followup_v2/code/02_mixtures.py"
+	User time (seconds): 54.08
+	System time (seconds): 2.03
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:56.18
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1578932
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 525947
+	Voluntary context switches: 391
+	Involuntary context switches: 290
+	Swaps: 0
+	File system inputs: 32
+	File system outputs: 3360
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

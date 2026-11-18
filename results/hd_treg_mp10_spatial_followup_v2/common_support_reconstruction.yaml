@@ -1,0 +1,17 @@
+frozen_at: '2026-11-17T14:50:34.260132+08:00'
+scope: Cervilla 200um common T centers; exploratory common-support sensitivity
+cell_rule: retain entire trusted source cells only when every assigned 2um position
+  maps inside the common8um source footprint, one global64um grid; merge touching
+  footprints before aggregation
+bin_rule: sum each supplied8um bin in retained cell footprints once per scoring unit
+score_rule: historical18085 background, average ranks K905; both sources nFeature>=905,
+  MP10 detected>=5, epithelial detected>=2
+neighborhood: preexisting200um region neighbors; exclude all shared T32 source bins
+statistics: center averages across paired qualifying score units; no new formal P
+  value; same covariate framework including both reconstructed depths
+limitations: equal8um footprints do not imply equal RNA sources; whole cells are not
+  divided; no new segmentation
+geometry_validation_repair: Distinct historical cell regions shared8um positions.
+  Merge touching whole-cell footprints within fixed64um grid, preventing repeated
+  bin counts within a T neighborhood. Geometric correction only; not effect-based
+  parameter selection.

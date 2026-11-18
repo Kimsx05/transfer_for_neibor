@@ -1,0 +1,9 @@
+comparison	radius_um	n	n_blocks	effect	low	high	P	status	block_um	covariates
+A_bin_main_full	50	43	23	0.14238128559335267	NA	NA	NA	descriptive_insufficient_independent_support	400	T_lineage,T_nCount,Epi_nCount,Epi_area_um2,T_background_balance
+B_common_bin_full	50	7	7	-0.5351168060336906	NA	NA	NA	descriptive_insufficient_independent_support	400	T_lineage,T_nCount,Epi_nCount,Epi_area_um2
+v1_common_bin_named	50	7	7	-0.3268532072494371	NA	NA	NA	descriptive_insufficient_independent_support	400	T_lineage,T_nCount,Epi_nCount,T_background_balance
+v1_common_cell_named	50	7	7	-0.24581046353826733	NA	NA	NA	descriptive_insufficient_independent_support	400	T_lineage,T_nCount,Epi_nCount,T_background_balance
+A_bin_main_full	200	261	48	-0.006665039344238469	-0.09218931251726935	0.06768126764975171	0.884	within_section_exploratory_test	400	T_lineage,T_nCount,Epi_nCount,Epi_area_um2,observed_circle_fraction,T_background_balance
+B_common_bin_full	200	247	46	0.004573432990999114	-0.09148470572977911	0.07692505880455254	0.932	within_section_exploratory_test	400	T_lineage,T_nCount,Epi_nCount,Epi_area_um2,observed_circle_fraction,T_background_balance
+v1_common_bin_named	200	247	46	0.07959010637610386	-0.06984227480619963	0.22058212664261706	0.31	within_section_exploratory_test	400	T_lineage,T_nCount,Epi_nCount,observed_circle_fraction,T_background_balance
+v1_common_cell_named	200	247	46	0.2102744790839771	0.0649722576489535	0.3348638609255458	0.018	within_section_exploratory_test	400	T_lineage,T_nCount,Epi_nCount,observed_circle_fraction,T_background_balance

@@ -1,0 +1,13 @@
+partition	CD4_high_activation	depth	activation_cut_training_q75	negative_n	positive_n	old_FPR	candidate_FPR	old_sensitivity	candidate_sensitivity	interpretation
+sample_holdout	False	500	0.2727985680103302	272	816	0.0	0.0	0.0012254901960784314	0.0	activation-score stratum of fixed conventional CD4 mixtures, not a new cell annotation or new threshold selection
+sample_holdout	False	2000	0.2727985680103302	272	816	0.003676470588235294	0.0	0.03799019607843137	0.004901960784313725	activation-score stratum of fixed conventional CD4 mixtures, not a new cell annotation or new threshold selection
+sample_holdout	False	5000	0.2727985680103302	272	816	0.0	0.0	0.0821078431372549	0.023284313725490197	activation-score stratum of fixed conventional CD4 mixtures, not a new cell annotation or new threshold selection
+sample_holdout	True	500	0.2727985680103302	28	84	0.0	0.0	0.011904761904761904	0.0	activation-score stratum of fixed conventional CD4 mixtures, not a new cell annotation or new threshold selection
+sample_holdout	True	2000	0.2727985680103302	28	84	0.0	0.0	0.05952380952380952	0.011904761904761904	activation-score stratum of fixed conventional CD4 mixtures, not a new cell annotation or new threshold selection
+sample_holdout	True	5000	0.2727985680103302	28	84	0.0	0.0	0.10714285714285714	0.03571428571428571	activation-score stratum of fixed conventional CD4 mixtures, not a new cell annotation or new threshold selection
+train	False	500	0.2727985680103302	225	675	0.0	0.0	0.0014814814814814814	0.0	activation-score stratum of fixed conventional CD4 mixtures, not a new cell annotation or new threshold selection
+train	False	2000	0.2727985680103302	225	675	0.0	0.0	0.06222222222222222	0.01037037037037037	activation-score stratum of fixed conventional CD4 mixtures, not a new cell annotation or new threshold selection
+train	False	5000	0.2727985680103302	225	675	0.0	0.0	0.10518518518518519	0.03111111111111111	activation-score stratum of fixed conventional CD4 mixtures, not a new cell annotation or new threshold selection
+train	True	500	0.2727985680103302	75	225	0.0	0.0	0.0	0.0	activation-score stratum of fixed conventional CD4 mixtures, not a new cell annotation or new threshold selection
+train	True	2000	0.2727985680103302	75	225	0.013333333333333334	0.0	0.057777777777777775	0.0044444444444444444	activation-score stratum of fixed conventional CD4 mixtures, not a new cell annotation or new threshold selection
+train	True	5000	0.2727985680103302	75	225	0.0	0.0	0.1111111111111111	0.02666666666666667	activation-score stratum of fixed conventional CD4 mixtures, not a new cell annotation or new threshold selection
