@@ -1,0 +1,9 @@
+partition	rule	metric	numerator	T_eligible_denominator	rate
+sample_holdout	denominator_fixed	FPR	1	1249	0.0008006405124099279
+sample_holdout	denominator_fixed	detection	160	3681	0.043466449334419996
+sample_holdout	historical	FPR	6	1249	0.004803843074459567
+sample_holdout	historical	detection	396	3681	0.10757946210268948
+train	denominator_fixed	FPR	1	1050	0.0009523809523809524
+train	denominator_fixed	detection	248	3187	0.07781612802008159
+train	historical	FPR	13	1050	0.012380952380952381
+train	historical	detection	522	3187	0.16379039849388138

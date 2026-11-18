@@ -1,0 +1,119 @@
+version: hd_treg_mp10_enrichment_v3
+frozen_at: '2026-11-18T14:23:10.318857+08:00'
+scope: post-v1/v2 exploratory regional enrichment, not independent confirmation
+sections:
+- Cervilla
+- D1_Johnson
+- UC_SCC
+- MPBC1
+- MPBC2
+seed: 123
+threads_total: 4
+T_eligible: historical nFeature>=325; T-panel detected>=2 and rawUMI>=3
+FOXP3_supported: T_eligible AND raw_FOXP3>0; no additional gates
+strict: unaltered v1 evidence==Treg_like_multigene
+continuous: all T_eligible incl0; unchanged11gene UCell average ties maxRank1300
+MP10: unaltered Epi64 qualified; full18085 average ties K905
+high:
+  H05: '>per-section q95'
+  H10: '>per-section q90'
+  quantile: pandas linear (R type7 equivalent), no tie splitting
+radii_um:
+- 50
+- 200
+curve_grid_um:
+- 0
+- 10
+- 20
+- 30
+- 40
+- 50
+- 60
+- 70
+- 80
+- 90
+- 100
+- 110
+- 120
+- 130
+- 140
+- 150
+- 160
+- 170
+- 180
+- 190
+- 200
+coverage_min: 0.5
+pair_exclusion: any shared original bin removes entire T32/Epi64 pair; same mask observation/null
+U_r: T_eligible & historical observed supplied circle>=.5 & >=1 independent qualified
+  Epi64
+permutation:
+  B: 9999
+  batch: 128
+  strata: section/component x component-median depth x component-median T-panel UMI
+    x component-median total Epi-neighbor opportunity x coverage>=.8
+  labels: same row shuffle for FOXP3 and strict; Epi/coordinates/scores/mask fixed
+  two_sided: (1+count(abs(null-mean_null)>=abs(obs-mean_null)-1e-12))/(B+1)
+  minimum_exchangeable_objects: 20
+  minimum_movable_positive: 5
+  minimum_mixed_strata: 2
+  constant_null: Z and P NA; retain counts/FE
+  not_spatial_autocorrelation_preserving: true
+bootstrap:
+  B: 999
+  blocks_um:
+  - 400
+  - 800
+  paired_center_blocks: true
+  minimum_blocks: 12
+  minimum_positive_blocks: 3
+  CI_min_finite_fraction: 0.95
+  degenerate: record NA and Inf rates; unreliable CI NA; no pseudocount
+hotspots: same-component positive T regions linked <=64um; remove each connected positive
+  hotspot as T centers only; frozen neighbors unchanged; descriptive influence, not
+  selection
+continuous_covariates:
+- T_lineage
+- nCount
+- Epi_nCount
+- Epi_n
+- coverage
+- T_background_balance
+continuous_statistics: all U_r, Spearman and fixed rank common-adjustment; block CI;
+  no additional new formal P
+mixing:
+  observation_pool: all coverage-qualified T centers incl no Epi edge; all qualified
+    Epi in their components incl isolated high points
+  AA: unordered pairs, no diagonal
+  AB: once, entire shared-source pair excluded
+  null_B: 999
+  null_use: descriptive envelope only, not formal P
+curve:
+  pool: fixed U200 for all distances to avoid denominator drift
+  measure: cumulative independent high Epi edge count per positive T center; null
+    same strata/mask
+  interval: pointwise random-label envelope; no peak-driven endpoint selection
+standard_K:
+  window: known-mask sections only; observed supplied in-tissue8um union, never bounding
+    box
+  source: remove globally any Epi64 sharing bins with any qualified T32; report loss
+  estimator: border-corrected homogeneous Kcross descriptive, 8um pixel window; label
+    randomization controls inhomogeneity in adapted curve
+  minimum_A: 10
+  minimum_interior_A: 5
+  formal_inference: false
+families:
+  primary_FE: FOXP3 xH05x2radiix5sections planned10 BH computable P
+  aux_FE: all other FE planned30 together
+  edge: all40edge P together
+  other: no new formalP for curves/mixing/continuous/robustness
+calibration:
+  cache: v2 expanded mixtures unchanged
+  denominator: all T_eligible negative mixtures in each fixed condition
+  strict_comparison: '>cutoff'
+  cutoff: minimal nonnegative threshold meeting all nonempty train condition full-rule
+    FPR<=.05
+  holdout: previously viewed sample holdout, not independent new validation
+  no_label_replacement: true
+runtime: bounded table-based calculations under existing explicit direct-compute authorization;
+  no heavy upstream runs

@@ -1,0 +1,10 @@
+cutoff: 0.27019811718420683
+comparison: score > cutoff
+denominator: all T_eligible negatives within condition
+selection: minimum nonnegative threshold satisfying every nonempty train condition
+  full joint FPR<=.05
+old_strict_threshold: 0.19955389201641047
+previous_v2_candidate: 0.31993817619783615
+train_only: true
+holdout_previously_seen: true
+adopted_for_HD: false

@@ -1,0 +1,9 @@
+section	radius_um	high_definition	label_definition	O	null_mean	null_sd	Z	P	permutations	seed	N_T	n_label	total_valid_high_edges	reason	family
+UC_SCC	50	H05	FOXP3_supported	1	0.8704870487048705	0.8740027740099433	0.14818368447610453	1.0	9999	193	418	31	12	estimable	auxiliary_edge
+UC_SCC	50	H10	FOXP3_supported	2	1.36003600360036	1.088312419982685	0.5880333483741936	0.6356	9999	193	418	31	18	estimable	auxiliary_edge
+UC_SCC	50	H05	strict	0	0.0	0.0	NA	NA	9999	193	418	0	12	insufficient_label_exchangeability	auxiliary_edge
+UC_SCC	50	H10	strict	0	0.0	0.0	NA	NA	9999	193	418	0	18	insufficient_label_exchangeability	auxiliary_edge
+UC_SCC	200	H05	FOXP3_supported	57	49.1057105710571	10.52914521565895	0.7497559647294546	0.474	9999	343	2214	165	737	estimable	auxiliary_edge
+UC_SCC	200	H10	FOXP3_supported	115	97.61176117611761	17.117946445373352	1.0157900002416524	0.3184	9999	343	2214	165	1442	estimable	auxiliary_edge
+UC_SCC	200	H05	strict	0	0.3615361536153615	0.5543159150653946	NA	NA	9999	343	2214	2	737	insufficient_label_exchangeability	auxiliary_edge
+UC_SCC	200	H10	strict	0	0.6275627562756275	0.8253730178293666	NA	NA	9999	343	2214	2	1442	insufficient_label_exchangeability	auxiliary_edge

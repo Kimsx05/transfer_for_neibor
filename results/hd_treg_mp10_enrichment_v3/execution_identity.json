@@ -1,0 +1,153 @@
+{
+  "code_config": {
+    "code/01_audit.py": "90af72591d774d05e4e5e65975ea974060386d3a6040bde1c10407cf69d019b0",
+    "code/02_calibration_fix.py": "a8480ef0e832cb8dae7ad83049ce69e97aa8d6f8ac17b51536f71cf5215bdea2",
+    "code/03_geometry.py": "70b39d1bdb2e7f3a2df688ac298b586ab6b9d3978536dd0aa44c3f9aaa17714f",
+    "code/04_enrichment.py": "42c825b09e589c98af66871da857d3f568abba559ae89605769bfe4267f3a9d8",
+    "code/05_mixing.py": "a4b740a611af5fdc8213c66aab5869718c040f6090c3d9cc8ed86d5d362edde4",
+    "code/06_continuous.py": "d5f46f91c7c0df2c298626e4a3a981ae0d055f6b7e61e90f0aa08dd12a8f8fb1",
+    "code/07_standard_crossK.py": "a360f32b040025369e7396730834ea9ca1881e040efbadce752388b24e5751e9",
+    "code/08_collect_validate.py": "084229959b9b7eb2745bdaf5d5f8fd2390e6605fb6323794f8a6082694e13741",
+    "code/09_plot.py": "b34a3321b35da7107bf8b0e47fe4e236f1fa6b82f98a811ba5683ba380ae6edd",
+    "code/09b_diagnostics.py": "33b1d4a2666ddce0478ba18a8bca1911b0e6e30d03616f720298e1e1ef35cf84",
+    "code/09c_distribution.R": "3cdf4fe05002447e52079bcdcaab6ba6ebf5b219583aeddca41c4c7c9dff3783",
+    "code/10_report.py": "224ac47639aae26b793aab292c906b9e452a8f19c0d2ebea7f1cc39e69ba40dd",
+    "code/11_delivery.py": "502790a7a2eea794efa849f16142de1124bf701526d0135a1abd153e33def176",
+    "code/common.py": "a15a286ae4d3fcab5cb274e606ce48dccecba4cec13c515f87fe327108bda016",
+    "code/load_result.R": "fef8984f86f87d2397f0e7134b84ffba586687af106df8da3c307c0cd7dc2f49",
+    "code/load_result.py": "f8b1c2c92637af8333cc0f6d521f710c39ecadac95faf88cd5586a8b330ce868",
+    "frozen_config.yaml": "4b9dc38cb59ebd6d79fdc239ed15314d94f25f5e74f7fd4c77a4dff8f8e03262",
+    "replot.sh": "b28d80ef68af479b957ca9f9487dfb04006ae0903ade5e4c537da00e7f573019",
+    "rerun.sh": "42b28fa75ce773708fbcc1ff57d2363034f4820b198df782f1737d142696284f"
+  },
+  "source_metadata": {
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/Cervilla/T32_regions.parquet": {
+      "size": 3071908,
+      "mtime_ns": 1794879934074764062
+    },
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/Cervilla/Epi64_regions.parquet": {
+      "size": 1412696,
+      "mtime_ns": 1794879935869797760
+    },
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/Cervilla/T32_members.parquet": {
+      "size": 2782338,
+      "mtime_ns": 1794846033093050307
+    },
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/Cervilla/Epi64_members.parquet": {
+      "size": 743271,
+      "mtime_ns": 1794846043182048518
+    },
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/Cervilla/T32_neighborhoods.parquet": {
+      "size": 52853,
+      "mtime_ns": 1794878286534861014
+    },
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/Cervilla/region_pairs.parquet": {
+      "size": 65822,
+      "mtime_ns": 1794878288537888189
+    },
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/D1_Johnson/T32_regions.parquet": {
+      "size": 5240180,
+      "mtime_ns": 1794879936513809846
+    },
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/D1_Johnson/Epi64_regions.parquet": {
+      "size": 1786802,
+      "mtime_ns": 1794879938890854443
+    },
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/D1_Johnson/T32_members.parquet": {
+      "size": 3744315,
+      "mtime_ns": 1794846077173066754
+    },
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/D1_Johnson/Epi64_members.parquet": {
+      "size": 1166518,
+      "mtime_ns": 1794846096085092453
+    },
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/D1_Johnson/T32_neighborhoods.parquet": {
+      "size": 1135213,
+      "mtime_ns": 1794878315924259746
+    },
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/D1_Johnson/region_pairs.parquet": {
+      "size": 2525014,
+      "mtime_ns": 1794878337779556260
+    },
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/UC_SCC/T32_regions.parquet": {
+      "size": 6628533,
+      "mtime_ns": 1794879940069876553
+    },
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/UC_SCC/Epi64_regions.parquet": {
+      "size": 2685712,
+      "mtime_ns": 1794879944005950324
+    },
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/UC_SCC/T32_members.parquet": {
+      "size": 6597139,
+      "mtime_ns": 1794846131143167869
+    },
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/UC_SCC/Epi64_members.parquet": {
+      "size": 2558147,
+      "mtime_ns": 1794846156049242271
+    },
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/UC_SCC/T32_neighborhoods.parquet": {
+      "size": 508837,
+      "mtime_ns": 1794878350040722610
+    },
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/UC_SCC/region_pairs.parquet": {
+      "size": 441840,
+      "mtime_ns": 1794878357432822899
+    },
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/MPBC1/T32_regions.parquet": {
+      "size": 4594459,
+      "mtime_ns": 1794879945071970292
+    },
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/MPBC1/Epi64_regions.parquet": {
+      "size": 2165019,
+      "mtime_ns": 1794879949119046055
+    },
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/MPBC1/T32_members.parquet": {
+      "size": 4050514,
+      "mtime_ns": 1794846188890365272
+    },
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/MPBC1/Epi64_members.parquet": {
+      "size": 717829,
+      "mtime_ns": 1794846207821448413
+    },
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/MPBC1/T32_neighborhoods.parquet": {
+      "size": 71958,
+      "mtime_ns": 1794878361368876300
+    },
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/MPBC1/region_pairs.parquet": {
+      "size": 45768,
+      "mtime_ns": 1794878363523905538
+    },
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/MPBC2/T32_regions.parquet": {
+      "size": 3038924,
+      "mtime_ns": 1794879950007062670
+    },
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/MPBC2/Epi64_regions.parquet": {
+      "size": 759183,
+      "mtime_ns": 1794879953197122328
+    },
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/MPBC2/T32_members.parquet": {
+      "size": 3641301,
+      "mtime_ns": 1794846225830535439
+    },
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/MPBC2/Epi64_members.parquet": {
+      "size": 148207,
+      "mtime_ns": 1794846235218583783
+    },
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/MPBC2/T32_neighborhoods.parquet": {
+      "size": 210692,
+      "mtime_ns": 1794878369137981705
+    },
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/MPBC2/region_pairs.parquet": {
+      "size": 42485,
+      "mtime_ns": 1794878371972020155
+    },
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/frozen_config.yaml": {
+      "size": 5230,
+      "mtime_ns": 1794846493340581203
+    },
+    "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_mp10_spatial_followup_v2/tables/expanded_mixtures.parquet": {
+      "size": 1277346,
+      "mtime_ns": 1794897766943645456
+    }
+  }
+}
