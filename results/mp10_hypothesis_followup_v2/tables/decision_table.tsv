@@ -1,0 +1,11 @@
+relationship	decision	evidence	limitation	next_discriminating_test
+SREBF2 final regulon	有支持	原始六模块均被映射门槛排除；唯一符号修正恢复 top50 模块，36 targets；H05 Full/M20 均升高。	技术修正；单 ranking、同批细胞，非独立验证。	核内成熟 SREBF2 与靶位点结合/扰动
+Epi mTORC1 beyond Top20	有支持	H05 repaired NES 3.217 / masked 2.744；masked leading-edge 55，其中43非正式脂质集合成员。	signature 不等于 mTORC1 磷酸化；状态和 RNA 含量仍可能参与。	p-S6/p-4EBP1 与 SREBF 成熟蛋白并行测量
+Cholesterol relative transcriptional bias	有支持	CHOL_SYNTH−FA_ACYL_COA D=.679 Full、.808 M20；固定基因匹配支持正方向。	仅所指定标准化程序；Full Bloch−FA 未获支持，不能推广所有甾醇或绝对通量。	同位素胆固醇/脂肪酸合成通量对照
+Epi cholesterol efflux upregulation	未获支持	H05 Full q=.423，M20 q=.215；正式集合未出现明确升高。	未获支持不等于不存在特定转运蛋白或条件性输出。	测外排而非只测合成
+Epi output to Treg uptake	无法评价	两项主关联均因 Treg 摄取签名覆盖不足 NE；没有通用 FFA 释放读数。	真实 profile 交集18，不能补零或扩大背景救显著性。	稳定同位素供体上皮→接收 Treg 的质量守恒/转移测量
+H05 lipid programs to Treg cycling	未获支持	两项可估计 quasi-binomial 主模型 q=1。	18记录患者单位、5数据集；区间仍宽。	同标本共培养下 cycling 与功能分开读出
+H05 lipid programs to Treg OXPHOS/G2M	支持有限	主 HC3 singleton leverage=1 为 NE；预设17单位子集可估计但未获支持。	不能以子集替换主分析，也不能据转录分数推断实测呼吸。	直接呼吸测量及 cycling 匹配
+Capillary EC mTORC1	支持有限	独立 EC RNA 的 Q50 DE/GSEA 正向，M20 NES1.742 q=.000499。	12单位4数据集，7来自 PRJNA662018；评分98/200 NE、HC3 singleton；未做环境 RNA 校正。	同患者内皮纯度核验与蛋白/代谢读数
+EC nutrient delivery	无法评价	五项预登记 EC 路线因固定评分覆盖不足 NE。	运输与摄取不是跨内皮流向，不能声明营养递送。	跨内皮示踪与屏障方向性实验
+Spatial mTORC1	支持有限	混合 spot 的距离负相关；组成/深度调整后跨数据集 q=.223/.163。	不是上皮专属 RNA；条件区间与数据集检验不同。	HD 同细胞类型/同切片邻域验证，pending

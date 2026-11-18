@@ -1,0 +1,26 @@
+{
+  "correction": "HGNC_20170418_approved_names + NCBI_2025Sep24_unique_gene_identity",
+  "sources": {
+    "/refdir/Rlib/immunedeconv/extdata/quantiseq/HGNC_genenames_20170418.txt": "943424617d263945a93590ca5db1aea7c6083483b10cd6b2a97f231a9c5ec0d3",
+    "/refdir/Rlib/org.Hs.eg.db/extdata/org.Hs.eg.sqlite": "8f036569a229574e9d23c73e8ccf7246e0797b64f9d224cc75fed5de891c8a09"
+  },
+  "reference_unchanged": "/home/data/t070721/codex_workspace/Bladder Metabolism/resources/mp10_regulatory_priors/hg38__refseq-r80__10kb_up_and_down_tss.mc9nr.genes_vs_motifs.rankings.feather",
+  "original_module_denominators_preserved": true,
+  "ambiguous_mappings_rejected": true,
+  "original_counts_membership_unchanged": true,
+  "new_grn_inference": false,
+  "full_HGNC_download": "external download unavailable; use installed versioned resources; unresolved names remain unknown",
+  "regulons": [
+    {
+      "name": "SREBF1(+)",
+      "TF": "SREBF1",
+      "n_targets": 21
+    },
+    {
+      "name": "SREBF2(+)",
+      "TF": "SREBF2",
+      "n_targets": 36
+    }
+  ],
+  "NCBI_web_confirmation_PRAG1": "https://www.ncbi.nlm.nih.gov/gene/157285"
+}

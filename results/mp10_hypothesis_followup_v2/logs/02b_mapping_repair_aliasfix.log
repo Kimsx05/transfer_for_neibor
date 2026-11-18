@@ -1,0 +1,35 @@
+
+2026-11-18 14:34:10,510 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for SREBF1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+SREBF1 activating;weight>75.0% 155 109 0
+
+2026-11-18 14:34:11,875 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for SREBF2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+SREBF2 activating;weight>75.0% 289 206 0
+
+2026-11-18 14:34:13,091 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for SREBF1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+SREBF1 activating;weight>90.0% 67 52 0
+
+2026-11-18 14:34:14,320 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for SREBF2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+SREBF2 activating;weight>90.0% 105 79 0
+SREBF1 activating;top50 51 42 10
+SREBF2 activating;top50 51 41 14
+
+2026-11-18 14:34:22,093 - pyscenic.transform - WARNING - Less than 80% of the genes in SREBF1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+SREBF1 activating;top5perTarget 58 45 0
+
+2026-11-18 14:34:23,324 - pyscenic.transform - WARNING - Less than 80% of the genes in SREBF2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+SREBF2 activating;top5perTarget 85 65 0
+
+2026-11-18 14:34:24,583 - pyscenic.transform - WARNING - Less than 80% of the genes in SREBF1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+SREBF1 activating;top10perTarget 108 82 0
+
+2026-11-18 14:34:25,825 - pyscenic.transform - WARNING - Less than 80% of the genes in SREBF2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+SREBF2 activating;top10perTarget 166 115 0
+
+2026-11-18 14:34:27,265 - pyscenic.transform - WARNING - Less than 80% of the genes in SREBF1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+SREBF1 activating;top50perTarget 452 306 0
+
+2026-11-18 14:34:28,963 - pyscenic.transform - WARNING - Less than 80% of the genes in SREBF2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+SREBF2 activating;top50perTarget 960 733 0
+Create regulons from a dataframe of enriched features.
+Additional columns saved: []
+MAPPING REPAIR COMPLETE [('SREBF1(+)', 21), ('SREBF2(+)', 36)]

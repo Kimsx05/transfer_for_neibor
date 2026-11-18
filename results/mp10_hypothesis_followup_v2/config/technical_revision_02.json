@@ -1,0 +1,5 @@
+{
+  "time": "2026-11-18T06:33:51.178723+00:00",
+  "reason": "Installed HGNC historical table uses pipe-delimited aliases and sometimes mixed case, e.g. SgK223. Correct parser and certify aliases only when one HGNC-linked and one NCBI identity agree. Same module denominators, database and thresholds; no result-based gene deletion. Previous strict approved-name-only mapping audit retained.",
+  "known_check": "PRAG1 / SGK223: HGNC:25438, NCBI157285; official NCBI confirms synonym"
+}

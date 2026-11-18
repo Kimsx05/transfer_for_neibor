@@ -1,0 +1,67 @@
+Read exact training and full adjacency
+Reconstruct full global-quantile and top-regulator candidates
+
+2026-11-18 14:21:36,261 - pyscenic.utils - INFO - Using existing Pearson correlations from the adjacencies file.
+
+2026-11-18 14:21:36,298 - pyscenic.utils - INFO - Creating modules.
+Recovered 12 SREBF candidate modules
+
+2026-11-18 14:24:27,177 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for SREBF1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+SREBF1 activating;weight>75.0% 155 107 mapping_coverage_not_above_80_percent 12
+
+2026-11-18 14:24:28,631 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for SREBF2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+SREBF2 activating;weight>75.0% 289 198 mapping_coverage_not_above_80_percent 28
+
+2026-11-18 14:24:29,916 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for SREBF1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+SREBF1 activating;weight>90.0% 67 52 mapping_coverage_not_above_80_percent 7
+
+2026-11-18 14:24:31,217 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for SREBF2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+SREBF2 activating;weight>90.0% 105 76 mapping_coverage_not_above_80_percent 62
+SREBF1 activating;top50 51 42 retained 10
+
+2026-11-18 14:24:36,005 - pyscenic.transform - WARNING - Less than 80% of the genes in Regulon for SREBF2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+SREBF2 activating;top50 51 40 mapping_coverage_not_above_80_percent 14
+
+2026-11-18 14:24:37,332 - pyscenic.transform - WARNING - Less than 80% of the genes in SREBF1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+SREBF1 activating;top5perTarget 58 45 mapping_coverage_not_above_80_percent 7
+
+2026-11-18 14:24:38,661 - pyscenic.transform - WARNING - Less than 80% of the genes in SREBF2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+SREBF2 activating;top5perTarget 85 62 mapping_coverage_not_above_80_percent 76
+
+2026-11-18 14:24:40,019 - pyscenic.transform - WARNING - Less than 80% of the genes in SREBF1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+SREBF1 activating;top10perTarget 108 81 mapping_coverage_not_above_80_percent 7
+
+2026-11-18 14:24:41,399 - pyscenic.transform - WARNING - Less than 80% of the genes in SREBF2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+SREBF2 activating;top10perTarget 166 112 mapping_coverage_not_above_80_percent 55
+
+2026-11-18 14:24:42,939 - pyscenic.transform - WARNING - Less than 80% of the genes in SREBF1 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+SREBF1 activating;top50perTarget 452 296 mapping_coverage_not_above_80_percent 8
+
+2026-11-18 14:24:44,896 - pyscenic.transform - WARNING - Less than 80% of the genes in SREBF2 could be mapped to hg38_refseq-r80_mc9nr_10kb. Skipping this module.
+SREBF2 activating;top50perTarget 960 711 mapping_coverage_not_above_80_percent 20
+Create regulons from a dataframe of enriched features.
+Additional columns saved: []
+SCENIC STAGE AUDIT COMPLETE
+	Command being timed: "taskset -c 221 mp10_immune_endothelial_mechanisms_v1/venv/bin/python mp10_hypothesis_followup_v2/scripts/02_scenic_audit.py"
+	User time (seconds): 247.92
+	System time (seconds): 6.47
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:16.95
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6133108
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 97
+	Minor (reclaiming a frame) page faults: 1216856
+	Voluntary context switches: 6180
+	Involuntary context switches: 5974
+	Swaps: 0
+	File system inputs: 100056
+	File system outputs: 16472
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

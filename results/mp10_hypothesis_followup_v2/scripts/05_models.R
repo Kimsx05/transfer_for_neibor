@@ -1,0 +1,41 @@
+source('mp10_hypothesis_followup_v2/scripts/common.R')
+reg<-rd('model_registry.tsv')[kind%in%c('paired_score','direct_D','cross')];sc<-rd('sample_level_scores.tsv.gz');pr<-fread(file.path(V1,'tables/coverage.tsv.gz'));cy<-fread(file.path(V1,'tables/treg_cycle_composition.tsv'));cl<-old('epi_existing_cluster_composition.tsv');cl<-cl[epi_allgene_cluster==0,.(cluster0_n=sum(n_cells)),by=.(sample_uid,profile_type)];pr<-merge(pr,cl,by=c('sample_uid','profile_type'),all.x=TRUE);pr[is.na(cluster0_n),cluster0_n:=0];pr[,cluster0_fraction:=cluster0_n/n_cells]
+getscore<-function(fam,ty,si,ma='Full',va='standard')sc[family==fam&profile_type==ty&signature==si&mask==ma&variant==va,.(sample_uid,score)]
+fitfun<-function(d,paired=FALSE,prop=FALSE,cov=NULL){
+ out<-list(status='not_evaluable',reason='',beta=NA_real_,SE=NA_real_,CI_low=NA_real_,CI_high=NA_real_,P=NA_real_,residual_df=NA_real_,design_rank=NA_real_,max_leverage=NA_real_,dispersion=NA_real_);n<-nrow(d);nu<-uniqueN(d$patient_uid_recorded);stopifnot(n==nu)
+ if(nu<4){out$reason<-'fewer_than_4_recorded_patient_units';return(list(out=out,inf=NULL))}
+ terms<-c(if(!paired&&uniqueN(d$dataset)>1)'dataset',cov,if(!paired)'x');form<-reformulate(if(length(terms))terms else '1',response=if(prop)'cbind(n_cycling,n_noncycling)'else'y');X<-model.matrix(form,d);rank<-qr(X)$rank;df<-n-rank;out$design_rank<-rank;out$residual_df<-df
+ reason<-if(rank<ncol(X))'rank_deficient'else if(df<3)'residual_df_below_3'else if(!paired&&sd(d$x)<1e-10)'no_exposure_variance'else if(sd(d$y)<1e-10)'no_endpoint_variance'else'';inf<-NULL
+ if(!nzchar(reason))tryCatch({
+  if(prop){f<-glm(form,d,family=quasibinomial());su<-summary(f);if(!f$converged||!is.finite(su$dispersion)||su$dispersion<=0)stop('quasibinomial_nonconvergence_or_degenerate');bt<-coef(f)['x'];se<-su$coefficients['x','Std. Error'];out$dispersion<-su$dispersion;if(!is.finite(se)||se>10)stop('quasibinomial_unreliable_SE');h<-hatvalues(f)
+  }else{f<-lm(form,d);h<-hatvalues(f);out$max_leverage<-max(h);if(any(h>=1-1e-10))stop('HC3_undefined_unit_leverage');V0<-solve(crossprod(X));V<-V0%*%crossprod(X,X*as.numeric(residuals(f)^2/(1-h)^2))%*%V0;term<-if(paired)'(Intercept)'else'x';bt<-coef(f)[term];se<-sqrt(V[term,term])}
+  if(!is.finite(se)||se<=0)stop('invalid_standard_error');out$status<-'completed';out$beta<-unname(bt);out$SE<-unname(se);out$P<-2*pt(-abs(bt/se),df);out$CI_low<-unname(bt-qt(.975,df)*se);out$CI_high<-unname(bt+qt(.975,df)*se);out$max_leverage<-max(h);inf<-data.table(sample_uid=d$sample_uid,leverage=h,cooks_distance=cooks.distance(f),residual=as.numeric(residuals(f)))
+ },error=function(e){reason<<-conditionMessage(e)})
+ if(nzchar(reason)){out$status<-'not_evaluable';out$reason<-reason};list(out=out,inf=inf)
+}
+ans<-list();members<-list();elig<-list();infl<-list()
+for(i in seq_len(nrow(reg))){r<-reg[i];setting<-r$setting;ma<-r$mask;covar<-NULL;paired<-r$kind!='cross';prop<-r$y=='cycling_fraction'
+ if(paired){
+  ty<-r$state;hi<-pr[profile_type==ty,.(sample_uid,dataset,patient_uid_recorded,main_patient,replacement_patient,n_sender=n_cells,RNA_H=median_log_nCount,cl_H=cluster0_fraction)];lo<-pr[profile_type=='L50',.(sample_uid,n_receiver=n_cells,RNA_L=median_log_nCount,cl_L=cluster0_fraction)];d<-merge(hi,lo,by='sample_uid',all=TRUE)
+  s1<-getscore('Epi_all',ty,r$y,ma);setnames(s1,'score','high_score');s0<-getscore('Epi_all','L50',r$y,ma);setnames(s0,'score','low_score');d<-merge(merge(d,s1,by='sample_uid',all.x=TRUE),s0,by='sample_uid',all.x=TRUE);d[,y:=high_score-low_score]
+  if(r$kind=='direct_D'){s1<-getscore('Epi_all',ty,r$x,ma);setnames(s1,'score','chol_H');s0<-getscore('Epi_all','L50',r$x,ma);setnames(s0,'score','chol_L');d<-merge(merge(d,s1,by='sample_uid',all.x=TRUE),s0,by='sample_uid',all.x=TRUE);d[,`:=`(delta_sterol=chol_H-chol_L,delta_FA=y)];d[,y:=delta_sterol-delta_FA]}
+  d[,x:=1];d[,dataset_ok:=TRUE];if(startsWith(setting,'dataset_'))d[,dataset_ok:=dataset==sub('^dataset_','',setting)]
+  d[,additional_ok:=TRUE];if(setting=='common_H05'){ok<-pr[profile_type%in%c('H05','H10','H50','L50')&n_cells>=r$min_cells,.N,by=sample_uid][N==4,sample_uid];d[,additional_ok:=sample_uid%in%ok]}
+  if(setting=='quality_RNA'){d[,covariate:=RNA_H-RNA_L];covar<-'covariate'};if(setting=='composition_cluster0'){d[,covariate:=cl_H-cl_L];covar<-'covariate'}
+ }else{
+  sf<-r$sender;rf<-r$receiver;st<-if(sf=='Epi_all')if(setting%in%c('H10','H50','Epi_all'))setting else'H05'else sf;masky<-ma;va<-if(setting=='no_shared_genes')'no_shared_genes'else'standard'
+  hi<-pr[profile_type==st,.(sample_uid,dataset,patient_uid_recorded,main_patient,replacement_patient,n_sender=n_cells,RNA_H=median_log_nCount)];lo<-pr[profile_type==rf,.(sample_uid,n_receiver=n_cells,RNA_L=median_log_nCount)];d<-merge(hi,lo,by='sample_uid',all=TRUE)
+  s1<-getscore(sf,st,r$x,ma);setnames(s1,'score','x');d<-merge(d,s1,by='sample_uid',all.x=TRUE)
+  if(setting=='delta_H05_L50'){s0<-getscore(sf,'L50',r$x,ma);setnames(s0,'score','low_score');d<-merge(d,s0,by='sample_uid',all.x=TRUE);d<-merge(d,pr[profile_type=='L50',.(sample_uid,n_low=n_cells)],by='sample_uid',all.x=TRUE);d[,x:=x-low_score]}
+  if(prop){d<-merge(d,cy[,.(sample_uid,n_cycling,n_noncycling,n_invalid,y=cycling_fraction)],by='sample_uid',all.x=TRUE)}else{s0<-getscore(rf,rf,r$y,masky,va);setnames(s0,'score','y');d<-merge(d,s0,by='sample_uid',all.x=TRUE)}
+  d[,dataset_ok:=TRUE];if(startsWith(setting,'LODO_'))d[,dataset_ok:=dataset!=sub('^LODO_','',setting)]
+  d[,additional_ok:=TRUE];if(setting=='delta_H05_L50')d[,additional_ok:=is.finite(n_low)&n_low>=r$min_cells];if(prop)d[,additional_ok:=additional_ok&n_invalid==0]
+  if(setting=='quality_sender_RNA'){d[,covariate:=RNA_H];covar<-'covariate'};if(setting=='quality_receiver_RNA'){d[,covariate:=RNA_L];covar<-'covariate'}
+ }
+ d[,patient_ok:=if(r$patient=='main')main_patient else replacement_patient];d[is.na(patient_ok),patient_ok:=FALSE];d[,coverage_ok:=is.finite(n_sender)&is.finite(n_receiver)&n_sender>=r$min_cells&n_receiver>=r$min_cells];d[,values_ok:=is.finite(x)&is.finite(y)];if(length(covar))d[,values_ok:=values_ok&is.finite(covariate)]
+ if(setting=='multi_specimen_datasets'){ok<-d[patient_ok&coverage_ok&values_ok,.N,by=dataset][N>=2,dataset];d[,dataset_ok:=dataset%in%ok]}
+ d[,included:=patient_ok&coverage_ok&values_ok&dataset_ok&additional_ok];d[is.na(included),included:=FALSE];d[,exclusion_reason:=fifelse(!patient_ok,'patient_representative',fifelse(!coverage_ok,'profile_absent_or_below_min_cells',fifelse(!values_ok,'score_coverage_or_missing_value',fifelse(!dataset_ok,'dataset_selection',fifelse(!additional_ok,'common_cohort_or_low_profile_or_cycle_classification','included')))))];d[,model_id:=r$model_id];elig[[i]]<-d
+ dd<-d[included==TRUE];setorder(dd,sample_uid);f<-fitfun(dd,paired,prop,covar);o<-f$out;if(!any(is.finite(d$y)))o$reason<-'endpoint_signature_not_evaluable';if(!paired&&!any(is.finite(d$x)))o$reason<-'sender_signature_not_evaluable';if(paired&&!any(is.finite(d$y)))o$reason<-'paired_signature_not_evaluable'
+ rr<-cbind(r,as.data.table(o));rr[,`:=`(n_profile_eligible=sum(d$patient_ok&d$coverage_ok&d$dataset_ok&d$additional_ok,na.rm=TRUE),n_specimens=nrow(dd),n_recorded_patient_units=uniqueN(dd$patient_uid_recorded),n_datasets=uniqueN(dd$dataset),dataset_counts=paste(dd[,.N,by=dataset][order(dataset),paste0(dataset,':',N)],collapse=';'),exposure_SD=if(!paired&&nrow(dd)>1)sd(dd$x)else NA_real_,input_hash=digest(list(dd,r),algo='sha256'),method=if(prop)'quasibinomial t'else'OLS HC3 t',effect_unit=if(prop)'log odds per fixed reference SD'else if(paired)'fixed reference SD change'else'receiver fixed SD per sender fixed SD')];if(prop)rr[,`:=`(OR=exp(beta),OR_low=exp(CI_low),OR_high=exp(CI_high))];ans[[i]]<-rr;members[[i]]<-dd;if(!is.null(f$inf)){f$inf[,model_id:=r$model_id];infl[[i]]<-f$inf};if(i%%100==0)cat('MODELS',i,'\n')
+}
+z<-rbindlist(ans,fill=TRUE);z[,q:=p.adjust(P,'BH',n=unique(planned_n)),by=FDR_family];z[,testable_n:=sum(is.finite(P)),by=FDR_family];put(z,'score_model_results.tsv.gz');put(rbindlist(members,fill=TRUE),'model_membership.tsv.gz');put(rbindlist(elig,fill=TRUE),'model_eligibility.tsv.gz');put(rbindlist(infl,fill=TRUE),'model_influence.tsv.gz');thread_audit('models_complete');cat('SCORE MODELS COMPLETE\n')

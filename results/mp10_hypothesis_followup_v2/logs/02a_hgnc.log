@@ -1,0 +1,46 @@
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 540, in _make_request
+    response = conn.getresponse()
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages/urllib3/connection.py", line 638, in getresponse
+    httplib_response = super().getresponse()
+  File "/home/data/t070721/miniconda3/envs/compass_env/lib/python3.10/http/client.py", line 1395, in getresponse
+    response.begin()
+  File "/home/data/t070721/miniconda3/envs/compass_env/lib/python3.10/http/client.py", line 323, in begin
+    version, status, reason = self._read_status()
+  File "/home/data/t070721/miniconda3/envs/compass_env/lib/python3.10/http/client.py", line 292, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+The above exception was the direct cause of the following exception:
+
+urllib3.exceptions.ProxyError: ('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages/urllib3/util/retry.py", line 555, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /public-download-files/hgnc/tsv/tsv/hgnc_complete_set.txt (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_hypothesis_followup_v2/scripts/02a_hgnc.py", line 4, in <module>
+    r=requests.get(url,timeout=90);r.raise_for_status();assert r.text.startswith('hgnc_id\t');p.write_bytes(r.content)
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages/requests/api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages/requests/api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages/requests/adapters.py", line 723, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /public-download-files/hgnc/tsv/tsv/hgnc_complete_set.txt (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))

@@ -1,0 +1,5 @@
+analysis	Full	M20	unchanged
+formal_program_scores	Official full members; fixed whole-lineage scoring universe	Remove Top20 from signature and scoring universe; >=5 and >=50% of remaining expected members	Raw counts, library size, TMM, MP10 and state membership
+formal_GSEA	Full DE signed ranking and official set	Remove Top20 from set and signed ranking; original min15 max500	Original DE model and gene-wise P/FDR
+corrected_SCENIC_AUCell	Recovered motif-pruned regulon, original training gene order	Remove Top20 from regulon and AUCell ranking universe following original implementation	Original normalized RNA, cell identities and pairing
+EC_mTOR_GSEA	Historical M0073 whole-Hallmark result	New whole-Hallmark shared-driver diagnostic, separate BH planned50	Historical Q50 exposure and old q; score coverage NE not replaced

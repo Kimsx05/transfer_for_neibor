@@ -1,0 +1,33 @@
+Read original RNA for exact Capillary EC QC 3905 cells
+[1] "counts"     "data"       "scale.data"
+          used  (Mb) gc trigger    (Mb)   max used    (Mb)
+Ncells 3610477 192.9    6834121   365.0    5099415   272.4
+Vcells 7228802  55.2 5182239554 39537.4 5406456103 41248.0
+Error in `[.data.table`(z, , .(n_cells = .N, n_endothelial_marker_positive = sum(endothelial_markers_positive >  : 
+  Column 5 of result for group 3 is type 'double' but expecting type 'integer'. Column types must be consistent for each group.
+Calls: put -> fwrite -> [ -> [.data.table
+Execution halted
+Command exited with non-zero status 1
+	Command being timed: "taskset -c 223 Rscript --vanilla mp10_hypothesis_followup_v2/scripts/04_EC_cell_QC.R"
+	User time (seconds): 104.70
+	System time (seconds): 54.89
+	Percent of CPU this job got: 94%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:49.50
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 42587644
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 18
+	Minor (reclaiming a frame) page faults: 19587627
+	Voluntary context switches: 5425
+	Involuntary context switches: 359
+	Swaps: 0
+	File system inputs: 320496
+	File system outputs: 83000
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

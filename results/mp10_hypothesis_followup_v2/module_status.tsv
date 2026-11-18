@@ -1,0 +1,16 @@
+module	status	reason
+M0	completed	冻结 H05/L50 主分析、1206 初始模型及条件性/技术诊断追加登记；保留原冻结文件和修订。
+M1_original_SCENIC	completed	8577 候选模块重建，12个 SREBF 模块逐项诊断；未重跑 GRNBoost2。
+M1_symbol_correction_AUCell	completed	唯一历史别名修正；SREBF2 36 targets；116448 Epi 重评分；48条件性配对模型。
+M1_alternative_ranking	not_evaluable	没有预先选定且配套的本地第二 ranking；未按救出 SREBF2 的结果选择新库。
+M1_current_HGNC_download	technically_blocked	当前 HGNC 外网下载受网络限制；已用安装的 HGNC/NCBI 资源完成核心核验，不阻断主模块。
+M2_sources_filter_QC	completed	三类来源、EC 2x2过滤、原始3905 EC计数和标记、设计与混合spot审计；旧结果只读。
+M2_EC_score_HC3	not_evaluable	固定背景 mTORC1 98/200<50%；另有 singleton dataset h=1，分别报告。
+M3_official_sets	completed	13正式过程+1探索运输集合，2026.1.Hs，完整成员/非编码/重叠/覆盖。
+M4_H05_lipid_processes	completed	24配对、5数据集；Full/M20、H10/H50、min30、a/b、LODO、质量/组成、共同样本。
+M4_small_set_GSEA	not_evaluable	小集合未达到15基因门槛；样本级程序可检验结果单独保留。
+M4_direct_D_matching	completed	72个直接D模型和每mask200次固定种子基因匹配；非生物学重复。
+M5_primary_Treg_uptake	not_evaluable	主两项：Treg CHOL_IMPORT4/12，LCFA_IMPORT7/19；均不满足固定覆盖。
+M5_EC_exploratory	not_evaluable	五项主探索路线因sender或receiver固定集合覆盖不足；不是零效应。
+M5_secondary_states	completed	适用的quasi模型及预登记去singleton子集完成；主连续HC3 NE另列，阳性/未支持/NE均保留。
+delivery_validation	completed	完整模型表1328行；独立核验、原counts校验、18图62文件渲染；只读结果表重画入口。

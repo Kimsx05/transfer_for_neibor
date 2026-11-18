@@ -1,0 +1,104 @@
+[1] "counts"           "detected_cells"   "normalized_sum"   "profiles"        
+[5] "feature_universe"
+                    sample_uid                              profile_id
+                        <char>                                  <char>
+1: CNP0000460::CNP0000460_P01T CNP0000460::CNP0000460_P01T|Arterial EC
+2: CNP0000460::CNP0000460_P01T    CNP0000460::CNP0000460_P01T|C1QC TAM
+   profile_type n_cells total_counts detected_genes counts_per_cell    dataset
+         <char>   <int>        <num>          <int>           <num>     <char>
+1:  Arterial EC       1         4514           1907        4514.000 CNP0000460
+2:     C1QC TAM      69       258864          14232        3751.652 CNP0000460
+       specimen_id patient_uid_recorded main_patient replacement_patient
+            <char>               <char>       <lgcl>              <lgcl>
+1: CNP0000460_P01T      CNP0000460::P01         TRUE                TRUE
+2: CNP0000460_P01T      CNP0000460::P01         TRUE                TRUE
+         Q50       Q95    Q50_z    Q95_z eligible_50 eligible_30
+       <num>     <num>    <num>    <num>      <lgcl>      <lgcl>
+1: 0.3414709 0.6232435 1.804857 1.294166       FALSE       FALSE
+2: 0.3414709 0.6232435 1.804857 1.294166        TRUE        TRUE
+[1] 90011  1174
+ [1] "sample_uid"           "profile_id"           "profile_type"        
+ [4] "n_cells"              "total_counts"         "detected_genes"      
+ [7] "counts_per_cell"      "dataset"              "specimen_id"         
+[10] "patient_uid_recorded" "main_patient"         "replacement_patient" 
+[13] "Q50"                  "Q95"                  "Q50_z"               
+[16] "Q95_z"                "eligible_50"          "eligible_30"         
+[1] "Epi_all"         "Treg"            "Tfh/CXCL13-like" "Capillary EC"   
+[5] "Arterial EC"    
+[1] "logCPM"        "center"        "profiles"      "gene_universe"
+[5] "reference_ids"
+                            profile_id median_nCount median_nFeature median_mt
+                                <char>         <num>           <num>     <num>
+1: CNP0000460::CNP0000460_P04T|Epi_all        4857.0          2075.0 11.110050
+2:     CNP0000460::CNP0000460_P04T|L50        2421.0          1281.0 10.090319
+3: CNP0000460::CNP0000460_P07T|Epi_all        7664.5          2759.5  9.962339
+4:     CNP0000460::CNP0000460_P07T|L50        5976.0          2303.0  9.771376
+5: CNP0000460::CNP0000460_P02T|Epi_all        5686.0          2238.0 13.293147
+6:     CNP0000460::CNP0000460_P02T|H50        6864.0          2551.0 13.503002
+   n_subtype_annotated subtypes
+                 <int>   <char>
+1:                   0         
+2:                   0         
+3:                   0         
+4:                   0         
+5:                   0         
+6:                   0         
+ [1] "db_gene_symbol"     "db_ncbi_gene"       "db_ensembl_gene"   
+ [4] "source_gene"        "gs_id"              "gs_name"           
+ [7] "gs_collection"      "gs_subcollection"   "gs_collection_name"
+[10] "gs_description"     "gs_source_species"  "gs_pmid"           
+[13] "gs_geoid"           "gs_exact_source"    "gs_url"            
+[16] "db_version"         "db_target_species" 
+   db_gene_symbol db_ncbi_gene db_ensembl_gene source_gene  gs_id
+           <char>       <char>          <char>      <char> <char>
+1:         ABCB10        23456 ENSG00000135776       23456 M10009
+                             gs_name gs_collection gs_subcollection
+                              <char>        <char>           <char>
+1: GOBP_MYELOID_CELL_DIFFERENTIATION            C5            GO:BP
+      gs_collection_name
+                  <char>
+1: GO Biological Process
+                                                                                                                                                                                                                   gs_description
+                                                                                                                                                                                                                           <char>
+1: The process in which a relatively unspecialized myeloid precursor cell acquires the specialized features of any cell of the myeloid leukocyte, megakaryocyte, thrombocyte, or erythrocyte lineages. [GOC:add, ISBN:0781735149]
+   gs_source_species gs_pmid gs_geoid gs_exact_source
+              <char>  <char>   <char>          <char>
+1:                HS                       GO:0030099
+                                                gs_url db_version
+                                                <char>     <char>
+1: http://amigo.geneontology.org/amigo/term/GO:0030099  2026.1.Hs
+   db_target_species
+              <char>
+1:                HS
+                                            gs_name gs_exact_source
+                                             <char>          <char>
+1:                          GOBP_CHOLESTEROL_EFFLUX      GO:0033344
+2:              GOBP_TRIGLYCERIDE_CATABOLIC_PROCESS      GO:0019433
+3: GOBP_UNSATURATED_FATTY_ACID_BIOSYNTHETIC_PROCESS      GO:0006636
+4:                       GOBP_FATTY_ACID_ELONGATION      GO:0030497
+5:                                 GOBP_PRENYLATION      GO:0097354
+6:                          GOBP_CHOLESTEROL_IMPORT      GO:0070508
+7:      GOBP_LONG_CHAIN_FATTY_ACID_IMPORT_INTO_CELL      GO:0044539
+ [1] "gene_symbol"        "ncbi_gene"          "ensembl_gene"      
+ [4] "db_gene_symbol"     "db_ncbi_gene"       "db_ensembl_gene"   
+ [7] "source_gene"        "gs_id"              "gs_name"           
+[10] "gs_collection"      "gs_subcollection"   "gs_collection_name"
+[13] "gs_description"     "gs_source_species"  "gs_pmid"           
+[16] "gs_geoid"           "gs_exact_source"    "gs_url"            
+[19] "db_version"         "db_target_species" 
+                                                           gs_name
+                                                            <char>
+1:                               REACTOME_CHOLESTEROL_BIOSYNTHESIS
+2: REACTOME_CHOLESTEROL_BIOSYNTHESIS_VIA_DESMOSTEROL_BLOCH_PATHWAY
+3:                            REACTOME_FATTY_ACYL_COA_BIOSYNTHESIS
+4:                REACTOME_MITOCHONDRIAL_FATTY_ACID_BETA_OXIDATION
+5:                     REACTOME_NR1H2_AND_NR1H3_MEDIATED_SIGNALING
+6:                              REACTOME_TRIGLYCERIDE_BIOSYNTHESIS
+   gs_exact_source
+            <char>
+1:    R-HSA-191273
+2:   R-HSA-6807047
+3:     R-HSA-75105
+4:     R-HSA-77289
+5:   R-HSA-9024446
+6:     R-HSA-75109

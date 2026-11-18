@@ -1,0 +1,4 @@
+source('mp10_hypothesis_followup_v2/scripts/common.R')
+b<-qread(file.path(OLD,'objects/pseudobulk.qs'),nthreads=1);print(names(b));print(b$profiles[1:2]);print(dim(b$counts));print(names(b$profiles));m<-qread(file.path(V1,'objects/scoring_matrices.qs'),nthreads=1);print(names(m$matrices));print(names(m$matrices[['Epi_all']]));print(head(old('profile_quality.tsv')))
+z<-as.data.table(readRDS('/home/data/t070721/.cache/R/msigdbr/msigdb.2026.1.Hs.C5.rds'));print(names(z));print(head(z,1));if('gs_exact_source'%in%names(z))print(unique(z[gs_exact_source%in%c('GO:0030497','GO:0006636','GO:0044539','GO:0070508','GO:0033344','GO:0019433','GO:0018342','GO:0097354'),.(gs_name,gs_exact_source)]))
+r<-fread(file.path(REF,'reactome.tsv.gz'));print(names(r));print(unique(r[grepl('191273|6807047|75105|75109|77289|9024446',gs_exact_source),.(gs_name,gs_exact_source)]))

@@ -1,0 +1,60 @@
+{
+  "task": "mp10_hypothesis_followup_v2",
+  "frozen_utc": "2026-11-18T06:19:56.288611+00:00",
+  "design_status": "hypothesis-directed internal analysis after historical discovery",
+  "primary_High": "H05",
+  "Low": "frozen L50",
+  "High_sensitivities": [
+    "H10",
+    "H50"
+  ],
+  "membership": "reuse exact original pseudobulk membership; no rounded-score reassignment",
+  "min_cells": [
+    50,
+    30
+  ],
+  "min_units": 4,
+  "min_residual_df": 3,
+  "thread_total_max": 4,
+  "internal_threads": 1,
+  "patient": "main T4463209a; replace with b sensitivity; recorded/provisional others",
+  "paired_counts": "reuse edgeR robust QL ~ specimen + state; original global gene FDR preserved",
+  "paired_scores": "OLS on specimen High-Low differences; HC3 t/CI, intercept test; no duplicate receiver",
+  "cross": "Y ~ dataset + standardized X; OLS HC3 with residual-df t; quasi-binomial for cycling proportion; h>=1-1e-10 NE",
+  "score": "reuse v1 full-transcriptome lineage TMM logCPM; ssGSEA GSVA 2.4.9 alpha .25 normalize FALSE; >=5 genes and >=50% expected members",
+  "scale": "per-signature fixed mean/SD in main-a Epi_all>=50 (sender) or native receiver>=50; same fixed reference across all states/subsets; never center deltas",
+  "mask": "M20 removed from downstream signature AND ranking universe only, RNA normalization unchanged; receiver M20 only sensitivity",
+  "gsea": {
+    "minSize": 15,
+    "maxSize": 500,
+    "seed": 123,
+    "nPermSimple": 10000,
+    "eps": 1e-10,
+    "scoreType": "std",
+    "numeric_budget": "uniform 100000 for nonfinite estimates only"
+  },
+  "FDR": "BH with planned family n; NE remains NA",
+  "direct_D": "standardized CHOL_SYNTH change minus FA_ACYL_COA change; BLOCH secondary; Full/M20; same paired samples",
+  "matched_gene_resampling": {
+    "seed": 123,
+    "repeats": 200,
+    "method": "equal-size nearest-neighbor matching without replacement between measurable cholesterol and FA genes by main-a Epi_all mean logCPM and median detected fraction standardized across whole fixed Epi universe; draw k=min sizes, randomly permute assignment order; fixed 200 samples, do not select by effect; identical scoring universe, per-signature reference fixed before each delta; report robustness distribution not biological-replicate P"
+  },
+  "scenic": "exact frozen seed123 training/adjacency/context; min_genes20; original missing_fraction>=.20 excluded, including exactly80%; same annotation and NES>=3; first diagnose all SREBF1/2 modules; strict unique HGNC exact/previous-symbol correction only with retained denominator, no ambiguous mapping; no new GRNBoost2",
+  "scenic_alternative_reference": "no alternate ranking preselected because no independent compatible alternative installed; original library limitations retained, do not select resource to rescue TF",
+  "EC_QC": "original labels; endothelial PECAM1,VWF,CDH5,EMCN,KDR,RAMP2 versus EPCAM,KRT8,KRT18,KRT19; single-cell coexpression and contribution descriptive; no ambient correction claimed",
+  "mTOR_lipid_diagnostic": "union of frozen 13 formal lipid processes; label MP10 overlap separately; remainder other Hallmark response",
+  "no_FFA_export_signature": "no accepted generic free-fatty-acid secretion assay: explicit gap, lipolysis not substituted",
+  "clinical": "no additional clinical scan",
+  "NE_conditions": [
+    "profile<cell threshold",
+    "<4 recorded units",
+    "rank deficient",
+    "df<3",
+    "zero exposure variance",
+    "signature coverage below fixed rule",
+    "HC3 h=1",
+    "quasi separation/nonconvergence",
+    "GSEA size outside15..500"
+  ]
+}

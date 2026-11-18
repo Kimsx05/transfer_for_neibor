@@ -1,0 +1,30 @@
+SCORED Epi_all 13131 200 
+SCORED Treg 6998 117 
+SCORED Capillary EC 4015 35 
+Error in rbindlist(lapply(c("collectri", "dorothea_AB"), function(n) { : 
+  Item 2 has 5 columns, inconsistent with item 1 which has 4 columns. To fill missing columns use fill=TRUE.
+Execution halted
+Command exited with non-zero status 1
+	Command being timed: "taskset -c 220 Rscript --vanilla mp10_hypothesis_followup_v2/scripts/03_scores_audit.R"
+	User time (seconds): 18.13
+	System time (seconds): 1.78
+	Percent of CPU this job got: 90%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:21.98
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1905112
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 11
+	Minor (reclaiming a frame) page faults: 527145
+	Voluntary context switches: 365
+	Involuntary context switches: 49
+	Swaps: 0
+	File system inputs: 40200
+	File system outputs: 2240
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
