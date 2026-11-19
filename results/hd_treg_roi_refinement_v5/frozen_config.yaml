@@ -1,0 +1,26 @@
+sections: [Cervilla,D1_Johnson]
+threads_total_max: 16
+execution: sequential sections, single numerical thread per process
+candidate_pool: union of every raw T-panel or 11-gene program molecule-bearing bin (supplied including unassigned), old SingleR T/NK or fine T classes, historical strict/program/FOXP3 and old v4 T predictions, new T-like predictions
+planning_roi: connected unions of all candidate-centered cumulative 200 um disks on 2 um registered capture grid; processing halo 64 um; same algorithm over full supplied geometry to eliminate tile-border truncation
+segmentation: reuse registered StarDist 2D_versatile_he prob 0.1 nms 0.3 nuclei; pilot check against saved pixel labels
+fallback_assignment: multi-source shortest path on supplied 2um capture lattice; all interior nuclear bins fixed; 8-connected metric cost length*(1+2*mean RGB absolute difference/255+0.15*abs(log1p(UMI1)-log1p(UMI2))); path budget 10 um; stable label tie; does not use subtype or MP10
+identity: frozen 30-class v4 model, raw target evidence, geometry and competing lineage expression
+Treg_supported: model Treg first, T_width>=2, core_width>=1, and (reference_support>=0.95 or (FOXP3>0 and core_width>=2 and reference_support>=0.5)); no mixed/invalid geometry
+T_control: predicted CD4/CD8/Tfh with support>=0.5 and T_width>=2 and FOXP3=0 and core_width<2; no mixed/invalid geometry
+mixed: T_width>=2 and Epi_width>=2 or T_width>=2 and Fib_width>=2 or T_width>=2 and Myeloid_width>=2
+epithelial: model Epithelial support>=0.5 plus Epi_width>=2 with no mixed/invalid geometry
+score_eligible: eligible epithelium and nFeature>=50, independent of Top20
+geometry_invalid: image_confirmed_invalid or geometry_review
+high: per section in union D, strict > linear q95/q90
+radii_um: [50,200]
+planning_coverage: same supplied component actual eligible 2um centers >= 50% nominal disk
+comparison: same component, same 400um spatial block and opportunity bin (1-4,5-19,20+ scoreable epithelial cells), same T-depth category (<100,100+ UMI), average within matched case strata; paired block bootstrap when at least 5 matched blocks
+seed: 123
+auxiliary_before_score: FOXP3>0, T_width>=2, core_width>=2, histology geometry accepted, no mixed flag; excludes supported primary Treg. This is a molecular screening sensitivity, not verified identity.
+visual_detail_scope: new or old cell model Treg first, raw FOXP3 or other Treg/program RNA, mixed T and epithelial cells; all other T-like/screening units remain on whole-ROI maps. Unassigned RNA plotted by observed grid.
+executed_roi_grouping_grid_um: 8
+executed_analysis_D: exact candidate-to-nucleus radius, original registered physical coordinates
+executed_geometry_buffer: entire supplied section, computational tiles use 16 um halo for 10 um maximum path
+executed_main_neighborhood_observability: same-component original supplied eligible-pool 8um centroids, count times 64 um2 divided by circular area, clipped to 1
+candidate_coverage_audit: supplied and usable 2um sites, centered at nearest physical lattice site

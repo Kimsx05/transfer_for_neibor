@@ -1,0 +1,7 @@
+    Updating crates.io index
+warning: spurious network error (3 tries remaining): [56] Failure when receiving data from the peer (GnuTLS recv error (-9): Error decoding the received TLS packet.)
+ Downloading crates ...
+warning: spurious network error (3 tries remaining): [56] Failure when receiving data from the peer (GnuTLS recv error (-110): The TLS connection was non-properly terminated.)
+  Downloaded proseg v3.2.0
+error: cannot install package `proseg 3.2.0`, it requires rustc 1.88.0 or newer, while the currently active rustc version is 1.75.0
+`proseg 3.0.12` has an unspecified minimum rustc version
