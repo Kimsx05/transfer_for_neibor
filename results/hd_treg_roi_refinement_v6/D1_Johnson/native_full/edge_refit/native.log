@@ -1,0 +1,31 @@
+Using 7 threads
+Finished reading input
+Read dataset:
+131460620 transcripts
+   161716 cells
+    18052 genes
+        0 fovs
+     8.13 prior weight
+	Command being timed: "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_roi_refinement_v6/.tools/prebuilt/bin/proseg --visiumhd --cellpose-masks /home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_roi_refinement_v6/D1_Johnson/native_full/edge_refit/mask.npy --cellpose-x-transform 0 0.5000100976465468 8885.571621516348 --cellpose-y-transform 0.5000070154646025 0 5889.884464196593 --nthreads 7 --output-path /home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_roi_refinement_v6/D1_Johnson/native_full/edge_refit/out --output-cell-metadata cells.parquet --output-cell-polygons cells.geojson.gz --no-diffusion --exclude-spatialdata-transcripts --burnin-samples 24 --samples 24 --recorded-samples 12 --hillclimb 6 -m 150 --nhidden 32 /home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_roi_refinement_v6/D1_Johnson/native_full/in"
+	User time (seconds): 3260.36
+	System time (seconds): 70.87
+	Percent of CPU this job got: 442%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 12:33.06
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 19896148
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 28982971
+	Voluntary context switches: 975079
+	Involuntary context switches: 5812
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 419368
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

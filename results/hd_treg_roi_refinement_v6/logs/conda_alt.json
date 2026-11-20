@@ -1,0 +1,867 @@
+{
+  "name": "rust-proseg",
+  "id": "686c409963fe6ad1fe90872b",
+  "package_types": [
+    "conda"
+  ],
+  "summary": "A Rust crate for running Proseg, a cell segmentation method for in situ spatial transcriptomics.",
+  "description": "",
+  "home": "https://github.com/dcjones/proseg",
+  "public": true,
+  "access": "public",
+  "owner": {
+    "company": "",
+    "location": "",
+    "login": "bioconda",
+    "name": "bioconda",
+    "url": "",
+    "description": "Bioconda is a distribution of bioinformatics software realized as a channel for the versatile Conda package manager.",
+    "created_at": "2015-09-11 22:59:20.880000+00:00",
+    "user_type": "org"
+  },
+  "full_name": "bioconda/rust-proseg",
+  "url": "http://api.anaconda.org/packages/bioconda/rust-proseg",
+  "html_url": "http://anaconda.org/bioconda/rust-proseg",
+  "versions": [
+    "2.0.4",
+    "2.0.5",
+    "2.0.6",
+    "3.1.1",
+    "3.2.0"
+  ],
+  "latest_version": "3.2.0",
+  "platforms": {
+    "linux-64": "3.2.0",
+    "osx-64": "3.2.0",
+    "osx-arm64": "3.2.0",
+    "linux-aarch64": "3.2.0"
+  },
+  "conda_platforms": [
+    "linux-64",
+    "linux-aarch64",
+    "osx-64",
+    "osx-arm64"
+  ],
+  "revision": 29,
+  "license": "GPL-3.0-or-later",
+  "license_url": null,
+  "dev_url": "https://github.com/dcjones/proseg",
+  "doc_url": "https://github.com/dcjones/proseg",
+  "source_git_url": null,
+  "source_git_tag": null,
+  "app_entry": {},
+  "app_type": {},
+  "app_summary": {},
+  "builds": [
+    "h79ce301_0",
+    "ha819e4a_0",
+    "h82ec203_0",
+    "h4349ce8_0",
+    "h121cdbd_0",
+    "h60bb4c3_0",
+    "hba26009_0",
+    "hec9b1f2_0",
+    "h2013a2e_0",
+    "hda65a65_0",
+    "h8f6e10a_0",
+    "h00cbfe0_0"
+  ],
+  "ndownloads": 4645,
+  "releases": [
+    {
+      "version": "2.0.4",
+      "distributions": [],
+      "full_name": "bioconda/rust-proseg/2.0.4"
+    },
+    {
+      "version": "2.0.5",
+      "distributions": [],
+      "full_name": "bioconda/rust-proseg/2.0.5"
+    },
+    {
+      "version": "2.0.6",
+      "distributions": [],
+      "full_name": "bioconda/rust-proseg/2.0.6"
+    },
+    {
+      "version": "3.1.1",
+      "distributions": [],
+      "full_name": "bioconda/rust-proseg/3.1.1"
+    },
+    {
+      "version": "3.2.0",
+      "distributions": [],
+      "full_name": "bioconda/rust-proseg/3.2.0"
+    }
+  ],
+  "watchers": 1,
+  "upvoted": 0,
+  "created_at": "2025-07-07 21:48:09.134000+00:00",
+  "modified_at": "2026-08-02 15:19:27.592000+00:00",
+  "files": [
+    {
+      "description": null,
+      "dependencies": [
+        "depends"
+      ],
+      "distribution_type": "conda",
+      "basename": "linux-64/rust-proseg-2.0.4-h4349ce8_0.tar.bz2",
+      "attrs": {
+        "operatingsystem": "linux",
+        "machine": "x86_64",
+        "target-triplet": "x86_64-any-linux",
+        "has_prefix": false,
+        "subdir": "linux-64",
+        "arch": "x86_64",
+        "build": "h4349ce8_0",
+        "build_number": 0,
+        "constrains": [
+          "__glibc >=2.17"
+        ],
+        "depends": [],
+        "license": "GPLv3",
+        "license_family": "GPL3",
+        "platform": "linux",
+        "timestamp": 1751918874381
+      },
+      "upload_time": "2025-07-07 21:48:09.499000+00:00",
+      "md5": "875c807bcddd0e050b0c9f7a6d0a7cbc",
+      "sha256": "29aab6af2405a1e342493eca56a97ed247cd7fe1a6a937fd9179d6f27556c23b",
+      "size": 9157110,
+      "full_name": "bioconda/rust-proseg/2.0.4/linux-64/rust-proseg-2.0.4-h4349ce8_0.tar.bz2",
+      "download_url": "//conda.anaconda.org/bioconda/linux-64/rust-proseg-2.0.4-h4349ce8_0.tar.bz2",
+      "type": "conda",
+      "version": "2.0.4",
+      "ndownloads": 152,
+      "owner": "bioconda",
+      "labels": [
+        "main"
+      ]
+    },
+    {
+      "description": null,
+      "dependencies": [
+        "depends"
+      ],
+      "distribution_type": "conda",
+      "basename": "osx-64/rust-proseg-2.0.4-h00cbfe0_0.tar.bz2",
+      "attrs": {
+        "operatingsystem": "darwin",
+        "machine": "x86_64",
+        "target-triplet": "x86_64-any-darwin",
+        "has_prefix": false,
+        "subdir": "osx-64",
+        "arch": "x86_64",
+        "build": "h00cbfe0_0",
+        "build_number": 0,
+        "constrains": [
+          "__osx >=10.13"
+        ],
+        "depends": [],
+        "license": "GPLv3",
+        "license_family": "GPL3",
+        "platform": "osx",
+        "timestamp": 1751919870235
+      },
+      "upload_time": "2025-07-07 21:51:20.795000+00:00",
+      "md5": "f856c3e0ed159f3edf4bb8d630698a73",
+      "sha256": "f25fa12f7c63aa00fc79efc6701bcd60c25dd0bf547a5cb2e66bb7e4f5e82662",
+      "size": 8610341,
+      "full_name": "bioconda/rust-proseg/2.0.4/osx-64/rust-proseg-2.0.4-h00cbfe0_0.tar.bz2",
+      "download_url": "//conda.anaconda.org/bioconda/osx-64/rust-proseg-2.0.4-h00cbfe0_0.tar.bz2",
+      "type": "conda",
+      "version": "2.0.4",
+      "ndownloads": 489,
+      "owner": "bioconda",
+      "labels": [
+        "main"
+      ]
+    },
+    {
+      "description": null,
+      "dependencies": [
+        "depends"
+      ],
+      "distribution_type": "conda",
+      "basename": "osx-arm64/rust-proseg-2.0.4-hda65a65_0.tar.bz2",
+      "attrs": {
+        "operatingsystem": "darwin",
+        "machine": "arm64",
+        "target-triplet": "arm64-any-darwin",
+        "has_prefix": false,
+        "subdir": "osx-arm64",
+        "arch": "arm64",
+        "build": "hda65a65_0",
+        "build_number": 0,
+        "constrains": [
+          "__osx >=11.0"
+        ],
+        "depends": [],
+        "license": "GPLv3",
+        "license_family": "GPL3",
+        "platform": "osx",
+        "timestamp": 1751919714130
+      },
+      "upload_time": "2025-07-07 21:55:19.156000+00:00",
+      "md5": "f4fbed17663db777627936910458f600",
+      "sha256": "0ee9caacc96fc6d6108783978b6e286835ce2aea1aa26dee951aa6dad229d834",
+      "size": 8093950,
+      "full_name": "bioconda/rust-proseg/2.0.4/osx-arm64/rust-proseg-2.0.4-hda65a65_0.tar.bz2",
+      "download_url": "//conda.anaconda.org/bioconda/osx-arm64/rust-proseg-2.0.4-hda65a65_0.tar.bz2",
+      "type": "conda",
+      "version": "2.0.4",
+      "ndownloads": 55,
+      "owner": "bioconda",
+      "labels": [
+        "main"
+      ]
+    },
+    {
+      "description": null,
+      "dependencies": [
+        "depends"
+      ],
+      "distribution_type": "conda",
+      "basename": "linux-aarch64/rust-proseg-2.0.5-hba26009_0.tar.bz2",
+      "attrs": {
+        "operatingsystem": "linux",
+        "machine": "aarch64",
+        "target-triplet": "aarch64-any-linux",
+        "has_prefix": false,
+        "subdir": "linux-aarch64",
+        "arch": "aarch64",
+        "build": "hba26009_0",
+        "build_number": 0,
+        "constrains": [
+          "__glibc >=2.17"
+        ],
+        "depends": [],
+        "license": "GPLv3",
+        "license_family": "GPL3",
+        "platform": "linux",
+        "timestamp": 1751927141403
+      },
+      "upload_time": "2025-07-07 22:56:17.620000+00:00",
+      "md5": "5f58a5faf768aeea20cbc00561c7b7f8",
+      "sha256": "40c00dcc56774f5d855f8c45049b0781d7974965e040f12a43d2bebec3d6fc8e",
+      "size": 9035231,
+      "full_name": "bioconda/rust-proseg/2.0.5/linux-aarch64/rust-proseg-2.0.5-hba26009_0.tar.bz2",
+      "download_url": "//conda.anaconda.org/bioconda/linux-aarch64/rust-proseg-2.0.5-hba26009_0.tar.bz2",
+      "type": "conda",
+      "version": "2.0.5",
+      "ndownloads": 81,
+      "owner": "bioconda",
+      "labels": [
+        "main"
+      ]
+    },
+    {
+      "description": null,
+      "dependencies": [
+        "depends"
+      ],
+      "distribution_type": "conda",
+      "basename": "osx-64/rust-proseg-2.0.5-h00cbfe0_0.tar.bz2",
+      "attrs": {
+        "operatingsystem": "darwin",
+        "machine": "x86_64",
+        "target-triplet": "x86_64-any-darwin",
+        "has_prefix": false,
+        "subdir": "osx-64",
+        "arch": "x86_64",
+        "build": "h00cbfe0_0",
+        "build_number": 0,
+        "constrains": [
+          "__osx >=10.13"
+        ],
+        "depends": [],
+        "license": "GPLv3",
+        "license_family": "GPL3",
+        "platform": "osx",
+        "timestamp": 1751928542508
+      },
+      "upload_time": "2025-07-07 22:58:18.380000+00:00",
+      "md5": "bddd05bd30ca1a8b63bc858d2ab192d2",
+      "sha256": "63f09e269878077775497ffcbd09adb13c36f8b3839aa900eb9970599b712d39",
+      "size": 8603174,
+      "full_name": "bioconda/rust-proseg/2.0.5/osx-64/rust-proseg-2.0.5-h00cbfe0_0.tar.bz2",
+      "download_url": "//conda.anaconda.org/bioconda/osx-64/rust-proseg-2.0.5-h00cbfe0_0.tar.bz2",
+      "type": "conda",
+      "version": "2.0.5",
+      "ndownloads": 483,
+      "owner": "bioconda",
+      "labels": [
+        "main"
+      ]
+    },
+    {
+      "description": null,
+      "dependencies": [
+        "depends"
+      ],
+      "distribution_type": "conda",
+      "basename": "linux-64/rust-proseg-2.0.5-h4349ce8_0.tar.bz2",
+      "attrs": {
+        "operatingsystem": "linux",
+        "machine": "x86_64",
+        "target-triplet": "x86_64-any-linux",
+        "has_prefix": false,
+        "subdir": "linux-64",
+        "arch": "x86_64",
+        "build": "h4349ce8_0",
+        "build_number": 0,
+        "constrains": [
+          "__glibc >=2.17"
+        ],
+        "depends": [],
+        "license": "GPLv3",
+        "license_family": "GPL3",
+        "platform": "linux",
+        "timestamp": 1751927385684
+      },
+      "upload_time": "2025-07-07 22:58:42.831000+00:00",
+      "md5": "4306bc9b564ccf5606330c456f96574d",
+      "sha256": "42e54a728bd1926bf7ebca52a3836c2d2720691e05e099f93caf1c22b719936a",
+      "size": 9153423,
+      "full_name": "bioconda/rust-proseg/2.0.5/linux-64/rust-proseg-2.0.5-h4349ce8_0.tar.bz2",
+      "download_url": "//conda.anaconda.org/bioconda/linux-64/rust-proseg-2.0.5-h4349ce8_0.tar.bz2",
+      "type": "conda",
+      "version": "2.0.5",
+      "ndownloads": 200,
+      "owner": "bioconda",
+      "labels": [
+        "main"
+      ]
+    },
+    {
+      "description": null,
+      "dependencies": [
+        "depends"
+      ],
+      "distribution_type": "conda",
+      "basename": "osx-arm64/rust-proseg-2.0.5-hda65a65_0.tar.bz2",
+      "attrs": {
+        "operatingsystem": "darwin",
+        "machine": "arm64",
+        "target-triplet": "arm64-any-darwin",
+        "has_prefix": false,
+        "subdir": "osx-arm64",
+        "arch": "arm64",
+        "build": "hda65a65_0",
+        "build_number": 0,
+        "constrains": [
+          "__osx >=11.0"
+        ],
+        "depends": [],
+        "license": "GPLv3",
+        "license_family": "GPL3",
+        "platform": "osx",
+        "timestamp": 1751927511024
+      },
+      "upload_time": "2025-07-07 22:58:43.929000+00:00",
+      "md5": "0e8e88f6ac939096a31ef60b080363a4",
+      "sha256": "9383e05875f9b40e6f33f98883e6f3543f039be7c95f9f0e99231561027a2eab",
+      "size": 8093814,
+      "full_name": "bioconda/rust-proseg/2.0.5/osx-arm64/rust-proseg-2.0.5-hda65a65_0.tar.bz2",
+      "download_url": "//conda.anaconda.org/bioconda/osx-arm64/rust-proseg-2.0.5-hda65a65_0.tar.bz2",
+      "type": "conda",
+      "version": "2.0.5",
+      "ndownloads": 56,
+      "owner": "bioconda",
+      "labels": [
+        "main"
+      ]
+    },
+    {
+      "description": null,
+      "dependencies": [
+        "depends"
+      ],
+      "distribution_type": "conda",
+      "basename": "linux-64/rust-proseg-2.0.6-h4349ce8_0.tar.bz2",
+      "attrs": {
+        "operatingsystem": "linux",
+        "machine": "x86_64",
+        "target-triplet": "x86_64-any-linux",
+        "has_prefix": false,
+        "subdir": "linux-64",
+        "arch": "x86_64",
+        "build": "h4349ce8_0",
+        "build_number": 0,
+        "constrains": [
+          "__glibc >=2.17"
+        ],
+        "depends": [],
+        "license": "GPL-3.0-or-later",
+        "license_family": "GPL3",
+        "platform": "linux",
+        "timestamp": 1753774642223
+      },
+      "upload_time": "2025-07-29 21:57:40.010000+00:00",
+      "md5": "fbfeb1dd4e531d90b9e9f88e05d4999e",
+      "sha256": "6de026a934c8718c5694cfdf43a9c64acb4524f7a3339056b79501c4fd98ef85",
+      "size": 9156253,
+      "full_name": "bioconda/rust-proseg/2.0.6/linux-64/rust-proseg-2.0.6-h4349ce8_0.tar.bz2",
+      "download_url": "//conda.anaconda.org/bioconda/linux-64/rust-proseg-2.0.6-h4349ce8_0.tar.bz2",
+      "type": "conda",
+      "version": "2.0.6",
+      "ndownloads": 236,
+      "owner": "bioconda",
+      "labels": [
+        "main"
+      ]
+    },
+    {
+      "description": null,
+      "dependencies": [
+        "depends"
+      ],
+      "distribution_type": "conda",
+      "basename": "linux-aarch64/rust-proseg-2.0.6-hba26009_0.tar.bz2",
+      "attrs": {
+        "operatingsystem": "linux",
+        "machine": "aarch64",
+        "target-triplet": "aarch64-any-linux",
+        "has_prefix": false,
+        "subdir": "linux-aarch64",
+        "arch": "aarch64",
+        "build": "hba26009_0",
+        "build_number": 0,
+        "constrains": [
+          "__glibc >=2.17"
+        ],
+        "depends": [],
+        "license": "GPL-3.0-or-later",
+        "license_family": "GPL3",
+        "platform": "linux",
+        "timestamp": 1753774409380
+      },
+      "upload_time": "2025-07-29 21:57:53.107000+00:00",
+      "md5": "cc7a8fd56b3bae62688c3083a076a7c8",
+      "sha256": "279303f8223bc9ce9e142511db375ecfb528e4ad1b41b4a2e490c6a6c055dc71",
+      "size": 9057613,
+      "full_name": "bioconda/rust-proseg/2.0.6/linux-aarch64/rust-proseg-2.0.6-hba26009_0.tar.bz2",
+      "download_url": "//conda.anaconda.org/bioconda/linux-aarch64/rust-proseg-2.0.6-hba26009_0.tar.bz2",
+      "type": "conda",
+      "version": "2.0.6",
+      "ndownloads": 88,
+      "owner": "bioconda",
+      "labels": [
+        "main"
+      ]
+    },
+    {
+      "description": null,
+      "dependencies": [
+        "depends"
+      ],
+      "distribution_type": "conda",
+      "basename": "osx-64/rust-proseg-2.0.6-h00cbfe0_0.tar.bz2",
+      "attrs": {
+        "operatingsystem": "darwin",
+        "machine": "x86_64",
+        "target-triplet": "x86_64-any-darwin",
+        "has_prefix": false,
+        "subdir": "osx-64",
+        "arch": "x86_64",
+        "build": "h00cbfe0_0",
+        "build_number": 0,
+        "constrains": [
+          "__osx >=10.13"
+        ],
+        "depends": [],
+        "license": "GPL-3.0-or-later",
+        "license_family": "GPL3",
+        "platform": "osx",
+        "timestamp": 1753775749760
+      },
+      "upload_time": "2025-07-29 22:04:12.991000+00:00",
+      "md5": "52bbfa20eb2ddb3165fa1ca4781f2c49",
+      "sha256": "1fbae131a54442bd4840fd6fc87380ae1db0e0d9abd1835e928066517161b793",
+      "size": 8603191,
+      "full_name": "bioconda/rust-proseg/2.0.6/osx-64/rust-proseg-2.0.6-h00cbfe0_0.tar.bz2",
+      "download_url": "//conda.anaconda.org/bioconda/osx-64/rust-proseg-2.0.6-h00cbfe0_0.tar.bz2",
+      "type": "conda",
+      "version": "2.0.6",
+      "ndownloads": 490,
+      "owner": "bioconda",
+      "labels": [
+        "main"
+      ]
+    },
+    {
+      "description": null,
+      "dependencies": [
+        "depends"
+      ],
+      "distribution_type": "conda",
+      "basename": "osx-arm64/rust-proseg-2.0.6-hda65a65_0.tar.bz2",
+      "attrs": {
+        "operatingsystem": "darwin",
+        "machine": "arm64",
+        "target-triplet": "arm64-any-darwin",
+        "has_prefix": false,
+        "subdir": "osx-arm64",
+        "arch": "arm64",
+        "build": "hda65a65_0",
+        "build_number": 0,
+        "constrains": [
+          "__osx >=11.0"
+        ],
+        "depends": [],
+        "license": "GPL-3.0-or-later",
+        "license_family": "GPL3",
+        "platform": "osx",
+        "timestamp": 1753774418065
+      },
+      "upload_time": "2025-07-29 22:12:34.678000+00:00",
+      "md5": "a4dd0953c42b21df594cf7e9c90ee560",
+      "sha256": "d722813aad95b6b7f64b17b3b62c9791c7ad2540bec2ad5577ac2e7d9e2e12d1",
+      "size": 8094860,
+      "full_name": "bioconda/rust-proseg/2.0.6/osx-arm64/rust-proseg-2.0.6-hda65a65_0.tar.bz2",
+      "download_url": "//conda.anaconda.org/bioconda/osx-arm64/rust-proseg-2.0.6-hda65a65_0.tar.bz2",
+      "type": "conda",
+      "version": "2.0.6",
+      "ndownloads": 63,
+      "owner": "bioconda",
+      "labels": [
+        "main"
+      ]
+    },
+    {
+      "description": null,
+      "dependencies": [
+        "depends"
+      ],
+      "distribution_type": "conda",
+      "basename": "linux-aarch64/rust-proseg-3.1.1-h60bb4c3_0.conda",
+      "attrs": {
+        "operatingsystem": "linux",
+        "machine": "aarch64",
+        "target-triplet": "aarch64-any-linux",
+        "has_prefix": false,
+        "subdir": "linux-aarch64",
+        "arch": "aarch64",
+        "build": "h60bb4c3_0",
+        "build_number": 0,
+        "constrains": [
+          "__glibc >=2.17"
+        ],
+        "depends": [
+          "libgcc >=14",
+          "libstdcxx >=14"
+        ],
+        "license": "GPL-3.0-or-later",
+        "license_family": "GPL3",
+        "platform": "linux",
+        "timestamp": 1774305765759
+      },
+      "upload_time": "2026-03-23 23:21:21.227000+00:00",
+      "md5": "cea5f6c3fc41d3cd506e06f3e611d9ad",
+      "sha256": "92b431cbc18cc794acf2e1320667747fd65e5c714fb760dae2836621d95c2eff",
+      "size": 97009739,
+      "full_name": "bioconda/rust-proseg/3.1.1/linux-aarch64/rust-proseg-3.1.1-h60bb4c3_0.conda",
+      "download_url": "//conda.anaconda.org/bioconda/linux-aarch64/rust-proseg-3.1.1-h60bb4c3_0.conda",
+      "type": "conda",
+      "version": "3.1.1",
+      "ndownloads": 287,
+      "owner": "bioconda",
+      "labels": [
+        "main"
+      ]
+    },
+    {
+      "description": null,
+      "dependencies": [
+        "depends"
+      ],
+      "distribution_type": "conda",
+      "basename": "osx-arm64/rust-proseg-3.1.1-h8f6e10a_0.conda",
+      "attrs": {
+        "operatingsystem": "darwin",
+        "machine": "arm64",
+        "target-triplet": "arm64-any-darwin",
+        "has_prefix": false,
+        "subdir": "osx-arm64",
+        "arch": "arm64",
+        "build": "h8f6e10a_0",
+        "build_number": 0,
+        "constrains": [
+          "__osx >=11.0"
+        ],
+        "depends": [
+          "libcxx >=19"
+        ],
+        "license": "GPL-3.0-or-later",
+        "license_family": "GPL3",
+        "platform": "osx",
+        "timestamp": 1774305485892
+      },
+      "upload_time": "2026-03-23 23:21:59.439000+00:00",
+      "md5": "cf73c251d1390d9cd4791a726ce65a74",
+      "sha256": "ac6afffaeb1da858baafa82cc85e828fc06de83b437216232de81eee0040d1d2",
+      "size": 9990342,
+      "full_name": "bioconda/rust-proseg/3.1.1/osx-arm64/rust-proseg-3.1.1-h8f6e10a_0.conda",
+      "download_url": "//conda.anaconda.org/bioconda/osx-arm64/rust-proseg-3.1.1-h8f6e10a_0.conda",
+      "type": "conda",
+      "version": "3.1.1",
+      "ndownloads": 87,
+      "owner": "bioconda",
+      "labels": [
+        "main"
+      ]
+    },
+    {
+      "description": null,
+      "dependencies": [
+        "depends"
+      ],
+      "distribution_type": "conda",
+      "basename": "linux-64/rust-proseg-3.1.1-h79ce301_0.conda",
+      "attrs": {
+        "operatingsystem": "linux",
+        "machine": "x86_64",
+        "target-triplet": "x86_64-any-linux",
+        "has_prefix": false,
+        "subdir": "linux-64",
+        "arch": "x86_64",
+        "build": "h79ce301_0",
+        "build_number": 0,
+        "constrains": [
+          "__glibc >=2.17"
+        ],
+        "depends": [
+          "libgcc >=14",
+          "libstdcxx >=14"
+        ],
+        "license": "GPL-3.0-or-later",
+        "license_family": "GPL3",
+        "platform": "linux",
+        "timestamp": 1774305933443
+      },
+      "upload_time": "2026-03-23 23:22:09.172000+00:00",
+      "md5": "df838d9010bdcb3a8d08c1a7fedd80dd",
+      "sha256": "ca69d53d966b0652adbf6d0bbe81b57428c04e694f612e0c895d61473c70e1a0",
+      "size": 102531937,
+      "full_name": "bioconda/rust-proseg/3.1.1/linux-64/rust-proseg-3.1.1-h79ce301_0.conda",
+      "download_url": "//conda.anaconda.org/bioconda/linux-64/rust-proseg-3.1.1-h79ce301_0.conda",
+      "type": "conda",
+      "version": "3.1.1",
+      "ndownloads": 1030,
+      "owner": "bioconda",
+      "labels": [
+        "main"
+      ]
+    },
+    {
+      "description": null,
+      "dependencies": [
+        "depends"
+      ],
+      "distribution_type": "conda",
+      "basename": "osx-64/rust-proseg-3.1.1-h82ec203_0.conda",
+      "attrs": {
+        "operatingsystem": "darwin",
+        "machine": "x86_64",
+        "target-triplet": "x86_64-any-darwin",
+        "has_prefix": false,
+        "subdir": "osx-64",
+        "arch": "x86_64",
+        "build": "h82ec203_0",
+        "build_number": 0,
+        "constrains": [
+          "__osx >=10.13"
+        ],
+        "depends": [
+          "libcxx >=19"
+        ],
+        "license": "GPL-3.0-or-later",
+        "license_family": "GPL3",
+        "platform": "osx",
+        "timestamp": 1774307707859
+      },
+      "upload_time": "2026-03-23 23:27:15.057000+00:00",
+      "md5": "1fc8965717a59f84d2c99e48520217c0",
+      "sha256": "b94655601c74dafc1611efef9724a12858484516fc3f447b1480cc4352190208",
+      "size": 10613775,
+      "full_name": "bioconda/rust-proseg/3.1.1/osx-64/rust-proseg-3.1.1-h82ec203_0.conda",
+      "download_url": "//conda.anaconda.org/bioconda/osx-64/rust-proseg-3.1.1-h82ec203_0.conda",
+      "type": "conda",
+      "version": "3.1.1",
+      "ndownloads": 235,
+      "owner": "bioconda",
+      "labels": [
+        "main"
+      ]
+    },
+    {
+      "description": null,
+      "dependencies": [
+        "depends"
+      ],
+      "distribution_type": "conda",
+      "basename": "linux-aarch64/rust-proseg-3.2.0-h2013a2e_0.conda",
+      "attrs": {
+        "operatingsystem": "linux",
+        "machine": "aarch64",
+        "target-triplet": "aarch64-any-linux",
+        "has_prefix": false,
+        "subdir": "linux-aarch64",
+        "arch": "aarch64",
+        "build": "h2013a2e_0",
+        "build_number": 0,
+        "constrains": [
+          "__glibc >=2.17"
+        ],
+        "depends": [
+          "libgcc >=14",
+          "libstdcxx >=14"
+        ],
+        "license": "GPL-3.0-or-later",
+        "license_family": "GPL3",
+        "platform": "linux",
+        "timestamp": 1785644392223
+      },
+      "upload_time": "2026-08-02 15:16:15.351000+00:00",
+      "md5": "6492ef4125370d8303dc8bf8595a6541",
+      "sha256": "f854e3ddbc461faf87d4846981e2f2cc1788e8c9e7f42ade8d460236bab07180",
+      "size": 94810493,
+      "full_name": "bioconda/rust-proseg/3.2.0/linux-aarch64/rust-proseg-3.2.0-h2013a2e_0.conda",
+      "download_url": "//conda.anaconda.org/bioconda/linux-aarch64/rust-proseg-3.2.0-h2013a2e_0.conda",
+      "type": "conda",
+      "version": "3.2.0",
+      "ndownloads": 51,
+      "owner": "bioconda",
+      "labels": [
+        "main"
+      ]
+    },
+    {
+      "description": null,
+      "dependencies": [
+        "depends"
+      ],
+      "distribution_type": "conda",
+      "basename": "osx-arm64/rust-proseg-3.2.0-ha819e4a_0.conda",
+      "attrs": {
+        "operatingsystem": "darwin",
+        "machine": "arm64",
+        "target-triplet": "arm64-any-darwin",
+        "has_prefix": false,
+        "subdir": "osx-arm64",
+        "arch": "arm64",
+        "build": "ha819e4a_0",
+        "build_number": 0,
+        "constrains": [
+          "__osx >=11.0"
+        ],
+        "depends": [
+          "__osx >=11.0",
+          "libcxx >=19"
+        ],
+        "license": "GPL-3.0-or-later",
+        "license_family": "GPL3",
+        "platform": "osx",
+        "timestamp": 1785644464397
+      },
+      "upload_time": "2026-08-02 15:16:19.435000+00:00",
+      "md5": "98504c9fa3c041f94ca79ac15f8ba36e",
+      "sha256": "cc514cc2d226074bce8bda8470764d0e9b94397eca4eb98e4bc81bccc26b50ad",
+      "size": 9899636,
+      "full_name": "bioconda/rust-proseg/3.2.0/osx-arm64/rust-proseg-3.2.0-ha819e4a_0.conda",
+      "download_url": "//conda.anaconda.org/bioconda/osx-arm64/rust-proseg-3.2.0-ha819e4a_0.conda",
+      "type": "conda",
+      "version": "3.2.0",
+      "ndownloads": 94,
+      "owner": "bioconda",
+      "labels": [
+        "main"
+      ]
+    },
+    {
+      "description": null,
+      "dependencies": [
+        "depends"
+      ],
+      "distribution_type": "conda",
+      "basename": "linux-64/rust-proseg-3.2.0-hec9b1f2_0.conda",
+      "attrs": {
+        "operatingsystem": "linux",
+        "machine": "x86_64",
+        "target-triplet": "x86_64-any-linux",
+        "has_prefix": false,
+        "subdir": "linux-64",
+        "arch": "x86_64",
+        "build": "hec9b1f2_0",
+        "build_number": 0,
+        "constrains": [
+          "__glibc >=2.17"
+        ],
+        "depends": [
+          "__glibc >=2.17,<3.0.a0",
+          "libgcc >=14",
+          "libstdcxx >=14"
+        ],
+        "license": "GPL-3.0-or-later",
+        "license_family": "GPL3",
+        "platform": "linux",
+        "timestamp": 1785644730331
+      },
+      "upload_time": "2026-08-02 15:16:26.766000+00:00",
+      "md5": "598c3f2c25168c2d71668bec20dbc106",
+      "sha256": "796898b9712790168d13a976dd951d2ec64de54d2631dc703e6f649caae64534",
+      "size": 101716750,
+      "full_name": "bioconda/rust-proseg/3.2.0/linux-64/rust-proseg-3.2.0-hec9b1f2_0.conda",
+      "download_url": "//conda.anaconda.org/bioconda/linux-64/rust-proseg-3.2.0-hec9b1f2_0.conda",
+      "type": "conda",
+      "version": "3.2.0",
+      "ndownloads": 412,
+      "owner": "bioconda",
+      "labels": [
+        "main"
+      ]
+    },
+    {
+      "description": null,
+      "dependencies": [
+        "depends"
+      ],
+      "distribution_type": "conda",
+      "basename": "osx-64/rust-proseg-3.2.0-h121cdbd_0.conda",
+      "attrs": {
+        "operatingsystem": "darwin",
+        "machine": "x86_64",
+        "target-triplet": "x86_64-any-darwin",
+        "has_prefix": false,
+        "subdir": "osx-64",
+        "arch": "x86_64",
+        "build": "h121cdbd_0",
+        "build_number": 0,
+        "constrains": [
+          "__osx >=10.13"
+        ],
+        "depends": [
+          "__osx >=10.13",
+          "libcxx >=19"
+        ],
+        "license": "GPL-3.0-or-later",
+        "license_family": "GPL3",
+        "platform": "osx",
+        "timestamp": 1785647446325
+      },
+      "upload_time": "2026-08-02 15:19:26.519000+00:00",
+      "md5": "baa9b95abc7caac990f478c78cb4abff",
+      "sha256": "4c5685ae34bcffee5a7f7f36fc6b72291dfece6360c2b026c27dcbe60ed207bb",
+      "size": 10727026,
+      "full_name": "bioconda/rust-proseg/3.2.0/osx-64/rust-proseg-3.2.0-h121cdbd_0.conda",
+      "download_url": "//conda.anaconda.org/bioconda/osx-64/rust-proseg-3.2.0-h121cdbd_0.conda",
+      "type": "conda",
+      "version": "3.2.0",
+      "ndownloads": 56,
+      "owner": "bioconda",
+      "labels": [
+        "main"
+      ]
+    }
+  ]
+}

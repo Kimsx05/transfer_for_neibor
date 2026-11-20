@@ -1,0 +1,16 @@
+task: hd_treg_roi_refinement_v6
+sections: [Cervilla, D1_Johnson]
+execution: {total_threads_max: 16, blas_threads: 1, trained_classifier_seed: 123, gpu_memory_MB: 6000}
+nuclei: {model: StarDist2D_2D_versatile_he, model_pixel_um: 0.5, prob: 0.25, nms: 0.4, block: 1536, overlap: 160, context: 128}
+rescue: unmatched old nucleus without intersecting new instance or old geometric rejection, at least 12 model pixels and 8 exterior pixels, green-channel surrounding minus nuclear median >=15
+primary_assignment: native Proseg 3.2.0 Visium HD, final XY consensus polygons, raw supplied 2um observed integer counts by grid centre; ambiguous multi-polygon intersection unassigned
+edge_repair: clip model input seed pixels to measured coordinate extrema; use corrected polygons in 50 um capture fringe and require positive overlap with the original nucleus for all retained polygons
+native_sampler: {burnin_samples: 24, samples: 24, recorded_samples: 12, hillclimb: 6, morphology_steps_per_iter: 150, nhidden: 32, no_diffusion: true, seed_option_available: false}
+secondary_assignment: observed nucleus or uniquely nearest corrected nuclear boundary <=4um with >=1um lead on second boundary
+candidate_search: full historical v5 source ledger plus positive v6 cell marker/program signal or major T evidence (p_T>=0.3 or first T), no upper limit
+domain: exact union of candidate-centred 200um discs; full supplied section for reconstruction; 8um display lattice for component names
+identity: {UMI_min: 25, direct_genes: [CD3D,CD3E,CD3G,TRAC], direct_width_min: 1, p_T_min: 0.5, A: "FOXP3>=1", B: "FOXP3=0 and other_core>=1 and p_reg_given_T>=0.5", extended_prob: 0.3, control_nonTreg_prob: 0.5, control_Treg_prob_strict_upper: 0.2}
+QC: no nFeature threshold for T; scorable epithelium needs nFeature>=50. Mixed assessed by competing lineage, nuclear geometry, observed key RNA, and logged visual decisions.
+MP10: {background: 18085, K: 905, ties: average, genes: frozen_Top20, package: historic_v1_selected_ranks_and_mp10, high: "strictly above section-D epithelial linear q95/q90"}
+neighborhood: {radii_um: [50,200], center: nuclear_centroid, component: original_project_component, minimum_observed_coverage: 0.5, valid_outcome: scored_epithelium_positive_count}
+matching: {within_um: 1000, max_controls: 3, covariates: [log1p_scorable_epithelium, log1p_T_side_UMI, eligible_circle_coverage], matching_distance: standardized_euclidean, tie: physical_distance_then_ID, block_um: 400}

@@ -1,0 +1,13 @@
+section	stage	status	evidence
+both	full_section_nuclear_redetection_and_revision	complete	tables/mask_actions.tsv and per-section final_nuclei.npz; see primary counts in proseg_observed/tables/mask_actions.tsv
+both	native_Proseg_and_registration_repair	complete	both native_full/native.log and native_full/edge_refit/native.log exit 0
+both	raw_integer_counts_and_conservation	complete	proseg_observed/{section}/count_balance.tsv.gz and registered/cells.geojson.gz
+both	hierarchical_reference_validation	complete	proseg_observed/tables/reference_validation.tsv and validation_by_competitor.tsv
+both	full_candidate_search_and_coverage	complete	proseg_observed/{section}/sources.parquet and candidate_grid_coverage.parquet
+both	all_cards	complete	proseg_observed/tables/archive_readback.tsv
+both	individual_AI_review	partial	proseg_observed/{section}/review_index.parquet; every main and extended prescreen-positive cell opened, broad source queue incomplete
+both	MP10_and_historical_check	complete	per-section thresholds.tsv and historical_score_check.tsv
+Cervilla	primary_spatial_contrast	not_estimable	no qualifying primary center at either radius
+D1_Johnson	primary_spatial_contrast_50	not_estimable	no scorable epithelial neighbors for any of 17 centers
+D1_Johnson	primary_spatial_contrast_200	descriptive_only	two matched centers in two dependence groups
+both	ROI_second_visual_pass	complete_for_documented_windows	proseg_observed/tables/neighbor_visual.tsv (9 domains; 4 additional windows)

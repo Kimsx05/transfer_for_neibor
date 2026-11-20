@@ -1,0 +1,74 @@
+# This file created by conda-build 26.3.0
+# meta.yaml template originally from:
+# /opt/recipe, last modified Sun Aug  2 04:12:25 2026
+# ------------------------------------------------
+
+package:
+  name: rust-proseg
+  version: 3.2.0
+source:
+  url: https://github.com/dcjones/proseg/archive/refs/tags/v3.2.0.tar.gz
+  sha256: 41be6532b44772a9588cc8f6ef96711d1cd2a0ecb5ebfd2fe2c8f7314633a2ea
+build:
+  number: '0'
+  run_exports:
+    - rust-proseg >=3.2.0,<4.0a0
+  script:
+    - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
+    - cargo install -v --locked --no-track --root $PREFIX --path .
+  string: hec9b1f2_0
+requirements:
+  build:
+    - _openmp_mutex 4.5 20_gnu
+    - binutils_impl_linux-64 2.46.1 default_hfdba357_102
+    - binutils_linux-64 2.46.1 default_h4852527_102
+    - cargo-bundle-licenses 4.2.0 hb17b654_1
+    - gcc_impl_linux-64 14.4.0 h9711763_1
+    - gcc_linux-64 14.4.0 hc469d41_0
+    - gxx_impl_linux-64 14.4.0 hc436dd5_1
+    - gxx_linux-64 14.4.0 h82679ac_0
+    - kernel-headers_linux-64 3.10.0 he073ed8_18
+    - ld_impl_linux-64 2.46.1 default_hbd61a6d_102
+    - libgcc 16.1.0 ha9f2e26_1
+    - libgcc-devel_linux-64 14.4.0 hd9a9cd0_101
+    - libgomp 16.1.0 he0feb66_1
+    - libsanitizer 14.4.0 hf39dbba_1
+    - libstdcxx 16.1.0 h934c35e_1
+    - libstdcxx-devel_linux-64 14.4.0 ha5b54cb_101
+    - libzlib 1.3.2 h25fd6f3_3
+    - rust 1.97.1 h53717f1_0
+    - rust-std-x86_64-unknown-linux-gnu 1.97.1 h2c6d0dc_0
+    - rust_linux-64 1.97.1 hc94ae4a_0
+    - sysroot_linux-64 2.17 h0157908_18
+    - tzdata 2026c h151e31d_0
+    - zstd 1.5.7 hb78ec9c_6
+  host:
+    - _openmp_mutex 4.5 20_gnu
+    - libgcc 16.1.0 ha9f2e26_1
+    - libgomp 16.1.0 he0feb66_1
+    - libstdcxx 16.1.0 h934c35e_1
+  run:
+    - __glibc >=2.17,<3.0.a0
+    - libgcc >=14
+    - libstdcxx >=14
+  run_constrained:
+    - __glibc >=2.17
+test:
+  commands:
+    - proseg --version
+    - proseg-to-baysor --help
+about:
+  home: https://github.com/dcjones/proseg
+  doc_url: https://github.com/dcjones/proseg/blob/v3.2.0/README.md
+  dev_url: https://github.com/dcjones/proseg
+  license: GPL-3.0-or-later
+  license_family: GPL3
+  license_file: LICENSE.md
+  summary: A Rust crate for running Proseg, a cell segmentation method for in situ
+    spatial transcriptomics.
+extra:
+  additional-platforms:
+    - linux-aarch64
+    - osx-arm64
+  final: true
+  copy_test_source_files: true

@@ -1,0 +1,110 @@
+completed shard 0
+completed shard 5
+completed shard 1
+completed shard 2
+completed shard 3
+completed shard 4
+completed shard 7
+completed shard 9
+completed shard 6
+completed shard 8
+completed shard 10
+completed shard 11
+completed shard 12
+completed shard 13
+completed shard 14
+completed shard 15
+completed shard 16
+completed shard 17
+completed shard 18
+completed shard 19
+completed shard 20
+completed shard 21
+completed shard 23
+completed shard 22
+completed shard 24
+completed shard 25
+completed shard 26
+completed shard 27
+completed shard 28
+completed shard 29
+completed shard 32
+completed shard 31
+completed shard 30
+completed shard 33
+completed shard 34
+completed shard 35
+completed shard 39
+completed shard 36
+completed shard 37
+completed shard 38
+completed shard 40
+completed shard 41
+completed shard 43
+completed shard 44
+completed shard 45
+completed shard 46
+completed shard 42
+completed shard 47
+completed shard 48
+completed shard 49
+completed shard 50
+completed shard 51
+completed shard 52
+completed shard 53
+completed shard 54
+completed shard 55
+completed shard 56
+completed shard 57
+completed shard 58
+completed shard 59
+completed shard 62
+completed shard 60
+completed shard 61
+completed shard 63
+completed shard 64
+completed shard 65
+completed shard 68
+completed shard 67
+completed shard 66
+completed shard 69
+completed shard 70
+completed shard 71
+completed shard 72
+completed shard 74
+completed shard 75
+completed shard 73
+completed shard 76
+completed shard 77
+completed shard 81
+completed shard 80
+completed shard 78
+completed shard 79
+completed shard 82
+completed shard 83
+completed shard 84
+completed shard 85
+completed shard 86
+completed shard 87
+completed shard 88
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_singularity/python-envs/bladder-spatial-py312/lib/python3.12/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_roi_refinement_v6/code/archive_cards.py", line 9, in part
+    cn.commit();assert cn.execute('SELECT count(*) FROM cards').fetchone()[0]==len(keys);cn.close();return b
+    ^^^^^^^^^^^
+sqlite3.OperationalError: disk I/O error
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_treg_roi_refinement_v6/code/archive_cards.py", line 15, in <module>
+    for b in pool.imap_unordered(part,range((len(queue)+1023)//1024)):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_singularity/python-envs/bladder-spatial-py312/lib/python3.12/multiprocessing/pool.py", line 873, in next
+    raise value
+sqlite3.OperationalError: disk I/O error
