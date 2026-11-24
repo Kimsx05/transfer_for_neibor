@@ -1,0 +1,5 @@
+2026-11-24 投射前冻结。
+统计单位沿用 MP10 main-a 标本。Q50 主、Q95 敏感。表达模型调整 dataset。至少4个单位，设计满秩、残差自由度至少3。无额外 High/Low 分组。
+eLife Fig1 source data 1，胰岛素 ATF4-dependent 112 与 rapamycin-sensitive 253 的交集、tunicamycin ATF4-dependent 774，保留小鼠全集、共有与不共享成员。Fan Data S1 第二表为红肌相对白肌升高且与旧 ATF4 靶标重叠，另与实测 WT-KO 区分。babelgene 22.9 小鼠全表至少3来源且双方均唯一，无大小写映射。人类固定 HGNC approved/exact unique alias 或 previous symbol，歧义剔除。
+外部对照按 SOFT 以组均值模型计算；未证实配对的重复独立拟合。CPM/基因TPM >=1 至少最小组文库数、log2(x+0.5) limma-trend。真 counts 使用设计过滤 TMM robust edgeR QL。分别输出 KD−CTRL，交互 (KD刺激−KD基线)−(CTRL刺激−CTRL基线)，ATF4 为 WT−KO，QPC 为 KO−WT。投射 KD 与 KD 交互统一反号表示依赖，TNF 取 CTRL 刺激−基线，QPC 保留损失方向。每个对比按外部有符号统计量截取正负端各最多100个跨物种可用基因，不要求外部显著，另报基因 FDR。各署名为 rank tails，不称100个均为 DEG。同一背景比较所有签名，双端分别检验。报告全排名 Spearman 与方向符号符合率。所有可用对比×双端构成排名 BH 家族，每个 mask 单列。 
+患者评分先在同类型全表达背景按标本排名，取签名成员平均百分位(rank-0.5)/N，双端取正减负；背景使用合格标本固定的原始counts通过同一表达设计过滤的域，至少一半签名成员可用，外部双端各自判定。每个标本只一个真实 profile。OLS t 区间（经典同方差、条件于 dataset），报告描述性偏 Pearson/Spearman 和留一患者斜率。主核心为两个 Torrence 程序、Fan、MYC V1/V2、NFκB、UPR。外部双端另为一个家族；组成、配对来源、敏感性分别校正。预设 Q95、去Top20、去两程序共有、去周期成员及单独调整 E2F/G2M 分数、文库深度、总内皮毛细成分。Q50/Q95 原固定 SD。Epi 已有 Epi_all M20 CHOL_SYNTH、MTORC1、FA_ELONG 分数为配对暴露。无显著数打分。
