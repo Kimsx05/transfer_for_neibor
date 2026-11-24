@@ -1,0 +1,40 @@
+source(file.path(Sys.getenv('B_OUT'),'code/common.R'))
+z<-readt(out,'coverage.tsv');id<-fread('results/mp10_resistance_validation_v1/00_audit/epi_sample_patient_mapping.tsv')
+id[,sample_uid:=sub('|','::',sample,fixed=TRUE)]
+p<-merge(z[,.(sample_uid,patient_uid_recorded,repeat_relationship_status,source_patient_id_status)],id[,.(sample_uid,orig.ident,patient_recorded,patient,patient_status,patient_source)],by='sample_uid',all.x=TRUE)
+p[,concordant_recorded_id:=patient_recorded==patient_uid_recorded];p[,crosscheck_status:=fcase(is.na(patient_recorded),'absent_in_secondary_lookup',concordant_recorded_id,'concordant_recorded_ID',default='conflict')];primary_meta<-readt(old,'sample_metadata.tsv')[,.(sample_uid,patient_id_raw,patient_id_derivation,patient_uid_verified,primary_id=patient_uid_recorded)];p<-merge(p,primary_meta,by='sample_uid',all.x=TRUE);stopifnot(nrow(p)==40,all(p$primary_id==p$patient_uid_recorded),all(p$concordant_recorded_id,na.rm=TRUE),uniqueN(p$primary_id)==39)
+saveT(p,'patient_crosscheck.tsv')
+epi<-readt(v2,'score_model_results.tsv.gz');saveT(epi[kind=='paired_score'&setting=='main'&state%in%c('H05','H10','H50')&y%in%c('CHOL_EFFLUX','CHOL_SYNTH','FA_ACYL_COA')],'original_epi_programs.tsv')
+saveT(epi[kind=='cross'&sender=='Epi_all'&receiver=='Treg'&setting%in%c('main','multi_specimen_datasets')],'original_sender_receiver.tsv')
+gr<-readt(old,'gsea_results.tsv.gz');saveT(gr[model_id=='M0046'&library=='Hallmark'],'original_treg_hallmarks.tsv')
+de<-readt(old,'de/M0046.tsv.gz');saveT(de[FDR<.05],'original_treg_DE_local_FDR.tsv')
+tf<-readt(old,'activity_associations.tsv.gz')[model_id=='M0046']
+sc<-readt(old,'scenic_T_lineage_associations.tsv.gz')[model_id=='M0046']
+saveT(rbindlist(list(tf[,.(resource,test=source,beta=activity_effect,p=sample_model_p,q=sample_model_q)],sc[,.(resource='SCENIC',test=regulon,beta=AUCell_effect,p=sample_model_p,q=sample_model_q)])),'original_treg_regulatory.tsv')
+saveT(readt(old,'abundance_associations.tsv')[receiver=='Treg'&exposure=='Q50'&min_cells==50&patient=='main'&omit_dataset=='none'],'original_treg_abundance.tsv')
+d<-readt(old,'de/M0031.tsv.gz');mk<-readt(out,'treg_identity_and_lipid_markers.tsv')
+saveT(d[gene%in%unique(mk$gene)],'original_Epi_paired_marker_DE.tsv')
+saveT(fread('highres_VisiumHD/analysis/hd_treg_mp10_spatial_all_v1/tables/association_primary.tsv'),'original_HD.tsv')
+cc<-fread('mp10_cellchat_high_definition_sensitivity_v1/tables/ALL_high_definition_changes.tsv')
+saveT(cc[apply(cc,1,function(x)any(x=='Treg'))],'original_CellChat.tsv')
+v1<-'results/mp10_hypothesis_followup_v1'
+oldbg<-readt(v1,'scoring_gene_universe.tsv.gz')[family=='Treg',gene]
+m<-readRDS(file.path(out,'tables/treg_logCPM.rds'))
+saveT(data.table(background=c('old_single_group_filterByExpr','new_CPM_at_least_1_in_25pct_main','original_M0046_design_filterByExpr'),genes=c(length(oldbg),nrow(m),nrow(de))),'background_sizes.tsv')
+b<-qread(file.path(old,'objects/pseudobulk.qs'),nthreads=1)
+pr<-readt(out,'profiles.tsv');sig<-readt(out,'uptake_gene_coverage.tsv')
+ext<-readt(out,'perturbation_DE.tsv.gz')[!is.na(human)]
+details<-list();per<-list()
+for(k in c(unique(sig$signature),unique(ext$contrast))){
+ gs<-if(k%in%sig$signature)sig[signature==k,unique(gene)] else ext[contrast==k,unique(human)]
+ present<-intersect(rownames(b$counts),gs);use<-intersect(gs,rownames(m));cnt<-as.matrix(b$counts[present,pr$profile_id,drop=FALSE])
+ per[[k]]<-cbind(pr[,.(sample_uid,patient_uid_recorded,dataset,n_cells,main_patient)],data.table(program=k,mapped=length(gs),feature_present=length(present),positive=colSums(cnt>0),fixed_universe_used=length(use),positive_of_used=colSums(cnt[use,,drop=FALSE]>0)))
+ if(k%in%sig$signature){
+  v<-as.data.table(as.table(cnt));setnames(v,c('gene','profile_id','UMI'));v[,signature:=k];v[,old_background:=gene%in%oldbg];v[,new_background:=gene%in%use]
+  v[,reason:=fcase(!new_background & UMI==0,'not_in_background;zero_here',!new_background,'below_CPM_prevalence',UMI==0,'fixed_member;zero_here',default='fixed_member;detected_here')];details[[k]]<-v
+ }
+}
+saveT(rbindlist(per),'per_specimen_gene_coverage.tsv');saveT(rbindlist(details),'per_specimen_uptake_genes.tsv.gz')
+saveT(mk[main_patient&n_cells>=50,.(n=.N,median_fraction=median(detection),specimens_detected=sum(count>0)),by=gene],'main_treg_marker_detection.tsv')
+saveT(z[,.(all_specimens=.N,recorded_units=uniqueN(patient_uid_recorded),cells=sum(n_cells),eligible50=sum(main_specimen&n_cells>=50),eligible30=sum(main_specimen&n_cells>=30)),by=dataset],'dataset_coverage.tsv')
+stopifnot(all(readt(out,'uptake_coverage.tsv')$expected==c(27,19,12)))

@@ -1,0 +1,12 @@
+figure	PDF	PNG	data	caption
+coverage	figures/coverage.pdf	figures/coverage.png	figures/coverage.tsv	全部40个标本；虚线为30和50细胞。a/b分别展示，b仅用于替换敏感性。
+forest	figures/forest.pdf	figures/forest.png	figures/forest.tsv	每行一个预登记全排序投影；原Q50_z、32份标本、数据集固定效应，横线为95%区间。
+rank_direction	figures/rank_direction.pdf	figures/rank_direction.png	figures/rank_direction.tsv	全基因方向一致性；正值指向WT依赖或8 h。共有基因数逐行提供，基因不构成独立患者重复。
+scatter_SCAP	figures/scatter_SCAP.pdf	figures/scatter_SCAP.png	figures/scatter_SCAP.tsv	每点为一份标本。颜色为数据集；线段使用主模型的共同斜率及各数据集截距，仅显示该数据集的暴露范围。
+scatter_FASN	figures/scatter_FASN.pdf	figures/scatter_FASN.png	figures/scatter_FASN.tsv	每点为一份标本。颜色为数据集；线段使用主模型的共同斜率及各数据集截距，仅显示该数据集的暴露范围。
+scatter_TCR	figures/scatter_TCR.pdf	figures/scatter_TCR.png	figures/scatter_TCR.tsv	每点为一份标本。颜色为数据集；线段使用主模型的共同斜率及各数据集截距，仅显示该数据集的暴露范围。
+scatter_CD36	figures/scatter_CD36.pdf	figures/scatter_CD36.png	figures/scatter_CD36.tsv	每点为一份标本。颜色为数据集；线段使用主模型的共同斜率及各数据集截距，仅显示该数据集的暴露范围。
+scatter_SREBF2	figures/scatter_SREBF2.pdf	figures/scatter_SREBF2.png	figures/scatter_SREBF2.tsv	每点为一份标本。颜色为数据集；线段使用主模型的共同斜率及各数据集截距，仅显示该数据集的暴露范围。
+program_heatmap	figures/program_heatmap.pdf	figures/program_heatmap.png	figures/program_heatmap.tsv	行按脂质扰动、活化／周期、代谢过程分组；每列为一个实际标本，各数据集内按Epi Q50升序。色标保留全部数值。
+supply_scatter	figures/supply_scatter.pdf	figures/supply_scatter.png	figures/supply_scatter.tsv	同标本H05发送端与单份Treg摄取程序。每条路线18份。主HC3因singleton不可估，图中保留该标本。
+supply_evidence	figures/supply_evidence.pdf	figures/supply_evidence.png	figures/supply_evidence.tsv	供给各环节证据。完整中文问题、状态、数值与限制见tables/supply_evidence.tsv。

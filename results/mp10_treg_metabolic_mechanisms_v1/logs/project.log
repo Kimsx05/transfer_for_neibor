@@ -1,0 +1,51 @@
+   setting   mask     program adjustment     family n_specimens
+    <char> <char>      <char>     <char>     <char>       <int>
+1:   M0046   Full        SCAP      total       core          32
+2:   M0046   Full        FASN      total       core          32
+3:   M0046   Full         TCR      total       core          32
+4:   M0046   Full        CD36      total supplement          32
+5:   M0046   Full      SREBF2      total supplement          32
+6:   M0046   Full CHOL_IMPORT      total    process          32
+7:   M0046   Full LCFA_IMPORT      total    process          32
+8:   M0046   Full  CHOL_SYNTH      total    process          32
+9:   M0046   Full         G2M      total    process          32
+   n_recorded_units n_datasets    df        beta          lo        hi
+              <int>      <int> <int>       <num>       <num>     <num>
+1:               32          5    26 -0.08977037 -0.37222508 0.1926843
+2:               32          5    26  0.06176430 -0.11932582 0.2428544
+3:               32          5    26  0.19935315 -0.01867100 0.4173773
+4:               32          5    26 -0.01757999 -0.21051299 0.1753530
+5:               32          5    26  0.02656249 -0.16347360 0.2165986
+6:               32          5    26 -0.05206886 -0.38194116 0.2778034
+7:               32          5    26  0.16635186 -0.14193427 0.4746380
+8:               32          5    26  0.18695693 -0.12731660 0.5012305
+9:               32          5    26  0.35730615 -0.04179388 0.7564062
+            p    reason         q       status
+        <num>    <char>     <num>       <char>
+1: 0.51930350 estimated 0.5193035 完成但不支持
+2: 0.48948188 estimated 0.5193035 完成但不支持
+3: 0.07142856 estimated 0.2142857 完成但不支持
+4: 0.85288008 estimated 0.8528801 完成但不支持
+5: 0.77614963 estimated 0.8528801 完成但不支持
+6: 0.74818878 estimated 0.7481888 完成但不支持
+7: 0.27751205 estimated 0.3700161 完成但不支持
+8: 0.23237183 estimated 0.3700161 完成但不支持
+9: 0.07717051 estimated 0.3086820 完成但不支持
+                   setting      sender    receiver n_specimens n_recorded_units
+                    <char>      <char>      <char>       <int>            <int>
+1:                    main CHOL_EFFLUX CHOL_IMPORT          18               18
+2: multi_specimen_datasets CHOL_EFFLUX CHOL_IMPORT          17               17
+3:                    main FA_ACYL_COA LCFA_IMPORT          18               18
+4: multi_specimen_datasets FA_ACYL_COA LCFA_IMPORT          17               17
+   n_datasets    df        beta         lo        hi         p
+        <int> <int>       <num>      <num>     <num>     <num>
+1:          5    12          NA         NA        NA        NA
+2:          4    12 -0.07351241 -0.9527773 0.8057525 0.8584956
+3:          5    12          NA         NA        NA        NA
+4:          4    12 -0.10837139 -0.6683683 0.4516255 0.6807376
+                        reason         q
+                        <char>     <num>
+1: HC3_undefined_unit_leverage        NA
+2:                   estimated 0.8584956
+3: HC3_undefined_unit_leverage        NA
+4:                   estimated 0.8584956
