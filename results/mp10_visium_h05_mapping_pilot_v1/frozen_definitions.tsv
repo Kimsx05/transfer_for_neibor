@@ -1,0 +1,11 @@
+item	definition	source
+spatial_population	original full_v1 query from legacy posterior mean Epithelial/all30 >=0.25, score present, original QC	mp10_paper_distance_full_v1/scripts/distance.py
+spatial_score	EpiMP10_Top20_AUCell mixed-spot MP10 in frozen Epi query	mp10_paper_distance_full_v1/spots
+single_cell_high	original H05 boolean, specimen original type-7 Q95 strict greater, ties at threshold excluded	mp10_cellchat_high_definition_sensitivity_v1/tables/epi_full_scores_pools.tsv.gz
+single_cell_other	all original Epi_all except original H05; includes intermediate scores	original full score pool of 40 eligible specimens
+conditional	H05_support/(support_Epi_H05 + support_Epi_nonH05); zero denominator NA	Seurat class supports
+low_denominator	Epi_support < 0.10 including zero; descriptive flag retained	config.json
+MP10_genes	HMGCS1 MSMO1 INSIG1 FDFT1 SQLE FDPS IDI1 ACSS2 ELOVL5 LDLR MVD SCD HMGCR ACAT2 SLC20A1 ACSL3 ACSL1 ADIPOR2 MXD1 NPC1	frozen Top20
+legacy_layers	epi_MP10_model_universe,spot_MP10_model_universe,epi_score_valid are provenance only	full_v1
+legacy_K32	failed prior quantitative gate; old TEST RNA and constituent identities reused with original H05 labels	scope_frozen_resume_v1
+

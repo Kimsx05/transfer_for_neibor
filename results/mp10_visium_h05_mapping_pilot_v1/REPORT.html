@@ -1,0 +1,384 @@
+<!DOCTYPE html><html lang="zh-CN"><meta charset="utf-8"><title>四片 H05 映射与 MP10</title><style>body{font:16px/1.65 Arial,sans-serif;max-width:1200px;margin:3em auto;padding:0 2em;color:#202830}table{border-collapse:collapse;font-size:14px}td,th{padding:.38em .7em;border-bottom:1px solid #ccc}th{background:#eff3f5}a{color:#135579}code{overflow-wrap:anywhere}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}figure{margin:0}img{width:100%;height:210px;object-fit:contain}figcaption{text-align:center}h2{margin-top:2em}</style><main><h1>普通 Visium 四片 H05 映射与冻结 MP10 比较</h1>
+<p><strong>结论。</strong> B17 的原始支持度与 MP10 最一致，但很大部分伴随 Epi 含量和测序深度变化。T1 的弱正相关在调整后保留，在移除 Top20 后接近零。B1 效应弱，BC01 的条件支持度与 MP10 呈弱负相关。H05 映射可以帮助定位参考谱系支持与原评分不一致的位置；目前证据不足以用它判定 H05 阳性 spot 或定量其细胞含量。</p>
+<p>实际结果目录为 <code>/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_visium_h05_mapping_pilot_v1</code>。四片全片共 12,979 spots，冻结 query 共 8,187。表达、旧评分、坐标和新预测逐键一一匹配，原始 UMI 列和与旧 nCount_RNA 的最大差均为 0。</p>
+<h2>各片主结果</h2>
+<p>相关在各自冻结 Epi query 上计算。r 为 Pearson，ρ 为 Spearman。调整项为 c2l Epi fraction 与 log1p(nCount)，残差相关与对应未调整相关使用同一组点。低分母为 Epi_support &lt; 0.10，包含零。</p>
+<table>
+<thead>
+<tr>
+<th>切片</th>
+<th>支持度</th>
+<th>有效 n / query</th>
+<th>缺失</th>
+<th>低分母 n（有效中）</th>
+<th>r</th>
+<th>ρ</th>
+<th>残差 r</th>
+<th>残差 ρ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GSE171351_B1</td>
+<td>原始</td>
+<td>959 / 959</td>
+<td>0</td>
+<td>189</td>
+<td>0.100</td>
+<td>0.160</td>
+<td>0.138</td>
+<td>0.142</td>
+</tr>
+<tr>
+<td>GSE171351_B1</td>
+<td>条件</td>
+<td>952 / 959</td>
+<td>7</td>
+<td>182</td>
+<td>0.062</td>
+<td>0.143</td>
+<td>0.056</td>
+<td>0.112</td>
+</tr>
+<tr>
+<td>GSE238145_B17</td>
+<td>原始</td>
+<td>1494 / 1494</td>
+<td>0</td>
+<td>587</td>
+<td>0.264</td>
+<td>0.290</td>
+<td>0.107</td>
+<td>0.084</td>
+</tr>
+<tr>
+<td>GSE238145_B17</td>
+<td>条件</td>
+<td>1203 / 1494</td>
+<td>291</td>
+<td>296</td>
+<td>0.043</td>
+<td>-0.055</td>
+<td>-0.035</td>
+<td>-0.040</td>
+</tr>
+<tr>
+<td>GSE319536_BC01</td>
+<td>原始</td>
+<td>1567 / 1567</td>
+<td>0</td>
+<td>336</td>
+<td>0.032</td>
+<td>-0.004</td>
+<td>0.016</td>
+<td>0.029</td>
+</tr>
+<tr>
+<td>GSE319536_BC01</td>
+<td>条件</td>
+<td>1420 / 1567</td>
+<td>147</td>
+<td>189</td>
+<td>-0.081</td>
+<td>-0.089</td>
+<td>-0.024</td>
+<td>-0.028</td>
+</tr>
+<tr>
+<td>GSE285715_T1</td>
+<td>原始</td>
+<td>4167 / 4167</td>
+<td>0</td>
+<td>0</td>
+<td>0.153</td>
+<td>0.128</td>
+<td>0.143</td>
+<td>0.151</td>
+</tr>
+<tr>
+<td>GSE285715_T1</td>
+<td>条件</td>
+<td>4167 / 4167</td>
+<td>0</td>
+<td>0</td>
+<td>0.137</td>
+<td>0.103</td>
+<td>0.154</td>
+<td>0.155</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><strong>B1。</strong> 原始支持度的全片最大值仅 0.112。支持度随 Epi fraction 变化（r = 0.722），但 MP10 与该比例的片内相关约为 0.007，调整后原始支持度的相关略升。把 Epi 分母纳入解释后，仅见很弱的一致性。</p>
+</li>
+<li>
+<p><strong>B17。</strong> 原始支持度与 Epi fraction 的 r = 0.827，与 log 深度的 r = 0.451。原始支持度与 Epi_support 几乎同步（r = 0.994）。即使限定在同一批 1,203 个分母非零的点，MP10 对原始和条件支持度的 r 仍分别为 0.223、0.043。69 个条件支持度 ≥ 0.9 的 query 中，68 个处于低分母区。</p>
+</li>
+<li>
+<p><strong>BC01。</strong> 原始支持度同时伴随组成（r = 0.757）与 log 深度（r = 0.667）增加，MP10 与两项协变量的关系方向相反。query 中原 MP10 有 43.3% 为零，条件支持度的负向关系在调整后接近零。</p>
+</li>
+<li>
+<p><strong>T1。</strong> 92.8% 的 query 具有 Epi_support &gt; 0.99，全部 query 均超过低分母界限。这里原始与条件读数较接近，组成和深度调整对结果影响小。原评分有 39.5% 为零，仍保留在散点与统计中。</p>
+</li>
+</ul>
+<h2>去 Top20 的敏感性</h2>
+<p>四片主映射实际纳入全部 20 个定义成员（含 ACAT2），消融后均为 0，重建了 PCA 和 anchors。下表在每行两个分支共同有效的点上比较，条件支持度行会与上表单分支分母不同。</p>
+<table>
+<thead>
+<tr>
+<th>切片</th>
+<th>支持度</th>
+<th>成对 n</th>
+<th>主 / 去除特征数</th>
+<th>主 r</th>
+<th>去除 r</th>
+<th>两分支支持度 ρ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GSE171351_B1</td>
+<td>原始</td>
+<td>959</td>
+<td>1097 / 1077</td>
+<td>0.100</td>
+<td>0.034</td>
+<td>0.762</td>
+</tr>
+<tr>
+<td>GSE171351_B1</td>
+<td>条件</td>
+<td>910</td>
+<td>1097 / 1077</td>
+<td>0.058</td>
+<td>0.087</td>
+<td>0.606</td>
+</tr>
+<tr>
+<td>GSE238145_B17</td>
+<td>原始</td>
+<td>1494</td>
+<td>1215 / 1195</td>
+<td>0.264</td>
+<td>0.237</td>
+<td>0.990</td>
+</tr>
+<tr>
+<td>GSE238145_B17</td>
+<td>条件</td>
+<td>1175</td>
+<td>1215 / 1195</td>
+<td>0.043</td>
+<td>0.111</td>
+<td>0.699</td>
+</tr>
+<tr>
+<td>GSE319536_BC01</td>
+<td>原始</td>
+<td>1567</td>
+<td>1215 / 1195</td>
+<td>0.032</td>
+<td>-0.011</td>
+<td>0.951</td>
+</tr>
+<tr>
+<td>GSE319536_BC01</td>
+<td>条件</td>
+<td>1409</td>
+<td>1215 / 1195</td>
+<td>-0.080</td>
+<td>-0.131</td>
+<td>0.859</td>
+</tr>
+<tr>
+<td>GSE285715_T1</td>
+<td>原始</td>
+<td>4167</td>
+<td>1215 / 1195</td>
+<td>0.153</td>
+<td>0.027</td>
+<td>0.555</td>
+</tr>
+<tr>
+<td>GSE285715_T1</td>
+<td>条件</td>
+<td>4167</td>
+<td>1215 / 1195</td>
+<td>0.137</td>
+<td>0.012</td>
+<td>0.562</td>
+</tr>
+</tbody>
+</table>
+<p>T1 原始支持度的 r 从 0.153 降至 0.027，两个版本的支持度排序相关仅 0.555。B17 排序保留较多（ρ = 0.990），但其较强的组成依赖也保留。BC01 在两个版本中的原始相关均接近零，条件相关为负。定义基因和谱系背景都影响结果，影响程度随片变化。</p>
+<h2>不一致区域与原始表达</h2>
+<p>按片内 query 的相反四分位数定位；BC01 和 T1 的 MP10 下四分位数均为 0，包含所有边界并列。表中 UMI 为实测 Top20 成员的原始计数之和，位置为已有组织内外侧标注。按原阵列六邻接划分的每个区域均可回查 barcode。</p>
+<table>
+<thead>
+<tr>
+<th>切片</th>
+<th>MP10 / 支持度</th>
+<th>n</th>
+<th>inside n</th>
+<th>中位 nCount</th>
+<th>中位 Top20 UMI</th>
+<th>最大连通区 n @ 像素质心</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GSE171351_B1</td>
+<td>高 / 低</td>
+<td>56</td>
+<td>7</td>
+<td>5408</td>
+<td>10</td>
+<td>7 @ (276, 330)</td>
+</tr>
+<tr>
+<td>GSE171351_B1</td>
+<td>低 / 高</td>
+<td>37</td>
+<td>33</td>
+<td>11495</td>
+<td>10</td>
+<td>2 @ (443, 261)</td>
+</tr>
+<tr>
+<td>GSE238145_B17</td>
+<td>高 / 低</td>
+<td>59</td>
+<td>42</td>
+<td>6515</td>
+<td>14</td>
+<td>2 @ (1009, 700)</td>
+</tr>
+<tr>
+<td>GSE238145_B17</td>
+<td>低 / 高</td>
+<td>36</td>
+<td>36</td>
+<td>10140</td>
+<td>14</td>
+<td>7 @ (696, 790)</td>
+</tr>
+<tr>
+<td>GSE319536_BC01</td>
+<td>高 / 低</td>
+<td>91</td>
+<td>43</td>
+<td>1171</td>
+<td>2</td>
+<td>5 @ (258, 222)</td>
+</tr>
+<tr>
+<td>GSE319536_BC01</td>
+<td>低 / 高</td>
+<td>171</td>
+<td>151</td>
+<td>4456</td>
+<td>4</td>
+<td>14 @ (288, 89)</td>
+</tr>
+<tr>
+<td>GSE285715_T1</td>
+<td>高 / 低</td>
+<td>210</td>
+<td>189</td>
+<td>56296</td>
+<td>109</td>
+<td>36 @ (1691, 1015)</td>
+</tr>
+<tr>
+<td>GSE285715_T1</td>
+<td>低 / 高</td>
+<td>341</td>
+<td>289</td>
+<td>61858</td>
+<td>70</td>
+<td>14 @ (1412, 1117)</td>
+</tr>
+</tbody>
+</table>
+<p>B1 的高 MP10 / 低支持度点多数在外侧（49/56），相反方向多数在内侧（33/37）。B17 两个方向的 Top20 UMI 中位数均为 14，但 Epi_support 中位数分别为 0 和 0.938。BC01 的低 MP10 / 高支持度点深度约为相反方向的 3.8 倍，其原始 Top20 UMI 中位数也更高；AUCell 描述相对排序，测序深度影响原始计数的解释。T1 的高 MP10 / 低支持度区域反而保留更高 Top20 UMI，中位数为 109 对 70。逐基因 UMI、EPCAM、KRT8 等可从各片主表核对。</p>
+<h2>全片非上皮位置</h2>
+<p>预定诊断区使用 c2l Epi fraction &lt; 0.10 且其他大类占优。B1 无符合点；补查原 0.25 门槛以下且非 Epi 占优的 38 点，H05 支持度全部为零，中位 COL1A1 为 25 UMI、EPCAM 为 1。B17 的 452 个预定诊断点全部为零，以 Mural 为主（311 点）。BC01 的 2,439 点中位数为 0、Q95 为 0.012、最大值为 0.260，高尾见于 T/NK 占优位置。T1 仅 36 点，中位数为 0、最大值达 0.316；COL1A1 与 KRT8 的中位数分别为 126 与 9 UMI，可见混合组织信号。低 Epi 丰度可用于谱系定位检查，无法充当胆固醇生物学的绝对阴性真值。</p>
+<h2>小批来源留出伪 spot</h2>
+<p>旧 TEST 中选取完整来源留出的三个 specimen，共 240 个不同 mixture（两组来源，a/b 同患者），每个 mixture 对应两个深度。按原始 H05 成员逐细胞重标，38 个 mixture 的真实 H05 为零。为单独比较深度，最终两深度固定为共同检出的 859 个特征和完全相同的参考 PCA 输入，再分别寻找 anchors。下表的 ρ 为真实 H05 占全部组成细胞的份额与原始支持度的 Spearman。</p>
+<table>
+<thead>
+<tr>
+<th>深度</th>
+<th>留出 specimen</th>
+<th>n</th>
+<th>真零 n</th>
+<th>真零支持度中位 / Q95</th>
+<th>有 H05 的中位支持度</th>
+<th>含量 ρ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>low</td>
+<td>CNP0000460_P01T</td>
+<td>80</td>
+<td>16</td>
+<td>0.428 / 0.636</td>
+<td>0.518</td>
+<td>0.323</td>
+</tr>
+<tr>
+<td>low</td>
+<td>T4463209a</td>
+<td>80</td>
+<td>11</td>
+<td>0.477 / 0.656</td>
+<td>0.315</td>
+<td>0.352</td>
+</tr>
+<tr>
+<td>low</td>
+<td>T4463209b</td>
+<td>80</td>
+<td>11</td>
+<td>0.084 / 0.629</td>
+<td>0.446</td>
+<td>0.238</td>
+</tr>
+<tr>
+<td>medium</td>
+<td>CNP0000460_P01T</td>
+<td>80</td>
+<td>16</td>
+<td>0.623 / 0.708</td>
+<td>0.695</td>
+<td>0.389</td>
+</tr>
+<tr>
+<td>medium</td>
+<td>T4463209a</td>
+<td>80</td>
+<td>11</td>
+<td>0.700 / 0.757</td>
+<td>0.463</td>
+<td>0.362</td>
+</tr>
+<tr>
+<td>medium</td>
+<td>T4463209b</td>
+<td>80</td>
+<td>11</td>
+<td>0.078 / 0.688</td>
+<td>0.621</td>
+<td>0.272</td>
+</tr>
+</tbody>
+</table>
+<p>三个来源样本内均见含量增加的方向性；真零和有 H05 的分数明显重叠，T4463209a 的真零中位数甚至更高。由 medium 到 low，三个 specimen 的配对支持度中位变化分别为 −0.178、−0.051、−0.037。两深度总体真零分布的 Q95 分别为 0.742 和 0.669。旧 TEST 的组成设计及细胞重复使用限制了外推，不能据此宣称新独立验证或细胞数量校准。</p>
+<h2>如何使用这一层</h2>
+<p>保留原 mixed-spot MP10 作为主读数。标签映射增加了两类信息：一个 spot 的表达整体更支持哪类参考谱系，以及该谱系支持中有多少相对偏向冻结 high 状态。这两层在 B17 的分离揭示了组成混淆，在 T1 的接近说明该片主要需要关注定义基因共享。两种方法共享 RNA；逐片相关和消融衡量方法一致性。</p>
+<p><strong>扩展判断。</strong> 现阶段适用于这四片的描述性定位、筛查不一致区域及回看组织。片间异质性、低分母、深度效应和真零伪 spot 的较高支持度共同限制了阳性判定。暂不建议把该流程作为 H05 分类或定量工具铺开到 63 片。</p>
+<h2>交付与复核</h2>
+<p>44 张独立 PNG/PDF 已分片保存。每片包括 H&amp;E、MP10、两种 H05 支持度、Epi_support、c2l Epi fraction、nCount、低分母图、两张带趋势的散点和一张不一致区域图。图片预览见 HTML；原始表、消融和方法见 <a href="README.md">文件目录</a>、<a href="section_metrics.tsv">统计明细</a>、<a href="figure_index.tsv">图件索引</a> 和 <a href="METHODS.md">方法</a>。</p>
+<p>全流程使用现有 Seurat 5.5.1。GNU time 记录主映射进程峰值 RSS 为 5.19 GiB，四片及两深度初次映射耗时 5 分 37 秒；固定配对特征后的伪 spot 重跑耗时 1 分 29 秒。本轮未运行 c2l 或扩增切片。</p><h2>逐片图件（点击打开 PDF）</h2><h3>GSE171351_B1</h3><div class="grid"><figure><a href="figures/GSE171351_B1/tissue.pdf"><img loading="lazy" src="figures/GSE171351_B1/tissue.png" alt="组织背景"></a><figcaption>组织背景</figcaption></figure><figure><a href="figures/GSE171351_B1/EpiMP10_Top20_AUCell.pdf"><img loading="lazy" src="figures/GSE171351_B1/EpiMP10_Top20_AUCell.png" alt="冻结 query 的 MP10"></a><figcaption>冻结 query 的 MP10</figcaption></figure><figure><a href="figures/GSE171351_B1/H05_support.pdf"><img loading="lazy" src="figures/GSE171351_B1/H05_support.png" alt="Epi high 原始支持度"></a><figcaption>Epi high 原始支持度</figcaption></figure><figure><a href="figures/GSE171351_B1/H05_conditional_support.pdf"><img loading="lazy" src="figures/GSE171351_B1/H05_conditional_support.png" alt="条件支持度"></a><figcaption>条件支持度</figcaption></figure><figure><a href="figures/GSE171351_B1/discordance.pdf"><img loading="lazy" src="figures/GSE171351_B1/discordance.png" alt="不一致区域"></a><figcaption>不一致区域</figcaption></figure><figure><a href="figures/GSE171351_B1/Epi_support.pdf"><img loading="lazy" src="figures/GSE171351_B1/Epi_support.png" alt="Epi 支持度"></a><figcaption>Epi 支持度</figcaption></figure><figure><a href="figures/GSE171351_B1/Epithelial_fraction.pdf"><img loading="lazy" src="figures/GSE171351_B1/Epithelial_fraction.png" alt="c2l Epi fraction"></a><figcaption>c2l Epi fraction</figcaption></figure><figure><a href="figures/GSE171351_B1/nCount_RNA.pdf"><img loading="lazy" src="figures/GSE171351_B1/nCount_RNA.png" alt="测序深度"></a><figcaption>测序深度</figcaption></figure><figure><a href="figures/GSE171351_B1/low_denominator.pdf"><img loading="lazy" src="figures/GSE171351_B1/low_denominator.png" alt="低分母"></a><figcaption>低分母</figcaption></figure><figure><a href="figures/GSE171351_B1/scatter_H05_support.pdf"><img loading="lazy" src="figures/GSE171351_B1/scatter_H05_support.png" alt="原始支持度散点"></a><figcaption>原始支持度散点</figcaption></figure><figure><a href="figures/GSE171351_B1/scatter_H05_conditional_support.pdf"><img loading="lazy" src="figures/GSE171351_B1/scatter_H05_conditional_support.png" alt="条件支持度散点"></a><figcaption>条件支持度散点</figcaption></figure></div><h3>GSE238145_B17</h3><div class="grid"><figure><a href="figures/GSE238145_B17/tissue.pdf"><img loading="lazy" src="figures/GSE238145_B17/tissue.png" alt="组织背景"></a><figcaption>组织背景</figcaption></figure><figure><a href="figures/GSE238145_B17/EpiMP10_Top20_AUCell.pdf"><img loading="lazy" src="figures/GSE238145_B17/EpiMP10_Top20_AUCell.png" alt="冻结 query 的 MP10"></a><figcaption>冻结 query 的 MP10</figcaption></figure><figure><a href="figures/GSE238145_B17/H05_support.pdf"><img loading="lazy" src="figures/GSE238145_B17/H05_support.png" alt="Epi high 原始支持度"></a><figcaption>Epi high 原始支持度</figcaption></figure><figure><a href="figures/GSE238145_B17/H05_conditional_support.pdf"><img loading="lazy" src="figures/GSE238145_B17/H05_conditional_support.png" alt="条件支持度"></a><figcaption>条件支持度</figcaption></figure><figure><a href="figures/GSE238145_B17/discordance.pdf"><img loading="lazy" src="figures/GSE238145_B17/discordance.png" alt="不一致区域"></a><figcaption>不一致区域</figcaption></figure><figure><a href="figures/GSE238145_B17/Epi_support.pdf"><img loading="lazy" src="figures/GSE238145_B17/Epi_support.png" alt="Epi 支持度"></a><figcaption>Epi 支持度</figcaption></figure><figure><a href="figures/GSE238145_B17/Epithelial_fraction.pdf"><img loading="lazy" src="figures/GSE238145_B17/Epithelial_fraction.png" alt="c2l Epi fraction"></a><figcaption>c2l Epi fraction</figcaption></figure><figure><a href="figures/GSE238145_B17/nCount_RNA.pdf"><img loading="lazy" src="figures/GSE238145_B17/nCount_RNA.png" alt="测序深度"></a><figcaption>测序深度</figcaption></figure><figure><a href="figures/GSE238145_B17/low_denominator.pdf"><img loading="lazy" src="figures/GSE238145_B17/low_denominator.png" alt="低分母"></a><figcaption>低分母</figcaption></figure><figure><a href="figures/GSE238145_B17/scatter_H05_support.pdf"><img loading="lazy" src="figures/GSE238145_B17/scatter_H05_support.png" alt="原始支持度散点"></a><figcaption>原始支持度散点</figcaption></figure><figure><a href="figures/GSE238145_B17/scatter_H05_conditional_support.pdf"><img loading="lazy" src="figures/GSE238145_B17/scatter_H05_conditional_support.png" alt="条件支持度散点"></a><figcaption>条件支持度散点</figcaption></figure></div><h3>GSE319536_BC01</h3><div class="grid"><figure><a href="figures/GSE319536_BC01/tissue.pdf"><img loading="lazy" src="figures/GSE319536_BC01/tissue.png" alt="组织背景"></a><figcaption>组织背景</figcaption></figure><figure><a href="figures/GSE319536_BC01/EpiMP10_Top20_AUCell.pdf"><img loading="lazy" src="figures/GSE319536_BC01/EpiMP10_Top20_AUCell.png" alt="冻结 query 的 MP10"></a><figcaption>冻结 query 的 MP10</figcaption></figure><figure><a href="figures/GSE319536_BC01/H05_support.pdf"><img loading="lazy" src="figures/GSE319536_BC01/H05_support.png" alt="Epi high 原始支持度"></a><figcaption>Epi high 原始支持度</figcaption></figure><figure><a href="figures/GSE319536_BC01/H05_conditional_support.pdf"><img loading="lazy" src="figures/GSE319536_BC01/H05_conditional_support.png" alt="条件支持度"></a><figcaption>条件支持度</figcaption></figure><figure><a href="figures/GSE319536_BC01/discordance.pdf"><img loading="lazy" src="figures/GSE319536_BC01/discordance.png" alt="不一致区域"></a><figcaption>不一致区域</figcaption></figure><figure><a href="figures/GSE319536_BC01/Epi_support.pdf"><img loading="lazy" src="figures/GSE319536_BC01/Epi_support.png" alt="Epi 支持度"></a><figcaption>Epi 支持度</figcaption></figure><figure><a href="figures/GSE319536_BC01/Epithelial_fraction.pdf"><img loading="lazy" src="figures/GSE319536_BC01/Epithelial_fraction.png" alt="c2l Epi fraction"></a><figcaption>c2l Epi fraction</figcaption></figure><figure><a href="figures/GSE319536_BC01/nCount_RNA.pdf"><img loading="lazy" src="figures/GSE319536_BC01/nCount_RNA.png" alt="测序深度"></a><figcaption>测序深度</figcaption></figure><figure><a href="figures/GSE319536_BC01/low_denominator.pdf"><img loading="lazy" src="figures/GSE319536_BC01/low_denominator.png" alt="低分母"></a><figcaption>低分母</figcaption></figure><figure><a href="figures/GSE319536_BC01/scatter_H05_support.pdf"><img loading="lazy" src="figures/GSE319536_BC01/scatter_H05_support.png" alt="原始支持度散点"></a><figcaption>原始支持度散点</figcaption></figure><figure><a href="figures/GSE319536_BC01/scatter_H05_conditional_support.pdf"><img loading="lazy" src="figures/GSE319536_BC01/scatter_H05_conditional_support.png" alt="条件支持度散点"></a><figcaption>条件支持度散点</figcaption></figure></div><h3>GSE285715_T1</h3><div class="grid"><figure><a href="figures/GSE285715_T1/tissue.pdf"><img loading="lazy" src="figures/GSE285715_T1/tissue.png" alt="组织背景"></a><figcaption>组织背景</figcaption></figure><figure><a href="figures/GSE285715_T1/EpiMP10_Top20_AUCell.pdf"><img loading="lazy" src="figures/GSE285715_T1/EpiMP10_Top20_AUCell.png" alt="冻结 query 的 MP10"></a><figcaption>冻结 query 的 MP10</figcaption></figure><figure><a href="figures/GSE285715_T1/H05_support.pdf"><img loading="lazy" src="figures/GSE285715_T1/H05_support.png" alt="Epi high 原始支持度"></a><figcaption>Epi high 原始支持度</figcaption></figure><figure><a href="figures/GSE285715_T1/H05_conditional_support.pdf"><img loading="lazy" src="figures/GSE285715_T1/H05_conditional_support.png" alt="条件支持度"></a><figcaption>条件支持度</figcaption></figure><figure><a href="figures/GSE285715_T1/discordance.pdf"><img loading="lazy" src="figures/GSE285715_T1/discordance.png" alt="不一致区域"></a><figcaption>不一致区域</figcaption></figure><figure><a href="figures/GSE285715_T1/Epi_support.pdf"><img loading="lazy" src="figures/GSE285715_T1/Epi_support.png" alt="Epi 支持度"></a><figcaption>Epi 支持度</figcaption></figure><figure><a href="figures/GSE285715_T1/Epithelial_fraction.pdf"><img loading="lazy" src="figures/GSE285715_T1/Epithelial_fraction.png" alt="c2l Epi fraction"></a><figcaption>c2l Epi fraction</figcaption></figure><figure><a href="figures/GSE285715_T1/nCount_RNA.pdf"><img loading="lazy" src="figures/GSE285715_T1/nCount_RNA.png" alt="测序深度"></a><figcaption>测序深度</figcaption></figure><figure><a href="figures/GSE285715_T1/low_denominator.pdf"><img loading="lazy" src="figures/GSE285715_T1/low_denominator.png" alt="低分母"></a><figcaption>低分母</figcaption></figure><figure><a href="figures/GSE285715_T1/scatter_H05_support.pdf"><img loading="lazy" src="figures/GSE285715_T1/scatter_H05_support.png" alt="原始支持度散点"></a><figcaption>原始支持度散点</figcaption></figure><figure><a href="figures/GSE285715_T1/scatter_H05_conditional_support.pdf"><img loading="lazy" src="figures/GSE285715_T1/scatter_H05_conditional_support.png" alt="条件支持度散点"></a><figcaption>条件支持度散点</figcaption></figure></div></main></html>

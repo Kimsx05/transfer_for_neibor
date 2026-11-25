@@ -1,0 +1,26 @@
+{
+  "seed": 20261125,
+  "cap_per_specimen_label": 35,
+  "heldout_groups": [
+    "CNP0000460::P01",
+    "InhouseData::T4463209"
+  ],
+  "vst_candidates": 1200,
+  "include_detected_shared_top20": true,
+  "pcs": 25,
+  "k_anchor": 5,
+  "k_weight": 50,
+  "low_denominator": "Epi_support < 0.10 including zero; retain all in primary stats",
+  "discordance": "within frozen query per section, linear Q75/Q25 inclusive in opposite directions for MP10 and raw support; ties retained",
+  "non_epi_diagnostic": "c2l Epi fraction < 0.10 and dominant broad lineage other than Epithelial",
+  "descriptive_top": "raw support >= within-section frozen query Q95, ties retained",
+  "paired_pseudo_features": "identical detected intersection of paired medium and low queries before reference scaling/PCA",
+  "pseudo_mixtures_per_held_specimen": 80,
+  "pseudo_depths": [
+    "medium",
+    "low"
+  ],
+  "normalization": "LogNormalize, 10000",
+  "query_population": "stored full_v1 query",
+  "CPU_budget": 4
+}
