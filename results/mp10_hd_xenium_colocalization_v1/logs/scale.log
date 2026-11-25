@@ -1,0 +1,4 @@
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v1/code/scale_check.py:11: Pandas4Warning: Starting with pandas version 4.0 all arguments of max will be keyword-only.
+  tab=pd.crosstab(members.region_id,members.label);win=tab.idxmax(1).mask(tab.eq(tab.max(1),axis=0).sum(1)>1,'Mixed').reindex(z.region_id)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v1/code/scale_check.py:11: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  tab=pd.crosstab(members.region_id,members.label);win=tab.idxmax(1).mask(tab.eq(tab.max(1),axis=0).sum(1)>1,'Mixed').reindex(z.region_id)

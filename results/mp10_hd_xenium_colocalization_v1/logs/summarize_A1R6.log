@@ -1,0 +1,24 @@
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v1/code/summarize_units.py:47: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  a=raw.loc[ei,ls];z.loc[ei,k+'_detected']=(a>0).sum(1);z.loc[ei,k+'_max_gene_fraction']=a.max(axis=1)/a.sum(1).replace(0,np.nan)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v1/code/summarize_units.py:47: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  a=raw.loc[ei,ls];z.loc[ei,k+'_detected']=(a>0).sum(1);z.loc[ei,k+'_max_gene_fraction']=a.max(axis=1)/a.sum(1).replace(0,np.nan)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v1/code/summarize_units.py:48: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  for gene in ls:diag.append((k,gene,len(a),int((a[gene]>0).sum()),int(a[gene].sum()),int(((a[gene]>0)&((a>0).sum(1)==1)).sum())))
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v1/code/summarize_units.py:47: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  a=raw.loc[ei,ls];z.loc[ei,k+'_detected']=(a>0).sum(1);z.loc[ei,k+'_max_gene_fraction']=a.max(axis=1)/a.sum(1).replace(0,np.nan)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v1/code/summarize_units.py:47: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  a=raw.loc[ei,ls];z.loc[ei,k+'_detected']=(a>0).sum(1);z.loc[ei,k+'_max_gene_fraction']=a.max(axis=1)/a.sum(1).replace(0,np.nan)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v1/code/summarize_units.py:48: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  for gene in ls:diag.append((k,gene,len(a),int((a[gene]>0).sum()),int(a[gene].sum()),int(((a[gene]>0)&((a>0).sum(1)==1)).sum())))
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v1/code/summarize_units.py:47: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  a=raw.loc[ei,ls];z.loc[ei,k+'_detected']=(a>0).sum(1);z.loc[ei,k+'_max_gene_fraction']=a.max(axis=1)/a.sum(1).replace(0,np.nan)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v1/code/summarize_units.py:47: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  a=raw.loc[ei,ls];z.loc[ei,k+'_detected']=(a>0).sum(1);z.loc[ei,k+'_max_gene_fraction']=a.max(axis=1)/a.sum(1).replace(0,np.nan)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v1/code/summarize_units.py:48: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  for gene in ls:diag.append((k,gene,len(a),int((a[gene]>0).sum()),int(a[gene].sum()),int(((a[gene]>0)&((a>0).sum(1)==1)).sum())))
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v1/code/summarize_units.py:47: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  a=raw.loc[ei,ls];z.loc[ei,k+'_detected']=(a>0).sum(1);z.loc[ei,k+'_max_gene_fraction']=a.max(axis=1)/a.sum(1).replace(0,np.nan)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v1/code/summarize_units.py:47: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  a=raw.loc[ei,ls];z.loc[ei,k+'_detected']=(a>0).sum(1);z.loc[ei,k+'_max_gene_fraction']=a.max(axis=1)/a.sum(1).replace(0,np.nan)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v1/code/summarize_units.py:48: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  for gene in ls:diag.append((k,gene,len(a),int((a[gene]>0).sum()),int(a[gene].sum()),int(((a[gene]>0)&((a>0).sum(1)==1)).sum())))

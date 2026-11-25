@@ -1,0 +1,50 @@
+sample	branch	status	reason_or_missing	evidence
+Cervilla	完整 8→16 µm 聚合及成员	完成		hd/Cervilla/conservation.json | hd/Cervilla/members.parquet
+Cervilla	RCTD full 及未平滑表达支持	完成		hd/Cervilla/fit_complete.txt | hd/Cervilla/weights.parquet | hd/Cervilla/labels.parquet | hd/Cervilla/label_counts.tsv
+Cervilla	50 µm 大类及亚群置换矩阵	完成		hd/Cervilla/major_50_matrix.tsv.gz | hd/Cervilla/subtype_50_matrix.tsv.gz | hd/Cervilla/matrix_nodes.tsv
+Cervilla	原 Epi64 H05 成员分离和 200/50 µm 构成	完成		hd/Cervilla/epi64_centers.parquet | hd/Cervilla/effects_200.tsv | hd/Cervilla/effects_50.tsv | hd/Cervilla/center_composition_200.parquet
+D1_Johnson	完整 8→16 µm 聚合及成员	完成		hd/D1_Johnson/conservation.json | hd/D1_Johnson/members.parquet
+D1_Johnson	RCTD full 及未平滑表达支持	完成		hd/D1_Johnson/fit_complete.txt | hd/D1_Johnson/weights.parquet | hd/D1_Johnson/labels.parquet | hd/D1_Johnson/label_counts.tsv
+D1_Johnson	50 µm 大类及亚群置换矩阵	完成		hd/D1_Johnson/major_50_matrix.tsv.gz | hd/D1_Johnson/subtype_50_matrix.tsv.gz | hd/D1_Johnson/matrix_nodes.tsv
+D1_Johnson	原 Epi64 H05 成员分离和 200/50 µm 构成	完成		hd/D1_Johnson/epi64_centers.parquet | hd/D1_Johnson/effects_200.tsv | hd/D1_Johnson/effects_50.tsv | hd/D1_Johnson/center_composition_200.parquet
+UC_SCC	完整 8→16 µm 聚合及成员	完成		hd/UC_SCC/conservation.json | hd/UC_SCC/members.parquet
+UC_SCC	RCTD full 及未平滑表达支持	完成		hd/UC_SCC/fit_complete.txt | hd/UC_SCC/weights.parquet | hd/UC_SCC/labels.parquet | hd/UC_SCC/label_counts.tsv
+UC_SCC	50 µm 大类及亚群置换矩阵	完成		hd/UC_SCC/major_50_matrix.tsv.gz | hd/UC_SCC/subtype_50_matrix.tsv.gz | hd/UC_SCC/matrix_nodes.tsv
+UC_SCC	原 Epi64 H05 成员分离和 200/50 µm 构成	完成		hd/UC_SCC/epi64_centers.parquet | hd/UC_SCC/effects_200.tsv | hd/UC_SCC/effects_50.tsv | hd/UC_SCC/center_composition_200.parquet
+A1R2	表达/细胞/原分割及 panel	完成		xenium/A1R2/cells.parquet | xenium/A1R2/panel.tsv.gz | xenium/A1R2/symbol_audit.tsv.gz | xenium/A1R2/boundary_geometry.parquet
+A1R2	大类、细类及独立表达簇	完成		xenium/A1R2/labels.parquet | xenium/A1R2/subtype_support.tsv | xenium/A1R2/cluster_marker_review.tsv.gz
+A1R2	三状态和两个补充表达程序	完成		xenium/A1R2/ucell.tsv.gz | xenium/A1R2/state_transfer.tsv.gz | xenium/A1R2/threshold.tsv | xenium/A1R2/correlations.tsv
+A1R2	分歧区域原表达及来源诊断	完成		xenium/A1R2/local_state_expression_80um.parquet | xenium/A1R2/discordant_expression.parquet | xenium/A1R2/reference_source_diagnostic.tsv.gz
+A1R2	50/200 µm 邻域矩阵	完成		xenium/A1R2/subtype_50_matrix.tsv.gz | xenium/A1R2/subtype_200_matrix.tsv.gz | xenium/A1R2/chol_50_matrix.tsv.gz | xenium/A1R2/chol_200_matrix.tsv.gz | xenium/A1R2/matrix_nodes.tsv
+A1R2	high/other 与连续读数周围组成	完成		xenium/A1R2/effects_50.tsv | xenium/A1R2/effects_200.tsv | xenium/A1R2/continuous_neighbors_50.tsv | xenium/A1R2/continuous_neighbors_200.tsv
+A1R4	表达/细胞/原分割及 panel	完成		xenium/A1R4/cells.parquet | xenium/A1R4/panel.tsv.gz | xenium/A1R4/symbol_audit.tsv.gz | xenium/A1R4/boundary_geometry.parquet
+A1R4	大类、细类及独立表达簇	完成		xenium/A1R4/labels.parquet | xenium/A1R4/subtype_support.tsv | xenium/A1R4/cluster_marker_review.tsv.gz
+A1R4	三状态和两个补充表达程序	完成		xenium/A1R4/ucell.tsv.gz | xenium/A1R4/state_transfer.tsv.gz | xenium/A1R4/threshold.tsv | xenium/A1R4/correlations.tsv
+A1R4	分歧区域原表达及来源诊断	完成		xenium/A1R4/local_state_expression_80um.parquet | xenium/A1R4/discordant_expression.parquet | xenium/A1R4/reference_source_diagnostic.tsv.gz
+A1R4	50/200 µm 邻域矩阵	完成		xenium/A1R4/subtype_50_matrix.tsv.gz | xenium/A1R4/subtype_200_matrix.tsv.gz | xenium/A1R4/chol_50_matrix.tsv.gz | xenium/A1R4/chol_200_matrix.tsv.gz | xenium/A1R4/matrix_nodes.tsv
+A1R4	high/other 与连续读数周围组成	完成		xenium/A1R4/effects_50.tsv | xenium/A1R4/effects_200.tsv | xenium/A1R4/continuous_neighbors_50.tsv | xenium/A1R4/continuous_neighbors_200.tsv
+A1R5	表达/细胞/原分割及 panel	完成		xenium/A1R5/cells.parquet | xenium/A1R5/panel.tsv.gz | xenium/A1R5/symbol_audit.tsv.gz | xenium/A1R5/boundary_geometry.parquet
+A1R5	大类、细类及独立表达簇	完成		xenium/A1R5/labels.parquet | xenium/A1R5/subtype_support.tsv | xenium/A1R5/cluster_marker_review.tsv.gz
+A1R5	三状态和两个补充表达程序	完成		xenium/A1R5/ucell.tsv.gz | xenium/A1R5/state_transfer.tsv.gz | xenium/A1R5/threshold.tsv | xenium/A1R5/correlations.tsv
+A1R5	分歧区域原表达及来源诊断	完成		xenium/A1R5/local_state_expression_80um.parquet | xenium/A1R5/discordant_expression.parquet | xenium/A1R5/reference_source_diagnostic.tsv.gz
+A1R5	50/200 µm 邻域矩阵	完成		xenium/A1R5/subtype_50_matrix.tsv.gz | xenium/A1R5/subtype_200_matrix.tsv.gz | xenium/A1R5/chol_50_matrix.tsv.gz | xenium/A1R5/chol_200_matrix.tsv.gz | xenium/A1R5/matrix_nodes.tsv
+A1R5	high/other 与连续读数周围组成	完成		xenium/A1R5/effects_50.tsv | xenium/A1R5/effects_200.tsv | xenium/A1R5/continuous_neighbors_50.tsv | xenium/A1R5/continuous_neighbors_200.tsv
+A1R6	表达/细胞/原分割及 panel	完成		xenium/A1R6/cells.parquet | xenium/A1R6/panel.tsv.gz | xenium/A1R6/symbol_audit.tsv.gz | xenium/A1R6/boundary_geometry.parquet
+A1R6	大类、细类及独立表达簇	完成		xenium/A1R6/labels.parquet | xenium/A1R6/subtype_support.tsv | xenium/A1R6/cluster_marker_review.tsv.gz
+A1R6	三状态和两个补充表达程序	完成		xenium/A1R6/ucell.tsv.gz | xenium/A1R6/state_transfer.tsv.gz | xenium/A1R6/threshold.tsv | xenium/A1R6/correlations.tsv
+A1R6	分歧区域原表达及来源诊断	完成		xenium/A1R6/local_state_expression_80um.parquet | xenium/A1R6/discordant_expression.parquet | xenium/A1R6/reference_source_diagnostic.tsv.gz
+A1R6	50/200 µm 邻域矩阵	完成		xenium/A1R6/subtype_50_matrix.tsv.gz | xenium/A1R6/subtype_200_matrix.tsv.gz | xenium/A1R6/chol_50_matrix.tsv.gz | xenium/A1R6/chol_200_matrix.tsv.gz | xenium/A1R6/matrix_nodes.tsv
+A1R6	high/other 与连续读数周围组成	完成		xenium/A1R6/effects_50.tsv | xenium/A1R6/effects_200.tsv | xenium/A1R6/continuous_neighbors_50.tsv | xenium/A1R6/continuous_neighbors_200.tsv
+A2R2	表达/细胞/原分割及 panel	完成		xenium/A2R2/cells.parquet | xenium/A2R2/panel.tsv.gz | xenium/A2R2/symbol_audit.tsv.gz | xenium/A2R2/boundary_geometry.parquet
+A2R2	大类、细类及独立表达簇	完成		xenium/A2R2/labels.parquet | xenium/A2R2/subtype_support.tsv | xenium/A2R2/cluster_marker_review.tsv.gz
+A2R2	三状态和两个补充表达程序	完成		xenium/A2R2/ucell.tsv.gz | xenium/A2R2/state_transfer.tsv.gz | xenium/A2R2/threshold.tsv | xenium/A2R2/correlations.tsv
+A2R2	分歧区域原表达及来源诊断	完成		xenium/A2R2/local_state_expression_80um.parquet | xenium/A2R2/discordant_expression.parquet | xenium/A2R2/reference_source_diagnostic.tsv.gz
+A2R2	50/200 µm 邻域矩阵	完成		xenium/A2R2/subtype_50_matrix.tsv.gz | xenium/A2R2/subtype_200_matrix.tsv.gz | xenium/A2R2/chol_50_matrix.tsv.gz | xenium/A2R2/chol_200_matrix.tsv.gz | xenium/A2R2/matrix_nodes.tsv
+A2R2	high/other 与连续读数周围组成	完成		xenium/A2R2/effects_50.tsv | xenium/A2R2/effects_200.tsv | xenium/A2R2/continuous_neighbors_50.tsv | xenium/A2R2/continuous_neighbors_200.tsv
+shared	留整来源及按真实深度降采样验证	完成		reports/heldout_validation.tsv | shared/validation/PR_curves.tsv.gz
+Cervilla	同来源大类、同半径 8/16 µm 局部对照	完成		hd/Cervilla/scale_direction_50.tsv
+shared	冻结 H05 全成员核验与抽样记录	完成		shared/H05_membership_check.tsv | shared/reference/membership.tsv.gz
+shared	区域面积和边界异常敏感性	完成		reports/boundary_sensitivity.tsv
+MPBC1	HD 补充切片	仅登记	用户指定本轮三片	shared/samples.tsv
+MPBC2	HD 补充切片	仅登记	用户指定本轮三片	shared/samples.tsv
+GSE326226	作者最后细胞标签	未取得	GEO 逐文件清单含矩阵、坐标和分割；SpatialBC 代码引用未随仓库提供的 RDS。本轮使用参考转移。	shared/spatialbc_tree.json

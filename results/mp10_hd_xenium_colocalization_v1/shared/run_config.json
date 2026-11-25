@@ -1,0 +1,92 @@
+{
+  "scope": {
+    "HD": [
+      "Cervilla",
+      "D1_Johnson",
+      "UC_SCC"
+    ],
+    "Xenium": [
+      "A1R2",
+      "A1R4",
+      "A1R5",
+      "A1R6",
+      "A2R2"
+    ],
+    "registered_only": [
+      "MPBC1",
+      "MPBC2"
+    ]
+  },
+  "seed": 123,
+  "max_logical_cpus": 16,
+  "blas_threads": 1,
+  "daytime_authorization": "2026-11-25, this run",
+  "hd": {
+    "grid_um": 16,
+    "input_grid_um": 8,
+    "origin": [
+      0,
+      0
+    ],
+    "RCTD_mode": "full",
+    "UMI_min": 100,
+    "UMI_min_sigma": 300,
+    "counts_MIN": 10,
+    "N_fit": 200,
+    "gene_cutoff": 0.000125,
+    "fc_cutoff": 0.5,
+    "gene_cutoff_reg": 0.0002,
+    "fc_cutoff_reg": 0.75,
+    "chunk": 256,
+    "focus_subtype_weight_min": 0.4,
+    "focus_subtype_margin_min": 0.12,
+    "major_support_min": 0.5,
+    "major_margin_min": 0.12,
+    "competition_weight": 0.25
+  },
+  "epi64": {
+    "source": "hd_treg_mp10_spatial_all_v1",
+    "background": 18085,
+    "K": 905,
+    "threshold": "frozen strict > within-slide eligible q95",
+    "primary_radius_um": 200,
+    "supplemental_radius_um": 50,
+    "exclude_any_shared_8um": true,
+    "min_coverage": 0.5
+  },
+  "xenium": {
+    "panel_gene_expression": 5001,
+    "shared_reference_features": 4966,
+    "major_support_min": 0.5,
+    "major_margin_min": 0.12,
+    "subtype_support_min": 0.5,
+    "subtype_margin_min": 0.15,
+    "area_flag_quantiles": [
+      0.005,
+      0.995
+    ],
+    "maxRank": 1500,
+    "ties": "average",
+    "high": "strict > within-sample supported epithelial 95th percentile",
+    "primary_radius_um": 50,
+    "supplemental_radius_um": 200,
+    "min_coverage": 0.5,
+    "reference_identity_cap": 450,
+    "reference_epithelial_identity_cap": 1200,
+    "state_reference_cap_per_class": 1800,
+    "heldout_validation_cap_per_specimen": 240
+  },
+  "nhood": {
+    "permutations": 1000,
+    "rng": 123,
+    "normalization": "none",
+    "null_sd_ddof": 0,
+    "diagonal": "kept in table; masked in figures",
+    "direction_support": {
+      "min_cells_each_type": 10,
+      "min_high_centers": 5,
+      "min_other_centers": 5,
+      "min_samples_for_direction": 2
+    }
+  }
+}

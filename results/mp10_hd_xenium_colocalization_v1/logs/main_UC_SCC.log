@@ -1,0 +1,123 @@
+            used   (Mb) gc trigger   (Mb)  max used   (Mb)
+Ncells   1742133   93.1    2974765  158.9   2105879  112.5
+Vcells 178327521 1360.6  597235304 4556.6 604831078 4614.5
+Begin: process_cell_type_info
+process_cell_type_info: number of cells in reference: 18289
+process_cell_type_info: number of genes in reference: 13960
+
+                  Arterial EC                      C1QC TAM 
+                          600                           600 
+                 Capillary EC       CD4 Helper_Conventional 
+                          600                           600 
+        CD4 Naive_Memory-like                 CD8 Exhausted 
+                          600                           600 
+CD8 GZMK_Effector-memory-like                          cDC1 
+                          600                           531 
+                         cDC2                Classical Mono 
+                          600                           600 
+                   Epithelial                          GC B 
+                         1800                           525 
+                         iCAF                      LAMP3 DC 
+                          600                           600 
+                 Lymphatic EC                          Mast 
+                          362                           600 
+                   Matrix_CAF                Naive_Memory B 
+                          600                           600 
+                   Neutrophil                            NK 
+                          600                           600 
+                          pDC                      Pericyte 
+                          377                           600 
+                       Plasma                          rCAF 
+                          600                           600 
+                          SMC                      SPP1 TAM 
+                          600                           600 
+              Tfh_CXCL13-like                          Treg 
+                          600                           600 
+                         vCAF                     Venous EC 
+                          294                           600 
+End: process_cell_type_info
+create.RCTD: getting regression differentially expressed genes: 
+get_de_genes: Arterial EC found DE genes: 323
+get_de_genes: C1QC TAM found DE genes: 261
+get_de_genes: Capillary EC found DE genes: 307
+get_de_genes: CD4 Helper_Conventional found DE genes: 177
+get_de_genes: CD4 Naive_Memory-like found DE genes: 209
+get_de_genes: CD8 Exhausted found DE genes: 234
+get_de_genes: CD8 GZMK_Effector-memory-like found DE genes: 209
+get_de_genes: cDC1 found DE genes: 230
+get_de_genes: cDC2 found DE genes: 205
+get_de_genes: Classical Mono found DE genes: 237
+get_de_genes: Epithelial found DE genes: 201
+get_de_genes: GC B found DE genes: 414
+get_de_genes: iCAF found DE genes: 298
+get_de_genes: LAMP3 DC found DE genes: 309
+get_de_genes: Lymphatic EC found DE genes: 294
+get_de_genes: Mast found DE genes: 201
+get_de_genes: Matrix_CAF found DE genes: 258
+get_de_genes: Naive_Memory B found DE genes: 221
+get_de_genes: Neutrophil found DE genes: 389
+get_de_genes: NK found DE genes: 232
+get_de_genes: pDC found DE genes: 372
+get_de_genes: Pericyte found DE genes: 283
+get_de_genes: Plasma found DE genes: 81
+get_de_genes: rCAF found DE genes: 261
+get_de_genes: SMC found DE genes: 291
+get_de_genes: SPP1 TAM found DE genes: 249
+get_de_genes: Tfh_CXCL13-like found DE genes: 219
+get_de_genes: Treg found DE genes: 232
+get_de_genes: vCAF found DE genes: 419
+get_de_genes: Venous EC found DE genes: 339
+get_de_genes: total DE genes: 3170
+create.RCTD: getting platform effect normalization differentially expressed genes: 
+get_de_genes: Arterial EC found DE genes: 634
+get_de_genes: C1QC TAM found DE genes: 488
+get_de_genes: Capillary EC found DE genes: 591
+get_de_genes: CD4 Helper_Conventional found DE genes: 493
+get_de_genes: CD4 Naive_Memory-like found DE genes: 520
+get_de_genes: CD8 Exhausted found DE genes: 565
+get_de_genes: CD8 GZMK_Effector-memory-like found DE genes: 489
+get_de_genes: cDC1 found DE genes: 446
+get_de_genes: cDC2 found DE genes: 441
+get_de_genes: Classical Mono found DE genes: 448
+get_de_genes: Epithelial found DE genes: 519
+get_de_genes: GC B found DE genes: 860
+get_de_genes: iCAF found DE genes: 558
+get_de_genes: LAMP3 DC found DE genes: 552
+get_de_genes: Lymphatic EC found DE genes: 594
+get_de_genes: Mast found DE genes: 408
+get_de_genes: Matrix_CAF found DE genes: 552
+get_de_genes: Naive_Memory B found DE genes: 553
+get_de_genes: Neutrophil found DE genes: 617
+get_de_genes: NK found DE genes: 505
+get_de_genes: pDC found DE genes: 633
+get_de_genes: Pericyte found DE genes: 564
+get_de_genes: Plasma found DE genes: 153
+get_de_genes: rCAF found DE genes: 515
+get_de_genes: SMC found DE genes: 517
+get_de_genes: SPP1 TAM found DE genes: 469
+get_de_genes: Tfh_CXCL13-like found DE genes: 520
+get_de_genes: Treg found DE genes: 525
+get_de_genes: vCAF found DE genes: 814
+get_de_genes: Venous EC found DE genes: 618
+get_de_genes: total DE genes: 5115
+            used   (Mb) gc trigger   (Mb)  max used   (Mb)
+Ncells   1753230   93.7    2974765  158.9   2105879  112.5
+Vcells 204318046 1558.9  597235304 4556.6 604831078 4614.5
+fitBulk: decomposing bulk
+chooseSigma: using initial Q_mat with sigma =  1
+Likelihood value: 145451.380297494
+Sigma value:  0.84
+Likelihood value: 144586.798260893
+Sigma value:  0.69
+Likelihood value: 144103.777978979
+Sigma value:  0.61
+Likelihood value: 143989.104929613
+Sigma value:  0.59
+Likelihood value: 143976.61025599
+Sigma value:  0.58
+Likelihood value: 143972.778972388
+Sigma value:  0.57
+Likelihood value: 143970.599174425
+Sigma value:  0.57
+Error: unexpected ')' in "ntf("%05d.tsv.gz",i))"
+Execution halted
