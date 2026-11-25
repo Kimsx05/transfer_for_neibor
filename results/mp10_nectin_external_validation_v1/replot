@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -eu
+cd "$(dirname "$0")/../.."
+source results/mp10_nectin_external_validation_v1/code/threads.sh
+Rscript "$D/code/replot.R"
+

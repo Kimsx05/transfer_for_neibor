@@ -1,0 +1,11 @@
+link	source	status	result
+上游代谢程序共变	TCGA + 3 BLCA bulk	支持组织水平共变	见各队列 n、Pearson r 与重叠去除敏感性
+SREBF1 程序与 NECTIN2	外部3队列	支持弱正相关	REML 0.19 [0.11, 0.27]
+mTORC1 程序与 NECTIN2	外部3队列	方向不一致	切除队列为负，其他两队列为正
+mTOR 干预到 SREBF 程序	HCV29	支持	两种药物的 mTORC1、SREBF1、SREBF2 程序下降
+mTOR 干预到 NECTIN2	HCV29	方向不一致	rapamycin 上升，RMC-6272 下降
+SREBF1 干预到 NECTIN2	TE5 / KYSE150 / HeLa	背景依赖	TE5 下降；KYSE150、HeLa 未见一致下降
+SREBF2 干预到 NECTIN2	HeLa	跨癌种支持	两种培养条件下下降，交互不精确
+NECTIN2 到 Treg 功能	bulk / 配对 / CellChat	功能不可评估	组织成分、受者 OXPHOS 转录及通讯候选均未直接测量单位 Treg 功能
+共同活化与自主合成	32 记录患者与18人 High 交集	效应不精确	TCR 调整减弱 Q50 点估计，自主合成调整影响小
+Epi 网络干预预测	virtual interface	complete	虚拟接口状态为 complete。summary 544 行；robustness 52 行；coverage 4862 行。 接口按原 assessment_status、metric_type、effect_scale、direction_available、uncertainty_type 保留；网络距离本身无升降方向，模型不确定性与实测干预分别解释。 SREBF1 对 NECTIN2 的主模型等级为 EVALUABLE，heat_distance=0.000602，单列方向读数为 down，模型 q=1.0。26 次可估重拟合有 26 次同向；不确定性为 patient_subsample_refit_min_max。 SREBF2 对 NECTIN2 的主模型等级为 EVALUABLE，heat_distance=0.002372，单列方向读数为 down，模型 q=1.0。26 次可估重拟合有 26 次同向；不确定性为 patient_subsample_refit_min_max。

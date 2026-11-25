@@ -1,0 +1,9 @@
+branch	source	previous	current
+TCGA primary	mp10_epithelial_treg_tcga_visualization_v1/scripts/build.R + v2/statistics	原始40组配对版本及各自三类Pearson估计；核实407/397	原定义复用；外部3队列与跨队列FDR新增
+TCGA family	mp10_nectin_family_rss_v1/statistics/correlations.tsv	已有Full/M20、Pearson/Spearman与纯度敏感性	新增外部复现
+NECTIN2 / TIGIT / Treg	mp10_immune_endothelial_mechanisms_v1 + hypothesis_followup + HD signatures.json	已有通讯及空间代理。检索到的TCGA原表没有独立bulk Treg分数	同口径基因相关重建，11成员Treg明确为新增
+paired Epi / Treg	mp10_hypothesis_followup_v1/v2	已有H05五项、NC/CY拆分及receiver G2M/OXPHOS	新增同分母单协变量竞争
+Treg lipid and activation	mp10_treg_metabolic_mechanisms_v1/tables	已有SCAP/FASN/TCR/CD36/SREBF2方向投影与覆盖	复用。竞争模型仅重算去终点成员的控制读数
+CellChat	mp10_epithelial_treg_tcga_visualization_v2 + mp10_treg_metabolic_mechanisms_v1	Treg→Epi RR 1.482；Epi→Treg RR 0.991；镜像配体受体	解释审计
+真实干预	GSE236742 / GSE143803 / GSE267018	本轮实际完成相应RNA线别、培养条件和交互	新增
+虚拟扰动	virtual_perturbation_manifest.json	只读接口，见 qc/virtual_interface.json	独立任务输出

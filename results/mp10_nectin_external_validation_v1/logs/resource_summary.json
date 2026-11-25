@@ -1,0 +1,23 @@
+{
+  "timing_scope": "sequential warm-cache replay, latest successful invocation per stage; excludes downloads and superseded attempts",
+  "wall_seconds": 305.89,
+  "peak_RSS_GiB": 4.286,
+  "stages_measured": [
+    "prepare",
+    "bulk_TCGA",
+    "bulk_GSE32894",
+    "bulk_GSE31684",
+    "bulk_GSE13507",
+    "check_inputs",
+    "stats",
+    "perturb",
+    "competition",
+    "audit",
+    "replot",
+    "report",
+    "environment",
+    "validate"
+  ],
+  "workers_per_analysis": 1,
+  "disk_MiB": 223.0
+}

@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/../.."
+source results/mp10_nectin_external_validation_v1/code/threads.sh
+exec 9>"$D/logs/run.lock"
+flock -n 9
+from_stage="${1:-prepare}"
+started=false
+if [[ "$from_stage" == prepare ]]; then printf 'stage\twall_s\tuser_s\tsystem_s\tpeak_RSS_KiB\n' > "$D/logs/resource_use.tsv"; fi
+stage () {
+ local label="$1"
+ shift
+ if [[ "$label" == "$from_stage" ]]; then started=true; fi
+ if [[ "$started" == false ]]; then return; fi
+ /usr/bin/time -a -o "$D/logs/resource_use.tsv" -f "$label\t%e\t%U\t%S\t%M" "$@" > "$D/logs/$label.log" 2>&1
+}
+stage prepare python "$D/code/prepare.py"
+for cohort in TCGA GSE32894 GSE31684 GSE13507; do stage "bulk_$cohort" Rscript "$D/code/bulk.R" "$cohort"; done
+stage check_inputs Rscript "$D/code/check_inputs.R"
+stage stats Rscript "$D/code/statistics.R"
+stage perturb Rscript "$D/code/perturb.R"
+stage competition Rscript "$D/code/competition.R"
+stage audit python "$D/code/audit.py"
+stage replot Rscript "$D/code/replot.R"
+stage report python "$D/code/report.py"
+stage environment Rscript "$D/code/environment.R"
+stage validate mp10_immune_endothelial_mechanisms_v1/venv/bin/python "$D/code/validate.py"
+
+python "$D/code/usage.py"

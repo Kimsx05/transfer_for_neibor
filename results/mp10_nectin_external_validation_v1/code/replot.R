@@ -1,0 +1,30 @@
+.libPaths(unique(c('/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.5','/home/data/t070721/R/x86_64-pc-linux-gnu-library/4.4','/refdir/Rlib',.libPaths())))
+suppressPackageStartupMessages(library(data.table));setDTthreads(1)
+D<-'results/mp10_nectin_external_validation_v1';TB<-file.path(D,'tables');F0<-file.path(D,'figures');PD<-file.path(D,'plot_data')
+cohorts<-c('GSE32894','GSE31684','GSE13507')
+put<-function(x,path){dir.create(dirname(path),recursive=TRUE,showWarnings=FALSE);fwrite(x,path,sep='\t',na='NA',nThread=1)}
+suppressPackageStartupMessages(library(ggplot2));skill<-file.path('/home/data/t070721/.agents/skills/jins-routine-plotting/common','theme.R');source(skill)
+sty<-jin_theme('Liberation Sans',10)+theme(plot.title=element_text(size=13,face='bold'),plot.subtitle=element_text(size=9),plot.caption=element_text(size=8,hjust=0),strip.text=element_text(size=8),legend.position='bottom')
+idx<-list();savep<-function(key,p,dat,w,h){file<-file.path(F0,key);dir.create(dirname(file),recursive=TRUE,showWarnings=FALSE);put(dat,file.path(PD,paste0(key,'.tsv')));ggsave(paste0(file,'.pdf'),p,width=w,height=h,device=cairo_pdf);ggsave(paste0(file,'.png'),p,width=w,height=h,dpi=300,device=ragg::agg_png);idx[[length(idx)+1]]<<-data.table(figure=key,pdf=paste0('figures/',key,'.pdf'),png=paste0('figures/',key,'.png'),data=paste0('plot_data/',key,'.tsv'))}
+z<-fread(file.path(TB,'all_cohorts.tsv'));mt<-fread(file.path(TB,'meta_external.tsv'));label<-function(x)sub('_RNA',' RNA',x,fixed=TRUE)
+heat<-function(tab,key,title,w=7,h=4){v<-copy(tab);v[,cell:=ifelse(is.finite(r),sprintf('%.2f',r),'NE')];p<-ggplot(v,aes(col,row,fill=r))+geom_tile(colour='white')+geom_text(aes(label=cell),size=3)+scale_fill_gradient2(low='#4e79a7',mid='white',high='#cd7157',limits=c(-1,1),na.value='grey88',name='Pearson r')+sty+labs(title=title,x=NULL,y=NULL);savep(key,p,v,w,h)}
+for(a in cohorts){
+ d<-fread(file.path(TB,'bulk',a,'scores.tsv'));base<-file.path('bulk',a);sub<-z[cohort==a&family_id=='core'];all<-list()
+ for(j in seq_len(nrow(sub))){u<-sub[j];ax<-u$x;by<-u$y;note<-if(is.finite(u$r))sprintf('n = %d    r = %.2f [%.2f, %.2f]    q = %.2g',u$n,u$r,u$lo,u$hi,u$q) else 'NE | insufficient measured members'
+  dat<-data.table(GSM=d$GSM,X=d[[ax]],Y=d[[by]],x_name=ax,y_name=by,cohort=a,n=u$n,r=u$r,lo=u$lo,hi=u$hi,q=u$q,version='Full',panel=paste0(ax,' / ',by,'\n',gsub('    ','  ',note,fixed=TRUE)));all[[j]]<-dat
+  sc<-ggplot(dat,aes(X,Y))+geom_point(colour='#326a70',alpha=.48,size=1.3,na.rm=TRUE)+geom_smooth(method='lm',formula=y~x,colour='#394662',fill='#9faec4',linewidth=.65,na.rm=TRUE)+sty
+  if(is.finite(u$r))savep(file.path(base,paste(ax,by,sep='_')),sc+labs(x=ax,y=by,title=a,subtitle=note,caption='Full | linear fit and 95% confidence band | BH across 27 external tests'),dat,5.4,4)
+ }
+ v<-rbindlist(all);v[,panel:=factor(panel,levels=unique(panel))];p<-ggplot(v,aes(X,Y))+geom_point(size=.65,alpha=.45,colour='#326a70',na.rm=TRUE)+geom_smooth(method='lm',formula=y~x,linewidth=.45,colour='#394662',fill='#aabaca',na.rm=TRUE)+facet_wrap(~panel,scales='free',ncol=3)+sty+labs(title=a,subtitle='Full | Pearson r with 95% CI | external BH q',x='First variable',y='Second variable');savep(file.path(base,'core_overview'),p,v,13,8)
+ for(f in c('core','family','Treg')){u<-z[cohort==a&family_id==f];u[,c('row','col'):=list(x,y)];heat(u,file.path(base,paste0(f,'_heatmap')),paste(a,f),7,4)}
+}
+u<-z[family_id=='core'];u[,c('row','col'):=list(paste(x,y,sep=' / '),cohort)];heat(u,'cross/core_heatmap','TCGA and external cohorts',7.5,5.3)
+for(f in c('family','Treg','legacy_RNA')){u<-z[family_id==f];u[,c('row','col'):=list(paste(x,y,sep=' / '),cohort)];heat(u,file.path('cross',paste0(f,'_heatmap')),paste('TCGA and external cohorts |',f),7,max(4,uniqueN(u$row)*.30+1.4))}
+uniquePairs<-unique(z[,.(x,y)]);for(j in seq_len(nrow(uniquePairs))){ax<-uniquePairs$x[j];by<-uniquePairs$y[j];u<-unique(z[x==ax&y==by],by='cohort');v<-mt[x==ax&y==by][1];uu<-u[,.(cohort,n,r,lo,hi,q,status)];uu<-rbind(uu,v[,.(cohort='External REML',n=NA_integer_,r,lo,hi,q=NA_real_,status)]);uu[,lbl:=ifelse(is.na(n),paste0(cohort,'   ',sprintf('%.2f [%.2f, %.2f]',r,lo,hi)),paste0(cohort,'   n=',n,'   ',sprintf('%.2f [%.2f, %.2f]   q=%.2g',r,lo,hi,q)))];uu[,lbl:=factor(lbl,rev(lbl))];p<-ggplot(uu,aes(r,lbl))+geom_vline(xintercept=0,linetype=3)+geom_segment(aes(x=lo,xend=hi,yend=lbl),na.rm=TRUE)+geom_point(colour='#326a70',size=2,na.rm=TRUE)+scale_x_continuous(limits=c(-1,1))+sty+labs(title=paste(label(ax),' / ',label(by)),x='Pearson r and 95% CI',y=NULL,caption='External summary excludes TCGA. Missing estimates are left blank.');savep(file.path('cross',paste0('forest_',ax,'_',by)),p,uu,8.3,3.7)}
+for(line in c('HCV29','KYSE150','TE5','HeLa')){
+ a<-switch(line,HCV29='GSE236742',HeLa='GSE267018','GSE143803');td<-file.path(TB,'perturbation',a,line)
+ for(cd in if(line=='HeLa')c('FBS','depletion','interaction') else '')for(f in c('family','programs')){
+ u<-fread(file.path(td,cd,paste0(f,'.tsv')));p<-ggplot(u,aes(effect,feature))+geom_vline(xintercept=0,linetype=3)+geom_segment(aes(x=low,xend=high,yend=feature),na.rm=TRUE)+geom_point(colour='#326a70',na.rm=TRUE)+facet_wrap(~contrast,scales='free_x')+sty+labs(title=paste(a,line,cd),x=paste0(unique(u$scale),' and 95% CI'),y=NULL,caption='Treatment minus control. Interaction is the change in KO effect under depletion.');savep(file.path('perturbation',a,line,cd,f),p,u,7,4.1)
+ }}
+cc<-fread(file.path(TB,'competition/models.tsv'));cc[,lbl:=paste(ifelse(population=='primary','All eligible','Replicated datasets'),control,sep=' / ')];cc[,exposure:=ifelse(exposure=='H05_NECTIN2','High Epi NECTIN2','Epi MP10 median')];p<-ggplot(cc,aes(beta,lbl))+geom_vline(xintercept=0,linetype=3)+geom_segment(aes(x=lo,xend=hi,yend=lbl),na.rm=TRUE)+geom_point(aes(shape=status),size=2)+facet_wrap(~exposure)+sty+labs(x='Exposure coefficient and HC3 95% CI',y=NULL,title='Paired Treg oxidative phosphorylation',caption='Unit leverage prevents interval estimation for the full High intersection.');savep('competition/paired_effects',p,cc,9,4.6);put(rbindlist(idx),file.path(D,'FIGURE_INDEX.tsv'))
+
