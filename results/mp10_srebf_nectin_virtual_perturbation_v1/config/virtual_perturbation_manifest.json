@@ -1,0 +1,37 @@
+{
+  "status": "complete",
+  "analysis_id": "mp10_srebf_nectin_virtual_perturbation_v1",
+  "config_id": "epi-v1-seed123/scTenifold-v2",
+  "method": "scTenifoldKnk",
+  "method_version": "2.0.0",
+  "root": "/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_srebf_nectin_virtual_perturbation_v1",
+  "access": "read-only consumer interface",
+  "files": [
+    {
+      "path": "tables/virtual_perturbation_summary.tsv",
+      "sha256": "1382914759fe300c6a46e7e9b86f6924d53e683929c75ecfcead9f07fec43f6f",
+      "bytes": 209272,
+      "rows": 544
+    },
+    {
+      "path": "tables/virtual_perturbation_robustness.tsv",
+      "sha256": "4e9b3151c972dc4080852f96d94655a33beef514b336432cb302f25e57720d67",
+      "bytes": 17646,
+      "rows": 52
+    },
+    {
+      "path": "tables/virtual_perturbation_coverage.tsv",
+      "sha256": "e843f87423003e4e6883be923891ac3c9a5e397416483beef5519b113ff4f0cf",
+      "bytes": 1246818,
+      "rows": 4862
+    }
+  ],
+  "config_fingerprints": {
+    "config/design.json": "b4b393b2f6ef2955bda358e6ce951346ce8f22390319cc247005123d0549c7b0",
+    "config/scTenifold.json": "9a75860da7c23dee0b4a108e820296630f74900ab338ab4a4634d04458d38f40",
+    "config/input_fingerprints.tsv": "0ed9b98e6b44bf7ac7c18d91f23936a59b651738b26b99ace7426e8531038b76",
+    "config/prior_audit.json": "9e1aa0bb9672b8203d93ef639ef12ac7bfcc72e40d36f17cb00a0a8f4820067f"
+  },
+  "finished_at": "2026-11-25T06:18:49.055202+00:00",
+  "figures": 10
+}

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")"
+source code/env.sh
+taskset -c 0-2 Rscript --vanilla code/replot.R > logs/replot.log 2>&1
+

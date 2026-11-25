@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")"
+source code/env.sh
+# Publish a new interface only after all newly generated files pass validation.
+"$VP_PY" -c 'import json,os,pathlib; p=pathlib.Path("config/virtual_perturbation_manifest.json"); q=p.with_suffix(".tmp");q.write_text(json.dumps({"status":"running","files":[]}));os.replace(q,p)'
+for table in tables/virtual_perturbation_{summary,robustness,coverage}.tsv; do
+  if [[ -f "$table" ]]; then chmod u+w "$table"; fi
+done
+bash code/install_R.sh
+taskset -c 0-9 "$VP_PY" code/prepare.py > logs/extract.log 2>&1
+taskset -c 0-9 "$VP_PY" code/panel.py > logs/panel.log 2>&1
+taskset -c 0-9 "$VP_PY" code/provenance.py
+Rscript --vanilla code/check_direction.R
+taskset -c 0-9 "$VP_PY" code/run_models.py > logs/model_jobs.log 2>&1 &
+worker=$!
+"$VP_PY" code/monitor.py "$worker" &
+monitor=$!
+wait "$worker"
+wait "$monitor"
+taskset -c 0-9 "$VP_PY" code/report.py
+"$VP_PY" code/finish.py
+bash replot
+taskset -c 0-9 "$VP_PY" code/validate.py
+

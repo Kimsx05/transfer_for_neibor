@@ -1,0 +1,9 @@
+from common import *
+import importlib.metadata as im,sys,platform,subprocess
+# Hash files used by extraction or model design. Keep upstream audit and gene vocabulary independently identifiable.
+paths=[raw,old,top,base/'analysis_cell_metadata.tsv.gz',base/'pseudobulk_membership.tsv.gz',base/'specimen_exposure_eligibility.tsv',base/'source_layer_audit.tsv',base/'patient_relationship_audit.tsv',v1/'regulatory_gene_membership.tsv.gz',v2/'scenic_corrected_regulon_edges.tsv',v2/'official_gene_sets.tsv.gz',P/'resources/mp10_regulatory_priors/human_tfs.txt',P/'resources/mp10_regulatory_priors/collectri.tsv',P/'subtype/v2/reference_training_v2/code/03_04_build_and_harmonize_reference.R',raw.parent/'01_derived_reference_matrix_audit.md']
+paths+=list(Path('cache').glob('*.tar.gz'))+list(Path('cache').glob('*.whl'))
+save(pd.DataFrame([dict(path=str(f.resolve()),bytes=f.stat().st_size,sha256=sha(f)) for f in paths]),'config/input_fingerprints.tsv')
+Path('logs/python_environment.json').write_text(json.dumps(dict(executable=sys.executable,python=sys.version,platform=platform.platform(),packages={p:im.version(p) for p in ('numpy','pandas','scipy','h5py','psutil','PyMuPDF','Pillow')},thread_environment={k:v for k,v in os.environ.items() if 'THREAD' in k and 'CODEX' not in k}),indent=2))
+Path('config/prior_audit.json').write_text(json.dumps(dict(actual_prior='none_de_novo',method='scTenifoldKnk',species='Homo sapiens',coordinate_build=None,attempted_celloracle_prior='hg38_gimmemotifsv5_fpr2_20210630',upstream='https://raw.githubusercontent.com/morris-lab/CellOracle/master/celloracle/data/promoter_base_GRN/hg38_TFinfo_dataframe_gimmemotifsv5_fpr2_threshold_10_20210630.parquet',status='incomplete transfer from upstream and CDN, not used',external_reference_only='Human CollecTRI source/target exact symbol pairs; not an imposed edge',prior_coverage='not applicable for fitted method',manual_edges=0),indent=2))
+

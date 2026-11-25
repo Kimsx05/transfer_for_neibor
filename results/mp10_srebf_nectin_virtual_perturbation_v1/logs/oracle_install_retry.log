@@ -1,0 +1,84 @@
+Looking in indexes: https://mirrors.aliyun.com/pypi/simple/, https://pypi.mirrors.ustc.edu.cn/simple/
+Requirement already satisfied: numpy<2 in ./tmp/oracle_env/lib/python3.10/site-packages (1.26.4)
+Collecting pandas<2
+  Using cached https://mirrors.aliyun.com/pypi/packages/49/e2/79e46612dc25ebc7603dc11c560baa7266c90f9e48537ecf1a02a0dd6bff/pandas-1.5.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.1 MB)
+Collecting scanpy<1.10
+  Downloading https://mirrors.aliyun.com/pypi/packages/3b/72/436046ca332b933ca7d09cd45b86154232203e068e8307a102d5349e9444/scanpy-1.9.8-py3-none-any.whl (2.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 450.7 kB/s eta 0:00:00
+Collecting anndata<0.10
+  Downloading https://mirrors.aliyun.com/pypi/packages/a7/ee/767a05c299d95b438ef9c8ab6dbc15896cfb9121cf4327fe1da160a45343/anndata-0.9.2-py3-none-any.whl (104 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 104.2/104.2 kB 2.1 MB/s eta 0:00:00
+Collecting celloracle==0.18.0
+  Using cached https://mirrors.aliyun.com/pypi/packages/5a/eb/4c31ab394855e66108332c6263f7c96c0ccd143bc856a4ebc5830567d1c3/celloracle-0.18.0-py3-none-any.whl (12.4 MB)
+Collecting h5py>=3.1.0
+  Downloading https://mirrors.aliyun.com/pypi/packages/cb/92/a8851d936547efe30cc0ce5245feac01f3ec6171f7899bc3f775c72030b3/h5py-3.16.0-cp310-cp310-manylinux_2_28_x86_64.whl (5.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.1/5.1 MB 501.0 kB/s eta 0:00:00
+Collecting umap-learn
+  Downloading https://mirrors.aliyun.com/pypi/packages/c8/8b/1f0f17e6515c70940974e5ca962fffdc2ea9da0093344611f9841145e6cb/umap_learn-0.6.0-py3-none-any.whl (136 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 137.0/137.0 kB 630.2 kB/s eta 0:00:00
+Collecting tqdm>=4.45
+  Downloading https://mirrors.aliyun.com/pypi/packages/a7/03/921a3d3c75785aca9ebfbfcabfbc3a1be12e2ab5265deb026d55a5a3f83e/tqdm-4.70.1-py3-none-any.whl (80 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.2/80.2 kB 3.5 MB/s eta 0:00:00
+Collecting igraph>=0.10.1
+  Downloading https://mirrors.aliyun.com/pypi/packages/7d/da/dd2867c25adbb41563720f14b5fc895c98bf88be682a3faff4f7b3118d2a/igraph-1.0.0-cp39-abi3-manylinux_2_28_x86_64.whl (5.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.7/5.7 MB 469.4 kB/s eta 0:00:00
+Requirement already satisfied: cython in ./tmp/oracle_env/lib/python3.10/site-packages (from celloracle==0.18.0) (0.29.37)
+Collecting matplotlib<3.7
+  Downloading https://mirrors.aliyun.com/pypi/packages/44/15/4225ce5758885913338c8bf2bf2cad8bd00691fdcfea85147450a4eb495d/matplotlib-3.6.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.8/11.8 MB 511.2 kB/s eta 0:00:00
+Collecting jupyter
+  Downloading https://mirrors.aliyun.com/pypi/packages/38/64/285f20a31679bf547b75602702f7800e74dbabae36ef324f716c02804753/jupyter-1.1.1-py2.py3-none-any.whl (2.7 kB)
+Collecting louvain
+  Downloading https://mirrors.aliyun.com/pypi/packages/5c/01/83d1dc711209568dd5847e87a856ff0d1a9bee092626f59b7c732b3c3fa4/louvain-0.8.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 515.8 kB/s eta 0:00:00
+Collecting velocyto>=0.17
+  Using cached https://mirrors.aliyun.com/pypi/packages/81/66/e8fff9d3b824fd99c0f678c47c740fec058ce2d9a0cfdf11b114ea8889f2/velocyto-0.17.17.tar.gz (198 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting scipy
+  Downloading https://mirrors.aliyun.com/pypi/packages/8e/6d/41991e503e51fc1134502694c5fa7a1671501a17ffa12716a4a9151af3df/scipy-1.15.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (37.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 37.7/37.7 MB 513.5 kB/s eta 0:00:00
+Collecting pyarrow>=0.17
+  Downloading https://mirrors.aliyun.com/pypi/packages/57/5c/f8fc0eb2de03464a557d5a4d0c15e972d73362414696618833b771f7eddd/pyarrow-25.0.1-cp310-cp310-manylinux_2_28_x86_64.whl (50.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 MB 507.2 kB/s eta 0:00:00
+Collecting scikit-learn
+  Downloading https://mirrors.aliyun.com/pypi/packages/58/0e/8c2a03d518fb6bd0b6b0d4b114c63d5f1db01ff0f9925d8eb10960d01c01/scikit_learn-1.7.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 584.4 kB/s eta 0:00:00
+Collecting joblib
+  Downloading https://mirrors.aliyun.com/pypi/packages/18/53/84099323c2ec4be98d935f63c033ac4151ee83836ca1050ede3b3aadf155/joblib-1.6.0-py3-none-any.whl (306 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 306.1/306.1 kB 734.9 kB/s eta 0:00:00
+Collecting gimmemotifs<=0.17.2,>=0.14.4
+  Downloading https://mirrors.aliyun.com/pypi/packages/c5/c3/2dbd6363f025cf4b06d938479a9b35dab0ca91e59259b16e0bd6eef8bea0/gimmemotifs-0.17.2.tar.gz (12.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.2/12.2 MB 487.2 kB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting goatools
+  Downloading https://mirrors.aliyun.com/pypi/packages/d0/65/3f7a8aac7d40d2765227a06ece45e5bbf19170794a193832c1f8d70523f9/goatools-1.6.9-py3-none-any.whl (15.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.8/15.8 MB 348.1 kB/s eta 0:00:00
+Collecting genomepy>=0.8.4
+  Downloading https://mirrors.aliyun.com/pypi/packages/3a/06/2b5e196ee6e83da6c4ac9e4b38e47eb06f420e750f1a134ed4e35bddec25/genomepy-0.16.4-py3-none-any.whl (83 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.4/83.4 kB 364.2 kB/s eta 0:00:00
+Collecting numba>=0.50.1
+  Downloading https://mirrors.aliyun.com/pypi/packages/21/3e/c504316120ed3f75b3b81708500a788190f5860e4d98639f09701a8b7107/numba-0.68.1-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (3.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 206.8 kB/s eta 0:00:00
+Collecting seaborn
+  Downloading https://mirrors.aliyun.com/pypi/packages/83/11/00d3c3dfc25ad54e731d91449895a79e4bf2384dc3ac01809010ba88f6d5/seaborn-0.13.2-py3-none-any.whl (294 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 294.9/294.9 kB 353.6 kB/s eta 0:00:00
+Collecting python-dateutil>=2.8.1
+  Downloading https://mirrors.aliyun.com/pypi/packages/5a/17/cebee01d1c0c1441174cf0456ddc91b280d79acb65340c05e41d77866ee8/python_dateutil-3.0.0-py2.py3-none-any.whl (94 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 94.7/94.7 kB 407.6 kB/s eta 0:00:00
+Collecting pytz>=2020.1
+  Downloading https://mirrors.aliyun.com/pypi/packages/b6/25/564f3fc5b70c1398d706c51f2b1470d0ea0b1b2f96fee67877b6f5bdf3b6/pytz-2026.6-py2.py3-none-any.whl (506 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 506.3/506.3 kB 247.0 kB/s eta 0:00:00
+Collecting natsort
+  Downloading https://mirrors.aliyun.com/pypi/packages/ef/82/7a9d0550484a62c6da82858ee9419f3dd1ccc9aa1c26a1e43da3ecd20b0d/natsort-8.4.0-py3-none-any.whl (38 kB)
+Collecting networkx>=2.3
+  Downloading https://mirrors.aliyun.com/pypi/packages/b9/54/dd730b32ea14ea797530a4479b2ed46a6fb250f682a9cfb997e968bf0261/networkx-3.4.2-py3-none-any.whl (1.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 236.7 kB/s eta 0:00:00
+Collecting session-info
+  Downloading https://mirrors.aliyun.com/pypi/packages/c5/c4/f6b7c0ec5241a2bde90c7ba1eca6ba44f8488bcedafe9072c79593015ec0/session_info-1.0.1-py3-none-any.whl (9.1 kB)
+Collecting patsy
+  Downloading https://mirrors.aliyun.com/pypi/packages/20/70/cd3cf5cff538323076a879edef02cce6f13f7d75e03d12f211b0a0dbd178/patsy-1.0.3-py2.py3-none-any.whl (233 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 233.3/233.3 kB 366.2 kB/s eta 0:00:00
+Collecting statsmodels>=0.10.0rc2
+  Downloading https://mirrors.aliyun.com/pypi/packages/92/f2/15a4d323326a52cc7d4a7b8e9fe72c85497fae514162ae2b1d8ee35aa3a2/statsmodels-0.15.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (12.1 MB)

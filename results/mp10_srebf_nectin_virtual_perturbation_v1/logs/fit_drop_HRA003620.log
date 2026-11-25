@@ -1,0 +1,21 @@
+ℹ CPM normalization: 1811 genes x 6548 cells
+✔ CPM normalization complete
+ℹ Building 10 gene regulatory networks (200 cells each)
+Networks ■■■■■■■                           20% | ETA:  8s
+Networks ■■■■■■■■■■                        30% | ETA:  7s
+Networks ■■■■■■■■■■■■■■■■■■■               60% | ETA:  4s
+Networks ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  100% | ETA:  0s
+✔ Network construction complete: 10 networks
+ℹ [X] Tensor: 1811 x 1811 x 10 (K=3)
+CP decomposition ■                                  0% | ETA:  4m
+CP decomposition ■■                                 2% | ETA:  3m
+CP decomposition ■■                                 3% | ETA:  3m
+CP decomposition ■■                                 4% | ETA:  3m
+CP decomposition ■■■                                6% | ETA:  3m
+CP decomposition ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  100% | ETA:  0s
+✔ [X] CP decomposition complete (norm explained: 27.7%)
+           used  (Mb) gc trigger (Mb)  max used   (Mb)
+Ncells  2279571 121.8    4193188  224   2991614  159.8
+Vcells 16591396 126.6   90046115  687 138561760 1057.2
+✔ Differential regulation complete: 36/1811 significant genes (FDR < 0.05)
+✔ Differential regulation complete: 39/1811 significant genes (FDR < 0.05)

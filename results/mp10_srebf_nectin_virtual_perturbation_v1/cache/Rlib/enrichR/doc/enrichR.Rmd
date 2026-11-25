@@ -1,0 +1,197 @@
+---
+title: "An R interface to the Enrichr database"
+author: "Wajid Jawaid"
+date: "`r Sys.Date()`"
+bibliography: enrichr.bib
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{An R interface to the Enrichr database}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# Installation
+
+**enrichR** can be installed from Github or from CRAN.
+
+## Github
+
+```{r, echo = FALSE, eval = TRUE}
+websiteLive <- TRUE
+```
+
+```{r, echo = TRUE, eval = FALSE}
+library(devtools)
+install_github("wjawaid/enrichR")
+```
+
+## CRAN
+
+The package can be downloaded from CRAN using:
+
+```{r, echo = TRUE, eval = FALSE}
+install.packages("enrichR")
+```
+
+# Usage example
+
+**enrichR** provides an interface to the Enrichr database [@kuleshov_enrichr:_2016] hosted at https://maayanlab.cloud/Enrichr/.  
+
+By default human genes are selected otherwise select your organism of choice. (This functionality was contributed by Alexander Blume)
+
+## Initialising connection to Enrichr website
+
+```{r, echo = TRUE, eval = TRUE}
+library(enrichR)
+
+websiteLive <- getOption("enrichR.live")
+
+if (websiteLive) {
+    listEnrichrSites()
+    setEnrichrSite("Enrichr") # Human genes
+}
+```
+
+## Select gene-set libraries
+
+List all available databases from Enrichr.
+
+```{r, echo = TRUE, eval = TRUE}
+if (websiteLive) {
+    dbs <- listEnrichrDbs()
+    head(dbs)
+}
+```
+
+Select the 2023 GO databases.
+
+```{r, echo = TRUE, eval = TRUE}
+dbs <- c("GO_Molecular_Function_2023", "GO_Cellular_Component_2023", 
+	 "GO_Biological_Process_2023")
+```
+
+## Perform analysis
+
+### Without background
+
+Query with `enrichr()` using example genes available from the package.
+
+```{r, echo = TRUE, eval = TRUE}
+# Load example input genes
+data(input)
+length(input)
+head(input)
+
+if (websiteLive) {
+    enriched <- enrichr(input, dbs)
+}
+```
+
+Now view the `"GO_Biological_Process_2023"` results from the `enriched` object.
+
+```{r, echo = TRUE, eval = FALSE}
+if (websiteLive) head(enriched[["GO_Biological_Process_2023"]])
+```
+
+```{r, echo = FALSE, results = 'asis'}
+success <- websiteLive & (length(enriched) >= 3)
+success <- success & all(dim(enriched[["GO_Biological_Process_2023"]]) > 2)
+if (success) {
+    x <- head(enriched[["GO_Biological_Process_2023"]])
+    x[,1] <- gsub(":", "&#58;", x[,1])
+    knitr::kable(x)
+}
+```
+
+### With background
+
+You can now add background genes when using `enrichr()`.
+
+```{r, echo = TRUE, eval = TRUE}
+# Load example background
+data(background)
+length(background)
+head(background)
+
+if (websiteLive) {
+    enriched2 <- enrichr(input, dbs, background = background)
+}
+```
+
+Now view the `"GO_Biological_Process_2023"` results from the `enriched2` object.
+
+```{r, echo = TRUE, eval = FALSE}
+if (websiteLive) head(enriched2[["GO_Biological_Process_2023"]])
+```
+
+```{r, echo = FALSE, results = 'asis'}
+success <- websiteLive & (length(enriched2) >= 3)
+success <- success & all(dim(enriched2[["GO_Biological_Process_2023"]]) > 2)
+if (success) {
+    x <- head(enriched2[["GO_Biological_Process_2023"]])
+    x[,1] <- gsub(":", "&#58;", x[,1])
+    knitr::kable(x)
+}
+```
+By default, the results table from analysis with a background does not have the 'Overlap' column.
+We can calculate the annotated genes in each term from GMT files and
+replace the 'Rank' column with 'Overlap' by setting `include_overlap = TRUE`.
+```{r, echo = TRUE, eval = TRUE}
+if (websiteLive) {
+    # Replace 'Rank' with 'Overlap' column, calculated with GMT files
+    enriched3 <- enrichr(input, dbs, background = background, include_overlap = TRUE)
+}
+```
+Now view the `"GO_Biological_Process_2023"` results from the `enriched3` object.
+```{r, echo = FALSE, results = 'asis'}
+success <- (length(enriched3) >= 3) & all(dim(enriched3[["GO_Biological_Process_2023"]]) > 2)
+if (success) {
+    x <- head(enriched3[["GO_Biological_Process_2023"]])
+    x[,1] <- gsub(":", "&#58;", x[,1])
+    knitr::kable(x)
+}
+```
+
+## Visualise results
+
+Plot the `"GO_Biological_Process_2023"` results. (Plotting function contributed by I-Hsuan Lin)
+
+```{r, echo = TRUE, eval = TRUE, fig.width = 8, fig.height = 5, fig.align = "center", dpi = 100}
+if (websiteLive) {
+    plotEnrich(enriched[["GO_Biological_Process_2023"]], showTerms = 20, numChar = 40, 
+	       y = "Count", orderBy = "P.value")
+}
+```
+
+## Export results
+
+Export Enrichr results as text or Excel files. By default (i.e. `outFile = "txt"`),
+the results from all the selected databases are saved into individual text files.
+When using `outFile = "excel"`, the results are saved into worksheets in a single Excel 2007 (XLSX) file.
+(Print function contributed by I-Hsuan Lin and Kai Hu)
+
+```{r, echo = TRUE, eval = FALSE}
+# To text files
+printEnrich(enriched)
+
+# To Excel
+printEnrich(enriched, outFile = "excel")
+```
+
+## Using `enrichR` behind a proxy
+
+If your computer is behind an HTTP or HTTPS proxy,
+you can set the RCurl Proxy options explicitly using `RCurlOptions` and
+enrichR will use the provided settings to connect to the Enrichr database via `httr::use_proxy()`.
+
+For example:
+
+```{r, echo = TRUE, eval = FALSE}
+options(RCurlOptions = list(proxy = 'http://ip_or_url',
+                            proxyusername = 'myuser',
+                            proxypassword = 'mypwd',
+                            proxyport = 'port_num',
+                            proxyauth = 'basic'))
+```
+
+# References

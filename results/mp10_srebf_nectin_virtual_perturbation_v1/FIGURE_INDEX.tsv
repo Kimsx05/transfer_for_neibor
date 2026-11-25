@@ -1,0 +1,11 @@
+figure	pdf	png	plot_data	caption
+F01_coverage	figures/F01_coverage.pdf	figures/F01_coverage.png	plot_data/F01_coverage.tsv	全部合格 Epi 的原始非零 UMI 比例。模型覆盖和入选原因见同名图数据与覆盖接口。
+F02_patients	figures/F02_patients.pdf	figures/F02_patients.png	plot_data/F02_patients.tsv	每点为该患者表达统计量在固定主 WT 核上的 NECTIN2 距离。两列各对应一次单基因扰动。患者差异为描述性结果。
+F03_states	figures/F03_states.pdf	figures/F03_states.png	plot_data/F03_states.tsv	每簇独立重建 WT 并模拟两个单 KO。标 NE 的行缺乏建网覆盖；有方向颜色的点取模型原生方向评分。
+F04_controls	figures/F04_controls.pdf	figures/F04_controls.png	plot_data/F04_controls.tsv	每个 SREBF 匹配五个可扰动对照，允许两个匹配集合重叠。均来自同一 WT。匹配变量、距离与读出见图数据。
+F05_refits	figures/F05_refits.pdf	figures/F05_refits.png	plot_data/F05_refits.tsv	01–20 为患者无放回重采样；数据集名称代表剔除该来源后重拟合；另列固定种子 456。展示每次估计。
+F10_refit_distance	figures/F10_refit_distance.pdf	figures/F10_refit_distance.png	plot_data/F05_refits.tsv	01–20 为患者无放回重采样；数据集名称代表剔除该来源后重拟合；另列固定种子 456。展示每次估计。
+F06_secondary	figures/F06_secondary.pdf	figures/F06_secondary.png	plot_data/F06_secondary.tsv	上皮网络中的 nectin 家族、PVR 及三个预设校准读出。模型内排序、P、BH q 与定向评分均见图数据。
+F07_programs	figures/F07_programs.pdf	figures/F07_programs.png	plot_data/F07_programs.tsv	Full 与 M20 分别沿用原成员与去 MP10 Top20 的成员。每行至少覆盖三基因及半数冻结成员。MP10 自身 M20 为空。
+F08_strata	figures/F08_strata.pdf	figures/F08_strata.png	plot_data/F08_strata.tsv	High 分别对应冻结 H05、H10、H50，Low 对应 L50。点为有资格患者的中位数，横线为患者实际最小到最大值。各层可能重叠。
+F09_direction	figures/F09_direction.pdf	figures/F09_direction.png	plot_data/F09_direction.tsv	方向评分来自 WT 表达。深度为所纳入基因的文库大小；最后一行敏感性去除深度残差表达矩阵的第一主轴。

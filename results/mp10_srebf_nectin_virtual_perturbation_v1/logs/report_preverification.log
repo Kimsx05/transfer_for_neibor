@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_srebf_nectin_virtual_perturbation_v1/code/report.py", line 111, in <module>
+    tm=key(r'Elapsed \(wall clock\) time \(h:mm:ss or m:ss\)');w=sum(float(x)*60**i for i,x in enumerate(reversed(tm.split(':'))))
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_srebf_nectin_virtual_perturbation_v1/code/report.py", line 110, in <lambda>
+    key=lambda field:re.search(field+r':\s*([^\n]+)',s)[1].strip()
+TypeError: 'NoneType' object is not subscriptable

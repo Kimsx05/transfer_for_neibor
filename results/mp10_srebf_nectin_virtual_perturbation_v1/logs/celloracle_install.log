@@ -1,0 +1,36 @@
+Looking in indexes: https://mirrors.aliyun.com/pypi/simple/, https://pypi.mirrors.ustc.edu.cn/simple/
+Collecting numpy<2
+  Downloading https://mirrors.aliyun.com/pypi/packages/4b/d7/ecf66c1cd12dc28b4040b15ab4d17b773b87fa9d29ca16125de01adb36cd/numpy-1.26.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.2/18.2 MB 389.3 kB/s eta 0:00:00
+Collecting pandas<2
+  Downloading https://mirrors.aliyun.com/pypi/packages/49/e2/79e46612dc25ebc7603dc11c560baa7266c90f9e48537ecf1a02a0dd6bff/pandas-1.5.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.1/12.1 MB 411.6 kB/s eta 0:00:00
+Collecting celloracle==0.18.0
+  Downloading https://mirrors.aliyun.com/pypi/packages/5a/eb/4c31ab394855e66108332c6263f7c96c0ccd143bc856a4ebc5830567d1c3/celloracle-0.18.0-py3-none-any.whl (12.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.4/12.4 MB 437.8 kB/s eta 0:00:00
+Collecting velocyto>=0.17
+  Downloading https://mirrors.aliyun.com/pypi/packages/81/66/e8fff9d3b824fd99c0f678c47c740fec058ce2d9a0cfdf11b114ea8889f2/velocyto-0.17.17.tar.gz (198 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 198.9/198.9 kB 854.9 kB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × python setup.py egg_info did not run successfully.
+  │ exit code: 1
+  ╰─> [6 lines of output]
+      Traceback (most recent call last):
+        File "<string>", line 2, in <module>
+        File "<pip-setuptools-caller>", line 34, in <module>
+        File "/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_srebf_nectin_virtual_perturbation_v1/tmp/pip-install-nd3lewj2/velocyto_b9f938756f0547339779eb32358e993b/setup.py", line 3, in <module>
+          import numpy as np
+      ModuleNotFoundError: No module named 'numpy'
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─> See above for output.
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.

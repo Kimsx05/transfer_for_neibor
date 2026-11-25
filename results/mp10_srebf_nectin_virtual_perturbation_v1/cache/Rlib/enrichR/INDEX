@@ -1,0 +1,19 @@
+.add_background         Upload background list using Speedrichr API
+.add_list               Upload gene list using Speedrichr API
+.enrichment_prep_df     Given a Enrichr output, order and subset
+                        criteria, returns a data frame accordingly
+.formatGenes            FormatGenes
+.get_backgroundenrich   Get enrichment result using Speedrichr API
+.onAttach               onLoad hook to setup package options
+.proxyOpts              Internal function to check RCurlOptions
+.read_gmt               Download and parse GMT files from Enrichr
+background              Example background genes
+enrichr                 Gene enrichment using Enrichr
+genes790                790 gene symbols
+getEnrichr              Helper function for HTTP methods GET and POST
+input                   Example input genes
+listEnrichrDbs          Look up available databases on Enrichr
+listEnrichrSites        List Enrichr Websites
+plotEnrich              plotEnrich
+printEnrich             printEnrich
+setEnrichrSite          Set Enrichr Website
