@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")"
+source code/env.sh
+# Shared hard limits from config/main.json: threads_total=10, memory_limit=200G (decimal).
+mkdir -p tmp logs
+exec 9>tmp/run.lock
+flock -n 9 || { echo 'Task already running' >&2; exit 2; }
+exec ./scope bash code/monitored_run.sh
+

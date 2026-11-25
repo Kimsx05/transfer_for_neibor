@@ -1,0 +1,8 @@
+{
+  "package": "celloracle==0.18.0",
+  "original_sha256": "8545c8f388dcfb3e984a3b550bf996b2c6e369465cfdbdc2c4f2a0e41a969aeb",
+  "patched_sha256": "e36da92c331f69d47dda2000a817263da228bc94c9642b1243b769d6cbd1f8bc",
+  "original": "nth_score = np.sort(score)[::-1][N]",
+  "replacement": "nth_score = np.sort(score)[::-1][min(N, len(score) - 1)]",
+  "reason": "empirical CV score vector has fewer entries after original expression filters; cap requested order statistic; no change when original call succeeds"
+}

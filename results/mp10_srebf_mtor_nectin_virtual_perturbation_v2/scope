@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")"
+source code/env.sh
+read -r threads_total memory_limit memory_high cpus < <("$VP_PY" -c 'import json,os;c=json.load(open("config/main.json"));print(c["threads_total"],c["memory_bytes"],c["soft_pause_bytes"],",".join(map(str,sorted(os.sched_getaffinity(0))[:c["threads_total"]])))')
+# All stages share a single task-specific budget, 10 CPUs and 200G decimal.
+systemctl --user set-property --runtime mp10vptwo.slice MemoryMax="$memory_limit" MemoryHigh="$memory_high" CPUQuota="$((threads_total*100))%" AllowedCPUs="$cpus"
+exec systemd-run --quiet --user --scope --slice=mp10vptwo.slice taskset -c "$cpus" "$@"
+

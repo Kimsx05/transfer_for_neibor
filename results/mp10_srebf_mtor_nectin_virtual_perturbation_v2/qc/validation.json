@@ -1,0 +1,18 @@
+{
+  "checks": [
+    "exact 8000 cells, 38 patients, 39 specimens, full/clean 2233/2194",
+    "two seeds plus five omissions with ten original clusters each",
+    "38 fitted WT and one prespecified small cluster NE",
+    "five frozen matches per source",
+    "all scTenifold and CellOracle job checkpoint SHA-256 verified",
+    "signed full-gene file indices verified",
+    "NECTIN2 present for all 5 and non-TF method NE",
+    "CellOracle supplies no native P/q and excludes source from ranking",
+    "all three propagation steps and a randomized reference",
+    "no-op max abs under 1e-10",
+    "8 plot sets have validated PDF, SVG, PNG and source data",
+    "task slice maximum memory and peak within budget",
+    "no source inputs or v1 artifacts overwritten"
+  ],
+  "status": "passed"
+}

@@ -1,0 +1,237 @@
+Looking in indexes: https://mirrors.ustc.edu.cn/pypi/simple, https://pypi.mirrors.ustc.edu.cn/simple/
+Collecting Cython<3
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/5b/b7/6e35bbbf253ff6c383eec57baab1c6814107b2b9caf26b10e9c25014bb1e/Cython-0.29.37-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl (1.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 37.8 MB/s eta 0:00:00
+Collecting wheel
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/2e/29/69cfbb602cd91690c55d38ba9fe53e6a7e76a6fa647bf38f19c138d25449/wheel-0.48.0-py3-none-any.whl (33 kB)
+Collecting setuptools<71
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/ef/15/88e46eb9387e905704b69849618e699dc2f54407d8953cc4ec4b8b46528d/setuptools-70.3.0-py3-none-any.whl (931 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 931.1/931.1 kB 65.0 MB/s eta 0:00:00
+Requirement already satisfied: packaging>=24.0 in /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages (from wheel) (26.3)
+Installing collected packages: wheel, setuptools, Cython
+  Attempting uninstall: setuptools
+    Found existing installation: setuptools 79.0.1
+    Uninstalling setuptools-79.0.1:
+      Successfully uninstalled setuptools-79.0.1
+Successfully installed Cython-0.29.37 setuptools-70.3.0 wheel-0.48.0
+Looking in indexes: https://mirrors.ustc.edu.cn/pypi/simple, https://pypi.mirrors.ustc.edu.cn/simple/
+Collecting numpy==1.26.4
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/4b/d7/ecf66c1cd12dc28b4040b15ab4d17b773b87fa9d29ca16125de01adb36cd/numpy-1.26.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.2/18.2 MB 11.1 MB/s eta 0:00:00
+Requirement already satisfied: pandas==1.5.3 in /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages (1.5.3)
+Collecting scipy==1.11.4
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/e0/9e/80e2205d138960a49caea391f3710600895dd8292b6868dc9aff7aa593f9/scipy-1.11.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (36.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 36.4/36.4 MB 14.5 MB/s eta 0:00:00
+Collecting matplotlib==3.6.3
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/44/15/4225ce5758885913338c8bf2bf2cad8bd00691fdcfea85147450a4eb495d/matplotlib-3.6.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.8/11.8 MB 15.9 MB/s eta 0:00:00
+Collecting scikit-learn==1.3.2
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/d0/0b/26ad95cf0b747be967b15fb71a06f5ac67aba0fd2f9cd174de6edefc4674/scikit_learn-1.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.8/10.8 MB 9.0 MB/s eta 0:00:00
+Collecting numba==0.59.1
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/f6/2d/f8cdcf325c8fbdfff911607d184e28eb7c94ca5c4760d7f149323404778a/numba-0.59.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.7/3.7 MB 58.9 MB/s eta 0:00:00
+Collecting anndata==0.9.2
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/a7/ee/767a05c299d95b438ef9c8ab6dbc15896cfb9121cf4327fe1da160a45343/anndata-0.9.2-py3-none-any.whl (104 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 104.2/104.2 kB 30.3 MB/s eta 0:00:00
+Collecting scanpy==1.9.8
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/3b/72/436046ca332b933ca7d09cd45b86154232203e068e8307a102d5349e9444/scanpy-1.9.8-py3-none-any.whl (2.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 57.0 MB/s eta 0:00:00
+Collecting umap-learn==0.5.6
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/d1/1b/46802a050b1c55d10c4f59fc6afd2b45ac9b4f62b2e12092d3f599286f14/umap_learn-0.5.6-py3-none-any.whl (85 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.7/85.7 kB 22.4 MB/s eta 0:00:00
+Collecting seaborn<0.14
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/83/11/00d3c3dfc25ad54e731d91449895a79e4bf2384dc3ac01809010ba88f6d5/seaborn-0.13.2-py3-none-any.whl (294 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 294.9/294.9 kB 70.2 MB/s eta 0:00:00
+Collecting igraph==0.11.8
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/90/61/ec7edb5233ec2dc3d2129d94211801fb46a1c2b9beec40989707c82271f7/igraph-0.11.8-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 64.3 MB/s eta 0:00:00
+Collecting louvain==0.8.2
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/5c/01/83d1dc711209568dd5847e87a856ff0d1a9bee092626f59b7c732b3c3fa4/louvain-0.8.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 69.4 MB/s eta 0:00:00
+Collecting goatools
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/d0/65/3f7a8aac7d40d2765227a06ece45e5bbf19170794a193832c1f8d70523f9/goatools-1.6.9-py3-none-any.whl (15.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.8/15.8 MB 8.2 MB/s eta 0:00:00
+Collecting pysam
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/3c/41/f64118e637b26e9b5fd33dc6da68cf9ccc835ee4463613584eb8c9c274c9/pysam-0.24.1-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (4.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.0/4.0 MB 49.2 MB/s eta 0:00:00
+Collecting ipython<9
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/c0/56/4cc7fc9e9e3f38fd324f24f8afe0ad8bb5fa41283f37f1aaf9de0612c968/ipython-8.39.0-py3-none-any.whl (831 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 831.8/831.8 kB 18.7 MB/s eta 0:00:00
+Requirement already satisfied: pytz>=2020.1 in /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages (from pandas==1.5.3) (2026.6)
+Requirement already satisfied: python-dateutil>=2.8.1 in /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages (from pandas==1.5.3) (3.0.0)
+Collecting pyparsing>=2.2.1
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/38/bb/d215ee7c73b61497b28a5503f9f53523f294fcc936762b7caf90e0c1c2b5/pyparsing-3.3.3-py3-none-any.whl (126 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 126.4/126.4 kB 39.1 MB/s eta 0:00:00
+Collecting cycler>=0.10
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/e7/05/c19819d5e3d95294a6f5947fb9b9629efb316b96de511b418c53d245aae6/cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Collecting fonttools>=4.22.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/ee/56/151b5e81d20c63834f48ad37a0cbbbe2f9b248e38f8d10387f0cf5219244/fonttools-4.65.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.3/5.3 MB 45.0 MB/s eta 0:00:00
+Requirement already satisfied: pillow>=6.2.0 in /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages (from matplotlib==3.6.3) (11.3.0)
+Requirement already satisfied: packaging>=20.0 in /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages (from matplotlib==3.6.3) (26.3)
+Collecting contourpy>=1.0.1
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/32/5c/1ee32d1c7956923202f00cf8d2a14a62ed7517bdc0ee1e55301227fc273c/contourpy-1.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (325 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 325.0/325.0 kB 33.4 MB/s eta 0:00:00
+Collecting kiwisolver>=1.0.1
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/f1/0e/9f394d693be549fa3fab62498c2778294595991047adc3dcf10aa99b91c0/kiwisolver-1.5.1-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 34.1 MB/s eta 0:00:00
+Requirement already satisfied: joblib>=1.1.1 in /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages (from scikit-learn==1.3.2) (1.6.0)
+Requirement already satisfied: threadpoolctl>=2.0.0 in /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages (from scikit-learn==1.3.2) (3.8.0)
+Collecting llvmlite<0.43,>=0.42.0dev0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/2b/01/764489e364948f52aa7cb958a91a8dafd489357d2401f66946542bbc1764/llvmlite-0.42.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (43.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.8/43.8 MB 6.5 MB/s eta 0:00:00
+Requirement already satisfied: h5py>=3 in /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages (from anndata==0.9.2) (3.16.0)
+Collecting natsort
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/ef/82/7a9d0550484a62c6da82858ee9419f3dd1ccc9aa1c26a1e43da3ecd20b0d/natsort-8.4.0-py3-none-any.whl (38 kB)
+Collecting statsmodels>=0.10.0rc2
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/92/f2/15a4d323326a52cc7d4a7b8e9fe72c85497fae514162ae2b1d8ee35aa3a2/statsmodels-0.15.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (12.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.1/12.1 MB 6.7 MB/s eta 0:00:00
+Requirement already satisfied: tqdm in /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages (from scanpy==1.9.8) (4.70.1)
+Requirement already satisfied: networkx>=2.3 in /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages (from scanpy==1.9.8) (3.4.2)
+Collecting session-info
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/c5/c4/f6b7c0ec5241a2bde90c7ba1eca6ba44f8488bcedafe9072c79593015ec0/session_info-1.0.1-py3-none-any.whl (9.1 kB)
+Collecting patsy
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/20/70/cd3cf5cff538323076a879edef02cce6f13f7d75e03d12f211b0a0dbd178/patsy-1.0.3-py2.py3-none-any.whl (233 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 233.3/233.3 kB 39.8 MB/s eta 0:00:00
+Requirement already satisfied: pynndescent>=0.5 in /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages (from umap-learn==0.5.6) (0.7.0)
+Collecting texttable>=1.6.2
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/9e/16/428cc7df8670f407c7810882cf736dbc04163ec60589f3bd8ebb6a2c263a/texttable-1.7.3-py2.py3-none-any.whl (10 kB)
+Requirement already satisfied: setuptools in ./cache/co310/lib/python3.10/site-packages (from goatools) (70.3.0)
+Collecting rich
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/82/3b/64d4899d73f91ba49a8c18a8ff3f0ea8f1c1d75481760df8c68ef5235bf5/rich-15.0.0-py3-none-any.whl (310 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 310.7/310.7 kB 68.0 MB/s eta 0:00:00
+Collecting xlsxwriter
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/a4/f4/42d98147a0e3e2ae905a1c51bd6fcac1e551e4223b35fbf5d9769f59ffb6/xlsxwriter-3.3.4-py3-none-any.whl (192 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 192.2/192.2 kB 39.4 MB/s eta 0:00:00
+Collecting ftpretty
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/9b/d1/cbd3736da8d6253da85838b105b97bc794965584243711fa2ef0bb585df3/ftpretty-0.4.0-py2.py3-none-any.whl (8.2 kB)
+Requirement already satisfied: requests in /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages (from goatools) (2.34.2)
+Collecting pydot
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/7e/32/a7125fb28c4261a627f999d5fb4afff25b523800faed2c30979949d6facd/pydot-4.0.1-py3-none-any.whl (37 kB)
+Collecting openpyxl
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/c0/da/977ded879c29cbd04de313843e76868e6e13408a94ed6b987245dc7c8506/openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 250.9/250.9 kB 34.8 MB/s eta 0:00:00
+Collecting pexpect>4.3
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/9e/c3/059298687310d527a58bb01f3b1965787ee3b40dce76752eda8b44e9a2c5/pexpect-4.9.0-py2.py3-none-any.whl (63 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.8/63.8 kB 36.3 MB/s eta 0:00:00
+Collecting jedi>=0.16
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/be/c7/71eb0d51cdcbb63b857c931aa4e9218b078b5d9f8ecd383b234f28fe7b0f/jedi-0.20.1-py2.py3-none-any.whl (4.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 76.2 MB/s eta 0:00:00
+Requirement already satisfied: typing_extensions>=4.6 in /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages (from ipython<9) (4.16.0)
+Collecting decorator
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/c0/bb/03ad4489fe19a410fe0065bbfb5424d28455eac9115e9cee7a56b6b1ec37/decorator-5.3.2-py3-none-any.whl (11 kB)
+Collecting prompt_toolkit<3.1.0,>=3.0.41
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/54/6f/84908cad2d6aa5144abcf7b42709fe4fdb459bc640ec7ac5786e7693dabc/prompt_toolkit-3.0.53-py3-none-any.whl (392 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 392.3/392.3 kB 47.4 MB/s eta 0:00:00
+Collecting pygments>=2.4.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/71/46/17f022dd3e953bf20a04a028a21ec746d942f8d2af30fa0f124fa0e6a684/pygments-2.21.0-py3-none-any.whl (1.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 44.3 MB/s eta 0:00:00
+Collecting matplotlib-inline
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/41/09/5b161152e2d90f7b87f781c2e1267494aef9c32498df793f73ad0a0a494a/matplotlib_inline-0.2.2-py3-none-any.whl (9.5 kB)
+Collecting stack_data
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/f1/7b/ce1eafaf1a76852e2ec9b22edecf1daa58175c090266e9f6c64afcd81d91/stack_data-0.6.3-py3-none-any.whl (24 kB)
+Collecting exceptiongroup
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/a0/7d/0fb19ccdf794c448141461180d5992c50402f69f8515a801bfac7ad65f45/exceptiongroup-1.3.2-py3-none-any.whl (16 kB)
+Collecting traitlets>=5.13.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/ad/66/0d785f0bc5e4315a96c989bb476d0fc07ea4f85132550c7b156ca2035d52/traitlets-5.16.1-py3-none-any.whl (86 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 86.2/86.2 kB 20.9 MB/s eta 0:00:00
+Collecting parso<0.9.0,>=0.8.7
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/99/5d/8268b644392ee874ee82a635cd0df1773de230bde356c38de28e298392cc/parso-0.8.7-py2.py3-none-any.whl (107 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.0/107.0 kB 23.6 MB/s eta 0:00:00
+Requirement already satisfied: cloudpickle>=3.0 in /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages (from joblib>=1.1.1->scikit-learn==1.3.2) (3.1.2)
+Collecting ptyprocess>=0.5
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/22/a6/858897256d0deac81a172289110f31629fc4cee19b6f01283303e18c8db3/ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+Collecting wcwidth>=0.1.4
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/5a/cb/55c50713af3697d7dc88b99763826e77ac1e5cec515670c9400a6dee980e/wcwidth-0.9.5-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (822 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 822.7/822.7 kB 60.8 MB/s eta 0:00:00
+Requirement already satisfied: six>=1.6 in /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages (from python-dateutil>=2.8.1->pandas==1.5.3) (1.17.0)
+Requirement already satisfied: tzdata in /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages (from python-dateutil>=2.8.1->pandas==1.5.3) (2026.6)
+Collecting formulaic>=1.1.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/fc/75/0576b03f7889ad25b5385b4f6c69e0543713425a6f193b056c9b0a2e65ce/formulaic-1.2.2-py3-none-any.whl (118 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.9/118.9 kB 35.9 MB/s eta 0:00:00
+Collecting et-xmlfile
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/c1/8b/5fe2cc11fee489817272089c4203e679c63b570a5aaeb18d852ae3cbba6a/et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
+Requirement already satisfied: certifi>=2023.5.7 in /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages (from requests->goatools) (2026.10.23)
+Requirement already satisfied: idna<4,>=2.5 in /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages (from requests->goatools) (3.20)
+Requirement already satisfied: charset_normalizer<4,>=2 in /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages (from requests->goatools) (3.5.2)
+Requirement already satisfied: urllib3<3,>=1.26 in /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages (from requests->goatools) (2.8.0)
+Collecting markdown-it-py>=2.2.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/c9/31/5f0ac2f1a1c67423c995c731a11cd4ad05d081a2be969d74f868bdb9cc70/markdown_it_py-4.3.0-py3-none-any.whl (96 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.0/97.0 kB 45.1 MB/s eta 0:00:00
+Collecting stdlib_list
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/3b/3d/2970b27a11ae17fb2d353e7a179763a2fe6f37d6d2a9f4d40104a2f132e9/stdlib_list-0.12.0-py3-none-any.whl (87 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.6/87.6 kB 25.6 MB/s eta 0:00:00
+Collecting pure-eval
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/6d/18/83376915176eb058cb86470eb7396388a13350b09a8f233a79303bbcbc5b/pure_eval-0.2.4-py3-none-any.whl (11 kB)
+Collecting executing>=1.2.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/4d/dd/8bc67e7d5ffc1d88aa5af511189dfb76dc4e1e5b808fab186146ef2663e5/executing-2.3.0-py3-none-any.whl (29 kB)
+Collecting asttokens>=2.1.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/d4/2b/04b8a15f3a1c77bc79ddf5c73875327f34b4fa75982df2b76e45e402d364/asttokens-3.0.2-py3-none-any.whl (28 kB)
+Collecting narwhals>=1.17
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/9e/2b/20b4b463c3795dc390db8fa6ec2b5c3e0aea90a760f813305da4c33dd814/narwhals-2.29.0-py3-none-any.whl (501 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 501.7/501.7 kB 61.4 MB/s eta 0:00:00
+Collecting wrapt>=1.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/56/d0/ea2284532f0b6f1dae5740b353c94a19717ee586ca366cc2e5e0b301aaf4/wrapt-2.5.2-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (231 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 231.5/231.5 kB 26.3 MB/s eta 0:00:00
+Collecting interface-meta>=1.2.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/a1/d3/20a61a248feb1249cd81f83ce731f0bdf5170ed96a08a298f7081cda9e90/interface_meta-2.0.1-py3-none-any.whl (15 kB)
+Collecting mdurl~=0.1
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Installing collected packages: texttable, pure-eval, ptyprocess, xlsxwriter, wrapt, wcwidth, traitlets, stdlib_list, pysam, pyparsing, pygments, pexpect, parso, numpy, natsort, narwhals, mdurl, llvmlite, kiwisolver, interface-meta, igraph, fonttools, executing, exceptiongroup, et-xmlfile, decorator, cycler, asttokens, stack_data, session-info, scipy, pydot, prompt_toolkit, patsy, openpyxl, numba, matplotlib-inline, markdown-it-py, louvain, jedi, ftpretty, contourpy, scikit-learn, rich, matplotlib, ipython, formulaic, anndata, statsmodels, seaborn, umap-learn, goatools, scanpy
+  Attempting uninstall: numpy
+    Found existing installation: numpy 1.23.5
+    Not uninstalling numpy at /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages, outside environment /home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_srebf_mtor_nectin_virtual_perturbation_v2/cache/co310
+    Can't uninstall 'numpy'. No files were found to uninstall.
+  Attempting uninstall: llvmlite
+    Found existing installation: llvmlite 0.50.0
+    Not uninstalling llvmlite at /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages, outside environment /home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_srebf_mtor_nectin_virtual_perturbation_v2/cache/co310
+    Can't uninstall 'llvmlite'. No files were found to uninstall.
+  Attempting uninstall: scipy
+    Found existing installation: scipy 1.15.3
+    Not uninstalling scipy at /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages, outside environment /home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_srebf_mtor_nectin_virtual_perturbation_v2/cache/co310
+    Can't uninstall 'scipy'. No files were found to uninstall.
+  Attempting uninstall: numba
+    Found existing installation: numba 0.68.1
+    Not uninstalling numba at /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages, outside environment /home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_srebf_mtor_nectin_virtual_perturbation_v2/cache/co310
+    Can't uninstall 'numba'. No files were found to uninstall.
+  Attempting uninstall: scikit-learn
+    Found existing installation: scikit-learn 1.7.2
+    Not uninstalling scikit-learn at /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages, outside environment /home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_srebf_mtor_nectin_virtual_perturbation_v2/cache/co310
+    Can't uninstall 'scikit-learn'. No files were found to uninstall.
+  Attempting uninstall: umap-learn
+    Found existing installation: umap-learn 0.5.12
+    Not uninstalling umap-learn at /home/data/t070721/codex_workspace/Bladder Metabolism/mp10_immune_endothelial_mechanisms_v1/venv/lib/python3.10/site-packages, outside environment /home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_srebf_mtor_nectin_virtual_perturbation_v2/cache/co310
+    Can't uninstall 'umap-learn'. No files were found to uninstall.
+Successfully installed anndata-0.9.2 asttokens-3.0.2 contourpy-1.3.2 cycler-0.12.1 decorator-5.3.2 et-xmlfile-2.0.0 exceptiongroup-1.3.2 executing-2.3.0 fonttools-4.65.0 formulaic-1.2.2 ftpretty-0.4.0 goatools-1.6.9 igraph-0.11.8 interface-meta-2.0.1 ipython-8.39.0 jedi-0.20.1 kiwisolver-1.5.1 llvmlite-0.42.0 louvain-0.8.2 markdown-it-py-4.3.0 matplotlib-3.6.3 matplotlib-inline-0.2.2 mdurl-0.1.2 narwhals-2.29.0 natsort-8.4.0 numba-0.59.1 numpy-1.26.4 openpyxl-3.1.5 parso-0.8.7 patsy-1.0.3 pexpect-4.9.0 prompt_toolkit-3.0.53 ptyprocess-0.7.0 pure-eval-0.2.4 pydot-4.0.1 pygments-2.21.0 pyparsing-3.3.3 pysam-0.24.1 rich-15.0.0 scanpy-1.9.8 scikit-learn-1.3.2 scipy-1.11.4 seaborn-0.13.2 session-info-1.0.1 stack_data-0.6.3 statsmodels-0.15.0 stdlib_list-0.12.0 texttable-1.7.3 traitlets-5.16.1 umap-learn-0.5.6 wcwidth-0.9.5 wrapt-2.5.2 xlsxwriter-3.3.4
+Looking in indexes: https://mirrors.ustc.edu.cn/pypi/simple, https://pypi.mirrors.ustc.edu.cn/simple/
+Processing /home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_srebf_nectin_virtual_perturbation_v1/cache/celloracle-0.18.0-py3-none-any.whl
+Collecting velocyto==0.17.17
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/81/66/e8fff9d3b824fd99c0f678c47c740fec058ce2d9a0cfdf11b114ea8889f2/velocyto-0.17.17.tar.gz (198 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 198.9/198.9 kB 5.9 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Building wheels for collected packages: velocyto
+  Building wheel for velocyto (setup.py): started
+  Building wheel for velocyto (setup.py): finished with status 'done'
+  Created wheel for velocyto: filename=velocyto-0.17.17-cp310-cp310-linux_x86_64.whl size=173307 sha256=56e6469833196aff30e5ca960bf12f89d447127122c588a0e53fa2480aa6ab9e
+  Stored in directory: /home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_srebf_mtor_nectin_virtual_perturbation_v2/tmp/pip/wheels/03/ce/11/c663bc1e273a2c2c28cc05be6dfc953f9bf92cc33a0390ccff
+Successfully built velocyto
+Installing collected packages: velocyto, celloracle
+Successfully installed celloracle-0.18.0 velocyto-0.17.17
+
+[notice] A new release of pip is available: 23.0.1 -> 26.3
+[notice] To update, run: /home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_srebf_mtor_nectin_virtual_perturbation_v2/cache/co310/bin/python -m pip install --upgrade pip
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_srebf_mtor_nectin_virtual_perturbation_v2/cache/co310/lib/python3.10/site-packages/celloracle/__init__.py", line 8, in <module>
+    from . import utility, network, network_analysis, go_analysis, data, data_conversion, oracle_utility
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_srebf_mtor_nectin_virtual_perturbation_v2/cache/co310/lib/python3.10/site-packages/celloracle/utility/__init__.py", line 18, in <module>
+    from .load_hdf5 import load_hdf5
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_srebf_mtor_nectin_virtual_perturbation_v2/cache/co310/lib/python3.10/site-packages/celloracle/utility/load_hdf5.py", line 8, in <module>
+    from ..motif_analysis.tfinfo_core import load_TFinfo
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_srebf_mtor_nectin_virtual_perturbation_v2/cache/co310/lib/python3.10/site-packages/celloracle/motif_analysis/__init__.py", line 11, in <module>
+    from .motif_analysis_utility import is_genome_installed
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_srebf_mtor_nectin_virtual_perturbation_v2/cache/co310/lib/python3.10/site-packages/celloracle/motif_analysis/motif_analysis_utility.py", line 22, in <module>
+    from genomepy import Genome
+ModuleNotFoundError: No module named 'genomepy'

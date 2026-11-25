@@ -1,0 +1,97 @@
+Looking in indexes: https://mirrors.aliyun.com/pypi/simple/, https://pypi.mirrors.ustc.edu.cn/simple/
+Collecting celloracle==0.20.0
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/33/7c/11f7ccb68d0f601e5eb7b7f836503d48044a8f2cbbf351021eae7f05d9d6/celloracle-0.20.0-py3-none-any.whl (12.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.4/12.4 MB 3.9 MB/s eta 0:00:00
+Collecting cython<3.1
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/0d/72/743730d7c46b4c85abefb93187cbbcb7aae8de288d7722b990db3d13499e/Cython-3.0.12-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.5/3.5 MB 7.6 MB/s eta 0:00:00
+Collecting loompy
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/c0/41/6d499b9b63406b204dd551002712c088abf0e130686721f403aa105736ba/loompy-3.0.8.tar.gz (49 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting numpy-groupies
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/96/73/ae27e183110e5e3eedfe6df4ca8325b162ec8654bd193af779151655ce0d/numpy_groupies-0.16.8-py3-none-any.whl (348 kB)
+Collecting louvain
+  Downloading https://mirrors.ustc.edu.cn/pypi/packages/4b/14/4bf2d8b73639ffedc8a949e6ad40cd2207e0dc4ed9720afeb3f69656c194/louvain-0.8.2.tar.gz (4.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.2/4.2 MB 4.2 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × python setup.py egg_info did not run successfully.
+  │ exit code: 1
+  ╰─> [61 lines of output]
+      /home/data/t070721/codex_singularity/python-envs/bladder-spatial-py312/lib/python3.12/site-packages/wheel/bdist_wheel.py:4: FutureWarning: The 'wheel' package is no longer the canonical location of the 'bdist_wheel' command, and will be removed in a future release. Please update to setuptools v70.1 or later which contains an integrated version of this command.
+        warn(
+      /home/data/t070721/codex_singularity/python-envs/bladder-spatial-py312/lib/python3.12/site-packages/setuptools/__init__.py:92: _DeprecatedInstaller: setuptools.installer and fetch_build_eggs are deprecated.
+      !!
+      
+              ********************************************************************************
+              Requirements should be satisfied by a PEP 517 installer.
+              If you are using pip, you can try `pip install --use-pep517`.
+      
+              This deprecation is overdue, please update your project and remove deprecated
+              calls to avoid build errors in the future.
+              ********************************************************************************
+      
+      !!
+        dist.fetch_build_eggs(dist.setup_requires)
+      /home/data/t070721/codex_singularity/python-envs/bladder-spatial-py312/lib/python3.12/site-packages/setuptools/_distutils/dist.py:318: UserWarning: Unknown distribution option: 'test_suite'
+        warnings.warn(msg)
+      Traceback (most recent call last):
+        File "<string>", line 2, in <module>
+        File "<pip-setuptools-caller>", line 34, in <module>
+        File "/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_srebf_mtor_nectin_virtual_perturbation_v2/tmp/pip-install-syv14yqs/louvain_949663f0625548a5b693d6e12ace853e/setup.py", line 907, in <module>
+          setup(**options)
+        File "/home/data/t070721/codex_singularity/python-envs/bladder-spatial-py312/lib/python3.12/site-packages/setuptools/__init__.py", line 117, in setup
+          return distutils.core.setup(**attrs)  # type: ignore[return-value]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/home/data/t070721/codex_singularity/python-envs/bladder-spatial-py312/lib/python3.12/site-packages/setuptools/_distutils/core.py", line 130, in setup
+          _setup_distribution = dist = klass(attrs)
+                                       ^^^^^^^^^^^^
+        File "/home/data/t070721/codex_singularity/python-envs/bladder-spatial-py312/lib/python3.12/site-packages/setuptools/dist.py", line 321, in __init__
+          _Distribution.__init__(self, dist_attrs)
+        File "/home/data/t070721/codex_singularity/python-envs/bladder-spatial-py312/lib/python3.12/site-packages/setuptools/_distutils/dist.py", line 338, in __init__
+          self.finalize_options()
+        File "/home/data/t070721/codex_singularity/python-envs/bladder-spatial-py312/lib/python3.12/site-packages/setuptools/dist.py", line 789, in finalize_options
+          for ep in sorted(loaded, key=by_order):
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/home/data/t070721/codex_singularity/python-envs/bladder-spatial-py312/lib/python3.12/site-packages/setuptools/dist.py", line 788, in <genexpr>
+          loaded = (e.load() for e in filtered)
+                    ^^^^^^^^
+        File "/home/data/t070721/codex_singularity/python-envs/bladder-spatial-py312/lib/python3.12/importlib/metadata/__init__.py", line 205, in load
+          module = import_module(match.group('module'))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/home/data/t070721/codex_singularity/python-envs/bladder-spatial-py312/lib/python3.12/importlib/__init__.py", line 90, in import_module
+          return _bootstrap._gcd_import(name[level:], package, level)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+        File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+        File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
+        File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+        File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+        File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+        File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
+        File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+        File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+        File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+        File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+        File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+        File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+        File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+        File "/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_srebf_mtor_nectin_virtual_perturbation_v2/tmp/pip-install-syv14yqs/louvain_949663f0625548a5b693d6e12ace853e/.eggs/setuptools_scm-10.3.4-py3.12.egg/setuptools_scm/__init__.py", line 8, in <module>
+          from vcs_versioning import Configuration
+      ModuleNotFoundError: No module named 'vcs_versioning'
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+
+[notice] A new release of pip is available: 25.0.1 -> 26.3
+[notice] To update, run: /home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_srebf_mtor_nectin_virtual_perturbation_v2/cache/oracle_env/bin/python -m pip install --upgrade pip
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─> See above for output.
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.

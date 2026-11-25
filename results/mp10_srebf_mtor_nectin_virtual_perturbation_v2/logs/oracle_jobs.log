@@ -1,0 +1,84 @@
+pilot C0 ok
+main C3 ok
+main C2 ok
+main C1 ok
+main C7 ok
+main C5 ok
+main C4 ok
+main C0 ok
+main C6 ok
+main C9 ok
+main C8 ok
+seed456 C1 ok
+seed456 C2 ok
+seed456 C3 ok
+seed456 C0 ok
+seed456 C9 ok
+seed456 C4 ok
+seed456 C6 ok
+seed456 C5 ok
+seed456 C7 ok
+seed456 C8 ok
+drop_CNP0000460 C2 ok
+drop_CNP0000460 C1 ok
+drop_CNP0000460 C3 ok
+drop_CNP0000460 C0 ok
+drop_CNP0000460 C9 ok
+drop_CNP0000460 C5 ok
+drop_CNP0000460 C4 ok
+drop_CNP0000460 C6 ok
+drop_CNP0000460 C8 ok
+drop_CNP0000460 C7 ok
+drop_GSE326225 C0 ok
+drop_GSE326225 C1 ok
+drop_GSE326225 C3 ok
+drop_GSE326225 C2 ok
+drop_GSE326225 C9 ok
+drop_GSE326225 C4 ok
+drop_GSE326225 C5 ok
+drop_GSE326225 C6 ok
+drop_GSE326225 C7 ok
+drop_GSE326225 C8 ok
+drop_HRA003620 C0 ok
+drop_HRA003620 C1 ok
+drop_HRA003620 C3 ok
+drop_HRA003620 C2 ok
+drop_HRA003620 C9 ok
+drop_HRA003620 C4 ok
+drop_HRA003620 C7 ok
+drop_HRA003620 C5 ok
+drop_HRA003620 C8 ok
+drop_HRA003620 C6 ok
+drop_InhouseData C0 ok
+drop_InhouseData C3 ok
+drop_InhouseData C2 ok
+drop_InhouseData C9 ok
+drop_InhouseData C7 ok
+drop_InhouseData C5 ok
+drop_InhouseData C4 ok
+drop_InhouseData C6 ok
+drop_InhouseData C8 ok
+drop_PRJNA662018 C1 ok
+drop_PRJNA662018 C0 ok
+drop_PRJNA662018 C2 ok
+drop_PRJNA662018 C9 ok
+drop_PRJNA662018 C3 ok
+drop_PRJNA662018 C4 ok
+drop_PRJNA662018 C6 ok
+drop_PRJNA662018 C5 ok
+drop_PRJNA662018 C8 ok
+drop_PRJNA662018 C7 ok
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_srebf_mtor_nectin_virtual_perturbation_v2/code/run_oracle.py", line 13, in <module>
+    for task in tasks:task.result()
+  File "/home/data/t070721/miniconda3/envs/compass_env/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/home/data/t070721/miniconda3/envs/compass_env/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/home/data/t070721/miniconda3/envs/compass_env/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_srebf_mtor_nectin_virtual_perturbation_v2/code/run_oracle.py", line 6, in run
+    with log.open('w') as f:subprocess.run(['/usr/bin/time','-v','-o','logs/oracle_'+j+'_'+s+'.usage','cache/co310/bin/python','code/oracle.py',j,s],stdout=f,stderr=subprocess.STDOUT,check=True)
+  File "/home/data/t070721/miniconda3/envs/compass_env/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/usr/bin/time', '-v', '-o', 'logs/oracle_drop_InhouseData_C1.usage', 'cache/co310/bin/python', 'code/oracle.py', 'drop_InhouseData', 'C1']' returned non-zero exit status 1.
