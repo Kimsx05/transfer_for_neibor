@@ -1,0 +1,753 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>四片 Visium 功能定位</title><style>body{font:16px/1.6 Arial,sans-serif;color:#182732;max-width:1320px;margin:2em auto;padding:0 1.4em}td,th{padding:.35em .6em;border-bottom:1px solid #ccd5db}table{border-collapse:collapse;font-size:.9em}th{background:#eef3f6}a{color:#175883}h2{margin-top:2em}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1em}figure{margin:0}img{width:100%;height:210px;object-fit:contain}figcaption{overflow-wrap:anywhere}code{overflow-wrap:anywhere}details{margin:1em 0}</style><main><h1>普通 Visium 四片的脂质转录、TME 与外围 niche</h1>
+<p><a href="figures.html">打开全部独立图件</a> · <a href="figures/overview/four_sections_function_high.pdf">四片 H05 功能对照图</a> · <a href="figures/overview/four_sections_function_MP10.pdf">四片 MP10 功能对照图</a></p>
+<p><strong>高 H05 映射区域的脂质转录特征有明显片间差异。T1 最能区分不同的脂质过程：原 MP10 对应胆固醇合成，新 H05 更对应胆固醇外排、脂肪酸代谢和稳态。</strong> 四片中，去 Top20 并调整上皮比例与深度后，MP10 与合成的 Pearson 相关依次为 0.066、0.095、0.080、0.384（B1、B17、BC01、T1）；新 H05 则为 0.004、0.051、−0.064、0.040。实测合成转录可优先用 MP10 定位，再用去重叠的合成模块确认区域。</p>
+<ul>
+<li><strong>B1。</strong> H05 与 Epi fraction 强负相关（r = −0.818）。H05 高 / MP10 低的 62 点中仅 11 点在原标注内侧，相反方向 89 点中有 88 点在内侧。合成分数在前一组更低。MP10 与完整合成集相关 0.504，去重叠后仅 0.067；这一片尤其容易把共享成员当成额外的功能证据。</li>
+<li><strong>B17。</strong> H05 与去重叠稳态和脂肪酸分数有清楚的区域共变，原始 r 分别达 0.620 和 0.433。H05 与 log 深度本身的 r 为 0.795；双端调整后，前两项降至 0.088 和 −0.047。H05 高 / MP10 低区域中位深度约 12,222 UMI，相反区域约 4,846。这里适合回看混合组织和深度如何共同定位功能区。去重叠合成有 63.1% 的 query 秩积分为零，尽管每点中位检出 6 个该集成员，需区分“有转录本”和“进入前 5% 排名”。</li>
+<li><strong>BC01。</strong> 新 H05 与去重叠合成、稳态、脂肪酸代谢的调整相关均为负（−0.064、−0.131、−0.084）；MP10 的对应关系均为正（0.080、0.144、0.176）。该片每个 query 中位只检出 2 个去重叠合成成员，55.3% 的 query 合成积分为零。保留 BC01 作为与 H05 高状态解读不一致、且功能读数较稀疏的对照。</li>
+<li><strong>T1。</strong> 新 H05 与去重叠外排、脂肪酸、稳态的调整 r 为 0.352、0.214、0.170，高分四分位的相应均值都高于低分四分位。MP10 对去重叠合成的调整 r 为 0.384，对外排却为 −0.211。这里的分歧有过程特异性；合成与外排不宜合并为一个总分。T1 每个 query 中位检出 14 个去重叠合成成员，仅 1.6% 的积分为零，对空间分布的辨别力也更高。</li>
+</ul>
+<p><strong>细胞组成关系取决于功能端和 TME 端。</strong> 调整后，A 与 B 的亚群相关谱在四片中的排序相关为 −0.406、−0.105、−0.406、−0.188。可计算全部四组合的亚群分别只有 10、17、24、21 个；原始 29 类全部保存，片内支持度缺乏变化的相关记 NA。四片的端点替换绝对变化中位数都以功能端稍大，BC01 差异较明显（0.138 比 0.073），其余三片两端影响更接近。具体关系应看四个组合，不能用总体排序代替。</p>
+<p>B17 的 Matrix_CAF 是功能端影响较清楚的例子。固定 H05 时，TME 映射和 c2l 的调整 r 都为正（0.225、0.166）；换成 MP10 后两者均略负（−0.044、−0.043）。T1 的 Plasma 同时受两端影响，A 为 −0.576，B 为 0.327，两种交叉组合落在 −0.107 和 0.050。T1 的 MP10–pDC 在 B 中为 0.345，但 pDC 映射支持度在该片 query 内无法估计对应相关。Treg 也缺乏一致的正向结果。B1 与 B17 的 Treg 映射相关不可估计，T1 的 A 为 −0.486，B 为 0.067。</p>
+<p><strong>后续优先保留实测功能—组成关系。</strong> 去重叠脂肪酸代谢与 Mast 在 T1 的调整 r 为 0.404（c2l）和 0.307（TME 映射），在 BC01 分别为 0.205 和 0.235。B17 两种估计均接近零，B1 的映射相关不可估计，因此这是一项可在 T1、BC01 定点复核的候选。T1 的 Plasma–脂肪酸相关在 c2l 为 0.507、在 TME 映射为 −0.218，适合作为方法分歧对照。低 TME 也能产生较高相对支持，例如 B1 的低 TME 四分位中 231/240 点由 Plasma 居首，最高类支持度中位为 0.825。</p>
+<p><strong>外围 niche 给出位置背景。</strong> T1 的 MP10 和去重叠合成均在原 N1 均值最高（677 个已分配中心，原外围 Epi 相对富集）。脂肪酸分数最高的是 N2，稳态最高的是 N3。新 H05 均值最高的 N8 仅有 21 个中心，解读受覆盖限制。B17 的稳态与脂肪酸分数均值最高在 N7，原画像中 SPP1 TAM 相对富集；该片合成分数与 SPP1 TAM 的同 spot、R1 和 R2 关系却均为负。两者描述的功能过程和空间尺度不同。首选 T1 做合成与外排的分区回看，配合 BC01 复核实测脂肪酸–Mast 关系，B17 用于深度/组成敏感性，B1 保留为空间定位的弱功能对照。</p>
+<p>预设秩相关敏感性支持 T1 的主要区分：MP10–去重叠合成的残差 Spearman 为 0.297，H05–去重叠外排为 0.369。去重叠脂肪酸–Mast 的残差 Spearman 在 T1 为 0.446（c2l）和 0.292（映射），在 BC01 为 0.180 和 0.230。各片其余正负结果均保留。</p>
+<p>以上证据限于四片混合 spot 的 RNA、参考映射和基于 RNA 的丰度估计。两种 TME 方法同向也仍是同一组织上的方法一致性。缺少独立的细胞定位、脂质含量或通量测量，无法据此判定 H05 细胞数量、细胞间相互作用或因果机制。</p>
+<h2>范围、参考与读数</h2>
+<p>绝对路径为 <code>/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_visium_dual_colocalization_pilot_v1</code>。方案 A 分别把固定的二类上皮参考与独立的 29 类 TME 参考映射到相同的全片 RNA。连续高状态支持度与每类 TME 支持度在冻结合格点上比较。方案 B 读取同一位置原实测混合 spot MP10 和 log1p(c2l posterior mean absolute abundance)。两个交叉组合每次只替换其中一端。所有相关以切片为单位，原始和残差 Pearson 为主，另存 Spearman 及残差 Spearman。</p>
+<table>
+<thead>
+<tr>
+<th>切片</th>
+<th>全片</th>
+<th>冻结 query</th>
+<th>niche 已分配 / 未分配</th>
+<th>上皮参考实际特征（Top20）</th>
+<th>TME 参考实际特征（Top20）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GSE171351_B1</td>
+<td>1017</td>
+<td>959</td>
+<td>853 / 106</td>
+<td>1118 (12)</td>
+<td>1237 (4)</td>
+</tr>
+<tr>
+<td>GSE238145_B17</td>
+<td>2399</td>
+<td>1494</td>
+<td>1284 / 210</td>
+<td>1027 (12)</td>
+<td>1157 (4)</td>
+</tr>
+<tr>
+<td>GSE319536_BC01</td>
+<td>5278</td>
+<td>1567</td>
+<td>1191 / 376</td>
+<td>1028 (12)</td>
+<td>1156 (4)</td>
+</tr>
+<tr>
+<td>GSE285715_T1</td>
+<td>4285</td>
+<td>4167</td>
+<td>3885 / 282</td>
+<td>999 (12)</td>
+<td>1142 (4)</td>
+</tr>
+</tbody>
+</table>
+<p>2,449 个上皮细胞逐 ID 继承旧 pilot，19,269 个 TME 细胞由相同未留出来源的细注释重新分层抽样。T/NK、Myeloid 等大类只在单独的大类表中汇总，各亚群原名见 annotation_mapping.tsv。旧节点表在 B17、BC01、T1 另有 49、3,209、8 个全片分析对象外的节点，四片对象内均无坐标或旧 query 连接丢失。</p>
+<h2>连续功能关系和两端区域</h2>
+<p>每个格子按“完整基因集原始 r / 去 Top20 原始 r / 去 Top20 调整 r”排列。调整为 Epi fraction 与 log1p(nCount) 的双端 OLS 残差。最后一列为去重叠合成分数在片内 high 与 low 区域的均值差。high/low 划分保留 Q75/Q25 边界并列，真实组大小列在同一行。</p>
+<table>
+<thead>
+<tr>
+<th>片</th>
+<th>读数</th>
+<th>胆固醇合成</th>
+<th>胆固醇稳态</th>
+<th>脂肪酸代谢</th>
+<th>胆固醇外排（补充）</th>
+<th>high / low n</th>
+<th>合成 Δ均值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B1</td>
+<td>H05 映射</td>
+<td>-0.139 / -0.106 / 0.004</td>
+<td>-0.091 / -0.052 / -0.095</td>
+<td>-0.207 / -0.213 / -0.095</td>
+<td>0.240 / 0.238 / -0.120</td>
+<td>240 / 386</td>
+<td>-0.009</td>
+</tr>
+<tr>
+<td>B1</td>
+<td>实测 MP10</td>
+<td>0.504 / 0.067 / 0.066</td>
+<td>0.354 / 0.039 / 0.036</td>
+<td>0.099 / 0.024 / 0.016</td>
+<td>0.088 / 0.082 / 0.092</td>
+<td>240 / 240</td>
+<td>0.007</td>
+</tr>
+<tr>
+<td>B17</td>
+<td>H05 映射</td>
+<td>-0.084 / -0.054 / 0.051</td>
+<td>0.653 / 0.620 / 0.088</td>
+<td>0.432 / 0.433 / -0.047</td>
+<td>0.195 / 0.201 / -0.020</td>
+<td>374 / 374</td>
+<td>-0.002</td>
+</tr>
+<tr>
+<td>B17</td>
+<td>实测 MP10</td>
+<td>0.152 / 0.065 / 0.095</td>
+<td>0.369 / 0.218 / 0.009</td>
+<td>0.212 / 0.173 / 0.006</td>
+<td>0.073 / 0.062 / -0.008</td>
+<td>374 / 374</td>
+<td>0.002</td>
+</tr>
+<tr>
+<td>BC01</td>
+<td>H05 映射</td>
+<td>-0.170 / -0.142 / -0.064</td>
+<td>-0.044 / -0.023 / -0.131</td>
+<td>-0.025 / -0.022 / -0.084</td>
+<td>-0.010 / -0.008 / -0.059</td>
+<td>392 / 392</td>
+<td>-0.007</td>
+</tr>
+<tr>
+<td>BC01</td>
+<td>实测 MP10</td>
+<td>0.368 / 0.114 / 0.080</td>
+<td>0.219 / 0.117 / 0.144</td>
+<td>0.186 / 0.158 / 0.176</td>
+<td>0.189 / 0.165 / 0.182</td>
+<td>393 / 679</td>
+<td>0.004</td>
+</tr>
+<tr>
+<td>T1</td>
+<td>H05 映射</td>
+<td>0.036 / 0.068 / 0.040</td>
+<td>0.199 / 0.266 / 0.170</td>
+<td>0.302 / 0.305 / 0.214</td>
+<td>0.387 / 0.387 / 0.352</td>
+<td>1042 / 1042</td>
+<td>0.005</td>
+</tr>
+<tr>
+<td>T1</td>
+<td>实测 MP10</td>
+<td>0.565 / 0.412 / 0.384</td>
+<td>0.482 / 0.221 / 0.188</td>
+<td>0.172 / 0.126 / 0.116</td>
+<td>-0.238 / -0.238 / -0.211</td>
+<td>1042 / 1645</td>
+<td>0.021</td>
+</tr>
+</tbody>
+</table>
+<p>合成、稳态、脂肪酸和补充外排的完整成员数分别为 27、74、158、82，去重叠后分别为 18、63、152、81。各片去重叠后的实际检出数分别为 17、59–60、135–141、51–62。四个过程均超过预设最低覆盖。空间 RNA 秩积分反映混合组织的转录特征，无法直接推断胆固醇含量、通量、细胞内在活动或细胞间代谢交换。</p>
+<h2>同 spot 的 TME 关系与方法替换</h2>
+<p>每片列出两方案调整后最正和最负的共同细亚群。顺序在全部 29 类中确定。每个关系以该片共同有效的 query 计算；完整原始/调整矩阵和四组合细表均保留。</p>
+<table>
+<thead>
+<tr>
+<th>片</th>
+<th>方案</th>
+<th>共同 n</th>
+<th>最正亚群</th>
+<th>原始 / 调整 r</th>
+<th>最负亚群</th>
+<th>原始 / 调整 r</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B1</td>
+<td>A</td>
+<td>959</td>
+<td>Pericyte</td>
+<td>0.444 / 0.185</td>
+<td>C1QC TAM</td>
+<td>-0.004 / -0.165</td>
+</tr>
+<tr>
+<td>B1</td>
+<td>B</td>
+<td>959</td>
+<td>Naive/Memory B</td>
+<td>0.061 / 0.060</td>
+<td>SMC</td>
+<td>-0.026 / -0.037</td>
+</tr>
+<tr>
+<td>B17</td>
+<td>A</td>
+<td>1494</td>
+<td>Matrix_CAF</td>
+<td>0.383 / 0.225</td>
+<td>Capillary EC</td>
+<td>-0.387 / -0.159</td>
+</tr>
+<tr>
+<td>B17</td>
+<td>B</td>
+<td>1494</td>
+<td>CD8 GZMK/Effector-memory-like</td>
+<td>0.265 / 0.101</td>
+<td>Matrix_CAF</td>
+<td>0.184 / -0.043</td>
+</tr>
+<tr>
+<td>BC01</td>
+<td>A</td>
+<td>1567</td>
+<td>iCAF</td>
+<td>0.409 / 0.278</td>
+<td>Naive/Memory B</td>
+<td>-0.459 / -0.316</td>
+</tr>
+<tr>
+<td>BC01</td>
+<td>B</td>
+<td>1567</td>
+<td>cDC1</td>
+<td>-0.036 / 0.054</td>
+<td>SMC</td>
+<td>-0.154 / -0.096</td>
+</tr>
+<tr>
+<td>T1</td>
+<td>A</td>
+<td>4167</td>
+<td>Mast</td>
+<td>0.654 / 0.646</td>
+<td>Naive/Memory B</td>
+<td>-0.615 / -0.629</td>
+</tr>
+<tr>
+<td>T1</td>
+<td>B</td>
+<td>4167</td>
+<td>pDC</td>
+<td>0.365 / 0.345</td>
+<td>Matrix_CAF</td>
+<td>-0.140 / -0.040</td>
+</tr>
+</tbody>
+</table>
+<p>对上述 B 最正亚群，换用不同丰度单位后的调整 Pearson 如下。不同分母会改变问题，各单位结果均完整保存。</p>
+<table>
+<thead>
+<tr>
+<th>片</th>
+<th>B 亚群</th>
+<th>log1p 均值</th>
+<th>原始均值</th>
+<th>全 spot 比例</th>
+<th>TME 内比例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B1</td>
+<td>Naive/Memory B</td>
+<td>0.060</td>
+<td>0.057</td>
+<td>0.056</td>
+<td>0.059</td>
+</tr>
+<tr>
+<td>B17</td>
+<td>CD8 GZMK/Effector-memory-like</td>
+<td>0.101</td>
+<td>0.102</td>
+<td>0.067</td>
+<td>0.077</td>
+</tr>
+<tr>
+<td>BC01</td>
+<td>cDC1</td>
+<td>0.054</td>
+<td>0.069</td>
+<td>0.025</td>
+<td>0.062</td>
+</tr>
+<tr>
+<td>T1</td>
+<td>pDC</td>
+<td>0.345</td>
+<td>0.338</td>
+<td>0.230</td>
+<td>0.222</td>
+</tr>
+</tbody>
+</table>
+<p>下表在调整 Pearson 上比较两端替换。绝对变化先在固定另一端的两种口径间平均，再在 29 类取中位数。类型谱 ρ 在亚群间计算，比较本片 A 和 B 对各类关系的排序。</p>
+<table>
+<thead>
+<tr>
+<th>片</th>
+<th>可比类型</th>
+<th>A/B 同号数</th>
+<th>A/B 类型谱 ρ</th>
+<th>替换功能端 &#124;Δr&#124;</th>
+<th>替换 TME 端 &#124;Δr&#124;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B1</td>
+<td>10</td>
+<td>4</td>
+<td>-0.406</td>
+<td>0.093</td>
+<td>0.088</td>
+</tr>
+<tr>
+<td>B17</td>
+<td>17</td>
+<td>3</td>
+<td>-0.105</td>
+<td>0.110</td>
+<td>0.094</td>
+</tr>
+<tr>
+<td>T1</td>
+<td>21</td>
+<td>10</td>
+<td>-0.188</td>
+<td>0.165</td>
+<td>0.146</td>
+</tr>
+<tr>
+<td>BC01</td>
+<td>24</td>
+<td>6</td>
+<td>-0.406</td>
+<td>0.138</td>
+<td>0.073</td>
+</tr>
+</tbody>
+</table>
+<h2>哪些细胞与实测功能共现</h2>
+<p>直接将去 Top20 后的实测功能分数与两种 TME 读数配对。下表列出每片、每个主要模块的调整后最正亚群，便于区分 H05 映射关系与实测功能关系。完整正负结果保存在 functional_TME.tsv.gz。</p>
+<table>
+<thead>
+<tr>
+<th>片</th>
+<th>实测功能</th>
+<th>TME 映射最正</th>
+<th>调整 r</th>
+<th>c2l 丰度最正</th>
+<th>调整 r</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B1</td>
+<td>胆固醇合成</td>
+<td>C1QC TAM</td>
+<td>0.065</td>
+<td>CD8 Exhausted</td>
+<td>0.099</td>
+</tr>
+<tr>
+<td>B1</td>
+<td>胆固醇稳态</td>
+<td>C1QC TAM</td>
+<td>0.135</td>
+<td>C1QC TAM</td>
+<td>0.132</td>
+</tr>
+<tr>
+<td>B1</td>
+<td>脂肪酸代谢</td>
+<td>SPP1 TAM</td>
+<td>0.058</td>
+<td>GC B</td>
+<td>0.259</td>
+</tr>
+<tr>
+<td>B17</td>
+<td>胆固醇合成</td>
+<td>SMC</td>
+<td>0.088</td>
+<td>SMC</td>
+<td>0.089</td>
+</tr>
+<tr>
+<td>B17</td>
+<td>胆固醇稳态</td>
+<td>SPP1 TAM</td>
+<td>0.114</td>
+<td>SPP1 TAM</td>
+<td>0.162</td>
+</tr>
+<tr>
+<td>B17</td>
+<td>脂肪酸代谢</td>
+<td>rCAF</td>
+<td>0.103</td>
+<td>SPP1 TAM</td>
+<td>0.120</td>
+</tr>
+<tr>
+<td>BC01</td>
+<td>胆固醇合成</td>
+<td>Treg</td>
+<td>0.095</td>
+<td>Plasma</td>
+<td>0.027</td>
+</tr>
+<tr>
+<td>BC01</td>
+<td>胆固醇稳态</td>
+<td>Mast</td>
+<td>0.239</td>
+<td>NK</td>
+<td>0.243</td>
+</tr>
+<tr>
+<td>BC01</td>
+<td>脂肪酸代谢</td>
+<td>Mast</td>
+<td>0.235</td>
+<td>Neutrophil</td>
+<td>0.217</td>
+</tr>
+<tr>
+<td>T1</td>
+<td>胆固醇合成</td>
+<td>Mast</td>
+<td>0.034</td>
+<td>Plasma</td>
+<td>0.173</td>
+</tr>
+<tr>
+<td>T1</td>
+<td>胆固醇稳态</td>
+<td>Mast</td>
+<td>0.231</td>
+<td>Naive/Memory B</td>
+<td>0.374</td>
+</tr>
+<tr>
+<td>T1</td>
+<td>脂肪酸代谢</td>
+<td>CD8 GZMK/Effector-memory-like</td>
+<td>0.310</td>
+<td>Plasma</td>
+<td>0.507</td>
+</tr>
+</tbody>
+</table>
+<h2>不一致区域与旧联合模型</h2>
+<p>表中位置和表达均来自本片相反分位尾部。Top20 UMI 和非 Top20 的 DHCR24 UMI 是原始计数中位数，功能值是去重叠合成分数中位数。所有 spot 和更多基因均可回查。</p>
+<table>
+<thead>
+<tr>
+<th>片</th>
+<th>不一致方向</th>
+<th>n / inside n</th>
+<th>中位 nCount</th>
+<th>Epi fraction</th>
+<th>Top20 UMI</th>
+<th>DHCR24 UMI</th>
+<th>合成分数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B1</td>
+<td>H05 high / MP10 low</td>
+<td>62 / 11</td>
+<td>7130.500</td>
+<td>0.334</td>
+<td>5.000</td>
+<td>0</td>
+<td>0.033</td>
+</tr>
+<tr>
+<td>B1</td>
+<td>H05 low / MP10 high</td>
+<td>89 / 88</td>
+<td>11778.000</td>
+<td>0.495</td>
+<td>18.000</td>
+<td>1</td>
+<td>0.046</td>
+</tr>
+<tr>
+<td>B17</td>
+<td>H05 high / MP10 low</td>
+<td>38 / 38</td>
+<td>12221.500</td>
+<td>0.409</td>
+<td>16.000</td>
+<td>1</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td>B17</td>
+<td>H05 low / MP10 high</td>
+<td>62 / 37</td>
+<td>4846.000</td>
+<td>0.339</td>
+<td>11.500</td>
+<td>0</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td>BC01</td>
+<td>H05 high / MP10 low</td>
+<td>204 / 198</td>
+<td>2797.500</td>
+<td>0.385</td>
+<td>2.000</td>
+<td>0</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td>BC01</td>
+<td>H05 low / MP10 high</td>
+<td>112 / 75</td>
+<td>1266.500</td>
+<td>0.518</td>
+<td>3.000</td>
+<td>0</td>
+<td>0.007</td>
+</tr>
+<tr>
+<td>T1</td>
+<td>H05 high / MP10 low</td>
+<td>505 / 397</td>
+<td>62585.000</td>
+<td>0.524</td>
+<td>72.000</td>
+<td>4</td>
+<td>0.047</td>
+</tr>
+<tr>
+<td>T1</td>
+<td>H05 low / MP10 high</td>
+<td>238 / 196</td>
+<td>41349.000</td>
+<td>0.542</td>
+<td>78.000</td>
+<td>6</td>
+<td>0.053</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>片</th>
+<th>新 vs 旧原始 / 旧条件 r</th>
+<th>新 vs MP10 原始 / 调整 r</th>
+<th>低 TME Q25</th>
+<th>低 TME 最常居首类</th>
+<th>最高类支持度中位数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B1</td>
+<td>-0.696 / -0.259</td>
+<td>-0.023 / -0.027</td>
+<td>11.129</td>
+<td>Plasma</td>
+<td>0.825</td>
+</tr>
+<tr>
+<td>B17</td>
+<td>0.543 / 0.245</td>
+<td>0.299 / 0.096</td>
+<td>10.485</td>
+<td>Matrix_CAF</td>
+<td>0.555</td>
+</tr>
+<tr>
+<td>BC01</td>
+<td>0.156 / 0.433</td>
+<td>-0.128 / -0.061</td>
+<td>4.747</td>
+<td>Naive/Memory B</td>
+<td>0.673</td>
+</tr>
+<tr>
+<td>T1</td>
+<td>-0.003 / -0.016</td>
+<td>-0.048 / -0.054</td>
+<td>4.668</td>
+<td>Mast</td>
+<td>0.577</td>
+</tr>
+</tbody>
+</table>
+<p>旧条件支持度分母为零的点沿用 NA，仅影响对应对照。旧联合模型使用大类竞争、LogNormalize 与强制纳入可测 Top20。新模型同时改变了上皮与 TME 参考、归一化、特征和 PC 数，差异不能全部归于分开参考。低 TME 位置也会有一个预测最高的亚群，这是 TME-only 竞争性评分的重要限制。</p>
+<h2>原外围 niche</h2>
+<p>以下比较仅使用原已分配 query。列出至少 20 个中心的原 niche 中，H05、MP10 和去重叠合成分数平均值最高的 niche；完整数据保留所有规模的 niche。该门槛仅用于挑选可读的报告示例。</p>
+<table>
+<thead>
+<tr>
+<th>片</th>
+<th>H05</th>
+<th>MP10</th>
+<th>合成</th>
+<th>稳态</th>
+<th>脂肪酸</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B1</td>
+<td>N3 (n=202, 0.100)</td>
+<td>N4 (n=140, 0.054)</td>
+<td>N5 (n=287, 0.047)</td>
+<td>N2 (n=185, 0.086)</td>
+<td>N2 (n=185, 0.068)</td>
+</tr>
+<tr>
+<td>B17</td>
+<td>N5 (n=328, 0.518)</td>
+<td>N5 (n=328, 0.053)</td>
+<td>N5 (n=328, 0.012)</td>
+<td>N7 (n=134, 0.104)</td>
+<td>N7 (n=134, 0.048)</td>
+</tr>
+<tr>
+<td>BC01</td>
+<td>N6 (n=110, 0.289)</td>
+<td>N1 (n=492, 0.021)</td>
+<td>N1 (n=492, 0.015)</td>
+<td>N7 (n=70, 0.056)</td>
+<td>N1 (n=492, 0.044)</td>
+</tr>
+<tr>
+<td>T1</td>
+<td>N8 (n=21, 0.118)</td>
+<td>N1 (n=677, 0.024)</td>
+<td>N1 (n=677, 0.061)</td>
+<td>N3 (n=994, 0.134)</td>
+<td>N2 (n=2055, 0.071)</td>
+</tr>
+</tbody>
+</table>
+<p>原冻结 R12 跨队列画像中，按相对全局平均的 log2 富集排序，每个 niche 在 R1 / R2 居首的类型如下。该表只解释原标签的组成定义。</p>
+<table>
+<thead>
+<tr>
+<th>原 niche</th>
+<th>R1 富集首位</th>
+<th>R2 富集首位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Epithelial</td>
+<td>Epithelial</td>
+</tr>
+<tr>
+<td>2</td>
+<td>GC B</td>
+<td>GC B</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Plasma</td>
+<td>Plasma</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Matrix_CAF</td>
+<td>Matrix_CAF</td>
+</tr>
+<tr>
+<td>5</td>
+<td>vCAF</td>
+<td>vCAF</td>
+</tr>
+<tr>
+<td>6</td>
+<td>SMC</td>
+<td>SMC</td>
+</tr>
+<tr>
+<td>7</td>
+<td>SPP1 TAM</td>
+<td>SPP1 TAM</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Neutrophil</td>
+<td>Neutrophil</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Capillary EC</td>
+<td>Capillary EC</td>
+</tr>
+</tbody>
+</table>
+<p>以 SPP1 TAM 作固定尺度示例，比较完全相同的分配中心上，去重叠胆固醇合成分数与中心、R1 和 R2 原 q05/all30 比例的残差相关。R1/R2 均排除中心；用于定义 niche 的梯度及细胞画像不构成独立验证。</p>
+<table>
+<thead>
+<tr>
+<th>片</th>
+<th>相同中心 n</th>
+<th>同 spot</th>
+<th>外围 R1</th>
+<th>外围 R2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B1</td>
+<td>853</td>
+<td>-0.000</td>
+<td>0.013</td>
+<td>0.008</td>
+</tr>
+<tr>
+<td>B17</td>
+<td>1284</td>
+<td>-0.090</td>
+<td>-0.109</td>
+<td>-0.129</td>
+</tr>
+<tr>
+<td>BC01</td>
+<td>1191</td>
+<td>0.009</td>
+<td>0.020</td>
+<td>0.023</td>
+</tr>
+<tr>
+<td>T1</td>
+<td>3885</td>
+<td>-0.032</td>
+<td>-0.049</td>
+<td>-0.042</td>
+</tr>
+</tbody>
+</table>
+<h2>复核入口</h2>
+<p>四片冻结 query 共 8,187 个，其中 7,213 个连接到原 niche，974 个未分配。共交付 288 张独立图（每片 71 张，加 4 张跨片效应图）。测得单阶段最大 RSS 为 7.52 GiB。部分 SCT 基因离散度拟合出现迭代上限提示。八组预测均成功写出，映射进程尾部另有脚本解析报错；已重新按完整原轴复读八组结果并核验数值，见 <a href="METHODS.md">运行说明</a> 和 <a href="logs/map_verify.log">映射复核日志</a>。</p>
+<p><a href="figures.html">独立图件浏览</a> · <a href="figure_index.tsv">机器可读图件索引</a> · <a href="tables/four_way.tsv">四组合共同样本表</a> · <a href="tables/functional_correlations.tsv">实测功能表</a> · <a href="README.md">参考及输入说明</a> · <a href="METHODS.md">详细方法</a></p></main></html>

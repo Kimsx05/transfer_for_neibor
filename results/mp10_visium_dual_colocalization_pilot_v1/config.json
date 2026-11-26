@@ -1,0 +1,37 @@
+{
+  "scope": [
+    "GSE171351_B1",
+    "GSE238145_B17",
+    "GSE319536_BC01",
+    "GSE285715_T1"
+  ],
+  "main": "within frozen query Pearson",
+  "adjust": [
+    "intercept",
+    "Epi posterior mean / all30 posterior means",
+    "log1p(nCount_RNA)"
+  ],
+  "abundance": "log1p of original posterior mean absolute; sum before log1p",
+  "sct": {
+    "version": "v2",
+    "ncells": 1000,
+    "variable_features": 1500,
+    "pcs": 30,
+    "k_weight": 50,
+    "k_anchor": 5,
+    "k_score": 30,
+    "n_trees": 50,
+    "seed": 20261126
+  },
+  "reference_seed": 20261125,
+  "groups": "query inclusive Q25/Q75; equal thresholds defer group comparison",
+  "low_TME": "within full or query, bottom quartile inclusive of TME29 absolute mean sum",
+  "functional": "project deterministic average-tie normalized AUCell top ceil(5% full count gene universe), no random ties; <5 assayed genes insufficient",
+  "display_TME": [
+    "Treg",
+    "SPP1 TAM",
+    "C1QC TAM",
+    "Matrix_CAF"
+  ],
+  "max_cpu": 4
+}

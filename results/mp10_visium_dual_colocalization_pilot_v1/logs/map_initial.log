@@ -1,0 +1,33 @@
+SCT Epi 48337 genes x 2449 observations 2026-11-26 15:14:37.286308
+`vst.flavor` is set to 'v2' but could not find glmGamPoi installed.
+Please install the glmGamPoi package for much faster estimation.
+--------------------------------------------
+install.packages('BiocManager')
+BiocManager::install('glmGamPoi')
+--------------------------------------------
+Falling back to native (slower) implementation.
+
+SCT TME 55330 genes x 19269 observations 2026-11-26 15:16:31.45969
+`vst.flavor` is set to 'v2' but could not find glmGamPoi installed.
+Please install the glmGamPoi package for much faster estimation.
+--------------------------------------------
+install.packages('BiocManager')
+BiocManager::install('glmGamPoi')
+--------------------------------------------
+Falling back to native (slower) implementation.
+
+There were 50 or more warnings (use warnings() to see the first 50)
+SCT GSE171351_B1 21834 genes x 1017 observations 2026-11-26 15:19:52.176728
+`vst.flavor` is set to 'v2' but could not find glmGamPoi installed.
+Please install the glmGamPoi package for much faster estimation.
+--------------------------------------------
+install.packages('BiocManager')
+BiocManager::install('glmGamPoi')
+--------------------------------------------
+Falling back to native (slower) implementation.
+
+Warning: No layers found matching search pattern provided
+Only one SCT model detected; no need to select.
+Error: identical(m$barcode, colnames(ref)) is not TRUE
+In addition: There were 50 or more warnings (use warnings() to see the first 50)
+Execution halted
