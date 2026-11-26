@@ -1,0 +1,3 @@
+项目在 /home/data/t070721/codex_workspace/Bladder Metabolism。使用 rg --files 及隐藏文件检索，核对本项目、相关结果目录与上级，没有发现适用的 AGENTS.md；v1 的 README、REPORT、METHODS、shared、reports 和 code 为本轮入口。HD 原始输入、历史计分、18,085 个原 feature ID、T16/T32 成员、图像坐标元数据均来自实际本地挂载。平台均采用 µm。Xenium 未取得可按 cell_id 验证的作者最终标签；大类和细类为项目参考转移及本轮复核结果。样本间患者关系见 v1 shared/samples.tsv，八行均无已核实患者 ID。
+
+初始审计检查预计 18,085 个唯一符号时失败。复核发现 18,085 个唯一 feature ID 对应 18,082 个唯一符号。注释使用合并符号缓存，HD MP10 按原 feature ID 重建，两类背景分别核验。原生 R 启动器和 CRAWDAD 安装步骤曾触及 cgroup 进程数限制。直接 R 可执行文件及项目内固定版本 CRAWDAD 源码恢复执行，保留失败日志。CRAWDAD 的 BiocParallel 在单 worker 内仍切换 RNG 到 L'Ecuyer-CMRG。全片代码采用该 RNG 配置，并逐片与原生窗口对照。CellCharter 初次在同一解释器重复设置 interop 线程数时退出，改为读取现有设置后完成后续切片。详见 audit/resources.tsv 与对应 logs。

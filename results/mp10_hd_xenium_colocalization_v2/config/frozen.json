@@ -1,0 +1,52 @@
+{
+  "version": "v2.0-provisional",
+  "human_review_status": "pending",
+  "hd": [
+    "Cervilla",
+    "D1_Johnson",
+    "UC_SCC"
+  ],
+  "xenium": [
+    "A1R2",
+    "A1R4",
+    "A1R5",
+    "A1R6",
+    "A2R2"
+  ],
+  "seed": 261126,
+  "seeds": [
+    261126,
+    261127,
+    261128
+  ],
+  "top20": [
+    "HMGCS1",
+    "MSMO1",
+    "INSIG1",
+    "FDFT1",
+    "SQLE",
+    "FDPS",
+    "IDI1",
+    "ACSS2",
+    "ELOVL5",
+    "LDLR",
+    "MVD",
+    "SCD",
+    "HMGCR",
+    "ACAT2",
+    "SLC20A1",
+    "ACSL3",
+    "ACSL1",
+    "ADIPOR2",
+    "MXD1",
+    "NPC1"
+  ],
+  "identity": "A1-A4 per request; XE top2 within-lineage including runner Treg; panT six measured genes. Reliable T = resolved non-NK T OR panT>=2 OR panT>=1 with T reference (HD nonNK T sum>=.20, XE T/NK major candidate excluding resolved NK); XE supported alternate major and abnormal segmentation excluded. HD supports independent component.",
+  "grade": "supported: reliable T and (FOXP3 and (one companion or reference) or >=2 companions and reference). possible: panT or resolved T and (FOXP3 or >=2 companions or reference and >=1 companion) with acceptable QC. unresolved: weak, conflicting or activation-only evidence; unsupported: reference only without raw core or T-lineage evidence/isolated FOXP3 without T evidence. Ref HD A4 or first Treg >=.20, XE first Treg score>=.50 or runner Treg>=.25. Keep quality/competition columns.",
+  "epi": "HD >=100 UMIs, >=50 features, >=1 epithelial marker, fitted epithelial weight>=0.5. 32um: library-size weighted Epi fraction of fitted children, fitted children contribute >=50% total UMI. XE v1 epi_eligible minus polygon flags and reliable T conflicts; same intersection across methods.",
+  "score": "HD full 18085 genes average ties K905 historical denominator sum(905-[1..20]); 3 independent binomial UMI thinnings p=.8. Weak high if median high Jaccard<.5 or <50% high with >=2 program genes. Strict linear Q95 on all eligible before geometry. XE UCell v1/H05_transfer.",
+  "spatial": "50/200um, full graph frozen before subsetting, no shared 8um, same component and raster line; disk area retained via same visibility to 8um pixel centers, coverage>=0.5. Distance observed up to 200um right-censored. Boundary cutoffs 1/2/5.",
+  "permutation": "4999 shared indices, component x 400um fixed tiles x sample median depth, 800um sensitivity; 999 block bootstrap at 400um. Depth/area standardized within depth/size strata. BH primary by platform, other tests by platform/family. Minimum 2 Treg for inference, sparse <5 fragile. No patient pooling.",
+  "niche": "Pilot Cervilla (smallest complete HD), A1R2 (intermediate-large complete Xenium); full slice, no target stratification. MENDER nonoverlapping rings 0–25/25–50/50–75um, proportions, K=4 or 6 selected by median pairwise ARI of three seeds; lower K on ties. BuildNicheAssay k=20, CellCharter layers=0,1,2, 12 log-normalized expression components, masked/unmasked. Fit by sample; compare compositions within platform.",
+  "resources": "single sequential scope locked, TasksMax=7, MemoryMax=165000000000, MemorySwapMax=0, CPU affinity one, all parallel libraries one; monitor cgroup tree"
+}

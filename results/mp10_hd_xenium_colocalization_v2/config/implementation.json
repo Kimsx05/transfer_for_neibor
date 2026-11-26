@@ -1,0 +1,69 @@
+{
+  "parent": "frozen.json",
+  "scope": "record of completed implementation",
+  "primary_permutations": 4999,
+  "block_bootstrap_replicates": 999,
+  "block_sizes_um": [
+    400,
+    800
+  ],
+  "squidpy_global_permutations": 1000,
+  "CRAWDAD": {
+    "commit": "986a2cebc2e96db56b7dddc42c42b7039a69ede9",
+    "version": "1.0.1",
+    "neighDist": 50,
+    "tile_sizes_um": [
+      100,
+      200,
+      400,
+      800
+    ],
+    "formal_perms_per_scale": 999,
+    "native_calibration_perms": 3,
+    "formal_engine": "fixed native sf buffers; native per-tile RNG and R sample.int cached by tile size; return all-permutation mean Z, finite-only diagnostic and empirical count null",
+    "rngkind": "L'Ecuyer-CMRG/Inversion/Rejection"
+  },
+  "spatstat": {
+    "main_replication": 4999,
+    "global_envelope": {
+      "nsim": 199,
+      "nrank": 10,
+      "r_um": [
+        25,
+        50,
+        100,
+        150,
+        200
+      ]
+    },
+    "inhomogeneous_K": {
+      "sigma_um": 200,
+      "correction": "border",
+      "min_Treg": 30,
+      "min_high": 20
+    }
+  },
+  "CellCharter": {
+    "max_epochs": 40,
+    "batch_size": 1024,
+    "K": 4,
+    "layers": [
+      0,
+      1,
+      2
+    ],
+    "training_units_max": 5000,
+    "n_features": 1000,
+    "representation_dimensions": 12,
+    "tests": [
+      "main",
+      "target-gene mask"
+    ]
+  },
+  "review": {
+    "eligibility": "first-batch 150",
+    "image_examples_actually_read": 16,
+    "grade_provenance": "rule-based numeric adjudication of complete recall union; image annotations only for explicitly recorded IDs",
+    "human_status": "pending"
+  }
+}

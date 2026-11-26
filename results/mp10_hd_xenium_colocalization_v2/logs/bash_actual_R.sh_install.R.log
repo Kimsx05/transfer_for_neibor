@@ -1,0 +1,11 @@
+* installing *source* package ‘crawdad’ ...
+** this is package ‘crawdad’ version ‘1.0.1’
+** using staged installation
+** R
+** preparing package for lazy loading
+Error: .onLoad failed in loadNamespace() for 'utils', details:
+  call: system(paste(which, shQuote(names[i])), intern = TRUE, ignore.stderr = TRUE)
+  error: cannot popen '/usr/bin/which 'uname' 2>/dev/null', probable reason 'Resource temporarily unavailable'
+Execution halted
+ERROR: lazy loading failed for package ‘crawdad’
+* removing ‘/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/Rlib/crawdad’

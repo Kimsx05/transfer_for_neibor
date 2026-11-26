@@ -1,0 +1,98 @@
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/spatial.py", line 110, in <module>
+    for s in sys.argv[1:] or HD+XE:spatial(s)
+                                   ^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/spatial.py", line 84, in spatial
+    grp=groups(ee,scale);P=shuffle_effect(np.ascontiguousarray(H),vals,grp,4999,CFG['seed'])
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/numba/core/dispatcher.py", line 422, in _compile_for_args
+    error_rewrite(e, 'typing')
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/numba/core/dispatcher.py", line 363, in error_rewrite
+    raise e.with_traceback(None)
+numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
+Use of unsupported NumPy function 'numpy.r_' or unsupported use of the function.
+
+File "code/spatial.py", line 13:
+def shuffle_effect(H,Y,groups,nperm,seed):
+ np.random.seed(seed);order=np.argsort(groups);offset=np.r_[0,np.cumsum(np.bincount(groups))];N,K=H.shape;M=Y.shape[1]
+ ^
+
+During: typing of get attribute at /home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/spatial.py (13)
+
+File "code/spatial.py", line 13:
+def shuffle_effect(H,Y,groups,nperm,seed):
+ np.random.seed(seed);order=np.argsort(groups);offset=np.r_[0,np.cumsum(np.bincount(groups))];N,K=H.shape;M=Y.shape[1]
+ ^
+
+During: Pass nopython_type_inference
+Cervilla 16 spatial effects complete
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/nanops.py:2043: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  return spearmanr(a, b)[0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/nanops.py:2043: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  return spearmanr(a, b)[0]
+Cervilla 32 spatial effects complete
+D1_Johnson 16 spatial effects complete
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/nanops.py:2043: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  return spearmanr(a, b)[0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/nanops.py:2043: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  return spearmanr(a, b)[0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/nanops.py:2043: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  return spearmanr(a, b)[0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/nanops.py:2043: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  return spearmanr(a, b)[0]
+D1_Johnson 32 spatial effects complete
+UC_SCC 16 spatial effects complete
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/nanops.py:2043: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  return spearmanr(a, b)[0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/nanops.py:2043: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  return spearmanr(a, b)[0]
+UC_SCC 32 spatial effects complete
+A1R2 cell spatial effects complete
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/spatial.py:85: RuntimeWarning: Mean of empty slice
+  assert np.allclose(P[0],np.array([[np.nanmean(vals[h],axis=0)-np.nanmean(vals[~h],axis=0) for h in H.T]])[0],equal_nan=True,atol=1e-8)
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/nanops.py:2043: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  return spearmanr(a, b)[0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/nanops.py:2043: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  return spearmanr(a, b)[0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/nanops.py:2043: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  return spearmanr(a, b)[0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/nanops.py:2043: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  return spearmanr(a, b)[0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/nanops.py:2043: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  return spearmanr(a, b)[0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/nanops.py:2043: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  return spearmanr(a, b)[0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/nanops.py:2043: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  return spearmanr(a, b)[0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/nanops.py:2043: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  return spearmanr(a, b)[0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/nanops.py:2043: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  return spearmanr(a, b)[0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/spatial.py:85: RuntimeWarning: Mean of empty slice
+  assert np.allclose(P[0],np.array([[np.nanmean(vals[h],axis=0)-np.nanmean(vals[~h],axis=0) for h in H.T]])[0],equal_nan=True,atol=1e-8)
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/nanops.py:2043: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  return spearmanr(a, b)[0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/nanops.py:2043: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  return spearmanr(a, b)[0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/nanops.py:2043: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  return spearmanr(a, b)[0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/nanops.py:2043: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  return spearmanr(a, b)[0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/nanops.py:2043: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  return spearmanr(a, b)[0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/nanops.py:2043: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  return spearmanr(a, b)[0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/nanops.py:2043: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  return spearmanr(a, b)[0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/nanops.py:2043: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  return spearmanr(a, b)[0]
+/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/nanops.py:2043: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  return spearmanr(a, b)[0]
+A1R4 cell spatial effects complete
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/spatial.py:85: RuntimeWarning: Mean of empty slice
+  assert np.allclose(P[0],np.array([[np.nanmean(vals[h],axis=0)-np.nanmean(vals[~h],axis=0) for h in H.T]])[0],equal_nan=True,atol=1e-8)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/spatial.py:85: RuntimeWarning: Mean of empty slice
+  assert np.allclose(P[0],np.array([[np.nanmean(vals[h],axis=0)-np.nanmean(vals[~h],axis=0) for h in H.T]])[0],equal_nan=True,atol=1e-8)
+A1R5 cell spatial effects complete
+A1R6 cell spatial effects complete
+A2R2 cell spatial effects complete

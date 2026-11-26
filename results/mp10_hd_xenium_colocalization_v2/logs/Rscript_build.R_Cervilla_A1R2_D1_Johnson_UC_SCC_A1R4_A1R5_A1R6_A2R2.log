@@ -1,0 +1,8 @@
+Error: .onLoad failed in loadNamespace() for 'utils', details:
+  call: system(paste(which, shQuote(names[i])), intern = TRUE, ignore.stderr = TRUE)
+  error: cannot popen '/usr/bin/which 'uname' 2>/dev/null', probable reason 'Resource temporarily unavailable'
+Execution halted
+
+ *** caught segfault ***
+address 0x7a97b1320990, cause 'memory not mapped'
+An irrecoverable exception occurred. R is aborting now ...

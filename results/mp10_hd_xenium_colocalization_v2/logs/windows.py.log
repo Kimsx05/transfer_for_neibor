@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/windows.py", line 62, in <module>
+    for s in sys.argv[1:] or HD+XE:run(s)
+                                   ^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/windows.py", line 27, in run
+    a=raw(x,gs,gids,CORE+PAN+['NKG7','GNLY','CD8A']);a['pan-T']=a[PAN].sum(axis=1,min_count=1);a['competition']=a[['NKG7','GNLY','CD8A']].sum(axis=1,min_count=1);a['UMI']=x.sum(1).A1;vals=a[keys].values
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/common.py", line 25, in raw
+    cols=pd.Index(g).get_indexer(keys);ok=cols>=0
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/highres_VisiumHD/analysis/hd_epi_niche_dual_methods_v1/.venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3903, in get_indexer
+    raise InvalidIndexError(self._requires_unique_msg)
+pandas.errors.InvalidIndexError: Reindexing only valid with uniquely valued Index objects
+Cervilla 912 30
+D1_Johnson 6778 30
+UC_SCC 6272 30
+A1R2 442 12
+A1R4 181 12
+A1R5 686 12
+A1R6 184 12
+A2R2 91 12

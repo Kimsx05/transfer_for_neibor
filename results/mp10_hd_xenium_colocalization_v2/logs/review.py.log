@@ -1,0 +1,68 @@
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/review.py:7: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  a=raw(x,g,ids,genes);pan=(a[PAN]>0).sum(1);comp=(a[CORE[1:]]>0).sum(1);fox=a.FOXP3.gt(0)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/review.py:7: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  a=raw(x,g,ids,genes);pan=(a[PAN]>0).sum(1);comp=(a[CORE[1:]]>0).sum(1);fox=a.FOXP3.gt(0)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/review.py:12: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  w=pd.read_parquet(v/'weights.parquet').reindex(ids);t=w[TAX.index[TAX.major.eq('T/NK')]].sum(1,min_count=1);tw=w.Treg
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/review.py:13: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  rank=w.gt(tw,axis=0).sum(1).add(1).where(tw.notna());e['treg_rank']=rank;e['treg_weight']=tw;e['tnk_weight']=t;e['treg_within_tnk']=tw/t.where(t>0)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/review.py:33: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  fails={'unfitted_or_no_fine_transfer':z.candidate.isna(),'parent_not_TNK':z.major.ne('T/NK'),'mixed':z.major.eq('Mixed'),'Treg_not_top1':~hit1,'major_margin':(z.major_support-z.major_runner<.12),'major_below_0.50':z.major_support.lt(.5),'no_measured_parent_marker':(a[MAJ['T/NK']]>0).sum(1).eq(0),'subtype_weight_or_score':z.support.lt(.4 if hd else .5),'subtype_margin':(z.support-z.runner)<(.12 if hd else .15),'missing_anchor':~(fox|(a.IL2RA>0)),'old_combination':~(fox|(comp>=2))}
+Cervilla {'unresolved': 593, 'unsupported': 182, 'possible': 76, 'supported': 55} 30
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/review.py:7: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  a=raw(x,g,ids,genes);pan=(a[PAN]>0).sum(1);comp=(a[CORE[1:]]>0).sum(1);fox=a.FOXP3.gt(0)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/review.py:7: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  a=raw(x,g,ids,genes);pan=(a[PAN]>0).sum(1);comp=(a[CORE[1:]]>0).sum(1);fox=a.FOXP3.gt(0)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/review.py:12: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  w=pd.read_parquet(v/'weights.parquet').reindex(ids);t=w[TAX.index[TAX.major.eq('T/NK')]].sum(1,min_count=1);tw=w.Treg
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/review.py:13: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  rank=w.gt(tw,axis=0).sum(1).add(1).where(tw.notna());e['treg_rank']=rank;e['treg_weight']=tw;e['tnk_weight']=t;e['treg_within_tnk']=tw/t.where(t>0)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/review.py:33: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  fails={'unfitted_or_no_fine_transfer':z.candidate.isna(),'parent_not_TNK':z.major.ne('T/NK'),'mixed':z.major.eq('Mixed'),'Treg_not_top1':~hit1,'major_margin':(z.major_support-z.major_runner<.12),'major_below_0.50':z.major_support.lt(.5),'no_measured_parent_marker':(a[MAJ['T/NK']]>0).sum(1).eq(0),'subtype_weight_or_score':z.support.lt(.4 if hd else .5),'subtype_margin':(z.support-z.runner)<(.12 if hd else .15),'missing_anchor':~(fox|(a.IL2RA>0)),'old_combination':~(fox|(comp>=2))}
+D1_Johnson {'unresolved': 3820, 'possible': 1430, 'supported': 782, 'unsupported': 740} 30
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/review.py:7: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  a=raw(x,g,ids,genes);pan=(a[PAN]>0).sum(1);comp=(a[CORE[1:]]>0).sum(1);fox=a.FOXP3.gt(0)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/review.py:7: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  a=raw(x,g,ids,genes);pan=(a[PAN]>0).sum(1);comp=(a[CORE[1:]]>0).sum(1);fox=a.FOXP3.gt(0)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/review.py:12: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  w=pd.read_parquet(v/'weights.parquet').reindex(ids);t=w[TAX.index[TAX.major.eq('T/NK')]].sum(1,min_count=1);tw=w.Treg
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/review.py:13: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  rank=w.gt(tw,axis=0).sum(1).add(1).where(tw.notna());e['treg_rank']=rank;e['treg_weight']=tw;e['tnk_weight']=t;e['treg_within_tnk']=tw/t.where(t>0)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/review.py:33: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  fails={'unfitted_or_no_fine_transfer':z.candidate.isna(),'parent_not_TNK':z.major.ne('T/NK'),'mixed':z.major.eq('Mixed'),'Treg_not_top1':~hit1,'major_margin':(z.major_support-z.major_runner<.12),'major_below_0.50':z.major_support.lt(.5),'no_measured_parent_marker':(a[MAJ['T/NK']]>0).sum(1).eq(0),'subtype_weight_or_score':z.support.lt(.4 if hd else .5),'subtype_margin':(z.support-z.runner)<(.12 if hd else .15),'missing_anchor':~(fox|(a.IL2RA>0)),'old_combination':~(fox|(comp>=2))}
+UC_SCC {'unresolved': 4747, 'unsupported': 930, 'possible': 395, 'supported': 194} 30
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/review.py:7: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  a=raw(x,g,ids,genes);pan=(a[PAN]>0).sum(1);comp=(a[CORE[1:]]>0).sum(1);fox=a.FOXP3.gt(0)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/review.py:7: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  a=raw(x,g,ids,genes);pan=(a[PAN]>0).sum(1);comp=(a[CORE[1:]]>0).sum(1);fox=a.FOXP3.gt(0)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/review.py:33: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  fails={'unfitted_or_no_fine_transfer':z.candidate.isna(),'parent_not_TNK':z.major.ne('T/NK'),'mixed':z.major.eq('Mixed'),'Treg_not_top1':~hit1,'major_margin':(z.major_support-z.major_runner<.12),'major_below_0.50':z.major_support.lt(.5),'no_measured_parent_marker':(a[MAJ['T/NK']]>0).sum(1).eq(0),'subtype_weight_or_score':z.support.lt(.4 if hd else .5),'subtype_margin':(z.support-z.runner)<(.12 if hd else .15),'missing_anchor':~(fox|(a.IL2RA>0)),'old_combination':~(fox|(comp>=2))}
+A1R2 {'unsupported': 192, 'unresolved': 163, 'supported': 47, 'possible': 38} 12
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/review.py:7: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  a=raw(x,g,ids,genes);pan=(a[PAN]>0).sum(1);comp=(a[CORE[1:]]>0).sum(1);fox=a.FOXP3.gt(0)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/review.py:7: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  a=raw(x,g,ids,genes);pan=(a[PAN]>0).sum(1);comp=(a[CORE[1:]]>0).sum(1);fox=a.FOXP3.gt(0)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/review.py:33: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  fails={'unfitted_or_no_fine_transfer':z.candidate.isna(),'parent_not_TNK':z.major.ne('T/NK'),'mixed':z.major.eq('Mixed'),'Treg_not_top1':~hit1,'major_margin':(z.major_support-z.major_runner<.12),'major_below_0.50':z.major_support.lt(.5),'no_measured_parent_marker':(a[MAJ['T/NK']]>0).sum(1).eq(0),'subtype_weight_or_score':z.support.lt(.4 if hd else .5),'subtype_margin':(z.support-z.runner)<(.12 if hd else .15),'missing_anchor':~(fox|(a.IL2RA>0)),'old_combination':~(fox|(comp>=2))}
+A1R4 {'unsupported': 136, 'unresolved': 35, 'supported': 4, 'possible': 4} 12
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/review.py:7: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  a=raw(x,g,ids,genes);pan=(a[PAN]>0).sum(1);comp=(a[CORE[1:]]>0).sum(1);fox=a.FOXP3.gt(0)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/review.py:7: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  a=raw(x,g,ids,genes);pan=(a[PAN]>0).sum(1);comp=(a[CORE[1:]]>0).sum(1);fox=a.FOXP3.gt(0)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/review.py:33: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  fails={'unfitted_or_no_fine_transfer':z.candidate.isna(),'parent_not_TNK':z.major.ne('T/NK'),'mixed':z.major.eq('Mixed'),'Treg_not_top1':~hit1,'major_margin':(z.major_support-z.major_runner<.12),'major_below_0.50':z.major_support.lt(.5),'no_measured_parent_marker':(a[MAJ['T/NK']]>0).sum(1).eq(0),'subtype_weight_or_score':z.support.lt(.4 if hd else .5),'subtype_margin':(z.support-z.runner)<(.12 if hd else .15),'missing_anchor':~(fox|(a.IL2RA>0)),'old_combination':~(fox|(comp>=2))}
+A1R5 {'unsupported': 268, 'supported': 207, 'unresolved': 136, 'possible': 73} 12
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/review.py:7: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  a=raw(x,g,ids,genes);pan=(a[PAN]>0).sum(1);comp=(a[CORE[1:]]>0).sum(1);fox=a.FOXP3.gt(0)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/review.py:7: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  a=raw(x,g,ids,genes);pan=(a[PAN]>0).sum(1);comp=(a[CORE[1:]]>0).sum(1);fox=a.FOXP3.gt(0)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/review.py:33: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  fails={'unfitted_or_no_fine_transfer':z.candidate.isna(),'parent_not_TNK':z.major.ne('T/NK'),'mixed':z.major.eq('Mixed'),'Treg_not_top1':~hit1,'major_margin':(z.major_support-z.major_runner<.12),'major_below_0.50':z.major_support.lt(.5),'no_measured_parent_marker':(a[MAJ['T/NK']]>0).sum(1).eq(0),'subtype_weight_or_score':z.support.lt(.4 if hd else .5),'subtype_margin':(z.support-z.runner)<(.12 if hd else .15),'missing_anchor':~(fox|(a.IL2RA>0)),'old_combination':~(fox|(comp>=2))}
+A1R6 {'unsupported': 146, 'unresolved': 26, 'possible': 5, 'supported': 5} 12
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/review.py:7: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  a=raw(x,g,ids,genes);pan=(a[PAN]>0).sum(1);comp=(a[CORE[1:]]>0).sum(1);fox=a.FOXP3.gt(0)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/review.py:7: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  a=raw(x,g,ids,genes);pan=(a[PAN]>0).sum(1);comp=(a[CORE[1:]]>0).sum(1);fox=a.FOXP3.gt(0)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_hd_xenium_colocalization_v2/code/review.py:33: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  fails={'unfitted_or_no_fine_transfer':z.candidate.isna(),'parent_not_TNK':z.major.ne('T/NK'),'mixed':z.major.eq('Mixed'),'Treg_not_top1':~hit1,'major_margin':(z.major_support-z.major_runner<.12),'major_below_0.50':z.major_support.lt(.5),'no_measured_parent_marker':(a[MAJ['T/NK']]>0).sum(1).eq(0),'subtype_weight_or_score':z.support.lt(.4 if hd else .5),'subtype_margin':(z.support-z.runner)<(.12 if hd else .15),'missing_anchor':~(fox|(a.IL2RA>0)),'old_combination':~(fox|(comp>=2))}
+A2R2 {'unsupported': 42, 'unresolved': 20, 'possible': 14, 'supported': 13} 12
