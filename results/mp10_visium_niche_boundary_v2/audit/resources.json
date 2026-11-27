@@ -1,0 +1,22 @@
+{
+  "max_recorded_stage_RSS_KiB": 1303152,
+  "sum_of_stage_RSS_maxima_KiB_conservative_upper_bound": 7122736,
+  "cpu_affinity": [
+    0
+  ],
+  "native_threadpools": [
+    [
+      "openblas",
+      1
+    ],
+    [
+      "openblas",
+      1
+    ]
+  ],
+  "lib_versions_file": "software.tsv",
+  "per_process_address_space_limit_KiB": 185000000,
+  "available_memory_at_verification_KiB": 1174038728,
+  "physical_ram_KiB": 1968791992,
+  "resource_scope": "One pinned compute core and one BLAS/OMP thread per invocation, sequential section processing. Per-stage maxima from GNU time; concurrent RSS was not continuously sampled. Conservative bound adds all recorded stage maxima. Excludes caller shell, desktop and unrelated users."
+}

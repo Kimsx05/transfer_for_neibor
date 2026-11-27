@@ -1,0 +1,8 @@
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/mp10_visium_niche_boundary_v2/scripts/discover.py:70: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  save(t.isna().reset_index(),'classification/missingness.tsv.gz')
+ K        BIC  silhouette  min_size  init_ARI  bootstrap_ARI  bootstrap_q10  kmeans_ARI  mean_probability  source_AMI  eta2_observed_area  eta2_UMI_median  eta2_nGene_median  BIC_improvement_over_K1
+ 1 808.346687         NaN        60  1.000000       1.000000       1.000000    1.000000          1.000000    0.000000            0.000000         0.000000           0.000000                 0.000000
+ 2 824.584662    0.248765        14  0.214032       0.159492      -0.047038   -0.009014          0.963344    0.067686            0.060743         0.086486           0.166351               -16.237976
+ 3 839.754646    0.274968         8  0.381574       0.386351       0.118325    0.237613          0.942331    0.051581            0.047961         0.093162           0.146920               -31.407960
+ 4 846.044766    0.215043         7  0.525137       0.397595       0.223105    0.443790          0.932919    0.125306            0.097994         0.215215           0.283778               -37.698079
+ 5 860.446486    0.221390         7  0.564359       0.438898       0.261971    0.365041          0.955156    0.165367            0.125243         0.234905           0.300451               -52.099799

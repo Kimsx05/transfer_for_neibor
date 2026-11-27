@@ -1,0 +1,45 @@
+{
+  "features": [
+    "whole_T_density",
+    "penetration_T_200",
+    "CLQ_E_T_R1",
+    "Moran_T_R1",
+    "window500_E_T_fraction_IQR",
+    "Lee_E_T_R1",
+    "mixed_E_share",
+    "whole_I_fraction"
+  ],
+  "mean": [
+    5.569563423398,
+    0.4798762780006873,
+    0.6042030086828667,
+    0.7045456260038502,
+    0.037680019408285276,
+    -0.4389230164434133,
+    0.2210657736067167,
+    0.3891795214633333
+  ],
+  "sd": [
+    0.4333119786574377,
+    1.180438013715629,
+    0.08435244862196624,
+    0.13974206585275548,
+    0.0290689321176619,
+    0.26993217685024723,
+    0.30680124170468265,
+    0.14048803724204464
+  ],
+  "log1p": [
+    "whole_T_density",
+    "CLQ_E_T_R1",
+    "window500_E_T_fraction_IQR"
+  ],
+  "n_PCs": 4,
+  "K": 1,
+  "seed": 20261127,
+  "covariance": "diagonal",
+  "reg_covar": 0.05,
+  "n_complete": 60,
+  "selection": "minimum BIC in single fixed PC space",
+  "no_outlier_deletion": true
+}

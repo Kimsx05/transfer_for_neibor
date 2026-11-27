@@ -1,0 +1,79 @@
+{
+  "config_sha256": "1e9bf4faad1ae3677adf2aa89f03a7c96fe471b00c87803f4e69ec695c310396",
+  "config": {
+    "version": "v2_provisional_1",
+    "seed": 20261127,
+    "natural_model": "classification/natural_model.json",
+    "phenotype_source": "all_E; c2l posterior mean; all windows independent of MP10",
+    "rationale": "Median of section-specific window quartiles in 60 tumors: Q25 E T density 152.96, R1 T fraction .07889, within-E T fraction .07426. Median E T density 250.09, median R1 .09926. Round thresholds for reproducibility. Entry floor 2/3 peripheral density is a physical working contrast. Under-supported peripheral estimates are unavailable; require stronger interior evidence to assign infiltrated-like without them.",
+    "min_E_500": 5,
+    "min_outer_500": 4,
+    "min_E_1000": 20,
+    "min_outer_1000": 16,
+    "T_floor": 150,
+    "T_strong": 250,
+    "neighbor_floor": 0.08,
+    "neighbor_strong": 0.1,
+    "E_T_fraction_floor": 0.075,
+    "entry_floor": -0.5849625007,
+    "epsilon_cells_mm2": 1,
+    "mixed_area_share": 0.2,
+    "dominant_area_share": 0.5,
+    "minimum_state_windows_500": 3,
+    "minimum_state_windows_1000": 2,
+    "min_E_area_coverage": 0.45,
+    "loose_share": 0.15,
+    "strict_share": 0.25,
+    "principal_windows_um": 500,
+    "stability_loosetight": "mixed share only; retain dominance and all other thresholds",
+    "spatial_support": "state windows must touch another same-state window across an observed E-E R1 edge in same tissue block; >=2 adjacent windows even under mono-state interpretation"
+  },
+  "immune_table_hash": "b5b1c2a5356d38ab138ca4fed02ee7bf1304394c4d0731e08b202aef0eba975d",
+  "window_table_hash": "3041591ff533f1d463462c4e966d8852b2348caee73029184a42fd02c39d8892",
+  "class_sha256": "496ccc0b30fb17caa828b0cb1d1d12cc82648a4dd693f94f5d7366f86dba6f6d",
+  "natural_model": {
+    "features": [
+      "whole_T_density",
+      "penetration_T_200",
+      "CLQ_E_T_R1",
+      "Moran_T_R1",
+      "window500_E_T_fraction_IQR",
+      "Lee_E_T_R1",
+      "mixed_E_share",
+      "whole_I_fraction"
+    ],
+    "mean": [
+      5.569563423398,
+      0.4798762780006873,
+      0.6042030086828667,
+      0.7045456260038502,
+      0.037680019408285276,
+      -0.4389230164434133,
+      0.2210657736067167,
+      0.3891795214633333
+    ],
+    "sd": [
+      0.4333119786574377,
+      1.180438013715629,
+      0.08435244862196624,
+      0.13974206585275548,
+      0.0290689321176619,
+      0.26993217685024723,
+      0.30680124170468265,
+      0.14048803724204464
+    ],
+    "log1p": [
+      "whole_T_density",
+      "CLQ_E_T_R1",
+      "window500_E_T_fraction_IQR"
+    ],
+    "n_PCs": 4,
+    "K": 1,
+    "seed": 20261127,
+    "covariance": "diagonal",
+    "reg_covar": 0.05,
+    "n_complete": 60,
+    "selection": "minimum BIC in single fixed PC space",
+    "no_outlier_deletion": true
+  }
+}

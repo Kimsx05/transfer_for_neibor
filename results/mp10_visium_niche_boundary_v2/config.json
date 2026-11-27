@@ -1,0 +1,68 @@
+{
+  "release": "mp10_visium_niche_boundary_v2",
+  "seed": 20261127,
+  "input": "frozen v1 ordinary Visium section manifest",
+  "masks": {
+    "all_E": [
+      "ENN",
+      "ENS",
+      "EIN",
+      "EIS"
+    ],
+    "E_without_I_enriched": [
+      "ENN",
+      "ENS"
+    ]
+  },
+  "domain": "all_E & center_qc & UMI>0 & nGene>=150 & finite(EpiMP10_Top20_AUCell)",
+  "thresholds": "provisional_classification.json",
+  "score_algorithm": "frozen rank on all same-section genes, including zeros; mean tie rank; K=ceil(0.05*genes)",
+  "P95": "linear sample quantile .95 on D_MP10 per section, >= threshold, ties included; same single column for both boundaries",
+  "geometry": "same block, same side connected component, observed finite hex segments only; strict if observed contact strictly closer than missing contact; border_spot_distance supplementary",
+  "bandwidth_um": [
+    100,
+    200,
+    300
+  ],
+  "primary_width_um": 200,
+  "min_points_each_band": 20,
+  "component_weights": "min(nB1,nB2); at least 3 each per component and combined >=20 per band",
+  "exposure": "tumor-source sections' D_MP10 median, equal-weight section mean per mapped unit, dataset median; explicit ties",
+  "local_window_um": [
+    500,
+    1000
+  ],
+  "unit_area_mm2": 0.008660254037844387,
+  "neighborhoods": [
+    "same",
+    "R1",
+    "R1+R2"
+  ],
+  "pca_complete_cases": true,
+  "pca_variance": 0.8,
+  "pca_max_pcs": 5,
+  "regularized_gmm": {
+    "K": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "covariance": "diag",
+    "reg_covar": 0.05,
+    "starts": 20,
+    "seed_stability": 10,
+    "unit_resamples": 80
+  },
+  "curve_bin_um": 100,
+  "min_bin_spots": 5,
+  "primary_family": "two boundaries x three direct architecture contrasts on native continuous D; planned BH family=6",
+  "resources": {
+    "user_threads": 10,
+    "user_memory_GB": 200,
+    "scientific_process_cpu_affinity": 1,
+    "nested_threads": 1,
+    "per_process_virtual_memory_limit_KiB": 185000000
+  }
+}
