@@ -1,0 +1,152 @@
+96e481451695a7380c2b84f26ac60149210dcc7b
+xenium/.ipynb_checkpoints/4b_xenium5k_niche-checkpoint.ipynb
+# Fits CellCharter to data with given number of niches
+import celltypist
+from celltypist import models
+import cellcharter as cc
+adata = sc.read_h5ad("h5ad/xenium5k_scVI.h5ad")
+# Cell types that are reannotated but not covered. Leftover cells from CellTypist predictions that haven't been updated with new, higher confidence labels.
+# Investigate markers of CellTypist labels
+cc.gr.remove_long_links(adata)
+cc.gr.aggregate_neighbors(adata, n_layers=3, use_rep='X_scVI')
+# models = cc.tl.ClusterAutoK(n_clusters=(4,16), model_class=cc.tl.GaussianMixture, model_params=model_params, max_runs=5)
+# models.fit(adata, use_rep='X_cellcharter')
+# ax.figure.savefig("figures_niches/CellCharter_stability.pdf", bbox_inches='tight')
+gmm = cc.tl.Cluster(
+gmm.fit(adata, use_rep='X_cellcharter')
+adata.obs['spatial_cluster15'] = gmm.predict(adata, use_rep='X_cellcharter')
+save="figures_niches/CellCharter_niches15.pdf", dpi=300
+cc.gr.enrichment(adata, group_key='spatial_cluster15', label_key='annot')
+save="figures_niches/CellCharter_niches15_enrichment_dotplot.pdf")
+#     save="figures_niches/CellCharter_niches11.pdf", dpi=300
+gmm = cc.tl.Cluster(
+gmm.fit(adata, use_rep='X_cellcharter')
+adata.obs['spatial_cluster17'] = gmm.predict(adata, use_rep='X_cellcharter')
+save="figures_niches/CellCharter_niches17.pdf", dpi=450
+cc.gr.enrichment(adata, group_key='spatial_cluster17', label_key='annot')
+save="figures_niches/CellCharter_niches17_enrichment_dotplot.pdf")
+gmm = cc.tl.Cluster(
+gmm.fit(adata, use_rep='X_cellcharter')
+adata.obs['spatial_cluster18'] = gmm.predict(adata, use_rep='X_cellcharter')
+save="figures_niches/CellCharter_niches18.pdf", dpi=450
+cc.gr.enrichment(adata, group_key='spatial_cluster18', label_key='annot')
+save="figures_niches/CellCharter_niches18_enrichment_dotplot.pdf")
+plt.savefig("figures_niches/barplot_xenium5k_CellCharter_niches18.pdf", bbox_inches ="tight")
+adata.write_h5ad("h5ad/scvi/xenium5k_scVI_CellCharter.h5ad")
+xenium/2_xenium5k_joint.ipynb
+import celltypist
+from celltypist import models
+scvi.model.SCVI.setup_anndata(adata, layer="counts", batch_key="sample")
+model = scvi.model.SCVI(adata, n_layers=2, n_latent=30, gene_likelihood="nb")
+sc.tl.leiden(adata)  # runtime: 45m
+plt.savefig("figures/barplot_xenium5k_celltypist_level1.pdf", bbox_inches ="tight")
+plt.savefig("figures/barplot_xenium5k_celltypist_level3.pdf", bbox_inches ="tight")
+# Investigate markers of CellTypist labels
+# Investigate markers of CellTypist labels
+# Create new clean annotation by excluding CellTypist cells that are not mesenchymal
+adata.write_h5ad("h5ad/xenium5k_scVI.h5ad")
+#    save="spatial_MF2_megagut_celltypist.pdf"
+# model_fibro = models.Model.load("../fibroblast_reanalysis_celltypist/celltypist/friedrich_fibroblasts_allGenes.pkl")
+# # Run celltypist on data
+# predictions = celltypist.annotate(
+#            #save="_megagut_fibro_celltypist_probs"
+#            #save="_megagut_fibro_celltypist_probs"
+# # Load celltypist models of fibroblasts from Friedrich (our) study
+# model_fibro = models.Model.load("../fibroblast_reanalysis_celltypist/celltypist/friedrich_fibroblasts.pkl")
+# # Run celltypist on mesenchymal data
+# predictions = celltypist.annotate(
+# Add celltypist results to AnnData object
+xenium/3a1_xenium5k_annotation.ipynb
+import celltypist
+from celltypist import models
+xenium/3a_xenium5k_annotation.ipynb
+import celltypist
+from celltypist import models
+adata = sc.read_h5ad("h5ad/xenium5k_scVI.h5ad")
+# Exclude cells that are not consistent with mesenchymal compartment according to level 3 CellTypist predictions
+sc.tl.leiden(adata_mesen, resolution=1.0, key_added='leiden1')
+sc.tl.leiden(adata_mesen, resolution=2.0, key_added='leiden2')
+sc.tl.leiden(adata_mesen, resolution=4.0, key_added='leiden4')
+#sc.tl.leiden(adata_mesen, resolution=10.0, key_added='leiden10')
+sc.tl.leiden(adata_mesen, resolution=5.0, key_added='leiden5')
+save="_xenium5_mesenchymal_CellTypist_comparison.pdf"
+#save="_megagut_fibro_celltypist_probs"
+# Average CellTypist probability by cluster
+# Default to CellTypist prediction
+# Cluster with low confidence for fibroblast subtype CellTypist
+# Map consolidated clusters to CellTypist average probabilities
+colorbar_title="Mean CellTypist prob.",
+save="CellTypist_annot2.pdf")
+plt.savefig("figures_mesenchymal/barplot_xenium5k_celltypist_level3_mesenchymal.pdf", bbox_inches ="tight")
+plt.savefig("figures/barplot_xenium5k_celltypist_mesenchymal_subtype.pdf", bbox_inches ="tight")
+xenium/3b_xenium5k_annotation.ipynb
+import celltypist
+from celltypist import models
+adata = sc.read_h5ad("h5ad/xenium5k_scVI.h5ad")
+xenium/4a_xenium5k_niche.ipynb
+# Test number of niche clusters with CellCharter
+import celltypist
+from celltypist import models
+import cellcharter as cc
+adata = sc.read_h5ad("h5ad/xenium5k_scVI.h5ad")
+cc.gr.remove_long_links(adata)
+cc.gr.aggregate_neighbors(adata, n_layers=3, use_rep='X_scVI')
+models = cc.tl.ClusterAutoK(n_clusters=(4, 25), model_class=cc.tl.GaussianMixture, model_params=model_params, max_runs=5)
+models.fit(adata, use_rep='X_cellcharter')
+ax.figure.savefig("figures_niches/CellCharter_stability_v2.pdf", bbox_inches='tight')
+xenium/4b_xenium5k_niche.ipynb
+# Fits CellCharter to data with given number of niches
+import celltypist
+from celltypist import models
+import cellcharter as cc
+adata = sc.read_h5ad("h5ad/xenium5k_scVI.h5ad")
+# Cell types that are reannotated but not covered. Leftover cells from CellTypist predictions that haven't been updated with new, higher confidence labels.
+# Investigate markers of CellTypist labels
+cc.gr.remove_long_links(adata)
+cc.gr.aggregate_neighbors(adata, n_layers=3, use_rep='X_scVI')
+# models = cc.tl.ClusterAutoK(n_clusters=(4,16), model_class=cc.tl.GaussianMixture, model_params=model_params, max_runs=5)
+# models.fit(adata, use_rep='X_cellcharter')
+# ax.figure.savefig("figures_niches/CellCharter_stability.pdf", bbox_inches='tight')
+gmm = cc.tl.Cluster(
+gmm.fit(adata, use_rep='X_cellcharter')
+adata.obs['spatial_cluster15'] = gmm.predict(adata, use_rep='X_cellcharter')
+save="figures_niches/CellCharter_niches15.pdf", dpi=300
+cc.gr.enrichment(adata, group_key='spatial_cluster15', label_key='annot')
+save="figures_niches/CellCharter_niches15_enrichment_dotplot.pdf")
+#     save="figures_niches/CellCharter_niches11.pdf", dpi=300
+gmm = cc.tl.Cluster(
+gmm.fit(adata, use_rep='X_cellcharter')
+adata.obs['spatial_cluster17'] = gmm.predict(adata, use_rep='X_cellcharter')
+save="figures_niches/CellCharter_niches17.pdf", dpi=450
+cc.gr.enrichment(adata, group_key='spatial_cluster17', label_key='annot')
+save="figures_niches/CellCharter_niches17_enrichment_dotplot.pdf")
+gmm = cc.tl.Cluster(
+gmm.fit(adata, use_rep='X_cellcharter')
+adata.obs['spatial_cluster18'] = gmm.predict(adata, use_rep='X_cellcharter')
+save="figures_niches/CellCharter_niches18.pdf", dpi=450
+cc.gr.enrichment(adata, group_key='spatial_cluster18', label_key='annot')
+save="figures_niches/CellCharter_niches18_enrichment_dotplot.pdf")
+plt.savefig("figures_niches/barplot_xenium5k_CellCharter_niches18.pdf", bbox_inches ="tight")
+adata.write_h5ad("h5ad/scvi/xenium5k_scVI_CellCharter.h5ad")
+xenium/4e_xenium5k_T_cell_annotations.ipynb
+import cellcharter as cc
+adata = sc.read_h5ad("h5ad/scvi/xenium5k_scVI_CellCharter_clustImmune_postQC.h5ad")
+cell_annot = pd.read_csv("lorenz_annotation/250104_T_cell_reannotation.csv")
+# Exclude leftover CellTypist annotation of T cells
+#    save="_xenium5k_celltypist_linage_confidence.pdf"
+cc.gr.enrichment(adata, group_key='spatial_cluster18', label_key='annot')
+save="figures_niches/CellCharter_niches18_enrichment_dotplot_v5.pdf")
+adata.write_h5ad("h5ad/scvi/xenium5k_scVI_CellCharter_clustImmune_postQC_Tannot.h5ad")
+xenium/5_xenium5k_immune_annotation.ipynb
+import celltypist
+from celltypist import models
+import cellcharter as cc
+adata = sc.read_h5ad("h5ad/scvi/xenium5k_scVI_CellCharter.h5ad")
+# Load CellTypist models with more detailed immune cell annotation
+# Run CellTypist immune on joint Xenium 5k object
+predictions = celltypist.annotate(adata, model="Immune_All_Low.pkl", majority_voting=True)
+# Store CellTypist output
+sc.tl.leiden(adata, resolution=4.0, key_added='leiden4')  # runtime: 45m
+sc.tl.leiden(adata, resolution=8.0, key_added='leiden8')  # runtime: 45m
+sc.tl.leiden(adata, resolution=10.0, key_added='leiden10')  # runtime: 45m
+adata.write_h5ad("h5ad/scvi/xenium5k_scVI_CellCharter_clustImmune.h5ad")

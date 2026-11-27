@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/results/hd_xenium_annotation_niche_retry_v1/code/components.py", line 16, in <module>
+    res=tc.tl.annotate(sub,rr,'coarse',method='OT',bisections=2,platform_iterations=0,multi_center=None,verbose=0,assume_valid_counts=True)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/results/hd_xenium_annotation_niche_retry_v1/shared/deps/tacco/tools/_annotate.py", line 743, in annotate
+    gene_mask = preprocessing.filter_reference_genes(reference, annotation_key=annotation_key, min_log2foldchange=min_log2foldchange, min_expression=min_expression, remove_mito=remove_mito, n_hvg=n_hvg, return_mask=True)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/results/hd_xenium_annotation_niche_retry_v1/shared/deps/tacco/preprocessing/_qc.py", line 250, in filter_reference_genes
+    profiles += 1e-30 # regularization for numerical reasons
+    ^^^^^^^^^^^^^^^^^
+ValueError: output array is read-only

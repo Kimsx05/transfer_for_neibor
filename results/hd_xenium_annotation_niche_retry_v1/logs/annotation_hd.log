@@ -1,0 +1,4 @@
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/hd_xenium_annotation_niche_retry_v1/code/annotate.py:20: Pandas4Warning: Starting with pandas version 4.0 all arguments of all will be keyword-only.
+  w=pd.read_parquet(d/'tacco_weights.parquet');finite=w.notna().all(1);values=w.fillna(-1).values;ix=np.argsort(-values,axis=1,kind='stable')
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/hd_xenium_annotation_niche_retry_v1/code/annotate.py:20: Pandas4Warning: Starting with pandas version 4.0 all arguments of all will be keyword-only.
+  w=pd.read_parquet(d/'tacco_weights.parquet');finite=w.notna().all(1);values=w.fillna(-1).values;ix=np.argsort(-values,axis=1,kind='stable')

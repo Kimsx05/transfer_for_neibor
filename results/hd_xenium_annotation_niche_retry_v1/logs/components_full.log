@@ -1,0 +1,163 @@
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/results/hd_xenium_annotation_niche_retry_v1/code/components.py", line 16, in <module>
+    res=tc.tl.annotate(sub,rr,'coarse',method='OT',bisections=2,platform_iterations=0,multi_center=None,verbose=0,assume_valid_counts=True)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/results/hd_xenium_annotation_niche_retry_v1/shared/deps/tacco/tools/_annotate.py", line 827, in annotate
+    cell_type = _method(tdata, reference, annotation_key, annotation_prior, verbose)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/results/hd_xenium_annotation_niche_retry_v1/shared/deps/tacco/tools/_annotate.py", line 335, in _method
+    cell_type = annotation_method(adata, reference, annotation_key, annotation_prior, verbose)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/results/hd_xenium_annotation_niche_retry_v1/shared/deps/tacco/tools/_annotate.py", line 215, in _method
+    cell_type = annotation_method(adata, reference, annotation_key, annotation_prior, verbose)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/results/hd_xenium_annotation_niche_retry_v1/shared/deps/tacco/tools/_annotate.py", line 115, in _method
+    cell_type = annotate(adata, reference, annotation_key, annotation_prior=_annotation_prior, **verbose_arg, **kw_args)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/results/hd_xenium_annotation_niche_retry_v1/shared/deps/tacco/tools/_OT.py", line 76, in _annotate_OT
+    cell_type = _run_OT(type_cell_dist, annotation_prior, cell_prior=cell_prior, epsilon=epsilon, lamb=lamb)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/results/hd_xenium_annotation_niche_retry_v1/shared/deps/tacco/utils/_utils.py", line 278, in _run_OT
+    cost /= cost.max()
+ValueError: output array is read-only
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/hd_xenium_annotation_niche_retry_v1/code/components.py:18: Pandas4Warning: Starting with pandas version 4.0 all arguments of all will be keyword-only.
+  valid=out.notna().all(1);assert np.allclose(out[valid].sum(1),1,atol=1e-4)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/hd_xenium_annotation_niche_retry_v1/code/components.py:18: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  valid=out.notna().all(1);assert np.allclose(out[valid].sum(1),1,atol=1e-4)
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+sparse_dot_mkl and/or mkl not found, so a (slower) fallback is used.
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/hd_xenium_annotation_niche_retry_v1/code/components.py:18: Pandas4Warning: Starting with pandas version 4.0 all arguments of all will be keyword-only.
+  valid=out.notna().all(1);assert np.allclose(out[valid].sum(1),1,atol=1e-4)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/hd_xenium_annotation_niche_retry_v1/code/components.py:18: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  valid=out.notna().all(1);assert np.allclose(out[valid].sum(1),1,atol=1e-4)

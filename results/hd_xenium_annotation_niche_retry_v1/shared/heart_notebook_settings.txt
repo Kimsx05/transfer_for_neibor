@@ -1,0 +1,213 @@
+92f66719d1f3b62dd00c7398b4063514a9227dcb
+Fig1_General_processing/VisiumHD/0_bin2cell/CellTalkHHD_Human_13_BRC2757-2758-7/bin2cell_no1_HE_prob-thresh-evaluate.ipynb
+prob_thresh_dict = {
+for key,prob_thresh in prob_thresh_dict.items():
+prob_thresh=prob_thresh
+Fig1_General_processing/VisiumHD/0_bin2cell/CellTalkHHD_Human_13_BRC2757-2758-7/bin2cell_no2_GEX_prob-thresh-evaluate.ipynb
+b2c.grid_image(adata, "n_counts", mpp=mpp, sigma=5, save_path="stardist/gex.tiff")
+prob_thresh_dict = {
+for key,prob_thresh in prob_thresh_dict.items():
+# prob_thresh=prob_thresh,
+prob_thresh=prob_thresh,
+Fig1_General_processing/VisiumHD/0_bin2cell/CellTalkHHD_Human_13_BRC2757-2758-7/bin2cell_no3_joint-HE-GEX-labels.ipynb
+prob_thresh_dict = {
+for key,prob_thresh in prob_thresh_dict.items():
+for key in prob_thresh_dict.keys():
+plt.title(f'prob_thresh: {key}')
+for key in prob_thresh_dict.keys():
+plt.title(f'prob_thresh: {key}')
+prob_thresh_sel = '0p05'
+adata.obs['labels_he_sel'] = adata.obs[f'labels_he_{prob_thresh_sel}']
+b2c.grid_image(adata, "n_counts", mpp=mpp, sigma=5, save_path="stardist/gex.tiff")
+prob_thresh_dict = {
+for key,prob_thresh in prob_thresh_dict.items():
+for key in prob_thresh_dict.keys():
+for key in prob_thresh_dict.keys():
+plt.title(f'prob_thresh: {key}')
+gex_prob_thresh_sel = '0p05' # sigma: 5
+adata.obs['labels_gex_sel'] = adata.obs[f'labels_gex_{gex_prob_thresh_sel}']
+b2c.salvage_secondary_labels(adata,
+Fig1_General_processing/VisiumHD/0_bin2cell/HEA_FOET14880396/bin2cell_no1_HE_prob-thresh-evaluate.ipynb
+prob_thresh_dict = {
+for key,prob_thresh in prob_thresh_dict.items():
+prob_thresh=prob_thresh
+Fig1_General_processing/VisiumHD/0_bin2cell/HEA_FOET14880396/bin2cell_no2_GEX_prob-thresh-evaluate.ipynb
+b2c.grid_image(adata, "n_counts", mpp=mpp, sigma=5, save_path="stardist/gex.tiff")
+prob_thresh_dict = {
+for key,prob_thresh in prob_thresh_dict.items():
+# prob_thresh=prob_thresh,
+prob_thresh=prob_thresh,
+Fig1_General_processing/VisiumHD/0_bin2cell/HEA_FOET14880396/bin2cell_no3_joint-HE-GEX-labels.ipynb
+prob_thresh_dict = {
+for key,prob_thresh in prob_thresh_dict.items():
+for key in prob_thresh_dict.keys():
+plt.title(f'prob_thresh: {key}')
+prob_thresh_sel = '0p05'
+adata.obs['labels_he_sel'] = adata.obs[f'labels_he_{prob_thresh_sel}']
+b2c.grid_image(adata, "n_counts", mpp=mpp, sigma=5, save_path="stardist/gex.tiff")
+prob_thresh_dict = {
+for key,prob_thresh in prob_thresh_dict.items():
+for key in prob_thresh_dict.keys():
+for key in prob_thresh_dict.keys():
+plt.title(f'prob_thresh: {key}')
+gex_prob_thresh_sel = '0p05' # sigma: 5
+adata.obs['labels_gex_sel'] = adata.obs[f'labels_gex_{gex_prob_thresh_sel}']
+b2c.salvage_secondary_labels(adata,
+Fig1_General_processing/VisiumHD/1_concatenate-filtering/post-b2c_no1_prep-adata_concatenate.ipynb
+Fig1_General_processing/VisiumHD/1_concatenate-filtering/post-b2c_no2_initial_filtering.ipynb
+sc.pp.filter_cells(adata, min_genes=100)
+Fig1_General_processing/VisiumHD/3_coarse-mid-grain_annotation/TACCO_after-no06_before-no07/no01_tacco_prepare-reference.ipynb
+Fig1_General_processing/VisiumHD/3_coarse-mid-grain_annotation/TACCO_after-no06_before-no07/no02_tacco_annotate-and-split.ipynb
+tc.tl.annotate(
+sdata = tc.tl.split_observations(
+Fig1_General_processing/VisiumHD/3_coarse-mid-grain_annotation/TACCO_after-no06_before-no07/no03_filtering.ipynb
+sc.pp.filter_cells(hdscn, min_genes=100)
+Fig1_General_processing/VisiumHD/3_coarse-mid-grain_annotation/no01_clustering.ipynb
+Fig1_General_processing/VisiumHD/3_coarse-mid-grain_annotation/no02_coarse-grained-pre_celltype_annotation.ipynb
+Fig1_General_processing/VisiumHD/3_coarse-mid-grain_annotation/no03_run_scVI_epicardium-mixture.ipynb
+scvi.model.SCVI.setup_anndata(adata_sub,
+for n_layers in n_layer_list:
+print(f'##### {n_layers} #####')
+vae = scvi.model.SCVI(adata_sub, n_hidden = 128, n_latent = 50, n_layers = n_layers, dispersion = 'gene-batch')
+vae.save(f"{data_object_dir}/scVI/models/epicardium-mixture_correcting-donor_n-layers-{str(n_layers)}/",
+latent.write(f'{data_object_dir}/scVI/latent_variables/epicardium-mixture_correcting-donor_n-layers-{str(n_layers)}.h5ad')
+Fig1_General_processing/VisiumHD/3_coarse-mid-grain_annotation/no03_run_scVI_unclassified-mixture_out_08Dec2025.ipynb
+scvi.model.SCVI.setup_anndata(adata_sub,
+for n_layers in n_layer_list:
+print(f'##### {n_layers} #####')
+vae = scvi.model.SCVI(adata_sub, n_hidden = 128, n_latent = 50, n_layers = n_layers, dispersion = 'gene-batch')
+vae.save(f"{data_object_dir}/scVI/models/unclassified-mixture_correcting-donor_n-layers-{str(n_layers)}/",
+latent.write(f'{data_object_dir}/scVI/latent_variables/unclassified-mixture_correcting-donor_n-layers-{str(n_layers)}.h5ad')
+Fig1_General_processing/VisiumHD/3_coarse-mid-grain_annotation/no04_clustering_epicardium-mixture.ipynb
+Fig1_General_processing/VisiumHD/3_coarse-mid-grain_annotation/no04_clustering_unclassified-mixture.ipynb
+Fig1_General_processing/VisiumHD/3_coarse-mid-grain_annotation/no05_epicardium-mixture_coarse-grained-pre_annotation.ipynb
+Fig1_General_processing/VisiumHD/3_coarse-mid-grain_annotation/no05_unclassified-mixture_coarse-grained-pre_annotation.ipynb
+Fig1_General_processing/VisiumHD/3_coarse-mid-grain_annotation/no06_collect_annotations.ipynb
+Fig1_General_processing/VisiumHD/3_coarse-mid-grain_annotation/no07_post-TACCO_run_scVI_out_01Jan2026.ipynb
+scvi.model.SCVI.setup_anndata(adata,
+for n_layers in n_layer_list:
+print(f'##### {n_layers} #####')
+vae = scvi.model.SCVI(adata, n_hidden = 128, n_latent = 50, n_layers = n_layers, dispersion = 'gene-batch')
+vae.save(f"{data_object_dir}/scVI/models/post-tacco_correcting-donor_n-layers-{str(n_layers)}/",
+latent.write(f'{data_object_dir}/scVI/latent_variables/post-tacco_correcting-donor_n-layers-{str(n_layers)}.h5ad')
+Fig1_General_processing/VisiumHD/3_coarse-mid-grain_annotation/no08_post-TACCO_post-scVI_umap.ipynb
+adata_pre_tacco = adata_pre_tacco[adata_pre_tacco.obs['coarse_grain_pre_2'].isin(['Erythrocytes',
+set(adata_post_tacco.obs['coarse_grain_tacco_ref-hd-scn'])
+for x in adata_pre_tacco.obs['coarse_grain_pre_2']]
+adata_pre_tacco.obs['coarse_grain_pre_2_mod'] = new_labels.copy()
+for x in adata_post_tacco.obs['coarse_grain_pre_2']]
+adata_post_tacco.obs['coarse_grain_pre_2_mod'] = new_labels.copy()
+adata_pre_tacco.obs['coarse_grain_pre_2_mod'] = pd.Categorical(
+adata_pre_tacco.obs['coarse_grain_pre_2_mod'],
+adata_post_tacco.obs['coarse_grain_pre_2_mod'] = pd.Categorical(
+adata_post_tacco.obs['coarse_grain_pre_2_mod'],
+adata_post_tacco.obs['coarse_grain_tacco_ref-hd-scn'] = pd.Categorical(
+adata_post_tacco.obs['coarse_grain_tacco_ref-hd-scn'],
+cats = list(adata_pre_tacco.obs['coarse_grain_pre_2_mod'].cat.categories)
+colors = list(adata_pre_tacco.uns['coarse_grain_pre_2_mod_colors'])
+adata_pre_tacco.uns['coarse_grain_pre_2_mod_colors'] = colors
+adata_post_tacco.uns['coarse_grain_pre_2_mod_colors'] = colors
+plt.savefig(f'{figdir}/VisiumHD_post-TACCO_UMAP_coarse_grain_tacco.pdf', bbox_inches="tight",dpi=300)
+Fig1_General_processing/VisiumHD/4_fine-grain_annotation/no01_run_scVI_per-coarsegrain_AtrialCardiomyocytes_out_02Jan2026.ipynb
+scvi.model.SCVI.setup_anndata(adata,
+for n_layers in n_layer_list:
+print(f'##### {n_layers} #####')
+vae = scvi.model.SCVI(adata, n_hidden = 128, n_latent = 50, n_layers = n_layers, dispersion = 'gene-batch')
+vae.save(f"{data_object_dir}/scVI/models/b2c_cells_{group}_correcting-donor_n-layers-{str(n_layers)}/",
+latent.write(f'{data_object_dir}/scVI/latent_variables/b2c_cells_{group}_correcting-donor_n-layers-{str(n_layers)}.h5ad')
+Fig1_General_processing/VisiumHD/4_fine-grain_annotation/no01_run_scVI_per-coarsegrain_EndothelialCells_out_02Jan2026.ipynb
+scvi.model.SCVI.setup_anndata(adata,
+for n_layers in n_layer_list:
+print(f'##### {n_layers} #####')
+vae = scvi.model.SCVI(adata, n_hidden = 128, n_latent = 50, n_layers = n_layers, dispersion = 'gene-batch')
+vae.save(f"{data_object_dir}/scVI/models/b2c_cells_{group}_correcting-donor_n-layers-{str(n_layers)}/",
+latent.write(f'{data_object_dir}/scVI/latent_variables/b2c_cells_{group}_correcting-donor_n-layers-{str(n_layers)}.h5ad')
+Fig1_General_processing/VisiumHD/4_fine-grain_annotation/no01_run_scVI_per-coarsegrain_EpicardialCells_out_02Jan2026.ipynb
+scvi.model.SCVI.setup_anndata(adata,
+for n_layers in n_layer_list:
+print(f'##### {n_layers} #####')
+vae = scvi.model.SCVI(adata, n_hidden = 128, n_latent = 50, n_layers = n_layers, dispersion = 'gene-batch')
+vae.save(f"{data_object_dir}/scVI/models/b2c_cells_{group}_correcting-donor_n-layers-{str(n_layers)}/",
+latent.write(f'{data_object_dir}/scVI/latent_variables/b2c_cells_{group}_correcting-donor_n-layers-{str(n_layers)}.h5ad')
+Fig1_General_processing/VisiumHD/4_fine-grain_annotation/no01_run_scVI_per-coarsegrain_LymphoidCells_out_02Jan2026.ipynb
+scvi.model.SCVI.setup_anndata(adata,
+for n_layers in n_layer_list:
+print(f'##### {n_layers} #####')
+vae = scvi.model.SCVI(adata, n_hidden = 128, n_latent = 50, n_layers = n_layers, dispersion = 'gene-batch')
+vae.save(f"{data_object_dir}/scVI/models/b2c_cells_{group}_correcting-donor_n-layers-{str(n_layers)}/",
+latent.write(f'{data_object_dir}/scVI/latent_variables/b2c_cells_{group}_correcting-donor_n-layers-{str(n_layers)}.h5ad')
+Fig1_General_processing/VisiumHD/4_fine-grain_annotation/no01_run_scVI_per-coarsegrain_MesenchymalCells_out_02Jan2026.ipynb
+scvi.model.SCVI.setup_anndata(adata,
+for n_layers in n_layer_list:
+print(f'##### {n_layers} #####')
+vae = scvi.model.SCVI(adata, n_hidden = 128, n_latent = 50, n_layers = n_layers, dispersion = 'gene-batch')
+vae.save(f"{data_object_dir}/scVI/models/b2c_cells_{group}_correcting-donor_n-layers-{str(n_layers)}/",
+latent.write(f'{data_object_dir}/scVI/latent_variables/b2c_cells_{group}_correcting-donor_n-layers-{str(n_layers)}.h5ad')
+Fig1_General_processing/VisiumHD/4_fine-grain_annotation/no01_run_scVI_per-coarsegrain_MyeloidCells_out_02Jan2026.ipynb
+scvi.model.SCVI.setup_anndata(adata,
+for n_layers in n_layer_list:
+print(f'##### {n_layers} #####')
+vae = scvi.model.SCVI(adata, n_hidden = 128, n_latent = 50, n_layers = n_layers, dispersion = 'gene-batch')
+vae.save(f"{data_object_dir}/scVI/models/b2c_cells_{group}_correcting-donor_n-layers-{str(n_layers)}/",
+latent.write(f'{data_object_dir}/scVI/latent_variables/b2c_cells_{group}_correcting-donor_n-layers-{str(n_layers)}.h5ad')
+Fig1_General_processing/VisiumHD/4_fine-grain_annotation/no01_run_scVI_per-coarsegrain_NeuralCells_out_02Jan2026.ipynb
+scvi.model.SCVI.setup_anndata(adata,
+for n_layers in n_layer_list:
+print(f'##### {n_layers} #####')
+vae = scvi.model.SCVI(adata, n_hidden = 128, n_latent = 50, n_layers = n_layers, dispersion = 'gene-batch')
+vae.save(f"{data_object_dir}/scVI/models/b2c_cells_{group}_correcting-donor_n-layers-{str(n_layers)}/",
+latent.write(f'{data_object_dir}/scVI/latent_variables/b2c_cells_{group}_correcting-donor_n-layers-{str(n_layers)}.h5ad')
+Fig1_General_processing/VisiumHD/4_fine-grain_annotation/no01_run_scVI_per-coarsegrain_VentricularCardiomyocytes_out_02Jan2026.ipynb
+scvi.model.SCVI.setup_anndata(adata,
+for n_layers in n_layer_list:
+print(f'##### {n_layers} #####')
+vae = scvi.model.SCVI(adata, n_hidden = 128, n_latent = 50, n_layers = n_layers, dispersion = 'gene-batch')
+vae.save(f"{data_object_dir}/scVI/models/b2c_cells_{group}_correcting-donor_n-layers-{str(n_layers)}/",
+latent.write(f'{data_object_dir}/scVI/latent_variables/b2c_cells_{group}_correcting-donor_n-layers-{str(n_layers)}.h5ad')
+Fig1_General_processing/VisiumHD/4_fine-grain_annotation/no02_clustering-and-UMAP_per-coarsegrain_AtrialCardiomyocytes_out_10Jan2026.ipynb
+Fig1_General_processing/VisiumHD/4_fine-grain_annotation/no02_clustering-and-UMAP_per-coarsegrain_EndothelialCells_out_10Jan2026.ipynb
+Fig1_General_processing/VisiumHD/4_fine-grain_annotation/no02_clustering-and-UMAP_per-coarsegrain_EpicardialCells_out_10Jan2026.ipynb
+Fig1_General_processing/VisiumHD/4_fine-grain_annotation/no02_clustering-and-UMAP_per-coarsegrain_LymphoidCells_out_10Jan2026.ipynb
+Fig1_General_processing/VisiumHD/4_fine-grain_annotation/no02_clustering-and-UMAP_per-coarsegrain_MesenchymalCells_out_10Jan2026.ipynb
+Fig1_General_processing/VisiumHD/4_fine-grain_annotation/no02_clustering-and-UMAP_per-coarsegrain_MyeloidCells_out_10Jan2026.ipynb
+Fig1_General_processing/VisiumHD/4_fine-grain_annotation/no02_clustering-and-UMAP_per-coarsegrain_NeuralCells_out_10Jan2026.ipynb
+Fig1_General_processing/VisiumHD/4_fine-grain_annotation/no02_clustering-and-UMAP_per-coarsegrain_VentricularCardiomyocytes_out_10Jan2026.ipynb
+Fig1_General_processing/VisiumHD/4_fine-grain_annotation/no03-1_manual-annotation_EC.ipynb
+Fig1_General_processing/VisiumHD/4_fine-grain_annotation/no03-1_manual-annotation_Epicardial.ipynb
+Fig1_General_processing/VisiumHD/4_fine-grain_annotation/no03-1_manual-annotation_Lymphoid.ipynb
+Fig1_General_processing/VisiumHD/4_fine-grain_annotation/no03-1_manual-annotation_Mesenchymal.ipynb
+Fig1_General_processing/VisiumHD/4_fine-grain_annotation/no03-1_manual-annotation_Myeloid.ipynb
+Fig1_General_processing/VisiumHD/4_fine-grain_annotation/no03-1_manual-annotation_Neural.ipynb
+Fig1_General_processing/VisiumHD/4_fine-grain_annotation/no03-1_manual-annotation_atrialCM.ipynb
+Fig1_General_processing/VisiumHD/4_fine-grain_annotation/no03-1_manual-annotation_ventricularCM.ipynb
+Fig1_General_processing/VisiumHD/4_fine-grain_annotation/no03-2_manual-annotation_SANPC.ipynb
+Fig1_General_processing/VisiumHD/4_fine-grain_annotation/no04_collect_fine-grained-annotations.ipynb
+Fig1_General_processing/VisiumHD/4_fine-grain_annotation/no05_VisiumHD_corr_with_scnRNAseq.ipynb
+print(adata_tacco.X.data[:5])
+adata_tacco.obs.replace({celltype_col:celltype_mapping},inplace=True)
+set(adata_tacco.obs[celltype_col])
+adata_tacco = adata_tacco[adata_tacco.obs[celltype_col].isin(cells_keep)]
+shared_genes = list(set(adata_tacco.var_names).intersection(adata_ref.var_names))
+print(adata_tacco.shape)
+print(adata_tacco.X.data[:5])
+print(adata_tacco.X.data[:5])
+print(set(adata_tacco.obs[celltype_col]) - set(adata_orig.obs[celltype_col]))
+print(set(adata_orig.obs[celltype_col]) - set(adata_tacco.obs[celltype_col]))
+set(adata_ref.obs['fine_grain']) - set(adata_tacco.obs[celltype_col])
+set(adata_tacco.obs[celltype_col]) - set(adata_ref.obs['fine_grain'])
+adata_tacco.obs[celltype_col] = [celltype_mapping_2[x] if x in celltype_mapping_2.keys() else x for x in adata_tacco.obs[celltype_col]]
+print(set(adata_ref.obs['fine_grain']) - set(adata_tacco.obs[celltype_col]))
+print(set(adata_tacco.obs[celltype_col]) - set(adata_ref.obs['fine_grain']))
+adata_ref = adata_ref[adata_ref.obs['fine_grain'].isin(list(set(adata_tacco.obs[celltype_col])))]
+celltype_list = list(corr_tacco.index)
+corr_tacco_list.append(corr_tacco.loc[cell,cell])
+corr_tacco_list.append(np.mean(corr_tacco.loc[cell,other_cell_list]))
+Fig1_General_processing/VisiumHD/4_fine-grain_annotation/no06_VisiumHD_add-mid-grained-annotation_plots-for-figures.ipynb
+set(adata_tacco.obs['fine_grain_2Feb2026'])
+adata_tacco.obs['mid_grain_2Feb2026'] = adata_tacco.obs['fine_grain_2Feb2026'].astype('str').copy()
+adata_tacco.obs.replace({'mid_grain_2Feb2026':fine2mid_mapping},inplace=True)
+pd.crosstab(adata_tacco.obs['fine_grain_2Feb2026'],adata_tacco.obs['mid_grain_2Feb2026'])
+set(adata_tacco.obs['mid_grain_2Feb2026'])
+adata_tacco.obs['mid_grain_2Feb2026'] = pd.Categorical(
+adata_tacco.obs['mid_grain_2Feb2026'],
+adata_tacco.write(path_adata_tacco)

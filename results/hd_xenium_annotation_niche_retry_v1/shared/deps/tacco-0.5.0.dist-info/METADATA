@@ -1,0 +1,134 @@
+Metadata-Version: 2.4
+Name: tacco
+Version: 0.5.0
+Summary: TACCO: Transfer of Annotations to Cells and their COmbinations
+Author: Simon Mages, Noa Moriel, Jan Watter
+Maintainer: Jan Watter, Simon Mages
+License: BSD 3-Clause License
+        
+        Copyright (c) 2022, Broad Institute
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+Project-URL: Source, https://github.com/simonwm/tacco
+Project-URL: Documentation, https://simonwm.github.io/tacco/index.html
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENCE.txt
+License-File: NOTICE.md
+Requires-Dist: requests
+Requires-Dist: joblib
+Requires-Dist: numba>=0.51.2
+Requires-Dist: numpy
+Requires-Dist: matplotlib!=3.7
+Requires-Dist: seaborn
+Requires-Dist: scanpy>=1.7.0
+Requires-Dist: statsmodels
+Requires-Dist: anndata>=0.9.0
+Requires-Dist: pandas>=1.1.0
+Requires-Dist: scipy>=1.6.0
+Requires-Dist: scikit_learn
+Requires-Dist: threadpoolctl
+Requires-Dist: pyamg
+Requires-Dist: sparse_dot_mkl>=0.7.3; platform_machine == "x86_64"
+Requires-Dist: mkl; platform_machine == "x86_64"
+Requires-Dist: mkl_service; platform_machine == "x86_64"
+Provides-Extra: doc
+Requires-Dist: tacco; extra == "doc"
+Requires-Dist: sphinx; extra == "doc"
+Requires-Dist: sphinx-rtd-theme; extra == "doc"
+Requires-Dist: pydata-sphinx-theme; extra == "doc"
+Requires-Dist: sphinx-autodoc-typehints; extra == "doc"
+Requires-Dist: nbsphinx; extra == "doc"
+Requires-Dist: ipython; extra == "doc"
+Requires-Dist: jupytext; extra == "doc"
+Requires-Dist: jupyter; extra == "doc"
+Provides-Extra: benchmark
+Requires-Dist: time; extra == "benchmark"
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Dynamic: license-file
+
+# TACCO: Transfer of Annotations to Cells and their COmbinations
+
+TACCO is a python framework for working with categorical and compositional annotations for high-dimensional observations, in particular for transferring annotations from single cell to spatial transcriptomics data. TACCO comes with an extensive ever expanding [documentation](https://simonwm.github.io/tacco/) and a set of [example notebooks](https://github.com/simonwm/tacco_examples). If TACCO is useful for your research, you can cite [Nat Biotechnol (2023)](https://doi.org/10.1038/s41587-023-01657-3).
+
+## How to install TACCO
+
+### Conda
+
+The simplest way to install TACCO is to create a clean environment with `conda create` using the `environment.yml` file from the TACCO repository:
+
+```
+conda create -n TACCO_env -c conda-forge tacco
+```
+
+To install TACCO in an already existing environment, use `conda install`:
+
+```
+conda install -c conda-forge tacco
+```
+
+### Pip
+
+It is also possible to install from pypi via `pip`:
+
+```
+pip install tacco
+```
+
+This is however not recommended. Unlike `conda`, `pip` cannot treat python itself as a package, so if you start with the wrong python version, you will run into errors with dependencies.
+
+### Github
+
+To access the most recent pre-release versions it is also possible to pip-install directly from github:
+
+```
+pip install tacco@git+https://github.com/simonwm/tacco.git
+```
+
+Obviously, this is not recomended for production environments.
+
+## How to use TACCO
+
+TACCO features a fast and straightforward API for the compositional annotation of one dataset, given as an anndata object `adata`, with a categorically annotated second dataset, given as an anndata object `reference`. The annotation is wrapped in a single function call
+
+```
+import tacco as tc
+tc.tl.annotate(adata, reference, annotation_key='my_categorical_annotation', result_key='my_compositional_annotation')
+```
+
+where `'my_categorical_annotation'` is the name of the categorical `.obs` annotation in `reference` and `'my_compositional_annotation'` is the name of the new compositional `.obsm` annotation to be created in `adata`. There are many options for customizing this function to call e.g. external annotation tools, which are described in the [documentation of the `annotate` function](https://simonwm.github.io/tacco/_autosummary/tacco.tools.annotate.html#tacco.tools.annotate).
+
+As the TACCO framework contains much more than a compositional annotation method (single-molecule annotation, object-splitting, spatial co-occurrence analysis, enrichments, visualization, ...), its [documentation](https://simonwm.github.io/tacco/) does not fit into a README.

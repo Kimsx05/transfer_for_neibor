@@ -1,0 +1,19 @@
+{
+  "shared_slice_after_setup": {
+    "memory.max": "284999999488",
+    "memory.peak": "7502069760",
+    "pids.max": "20",
+    "pids.peak": "19",
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+  },
+  "maximum_instrumented_stage_RSS_KiB": 5567828,
+  "logical_CPU_affinity": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "device_used": "CPU",
+  "all_observed_initial_scopes": "7-17 tasks per heavy scope, same four permitted compute CPUs. Initial cgroups separate; no continuous aggregate peak before shared slice.",
+  "scope_error_handling": "initial TensorFlow attempt abort signal 6 and initial HD scVI exit 143 separately logged. Successful replacements listed in runtime_notes."
+}

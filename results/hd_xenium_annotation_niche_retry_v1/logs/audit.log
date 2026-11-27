@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_singularity/python-envs/bladder-spatial-py312/lib/python3.12/importlib/metadata/__init__.py", line 397, in from_name
+    return next(cls.discover(name=name))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/data/t070721/codex_workspace/Bladder Metabolism/results/hd_xenium_annotation_niche_retry_v1/code/audit.py", line 23, in <module>
+    v={p:md.version(p) for p in ['bin2cell','stardist','scvi-tools','torch','celltypist','cellcharter','scanpy','anndata','pandas','numpy','scipy','scikit-learn','tensorflow','pyarrow']};v.update(tacco='0.5.0 local target, writable NumPy vectors for pandas 3',python=sys.version,python_executable=sys.executable,reference=str(H/'metadata/reference_manifest.json'),crohn_author_commit=(O/'shared/crohn_notebook_settings.txt').read_text().splitlines()[0],heart_author_commit=(O/'shared/heart_notebook_settings.txt').read_text().splitlines()[0]);(O/'shared/versions.json').write_text(json.dumps(v,indent=2))
+         ^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_singularity/python-envs/bladder-spatial-py312/lib/python3.12/importlib/metadata/__init__.py", line 889, in version
+    return distribution(distribution_name).version
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_singularity/python-envs/bladder-spatial-py312/lib/python3.12/importlib/metadata/__init__.py", line 862, in distribution
+    return Distribution.from_name(distribution_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/data/t070721/codex_singularity/python-envs/bladder-spatial-py312/lib/python3.12/importlib/metadata/__init__.py", line 399, in from_name
+    raise PackageNotFoundError(name)
+importlib.metadata.PackageNotFoundError: No package metadata was found for tensorflow

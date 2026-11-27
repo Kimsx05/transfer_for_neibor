@@ -1,0 +1,12 @@
+module	status	scope	evidence
+A1	completed	Cervilla,D1_Johnson	Original 2um counts, verified primary and image transform, full retained-primary raw count comparison.
+A1-other	missing_input	UC_SCC,MPBC1,MPBC2	Complete local 2um GEX+positions+registered H&E not located.
+A2	completed	HD two sections	Ten fixed buffered ROIs, old and exact HE-only reuse vs new secondary. Morphology examples examined.
+A3	completed	HD two sections	Frozen H&E-priority GEX segmentation; secondary optical QC updated after whole-section examples.
+A4	completed	HD two sections	Same-cell CellTypist vs TACCO OT fractions, lineage cluster expression and original-ID decisions.
+A5	completed	HD two sections	Raw-count reconstruction, common scVI, within-section graph and one shared CellCharter.
+B1	completed	Xenium five sections	Original segmentation, panel, old scores, individual original gate reasons.
+B2	completed	Xenium five sections	Specimen/patient-group held-out results, panel-restricted BLCA hierarchical CellTypist.
+B3	completed	Xenium five sections	One shared scVI using original cells and counts.
+B4	completed	Xenium five sections	Lineage clusters, four levels, marker dotplots and spatial/segmentation review.
+B5	completed	Xenium five sections	One shared CellCharter model, balanced training after full graph aggregation.

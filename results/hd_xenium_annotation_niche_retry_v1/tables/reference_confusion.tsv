@@ -1,0 +1,231 @@
+head	truth	prediction	n
+major	B	B	128
+major	B	Endothelial	0
+major	B	Epithelial	2
+major	B	Fibroblast	0
+major	B	Mast	0
+major	B	Mural	0
+major	B	Myeloid	0
+major	B	Plasma	1
+major	B	T/NK	0
+major	Endothelial	B	0
+major	Endothelial	Endothelial	241
+major	Endothelial	Epithelial	0
+major	Endothelial	Fibroblast	1
+major	Endothelial	Mast	0
+major	Endothelial	Mural	0
+major	Endothelial	Myeloid	4
+major	Endothelial	Plasma	0
+major	Endothelial	T/NK	4
+major	Epithelial	B	0
+major	Epithelial	Endothelial	0
+major	Epithelial	Epithelial	154
+major	Epithelial	Fibroblast	0
+major	Epithelial	Mast	0
+major	Epithelial	Mural	3
+major	Epithelial	Myeloid	1
+major	Epithelial	Plasma	1
+major	Epithelial	T/NK	5
+major	Fibroblast	B	0
+major	Fibroblast	Endothelial	1
+major	Fibroblast	Epithelial	5
+major	Fibroblast	Fibroblast	225
+major	Fibroblast	Mast	1
+major	Fibroblast	Mural	20
+major	Fibroblast	Myeloid	0
+major	Fibroblast	Plasma	1
+major	Fibroblast	T/NK	3
+major	Mast	B	0
+major	Mast	Endothelial	0
+major	Mast	Epithelial	6
+major	Mast	Fibroblast	2
+major	Mast	Mast	55
+major	Mast	Mural	0
+major	Mast	Myeloid	2
+major	Mast	Plasma	2
+major	Mast	T/NK	2
+major	Mural	B	0
+major	Mural	Endothelial	0
+major	Mural	Epithelial	0
+major	Mural	Fibroblast	27
+major	Mural	Mast	0
+major	Mural	Mural	99
+major	Mural	Myeloid	0
+major	Mural	Plasma	2
+major	Mural	T/NK	0
+major	Myeloid	B	0
+major	Myeloid	Endothelial	2
+major	Myeloid	Epithelial	4
+major	Myeloid	Fibroblast	1
+major	Myeloid	Mast	1
+major	Myeloid	Mural	0
+major	Myeloid	Myeloid	594
+major	Myeloid	Plasma	2
+major	Myeloid	T/NK	3
+major	Plasma	B	1
+major	Plasma	Endothelial	3
+major	Plasma	Epithelial	8
+major	Plasma	Fibroblast	2
+major	Plasma	Mast	0
+major	Plasma	Mural	0
+major	Plasma	Myeloid	3
+major	Plasma	Plasma	52
+major	Plasma	T/NK	3
+major	T/NK	B	0
+major	T/NK	Endothelial	1
+major	T/NK	Epithelial	2
+major	T/NK	Fibroblast	0
+major	T/NK	Mast	0
+major	T/NK	Mural	0
+major	T/NK	Myeloid	0
+major	T/NK	Plasma	0
+major	T/NK	T/NK	419
+T/NK	CD4 Helper/Conventional	CD4 Helper/Conventional	31
+T/NK	CD4 Helper/Conventional	CD4 Naive/Memory-like	11
+T/NK	CD4 Helper/Conventional	CD8 Exhausted	1
+T/NK	CD4 Helper/Conventional	CD8 GZMK/Effector-memory-like	2
+T/NK	CD4 Helper/Conventional	NK	1
+T/NK	CD4 Helper/Conventional	Tfh/CXCL13-like	10
+T/NK	CD4 Helper/Conventional	Treg	4
+T/NK	CD4 Naive/Memory-like	CD4 Helper/Conventional	1
+T/NK	CD4 Naive/Memory-like	CD4 Naive/Memory-like	45
+T/NK	CD4 Naive/Memory-like	CD8 Exhausted	0
+T/NK	CD4 Naive/Memory-like	CD8 GZMK/Effector-memory-like	2
+T/NK	CD4 Naive/Memory-like	NK	1
+T/NK	CD4 Naive/Memory-like	Tfh/CXCL13-like	3
+T/NK	CD4 Naive/Memory-like	Treg	1
+T/NK	CD8 Exhausted	CD4 Helper/Conventional	1
+T/NK	CD8 Exhausted	CD4 Naive/Memory-like	1
+T/NK	CD8 Exhausted	CD8 Exhausted	45
+T/NK	CD8 Exhausted	CD8 GZMK/Effector-memory-like	5
+T/NK	CD8 Exhausted	NK	1
+T/NK	CD8 Exhausted	Tfh/CXCL13-like	11
+T/NK	CD8 Exhausted	Treg	1
+T/NK	CD8 GZMK/Effector-memory-like	CD4 Helper/Conventional	1
+T/NK	CD8 GZMK/Effector-memory-like	CD4 Naive/Memory-like	0
+T/NK	CD8 GZMK/Effector-memory-like	CD8 Exhausted	6
+T/NK	CD8 GZMK/Effector-memory-like	CD8 GZMK/Effector-memory-like	42
+T/NK	CD8 GZMK/Effector-memory-like	NK	2
+T/NK	CD8 GZMK/Effector-memory-like	Tfh/CXCL13-like	1
+T/NK	CD8 GZMK/Effector-memory-like	Treg	0
+T/NK	NK	CD4 Helper/Conventional	1
+T/NK	NK	CD4 Naive/Memory-like	1
+T/NK	NK	CD8 Exhausted	3
+T/NK	NK	CD8 GZMK/Effector-memory-like	5
+T/NK	NK	NK	51
+T/NK	NK	Tfh/CXCL13-like	0
+T/NK	NK	Treg	0
+T/NK	Tfh/CXCL13-like	CD4 Helper/Conventional	2
+T/NK	Tfh/CXCL13-like	CD4 Naive/Memory-like	4
+T/NK	Tfh/CXCL13-like	CD8 Exhausted	12
+T/NK	Tfh/CXCL13-like	CD8 GZMK/Effector-memory-like	1
+T/NK	Tfh/CXCL13-like	NK	0
+T/NK	Tfh/CXCL13-like	Tfh/CXCL13-like	47
+T/NK	Tfh/CXCL13-like	Treg	3
+T/NK	Treg	CD4 Helper/Conventional	2
+T/NK	Treg	CD4 Naive/Memory-like	1
+T/NK	Treg	CD8 Exhausted	2
+T/NK	Treg	CD8 GZMK/Effector-memory-like	2
+T/NK	Treg	NK	0
+T/NK	Treg	Tfh/CXCL13-like	1
+T/NK	Treg	Treg	54
+Myeloid	C1QC TAM	C1QC TAM	37
+Myeloid	C1QC TAM	Classical Mono	5
+Myeloid	C1QC TAM	LAMP3 DC	0
+Myeloid	C1QC TAM	Neutrophil	1
+Myeloid	C1QC TAM	SPP1 TAM	18
+Myeloid	C1QC TAM	cDC1	0
+Myeloid	C1QC TAM	cDC2	1
+Myeloid	C1QC TAM	pDC	1
+Myeloid	Classical Mono	C1QC TAM	4
+Myeloid	Classical Mono	Classical Mono	37
+Myeloid	Classical Mono	LAMP3 DC	0
+Myeloid	Classical Mono	Neutrophil	12
+Myeloid	Classical Mono	SPP1 TAM	7
+Myeloid	Classical Mono	cDC1	1
+Myeloid	Classical Mono	cDC2	1
+Myeloid	Classical Mono	pDC	1
+Myeloid	LAMP3 DC	C1QC TAM	1
+Myeloid	LAMP3 DC	Classical Mono	0
+Myeloid	LAMP3 DC	LAMP3 DC	69
+Myeloid	LAMP3 DC	Neutrophil	0
+Myeloid	LAMP3 DC	SPP1 TAM	0
+Myeloid	LAMP3 DC	cDC1	0
+Myeloid	LAMP3 DC	cDC2	0
+Myeloid	LAMP3 DC	pDC	0
+Myeloid	Neutrophil	C1QC TAM	1
+Myeloid	Neutrophil	Classical Mono	4
+Myeloid	Neutrophil	LAMP3 DC	1
+Myeloid	Neutrophil	Neutrophil	81
+Myeloid	Neutrophil	SPP1 TAM	2
+Myeloid	Neutrophil	cDC1	1
+Myeloid	Neutrophil	cDC2	0
+Myeloid	Neutrophil	pDC	1
+Myeloid	SPP1 TAM	C1QC TAM	15
+Myeloid	SPP1 TAM	Classical Mono	10
+Myeloid	SPP1 TAM	LAMP3 DC	0
+Myeloid	SPP1 TAM	Neutrophil	1
+Myeloid	SPP1 TAM	SPP1 TAM	39
+Myeloid	SPP1 TAM	cDC1	0
+Myeloid	SPP1 TAM	cDC2	1
+Myeloid	SPP1 TAM	pDC	0
+Myeloid	cDC1	C1QC TAM	1
+Myeloid	cDC1	Classical Mono	0
+Myeloid	cDC1	LAMP3 DC	1
+Myeloid	cDC1	Neutrophil	0
+Myeloid	cDC1	SPP1 TAM	0
+Myeloid	cDC1	cDC1	78
+Myeloid	cDC1	cDC2	0
+Myeloid	cDC1	pDC	1
+Myeloid	cDC2	C1QC TAM	1
+Myeloid	cDC2	Classical Mono	2
+Myeloid	cDC2	LAMP3 DC	1
+Myeloid	cDC2	Neutrophil	1
+Myeloid	cDC2	SPP1 TAM	2
+Myeloid	cDC2	cDC1	0
+Myeloid	cDC2	cDC2	55
+Myeloid	cDC2	pDC	0
+Myeloid	pDC	C1QC TAM	0
+Myeloid	pDC	Classical Mono	3
+Myeloid	pDC	LAMP3 DC	0
+Myeloid	pDC	Neutrophil	0
+Myeloid	pDC	SPP1 TAM	0
+Myeloid	pDC	cDC1	0
+Myeloid	pDC	cDC2	1
+Myeloid	pDC	pDC	107
+Fibroblast	Matrix_CAF	Matrix_CAF	62
+Fibroblast	Matrix_CAF	iCAF	14
+Fibroblast	Matrix_CAF	rCAF	1
+Fibroblast	Matrix_CAF	vCAF	0
+Fibroblast	iCAF	Matrix_CAF	19
+Fibroblast	iCAF	iCAF	47
+Fibroblast	iCAF	rCAF	0
+Fibroblast	iCAF	vCAF	0
+Fibroblast	rCAF	Matrix_CAF	1
+Fibroblast	rCAF	iCAF	2
+Fibroblast	rCAF	rCAF	77
+Fibroblast	rCAF	vCAF	2
+Fibroblast	vCAF	Matrix_CAF	1
+Fibroblast	vCAF	iCAF	1
+Fibroblast	vCAF	rCAF	7
+Fibroblast	vCAF	vCAF	22
+Endothelial	Arterial EC	Arterial EC	60
+Endothelial	Arterial EC	Capillary EC	4
+Endothelial	Arterial EC	Lymphatic EC	0
+Endothelial	Arterial EC	Venous EC	0
+Endothelial	Capillary EC	Arterial EC	6
+Endothelial	Capillary EC	Capillary EC	42
+Endothelial	Capillary EC	Lymphatic EC	7
+Endothelial	Capillary EC	Venous EC	8
+Endothelial	Lymphatic EC	Arterial EC	0
+Endothelial	Lymphatic EC	Capillary EC	0
+Endothelial	Lymphatic EC	Lymphatic EC	56
+Endothelial	Lymphatic EC	Venous EC	0
+Endothelial	Venous EC	Arterial EC	0
+Endothelial	Venous EC	Capillary EC	1
+Endothelial	Venous EC	Lymphatic EC	2
+Endothelial	Venous EC	Venous EC	64
+B	GC B	GC B	65
+B	GC B	Naive/Memory B	4
+B	Naive/Memory B	GC B	0
+B	Naive/Memory B	Naive/Memory B	62

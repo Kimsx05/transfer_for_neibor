@@ -1,0 +1,8 @@
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/hd_xenium_annotation_niche_retry_v1/code/validate.py:23: Pandas4Warning: Starting with pandas version 4.0 all arguments of all will be keyword-only.
+  ww=pd.read_parquet(d/'tacco_weights.parquet');good=ww.notna().all(1);check(s,'TACCO weights aligned and normalized only for fitted rows',ww.index.equals(z.index) and np.allclose(ww[good].sum(1),1,atol=1e-4))
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/hd_xenium_annotation_niche_retry_v1/code/validate.py:23: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  ww=pd.read_parquet(d/'tacco_weights.parquet');good=ww.notna().all(1);check(s,'TACCO weights aligned and normalized only for fitted rows',ww.index.equals(z.index) and np.allclose(ww[good].sum(1),1,atol=1e-4))
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/hd_xenium_annotation_niche_retry_v1/code/validate.py:23: Pandas4Warning: Starting with pandas version 4.0 all arguments of all will be keyword-only.
+  ww=pd.read_parquet(d/'tacco_weights.parquet');good=ww.notna().all(1);check(s,'TACCO weights aligned and normalized only for fitted rows',ww.index.equals(z.index) and np.allclose(ww[good].sum(1),1,atol=1e-4))
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/hd_xenium_annotation_niche_retry_v1/code/validate.py:23: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  ww=pd.read_parquet(d/'tacco_weights.parquet');good=ww.notna().all(1);check(s,'TACCO weights aligned and normalized only for fitted rows',ww.index.equals(z.index) and np.allclose(ww[good].sum(1),1,atol=1e-4))
