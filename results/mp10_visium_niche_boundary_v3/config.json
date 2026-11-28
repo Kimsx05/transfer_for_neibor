@@ -1,0 +1,51 @@
+{
+  "seed": 20261127,
+  "scope": "ordinary Visium 60 tumors discovery and 3 adjacent normals projection",
+  "reference_commit": "307f51bed5f2215d5ebdbe6f3b09d72062fa05c2",
+  "distance": "observed same-side component to finite shared edge in μm. v2 sign; outside positive.",
+  "near_window_um": 1000,
+  "bin_width_um": 100,
+  "bin_min_spots": 5,
+  "minimum_consecutive_bins_for_smooth": 5,
+  "section_smoother": "penalized cubic B-spline with min(5,n-1) basis coefficients and unit second difference penalty; equal weight bin medians",
+  "core_model": {
+    "grid": "500",
+    "axis": "T",
+    "rho_cutoff": 0.8,
+    "priority": "ABCDEFG",
+    "families": {
+      "amount": [
+        "A",
+        "F",
+        "G"
+      ],
+      "supply_mixing": [
+        "B",
+        "C"
+      ],
+      "heterogeneity": [
+        "D"
+      ],
+      "organization": [
+        "E"
+      ]
+    }
+  },
+  "resampling": {
+    "classification": 100,
+    "function": 500,
+    "seed": 20261127
+  },
+  "min_units_per_arm": 5,
+  "min_common_sources": 2,
+  "min_unit_fraction_each_bin": 0.7,
+  "min_consecutive_bins_function": 3,
+  "function": "source fixed effects + group-specific quadratic in normalized signed distance; whole-unit bootstrap",
+  "main_family": "2 E-interior boundaries × raw/centered joint function equality; 4 tests",
+  "resource_limit": {
+    "user_cpu_threads": 10,
+    "user_memory_GB": 200,
+    "compute_affinity_per_stage": 1,
+    "nested_threads": 1
+  }
+}

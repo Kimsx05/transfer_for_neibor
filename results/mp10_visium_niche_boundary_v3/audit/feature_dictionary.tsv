@@ -1,0 +1,15 @@
+feature	formula	unit	meaning_or_limit
+A	weighted quantile Q50 of window T fraction, weights = observed E spot counts	fraction	E_n≥5, no supply or peripheral gate
+B	(sum T in QC E / sum T in all QC)/(n QC E / n QC)	ratio	E enrichment conditional on supply/area; zero total T undefined
+C	(sum E_fraction * W T_fraction / sum E_fraction)/mean T_fraction	ratio	row-standardized observed R1 in same tissue block; nonisolates only
+D	weighted Q75 minus weighted Q25 of window E T fraction	fraction points	local heterogeneity; alone insufficient to identify mixed
+E	mean z(window E T fraction) times row-standardized neighbor lag of z	Moran I	edge exists iff eligible windows share actual E–E R1 spot contact; zero variance/no connected pair = NA; equal windows for the spatial graph
+F;G	weighted Q10; weighted Q90 of window E T fraction	fraction	lower and upper tails of E-area distribution
+P	log2((density T in E + 1)/(density T in observed non-E 0–200 μm periphery + 1))	log2 density ratio	extended model only; missing periphery undefined
+frac_T;frac_I	sum of named posterior means inside E divided by sum of all 30 posterior means inside same E window	fraction	all-I alternative; T excludes NK
+density_T;density_I	sum of posterior means in observed E / observed E hex area	estimated cells/mm²	surrogate abundance
+neighbor_T;neighbor_I	average over E centers of W applied to T/I fraction	fraction	across-spot local proximity; center excluded
+penetration_T;penetration_I	local density ratio with +1 using uniquely assigned outer spots within 200 μm of observed E edge	log2 ratio	NA when local outer n<4; other window variables remain evaluable
+E_area;valid_E_area;outer_coverage	E count × hex area; E area in eligible windows; share eligible E area with ≥4 assigned exterior spots	mm²;mm²;fraction	area uses observed hex tiling; blank area excluded
+cluster_stability	aligned matches / successfully projected unit resamples	frequency	PAM assignment reproducibility, not posterior probability
+margin	next-nearest minus nearest medoid distance	family-weighted Euclidean distance	PAM margin, not posterior probability

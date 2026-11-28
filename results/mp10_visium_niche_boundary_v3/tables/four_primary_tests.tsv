@@ -1,0 +1,5 @@
+boundary	domain	contrast	variant	n_sources	sources	n_units	n_by_group	n_bins	xmin	xmax	n_boot	bootstrap_failures	min_source_arm_units	scale	term	p	status	family	q
+all_E	E_inner	C1:C2:C3	primary	4	GSE238145|GSE319536|Inhousedata__UNVERIFIED|NPJ__UNVERIFIED	39	"{""C1"": 7, ""C2"": 18, ""C3"": 14}"	9	-850	-50	500	{}	1	raw	function	0.00199600798403	ok	primary_global_E_negative_function	0.00798403193613
+all_E	E_inner	C1:C2:C3	primary	4	GSE238145|GSE319536|Inhousedata__UNVERIFIED|NPJ__UNVERIFIED	39	"{""C1"": 7, ""C2"": 18, ""C3"": 14}"	9	-850	-50	500	{}	1	centered	function	0.0219560878244	ok	primary_global_E_negative_function	0.0292747837658
+E_without_I_enriched	E_inner	C1:C2:C3	primary	4	GSE238145|GSE319536|Inhousedata__UNVERIFIED|NPJ__UNVERIFIED	37	"{""C1"": 7, ""C2"": 17, ""C3"": 13}"	7	-650	-50	500	{}	1	raw	function	0.0179640718563	ok	primary_global_E_negative_function	0.0292747837658
+E_without_I_enriched	E_inner	C1:C2:C3	primary	4	GSE238145|GSE319536|Inhousedata__UNVERIFIED|NPJ__UNVERIFIED	37	"{""C1"": 7, ""C2"": 17, ""C3"": 13}"	7	-650	-50	500	{}	1	centered	function	0.528942115768	ok	primary_global_E_negative_function	0.528942115768

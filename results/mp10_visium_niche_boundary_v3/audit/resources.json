@@ -1,0 +1,21 @@
+{
+  "largest_timed_process_RSS_KiB": 974184,
+  "sum_recorded_stage_maxima_KiB": 6041676,
+  "stage_seconds_sum_including_replay_and_repeated_runs": 472.01,
+  "wall_span_seconds_at_validation": 1918,
+  "disk_bytes_at_validation": 49484929,
+  "per_stage_affinity": [
+    0
+  ],
+  "native_threads": [
+    [
+      "openblas",
+      1
+    ],
+    [
+      "openblas",
+      1
+    ]
+  ],
+  "peak_scope": "GNU time per stage, including lightweight replay; aggregate concurrent RSS not continuously sampled. Run entry pins compute to one CPU, sequential sections and BLAS/OMP=1; all stages use same assigned CPU."
+}

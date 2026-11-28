@@ -1,0 +1,155 @@
+near_shape            bins_only  deep_higher  near_higher  no_curve  peak  small_or_flat_change
+boundary                                                                                       
+E_without_I_enriched          2           29            8         4     4                    13
+all_E                         1           32            8         0     2                    17
+examples           section_id             boundary near_shape
+        GSE238145_B5 E_without_I_enriched       peak
+      GSE319536_BC11                all_E       peak
+      GSE319536_BC11 E_without_I_enriched       peak
+      GSE319536_BC13 E_without_I_enriched       peak
+Inhousedata_T4469479                all_E       peak
+Inhousedata_T4469479 E_without_I_enriched       peak
+concordance        common_negative_bins        rho  mean_abs_difference  common_outer_bins  EIN_EIS_minus_nonE
+count             60.000000  54.000000            56.000000          60.000000           26.000000
+mean               8.116667   0.761214             0.003574           3.183333            0.008699
+50%               10.000000   1.000000             0.000089           0.000000            0.010098
+count    26.000000
+mean      0.008699
+std       0.009929
+min      -0.015066
+25%       0.004552
+50%       0.010098
+75%       0.015844
+max       0.022119
+Name: EIN_EIS_minus_nonE, dtype: float64
+                      count    median       min       max
+rule        method K                                     
+mapped_only PAM    3    100  0.515458  0.031087  0.887394
+primary     GMM    3    100  0.395900  0.010235  0.897958
+            PAM    2    100  0.058890 -0.049880  1.000000
+                   3    100  0.397890  0.135793  1.000000
+                   4    100  0.379137  0.128248  0.846976
+       size  median   min
+group                    
+C1       18   0.755  0.40
+C2       28   0.855  0.42
+C3       14   0.795  0.49
+stability stability
+(0.8, 1.0]     32
+(0.6, 0.8]     18
+(-0.1, 0.6]    10
+Name: count, dtype: int64
+low         section_id  stability
+34    GSE285715_T2       0.40
+37  GSE319536_BC04       0.42
+19    GSE171351_B1       0.47
+28   GSE238145_B18       0.48
+largest IQR               section_id         D
+5            NPJ_sample1  0.135770
+48  Inhousedata_T4398343  0.127015
+3         GSE319536_BC01  0.102353
+                       measure g1 g2  n_sources  effect      lo     hi      p      q
+                     mean_MP10 C1 C2          6 -0.0061 -0.0300 0.0178 0.5424 0.5424
+                     mean_MP10 C1 C3          4  0.0127 -0.0024 0.0278 0.0748 0.1178
+                     mean_MP10 C2 C3          4  0.0266 -0.0056 0.0588 0.0785 0.1178
+                   median_MP10 C1 C2          6 -0.0086 -0.0321 0.0149 0.3898 0.4678
+                   median_MP10 C1 C3          4  0.0150  0.0009 0.0291 0.0431 0.1178
+                   median_MP10 C2 C3          4  0.0303 -0.0001 0.0607 0.0504 0.1178
+high_proportion_excluding_ties C1 C2          6 -0.1550 -0.6766 0.3667 0.4796 0.4796
+high_proportion_excluding_ties C1 C3          4  0.3333 -0.3848 1.0515 0.2362 0.3542
+high_proportion_excluding_ties C2 C3          4  0.6896  0.2145 1.1647 0.0191 0.0573
+sig Empty DataFrame
+Columns: [family, measure, g1, g2, effect, q]
+Index: []
+niche min         measure  g1  g2    effect         q
+446  region_EIN  C1  C2  0.048527  0.444629
+451  region_EIN  C1  C3 -0.074607  0.444629
+456  region_EIN  C2  C3 -0.078257  0.444629
+            boundary contrast    scale  n_sources    xmin      p      q
+               all_E C1:C2:C3      raw          4  -850.0 0.0020 0.0080
+               all_E C1:C2:C3 centered          4  -850.0 0.0220 0.0293
+               all_E    C1:C2      raw          6  -850.0 0.0818 0.1287
+               all_E    C1:C2 centered          6  -850.0 0.5309 0.5792
+               all_E    C1:C3      raw          4  -850.0 0.0220 0.0527
+               all_E    C1:C3 centered          4  -850.0 0.0080 0.0240
+               all_E    C2:C3      raw          4 -1050.0 0.0020 0.0120
+               all_E    C2:C3 centered          4 -1050.0 0.0040 0.0160
+E_without_I_enriched C1:C2:C3      raw          4  -650.0 0.0180 0.0293
+E_without_I_enriched C1:C2:C3 centered          4  -650.0 0.5289 0.5289
+E_without_I_enriched    C1:C2      raw          6  -550.0 0.0339 0.0679
+E_without_I_enriched    C1:C2 centered          6  -550.0 0.0858 0.1287
+E_without_I_enriched    C1:C3      raw          4  -650.0 0.1277 0.1703
+E_without_I_enriched    C1:C3 centered          4  -650.0 0.5888 0.5888
+E_without_I_enriched    C2:C3      raw          4  -650.0 0.0020 0.0120
+E_without_I_enriched    C2:C3 centered          4  -650.0 0.3074 0.3689
+sensitivity scale                             centered    raw
+variant     boundary                             
+1000_T      E_without_I_enriched     0.165  0.446
+            all_E                    0.040  0.108
+500_I       E_without_I_enriched     0.048  0.066
+            all_E                    0.048  0.024
+adjusted    E_without_I_enriched     0.595  0.133
+            all_E                    0.133  0.032
+fixed_units E_without_I_enriched     0.032  0.024
+            all_E                    0.032  0.016
+primary     E_without_I_enriched     0.529  0.029
+            all_E                    0.029  0.008
+x250_T      E_without_I_enriched     0.040  0.088
+            all_E                    0.040  0.228
+xy250_T     E_without_I_enriched     0.189  0.665
+            all_E                    0.032  0.044
+y250_T      E_without_I_enriched     0.437  0.269
+            all_E                    0.060  0.060
+stable <ArrowStringArray>
+['fewer_than_five_mapped_units_in_arm']
+Length: 1, dtype: str
+shape pure                 boundary     scale         q
+1                  all_E       raw  0.087824
+3                  all_E  centered  0.115768
+33  E_without_I_enriched       raw  0.417166
+35  E_without_I_enriched  centered  0.417166
+            boundary g1 g2  center    diff      lo      hi
+               all_E C1 C2    -650 -0.0168 -0.0285  0.0032
+               all_E C1 C2     -50 -0.0073 -0.0226  0.0057
+               all_E C1 C3    -650  0.0204  0.0075  0.0302
+               all_E C1 C3     -50  0.0178  0.0025  0.0248
+               all_E C2 C3    -650  0.0372  0.0164  0.0486
+               all_E C2 C3     -50  0.0251  0.0111  0.0345
+E_without_I_enriched C1 C2    -650 -0.0186 -0.0318  0.0008
+E_without_I_enriched C1 C2     -50 -0.0138 -0.0261 -0.0011
+E_without_I_enriched C1 C3    -650  0.0132 -0.0052  0.0322
+E_without_I_enriched C1 C3     -50  0.0109 -0.0047  0.0231
+E_without_I_enriched C2 C3    -650  0.0318  0.0095  0.0479
+E_without_I_enriched C2 C3     -50  0.0247  0.0115  0.0371
+mapped 56 29
+            boundary             variant    scale      q
+               all_E       common_points      raw 0.0160
+               all_E       common_points centered 0.5329
+E_without_I_enriched       common_points      raw 0.0359
+E_without_I_enriched       common_points centered 0.5329
+               all_E              strict      raw 0.0080
+               all_E              strict centered 0.0532
+E_without_I_enriched              strict      raw 0.0319
+E_without_I_enriched              strict centered 0.0818
+               all_E two_band_components      raw 0.0080
+               all_E two_band_components centered 0.0266
+E_without_I_enriched two_band_components      raw 0.0266
+E_without_I_enriched two_band_components centered 0.6148
+continuous     feature                    endpoint       rho         q
+90        D                   mean_MP10 -0.365316  0.282349
+97        D                 median_MP10 -0.343348  0.282349
+76        C  slope_E_without_I_enriched -0.244835  0.461777
+146       G                   mean_MP10 -0.297285  0.622679
+153       G                 median_MP10 -0.275578  0.622679
+   feature  n_peaks
+4        A      1.0
+10       B      1.0
+16       C      1.0
+22       D      1.0
+28       E      1.0
+34       G      1.0
+group
+C1    15
+C2    27
+C3    14
+Name: unit, dtype: int64

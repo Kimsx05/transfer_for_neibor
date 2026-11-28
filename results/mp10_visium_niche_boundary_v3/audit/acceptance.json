@@ -1,0 +1,28 @@
+{
+  "sections": 63,
+  "tumor": 60,
+  "normals": 3,
+  "source_points": 265002,
+  "scored_E": 133064,
+  "real_zero_points_tissue": 80241,
+  "raw_bins": 5084,
+  "valid_section_PDFs": 488,
+  "group_figures": 35,
+  "review_maps": 63,
+  "status_rows": 126,
+  "no_interface": 4,
+  "identical_to_v2_score_and_sign_in_bins": true,
+  "no_cross_segment_or_side": true,
+  "shared_classifications": true,
+  "primary_tests": 4,
+  "bootstrap_success": [
+    500,
+    500,
+    500,
+    500
+  ],
+  "review_commit_status": {
+    "matches_review_commit": 151
+  },
+  "notes": "Full scatter reads exact v2 scores; every bin mean, median and denominator recomputed. Separate density/entry labels from inferred malignancy."
+}
