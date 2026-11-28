@@ -1,0 +1,19 @@
+{
+  "neighbors": 30,
+  "knn": "scipy cKDTree exact, including self at input",
+  "metric": "euclidean",
+  "embedding": "umap-learn simplicial_set_embedding",
+  "umap_version": "0.5.12",
+  "initialization": "pca then 200 UMAP SGD epochs",
+  "min_dist": 0.3,
+  "spread": 1.0,
+  "a": 0.9921756196054787,
+  "b": 1.1122533842847302,
+  "negative_sample_rate": 5,
+  "seed": 1729,
+  "n_edges": 2753055,
+  "partition": "RBConfigurationVertexPartition",
+  "weighted": true,
+  "directed": false,
+  "iterations": -1
+}

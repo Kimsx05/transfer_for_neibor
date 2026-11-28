@@ -1,0 +1,5 @@
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/hd_xenium_manual_annotation_rerun_v1/code/finish.py:15: Pandas4Warning: The 'verify_integrity' keyword in DataFrame.set_index is deprecated and will be removed in a future version. Directly check the result.index.is_unique instead.
+  obj=pd.read_parquet(d/'objects.parquet').set_index('cell_key',verify_integrity=True)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/hd_xenium_manual_annotation_rerun_v1/code/finish.py:15: Pandas4Warning: The 'verify_integrity' keyword in DataFrame.set_index is deprecated and will be removed in a future version. Directly check the result.index.is_unique instead.
+  obj=pd.read_parquet(d/'objects.parquet').set_index('cell_key',verify_integrity=True)
+verified both platforms and workbook

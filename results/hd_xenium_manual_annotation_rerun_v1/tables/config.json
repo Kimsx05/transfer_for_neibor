@@ -1,0 +1,45 @@
+{
+  "seed": 1729,
+  "primary_resolution": 0.5,
+  "resolutions": [
+    0.2,
+    0.5,
+    1
+  ],
+  "feature_selection": "top 1200 variance/(mean+0.1) over log1p(CP10k)",
+  "scvi": {
+    "n_latent": 12,
+    "n_hidden": 64,
+    "n_layers": 1,
+    "gene_likelihood": "nb",
+    "dispersion": "gene",
+    "train_size": 0.9,
+    "max_epochs": 24,
+    "batch_size": 512,
+    "early_stopping": true,
+    "patience": 5,
+    "accelerator": "cpu",
+    "workers": 0
+  },
+  "graph": {
+    "n_neighbors": 30,
+    "metric": "euclidean",
+    "min_dist": 0.3,
+    "spread": 1,
+    "epochs": 200,
+    "leiden_partition": "RBConfigurationVertexPartition",
+    "weighted": true,
+    "directed": false,
+    "iterations": -1
+  },
+  "marker": {
+    "all_measured": true,
+    "normalization": 10000,
+    "pseudocount": 1e-9,
+    "alternative": "two-sided",
+    "tie_correction": true,
+    "continuity": false,
+    "adjust": "BH within each cluster and resolution",
+    "within_sample_min_per_side": 20
+  }
+}

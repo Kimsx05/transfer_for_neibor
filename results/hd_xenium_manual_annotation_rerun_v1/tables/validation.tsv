@@ -1,0 +1,13 @@
+platform	check	n	status
+hd	raw matrix, full QC, composite IDs and source rows	308183	passed
+hd	UMAP, weighted symmetric expression graph, node index	6763275	passed
+hd	full feature IDs, all cluster/sample blocks, effects, BH r0.2	325530	passed
+hd	full feature IDs, all cluster/sample blocks, effects, BH r0.5	542550	passed
+hd	full feature IDs, all cluster/sample blocks, effects, BH r1.0	868080	passed
+hd	manual columns blank and figure pairs present	20	passed
+xenium	raw matrix, full QC, composite IDs and source rows	128346	passed
+xenium	UMAP, weighted symmetric expression graph, node index	2753055	passed
+xenium	full feature IDs, all cluster/sample blocks, effects, BH r0.2	210042	passed
+xenium	full feature IDs, all cluster/sample blocks, effects, BH r0.5	330066	passed
+xenium	full feature IDs, all cluster/sample blocks, effects, BH r1.0	540108	passed
+xenium	manual columns blank and figure pairs present	26	passed

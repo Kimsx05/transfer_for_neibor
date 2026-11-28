@@ -1,0 +1,18 @@
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/hd_xenium_manual_annotation_rerun_v1/code/plot.py:40: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  ct=pd.crosstab(z[col],z['sample']).reindex(columns=S[p],fill_value=0);frac=ct.div(ct.sum(1),axis=0)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/hd_xenium_manual_annotation_rerun_v1/code/plot.py:41: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  info=pd.DataFrame({'platform':p,'resolution':r,'cluster':ct.index,'n_objects':ct.sum(1).values,'n_samples_present':(ct>0).sum(1).values,'dominant_sample':ct.idxmax(1).values,'dominant_sample_fraction':frac.max(1).values})
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/hd_xenium_manual_annotation_rerun_v1/code/plot.py:41: Pandas4Warning: Starting with pandas version 4.0 all arguments of max will be keyword-only.
+  info=pd.DataFrame({'platform':p,'resolution':r,'cluster':ct.index,'n_objects':ct.sum(1).values,'n_samples_present':(ct>0).sum(1).values,'dominant_sample':ct.idxmax(1).values,'dominant_sample_fraction':frac.max(1).values})
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/hd_xenium_manual_annotation_rerun_v1/code/plot.py:40: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  ct=pd.crosstab(z[col],z['sample']).reindex(columns=S[p],fill_value=0);frac=ct.div(ct.sum(1),axis=0)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/hd_xenium_manual_annotation_rerun_v1/code/plot.py:41: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  info=pd.DataFrame({'platform':p,'resolution':r,'cluster':ct.index,'n_objects':ct.sum(1).values,'n_samples_present':(ct>0).sum(1).values,'dominant_sample':ct.idxmax(1).values,'dominant_sample_fraction':frac.max(1).values})
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/hd_xenium_manual_annotation_rerun_v1/code/plot.py:41: Pandas4Warning: Starting with pandas version 4.0 all arguments of max will be keyword-only.
+  info=pd.DataFrame({'platform':p,'resolution':r,'cluster':ct.index,'n_objects':ct.sum(1).values,'n_samples_present':(ct>0).sum(1).values,'dominant_sample':ct.idxmax(1).values,'dominant_sample_fraction':frac.max(1).values})
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/hd_xenium_manual_annotation_rerun_v1/code/plot.py:40: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  ct=pd.crosstab(z[col],z['sample']).reindex(columns=S[p],fill_value=0);frac=ct.div(ct.sum(1),axis=0)
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/hd_xenium_manual_annotation_rerun_v1/code/plot.py:41: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  info=pd.DataFrame({'platform':p,'resolution':r,'cluster':ct.index,'n_objects':ct.sum(1).values,'n_samples_present':(ct>0).sum(1).values,'dominant_sample':ct.idxmax(1).values,'dominant_sample_fraction':frac.max(1).values})
+/home/data/t070721/codex_workspace/Bladder Metabolism/results/hd_xenium_manual_annotation_rerun_v1/code/plot.py:41: Pandas4Warning: Starting with pandas version 4.0 all arguments of max will be keyword-only.
+  info=pd.DataFrame({'platform':p,'resolution':r,'cluster':ct.index,'n_objects':ct.sum(1).values,'n_samples_present':(ct>0).sum(1).values,'dominant_sample':ct.idxmax(1).values,'dominant_sample_fraction':frac.max(1).values})
